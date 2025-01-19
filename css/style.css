@@ -506,6 +506,11 @@
   font-size: 21px;
   color: #f00;
 }
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
 .nav-left {
   width: 120px;
   height: 100%;
