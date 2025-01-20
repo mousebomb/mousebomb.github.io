@@ -128,7 +128,7 @@
         <div data-rel="App开发">
             
             App开发
-            <small>(15)</small>
+            <small>(16)</small>
         </div>
         
     </li>
@@ -233,7 +233,7 @@
         <div data-rel="个人相关">
             
             个人相关
-            <small>(35)</small>
+            <small>(34)</small>
         </div>
         
     </li>
@@ -438,6 +438,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>宝塔</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>报错</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -1761,6 +1765,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>app</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>apple</a>
             </li>
         
@@ -1978,6 +1986,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>GTween</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>healthkit</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -2462,6 +2474,15 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 App开发 "
+           href="/2025/01/20/react-native-health-undefined.html"
+           data-tag="react-native,healthkit,报错,app"
+           data-author="" >
+            <span class="post-title" title="_reactNativeHealth.default.initHealthKit is not a function (it is undefined) 报错">_reactNativeHealth.default.initHealthKit is not a function (it is undefined) 报错</span>
+            <span class="post-date" title="2025-01-20 16:22:22">2025/01/20</span>
+        </a>
         
         
         <a  class="全部文章 后端服务器 "
@@ -3307,15 +3328,6 @@
            data-author="" >
             <span class="post-title" title="xrope-用于原生AS3显示对象的简单layout库">xrope-用于原生AS3显示对象的简单layout库</span>
             <span class="post-date" title="2010-03-15 10:48:57">2010/03/15</span>
-        </a>
-        
-        
-        <a  class="全部文章 个人相关 "
-           href="/2010/03/14/dui-xue-ren.html"
-           data-tag="涂鸦"
-           data-author="" >
-            <span class="post-title" title="晒晒自己的涂鸦-果林堆雪人">晒晒自己的涂鸦-果林堆雪人</span>
-            <span class="post-date" title="2010-03-14 09:45:00">2010/03/14</span>
         </a>
         
         
@@ -5628,7 +5640,7 @@
 <p><strong>Document Class :</strong></p>
 <p>package org.mousebomb.dragLiToCanvas<br>{<br>import fl.events.ListEvent;<br>import fl.controls.List;<br>import fl.data.DataProvider;</p>
 <p>import flash.display.Sprite;<br>import flash.events.MouseEvent;<br>import flash.geom.Point;<br>import flash.utils.getDefinitionByName;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#x6f;&#117;&#115;&#x65;&#x62;&#x6f;&#109;&#x62;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#x6f;&#117;&#x73;&#101;&#98;&#111;&#x6d;&#98;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
 <p>public function DragListItemToCanvas()<br>{<br>&#x2F;&#x2F;如果不写下面这一行，flash不会将此类编译进去，运行时会报错<br>Class1;<br>Class2;<br>&#x2F;&#x2F;创建list的内容<br>list.dataProvider &#x3D; new DataProvider();<br>list.addItem({label:”有胆你就拖拽我”, data:”org.mousebomb.dragLiToCanvas.Class1”});<br>list.addItem({label:”我和楼上一样”, data:”org.mousebomb.dragLiToCanvas.Class2”});<br>list.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDownH);<br>list.addEventListener(ListEvent.ITEM_ROLL_OVER, onHoverLi);<br>list.addEventListener(ListEvent.ITEM_ROLL_OUT, onOutLi);<br>stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUpH);<br>}</p>
 <p>private function onOutLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; false;<br>curHoverLi &#x3D; null;<br>}</p>
 <p>private function onHoverLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; true;<br>curHoverLi &#x3D; event.item;<br>}</p>
