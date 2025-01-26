@@ -506,7 +506,7 @@
   font-size: 21px;
   color: #f00;
 }
-iframe {
+iframe.bilibili {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
