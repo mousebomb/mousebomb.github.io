@@ -6,32 +6,25 @@
   <meta name="keywords" content=" as3 , flash , 例子 , 碰撞 ">
   <meta name="description" content="直线移动检测可否抵达的例子 | 『 闪 界 』">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="AI陪我玩“谁是卧底”游戏大过年的，大家都在讨论deepseek。睿睿想玩”谁是卧底”总是凑不齐人，我想帮她开发一个在家里能玩的，AI玩的自闭环的，鲁棒性好一点的，《谁是卧底》游戏机器人。 计划用Deepseek 部署在LMStudio + LMStudio的API，可以实现调用对话。然后可以写一个服务器端来驱动规则，我们几个人都可以玩。还需要寻找一个开源方案的配音AI来根据文本合成语音，扮演不同">
+<meta name="description" content="千兆宽带入户，但访问互联网网速慢我这个月初去改了融合套餐，现在又升级回千兆宽带的套餐了，联通App里可以看到是千兆，但是家里访问互联网网速还是百兆级别的效果哎，不清楚是要下个月生效呢还是怎样啊？我家里墙里的线是超七类线，路由器是全千兆以太网口，电脑是10Gbps以太网口的，用网线直连的电脑在speedtest.cn 测速只有181Mbps下载&#x2F; 28.3Mbps上传，这速度看起来和没升级">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本地调用大模型玩“谁是卧底”游戏">
-<meta property="og:url" content="https://flashj.cn/2025/01/30/llm-local-sheishiwodi-1.html">
+<meta property="og:title" content="使用Linksys MX8400 访问互联网网速慢的问题">
+<meta property="og:url" content="https://flashj.cn/2025/02/10/linksys-mx8400-slow.html">
 <meta property="og:site_name" content="『 闪 界 』">
-<meta property="og:description" content="AI陪我玩“谁是卧底”游戏大过年的，大家都在讨论deepseek。睿睿想玩”谁是卧底”总是凑不齐人，我想帮她开发一个在家里能玩的，AI玩的自闭环的，鲁棒性好一点的，《谁是卧底》游戏机器人。 计划用Deepseek 部署在LMStudio + LMStudio的API，可以实现调用对话。然后可以写一个服务器端来驱动规则，我们几个人都可以玩。还需要寻找一个开源方案的配音AI来根据文本合成语音，扮演不同">
+<meta property="og:description" content="千兆宽带入户，但访问互联网网速慢我这个月初去改了融合套餐，现在又升级回千兆宽带的套餐了，联通App里可以看到是千兆，但是家里访问互联网网速还是百兆级别的效果哎，不清楚是要下个月生效呢还是怎样啊？我家里墙里的线是超七类线，路由器是全千兆以太网口，电脑是10Gbps以太网口的，用网线直连的电脑在speedtest.cn 测速只有181Mbps下载&#x2F; 28.3Mbps上传，这速度看起来和没升级">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/202501312231105.png">
-<meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/202501312321075.png">
-<meta property="article:published_time" content="2025-01-30T01:57:09.000Z">
-<meta property="article:modified_time" content="2025-02-06T05:02:01.810Z">
+<meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/202502101945181.png">
+<meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/202502101944873.png">
+<meta property="article:published_time" content="2025-02-10T09:08:34.000Z">
+<meta property="article:modified_time" content="2025-02-10T11:46:14.642Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="AI">
-<meta property="article:tag" content="LLM">
-<meta property="article:tag" content="DeepSeek">
-<meta property="article:tag" content="js">
-<meta property="article:tag" content="谁是卧底">
-<meta property="article:tag" content="qwen">
-<meta property="article:tag" content="nodejs">
-<meta property="article:tag" content="ai">
-<meta property="article:tag" content="后端服务器">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="cosyvoice">
-<meta property="article:tag" content="conda">
+<meta property="article:tag" content="mx8400">
+<meta property="article:tag" content="Linksys">
+<meta property="article:tag" content="路由器">
+<meta property="article:tag" content="网络">
+<meta property="article:tag" content="网络问题">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/202501312231105.png">
+<meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/202502101945181.png">
 
 
 <link rel="icon" href="/img/avatar.png">
@@ -125,10 +118,25 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(349)</small>
+                <small>(350)</small>
             
         </div>
     </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="AI">
+            
+            AI
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
     
         
             
@@ -167,7 +175,7 @@
         <div data-rel="后端服务器">
             
             后端服务器
-            <small>(11)</small>
+            <small>(10)</small>
         </div>
         
     </li>
@@ -212,7 +220,7 @@
         <div data-rel="影音娱乐">
             
             影音娱乐
-            <small>(86)</small>
+            <small>(87)</small>
         </div>
         
     </li>
@@ -242,7 +250,7 @@
         <div data-rel="工具软件">
             
             工具软件
-            <small>(4)</small>
+            <small>(3)</small>
         </div>
         
     </li>
@@ -308,7 +316,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="349">
+<input type="hidden" id="yelog_site_posts_number" value="350">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -927,6 +935,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>路由器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>乱码</a>
             </li>
         
@@ -1364,6 +1376,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>网络</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络问题</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -2151,6 +2167,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linksys</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>List</a>
             </li>
         
@@ -2204,6 +2224,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>mv</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mx8400</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -2570,7 +2594,16 @@
     <nav id="title-list-nav">
         
         
-        <a  class="全部文章 后端服务器 "
+        <a  class="全部文章 影音娱乐 "
+           href="/2025/02/10/linksys-mx8400-slow.html"
+           data-tag="mx8400,Linksys,路由器,网络,网络问题"
+           data-author="" >
+            <span class="post-title" title="使用Linksys MX8400 访问互联网网速慢的问题">使用Linksys MX8400 访问互联网网速慢的问题</span>
+            <span class="post-date" title="2025-02-10 17:08:34">2025/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 AI "
            href="/2025/01/30/llm-local-sheishiwodi-1.html"
            data-tag="AI,LLM,DeepSeek,js,谁是卧底,qwen,nodejs,ai,后端服务器,python,cosyvoice,conda"
            data-author="" >
@@ -2579,7 +2612,7 @@
         </a>
         
         
-        <a  class="全部文章 工具软件 "
+        <a  class="全部文章 AI "
            href="/2025/01/26/anythingllm.html"
            data-tag="AI,LLM,AnythingLLM,LM Studio,DeepSeek,CodeGPT,IDEA"
            data-author="" >
@@ -2590,7 +2623,7 @@
         
         <a  class="全部文章 电脑游戏 "
            href="/2025/01/24/bmw-erlangxianshengzhenjun.html"
-           data-tag="游戏,黑神话悟空,动作游戏,单机游戏"
+           data-tag="游戏,黑神话悟空,单机游戏,动作游戏"
            data-author="" >
             <span class="post-title" title="齐天二郎显圣真君打了147遍，终于过了">齐天二郎显圣真君打了147遍，终于过了</span>
             <span class="post-date" title="2025-01-24 20:26:27">2025/01/24</span>
@@ -2626,7 +2659,7 @@
         
         <a  class="全部文章 电脑游戏 "
            href="/2024/08/20/black-myth-wukong-launch.html"
-           data-tag="游戏,黑神话悟空,动作游戏,西游记,电脑游戏,单机游戏"
+           data-tag="游戏,黑神话悟空,单机游戏,动作游戏,西游记,电脑游戏"
            data-author="" >
             <span class="post-title" title="黑神话悟空，启动！">黑神话悟空，启动！</span>
             <span class="post-date" title="2024-08-20 12:14:08">2024/08/20</span>
@@ -3949,7 +3982,7 @@
         
         <a  class="全部文章 电脑游戏 "
            href="/2009/09/11/minininjas.html"
-           data-tag="下载,动作游戏,单机游戏,迷你忍者"
+           data-tag="下载,单机游戏,动作游戏,迷你忍者"
            data-author="" >
             <span class="post-title" title="迷你忍者有下载了">迷你忍者有下载了</span>
             <span class="post-date" title="2009-09-11 12:38:49">2009/09/11</span>
@@ -4921,7 +4954,7 @@
         
         <a  class="全部文章 其他类别 "
            href="/2008/08/26/qihu-vs-ruixing.html"
-           data-tag="360,奇虎,瑞星,网络"
+           data-tag="网络,360,奇虎,瑞星"
            data-author="" >
             <span class="post-title" title="奇虎又向瑞星宣战？">奇虎又向瑞星宣战？</span>
             <span class="post-date" title="2008-08-26 22:21:13">2008/08/26</span>
@@ -5524,7 +5557,7 @@
         
         <a  class="全部文章 Flash "
            href="/2008/06/04/air-file-operation3.html"
-           data-tag="as3,ria,flash,air,flex,file,fileStream,文件操作,文件系统"
+           data-tag="as3,ria,flash,air,flex,file,文件操作,文件系统,fileStream"
            data-author="" >
             <span class="post-title" title="AIR文件操作(三):使用FileStream对象读写文件">AIR文件操作(三):使用FileStream对象读写文件</span>
             <span class="post-date" title="2008-06-04 14:02:28">2008/06/04</span>
@@ -5551,7 +5584,7 @@
         
         <a  class="全部文章 Flash "
            href="/2008/05/31/air-file-operation1.html"
-           data-tag="as3,ria,flash,air,flex,file,fileStream,文件操作,文件系统"
+           data-tag="as3,ria,flash,air,flex,file,文件操作,文件系统,fileStream"
            data-author="" >
             <span class="post-title" title="AIR文件操作(一):AIR文件基础">AIR文件操作(一):AIR文件基础</span>
             <span class="post-date" title="2008-05-31 01:10:40">2008/05/31</span>
@@ -5808,14 +5841,14 @@
 <p>package<br>{<br>import flash.display.SimpleButton;<br>import com.gskinner.motion.GTween;<br>import com.gskinner.motion.easing.Sine;</p>
 <p>import org.mousebomb.display.RealHitTest;</p>
 <p>import flash.display.Sprite;<br>import flash.events.MouseEvent;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#111;&#117;&#x73;&#x65;&#98;&#x6f;&#x6d;&#x62;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-6-8<br> *&#x2F;<br>public class HitTestMain extends Sprite<br>{<br>public var pz : Sprite ;<br>public var line : Sprite &#x3D; new Sprite();<br>public var box : Sprite;<br>public var showBtn : SimpleButton;<br>private var boxTween : GTween;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#111;&#117;&#x73;&#x65;&#x62;&#x6f;&#x6d;&#98;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-6-8<br> *&#x2F;<br>public class HitTestMain extends Sprite<br>{<br>public var pz : Sprite ;<br>public var line : Sprite &#x3D; new Sprite();<br>public var box : Sprite;<br>public var showBtn : SimpleButton;<br>private var boxTween : GTween;</p>
 <p>private var curX : int &#x3D; 300;<br>private var curY : int &#x3D; 200;</p>
 <p>public function HitTestMain()<br>{<br>addChild(line);<br>boxTween &#x3D; new GTween(box,.3,null,{ease:Sine.easeOut});<br>curX&#x3D;box.x;<br>curY&#x3D;box.y;<br>line.graphics.lineStyle(3, 0xff0000);<br>line.graphics.moveTo(curX, curY);<br>stage.addEventListener(MouseEvent.CLICK, onClick);<br>showBtn.addEventListener(MouseEvent.CLICK, onShowClick);<br>}</p>
 <p>private function onShowClick(event : MouseEvent) : void<br>{<br>if(pz.parent)<br>{<br>removeChild(pz);<br>removeChild(line);<br>}else{<br>addChildAt(pz,0);<br>addChildAt(line,1);<br>}<br>}</p>
 <p>private function onClick(event : MouseEvent) : void<br>{<br>line.graphics.lineTo(event.stageX, event.stageY);<br>if(RealHitTest.hitTestObj(line, pz))<br>{<br>line.graphics.clear();<br>line.graphics.lineStyle(3, 0xff0000);<br>line.graphics.moveTo(curX, curY);<br>}<br>else<br>{<br>curX &#x3D; event.stageX;<br>curY &#x3D; event.stageY;<br>boxTween.setValues({x:curX,y:curY});<br>}<br>}<br>}<br>}</p>
 <p><strong>RealHitTest:</strong></p>
 <p>package org.mousebomb.display<br>{<br>import flash.display.BlendMode;<br>import flash.display.DisplayObjectContainer;<br>import flash.display.Bitmap;<br>import flash.display.BitmapData;<br>import flash.display.DisplayObject;<br>import flash.geom.ColorTransform;<br>import flash.geom.Matrix;<br>import flash.geom.Rectangle;</p>
-<p>&#x2F;**<br> * Flash自带的HitTestObject有问题，这个类是真正的HitTest<br> * @author Mousebomb (<a href="mailto:&#109;&#x6f;&#117;&#115;&#101;&#98;&#x6f;&#x6d;&#x62;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-3-14<br> *&#x2F;<br>public class RealHitTest<br>{<br>private static var bmp : Bitmap &#x3D; new Bitmap();</p>
+<p>&#x2F;**<br> * Flash自带的HitTestObject有问题，这个类是真正的HitTest<br> * @author Mousebomb (<a href="mailto:&#109;&#111;&#117;&#115;&#x65;&#98;&#x6f;&#109;&#98;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-3-14<br> *&#x2F;<br>public class RealHitTest<br>{<br>private static var bmp : Bitmap &#x3D; new Bitmap();</p>
 <p>&#x2F;**<br> * 此方法的思路由ryan-liu提出<br> * @return 是否重叠<br> * @param src 要比较的对象<br> * @param target 与之比较的对象<br> * src和target的容器必须是同意对象，或者原点坐标对齐<br> *&#x2F;<br>public static function hitTestObj(src : DisplayObject,target : DisplayObject) : Boolean<br>{<br>&#x2F;&#x2F;获取要比较的对象的区域以偏移位图<br>var srcBound : Rectangle &#x3D; src.getBounds(src.parent);<br>var bmd : BitmapData &#x3D; new BitmapData(srcBound.width, srcBound.height, false, 0);<br>&#x2F;&#x2F;bmp.bitmapData &#x3D; bmd;<br>var mtx1 : Matrix &#x3D; new Matrix();<br>var mtx2 : Matrix &#x3D; new Matrix();<br>mtx1.rotate(src.rotation * Math.PI &#x2F; 180);<br>mtx1.tx &#x3D; src.x-srcBound.x;<br>mtx1.ty &#x3D; src.y-srcBound.y;<br>mtx2.rotate(target.rotation * Math.PI &#x2F; 180);<br>mtx2.tx &#x3D; target.x - srcBound.x;<br>mtx2.ty &#x3D; target.y - srcBound.y;<br>bmd.fillRect(bmd.rect, 0);<br>bmd.draw(src, mtx1, new ColorTransform(1, 1, 1, 1, -255, 255, 255, 255));<br>bmd.draw(target, mtx2, new ColorTransform(1, 1, 1, 1, 255, -255, -255, 255), BlendMode.DIFFERENCE);<br>var rect : Rectangle &#x3D; bmd.getColorBoundsRect(0xffffff, 0xffffff);<br>&#x2F;&#x2F;碰撞检测结束<br>&#x2F;&#x2F;Rectangle四个属性为0则没搜索到<br>return (rect.x !&#x3D; 0  rect.y !&#x3D; 0  rect.width !&#x3D; 0  rect.height !&#x3D; 0);<br>}</p>
 <p>public static function debug(s : DisplayObjectContainer):void<br>{<br>s.addChild(bmp);<br>bmp.x &#x3D; 500;<br>bmp.y &#x3D; 300;<br>}<br>}<br>}</p>
 <p>源文件<a target="_blank" rel="noopener" href="http://cdn.mousebomb.org/blog/wp/wp-content/uploads/2010/06/zhixian-pengzhuang.rar">点此下载</a></p>
