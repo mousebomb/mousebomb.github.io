@@ -47,6 +47,9 @@ iframe.bilibili {
   aspect-ratio: 16/9;
   border-radius: 10px;
 }
+body {
+  background: transparent url("https://cdn.mousebomb.org/blog/wp/wp-content/themes/focused/img/tiny_grid.png") repeat fixed !important;
+}
 :root {
   --theme-link: #2094f3;
   --theme-color: #1cd0fd;
