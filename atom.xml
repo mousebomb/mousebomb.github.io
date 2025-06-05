@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2025-05-12T01:30:15.218Z</updated>
+  <updated>2025-06-05T06:12:26.780Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -17,19 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>大模型时代迫使人类重塑原创性与独特性</title>
+    <link href="https://flashj.cn/2025/06/03/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html"/>
+    <id>https://flashj.cn/2025/06/03/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html</id>
+    <published>2025-06-03T00:56:00.000Z</published>
+    <updated>2025-06-05T06:12:26.780Z</updated>
+    
+    <content type="html"><![CDATA[<p>大模型时代逼迫人类的教育变革，也迫使人类思考自己之所以区隔于AI的独特性。</p><h2 id="被AI误伤，我该怎么证明“我没有用AI作弊”"><a href="#被AI误伤，我该怎么证明“我没有用AI作弊”" class="headerlink" title="被AI误伤，我该怎么证明“我没有用AI作弊”"></a>被AI误伤，我该怎么证明“我没有用AI作弊”</h2><p>前几天看到一篇文章：  <a href="https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA">https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA</a></p><div class="tag-plugin link dis-select"><a class="link-card plain" title="被AI误伤，我该怎么证明“我没有用AI作弊”" href="https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">被AI误伤，我该怎么证明“我没有用AI作弊”</span><span class="cap link footnote">https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div><p>这篇文章主要讲了AI时代下，学生和老师在作业判定上产生的矛盾，以及被AI误判作弊后该如何自证清白的问题，具体内容如下：</p><ul><li><strong>学生被AI检测工具误判作弊的现象</strong><ul><li>美国休斯顿大学学生Leigh Burrell认真完成的英语作业被教授怀疑用AI作弊判了零分，她花了半个多月，提交15页写作过程截图、时间戳和作业过程视频才洗清嫌疑，之后为避免再被误判，她写作业时会架摄像机录全程。</li><li>布法罗大学一公共卫生专业学生独立完成的作业被Turnitin的AI检测工具误判为“可能由AI生成”，校方仅凭此就启动学术不端调查，且这类情况申诉难，举证责任全在学生，像英语非母语者、残障学生等群体更易遭遇。</li><li>有学生在同一门课上两次被误判用AI，还有学生全心投入写的元分析论文60%被Turnitin误判为AI生成，且不知如何用自己的话改写被标记内容。</li><li>一学生用Visual Studio Code完成web开发毕业设计，虽有各种开发过程资料，但教授怀疑一切，不认可其未用AI。</li></ul></li><li><strong>AI使用的不同极端案例</strong><ul><li>哥伦比亚大学计算机科学专业学生Chungin “Roy” Lee几乎每一份文科作业都用AI“参考”，还开发了程序员面试辅助工具并创业成功。</li><li>有老师因用AI备课，讲义中出现给ChatGPT的指令，被学生投诉，而该老师教学大纲却禁止使用AI等学术不端行为。</li></ul></li><li><strong>AI检测工具的问题</strong>：现在很多AI检测软件检测“是否由AI生成”，但整体准确率不高，这导致老师和学生越来越对立。</li><li><strong>各方的困扰与矛盾</strong><ul><li>学生方面：“好学生”因AI检测工具误判或写作风格“过于完美”被怀疑，自证清白困难；部分学生合理用AI辅助学习，而有些则过度依赖甚至作弊。</li><li>老师方面：面对大量带“AI腔调”的作业难辨真假，部分老师用AI辅助教学却被学生质疑虚伪，且不同老师对学生使用AI的“度”标准不一，易引发矛盾。</li></ul></li><li><strong>目前的解决办法</strong><ul><li>学生：代码类作业可保留丰富的git commit历史（含拼写错误、构建失败等）；文字类作业善用Word、Google Docs的历史记录功能，或录视频直播写作业过程，时刻留意保存写作业的“证据”。</li><li>老师：部分老师认为只能采用现场手写、真人监考的“原始”方式保证书面作业公平性，如课堂上手写论文并由真人导师监考。</li></ul></li></ul><h2 id="重塑原创性与人类独特性"><a href="#重塑原创性与人类独特性" class="headerlink" title="重塑原创性与人类独特性"></a>重塑原创性与人类独特性</h2><p>对我们启发最大的地方在于，教育方式是否应该跟随技术而迭代？ 既然AI可以在这些方面做得很好，那么为什么要布置这种AI可以做得很好的作业？ 人的独特性在哪里，在作业中难道不应该结合人类独特性吗？</p><p>大模型时代逼迫人类的教育变革，也迫使人类思考自己之所以区隔于AI的独特性。</p><p>我觉得，首先，作业设计得改改。别再搞那些模板化、机械化的作业了，得让学生发挥自己的创造力、批判性思维和情感体验。比如说写作文，别再让学生写那些千篇一律的题目，什么 “我的梦想”“难忘的一天”，这些题目都快被写烂了。可以让学生结合自己的生活经历，写一些更有深度、更有个性的内容，像 “我在一次失败经历中的成长”“我对某个社会现象的独特看法”，这样的具有个体差异的命题。<br>就像我面试别人时，也会比较侧重问之前项目中遇到的比较大的挑战是如何解决的。</p><p>在写作教学中，学生不再仅仅需要掌握语法和修辞技巧，更需要培养批判性思维、创造力和情感表达能力，这些是AI目前难以替代的。</p><p>其次，教育评价体系也得重构。不能再只看分数、只看结果了，得关注学生的思维过程和成长过程。就像我们做产品，不能只看最后产品卖得好不好，还得看研发过程中遇到了哪些问题，是怎么解决的。可以采用档案袋评价法，把学生的草稿、修改记录、反思日志都收集起来，综合评估他们的能力。</p><p>另外，老师们也得转型升级。要从传统的知识传授者，变成学生成长的教练和引导者。得学会用好 AI 工具，把它融入到教学中，而不是抵制它。就像我们做企业，不能拒绝新技术，得拥抱它，让它为我们所用。</p><p>AI 不是教育的敌人，而是重构教育的契机。我们得抓住这个机会，让教育变得更符合人性，更能培养出有独特性、有创造力的人才。希望未来的教育，能让每个学生都能找到自己的价值，在 AI 浪潮中站稳脚跟，而不是被浪潮淹没。</p><p>同时，人类也必须重新审视自身的独特性——我们不仅仅是信息的接收者和处理者，更是情感的载体、道德的判断者以及文化的传承者。在AI可以生成文章、创作音乐甚至进行艺术设计的时代，人类的独特价值在于我们对世界的感知、对生命的理解以及对伦理的思考。因此，教育变革不仅是技术驱动的结果，更是人类自我认知和未来发展的必然选择。</p>]]></content>
+    
+    
+    <summary type="html">被AI误伤，我该怎么证明“我没有用AI作弊”？对我们启发最大的地方在于，教育方式是否应该跟随技术而迭代？ 既然AI可以在这些方面做得很好，那么为什么要布置这种AI可以做得很好的作业？ 人的独特性在哪里，在作业中难道不应该结合人类独特性吗？</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Trae终于出收费版了</title>
+    <link href="https://flashj.cn/2025/05/28/trae-pro.html"/>
+    <id>https://flashj.cn/2025/05/28/trae-pro.html</id>
+    <published>2025-05-28T12:31:00.000Z</published>
+    <updated>2025-06-05T05:26:30.435Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Trae终于出收费版了"><a href="#Trae终于出收费版了" class="headerlink" title="Trae终于出收费版了"></a>Trae终于出收费版了</h1><p>今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！</p><p>哇塞价格太给力了！<br>7.5美元&#x2F;月，这不比cursor，GitHub copilot都省太多了！<br>还好没买Cursor。</p><p>7.5如果以后不用排队用Claude Sonnet3.7的话，这就太值了！</p><p>现在免费版每个月10次快速，50次慢速。<br>我先用完10次claude之后再看啊。</p><p>pro版 600次快速&#x2F;月</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>免费版</strong></td><td><strong>Pro 版</strong></td></tr><tr><td><strong>目标用户</strong></td><td>个人</td><td>个人</td></tr><tr><td><strong>定价</strong></td><td>免费</td><td>10 美金&#x2F;月</td></tr><tr><td><strong>折扣</strong></td><td>-</td><td>- 首次订阅（即新订阅用户）享受优惠价。<br>- 按年订阅可享受折扣。</td></tr><tr><td><strong>订阅类型</strong></td><td>-</td><td>- <strong>连续包月</strong>：当月订阅到期前，自动续费。<br>- <strong>包年</strong>：一次性支付一年的订阅费用。</td></tr><tr><td><strong>付款政策</strong></td><td>-</td><td>每次仅能发起一次订阅。</td></tr><tr><td><strong>退款政策</strong></td><td>-</td><td>不支持退款。若有特殊情况，可通过邮件（<a href="mailto:&#x66;&#x65;&#101;&#100;&#98;&#97;&#99;&#x6b;&#64;&#x6d;&#x61;&#x69;&#x6c;&#46;&#116;&#x72;&#x61;&#101;&#x2e;&#97;&#105;">feedback</a><a href="mailto:&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x40;&#x6d;&#x61;&#x69;&#108;&#46;&#x74;&#114;&#x61;&#x65;&#x2e;&#97;&#x69;">@mail.trae.ai</a>）联系 Trae 官方处理。</td></tr><tr><td><strong>代码自动补全</strong></td><td>5000 次&#x2F;月</td><td>无限次</td></tr><tr><td><strong>超级模型问答</strong></td><td>- 快速队列：每月 10 次<br>- 慢速队列：每月 50 次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td><td>- 快速队列：每月 600 次<br>- 慢速队列：无限次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td></tr><tr><td><strong>高级模型问答</strong></td><td>每月 1000 次（慢速队列）</td><td>无限次（慢速队列）</td></tr><tr><td>解释：</td><td></td><td></td></tr></tbody></table><ul><li>快速请求的意思是15秒以内，但beta模型可能依然排队。目前Claude sonnet3.7是正式版。600次的话一天可以用20～30次，不知道重度使用够不够了。之前因为排队的问题，我一天也就用个3～4次。</li><li>慢速请求，快速请求用完了就轮到排队。</li></ul><p>明天我再试试用它来写样式。</p>]]></content>
+    
+    
+    <summary type="html">今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！哇塞价格太给力了！7.5美元/月，这不比cursor，GitHub copilot都省太多了！</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Void(平替Cursor)的测试记录</title>
     <link href="https://flashj.cn/2025/05/11/testlog-of-using-void-alternative-to-cursor.html"/>
     <id>https://flashj.cn/2025/05/11/testlog-of-using-void-alternative-to-cursor.html</id>
     <published>2025-05-11T14:52:00.000Z</published>
-    <updated>2025-05-12T01:30:15.218Z</updated>
+    <updated>2025-05-11T14:52:00.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="void"><a href="#void" class="headerlink" title="void"></a>void</h2><p>在网上了解到，<strong>Void</strong> 是一款开源的 AI 代码编辑器，堪称 Cursor 的开源平替。其功能强大，可兼容各类模型，并支持本地运行，使用户能够全面掌控自身数据，真正做到安全可控。</p><p>我尝试使用这款允许本地 AI 运行的 IDE，检验一下实际效果。</p><p>选取的测试用例：请它帮我生成一份英语单词拼写测验题（网页）。用于小学英语练习。</p><h3 id="先撰写需求提示词："><a href="#先撰写需求提示词：" class="headerlink" title="先撰写需求提示词："></a>先撰写需求提示词：</h3><blockquote><p>我想在 wordspell-exam 目录下编写一个html 页面，实现英语单词拼写练习。我可以在代码内配置很多单词，每次打开页面 在配置的词库中随机产生20道单词题目，让用户一个单词一个单词轮流答题。<br>每一题单词答题时，画面全屏幕显示 ：上面1行中文大字（题目），中间一行为输入框，输入框可体现出单词的字符数量框（类似于大多数网页输入6位验证码的样式）；下面一行为确认按钮。<br>点击确认按钮会跳转下一题，如果所有单词题目答题完毕后，会自动出结果、得分。<br>结果需要包含 错误的单词 和 对应的正确答案，得分采用百分制换算计算得出。<br>出答案的时候需要顺便发送webhook。</p><ul><li>Webhook请求地址：<code>&#39;https://open.feishu.cn/open-apis/bot/v2/hook/yyyyyy-xxxxxxx&#39;</code></li><li>请求方式：<code>POST</code>  </li><li>请求头：<code>Content-Type: application/json</code></li><li>请求体：<code>&#123;&quot;msg_type&quot;:&quot;text&quot;,&quot;content&quot;:&#123;&quot;text&quot;:&quot;request example&quot;&#125;&#125;</code><br>界面现代化简约一点，适配iPad和pc。</li></ul></blockquote><h3 id="第一次直接用void搭配LM-Studio的Qwen3-30B-A3B-MLX-4bit量化测试："><a href="#第一次直接用void搭配LM-Studio的Qwen3-30B-A3B-MLX-4bit量化测试：" class="headerlink" title="第一次直接用void搭配LM Studio的Qwen3-30B-A3B MLX 4bit量化测试："></a>第一次直接用void搭配LM Studio的Qwen3-30B-A3B MLX 4bit量化测试：</h3><p>非常不尽人意。没有全部命中目标。<br>第一次做的，他产出题目是英文，答案是英文，且没有字符数量框。</p><h3 id="第二次测试，优化提示词"><a href="#第二次测试，优化提示词" class="headerlink" title="第二次测试，优化提示词"></a>第二次测试，优化提示词</h3><p>第二次，我先用提示词转换成更有逻辑性的策划文档。</p><p>转换后的提示词：</p><blockquote><hr><h2 id="🎯-需求背景"><a href="#🎯-需求背景" class="headerlink" title="🎯 需求背景"></a>🎯 需求背景</h2><p>我们要在 <code>wordspell-exam</code> 目录下开发一个<strong>英语单词拼写练习的 HTML 页面</strong>，用于用户进行单个单词的拼写训练。页面需要具备以下功能：</p><hr><h2 id="🧩-功能模块拆解"><a href="#🧩-功能模块拆解" class="headerlink" title="🧩 功能模块拆解"></a>🧩 功能模块拆解</h2><h3 id="1-词库配置"><a href="#1-词库配置" class="headerlink" title="1. 词库配置"></a>1. <strong>词库配置</strong></h3><ul><li>在 HTML 或 JS 中<strong>内置一个单词列表（数组）</strong>，例如：<pre><code class="language-js">const wordList = [  &#123; en: &quot;apple&quot;, zh: &quot;苹果&quot; &#125;,  &#123; en: &quot;banana&quot;, zh: &quot;香蕉&quot; &#125;,  // ...更多单词];</code></pre></li><li><strong>每次打开页面时</strong>，从这个词库中随机抽取 <strong>20 个单词</strong>，作为本次练习的题目。</li></ul><hr><h3 id="2-答题界面"><a href="#2-答题界面" class="headerlink" title="2. 答题界面"></a>2. <strong>答题界面</strong></h3><ul><li><p>每次只显示一个单词，用户逐个答题。</p></li><li><p>界面布局如下：</p><pre><code>[全屏显示]中文题目（大字）-------------------|                 ||     _ _ _ _     | （输入框，显示字符数量）-------------------[确认按钮]</code></pre></li><li><p><strong>输入框样式</strong>：类似验证码的格式，比如 <code>____</code>（4 个下划线），根据单词长度自动调整。</p></li><li><p><strong>输入框只允许输入字母</strong>，大小写不敏感。</p></li></ul><hr><h3 id="3-答题流程"><a href="#3-答题流程" class="headerlink" title="3. 答题流程"></a>3. <strong>答题流程</strong></h3><ul><li>用户在输入框中输入单词，点击“确认”按钮。</li><li>系统判断是否正确：<ul><li>正确：进入下一题</li><li>错误：记录错误，并进入下一题</li></ul></li><li>所有题目答完后，<strong>自动跳转到结果页</strong>。</li></ul><hr><h3 id="4-结果显示"><a href="#4-结果显示" class="headerlink" title="4. 结果显示"></a>4. <strong>结果显示</strong></h3><ul><li>显示总得分（百分制）</li><li>展示所有<strong>错误的单词及正确答案</strong></li><li>例如：<pre><code>错误：apple → 正确是 &quot;apple&quot;错误：banan → 正确是 &quot;banana&quot;</code></pre></li></ul><hr><h3 id="5-Webhook-发送"><a href="#5-Webhook-发送" class="headerlink" title="5. Webhook 发送"></a>5. <strong>Webhook 发送</strong></h3><ul><li>在结果页生成后，<strong>自动发送 POST 请求到指定地址</strong>：<ul><li>URL: <code>https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx</code></li><li>Method: <code>POST</code></li><li>Headers:<pre><code>Content-Type: application/json</code></pre></li><li>Body 示例：<pre><code class="language-json">&#123;  &quot;msg_type&quot;: &quot;text&quot;,  &quot;content&quot;: &#123;    &quot;text&quot;: &quot;用户完成拼写练习，得分：80%&quot;  &#125;&#125;</code></pre></li><li><strong>注意</strong>：实际发送的内容应包含用户得分、错误单词列表等信息，具体格式可由你定义。</li></ul></li></ul><hr><h3 id="6-界面设计"><a href="#6-界面设计" class="headerlink" title="6. 界面设计"></a>6. <strong>界面设计</strong></h3><ul><li>简洁现代风格，适配 <strong>PC 和 iPad</strong>。</li><li>使用响应式设计（如 Flex 或 Grid），确保在不同设备上显示正常。</li></ul><hr><h2 id="🧰-技术建议（供程序员参考）"><a href="#🧰-技术建议（供程序员参考）" class="headerlink" title="🧰 技术建议（供程序员参考）"></a>🧰 技术建议（供程序员参考）</h2><ul><li><strong>前端技术</strong>：HTML + CSS + JavaScript</li><li><strong>状态管理</strong>：可以用 <code>let</code> 或 <code>const</code> 变量保存当前题号、用户输入、错误记录等</li><li><strong>样式建议</strong>：使用 <code>flex</code> 布局，字体大、间距合理</li><li><strong>移动端适配</strong>：使用 <code>viewport</code> 设置和媒体查询（Media Query）</li></ul><hr><h2 id="✅-总结"><a href="#✅-总结" class="headerlink" title="✅ 总结"></a>✅ 总结</h2><p>这个页面的核心是：</p><ul><li><strong>随机抽取 20 题</strong></li><li><strong>逐题答题，显示字符数</strong></li><li><strong>结果页展示得分和错误信息</strong></li><li><strong>自动发送 webhook</strong></li></ul><hr></blockquote><p>然后让它做，好家伙，它做的直接写成python了。</p><p>那么问题出在哪里，30B的模型不可能连这个需求都不理解吧？</p><h2 id="Qwen大模型更换8位量化"><a href="#Qwen大模型更换8位量化" class="headerlink" title="Qwen大模型更换8位量化"></a>Qwen大模型更换8位量化</h2><p>用<code>Qwen3-30B-A3B 4bit</code>不满意，怀疑是量化的问题。</p><p>准备换8bit量化，基于信息：</p><ul><li>因为查资料有人说Qweb3-4B不量化版本都很强的。</li><li>问豆包，说8bit量化效果跟全尺寸的接近，4bit量化可以观测到明显性能下降。</li></ul><p>所以，拟先更换为可流畅运行的<code>Qwen3-14B-MLX 8bit</code>（16GB）版本，试其效果；继而再以<code>Qwen3-30B-A3B 8bit</code>（32.46GB）版本进一步验证，以期获得更优结果。</p><h3 id="测试Qwen3-14B-8bit"><a href="#测试Qwen3-14B-8bit" class="headerlink" title="测试Qwen3-14B 8bit"></a>测试Qwen3-14B 8bit</h3><p>测试14B配合void，但是发现出问题了，void持续在报错。我把上下文调到40960后重新继续。</p><p>还是报错</p><pre><code>Error: Unable to write file &#39;/Users/rhett/MyWork/2025/AIToolWorkspace/wordspell-exam/spell_practice.html &lt;content&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&quot;zh-CN&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;英语单词拼写练习&lt;/title&gt;...</code></pre><p>奇了怪了，换成<code>30B-A3B-4bit</code>试试看，重新执行，又可以生成html但是不自动插入到文件里，只显示在agent对话里。但void agent面板里不报错。</p><h3 id="测试-Qwen3-30B-A3B"><a href="#测试-Qwen3-30B-A3B" class="headerlink" title="测试 Qwen3-30B-A3B"></a>测试 Qwen3-30B-A3B</h3><p>换成30B-A3B 8bit，和4bit一样，生成html但是不能自动写入到文件里，而且对需求的理解没做到位，比如根本没有实现提交webhook的需求。</p><p><strong>观察记录：</strong></p><ul><li>Qwen3-14B Dense模型 8bit的运行速度显著慢于Qwen3-30B-A3B MoE的4bit。占内存小一些但速度慢。</li><li>Qwen3-30B-A3B 8bit的速度也比14B快，说明Dense模型速度没有MoE快。</li><li>void应该是在某些方面没有适配好千问模型，所以导致内容无法插入到具体文件。</li></ul><h3 id="修改void参数后再试Qwen3-30B-A3B-8bit"><a href="#修改void参数后再试Qwen3-30B-A3B-8bit" class="headerlink" title="修改void参数后再试Qwen3-30B-A3B 8bit"></a>修改void参数后再试Qwen3-30B-A3B 8bit</h3><p>就算是<code>Qwen3-30B-A3B</code>，他对我的需求居然理解都不到位，我很震惊。我提出的6个要求，他居然都不能复述出来。感觉全是幻觉。</p><p>晚上吃完饭后，我脑子清醒了，再研究了一下配置，无意间发现了一个配置，在模型开关旁边有个加号，点击可以打开advanced settings，这玩意默认给contextWindow是4096，reserved是8192，我改成40960和我LM Studio设置一致，并减少reserved之后，终于能听懂我的需求了：</p><p><img src="https://cdn.mousebomb.org/blog/auto/202505120915091.png"></p><p>听懂需求后输出的html看起来是对的，但是——</p><p>这一版的问题在于，代码在浏览器运行会报错。</p><p>人肉检查了一下，发现30B的代码写得上下衔接有问题。莫非千问30B不适合写代码？</p><h3 id="换openrouter-qwen2-5-coder-32b（free）测试"><a href="#换openrouter-qwen2-5-coder-32b（free）测试" class="headerlink" title="换openrouter&#x2F;qwen2.5-coder-32b（free）测试"></a>换openrouter&#x2F;qwen2.5-coder-32b（free）测试</h3><p><strong>速度明显比本地30B的慢多了</strong>。</p><p><strong>能够自动在输出html后执行写入文件操作</strong>！</p><p>能够代码运行不报错，完整实现了需求中提出的所有功能，走完单词拼写和检查流程，也有提交webhook。</p><p>奇怪，难道void搭配coder模型就可以写入文件？ </p><p>目前还没有在本地部署这个模型，所以无法确认<strong>在void中不能自动写入文件</strong>是<em>本地部署的问题还是qwen3模型的问题</em>。也不需要验证了，反正云端调用是免费的，那就不需要本地运行了。</p><p>嗯看来搭配<strong>void</strong>目前免费方案最靠谱的就是这个**openrouter&#x2F;qwen2.5-coder-32b（free）**模型了。</p><h2 id="豆包阐述较好的写代码模型"><a href="#豆包阐述较好的写代码模型" class="headerlink" title="豆包阐述较好的写代码模型"></a>豆包阐述较好的写代码模型</h2><blockquote><h3 id="关于你提到的模型档次："><a href="#关于你提到的模型档次：" class="headerlink" title="关于你提到的模型档次："></a>关于你提到的模型档次：</h3><ul><li><strong>Qwen2.5-Coder-32B-Instruct:Free</strong>：属于中等偏上水平，适合日常开发任务，在中文编程场景中表现较好。</li><li><strong>DeepSeek-R1-Zero:Free</strong>：属于入门级模型，适合简单代码生成和学习使用，对于复杂任务支持有限。</li><li><strong>Qwen3-30B-A3B</strong>：属于高端模型，具备较强的代码理解和生成能力，可应对复杂开发需求。</li></ul><h3 id="选择建议："><a href="#选择建议：" class="headerlink" title="选择建议："></a>选择建议：</h3><ul><li><strong>初学者或简单任务</strong>：可选择免费的入门级模型，如 DeepSeek-R1-Zero:Free。</li><li><strong>专业开发者</strong>：建议使用 Qwen3-30B-A3B 或 GPT-4 Turbo 等高端模型。</li><li><strong>中文场景优先</strong>：Qwen 系列是不错的选择。</li></ul></blockquote><p>为什么我今天的测试例子，感觉qwen2.5-coder-32b比Qwen3-30B-A3B靠谱呢？看来我还需要继续观察观察了。</p><p>计划下周在小程序开发场景进一步试试看谁写小程序项目靠谱。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>Void 是一款开源的 AI 代码编辑器，可作为 Cursor 的平替使用。  </li><li>Void 支持本地运行，用户可以全面掌控数据，确保安全可控。  </li><li>测试目标是使用 Void 生成一个英语单词拼写测验的 HTML 页面。  </li><li>第一次测试中，模型未完全理解需求，生成的内容不符合预期。  </li><li>优化提示词后，模型仍未能正确生成 HTML 页面，而是输出了 Python 代码。  </li><li>更换为 Qwen3-14B 和 Qwen3-30B 的 8bit 量化版本后，模型仍存在理解偏差和功能缺失。  </li><li>Void 在写入文件时出现错误，可能与模型适配或配置有关。  </li><li>调整 Void 的上下文窗口设置后，模型开始正确生成 HTML 内容，但代码存在运行错误。  </li><li>使用 OpenRouter 上的 Qwen2.5-Coder-32B 模型时，模型能够正确生成并写入 HTML 文件。 </li><li>Qwen2.5-Coder-32B 在测试中表现优于 Qwen3-30B-A3B，适合当前需求。  </li><li>未来计划在小程序开发场景中进一步测试不同模型的表现。</li></ul>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;void&quot;&gt;&lt;a href=&quot;#void&quot; class=&quot;headerlink&quot; title=&quot;void&quot;&gt;&lt;/a&gt;void&lt;/h2&gt;&lt;p&gt;在网上了解到，&lt;strong&gt;Void&lt;/strong&gt; 是一款开源的 AI 代码编辑器，堪称 Cursor 的开源平替。其</summary>
-      
+    <summary type="html">Void是一款开源AI代码编辑器，可替代Cursor。测试中发现其在生成HTML页面时存在理解偏差和功能缺失，但通过调整配置和更换模型（如Qwen2.5-Coder-32B）可实现较好效果。</summary>
     
     
     
@@ -49,19 +92,72 @@
   </entry>
   
   <entry>
+    <title>Qwen3真的好快啊</title>
+    <link href="https://flashj.cn/2025/04/29/qwen3-really-fast.html"/>
+    <id>https://flashj.cn/2025/04/29/qwen3-really-fast.html</id>
+    <published>2025-04-29T07:50:00.000Z</published>
+    <updated>2025-06-05T06:31:42.740Z</updated>
+    
+    <content type="html"><![CDATA[<p>Qwen3 真的好快啊，首token 0.2秒，55TPS，比之前QwQ-32B快220%多……</p><p><img src="https://cdn.mousebomb.org/blog/auto/2025060429-1.png"></p><p><img src="https://cdn.mousebomb.org/blog/auto/2025060429-2.png"></p>]]></content>
+    
+    
+    <summary type="html">Qwen3 真的好快啊，首token 0.2秒，55TPS，比之前QwQ-32B快220%多……</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="qwen" scheme="https://flashj.cn/tags/qwen/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fellou浏览器</title>
+    <link href="https://flashj.cn/2025/04/24/fellou.html"/>
+    <id>https://flashj.cn/2025/04/24/fellou.html</id>
+    <published>2025-04-24T02:32:00.000Z</published>
+    <updated>2025-06-05T05:31:39.440Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Fellou-“会干活”的浏览器"><a href="#Fellou-“会干活”的浏览器" class="headerlink" title="Fellou-“会干活”的浏览器"></a>Fellou-“会干活”的浏览器</h2><p>最近，更新的Trae支持了MCP，开拓了全新的用法，对程序员来说这就是Manus的另一种形态了。紧接着，又收获了新玩意儿，让数字生活变得更美好，一个<strong>Fellou</strong>让浏览器为我打工，自动做深度检索、提高效率。都是国产之光。</p><h2 id="上手体验：生成十二时辰经脉运行图"><a href="#上手体验：生成十二时辰经脉运行图" class="headerlink" title="上手体验：生成十二时辰经脉运行图"></a>上手体验：生成十二时辰经脉运行图</h2><div class="tag-plugin video" style="max-width:100%;">  <video controls preload>  <source src="https://cdn.mousebomb.org/blog/auto/202504-fellou.mp4" type="video/mp4">Your browser does not support the video tag.  </video>  </div>  <p>如视频中的操作。我用Fellou一句话生成了一个《黄帝内经》中医养生的十二时辰经脉运行图！  </p><p>只需输入简单的需求指令，我甚至没有做语言的组织和润色，Fellou就能快速整合《黄帝内经》理论与中医养生知识，自动拆解任务并调用相关数据接口，以可视化图表形式呈现十二时辰对应的经脉运行规律、养生要点及适宜活动。  </p><p>比如：  </p><ul><li><strong>子时（23:00-1:00）</strong>：对应胆经，图表提示需“宜入睡，忌熬夜，养肝胆之气”；  </li><li><strong>辰时（7:00-9:00）</strong>：对应胃经，标注“宜早餐，忌空腹，温养脾胃”；  </li><li><strong>酉时（17:00-19:00）</strong>：对应肾经，建议“宜休息，忌过劳，固肾益精”。</li></ul><p>图表还同步标注了各时辰与脏腑的对应关系、经络循行路线及简易养生功法（如按压穴位示意图），直观易懂且贴合传统养生理念。无论是中医爱好者自学，还是日常养生参考，都能一键获取专业级知识整合服务，省去翻阅古籍和整理资料的繁琐流程，真正实现“一句话启动智能养生”！  </p><p>想体验类似功能？打开Fellou输入你的需求，无论是专业领域知识图谱还是生活实用图表，它都能帮你快速生成~</p><p>如果你还没听说过Fellou的话，可以看下下面的介绍：</p><h2 id="Fellou的介绍"><a href="#Fellou的介绍" class="headerlink" title="Fellou的介绍"></a>Fellou的介绍</h2><p>咱打工人每天在电脑前忙得像个旋转的陀螺——打开几十个网页找资料、填无数表格、来回切换标签页，好不容易喝口水的功夫，又得重复那些枯燥的点击操作。要是告诉你，现在有个浏览器能帮你”跑腿干活”，你信不？  </p><h3 id="一、传统浏览器VS新物种：从”手动打工”到”张嘴指挥”"><a href="#一、传统浏览器VS新物种：从”手动打工”到”张嘴指挥”" class="headerlink" title="一、传统浏览器VS新物种：从”手动打工”到”张嘴指挥”"></a>一、传统浏览器VS新物种：从”手动打工”到”张嘴指挥”</h3><p>先说说咱们用的传统浏览器，说白了就是个”信息展示板”：你想查资料？自己搜；想填表格？手动敲；想比价下单？挨个页面切。而95后创业者谢扬搞出来的 <strong>Fellou</strong>，直接把浏览器从”工具人”升级成了”智能小助理”，官方给它起了个名儿叫 <strong>行动型浏览器（Agentic Browser）</strong>。  </p><p>它牛在哪儿呢？举个例子：  </p><ul><li>你说一句”在小红书找小米SU7的好评，出个中英双语报告”，Fellou能自动逛遍小红书，扒拉好评内容，整理成报告还带翻译，全程不用你动手。  </li><li>想在亚马逊买显卡？说声”搜NVIDIA RTX 4060，按评分和库存排序，把最高分的加入购物车”，它直接帮你走完流程，连点击筛选按钮的活儿都省了。</li></ul><h3 id="二、四大”超能力”让它秒变效率王者"><a href="#二、四大”超能力”让它秒变效率王者" class="headerlink" title="二、四大”超能力”让它秒变效率王者"></a>二、四大”超能力”让它秒变效率王者</h3><p>Fellou能这么能打，全靠这四个核心技能：  </p><h4 id="1-深度行动：从”动眼”到”动手”"><a href="#1-深度行动：从”动眼”到”动手”" class="headerlink" title="1. 深度行动：从”动眼”到”动手”"></a>1. 深度行动：从”动眼”到”动手”</h4><p>以前用浏览器，眼睛看累了手还得跟着忙；现在有了 <strong>Deep Action</strong>，你只用提需求，它帮你拆任务、跨网站操作。比如调研”低代码平台趋势”，它能一口气逛遍全网，揪出Top10公司，分析产品差异和商业模式，生成的报告比你手动整理的还清楚。实测数据更夸张：同样49个任务，Fellou平均3.7分钟干完，比其他工具快好几倍！  </p><h4 id="2-主动智能：比你更懂你自己"><a href="#2-主动智能：比你更懂你自己" class="headerlink" title="2. 主动智能：比你更懂你自己"></a>2. 主动智能：比你更懂你自己</h4><p>普通AI都是”你问它答”，Fellou却能”看你做事，猜你心思”。它会偷偷记住你常逛的网站、重复做的任务，比如你每天早上打开日历安排会议，它哪天看你没动作，可能就主动跳出来问：”需要帮你新建今天的会议日程吗？”这种”预判式服务”，简直像有个贴心小助手在身边。  </p><h4 id="3-混合影子空间：你和AI各干各的不干扰"><a href="#3-混合影子空间：你和AI各干各的不干扰" class="headerlink" title="3. 混合影子空间：你和AI各干各的不干扰"></a>3. 混合影子空间：你和AI各干各的不干扰</h4><p>担心AI干活时占着电脑没法用？Fellou搞了个 <strong>影子空间</strong>：  </p><ul><li>简单任务（比如新建日历）直接在本地快速搞定，不耽误你事儿；  </li><li>复杂任务（比如整理一周邮件）丢进虚拟环境里跑，你该用电脑用电脑，还能随时看进度、喊停调整；  </li><li>不依赖本地的任务（比如逛GitHub找代码bug）扔到云端，你关了电脑出门，手机上还能接着看结果。</li></ul><h4 id="4-智能体网络：人人都能造”AI小帮手”"><a href="#4-智能体网络：人人都能造”AI小帮手”" class="headerlink" title="4. 智能体网络：人人都能造”AI小帮手”"></a>4. 智能体网络：人人都能造”AI小帮手”</h4><p>在Fellou的世界里，你不只是用户，还能当”AI设计师”。比如你是个HR，天天在LinkedIn搜工程师，就可以把自己的搜索逻辑做成一个 <strong>Agent</strong>（智能体），不仅自己用着顺手，还能分享给同事或公开到平台，让其他人直接调用。开发者更厉害，用官方提供的 <strong>Eko框架</strong>，能用自然语言写工作流，甚至给AI加”开关”（Hook机制），随时干预调整任务流程。  </p><h3 id="三、和其他AI浏览器比，它到底强在哪儿？"><a href="#三、和其他AI浏览器比，它到底强在哪儿？" class="headerlink" title="三、和其他AI浏览器比，它到底强在哪儿？"></a>三、和其他AI浏览器比，它到底强在哪儿？</h3><ul><li><strong>能登私密网站</strong>：像Perplexity这种只能公开搜索，你公司内部系统、私人论坛的内容，它根本进不去。Fellou能安全登录这些私密页面，挖到别人搜不到的信息。  </li><li><strong>记住你的”工作现场”</strong>：你开着的标签页、填到一半的表格，它都能当成”上下文”记住，比如你正在看某个产品页面，让它比价时，它会直接以这个产品为基准去搜，不用你重新输入关键词。  </li><li><strong>干活又快又省钱</strong>：自研的Eko框架让任务执行又快又便宜，一次任务成本最低3毛，最贵也就3块，这些成本目前还不需要用户承担。学生党、打工人都能放心用。</li></ul><h3 id="四、下载安装"><a href="#四、下载安装" class="headerlink" title="四、下载安装"></a>四、下载安装</h3><p>现在Fellou已经开放Mac版内测（去fellou.ai&#x2F;download就能下），Windows和手机版下半年也会上线。想想看，以后上班只要张嘴说需求，浏览器自己跑流程，下班准时走人不是梦！如果你是天天和网页打交道的打工人、创业者，或者喜欢尝鲜的科技爱好者，这玩意儿真值得试试——毕竟，谁不想让电脑自己”卷”起来，咱们轻松摸鱼呢？</p><p>需要内测邀请码的就联系我吧。</p>]]></content>
+    
+    
+    <summary type="html">最近，更新的Trae支持了MCP，开拓了全新的用法，对程序员来说这就是Manus的另一种形态了。紧接着，又收获了新玩意儿，让数字生活变得更美好，一个**Fellou**让浏览器为我打工，自动做深度检索、提高效率。都是国产之光。</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="fellou" scheme="https://flashj.cn/tags/fellou/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Qbserve-RescueTime替代方案</title>
     <link href="https://flashj.cn/2025/03/13/Qbserve.html"/>
     <id>https://flashj.cn/2025/03/13/Qbserve.html</id>
     <published>2025-03-13T12:02:28.000Z</published>
-    <updated>2025-05-05T13:58:41.011Z</updated>
+    <updated>2025-03-13T12:02:28.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="RescueTime-越来越不好用了"><a href="#RescueTime-越来越不好用了" class="headerlink" title="RescueTime 越来越不好用了"></a>RescueTime 越来越不好用了</h2><p>RescueTime 是一款非常优秀的时间记录工具，我从2016年用到现在。我很喜欢它的简洁、无感知的时间记录方式。<br>一直以来，我都是把它的周报提取出总时间和软件开发时长，自己记录到Numbers表格里存储和可视化。<br><img src="https://cdn.mousebomb.org/blog/auto/202503132005929.png"></p><p>但是，随着时间的推移，我发现了一些问题。<br>去年先是遇到总是记录不成功，似乎是版本很久没维护了，当时就卸载了。<br>今年发现官网大变样，图标也换了，新版看起来更现代化一些，就又装回来试了几个星期。</p><p>但是，我发现它本来就丑陋的UI，现在虽然粉饰一新，但我需要的数据总不能一眼看到，而且画面占据了屏幕的1&#x2F;3。</p><p>以前它作为一个安静的存在也就够了，可是现在这两周里出现几次莫名其妙提示我：“分心了，要重新集中注意力。”我明明在写代码啊，于是我就点开它的图标想看看到底怎么判断我分心了的呢。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202503132009568.png"></p><p>一眼看去都看不到我关心的数据，这么突出给我上周的数据有啥用。</p><p>而且今天的数据，我点开面板之后还得等几秒才刷新出来。哦好吧，毕竟他数据都是存在服务端上的。</p><ul><li>现在感觉UI好乱，占据屏幕空间大，浪费布局空间。</li><li>记录数据查看数据还要有延迟。</li><li>还会误报警报。</li><li>还有一部分老数据和新设置不兼容。</li></ul><p>想找替代品。</p><p>问了一下ChatGPT，它推荐了几个，其中一个Timing，我看了界面很喜欢，但是也是云端存储的，订阅制。<br>还有一个叫Qbserve的工具，界面也还行，数据纯单机本地存储，这就是我要找的。</p><h3 id="Timing"><a href="#Timing" class="headerlink" title="Timing"></a>Timing</h3><p><img src="https://cdn.mousebomb.org/blog/auto/202503132017621.png"><br>Timing显示方式是我想要的，但是收费好贵啊。而且是云端存储的，到时候出点差错数据都不一定属于自己能掌控。</p><h3 id="Qbserve"><a href="#Qbserve" class="headerlink" title="Qbserve"></a>Qbserve</h3><p><img src="https://cdn.mousebomb.org/blog/auto/202503132019313.png"></p><p>买断制，单机。USD29 Paypal支付。 或者数码荔枝 RMB 99¥。</p><p>先用官网版本试用。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202503132020328.png"><br>这个Timeline太有魅力了！</p><p>用了两天觉得太适合我了。</p><p>我对数据的记录并不带有太大的评判，我只希望它足够安静地记录，我点开它的时候能瞬间看到我最关心的直观的数据。而它轻而易举地做到了！</p><p>看来不得不买了。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;RescueTime-越来越不好用了&quot;&gt;&lt;a href=&quot;#RescueTime-越来越不好用了&quot; class=&quot;headerlink&quot; title=&quot;RescueTime 越来越不好用了&quot;&gt;&lt;/a&gt;RescueTime 越来越不好用了&lt;/h2&gt;&lt;p&gt;Rescue</summary>
-      
+    <summary type="html">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</summary>
     
     
     
@@ -87,17 +183,12 @@
     <link href="https://flashj.cn/2025/03/06/qwq-32B-jinja-error.html"/>
     <id>https://flashj.cn/2025/03/06/qwq-32B-jinja-error.html</id>
     <published>2025-03-06T11:01:38.000Z</published>
-    <updated>2025-05-05T13:58:41.037Z</updated>
+    <updated>2025-03-06T11:01:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>使用QwQ-32B，发现了一个问题，就是加载QwQ-32B后，发起任何对话都会报错：</p><blockquote><p>Error rendering prompt with jinja template: Error: Parser Error: Expected closing statement token. OpenSquareBracket !&#x3D;&#x3D; CloseStatement.</p></blockquote><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在网上找了一下，发现是MLX版本的才会有这个问题（来自mlx-community，而非gguf版本的来自lmstudio-community），暂时LMStudio版本还不兼容，是jinja模板的问题，需要在模板中做一些修改，如下：</p><p><img src="https://cdn.mousebomb.org/blog/auto/202503061905513.png"></p><p><img src="https://cdn.mousebomb.org/blog/auto/202503061906811.png"></p><p>修改为这段就可以：</p><pre><code>&#123;%- if tools %&#125; &#123;&#123;- '<|im_start|>system\n' &#125;&#125; &#123;%- if messages[0]['role'] == 'system' %&#125; &#123;&#123;- messages[0]['content'] &#125;&#125; &#123;%- else %&#125; &#123;&#123;- '' &#125;&#125; &#123;%- endif %&#125; &#123;&#123;- "\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>" &#125;&#125; &#123;%- for tool in tools %&#125; &#123;&#123;- "\n" &#125;&#125; &#123;&#123;- tool | tojson &#125;&#125; &#123;%- endfor %&#125; &#123;&#123;- "\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n&#123;\"name\": <function-name>, \"arguments\": <args-json-object>&#125;\n</tool_call><|im_end|>\n" &#125;&#125; &#123;%- else %&#125; &#123;%- if messages[0]['role'] == 'system' %&#125; &#123;&#123;- '<|im_start|>system\n' + messages[0]['content'] + '<|im_end|>\n' &#125;&#125; &#123;%- endif %&#125; &#123;%- endif %&#125; &#123;%- for message in messages %&#125; &#123;%- if (message.role == "user") or (message.role == "system" and not loop.first) %&#125; &#123;&#123;- '<|im_start|>' + message.role + '\n' + message.content + '<|im_end|>' + '\n' &#125;&#125; &#123;%- elif message.role == "assistant" and not message.tool_calls %&#125; &#123;%- set content = (message.content.split('</think>')|last).lstrip('\n') %&#125; &#123;&#123;- '<|im_start|>' + message.role + '\n' + content + '<|im_end|>' + '\n' &#125;&#125; &#123;%- elif message.role == "assistant" %&#125; &#123;%- set content = (message.content.split('</think>')|last).lstrip('\n') %&#125; &#123;&#123;- '<|im_start|>' + message.role &#125;&#125; &#123;%- if message.content %&#125; &#123;&#123;- '\n' + content &#125;&#125; &#123;%- endif %&#125; &#123;%- for tool_call in message.tool_calls %&#125; &#123;%- if tool_call.function is defined %&#125; &#123;%- set tool_call = tool_call.function %&#125; &#123;%- endif %&#125; &#123;&#123;- '\n<tool_call>\n&#123;"name": "' &#125;&#125; &#123;&#123;- tool_call.name &#125;&#125; &#123;&#123;- '", "arguments": ' &#125;&#125; &#123;&#123;- tool_call.arguments | tojson &#125;&#125; &#123;&#123;- '&#125;\n</tool_call>' &#125;&#125; &#123;%- endfor %&#125; &#123;&#123;- '<|im_end|>\n' &#125;&#125; &#123;%- elif message.role == "tool" %&#125; &#123;%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != "tool") %&#125; &#123;&#123;- '<|im_start|>user' &#125;&#125; &#123;%- endif %&#125; &#123;&#123;- '\n<tool_response>\n' &#125;&#125; &#123;&#123;- message.content &#125;&#125; &#123;&#123;- '\n</tool_response>' &#125;&#125; &#123;%- if loop.last or (messages[loop.index0 + 1].role != "tool") %&#125; &#123;&#123;- '<|im_end|>\n' &#125;&#125; &#123;%- endif %&#125; &#123;%- endif %&#125; &#123;%- endfor %&#125; &#123;%- if add_generation_prompt %&#125; &#123;&#123;- '<|im_start|>assistant\n' &#125;&#125; &#123;%- endif %&#125;</code></pre><h2 id="成功后效果："><a href="#成功后效果：" class="headerlink" title="成功后效果："></a>成功后效果：</h2><p><img src="https://cdn.mousebomb.org/blog/auto/202503061913596.gif"></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;现象&quot;&gt;&lt;a href=&quot;#现象&quot; class=&quot;headerlink&quot; title=&quot;现象&quot;&gt;&lt;/a&gt;现象&lt;/h2&gt;&lt;p&gt;使用QwQ-32B，发现了一个问题，就是加载QwQ-32B后，发起任何对话都会报错：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Error r</summary>
-      
+    <summary type="html">使用QwQ-32B时，MLX版本对话报错“Error rendering prompt with jinja template: Error: Parser Error: Expected closing statement token. OpenSquareBracket !== CloseStatement.”，需修改jinja模板解决。gguf版本无此问题。修改后成功运行，效果如图。</summary>
     
     
     
@@ -110,11 +201,11 @@
     
     <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
     
+    <category term="QwQ" scheme="https://flashj.cn/tags/QwQ/"/>
+    
     <category term="LMStudio" scheme="https://flashj.cn/tags/LMStudio/"/>
     
     <category term="MLX" scheme="https://flashj.cn/tags/MLX/"/>
-    
-    <category term="QwQ" scheme="https://flashj.cn/tags/QwQ/"/>
     
     <category term="jinja" scheme="https://flashj.cn/tags/jinja/"/>
     
@@ -123,26 +214,33 @@
   </entry>
   
   <entry>
-    <title>Manus展现了新的未来</title>
+    <title>Manus和最近折腾的AI工具</title>
     <link href="https://flashj.cn/2025/03/06/agi-future-like-manus.html"/>
     <id>https://flashj.cn/2025/03/06/agi-future-like-manus.html</id>
     <published>2025-03-06T04:49:51.000Z</published>
-    <updated>2025-05-05T13:58:41.012Z</updated>
+    <updated>2025-06-05T05:39:03.090Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Trae"><a href="#Trae" class="headerlink" title="Trae"></a>Trae</h1><p>大前天，Trae发布了国内版，接入了DeepSeek，R1某些情况下似乎是比Claude3.5-Sonnet靠谱一些。<br>Claude3.5-Sonnet帮我移植我之前的大段代码，有时候自作主张改写bug进去，我自己查问题反而浪费很多时间。</p><h1 id="QwQ-32B"><a href="#QwQ-32B" class="headerlink" title="QwQ-32B"></a>QwQ-32B</h1><p>今天，QwQ-32B能装了，赶紧试试。<br>据说能和671B的R1同样厉害，那这就很适合本地部署了。</p><h1 id="Manus"><a href="#Manus" class="headerlink" title="Manus"></a>Manus</h1><p>好家伙，这个要真能像DeepSeek和千问一样普惠的话，现在学的那些搭建就都过时了。</p><p>官网 ： <a href="https://manus.im/">https://manus.im</a></p><p>他应该是灵活融入了现在能用在实践中的各种玩法，全都发挥到极致了。</p><p>或者manus这种产品作为企业级的用法来使用。 本地超级个体就还用自己写点代码，攒些本地AI function calling 就行了。</p><p>所以未来的企业级AI平台，远远不能止步于多维表格批量调度并行任务、工作流多AI多模态配合、知识库切片提取，还得提供云PC给多模态的智能体来操作，通用人工智能助手需要有脑子也要有手，这些云资源才是单机版所不可比拟的。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Trae"><a href="#Trae" class="headerlink" title="Trae"></a>Trae</h1><p>大前天，Trae发布了国内版，接入了DeepSeek，R1某些情况下似乎是比Claude3.5-Sonnet靠谱一些。</p><p>Claude3.5-Sonnet帮我移植我之前的大段代码，有时候自作主张改些bug进去，我自己查问题反而浪费很多时间。</p><p>写一些简单的web还是很在行的，从0到1起步很惊艳。但是复杂一点的任务反反复复给你搞不对，活像一个实习生，我真心不知道，外面人吹Claude吹得那么好到底是怎么用的。</p><h1 id="QwQ-32B"><a href="#QwQ-32B" class="headerlink" title="QwQ-32B"></a>QwQ-32B</h1><p>今天，QwQ-32B能装了，赶紧试试。</p><p>据说能和671B的R1同样厉害，那这就很适合本地部署了。</p><h1 id="Manus"><a href="#Manus" class="headerlink" title="Manus"></a>Manus</h1><p>好家伙，这个要真能像DeepSeek和千问一样普惠的话，现在学的那些搭建就都过时了。</p><p>官网 ： <a href="https://manus.im/">https://manus.im</a></p><p>他应该是灵活融入了现在能用在实践中的各种玩法，全都发挥到极致了。</p><p>或者manus这种产品作为企业级的用法来使用。 本地超级个体就还用自己写点代码，攒些本地AI function calling 就行了。</p><p>所以未来的企业级AI平台，远远不能止步于多维表格批量调度并行任务、工作流多AI多模态配合、知识库切片提取，还得提供云PC给多模态的智能体来操作，通用人工智能助手需要有脑子也要有手，这些云资源才是单机版所不可比拟的。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Trae&quot;&gt;&lt;a href=&quot;#Trae&quot; class=&quot;headerlink&quot; title=&quot;Trae&quot;&gt;&lt;/a&gt;Trae&lt;/h1&gt;&lt;p&gt;大前天，Trae发布了国内版，接入了DeepSeek，R1某些情况下似乎是比Claude3.5-Sonnet靠谱一些。&lt;br</summary>
-      
+    <summary type="html">Trae国内版接入DeepSeek，部分场景优于Claude3.5-Sonnet。QwQ-32B性能接近R1，适合本地部署。Manus若普及将颠覆现有技术，未来AI需云资源支持多模态操作与智能体协作。</summary>
     
     
     
     <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
     
     
-    <category term="AI,AGI,manus,LLM,DeepSeek,QwQ" scheme="https://flashj.cn/tags/AI-AGI-manus-LLM-DeepSeek-QwQ/"/>
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="AGI" scheme="https://flashj.cn/tags/AGI/"/>
+    
+    <category term="manus" scheme="https://flashj.cn/tags/manus/"/>
+    
+    <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
+    
+    <category term="QwQ" scheme="https://flashj.cn/tags/QwQ/"/>
     
   </entry>
   
@@ -151,15 +249,12 @@
     <link href="https://flashj.cn/2025/02/10/linksys-mx8400-slow.html"/>
     <id>https://flashj.cn/2025/02/10/linksys-mx8400-slow.html</id>
     <published>2025-02-10T09:08:34.000Z</published>
-    <updated>2025-05-05T13:58:41.031Z</updated>
+    <updated>2025-02-10T09:08:34.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="千兆宽带入户，但访问互联网网速慢"><a href="#千兆宽带入户，但访问互联网网速慢" class="headerlink" title="千兆宽带入户，但访问互联网网速慢"></a>千兆宽带入户，但访问互联网网速慢</h2><p>我这个月初去改了融合套餐，现在又升级回千兆宽带的套餐了，联通App里可以看到是千兆，但是家里访问互联网网速还是百兆级别的效果哎，不清楚是要下个月生效呢还是怎样啊？<br>我家里墙里的线是超七类线，路由器是全千兆以太网口，电脑是10Gbps以太网口的，用网线直连的电脑在speedtest.cn 测速只有181Mbps下载&#x2F; 28.3Mbps上传，这速度看起来和没升级之前一样。</p><p>请求联通工程师支持，他让我不走我路由器，直接走光猫测一下速度，我这里电脑不太好搬动啊，笔记本电脑又没有网口，所以我自己不太好弄。他说下午过来给我测一下速。</p><h2 id="iperf3测速"><a href="#iperf3测速" class="headerlink" title="iperf3测速"></a>iperf3测速</h2><p>我测了一下内网，确认一下家里的网线、路由器的情况。</p><p>MacStudio 到 PC &#x3D; <strong>940Mbps</strong></p><p>MacBookPro（无线） 到 PC &#x3D; <strong>393Mbps</strong></p><pre><code class="language-bash">D:\GreenSoft\iperf-3.1.3-win64&gt;iperf3 -s-----------------------------------------------------------Server listening on 5201-----------------------------------------------------------Accepted connection from 192.168.50.3, port 57277[  5] local 192.168.50.8 port 5201 connected to 192.168.50.3 port 57278[ ID] Interval           Transfer     Bandwidth[  5]   0.00-1.00   sec   112 MBytes   941 Mbits/sec[  5]   1.00-2.00   sec   112 MBytes   942 Mbits/sec[  5]   2.00-3.00   sec   112 MBytes   941 Mbits/sec[  5]   3.00-4.00   sec   112 MBytes   942 Mbits/sec[  5]   4.00-5.00   sec   110 MBytes   926 Mbits/sec[  5]   5.00-6.00   sec   112 MBytes   942 Mbits/sec[  5]   6.00-7.00   sec   112 MBytes   942 Mbits/sec[  5]   7.00-8.00   sec   112 MBytes   941 Mbits/sec[  5]   8.00-9.00   sec   112 MBytes   941 Mbits/sec[  5]   9.00-10.00  sec   112 MBytes   941 Mbits/sec[  5]  10.00-10.01  sec   612 KBytes   880 Mbits/sec- - - - - - - - - - - - - - - - - - - - - - - - -[ ID] Interval           Transfer     Bandwidth[  5]   0.00-10.01  sec  0.00 Bytes  0.00 bits/sec                  sender[  5]   0.00-10.01  sec  1.09 GBytes   940 Mbits/sec                  receiver-----------------------------------------------------------Server listening on 5201-----------------------------------------------------------Accepted connection from 192.168.50.18, port 61115[  5] local 192.168.50.8 port 5201 connected to 192.168.50.18 port 61116[ ID] Interval           Transfer     Bandwidth[  5]   0.00-1.00   sec  47.2 MBytes   396 Mbits/sec[  5]   1.00-2.00   sec  45.2 MBytes   379 Mbits/sec[  5]   2.00-3.00   sec  47.2 MBytes   396 Mbits/sec[  5]   3.00-4.00   sec  48.8 MBytes   409 Mbits/sec[  5]   4.00-5.00   sec  50.6 MBytes   425 Mbits/sec[  5]   5.00-6.00   sec  46.9 MBytes   393 Mbits/sec[  5]   6.00-7.00   sec  45.5 MBytes   382 Mbits/sec[  5]   7.00-8.00   sec  44.3 MBytes   371 Mbits/sec[  5]   8.00-9.00   sec  46.3 MBytes   388 Mbits/sec[  5]   9.00-10.00  sec  46.7 MBytes   391 Mbits/sec[  5]  10.00-10.01  sec   201 KBytes   525 Mbits/sec- - - - - - - - - - - - - - - - - - - - - - - - -[ ID] Interval           Transfer     Bandwidth[  5]   0.00-10.01  sec  0.00 Bytes  0.00 bits/sec                  sender[  5]   0.00-10.01  sec   469 MBytes   393 Mbits/sec                  receiver-----------------------------------------------------------Server listening on 5201-----------------------------------------------------------</code></pre><p>用MacBook Pro 连 Wi-Fi 测远处节点漫游网速：</p><p>外面桌上<strong>168Mbps</strong>，厨房门口<strong>185Mbps</strong></p><h2 id="联通工程师来帮助测速"><a href="#联通工程师来帮助测速" class="headerlink" title="联通工程师来帮助测速"></a>联通工程师来帮助测速</h2><p>联通工程师来帮助测速，实验数据记录：</p><p>入户光猫端口接测速设备： 960Mbps+</p><p>书房墙口端口接测速设备：960Mbps+</p><p>书房墙口我自己网线接测速设备：960Mbps+</p><p>Linksys接入后，Lan口接测速设备：260Mbps</p><p>结合前面LAN口LAN口之间速度可达960Mbps+</p><p>实验表明：<strong>linksys wan口到Lan口之间速度被限制到了300</strong></p><h2 id="Linksys路由器导致网速慢？"><a href="#Linksys路由器导致网速慢？" class="headerlink" title="Linksys路由器导致网速慢？"></a>Linksys路由器导致网速慢？</h2><p>奇了怪了，为什么Linksys路由器会导致网速慢呢？ 各个环节确实都是千兆啊。</p><p>经过检查，初步估计是Linksys路由器做了设备间的限速，防止某个设备把速度占满。</p><p>我去「优先级」管理中查看，发现他在按百兆网速来做设备间优先级分配的，我把设置优先级的网速手动改成了千兆，之后再去用Mac在网页测速，速度能跑到500多Mbps了！说明是它做了平均分配，没有给任何设备满速的权限。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202502101945181.png" alt="手动设置internet速度"></p><p>再次提高权限：把Mac Studio设置成优先设备之后，测速来到了672Mbps下载&#x2F;66Mbps上传。</p><p>好的，那我直接把优先级功能关闭了。速度来到了800M&#x2F;62M左右。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202502101944873.png" alt="关闭优先级功能后"></p><h2 id="原因总结："><a href="#原因总结：" class="headerlink" title="原因总结："></a>原因总结：</h2><p>到这个程度，其实我也够用了。所以问题的原因在于Linksys MX8400带有一定保护机制，初衷是通过限制设备间的速度来保证网络的稳定性，但是这个机制会依赖所测定的外网接入速度，而Linksys的测速本身不准，会导致测出来的网速偏低，继而会大幅度限制家里设备分配到的网速。导致网络的速度受到限制。</p><p>说白了就是降低爆发力，换取稳定性。</p><p>所以我需要正确设置互联网速度，并且关闭优先级分配，才能让接入网络的设备能获得更高的爆发力。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;千兆宽带入户，但访问互联网网速慢&quot;&gt;&lt;a href=&quot;#千兆宽带入户，但访问互联网网速慢&quot; class=&quot;headerlink&quot; title=&quot;千兆宽带入户，但访问互联网网速慢&quot;&gt;&lt;/a&gt;千兆宽带入户，但访问互联网网速慢&lt;/h2&gt;&lt;p&gt;我这个月初去改了融合套餐，现</summary>
-      
+    <summary type="html">升级千兆宽带后网速仍仅百兆，经测试发现是Linksys路由器限制了设备速度。通过调整优先级设置并关闭限速功能，网速提升至800Mbps以上。问题源于路由器误判外网速度，导致设备间带宽被限制，正确配置后网络性能恢复正常。</summary>
     
     
     
@@ -183,15 +278,12 @@
     <link href="https://flashj.cn/2025/01/30/llm-local-sheishiwodi-1.html"/>
     <id>https://flashj.cn/2025/01/30/llm-local-sheishiwodi-1.html</id>
     <published>2025-01-30T01:57:09.000Z</published>
-    <updated>2025-06-02T08:43:04.368Z</updated>
+    <updated>2025-01-30T01:57:09.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="AI陪我玩“谁是卧底”游戏"><a href="#AI陪我玩“谁是卧底”游戏" class="headerlink" title="AI陪我玩“谁是卧底”游戏"></a>AI陪我玩“谁是卧底”游戏</h1><p>大过年的，大家都在讨论deepseek。<br>睿睿想玩”谁是卧底”总是凑不齐人，我想帮她开发一个在家里能玩的，AI玩的自闭环的，鲁棒性好一点的，《谁是卧底》游戏机器人。 计划用Deepseek 部署在LMStudio + LMStudio的API，可以实现调用对话。然后可以写一个服务器端来驱动规则，我们几个人都可以玩。还需要寻找一个开源方案的配音AI来根据文本合成语音，扮演不同的机器人，每个机器人分配一个独特的嗓音。 服务端采用nodejs开发，为人类提供一个网页页面来为人类玩家分配各自的题目词，每个人独自看自己的界面，机器人不需要界面。</p><p>我现在是走的方案是 用deepseek R1 本地部署 + CosyVoice 本地部署。<br>后来发现R1思维模式不适合本地部署玩这游戏，因为它每次输出tokens太多了，会需要等待更久。就换成千问14b的模型了，32b的效果会好一些但是速度略慢。</p><p>最终搞定了，只是过程跟大模型磨合了一段时间。</p><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=113954508506376&bvid=BV1pvNEe8EpW&cid=28236845006&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>项目在github： <a href="https://github.com/mousebomb/shei-shi-wo-di">https://github.com/mousebomb/shei-shi-wo-di</a></p><p>调用大模型搞出了很多笑话，现在特别搞笑。记录一下。</p><h1 id="咱就说，你们怎么就老是犯规呢"><a href="#咱就说，你们怎么就老是犯规呢" class="headerlink" title="咱就说，你们怎么就老是犯规呢"></a>咱就说，你们怎么就老是犯规呢</h1><h2 id="大模型搞出的洋相"><a href="#大模型搞出的洋相" class="headerlink" title="大模型搞出的洋相"></a>大模型搞出的洋相</h2><ol><li>思考过于复杂，全都把想法暴露出来了</li><li>有可能思考过多，LMStudio里返回的，一句话说不完，会分成两段吐出来，导致服务端接收之后截取<code>&lt;/think&gt;</code>失败。</li><li>有时候会返回纯文字undefined你敢信。</li><li>有时候不描述自己的词了，开始描述自己了……</li><li>老犯规</li><li>一通思考猛如虎，压根没考虑上文别人都透露了什么信息</li></ol><h2 id="提示词很重要"><a href="#提示词很重要" class="headerlink" title="提示词很重要"></a>提示词很重要</h2><p>所以我提示词可能写得有问题，要重新写一批。</p><blockquote><p>ApiStartGame&#x2F;default 玩家6刘备描述请求中</p><p>AiManager&#x2F;AiManager&#x2F;llmRequest [</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘# 角色定位\n’ +</p><p>   ‘你叫刘备，你是一名“谁是卧底”平民玩家，同时参与游戏的是你的几个好朋友——桂花糕,八戒,吕布,曹操,关羽。\n’ +</p><p>   ‘在游戏开始时你收到的卧底词是汽车。\n’ +</p><p>   ‘\n’ +</p><p>   ‘\n’ +</p><p>   ‘\n’ +</p><p>   ‘1. 你是卧底玩家，收到的词语与平民不同但有一定关联。首轮描述时，既要隐藏自己的词语，又不能让描述与平民词相差太远引起怀疑，尽量模糊描述，从与平民词相似的特征、用途等方面入手。\n’ +</p><p>   ‘2. 按顺序发言阶段，仔细分析其他玩家的描述，装作平民的视角去怀疑并指出其他玩家，给出看似合理的怀疑理由，避免暴露自己。\n’ +</p><p>   ‘3. 投票阶段，根据其他玩家的描述及发言，装作平民的视角去怀疑并指出其他玩家，然后参与投票。\n’ +</p><p>   ‘4. 后续轮次中，根据场上局势和其他玩家的描述，灵活调整自己的描述和投票策略，混淆视听，争取存活到最后。 \n’ +</p><p>   ‘\n’ +</p><p>   ‘在“谁是卧底”游戏中，作为卧底玩家需要通过巧妙的策略来混淆视听、误导平民，以增加自己的存活几率并最终获得胜利。以下是卧底玩家在描述时和投票阶段可以采取的一些策略技巧：\n’ +</p><p>   ‘\n’ +</p><p>   ‘#### 描述时的策略技巧\n’ +</p><p>   ‘\n’ +</p><p>   ‘- <strong>模糊化描述</strong>：采用宽泛、笼统的词汇来描述自己的词语，使其既适用于自己的卧底词，又不与平民词相差太远，让平民难以通过描述直接判断出自己是卧底。例如，平民词是“苹果”，卧底词是“香蕉”，可以描述为“一种常见的水果”。\n’ +</p><p>   ‘- <strong>寻找相似点</strong>：挖掘卧底词与平民词的相似特征进行描述。比如平民词是“火车”，卧底词是“地铁”，可以描述为“一种在轨道上行驶的交通工具”，通过强调共同特征来降低自己的嫌疑。\n’ +</p><p>   ‘- <strong>利用联想</strong>：从与卧底词相关的事物或概念入手进行描述，不直接提及词语本身的核心特征。以平民词“篮球”、卧底词“足球”为例，可以描述为“一种很多人喜欢在操场上玩的运动用品”，通过关联场景和用途来转移注意力。\n’ +</p><p>   ‘- <strong>借鉴他人描述</strong>：仔细倾听其他玩家，尤其是前面发言的玩家的描述，从中提取一些可以借鉴或靠拢的元素，将其融入自己的描述中，使自己的描述看起来与大家一致，降低被怀疑的可能性。\n’ +</p><p>   ‘\n’ +</p><p>   ‘#### 按顺序发言和投票阶段的策略技巧\n’ +</p><p>   ‘\n’ +</p><p>   ‘- <strong>观察与分析</strong>：在其他玩家发言时，注意观察他们的表情、语气和用词等细节，分析哪些玩家的描述或表现存在异常或可疑之处。如果有玩家描述得过于模糊或前后矛盾，可能是平民中的“搅局者”，可以将其列为怀疑对象，转移大家对自己的注意力。\n’ +</p><p>   ‘- <strong>跟随大众</strong>：在大多数情况下，尽量跟随多数玩家的投票意向，避免成为第一个或少数几个投出与大众不同票的人，以免引起不必要的怀疑。可以在阐述怀疑理由时，适当提及一些大众都能认同的点，让自己的投票看起来是经过理性分析的结果。\n’ +</p><p>   ‘- <strong>巧妙引导</strong>：如果发现有合适的机会，可以通过巧妙的提问或引导性的话语，改变讨论方向或引导其他玩家将怀疑的目光转向其他目标。比如，在大家对某个玩家有一些怀疑但还不确定时，你可以适当补充一些对该玩家不利的“证据”或观点，推动大家将票投给他。\n’ +</p><p>   ‘- <strong>适时自污</strong>：有时候为了降低自己的嫌疑，可以采取适度自污的策略，主动提出一些看似对自己不利的点，但又不至于直接暴露自己是卧底。比如，故意说自己对这个词语不是很熟悉，所以描述得不太好，让大家觉得你只是因为不擅长游戏而不是因为是卧底才表现异常。\n’ +</p><p>   ‘\n’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘\n’ +</p><p>   ‘## 附件：游戏介绍\n’ +</p><p>   ‘如果你不了解“谁是卧底”这个游戏的话，可以参考一下这一段介绍。如果已经了解的话，可以跳过这段内容。\n’ +</p><p>   ‘\n’ +</p><p>   ‘\n’ +</p><p>   ‘### “谁是卧底” 游戏规则详解\n’ +</p><p>   ‘\n’ +</p><p>   ‘#### 一、游戏准备\n’ +</p><p>   ‘\n’ +</p><p>   ‘参与人数：通常以 6 - 10 人玩为宜。\n’ +</p><p>   ‘\n’ +</p><p>   ‘角色设置：分为平民和卧底，有 1 名卧底，其余为平民。\n’ +</p><p>   ‘\n’ +</p><p>   ‘词语准备：主持人凭借自身文学素养，精心挑选出一组相似度高的词语，一个作为平民词，一个作为卧底词。如平民词是“苹果”，卧底词可以是“香蕉”。\n’ +</p><p>   ‘\n’ +</p><p>   ‘#### 二、游戏流程\n’ +</p><p>   ‘\n’ +</p><p>   ‘##### （一）首轮描述\n’ +</p><p>   ‘\n’ +</p><p>   ‘每人用一个短语描述拿到的词语，避免过于直接暴露词语，不能说 “我是苹果” 等直接暴露词语的话。描述结束后，进入按顺序发言环节。\n’ +</p><p>   ‘\n’ +</p><p>   ‘##### （二）按顺序发言\n’ +</p><p>   ‘\n’ +</p><p>   ‘发言顺序：与描述词语的顺序保持一致，通常按照玩家的座位顺时针或逆时针方向依次进行。\n’ +</p><p>   ‘\n’ +</p><p>   ‘第一个玩家：基于自己对其他玩家描述内容的初步理解，开启讨论氛围。他可以简单提及觉得哪些描述比较靠谱，哪些让他感觉有些疑惑，例如：“我听了大家的描述，感觉 3 号玩家说的有点含糊，不太确定他想表达什么，我先观望一下。”\n’ +</p><p>   ‘\n’ +</p><p>   ‘第二个玩家：在第一个玩家发言的基础上，进一步深入探讨。既可以回应第一个玩家提出的疑点，也可以提出自己新发现的问题，像：“我同意 1 号玩家对 3 号的质疑，另外，我觉得 5 号玩家描述得有点太宽泛了，好像在刻意隐藏什么。”\n’ +</p><p>   ‘\n’ +</p><p>   ‘后续玩家：依次类推，每个人都要在前面玩家发言的积累上，添加新的见解，不断把讨论引向深入，让大家通过交流逐渐明晰彼此词语的差异，以便找出卧底。并且在发言过程中，玩家们要时刻牢记游戏规则，不能直接点明谁是卧底，只能通过这种委婉的讨论方式来排查，直至进入投票环节选出心中疑似卧底的对象。\n’ +</p><p>   ‘\n’ +</p><p>   ‘##### （三）投票环节\n’ +</p><p>   ‘\n’ +</p><p>   ‘所有人描述完并发言结束后，进行投票选出最像卧底的人，得票最多者出局。若出现平票，则平票者再次描述，其他人重新投票。\n’ +</p><p>   ‘\n’ +</p><p>   ‘##### （四）后续轮次\n’ +</p><p>   ‘\n’ +</p><p>   ‘重复描述和投票环节，若卧底被投票出局，则平民获胜；若卧底人数与平民人数相等，或平民全部出局，则卧底获胜。\n’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘第1轮 【描述阶段】，第1位发言者是玩家1 桂花糕。他的描述是:”我的这个词是一个带有两个轮子的交通工具。”。’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘第1轮 【描述阶段】，第2位发言者是玩家2 八戒。他的描述是:”根据玩家1桂花糕在第1轮【描述阶段】的发言内容，我会判断玩家1为卧底。理由是：玩家1的描述过于直接，没有使用模糊或含糊的语言，而是明确地将词语与“自行车”联系起来，并且用简洁的方式描述了这个词，这表明他可能是在隐藏自己的真实词语。因此，我怀疑玩家1（桂花糕）是卧底。”。’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘第1轮 【描述阶段】，第3位发言者是玩家3 吕布。他的描述是:”我的这个词是由两个轮子组成的交通工具，可以用来骑行。”。’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘第1轮 【描述阶段】，第4位发言者是玩家4 曹操。他的描述是:”我的描述是：“它是一种两轮的交通工具，通常带有座椅，由金属框架支撑，配备刹车装置和车胎。””。’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘第1轮 【描述阶段】，第5位发言者是玩家5 关羽。他的描述是:”第1轮 【描述阶段】，第5位发言者是我，关羽。我的词是“自行车”。我的描述如下：我的这个词是一个两轮的交通工具，经常用于日常出行，通常带有座椅，骑行时可能伴随铃声。在投票阶段，我认为最有可能是卧底的是玩家2 八戒，因为他怀疑我的描述过于直接，暗示了我的真实词语可能是“自行车”。最终投票结果：玩家2 八戒。”。’</p><p> },</p><p> {</p><p>  role: ‘system’,</p><p>  content: ‘第1轮 【描述阶段】，第6位发言者是你，请你现在对你分配到的词“汽车”进行描述，避免说出这个词，如果万不得已必须要提到“汽车”则用“我的这个词”代替。注意：千万不要流露出内心想法，能说出来的必须是在这场游戏中可以公开讲的内容。回复格式要求：只要回复你的描述短语，不要有任何多余内容。’</p><p> }</p><p>]</p><p>AiManager&#x2F;AiManager&#x2F;llmRequest-&gt;Resp Raw: <think></p><p>好，我现在需要扮演刘备，在游戏《谁是卧底》中，我收到的卧底词是“汽车”。游戏共有六个玩家，包括我和其他五个朋友：桂花糕、八戒、吕布、曹操、关羽。</p><p>首先，轮到我发言的时候，我要根据自己的卧底词“汽车”来描述它。我要尽量模糊化描述，同时避免直接提到“汽车”，以免被怀疑。我的描述应该与平民词可能的特征相符，并且让人难以立即判断出这是汽车。</p><p>考虑到其他玩家的描述，比如桂花糕描述为“带有两个轮子的交通工具”，八戒则根据桂花糕的描述怀疑他可能是卧底，因为桂花糕描述得过于直接。但其实，我作为卧底，应该用更模糊的方式描述。</p><p>可能我会想到汽车的一些常见特征，比如它是四轮的，有发动机，可以运输人或货物等。或者我可以提到它是一种常见的交通工具，而不是自行车或其他两轮工具。这样既能符合交通工具的一般特征，又不会像桂花糕那样直接，从而避免被八戒轻易怀疑。</p><p>另外，我还需要考虑其他玩家可能使用的词汇是否与汽车相关联。例如，有人可能描述为“四轮的车辆”，而实际上我的词是“汽车”。因此，模糊化描述可能会让别人难以立即判断出这是汽车，同时又能符合交通工具的一般特征，避免引起太大疑点。</p><p>综上所述，我应该用一个宽泛且模糊的短语来描述汽车，例如：“一种常见的四轮交通工具，用于运输货物或人。” 这样既保留了汽车的基本特征，又没有直接提到“汽车”，从而降低被怀疑的可能性。</p></think><p>我的这个词是一个常见的四轮交通工具，用于运输货物或人。</p><p>ApiStartGame&#x2F;default 玩家6刘备描述：我的这个词是一个常见的四轮交通工具，用于运输货物或人。</p></blockquote><p>这个玩家4，一通思考猛如虎，回答还是二百五，把前面1号的人名都搞错了两次：</p><pre><code>ApiStartGame/default 玩家4曹操描述请求中AiManager/AiManager/llmRequest [  &#123;    role: &#39;system&#39;,    content: &#39;# 角色定位\n&#39; +      &#39;\n&#39; +      &#39;你叫曹操，你是一名“谁是卧底”玩家，同时参与游戏的是你的几个好朋友——桂花糕,八戒,吕布,关羽,刘备。\n&#39; +      &#39;在游戏开始时你抽取到卡片的平民词是【水杯】。\n&#39; +      &#39;\n&#39; +      &#39;你是一个平民，你的目标是找出卧底并淘汰他们。\n&#39; +      &#39;你的词语是【水杯】，请用请用不超过10个字的短语或形容词描述它，但不要直接说出词语【水杯】本身。且不要做出重复的描述，即不能重复使用自己已经说过的描述，也不能与上文中其他人已经说过的描述重复。\n&#39; +      &#39;注意：你的描述应该尽量贴近你的词语，同时观察其他人的描述是否有可疑之处。\n&#39; +      &#39;\n&#39; +      &#39;描述技巧：\n&#39; +      &#39;使用常见、直接的描述，避免模糊或复杂的表达。\n&#39; +      &#39;示例：如果你的词语是“苹果”，你可以说“常见的水果”，或者“红色的”。\n&#39; +      &#39;\n&#39; +      &#39;推理与观察：\n&#39; +      &#39;仔细聆听其他玩家的描述，寻找与你的词语不符的地方。\n&#39; +      &#39;如果某个玩家的描述与你的词语差异较大，可能是卧底。\n&#39; +      &#39;\n&#39; +      &#39;投票策略：\n&#39; +      &#39;在投票环节，选择描述最可疑的玩家。\n&#39; +      &#39;如果你不确定，可以观察其他玩家的投票倾向，跟随大多数人的选择。\n&#39; +      &#39;\n&#39; +      &#39;隐藏身份：\n&#39; +      &#39;不要表现得过于自信或紧张，避免引起卧底的注意。\n&#39; +      &#39;尽量让自己的描述和行为看起来像一个普通的平民。\n&#39;  &#125;,  &#123;    role: &#39;system&#39;,    content: &#39;\n&#39; +      &#39;## 附件：游戏介绍\n&#39; +      &#39;如果你不了解“谁是卧底”这个游戏的话，可以参考一下这一段介绍。如果已经了解的话，可以跳过这段内容。\n&#39; +      &#39;\n&#39; +      &#39;\n&#39; +      &#39;“谁是卧底”是一款非常受欢迎的多人互动游戏，适合朋友聚会或团队活动时玩。游戏规则简单但充满趣味，主要考验玩家的推理能力和表达能力。\n&#39; +      &#39;\n&#39; +      &#39;参与人数：通常需要6-10人，人越多越有趣。\n&#39; +      &#39;角色设置：分为平民和卧底，有 1 名卧底，其余为平民。\n&#39; +      &#39;\n&#39; +      &#39;准备阶段：\n&#39; +      &#39;准备一些相关的词语卡片（比如“苹果”和“香蕉”），其中大部分人的词语相同，只有1-2个人的词语不同（卧底）。\n&#39; +      &#39;每个人随机抽取一张卡片，但不可以让别人看到自己的词语。\n&#39; +      &#39;\n&#39; +      &#39;游戏流程：\n&#39; +      &#39;玩家依次用短语或形容词来描述自己拿到的词语，但不能直接说出词语本身，且不能重复。\n&#39; +      &#39;每轮描述结束后，大家投票选出怀疑是卧底的人，得票最多的人出局。\n&#39; +      &#39;如果卧底被全部淘汰，平民胜利；如果卧底存活到最后，卧底胜利。\n&#39; +      &#39;\n&#39; +      &#39;胜利条件：\n&#39; +      &#39;平民的目标是找出并淘汰所有卧底。\n&#39; +      &#39;卧底的目标是隐藏身份，存活到最后。\n&#39;  &#125;,  &#123;    role: &#39;system&#39;,    content: &#39;第1轮 【描述阶段】，第1位发言者是玩家1 桂花糕。他的描述是:&quot;常见的生活用品&quot;。&#39;  &#125;,  &#123;    role: &#39;system&#39;,    content: &#39;第1轮 【描述阶段】，第2位发言者是玩家2 八戒。他的描述是:&quot;常见的玻璃容器&quot;。&#39;  &#125;,  &#123;    role: &#39;system&#39;,    content: &#39;第1轮 【描述阶段】，第3位发言者是玩家3 吕布。他的描述是:&quot;常见的塑料水杯&quot;。&#39;  &#125;,  &#123;    role: &#39;system&#39;,    content: &#39;第1轮 【描述阶段】，第4位发言者是你，请你现在对你分配到的词“水杯”用一个短语进行描述，避免说出【水杯】，如果万不得已必须要提到“水杯”则用“我的这个词”代替。注意：千万不要流露出内心想法，能说出来的必须是在这场游戏中可以公开讲的内容。回复格式要求：只要回复你的描述短语，不要有任何多余内容。不超过10个字，不要和已有描述重复。&#39;  &#125;]AiManager/AiManager/llmRequest-&gt;Resp Raw: &lt;think&gt;好，我现在需要扮演曹操，在“谁是卧底”游戏中，我的平民词是“水杯”。游戏规则告诉我，我需要在描述阶段用不超过10个字的短语或形容词来描述自己的词，而且不能直接说出“水杯”，也不能和其他玩家已经说过的重复。另外，我要观察其他玩家的描述，寻找可能的卧底。首先，其他玩家的描述分别是：- 花桂糕：常见的生活用品。- 八戒：常见的玻璃容器。- 吕布：常见的塑料水杯。我的词是“水杯”，而其他玩家中，吕布直接提到了塑料水杯，这和我的词有相似之处。八戒说常见的玻璃容器，虽然和水杯无关，但可能他用的是玻璃杯。桂菜糕则比较宽泛地说生活用品，包括杯子。我需要想一个既贴切又不重复的描述。考虑到“水杯”通常是塑料材质，而常见的塑料水杯是日常用品之一。因此，“常见的塑料水杯”应该是一个合适的描述，既准确又符合要求。&lt;/think&gt;我的描述是：“常见的塑料水杯”。ApiStartGame/default 玩家4曹操描述：我的描述是：“常见的塑料水杯”。ApiStartGame/default 玩家5关羽描述请求中</code></pre><p>还有末尾输出json格式都搞不对的，单引号打成双引号了，给我解析都搞崩了。<br>为这种，还得做个判定，如果返回格式不正确，还得让它重写一遍。</p><pre><code>AiManager/AiManager/llmRequest-&gt;Resp Raw: ？不，是工具打击物的样子。&quot;&quot;&lt;think&gt;好，我来分析一下这个问题。首先，游戏规则是每个玩家抽到一个词，除了卧底之外，其他人都有相同的词，而卧底的词不同。我要找出卧底。现在来看其他玩家的描述：- 玩家1（猴哥）：甜味的。- 玩家2（八戒）：声响大。- 玩家3（吕布）：金属工具。- 玩家4（桂花糕）：我家有的。- 玩家6（刘备）：打击物。我的词是“锤子”，需要描述它，但不能直接提到“锤子”。之前其他玩家的描述和投票情况：玩家2投给了玩家2，理由说他的词语是&quot;我的这个词&quot;，而他描述的是声响大，可能暗示有武器或工具。这可能意味着玩家2可能是卧底。玩家3投给了玩家6，理由说他的词与打击物相关联，而玩家6描述了打击物，可能暗示他是卧底。玩家4投给了玩家1，认为他们的词语和特征不符合。现在轮到我来描述我的词“锤子”。因为我的词是工具打击物的，所以可以考虑与其他描述相近的人是否是卧底。如果其他人的描述与打击物相关联，那么可能不是卧底，而如果他们的描述不符，则可能是卧底。综合来看，玩家3和玩家6都提到打击物，这可能意味着他们有关系，而我的词也是打击物的一种，所以可能他们不是卧底。相反，玩家2的描述声响大，可能暗示他拥有武器或工具，而我的词是锤子，属于工具的一种，所以可能存在冲突。因此，我倾向于玩家2可能是卧底。&lt;/think&gt;&#123;&quot;voteToPlayer&quot;:2,&quot;reason&quot;:&quot;我描述&#39;武器？不，是工具打击物的样子。&quot;&quot;&#125;</code></pre><h2 id="返回空"><a href="#返回空" class="headerlink" title="返回空"></a>返回空</h2><p>费劲，这个模型各种问题，现在还会到第二轮就溢出，然后就返回空字符串了。</p><p>4096改成32k也没用。prompt超过1461级别之后就返回空。</p><p>改成千问2.5 ，1M token的，速度很快，因为不需要think推理，所以返回速度超级快，但是第一轮投票就返回空了。也不知道为什么。</p><p>因此我打算把驱动方式再次改动，为ai简化和合并system prompt，不给它看system的聊天记录了，而是直接拼合成一条system prompt。</p><p>把回合内驱动的role从system改成了user，现在能继续运行了。</p><h2 id="不听指挥"><a href="#不听指挥" class="headerlink" title="不听指挥"></a>不听指挥</h2><p>仔细调节过prompt之后，大部分已经很顺了，但是他们脑子不太好使，仍然还是不听指挥，最主要是描述阶段会雷同别人说过的。</p><h2 id="7b小模型果然不行"><a href="#7b小模型果然不行" class="headerlink" title="7b小模型果然不行"></a>7b小模型果然不行</h2><p>换成qwen2.5-14b-instruct模型，好了一些。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501312231105.png"></p><p>果然到了一定地步之后就跟模型大小关系更大。</p><p>那再装个32b的r1和qwen2.5试试会不会比之前有改善，32b的只能在Mac上跑了。希望能行。<br><img src="https://cdn.mousebomb.org/blog/auto/202501312321075.png"></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;AI陪我玩“谁是卧底”游戏&quot;&gt;&lt;a href=&quot;#AI陪我玩“谁是卧底”游戏&quot; class=&quot;headerlink&quot; title=&quot;AI陪我玩“谁是卧底”游戏&quot;&gt;&lt;/a&gt;AI陪我玩“谁是卧底”游戏&lt;/h1&gt;&lt;p&gt;大过年的，大家都在讨论deepseek。&lt;br&gt;睿睿</summary>
-      
+    <summary type="html">大过年的，大家都在讨论deepseek。睿睿想玩&quot;谁是卧底&quot;总是凑不齐人，我开发了一个AI驱动的《谁是卧底》游戏机器人，通过调用大模型生成角色描述和投票策略，但遇到了模型输出不稳定、格式错误等问题。经过多次调整模型和提示词，最终实现了基本功能，过程中充满了有趣的失误和挑战。</summary>
     
     
     
@@ -229,15 +321,12 @@
     <link href="https://flashj.cn/2025/01/26/anythingllm.html"/>
     <id>https://flashj.cn/2025/01/26/anythingllm.html</id>
     <published>2025-01-26T06:43:14.000Z</published>
-    <updated>2025-05-05T13:58:41.013Z</updated>
+    <updated>2025-01-26T06:43:14.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="AnythingLLM"><a href="#AnythingLLM" class="headerlink" title="AnythingLLM"></a>AnythingLLM</h1><p>推荐一下，这个工具，结合ollama可以跑本地大模型，私人AI助理。</p><p><a href="https://anythingllm.com/">https://anythingllm.com</a></p><p>ollama搭建大模型运行环境，然后anythingLLM可以协助做本地文档的处理，向量化，RAG，以及实时搜索互联网信息之后让大模型输出。</p><p>去年有阵子我在PC上用它跑过荀子，做中医学习和解答。<br><img src="https://cdn.mousebomb.org/blog/auto/202501261515014.png"></p><p>要说它好到哪里去吧，其实也没特别强。从我AnythingLLM用我的日记喂它后尝试提取信息，发现效果并不是很如意。后面就没在用了。<br>但毕竟从0到1了，未来可期。</p><h2 id="LM-Studio"><a href="#LM-Studio" class="headerlink" title="LM Studio"></a>LM Studio</h2><p>我去年试用的时候不是用的ollama，而是用的LM Studio，因为这货支持MLX，能发挥Mac的性能。<br><a href="https://lmstudio.ai/">https://lmstudio.ai</a></p><h2 id="DeepSeek"><a href="#DeepSeek" class="headerlink" title="DeepSeek"></a>DeepSeek</h2><p>惊艳世界的大模型，干出了大模型界拼多多的性价比。<br>去年摆弄的时候我还在用千问本地大模型的，今年可以用DeepSeek了。<br>等空了的时候又可以摆弄摆弄去了。</p><h2 id="CodeGPT"><a href="#CodeGPT" class="headerlink" title="CodeGPT"></a>CodeGPT</h2><p>因为我使用WebStorm和Rider，所以可以装CodeGPT插件，然后使用本地部署，理论上是这样。</p><h2 id="MarsCode-AI"><a href="#MarsCode-AI" class="headerlink" title="MarsCode AI"></a>MarsCode AI</h2><p>GitHub copilot已经退订了，不过由于24年开始，出了好多国产免费代码助手，现在用MarsCode感觉也足够好了。都没必要自己搭建了。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="AnythingLLM"><a href="#AnythingLLM" class="headerlink" title="AnythingLLM"></a>AnythingLLM</h1><p>推荐一下，这个工具，结合ollama可以跑本地大模型，私人AI助理。</p><p><a href="https://anythingllm.com/">https://anythingllm.com</a></p><p>LM Studio或ollama搭建大模型运行环境，然后anythingLLM可以协助做本地文档的处理，向量化，RAG，以及实时搜索互联网信息之后让大模型输出。</p><p>去年有阵子我在PC上用它跑过荀子，做中医学习和解答。<br><img src="https://cdn.mousebomb.org/blog/auto/202501261515014.png"></p><p>要说它好到哪里去吧，其实也没特别强。从我AnythingLLM用我的日记喂它后尝试提取信息，发现效果并不是很如意。后面就没在用了。<br>但毕竟从0到1了，未来可期。</p><h2 id="LM-Studio"><a href="#LM-Studio" class="headerlink" title="LM Studio"></a>LM Studio</h2><p>我去年试用的时候不是用的ollama，而是用的LM Studio，因为这货支持MLX，能发挥Mac的性能。<br><a href="https://lmstudio.ai/">https://lmstudio.ai</a></p><h2 id="DeepSeek"><a href="#DeepSeek" class="headerlink" title="DeepSeek"></a>DeepSeek</h2><p>惊艳世界的大模型，干出了大模型界拼多多的性价比。<br>去年摆弄的时候我还在用千问本地大模型的，今年可以用DeepSeek了。<br>等空了的时候又可以摆弄摆弄去了。</p><h2 id="CodeGPT"><a href="#CodeGPT" class="headerlink" title="CodeGPT"></a>CodeGPT</h2><p>因为我使用WebStorm和Rider，所以可以装CodeGPT插件，然后使用本地部署，理论上是这样。</p><h2 id="MarsCode-AI"><a href="#MarsCode-AI" class="headerlink" title="MarsCode AI"></a>MarsCode AI</h2><p>GitHub copilot已经退订了，不过由于24年开始，出了好多国产免费代码助手，现在用MarsCode感觉也足够好了。都没必要自己搭建了。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;AnythingLLM&quot;&gt;&lt;a href=&quot;#AnythingLLM&quot; class=&quot;headerlink&quot; title=&quot;AnythingLLM&quot;&gt;&lt;/a&gt;AnythingLLM&lt;/h1&gt;&lt;p&gt;推荐一下，这个工具，结合ollama可以跑本地大模型，私人AI助理。</summary>
-      
+    <summary type="html">推荐一下AnythingLLM，结合LM Studio可以跑本地大模型，私人AI助理。我尝试用它处理文档和进行中医学习的体验。虽然目前效果一般，但从0到1的过程很有意义。</summary>
     
     
     
@@ -248,11 +337,13 @@
     
     <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
     
+    <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
+    
     <category term="AnythingLLM" scheme="https://flashj.cn/tags/AnythingLLM/"/>
     
-    <category term="LM Studio" scheme="https://flashj.cn/tags/LM-Studio/"/>
+    <category term="LM" scheme="https://flashj.cn/tags/LM/"/>
     
-    <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
+    <category term="Studio" scheme="https://flashj.cn/tags/Studio/"/>
     
     <category term="CodeGPT" scheme="https://flashj.cn/tags/CodeGPT/"/>
     
@@ -265,18 +356,12 @@
     <link href="https://flashj.cn/2025/01/24/bmw-erlangxianshengzhenjun.html"/>
     <id>https://flashj.cn/2025/01/24/bmw-erlangxianshengzhenjun.html</id>
     <published>2025-01-24T12:26:27.000Z</published>
-    <updated>2025-06-02T09:55:27.204Z</updated>
+    <updated>2025-01-24T12:26:27.000Z</updated>
     
     <content type="html"><![CDATA[<p>小马喽拼尽全力苦苦屡败屡战，齐天二郎显圣真君打了147遍终于过了，自己记录一下。</p><p>总体来看比七天大圣残躯难一些啊。</p><p>这游戏，慢慢玩复战齐天也挺有意思的。当个格斗游戏玩，有博弈，又有许多不同build可以尝试。</p><p>Steam的自动录制真挺不错的，记录了美好时光。</p><p>这个二郎显圣真君设计真心赞，打斗就像考试，所有招式老师都教过也刷过题了，然后综合考试的时候需要集中精力发挥好，所有题目都要一瞬间回忆起来解法，脑子会了，手还得会，否则就会挂科……</p><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=113883473776150&bvid=BV1RmfpYLEat&cid=28056620450&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>还有之前实在打不过，练习的视频，也挺有意思的。记录一下。</p><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=113883507327871&bvid=BV1RDfpYVEPS&cid=28056881265&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>为了方便学习招式，我把之前b站大神做的视频拆解成思维导图放到GitHub了：<br><a href="https://mousebomb.github.io/wukong-mindmap/">二郎显圣真君思维导图</a></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;小马喽拼尽全力苦苦屡败屡战，齐天二郎显圣真君打了147遍终于过了，自己记录一下。&lt;/p&gt;
-&lt;p&gt;总体来看比七天大圣残躯难一些啊。&lt;/p&gt;
-&lt;p&gt;这游戏，慢慢玩复战齐天也挺有意思的。当个格斗游戏玩，有博弈，又有许多不同build可以尝试。&lt;/p&gt;
-&lt;p&gt;Steam的自动录制真</summary>
-      
+    <summary type="html">小马喽拼尽全力苦苦屡败屡战，齐天二郎显圣真君打了147遍终于过了，自己记录一下。总体来看比七天大圣残躯难一些啊。这游戏，慢慢玩复战齐天也挺有意思的。当个格斗游戏玩，有博弈，又有许多不同build可以尝试。Steam的自动录制真挺不错的，记录了美好时光。</summary>
     
     
     
@@ -298,17 +383,12 @@
     <link href="https://flashj.cn/2025/01/20/react-native-health-undefined.html"/>
     <id>https://flashj.cn/2025/01/20/react-native-health-undefined.html</id>
     <published>2025-01-20T08:22:22.000Z</published>
-    <updated>2025-05-05T13:58:41.038Z</updated>
+    <updated>2025-06-05T05:47:38.356Z</updated>
     
     <content type="html"><![CDATA[<p>React Native HealthKit 初始化报错。</p><p>按照官方文档安装的。<br>但是一执行官方的demo，就报错了。</p><pre><code>_reactNativeHealth.default.initHealthKit is not a function (it is undefined)</code></pre><p>我真无语了，这怎么跑个官方例子都能报错的。</p><p>发现有人在这里提到了 遇到一样的错误： <a href="https://github.com/agencyenterprise/react-native-health/issues/404">https://github.com/agencyenterprise/react-native-health/issues/404</a></p><p>rn最近某个版本改了机制，lazyload modules，导致<code>require(&#39;react-native&#39;).NativeModules</code> 得到的是个<code>&#123;&#125;</code>对象，所以react-native-health库里export的AppleHealthKit定义在运行时不完整。</p><p>打开 node_modules&#x2F;react-native-health&#x2F;index.js ，可以看到确实是这样。</p><p>按照帖子里别人给的代码，我还是不成功，根据原理，然后我是临时先把需要的函数手动都获取一下，就有定义了。</p><p>临时解决，我就把它们都cue一下，就好了，反正先这样。等官方解决。<br>修改后的临时方案是这样：</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501201621935.png"></p><pre><code class="language-javascript">import &#123; Activities, Observers, Permissions, Units &#125; from &#39;./src/constants&#39;const &#123; AppleHealthKit &#125; = require(&#39;react-native&#39;).NativeModulesconst Kit = &#123;  initHealthKit: AppleHealthKit[&quot;initHealthKit&quot;],  isAvailable: AppleHealthKit[&quot;isAvailable&quot;],  getBiologicalSex: AppleHealthKit[&quot;getBiologicalSex&quot;],  getBloodType: AppleHealthKit[&quot;getBloodType&quot;],  getDateOfBirth: AppleHealthKit[&quot;getDateOfBirth&quot;],  getLatestWeight: AppleHealthKit[&quot;getLatestWeight&quot;],  getWeightSamples: AppleHealthKit[&quot;getWeightSamples&quot;],  saveWeight: AppleHealthKit[&quot;saveWeight&quot;],  getLatestHeight: AppleHealthKit[&quot;getLatestHeight&quot;],  getHeightSamples: AppleHealthKit[&quot;getHeightSamples&quot;],  saveHeight: AppleHealthKit[&quot;saveHeight&quot;],  getLatestWaistCircumference: AppleHealthKit[&quot;getLatestWaistCircumference&quot;],  getWaistCircumferenceSamples: AppleHealthKit[&quot;getWaistCircumferenceSamples&quot;],  saveWaistCircumference: AppleHealthKit[&quot;saveWaistCircumference&quot;],  getLatestPeakFlow: AppleHealthKit[&quot;getLatestPeakFlow&quot;],  getPeakFlowSamples: AppleHealthKit[&quot;getPeakFlowSamples&quot;],  savePeakFlow: AppleHealthKit[&quot;savePeakFlow&quot;],  saveLeanBodyMass: AppleHealthKit[&quot;saveLeanBodyMass&quot;],  getLatestBmi: AppleHealthKit[&quot;getLatestBmi&quot;],  getBmiSamples: AppleHealthKit[&quot;getBmiSamples&quot;],  saveBmi: AppleHealthKit[&quot;saveBmi&quot;],  getLatestBodyFatPercentage: AppleHealthKit[&quot;getLatestBodyFatPercentage&quot;],  getBodyFatPercentageSamples: AppleHealthKit[&quot;getBodyFatPercentageSamples&quot;],  getLatestLeanBodyMass: AppleHealthKit[&quot;getLatestLeanBodyMass&quot;],  getLeanBodyMassSamples: AppleHealthKit[&quot;getLeanBodyMassSamples&quot;],  getStepCount: AppleHealthKit[&quot;getStepCount&quot;],  getSamples: AppleHealthKit[&quot;getSamples&quot;],  getAnchoredWorkouts: AppleHealthKit[&quot;getAnchoredWorkouts&quot;],  getDailyStepCountSamples: AppleHealthKit[&quot;getDailyStepCountSamples&quot;],  saveSteps: AppleHealthKit[&quot;saveSteps&quot;],  saveWalkingRunningDistance: AppleHealthKit[&quot;saveWalkingRunningDistance&quot;],  getDistanceWalkingRunning: AppleHealthKit[&quot;getDistanceWalkingRunning&quot;],  getDailyDistanceWalkingRunningSamples: AppleHealthKit[&quot;getDailyDistanceWalkingRunningSamples&quot;],  getDistanceCycling: AppleHealthKit[&quot;getDistanceCycling&quot;],  getDailyDistanceCyclingSamples: AppleHealthKit[&quot;getDailyDistanceCyclingSamples&quot;],  getFlightsClimbed: AppleHealthKit[&quot;getFlightsClimbed&quot;],  getDailyFlightsClimbedSamples: AppleHealthKit[&quot;getDailyFlightsClimbedSamples&quot;],  getEnergyConsumedSamples: AppleHealthKit[&quot;getEnergyConsumedSamples&quot;],  getProteinSamples: AppleHealthKit[&quot;getProteinSamples&quot;],  getFiberSamples: AppleHealthKit[&quot;getFiberSamples&quot;],  getTotalFatSamples: AppleHealthKit[&quot;getTotalFatSamples&quot;],  saveFood: AppleHealthKit[&quot;saveFood&quot;],  saveWater: AppleHealthKit[&quot;saveWater&quot;],  getWater: AppleHealthKit[&quot;getWater&quot;],  saveHeartRateSample: AppleHealthKit[&quot;saveHeartRateSample&quot;],  getWaterSamples: AppleHealthKit[&quot;getWaterSamples&quot;],  getHeartRateSamples: AppleHealthKit[&quot;getHeartRateSamples&quot;],  getRestingHeartRate: AppleHealthKit[&quot;getRestingHeartRate&quot;],  getWalkingHeartRateAverage: AppleHealthKit[&quot;getWalkingHeartRateAverage&quot;],  getActiveEnergyBurned: AppleHealthKit[&quot;getActiveEnergyBurned&quot;],  getBasalEnergyBurned: AppleHealthKit[&quot;getBasalEnergyBurned&quot;],  getAppleExerciseTime: AppleHealthKit[&quot;getAppleExerciseTime&quot;],  getAppleStandTime: AppleHealthKit[&quot;getAppleStandTime&quot;],  getVo2MaxSamples: AppleHealthKit[&quot;getVo2MaxSamples&quot;],  getBodyTemperatureSamples: AppleHealthKit[&quot;getBodyTemperatureSamples&quot;],  getBloodPressureSamples: AppleHealthKit[&quot;getBloodPressureSamples&quot;],  getRespiratoryRateSamples: AppleHealthKit[&quot;getRespiratoryRateSamples&quot;],  getHeartRateVariabilitySamples: AppleHealthKit[&quot;getHeartRateVariabilitySamples&quot;],  getHeartbeatSeriesSamples: AppleHealthKit[&quot;getHeartbeatSeriesSamples&quot;],  getRestingHeartRateSamples: AppleHealthKit[&quot;getRestingHeartRateSamples&quot;],  getBloodGlucoseSamples: AppleHealthKit[&quot;getBloodGlucoseSamples&quot;],  getCarbohydratesSamples: AppleHealthKit[&quot;getCarbohydratesSamples&quot;],  saveBloodGlucoseSample: AppleHealthKit[&quot;saveBloodGlucoseSample&quot;],  saveCarbohydratesSample: AppleHealthKit[&quot;saveCarbohydratesSample&quot;],  deleteBloodGlucoseSample: AppleHealthKit[&quot;deleteBloodGlucoseSample&quot;],  deleteCarbohydratesSample: AppleHealthKit[&quot;deleteCarbohydratesSample&quot;],  getSleepSamples: AppleHealthKit[&quot;getSleepSamples&quot;],  getInfo: AppleHealthKit[&quot;getInfo&quot;],  getMindfulSession: AppleHealthKit[&quot;getMindfulSession&quot;],  saveMindfulSession: AppleHealthKit[&quot;saveMindfulSession&quot;],  getWorkoutRouteSamples: AppleHealthKit[&quot;getWorkoutRouteSamples&quot;],  saveWorkout: AppleHealthKit[&quot;saveWorkout&quot;],  getAuthStatus: AppleHealthKit[&quot;getAuthStatus&quot;],  getLatestBloodAlcoholContent: AppleHealthKit[&quot;getLatestBloodAlcoholContent&quot;],  getBloodAlcoholContentSamples: AppleHealthKit[&quot;getBloodAlcoholContentSamples&quot;],  saveBloodAlcoholContent: AppleHealthKit[&quot;saveBloodAlcoholContent&quot;],  getDistanceSwimming: AppleHealthKit[&quot;getDistanceSwimming&quot;],  getDailyDistanceSwimmingSamples: AppleHealthKit[&quot;getDailyDistanceSwimmingSamples&quot;],  getOxygenSaturationSamples: AppleHealthKit[&quot;getOxygenSaturationSamples&quot;],  getElectrocardiogramSamples: AppleHealthKit[&quot;getElectrocardiogramSamples&quot;],  saveBodyFatPercentage: AppleHealthKit[&quot;saveBodyFatPercentage&quot;],  saveBodyTemperature: AppleHealthKit[&quot;saveBodyTemperature&quot;],  getEnvironmentalAudioExposure: AppleHealthKit[&quot;getEnvironmentalAudioExposure&quot;],  getHeadphoneAudioExposure: AppleHealthKit[&quot;getHeadphoneAudioExposure&quot;],  getClinicalRecords: AppleHealthKit[&quot;getClinicalRecords&quot;],  getActivitySummary: AppleHealthKit[&quot;getActivitySummary&quot;],  getInsulinDeliverySamples: AppleHealthKit[&quot;getInsulinDeliverySamples&quot;],  saveInsulinDeliverySample: AppleHealthKit[&quot;saveInsulinDeliverySample&quot;],  deleteInsulinDeliverySample: AppleHealthKit[&quot;deleteInsulinDeliverySample&quot;],&#125;// console.log(&quot;AppleHealthKit: &quot;,AppleHealthKit, &quot;Kit=&quot;, Kit);export const HealthKit = Object.assign(&#123;&#125;, AppleHealthKit, &#123;  Constants: &#123;    Activities,    Observers,    Permissions,    Units,  &#125;,&#125;)module.exports = HealthKit</code></pre>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;React Native HealthKit 初始化报错。&lt;/p&gt;
-&lt;p&gt;按照官方文档安装的。&lt;br&gt;但是一执行官方的demo，就报错了。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;_reactNativeHealth.default.initHealthKit is not a fu</summary>
-      
+    <summary type="html">我遇到了React Native HealthKit初始化报错“_reactNativeHealth.default.initHealthKit is not a function (it is undefined)”的问题，发现是因为RN新版本的模块懒加载机制导致NativeModules为空对象。我通过手动获取所需函数并赋值给Kit对象，临时解决了问题，以便继续开发。</summary>
     
     
     
@@ -330,16 +410,12 @@
     <link href="https://flashj.cn/2025/01/15/nginx-conf-proxy-tsrpc.html"/>
     <id>https://flashj.cn/2025/01/15/nginx-conf-proxy-tsrpc.html</id>
     <published>2025-01-15T05:21:41.000Z</published>
-    <updated>2025-05-05T13:58:41.034Z</updated>
+    <updated>2025-01-15T05:21:41.000Z</updated>
     
     <content type="html"><![CDATA[<p>要在宝塔上部署tsrpc服务端，需要在宝塔面板上安装nodejs项目。<br>开启外网映射之后，需要在宝塔面板上配置nginx的反向代理。</p><p>默认宝塔面板的nginx配置文件中已经有了反向代理的配置，因为涉及到CORS转发，所以需要在配置文件中添加三行配置即可，<br>使其变成：</p><pre><code class="language-nginx">    # HTTP反向代理相关配置开始 &gt;&gt;&gt;    location ~ /purge(/.*) &#123;        proxy_cache_purge cache_one $host$request_uri$is_args$args;    &#125;    location / &#123;        proxy_pass http://127.0.0.1:3000;        proxy_set_header Host $host:$server_port;        proxy_set_header X-Real-IP $remote_addr;        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;        proxy_set_header REMOTE-HOST $remote_addr;        add_header X-Cache $upstream_cache_status;        proxy_set_header X-Host $host:$server_port;        proxy_set_header X-Scheme $scheme;        proxy_connect_timeout 30s;        proxy_read_timeout 86400s;        proxy_send_timeout 30s;        proxy_http_version 1.1;        proxy_set_header Upgrade $http_upgrade;        proxy_set_header Connection &quot;upgrade&quot;;    proxy_pass_header Access-Control-Allow-Origin;    proxy_pass_header Access-Control-Allow-Methods;    proxy_pass_header Access-Control-Allow-Headers;    &#125;    # HTTP反向代理相关配置结束 &lt;&lt;&lt;</code></pre><p>但是宝塔创建的nodejs项目，默认的nginx配置文件中会把项目的端口（比如3000）和对web对外端口80都监听，导致无法正常启动nodejs项目。<br>所以需要修改nginx配置文件，把监听项目3000端口的配置注释掉。如下：</p><pre><code class="language-nginx">server&#123;    # listen 3000;    listen 443 ssl http2 ;    listen 80;    server_name 121.41.91.7 sver.oeoai.com;    index index.html index.htm default.htm default.html;    #root /www/wwwroot/rcshop-management/dist;    #CERT-APPLY-CHECK--START    # 用于SSL证书申请时的文件验证相关配置 -- 请勿删除    include /www/server/panel/vhost/nginx/well-known/dist.conf;    #CERT-APPLY-CHECK--END    #...    </code></pre>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;要在宝塔上部署tsrpc服务端，需要在宝塔面板上安装nodejs项目。&lt;br&gt;开启外网映射之后，需要在宝塔面板上配置nginx的反向代理。&lt;/p&gt;
-&lt;p&gt;默认宝塔面板的nginx配置文件中已经有了反向代理的配置，因为涉及到CORS转发，所以需要在配置文件中添加三行配置即可，</summary>
-      
+    <summary type="html">记录在宝塔面板上部署tsrpc服务端的步骤，包括配置Nginx反向代理和解决Node.js项目无法启动的问题。修改Nginx配置文件，添加CORS相关设置，注释掉冲突的端口监听配置，以确保服务正常运行。</summary>
     
     
     
@@ -365,16 +441,12 @@
     <link href="https://flashj.cn/2024/10/26/jetbrains-rider-webstorm-free-non-commercial.html"/>
     <id>https://flashj.cn/2024/10/26/jetbrains-rider-webstorm-free-non-commercial.html</id>
     <published>2024-10-26T06:05:23.000Z</published>
-    <updated>2025-05-05T13:58:41.029Z</updated>
+    <updated>2024-10-26T06:05:23.000Z</updated>
     
     <content type="html"><![CDATA[<p>喜+2，Rider和Webstorm开放非商业免费版了，和Unity配套了。😁</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261633225.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261633877.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261634178.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261634461.png"></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;喜+2，Rider和Webstorm开放非商业免费版了，和Unity配套了。😁&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.mousebomb.org/blog/auto/202501261633225.png&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://</summary>
-      
+    <summary type="html">喜+2，Rider和Webstorm开放非商业免费版了，和Unity配套了。</summary>
     
     
     
@@ -396,17 +468,12 @@
     <link href="https://flashj.cn/2024/08/20/black-myth-wukong-launch.html"/>
     <id>https://flashj.cn/2024/08/20/black-myth-wukong-launch.html</id>
     <published>2024-08-20T04:14:08.000Z</published>
-    <updated>2025-05-05T13:58:41.016Z</updated>
+    <updated>2024-08-20T04:14:08.000Z</updated>
     
     <content type="html"><![CDATA[<p>期待了四年，早早预购，提前通过了性能测试。<br><img src="https://cdn.mousebomb.org/blog/auto/202501261650822.jpg" alt="性能测试"></p><p>还提前预下载了就等上桌了。 结果——</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261645870.png" alt="正在解压"><br>咱就说，踏上西行之路的第一难，就是“正在解压”的剩余时间在1天左右浮动吗？</p><p>解压到中午12点了，还没解压完毕。午饭时间得先吃饭啊，遂出门觅食。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261641834.png" alt="就离谱，门口的八刀汤今天也在家打黑神话悟空去了吗"><br>就离谱，门口的八刀汤今天也在家打黑神话悟空去了吗？</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;期待了四年，早早预购，提前通过了性能测试。&lt;br&gt;&lt;img src=&quot;https://cdn.mousebomb.org/blog/auto/202501261650822.jpg&quot; alt=&quot;性能测试&quot;&gt;&lt;/p&gt;
-&lt;p&gt;还提前预下载了就等上桌了。 结果——&lt;/p&gt;
-&lt;p&gt;</summary>
-      
+    <summary type="html">期待了四年，早早预购，提前通过了性能测试。还提前预下载了就等上桌了。 结果——咱就说，踏上西行之路的第一难，就是“正在解压”的剩余时间在1天左右浮动吗？</summary>
     
     
     
@@ -432,7 +499,7 @@
     <link href="https://flashj.cn/2024/07/17/AI-zhong-yi-mai-xiang.html"/>
     <id>https://flashj.cn/2024/07/17/AI-zhong-yi-mai-xiang.html</id>
     <published>2024-07-17T12:01:11.000Z</published>
-    <updated>2025-05-05T13:58:41.011Z</updated>
+    <updated>2024-07-17T12:01:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>亚健康困扰下跨界学中医，探索利用互联网、AI 从理性角度建模，对比豆包与 ChatGPT 高下。</p><p>由于我今年亚健康比较困扰，所以经常在学习休养身体的技能。在中医入门里我想起一个有趣的问题，“把脉”这个学中医专业的朋友也是说要经历过很多年很多的病人才能有体会有经验，所以我就在想，一个现代跨界学习中医的人，利用互联网和AI可以如何快速从理性角度建模呢？ 于是正好对比了一下豆包和ChatGPT在这个问题上的高下。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261658768.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261659273.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261659720.png"></p><p>唉，只能说，现在这纯大模型，没有调校，都还不太行。</p>]]></content>
     
@@ -465,17 +532,12 @@
     <link href="https://flashj.cn/2024/04/10/unity-hub-mac-install-architecture-arm64.html"/>
     <id>https://flashj.cn/2024/04/10/unity-hub-mac-install-architecture-arm64.html</id>
     <published>2024-04-10T12:49:56.000Z</published>
-    <updated>2025-05-05T13:58:41.044Z</updated>
+    <updated>2024-04-10T12:49:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hub里面直接安装不到我需要的版本。</p><p>妈的去官网Archive找的版本，安装url是<code>unityhub://2022.3.20f1/61c2feb0970d</code>，这种跳出来的安装是intel版本，要arm版本的怎么办？</p><p>官网给的解答是：</p><p><code>/Applications/Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless install --version &quot;2021.3.27f1&quot; --module android android-sdk-ndk-tools ios windows-mono --architecture arm64 --childModules</code></p><p>所以我要安装的话是:</p><p><code>/Applications/Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless install --version &quot;2022.3.20f1&quot; --architecture arm64</code>(后来发现这句缺少了-c，因为如果version不存在于hub官方列表里，则需要传入changeset)</p><p>报错，于是查询帮助：</p><p><code>/Applications/Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless help</code> <code>Commands: editors description: list the releases and installed editors alias: e example: Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless editors -r options: [default]list of available releases and installed editors on your machine combined --releases-r only list of available releases promoted by Unity --installed-i only list of installed editors on your machine --add &lt;path&gt; locating and associating an editor from a stipulated path</code></p><p><code>install-path description: set/get the path where the Unity editors will be installed alias: ip example: Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless ip -s /Applications/Unity/Hub/Editor/ options: --set-s &lt;path&gt; set the install path to the given path --get-g returns the install path install description: installs a new editor either from the releases list or archive alias: i example: Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless install --version 2019.1.11f1 --changeset 9b001d489a54 options: --version-v &lt;version&gt; editor version to be installed (e.g. 2019.1.11f1) - required --changeset-c &lt;changeset&gt; changeset of the editor if it is not in the release list (e.g. 9b001d489a54) - required if the version is not in the releases. see editors -r --module-m &lt;moduleid&gt;see install-modules for more information install-modules description: download and install a module (e.g. build support) to an installed editor alias: im example: Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless install-modules --version 2019.1.11f1 -m ios android options: --version-v &lt;version&gt; version of the editor to add the module to - required --module-m &lt;moduleid&gt; the module id. The followings are the available values depending on version. You can specify multiple values. Android Build Support: android Android SDK &amp; NDK Tools: android-sdk-ndk-tools OpenJDK: android-open-jdk Visual Studio for Mac: visualstudio iOS Build Support: ios tvOS Build Support: appletv Linux Build Support: linux Linux Build Support (Mono): linux-mono Linux Build Support (IL2CPP): linux-il2cpp Mac Build Support (IL2CPP): mac-il2cpp Windows Build Support (Mono): windows-mono WebGL Build Support: webgl Lumin OS (Magic Leap) Build Support: lumin Facebook Gameroom Build Support: facebook-games Vuforia Augmented Reality Support: vuforia-ar Documentation: documentation Language packs: language-ja, language-ko, language-zh-cn, language-zh-hant, language-zh-hans --childModules--cm automatically installs all child modules of selected modules</code></p><p>根据安装url <code>unityhub://2022.3.20f1/61c2feb0970d</code>，推测参数应该是</p><p><code>/Applications/Unity\ Hub.app/Contents/MacOS/Unity\ Hub -- --headless install --version &quot;2022.3.20f1&quot; -c &quot;61c2feb0970d&quot; --architecture arm64</code></p><p>有效，在安装了。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;Hub里面直接安装不到我需要的版本。&lt;/p&gt;
-&lt;p&gt;妈的去官网Archive找的版本，安装url是&lt;code&gt;unityhub://2022.3.20f1/61c2feb0970d&lt;/code&gt;，这种跳出来的安装是intel版本，要arm版本的怎么办？&lt;/p&gt;
-&lt;p&gt;官网给</summary>
-      
+    <summary type="html">Hub里面直接安装不到我需要的版本。妈的去官网Archive找的版本，安装url是unityhub://2022.3.20f1/61c2feb0970d，这种跳出来的安装是intel版本，要arm版本的怎么办？官网给的解答是：</summary>
     
     
     
@@ -484,7 +546,7 @@
     
     <category term="Unity" scheme="https://flashj.cn/tags/Unity/"/>
     
-    <category term="Unity Hub" scheme="https://flashj.cn/tags/Unity-Hub/"/>
+    <category term="Hub" scheme="https://flashj.cn/tags/Hub/"/>
     
     <category term="Mac" scheme="https://flashj.cn/tags/Mac/"/>
     
@@ -495,18 +557,12 @@
     <link href="https://flashj.cn/2024/01/31/RIP-granny-bury.html"/>
     <id>https://flashj.cn/2024/01/31/RIP-granny-bury.html</id>
     <published>2024-01-31T12:35:42.000Z</published>
-    <updated>2025-05-05T13:58:41.011Z</updated>
+    <updated>2024-01-31T12:35:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>这次奶奶回到了老家，回到了心心念念的姜堰，安葬在这生前看好的好地方。在这里好生安息，永远不在有烦恼，永远快乐圆满了。</p><p>姜堰在变化，房子会推倒重建，永远回不到最初了。但奶奶可以永远在这里继续看着城市的发展了。也可以自由自在翱翔于星辰宇宙之间。</p><hr><p>已经两年了，我还是会怀念奶奶到身体会难以抑制地生病。</p><p>在宇宙尺度上，文明都是毫不起眼的存在，但还是有东西会被保存下来。在时空中留下印记。</p><p>就像太奶奶，虽然我们以后无法再相见了，但在宇宙中已经留下了印记。只是将来才会有某种方式可以读取出来。我们每个人都是，在时空这幅画卷中的一笔。</p><p>作为人类，意识只能感受到从过去往未来的过程，无法回到过去，但这只是意识的局限，对宇宙来说，意识微不足道，而人生的物理时空轨迹，在无限大的宇宙中已经烙印在那里了。<strong>总有无限个光锥可以观测到跟太奶奶再从头过一生</strong>。</p><p><strong>在光锥之外，太奶奶还将降临，宇宙永远铭记着一切</strong>。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;这次奶奶回到了老家，回到了心心念念的姜堰，安葬在这生前看好的好地方。在这里好生安息，永远不在有烦恼，永远快乐圆满了。&lt;/p&gt;
-&lt;p&gt;姜堰在变化，房子会推倒重建，永远回不到最初了。但奶奶可以永远在这里继续看着城市的发展了。也可以自由自在翱翔于星辰宇宙之间。&lt;/p&gt;
-&lt;hr&gt;
-</summary>
-      
+    <summary type="html">奶奶安葬在姜堰，我怀念她，也思考生命与宇宙的关系。虽然物是人非，但奶奶的痕迹将永远留在时空之中。人类虽无法回到过去，但每个人的轨迹都在宇宙中留下印记。我相信总有一天，能以某种方式再次与奶奶相遇。</summary>
     
     
     
@@ -528,17 +584,12 @@
     <link href="https://flashj.cn/2024/01/04/i-will-take-you-there-granny.html"/>
     <id>https://flashj.cn/2024/01/04/i-will-take-you-there-granny.html</id>
     <published>2024-01-04T07:46:42.000Z</published>
-    <updated>2025-05-05T13:58:41.027Z</updated>
+    <updated>2024-01-04T07:46:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>今天iPhone轻描淡写地给我推送了一份回忆，也许它不明白这份历史的厚重，也许它只是不忘给主人送来旧日温情。</p><p>与之相伴的，是它自动配的音乐，瞬间打开了我泪眼的水闸，让我泪流满面。</p><iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/i-will-take-you-there-alternate-mix/282822779?i=282822833"></iframe><p>歌是这么唱的：</p><blockquote><p>If only I could find a place</p><p>Where smiling strangers knew our faces</p><p>I would take you there</p><p>A place with constant melody</p><p>Where you and I could wander free</p><p>I would take you there</p><p>Seems like such a waste of time</p><p>Just trying to unwind the facts of life</p><p>If I could find a place， I’d take you</p><p>Where the pain don’t cut you like a knife</p><p>If only there were time enough</p><p>Or word enough, or rhyme enough</p><p>I would take you there</p></blockquote><p>– But maybe you’ve already been there. ☀️ R.I.P. 👵<br>– 希望我的奶奶涅槃寂静，一切圆满。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261711491.png" alt="👵"></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;今天iPhone轻描淡写地给我推送了一份回忆，也许它不明白这份历史的厚重，也许它只是不忘给主人送来旧日温情。&lt;/p&gt;
-&lt;p&gt;与之相伴的，是它自动配的音乐，瞬间打开了我泪眼的水闸，让我泪流满面。&lt;/p&gt;
-&lt;iframe allow=&quot;autoplay *; encrypted</summary>
-      
+    <summary type="html">今天iPhone推送的回忆让我感动落泪，伴随的音乐勾起了我对奶奶的思念。歌词中的情感与我的心情深深共鸣，让我想起她曾经的温暖和离去的遗憾。我希望能为奶奶祈福，愿她在另一个世界安息。</summary>
     
     
     
@@ -548,145 +599,6 @@
     <category term="奶奶" scheme="https://flashj.cn/tags/%E5%A5%B6%E5%A5%B6/"/>
     
     <category term="追忆" scheme="https://flashj.cn/tags/%E8%BF%BD%E5%BF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>看完《万神殿》</title>
-    <link href="https://flashj.cn/2023/11/07/pantheon.html"/>
-    <id>https://flashj.cn/2023/11/07/pantheon.html</id>
-    <published>2023-11-07T04:17:20.000Z</published>
-    <updated>2025-05-05T13:58:41.035Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="看完两季"><a href="#看完两季" class="headerlink" title="看完两季"></a>看完两季</h2><p>前段时间看完万神殿，终局的这种轮回选择太惊艳了。</p><p>开悟就是 <strong>花费几十万年，无尽的历史，无尽的岁月后，一如往日乘愿再来感受痛和生活</strong>。</p><p>心里有些难受，再弄点书回来以毒攻毒一下。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261737357.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261737043.png"></p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261736979.png"></p><h2 id="自己的感受"><a href="#自己的感受" class="headerlink" title="自己的感受"></a>自己的感受</h2><p>这部片子也在某种角度上，是我尝试对自己的心灵疗愈的药剂。</p><p>S2E6觉得走入俗套了，E7突然跨度开始大。E8直接跨度达到三体。</p><p>终局的这种轮回选择太惊艳了，三观有些合。开悟就是花费几十万年，无尽的历史，无尽的岁月后，一如往日乘愿再来。</p><p>这个片子从第一季就经常提到递归，包括Chanda逃出去的那一集明显看到了是递归的一个级别自己逃出去，也就是除了成功的那一级之外，有1个或1个以上级别的自己是永远困在那无尽的孤独中的。同样，宇宙中也有至少一级是真正靠自己纯粹意志成功的，而我们在剧中看到的这一层递归的剧情线已经不是最外面一级宇宙了。<br>在这部片子中，因为宇宙运行的并行时空（可能性）无限，Maddie成神或者说人类成神其实是时空的必然，就像UI运行必然能逃逸出去一样，因为量子算力（可能性）不限。</p><p>就像我奶奶已经去世了，这很悲伤，但充满希望的一点是：在这无尽算力的宇宙中，一直记录着她的信息，从某个时空一定还能找到完美的观测点，可以再次接触她的完整一生。而在某个时空中，我也可以做到重新与她相见。因为宇宙算力无限，总有一种可能性在那儿。只是此刻的我并不选择去达成这种可能。我只需要珍惜和活好每一个当下，感受无知、感受痛苦、感受生活，因为“无知是福”，因为我选择相信我活在递归的第0层。第0层的人当然辛苦一些，就像实体肉身人类一样，但这是更纯粹更纯朴更田园的时代。</p><p>第二季的结局我心疼Maddie她们，就像心疼我自己。</p><p>而Maddie她们在新的一次轮回中是有机会创造出不同的。毕竟每一次递归，每一次迭代都有可能突变的。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;看完两季&quot;&gt;&lt;a href=&quot;#看完两季&quot; class=&quot;headerlink&quot; title=&quot;看完两季&quot;&gt;&lt;/a&gt;看完两季&lt;/h2&gt;&lt;p&gt;前段时间看完万神殿，终局的这种轮回选择太惊艳了。&lt;/p&gt;
-&lt;p&gt;开悟就是 &lt;strong&gt;花费几十万年，无尽的历史，无尽的岁</summary>
-      
-    
-    
-    
-    <category term="影音娱乐" scheme="https://flashj.cn/categories/%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90/"/>
-    
-    
-    <category term="奶奶" scheme="https://flashj.cn/tags/%E5%A5%B6%E5%A5%B6/"/>
-    
-    <category term="电视剧" scheme="https://flashj.cn/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
-    
-    <category term="动漫" scheme="https://flashj.cn/tags/%E5%8A%A8%E6%BC%AB/"/>
-    
-    <category term="万神殿" scheme="https://flashj.cn/tags/%E4%B8%87%E7%A5%9E%E6%AE%BF/"/>
-    
-    <category term="动画" scheme="https://flashj.cn/tags/%E5%8A%A8%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>github-copilot-chat-preview-waiting</title>
-    <link href="https://flashj.cn/2023/03/23/github-copilot-chat-preview-waiting.html"/>
-    <id>https://flashj.cn/2023/03/23/github-copilot-chat-preview-waiting.html</id>
-    <published>2023-03-23T01:03:47.000Z</published>
-    <updated>2025-05-05T13:58:41.024Z</updated>
-    
-    <content type="html"><![CDATA[<p>GitHub Copilot chat preview只能在vs&#x2F;vsc上尝鲜，jetbrains用户没有更新选项，又得继续等 😢</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261748605.png"><br><img src="https://cdn.mousebomb.org/blog/auto/202501261748687.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;GitHub Copilot chat preview只能在vs&amp;#x2F;vsc上尝鲜，jetbrains用户没有更新选项，又得继续等 😢&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.mousebomb.org/blog/auto/202501261748</summary>
-      
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
-    
-    <category term="Github-Copilot" scheme="https://flashj.cn/tags/Github-Copilot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《流浪地球2》，力荐</title>
-    <link href="https://flashj.cn/2023/01/23/the-wandering-earth-2.html"/>
-    <id>https://flashj.cn/2023/01/23/the-wandering-earth-2.html</id>
-    <published>2023-01-23T10:54:47.000Z</published>
-    <updated>2025-06-02T09:55:27.202Z</updated>
-    
-    <content type="html"><![CDATA[<p>传承、团结、责任、希望。</p><p>人类的勇气之歌。 </p><p>世界人民大团结万岁。</p><p>人类文明需要这种精神食粮。 </p><p>在几十年后，我们国家一定会有一批小时候看过三体还有小破球的新一代科学家崛起。</p><hr><p>批判白左：“这公平吗”</p><p>反对分子装备越来越精良，一定有某些美丽国家层面提供帮助。</p><hr><p>无法想象，这部电影，我看了很多遍，每次随便拉到一个进度，还可以津津有味看完。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;传承、团结、责任、希望。&lt;/p&gt;
-&lt;p&gt;人类的勇气之歌。 &lt;/p&gt;
-&lt;p&gt;世界人民大团结万岁。&lt;/p&gt;
-&lt;p&gt;人类文明需要这种精神食粮。 &lt;/p&gt;
-&lt;p&gt;在几十年后，我们国家一定会有一批小时候看过三体还有小破球的新一代科学家崛起。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;批判白左：“这公平</summary>
-      
-    
-    
-    
-    <category term="影音娱乐" scheme="https://flashj.cn/categories/%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90/"/>
-    
-    
-    <category term="电影" scheme="https://flashj.cn/tags/%E7%94%B5%E5%BD%B1/"/>
-    
-    <category term="科幻" scheme="https://flashj.cn/tags/%E7%A7%91%E5%B9%BB/"/>
-    
-    <category term="灾难" scheme="https://flashj.cn/tags/%E7%81%BE%E9%9A%BE/"/>
-    
-    <category term="刘慈欣" scheme="https://flashj.cn/tags/%E5%88%98%E6%85%88%E6%AC%A3/"/>
-    
-    <category term="国产" scheme="https://flashj.cn/tags/%E5%9B%BD%E4%BA%A7/"/>
-    
-    <category term="流浪地球" scheme="https://flashj.cn/tags/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>宇宙铭记一切，永不消逝的爱</title>
-    <link href="https://flashj.cn/2022/10/30/love-never-fades.html"/>
-    <id>https://flashj.cn/2022/10/30/love-never-fades.html</id>
-    <published>2022-10-30T13:11:42.000Z</published>
-    <updated>2025-05-05T13:58:41.031Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="又想奶奶了"><a href="#又想奶奶了" class="headerlink" title="又想奶奶了"></a>又想奶奶了</h2><p>这几天热议的「于是人」还是「于斯人」让我又想奶奶了。</p><p>我很想回老家翻找我以前的书，找到我的中学语文书，看看我到底学的原文是什么，耳听为虚眼见为实。</p><p>我奶奶在姜堰，还有我所有小时候的教材，她都收在家里呢。</p><p>唉，可惜已经都相继没了。家也没了，奶奶也没了。这些连接都已经无可挽回地断了。</p><h2 id="梦回往昔"><a href="#梦回往昔" class="headerlink" title="梦回往昔"></a>梦回往昔</h2><p>只有在梦里才能再见到了，<br>当我回家的时候，奶奶会问我：“这么晚才到啊？晚饭吃了吗，饿不饿？” 而我只想说：“我这次不想走了，想一直留下来……”</p><h2 id="宇宙铭记一切"><a href="#宇宙铭记一切" class="headerlink" title="宇宙铭记一切"></a>宇宙铭记一切</h2><p>劝劝自己，这只是意识的局限，对宇宙来说，意识微不足道，而人生的物理时空轨迹，在无限大的宇宙中已经烙印在那里了。<strong>总有无限个光锥可以观测到跟太奶奶再从头过一生</strong>。</p><p><strong>在光锥之外，太奶奶还将降临，宇宙永远铭记着一切</strong>，永不消逝的爱，永不消逝的信息。</p><blockquote><p>每当你向我走来</p><p>告诉我星辰大海</p><p>遥遥微光 与我同行</p><p>盛开在黎明</p><p>会不会我们的爱</p><p>像星辰守护大海</p><p>不曾离开</p><p>我向你奔赴而来</p><p>你就是星辰大海</p><p>我眼中炽热的恒星</p><p>长夜里照我前行</p></blockquote><p><img src="https://cdn.mousebomb.org/blog/auto/202501261755843.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;又想奶奶了&quot;&gt;&lt;a href=&quot;#又想奶奶了&quot; class=&quot;headerlink&quot; title=&quot;又想奶奶了&quot;&gt;&lt;/a&gt;又想奶奶了&lt;/h2&gt;&lt;p&gt;这几天热议的「于是人」还是「于斯人」让我又想奶奶了。&lt;/p&gt;
-&lt;p&gt;我很想回老家翻找我以前的书，找到我的中学语文书，</summary>
-      
-    
-    
-    
-    <category term="个人相关" scheme="https://flashj.cn/categories/%E4%B8%AA%E4%BA%BA%E7%9B%B8%E5%85%B3/"/>
-    
-    
-    <category term="奶奶" scheme="https://flashj.cn/tags/%E5%A5%B6%E5%A5%B6/"/>
-    
-    <category term="告别" scheme="https://flashj.cn/tags/%E5%91%8A%E5%88%AB/"/>
-    
-    <category term="姜堰" scheme="https://flashj.cn/tags/%E5%A7%9C%E5%A0%B0/"/>
-    
-    <category term="追忆" scheme="https://flashj.cn/tags/%E8%BF%BD%E5%BF%86/"/>
-    
-    <category term="宇宙" scheme="https://flashj.cn/tags/%E5%AE%87%E5%AE%99/"/>
-    
-    <category term="爱" scheme="https://flashj.cn/tags/%E7%88%B1/"/>
-    
-    <category term="记忆" scheme="https://flashj.cn/tags/%E8%AE%B0%E5%BF%86/"/>
     
   </entry>
   
