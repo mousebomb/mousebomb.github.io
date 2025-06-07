@@ -47,8 +47,22 @@ iframe.bilibili {
   aspect-ratio: 16/9;
   border-radius: 10px;
 }
+:root[data-theme="light"] {
+  --bg-url: url("../img/tiny_grid.png");
+}
+:root[data-theme="dark"] {
+  --bg-url: none;
+}
+:root:not([data-theme]) {
+  --bg-url: url("../img/tiny_grid.png");
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-url: none;
+  }
+}
 body {
-  background: transparent url("https://cdn.mousebomb.org/blog/wp/wp-content/themes/focused/img/tiny_grid.png") repeat fixed !important;
+  background: var(--site-bg) var(--bg-url) repeat fixed !important;
 }
 :root {
   --theme-link: #2094f3;
