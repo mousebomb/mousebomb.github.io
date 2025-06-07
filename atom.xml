@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2025-06-05T06:12:26.780Z</updated>
+  <updated>2025-06-07T09:19:28.664Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>跟着《AI Product Manager&#39;s Handbook》学产品：阅读与知识记录</title>
+    <link href="https://flashj.cn/2025/06/07/ai-product-managers-handbook-reading.html"/>
+    <id>https://flashj.cn/2025/06/07/ai-product-managers-handbook-reading.html</id>
+    <published>2025-06-07T09:16:00.000Z</published>
+    <updated>2025-06-07T09:19:28.664Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="《AI-Product-Manager’s-Handbook》第二版阅读准备"><a href="#《AI-Product-Manager’s-Handbook》第二版阅读准备" class="headerlink" title="《AI Product Manager’s Handbook》第二版阅读准备"></a>《AI Product Manager’s Handbook》第二版阅读准备</h2><p>在网上看到《AI Product Manager’s Handbook》第二版的介绍，觉得内容颇具启发性，便找来一读。</p><p>《<a href="https://download.packt.com/free-ebook/9781835882849">AI Product Manager’s Handbook</a>》是一本面向人工智能产品管理领域的实用指南，旨在帮助读者系统理解并掌握在实际工作中构建、管理和维护AI产品的关键方法与思路。该书由Irene Bratsis撰写，第二版于2024年11月由Packt Publishing出版。书中不仅介绍了AI产品管理的基础理论，还深入探讨了技术基础设施、模型开发与维护、深度学习、商业化策略以及产品设计等多个维度的内容。</p><h3 id="书籍特点"><a href="#书籍特点" class="headerlink" title="书籍特点"></a>书籍特点</h3><ol><li><p><strong>全面覆盖</strong>：本书以AI产品的全生命周期为脉络，从概念设计到实际部署，层层递进。无论是初学者还是已有经验的产品管理者，都能从中获得启发与收获。</p></li><li><p><strong>实践导向</strong>：书中提供了大量的案例研究、流程图和检查清单，帮助读者更好地理解和应用所学知识。这些实用工具使得本书不仅是一本理论书籍，更是一部操作手册。</p></li><li><p><strong>技术深度</strong>：本书不仅面向产品管理者，也适合对AI有一定了解的读者。书中深入解析了机器学习与深度学习等核心技术，并结合实际应用场景进行说明，增强了内容的可理解性与实用性。</p></li><li><p><strong>伦理思考</strong>：作者特别关注AI产品在伦理层面的挑战，如数据隐私、算法偏见等问题，并提出了相应的应对思路。这使得本书不仅是一本技术参考书，更是一部富有思考深度的伦理探讨之作。</p></li><li><p><strong>行业洞察</strong>：书中还对当前AI产品的市场动态进行了分析，并探讨了传统软件向AI产品转型的路径。这些内容对希望在AI领域深耕的人士具有重要的参考价值。</p></li></ol><h3 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h3><ul><li><strong>AI产品管理者</strong>：本书为AI产品的管理提供了系统性的指导，有助于提升对复杂问题的理解与应对能力。</li><li><strong>AI技术开发者</strong>：对于希望将AI技术融入产品开发的工程师而言，本书提供了兼具技术深度与管理视角的知识体系。</li><li><strong>创业者</strong>：书中关于AI产品商业化策略的分析和案例，对初创企业具有重要的借鉴意义。</li><li><strong>学生与研究者</strong>：本书不仅适用于从业者，也适合对AI领域感兴趣的学生和研究人员，有助于构建系统的知识框架。</li></ul><h1 id="重点知识提取"><a href="#重点知识提取" class="headerlink" title="重点知识提取"></a>重点知识提取</h1><h2 id="第一部分：人工智能基础概念"><a href="#第一部分：人工智能基础概念" class="headerlink" title="第一部分：人工智能基础概念"></a>第一部分：人工智能基础概念</h2><h3 id="1-1-人工智能的定义与发展阶段"><a href="#1-1-人工智能的定义与发展阶段" class="headerlink" title="1.1 人工智能的定义与发展阶段"></a>1.1 人工智能的定义与发展阶段</h3><p>人工智能（Artificial Intelligence, AI）是一门旨在使机器模拟人类智能行为的计算机科学分支。根据其能力水平，AI可以分为两类：<strong>强人工智能（AGI）与弱人工智能（ANI）</strong>。  </p><ul><li><strong>强人工智能（Artificial General Intelligence, AGI）</strong>：指具备与人类相当的通用智能，能够执行任何智力任务的能力。尽管AGI在理论上具有广阔前景，但当前技术尚未达到这一目标，仍处于研究阶段。  </li><li><strong>弱人工智能（Artificial Narrow Intelligence, ANI）</strong>：当前大多数AI应用属于这一类，专注于执行特定任务。例如，语音识别、图像分类、推荐系统等都属于弱AI的范畴。</li></ul><p>AI的发展历程可以划分为三个阶段：  </p><ol><li><strong>符号主义阶段（Symbolic AI）</strong>：基于规则和逻辑推理，代表技术包括专家系统、知识图谱等。这一阶段的AI依赖人工定义规则，在数据量和复杂性受限的情况下表现有限。  </li><li><strong>统计机器学习阶段（Statistical ML）</strong>：随着大数据的兴起，AI从基于规则的方法转向数据驱动的学习模型。这一阶段的核心是通过算法自动从数据中提取特征并进行预测，常见技术包括线性回归、支持向量机（SVM）、决策树等。  </li><li><strong>深度学习阶段</strong>：以神经网络为基础的AI技术，通过多层结构自动提取复杂特征。深度学习的突破使得AI在图像识别、自然语言处理（NLP）等领域取得显著进展。</li></ol><h3 id="1-2-机器学习的核心要素与技术分类"><a href="#1-2-机器学习的核心要素与技术分类" class="headerlink" title="1.2 机器学习的核心要素与技术分类"></a>1.2 机器学习的核心要素与技术分类</h3><p>机器学习（Machine Learning, ML）是AI的子领域，其核心目标是让计算机通过数据学习规律并实现预测或决策。ML系统通常包含以下关键要素：  </p><ul><li><strong>模型（Model）</strong>：用于描述数据间关系的数学结构，如线性回归模型、神经网络等。  </li><li><strong>训练数据（Training Data）</strong>：用于模型参数优化的数据集，通常包含输入和对应的标签。</li></ul><p>根据数据的标注情况，ML可以分为三种主要学习范式：  </p><ol><li><strong>监督学习（Supervised Learning）</strong>：需要标注数据，模型通过学习输入与输出之间的映射关系进行预测。常见的算法包括线性回归、逻辑回归、支持向量机（SVM）等。  </li><li><strong>无监督学习（Unsupervised Learning）</strong>：数据没有标注，模型通过发现数据中的内在结构进行学习。例如聚类算法（如K-means）和降维技术（如主成分分析，PCA）。  </li><li><strong>强化学习（Reinforcement Learning）</strong>：模型通过与环境的交互，以最大化奖励为目标进行学习。该范式广泛应用于游戏AI、机器人控制等领域。</li></ol><h3 id="1-3-深度学习的核心概念与模型类型"><a href="#1-3-深度学习的核心概念与模型类型" class="headerlink" title="1.3 深度学习的核心概念与模型类型"></a>1.3 深度学习的核心概念与模型类型</h3><p>深度学习（Deep Learning, DL）是机器学习的一个子领域，其核心在于利用**人工神经网络（Artificial Neural Networks, ANNs）**来模拟人脑的计算机制。深度学习模型通常包含多个隐藏层，能够自动提取数据中的高层特征，从而提高模型的泛化能力。  </p><h4 id="1-3-1-神经网络的基本结构"><a href="#1-3-1-神经网络的基本结构" class="headerlink" title="1.3.1 神经网络的基本结构"></a>1.3.1 神经网络的基本结构</h4><p>神经网络由输入层、隐藏层和输出层构成。每个神经元通过加权求和与激活函数来处理输入数据，从而实现非线性建模。常见的神经网络类型包括：  </p><ul><li><strong>多层感知器（MLP）</strong>：基础的前馈神经网络，适用于分类和回归任务。  </li><li><strong>卷积神经网络（CNN）</strong>：擅长处理图像数据，通过卷积层提取局部特征。  </li><li><strong>循环神经网络（RNN）</strong>：适用于序列数据，如文本和时间序列分析。  </li><li><strong>长短期记忆网络（LSTM）</strong>：解决RNN中的长期依赖问题，广泛应用于自然语言处理。</li></ul><h4 id="1-3-2-深度学习的挑战与解决方案"><a href="#1-3-2-深度学习的挑战与解决方案" class="headerlink" title="1.3.2 深度学习的挑战与解决方案"></a>1.3.2 深度学习的挑战与解决方案</h4><p>尽管深度学习在多个领域取得了显著成果，但其在实际应用中仍面临以下挑战：  </p><ol><li><strong>数据需求大</strong>：深度学习模型需要大量高质量的数据进行训练。为解决这一问题，研究者提出了数据增强（Data Augmentation）、迁移学习（Transfer Learning）等技术。  </li><li><strong>模型“黑箱”问题</strong>：深度学习模型的决策过程难以解释，影响了其在医疗、金融等高敏感领域的应用。为此，研究者开发了可解释性工具（如LIME、SHAP）来提高模型的透明度。  </li><li><strong>计算资源消耗高</strong>：深度学习需要高性能硬件支持，如GPU和TPU。云计算平台（如AWS、Google Cloud）提供了强大的计算资源支持，降低了深度学习的门槛。</li></ol><h2 id="第二部分：机器学习与深度学习技术解析"><a href="#第二部分：机器学习与深度学习技术解析" class="headerlink" title="第二部分：机器学习与深度学习技术解析"></a>第二部分：机器学习与深度学习技术解析</h2><h3 id="2-1-监督学习的原理与应用"><a href="#2-1-监督学习的原理与应用" class="headerlink" title="2.1 监督学习的原理与应用"></a>2.1 监督学习的原理与应用</h3><p>监督学习是机器学习中最常见的范式，其核心在于通过标注数据训练模型。以下是几种典型的监督学习算法及其应用场景：  </p><h4 id="2-1-1-线性回归（Linear-Regression）"><a href="#2-1-1-线性回归（Linear-Regression）" class="headerlink" title="2.1.1 线性回归（Linear Regression）"></a>2.1.1 线性回归（Linear Regression）</h4><p>线性回归是一种用于预测连续值的算法，其数学模型为：<br>$$ y &#x3D; \beta_0 + \beta_1 x_1 + \beta_2 x_2 + … + \beta_n x_n $$<br>其中，$y$ 为预测值，$x_1, x_2, …, x_n$ 为特征变量，$ \beta_0, \beta_1, …, \beta_n $ 为模型参数。线性回归广泛应用于房价预测、销售趋势分析等领域。  </p><h4 id="2-1-2-分类算法：逻辑回归与支持向量机"><a href="#2-1-2-分类算法：逻辑回归与支持向量机" class="headerlink" title="2.1.2 分类算法：逻辑回归与支持向量机"></a>2.1.2 分类算法：逻辑回归与支持向量机</h4><ul><li><strong>逻辑回归（Logistic Regression）</strong>：适用于二分类问题，通过Sigmoid函数将线性输出映射到概率空间。  </li><li><strong>支持向量机（SVM）</strong>：通过寻找最大间隔超平面来实现分类，适用于高维数据。</li></ul><h4 id="2-1-3-集成学习：随机森林与梯度提升树"><a href="#2-1-3-集成学习：随机森林与梯度提升树" class="headerlink" title="2.1.3 集成学习：随机森林与梯度提升树"></a>2.1.3 集成学习：随机森林与梯度提升树</h4><p>集成学习通过组合多个基模型来提高预测性能。常见的算法包括：  </p><ul><li><strong>随机森林（Random Forest）</strong>：通过构建多个决策树并取平均结果，降低过拟合风险。  </li><li><strong>梯度提升树（Gradient Boosting Trees, GBT）</strong>：通过逐步优化残差，提高模型的准确性。</li></ul><h3 id="2-2-无监督学习的应用与挑战"><a href="#2-2-无监督学习的应用与挑战" class="headerlink" title="2.2 无监督学习的应用与挑战"></a>2.2 无监督学习的应用与挑战</h3><p>无监督学习无需标注数据，通过对数据内在结构的挖掘实现分类或降维。以下是两种常见的无监督学习方法：  </p><h4 id="2-2-1-聚类算法"><a href="#2-2-1-聚类算法" class="headerlink" title="2.2.1 聚类算法"></a>2.2.1 聚类算法</h4><ul><li><strong>K-means聚类</strong>：通过迭代优化中心点，将数据划分为K个簇。  </li><li><strong>层次聚类</strong>：基于树状结构进行分层分类，适用于数据层次关系复杂的场景。</li></ul><h4 id="2-2-2-降维技术"><a href="#2-2-2-降维技术" class="headerlink" title="2.2.2 降维技术"></a>2.2.2 降维技术</h4><ul><li><strong>主成分分析（PCA）</strong>：通过线性变换将高维数据投影到低维空间，保留最大方差。  </li><li><strong>自编码器（Autoencoder）</strong>：通过神经网络实现非线性降维，常用于图像压缩和特征提取。</li></ul><h3 id="2-3-强化学习的原理与应用"><a href="#2-3-强化学习的原理与应用" class="headerlink" title="2.3 强化学习的原理与应用"></a>2.3 强化学习的原理与应用</h3><p>强化学习是一种通过试错机制优化决策策略的方法，其核心在于智能体（Agent）与环境的互动。以下是强化学习的关键概念：  </p><h4 id="2-3-1-马尔可夫决策过程（MDP）"><a href="#2-3-1-马尔可夫决策过程（MDP）" class="headerlink" title="2.3.1 马尔可夫决策过程（MDP）"></a>2.3.1 马尔可夫决策过程（MDP）</h4><p>强化学习的数学框架基于马尔可夫决策过程，包括状态空间、动作空间和奖励函数。智能体的目标是最大化累积奖励。  </p><h4 id="2-3-2-深度强化学习（DRL）"><a href="#2-3-2-深度强化学习（DRL）" class="headerlink" title="2.3.2 深度强化学习（DRL）"></a>2.3.2 深度强化学习（DRL）</h4><p>深度强化学习结合了深度学习与强化学习，通过神经网络近似价值函数或策略。典型应用包括：  </p><ul><li><strong>AlphaGo</strong>：通过深度强化学习在围棋比赛中击败人类冠军。  </li><li><strong>自动驾驶</strong>：利用DRL优化车辆的路径规划与决策控制。</li></ul><h2 id="第三部分：深度学习的核心模型与技术"><a href="#第三部分：深度学习的核心模型与技术" class="headerlink" title="第三部分：深度学习的核心模型与技术"></a>第三部分：深度学习的核心模型与技术</h2><h3 id="3-1-神经网络的演变与优化"><a href="#3-1-神经网络的演变与优化" class="headerlink" title="3.1 神经网络的演变与优化"></a>3.1 神经网络的演变与优化</h3><p>神经网络的发展经历了从浅层结构到深层结构的转变。早期的人工神经网络（如感知机）仅包含单层，难以处理复杂任务。随着计算能力的提升和算法改进，深度神经网络（DNN）应运而生，并在多个领域取得突破性进展。  </p><h4 id="3-1-1-卷积神经网络（CNN）"><a href="#3-1-1-卷积神经网络（CNN）" class="headerlink" title="3.1.1 卷积神经网络（CNN）"></a>3.1.1 卷积神经网络（CNN）</h4><p>卷积神经网络通过局部感受野和参数共享机制，大幅减少了模型的计算量。其核心结构包括：  </p><ul><li><strong>卷积层（Convolutional Layer）</strong>：提取局部特征，通过滤波器进行滑动窗口计算。  </li><li><strong>池化层（Pooling Layer）</strong>：降低特征图的尺寸，增强模型的平移不变性。  </li><li><strong>全连接层（Fully Connected Layer）</strong>：将提取的特征映射到最终的输出空间。</li></ul><p>CNN广泛应用于图像识别、目标检测和人脸识别等领域，例如ResNet、VGG等经典模型。  </p><h4 id="3-1-2-循环神经网络（RNN）"><a href="#3-1-2-循环神经网络（RNN）" class="headerlink" title="3.1.2 循环神经网络（RNN）"></a>3.1.2 循环神经网络（RNN）</h4><p>循环神经网络专门用于处理序列数据，其核心在于通过隐藏状态传递历史信息。然而，传统RNN在处理长序列时容易出现梯度消失或爆炸问题。为此，研究者提出了改进模型：  </p><ul><li><strong>长短期记忆网络（LSTM）</strong>：通过门控机制控制信息流，解决长期依赖问题。  </li><li><strong>门控循环单元（GRU）</strong>：简化LSTM的结构，仅使用更新门和重置门。</li></ul><p>RNN及其变体在自然语言处理（NLP）中广泛应用，如机器翻译、文本生成等任务。  </p><h3 id="3-2-生成式模型与对抗训练"><a href="#3-2-生成式模型与对抗训练" class="headerlink" title="3.2 生成式模型与对抗训练"></a>3.2 生成式模型与对抗训练</h3><p>生成式模型是深度学习的一个重要分支，其目标是学习数据的分布并生成新的样本。以下是两种主要的生成式模型：  </p><h4 id="3-2-1-生成对抗网络（GAN）"><a href="#3-2-1-生成对抗网络（GAN）" class="headerlink" title="3.2.1 生成对抗网络（GAN）"></a>3.2.1 生成对抗网络（GAN）</h4><p>生成对抗网络由生成器和判别器组成，通过对抗训练优化模型。其核心思想是：  </p><ul><li><strong>生成器（Generator）</strong>：学习数据分布，生成与真实数据相似的样本。  </li><li><strong>判别器（Discriminator）</strong>：区分生成样本与真实数据，提供反馈。</li></ul><p>GAN在图像生成、风格迁移和数据增强等领域取得显著成果。例如，StyleGAN通过引入可调节的潜在空间，实现了高质量图像生成。  </p><h4 id="3-2-2-变分自编码器（VAE）"><a href="#3-2-2-变分自编码器（VAE）" class="headerlink" title="3.2.2 变分自编码器（VAE）"></a>3.2.2 变分自编码器（VAE）</h4><p>变分自编码器通过引入概率模型，实现了对数据的生成和采样。其核心结构包括：  </p><ul><li><strong>编码器（Encoder）</strong>：将输入数据映射到潜空间，学习潜在变量的分布。  </li><li><strong>解码器（Decoder）</strong>：从潜空间采样并重构为输出数据。</li></ul><p>VAE在图像生成、数据压缩和异常检测中具有广泛应用，其优势在于模型的可解释性和稳定性。  </p><h3 id="3-3-深度学习的技术挑战与优化策略"><a href="#3-3-深度学习的技术挑战与优化策略" class="headerlink" title="3.3 深度学习的技术挑战与优化策略"></a>3.3 深度学习的技术挑战与优化策略</h3><p>尽管深度学习在多个领域取得了显著进展，但其应用过程中仍面临诸多挑战。以下是一些关键问题及其解决方案：  </p><h4 id="3-3-1-数据偏差与模型泛化"><a href="#3-3-1-数据偏差与模型泛化" class="headerlink" title="3.3.1 数据偏差与模型泛化"></a>3.3.1 数据偏差与模型泛化</h4><p>深度学习依赖大量数据进行训练，但现实世界中的数据可能存在偏差。为解决这一问题，研究者提出了以下策略：  </p><ul><li><strong>数据增强（Data Augmentation）</strong>：通过旋转、翻转、裁剪等操作增加训练数据的多样性。  </li><li><strong>迁移学习（Transfer Learning）</strong>：利用预训练模型在新任务上进行微调，减少数据需求。</li></ul><h4 id="3-3-2-模型可解释性"><a href="#3-3-2-模型可解释性" class="headerlink" title="3.3.2 模型可解释性"></a>3.3.2 模型可解释性</h4><p>深度学习模型的“黑箱”特性限制了其在高敏感领域的应用。为此，研究者提出了以下方法：  </p><ul><li><strong>LIME（Local Interpretable Model-agnostic Explanations）</strong>：通过局部线性模型近似复杂模型的决策过程。  </li><li><strong>SHAP（Shapley Additive Explanations）</strong>：基于博弈论的解释方法，量化特征对模型输出的影响。</li></ul><h4 id="3-3-3-计算效率与硬件优化"><a href="#3-3-3-计算效率与硬件优化" class="headerlink" title="3.3.3 计算效率与硬件优化"></a>3.3.3 计算效率与硬件优化</h4><p>深度学习模型通常需要大量计算资源，为此研究者提出以下解决方案：  </p><ul><li><strong>模型压缩（Model Compression）</strong>：通过剪枝、量化和知识蒸馏等技术减少模型规模。  </li><li><strong>硬件加速</strong>：利用GPU、TPU和专用芯片（如NVIDIA Jetson）提高计算效率。</li></ul><h2 id="第四部分：AI产品开发流程与关键技术"><a href="#第四部分：AI产品开发流程与关键技术" class="headerlink" title="第四部分：AI产品开发流程与关键技术"></a>第四部分：AI产品开发流程与关键技术</h2><h3 id="4-1-AI产品的定义与成功因素"><a href="#4-1-AI产品的定义与成功因素" class="headerlink" title="4.1 AI产品的定义与成功因素"></a>4.1 AI产品的定义与成功因素</h3><p>AI产品的核心在于将人工智能技术转化为实际可交付的解决方案。一个成功的AI产品应具备以下特征：  </p><ul><li><strong>明确的需求对齐</strong>：确保技术方案与业务目标一致。  </li><li><strong>用户导向设计</strong>：以用户体验为中心，提供直观的操作界面和清晰的反馈机制。  </li><li><strong>可扩展性与鲁棒性</strong>：支持大规模数据处理，并具备良好的容错能力。</li></ul><h3 id="4-2-AI产品开发流程"><a href="#4-2-AI产品开发流程" class="headerlink" title="4.2 AI产品开发流程"></a>4.2 AI产品开发流程</h3><p>AI产品的开发通常遵循以下步骤：  </p><h4 id="4-2-1-问题定义与需求分析"><a href="#4-2-1-问题定义与需求分析" class="headerlink" title="4.2.1 问题定义与需求分析"></a>4.2.1 问题定义与需求分析</h4><p>在项目初期，需明确业务目标，并评估AI能否有效解决问题。关键步骤包括：  </p><ul><li><strong>与利益相关者沟通</strong>：明确需求并建立成功标准。  </li><li><strong>定义MVP（最小可行产品）</strong>：快速验证市场反馈，降低开发风险。</li></ul><h4 id="4-2-2-数据准备与预处理"><a href="#4-2-2-数据准备与预处理" class="headerlink" title="4.2.2 数据准备与预处理"></a>4.2.2 数据准备与预处理</h4><p>数据是AI模型的核心，需确保其多样性、代表性和高质量。主要工作包括：  </p><ul><li><strong>数据收集</strong>：从多种来源获取结构化或非结构化数据。  </li><li><strong>数据清洗</strong>：处理缺失值、异常值和重复数据。  </li><li><strong>特征工程</strong>：提取有意义的特征，提高模型性能。</li></ul><h4 id="4-2-3-模型选择与训练"><a href="#4-2-3-模型选择与训练" class="headerlink" title="4.2.3 模型选择与训练"></a>4.2.3 模型选择与训练</h4><p>根据任务类型（如分类、回归、聚类）选择合适的算法。常见模型包括：  </p><ul><li><strong>监督学习</strong>：线性回归、逻辑回归、支持向量机（SVM）。  </li><li><strong>无监督学习</strong>：K-means聚类、主成分分析（PCA）。  </li><li><strong>深度学习模型</strong>：卷积神经网络（CNN）、循环神经网络（RNN）。</li></ul><h4 id="4-2-4-模型评估与优化"><a href="#4-2-4-模型评估与优化" class="headerlink" title="4.2.4 模型评估与优化"></a>4.2.4 模型评估与优化</h4><p>通过交叉验证、超参数调优等方法提高模型性能。关键指标包括：  </p><ul><li><strong>准确率（Accuracy）</strong>：预测正确的样本比例。  </li><li><strong>精确率（Precision）与召回率（Recall）</strong>：衡量分类任务的性能。  </li><li><strong>F1分数</strong>：精确率与召回率的调和平均值。</li></ul><h4 id="4-2-5-部署与持续维护"><a href="#4-2-5-部署与持续维护" class="headerlink" title="4.2.5 部署与持续维护"></a>4.2.5 部署与持续维护</h4><p>将训练好的模型集成到生产系统中，并定期更新以应对数据漂移（Data Drift）和模型衰减（Model Decay）。常见的部署策略包括：  </p><ul><li><strong>影子部署（Shadow Deployment）</strong>：新模型与旧模型并行运行，监控效果。  </li><li><strong>A&#x2F;B测试（A&#x2F;B Testing）</strong>：比较不同模型的性能，选择最优方案。  </li><li><strong>金丝雀部署（Canary Deployment）</strong>：逐步上线新模型，降低风险。</li></ul><h3 id="4-3-AI基础设施与平台支持"><a href="#4-3-AI基础设施与平台支持" class="headerlink" title="4.3 AI基础设施与平台支持"></a>4.3 AI基础设施与平台支持</h3><p>AI产品的开发和部署需要强大的计算资源和工具链支持。以下是常见的基础设施与平台：  </p><h4 id="4-3-1-数据存储方案"><a href="#4-3-1-数据存储方案" class="headerlink" title="4.3.1 数据存储方案"></a>4.3.1 数据存储方案</h4><ul><li><strong>数据库（Database）</strong>：适用于结构化数据，支持快速查询。  </li><li><strong>数据仓库（Data Warehouse）</strong>：集中存储结构化数据，支持复杂分析。  </li><li><strong>数据湖（Data Lake）</strong>：存储原始、非结构化数据，适合大数据处理。  </li><li><strong>Lakehouse</strong>：结合数据湖和数据仓库的优势，提供统一的数据管理平台。</li></ul><h4 id="4-3-2-模型管理与部署工具"><a href="#4-3-2-模型管理与部署工具" class="headerlink" title="4.3.2 模型管理与部署工具"></a>4.3.2 模型管理与部署工具</h4><ul><li><strong>MLflow</strong>：支持实验跟踪、模型管理和部署。  </li><li><strong>TensorFlow Extended (TFX)</strong>：提供生产级ML流水线工具链。  </li><li><strong>SageMaker</strong>（AWS）：一站式AI开发平台，支持端到端模型训练与部署。  </li><li><strong>FBLearner Flow</strong>（Meta）：支持大规模模型训练与优化。</li></ul><h4 id="4-3-3-MLOps与AIOps"><a href="#4-3-3-MLOps与AIOps" class="headerlink" title="4.3.3 MLOps与AIOps"></a>4.3.3 MLOps与AIOps</h4><ul><li><strong>MLOps</strong>：优化ML模型的生命周期管理，包括数据监控、模型更新和自动化部署。  </li><li><strong>AIOps</strong>：利用AI自动化IT运维，提高系统可用性和响应速度。</li></ul><h3 id="4-4-AI产品的伦理与法律考量"><a href="#4-4-AI产品的伦理与法律考量" class="headerlink" title="4.4 AI产品的伦理与法律考量"></a>4.4 AI产品的伦理与法律考量</h3><p>AI产品的广泛应用带来了诸多伦理和法律问题，需特别关注以下方面：  </p><ul><li><strong>数据隐私</strong>：确保用户数据的安全性和合规性，遵循GDPR等法规。  </li><li><strong>模型公平性</strong>：避免数据偏差导致的算法歧视，提高模型的可解释性和透明度。  </li><li><strong>责任归属</strong>：明确AI决策的责任主体，制定相应的法律框架。</li></ul><h2 id="第五部分：案例研究与实践应用"><a href="#第五部分：案例研究与实践应用" class="headerlink" title="第五部分：案例研究与实践应用"></a>第五部分：案例研究与实践应用</h2><h3 id="5-1-Waterbear-Inc-的AI产品开发经验"><a href="#5-1-Waterbear-Inc-的AI产品开发经验" class="headerlink" title="5.1 Waterbear Inc.的AI产品开发经验"></a>5.1 Waterbear Inc.的AI产品开发经验</h3><p>Waterbear Inc.是一家专注于心理健康领域的AI公司，其核心产品Akeira通过自然语言处理（NLP）分析用户日记，提供个性化建议。其产品开发流程包括以下几个关键步骤：  </p><ul><li><strong>问题定义</strong>：明确目标用户（女性心理健康群体），评估AI能否有效解决其需求。  </li><li><strong>数据准备</strong>：构建统一的数据存储系统，包括数据库、数据仓库和数据湖。  </li><li><strong>模型选择与训练</strong>：采用Transformer架构，结合K-means聚类分析用户行为模式。  </li><li><strong>部署与优化</strong>：通过影子部署和A&#x2F;B测试验证模型性能，并定期更新以应对数据漂移。  </li><li><strong>伦理与法律合规</strong>：确保用户数据隐私，遵循AI伦理准则（如欧盟《人工智能法案》）。</li></ul><h3 id="5-2-ProjectABZ的AI转型案例"><a href="#5-2-ProjectABZ的AI转型案例" class="headerlink" title="5.2 ProjectABZ的AI转型案例"></a>5.2 ProjectABZ的AI转型案例</h3><p>ProjectABZ是ABCDZCo开发的一款项目管理工具，通过集成AI功能提升用户效率。其关键创新包括：  </p><ul><li><strong>任务优先级预测</strong>：利用时间序列分析预测项目进度，优化资源分配。  </li><li><strong>智能聊天机器人</strong>：基于自然语言处理技术提供实时支持，提高用户满意度。  </li><li><strong>自动化报告生成</strong>：通过深度学习模型自动生成项目分析报告，节省人工成本。</li></ul><p>在AI转型过程中，ABCDZCo克服了以下挑战：  </p><ul><li><strong>数据质量</strong>：通过数据增强和迁移学习提高模型性能。  </li><li><strong>模型可解释性</strong>：引入LIME工具，增强用户对AI决策的信任。  </li><li><strong>团队协作</strong>：建立跨职能团队（包括数据科学家、产品经理和工程师），确保技术与业务目标一致。</li></ul><h2 id="第六部分：未来趋势与挑战"><a href="#第六部分：未来趋势与挑战" class="headerlink" title="第六部分：未来趋势与挑战"></a>第六部分：未来趋势与挑战</h2><h3 id="6-1-AI技术的前沿方向"><a href="#6-1-AI技术的前沿方向" class="headerlink" title="6.1 AI技术的前沿方向"></a>6.1 AI技术的前沿方向</h3><p>随着计算能力的提升和算法的进步，AI领域正在向以下几个方向发展：  </p><ul><li><strong>联邦学习（Federated Learning）</strong>：在保护数据隐私的前提下，实现多机构协同训练模型。  </li><li><strong>小样本学习（Few-shot Learning）</strong>：通过少量数据实现高效模型训练，降低数据依赖性。  </li><li><strong>自监督学习（Self-supervised Learning）</strong>：利用未标注数据进行预训练，提高模型的泛化能力。</li></ul><h3 id="6-2-AI在传统行业的应用潜力"><a href="#6-2-AI在传统行业的应用潜力" class="headerlink" title="6.2 AI在传统行业的应用潜力"></a>6.2 AI在传统行业的应用潜力</h3><p>AI技术正在加速渗透至传统行业，如制造业、农业和金融等。例如：  </p><ul><li><strong>智能制造</strong>：通过工业物联网（IIoT）与AI结合，实现预测性维护和质量控制。  </li><li><strong>智慧农业</strong>：利用计算机视觉与传感器技术优化作物管理，提高产量和资源利用率。  </li><li><strong>金融科技</strong>：通过机器学习模型进行信用评分、欺诈检测和投资决策，提升金融服务的智能化水平。</li></ul><h3 id="6-3-AI伦理与法律框架的完善"><a href="#6-3-AI伦理与法律框架的完善" class="headerlink" title="6.3 AI伦理与法律框架的完善"></a>6.3 AI伦理与法律框架的完善</h3><p>随着AI技术的广泛应用，其伦理和法律问题日益受到关注。未来需重点关注：  </p><ul><li><strong>算法透明性</strong>：要求AI系统提供可解释的决策过程，避免“黑箱”问题。  </li><li><strong>数据主权</strong>：明确用户对个人数据的控制权，防止数据滥用。  </li><li><strong>责任追溯机制</strong>：建立AI决策的责任归属体系，确保技术应用的合规性。</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>人工智能与机器学习作为当前最具潜力的技术领域，正在深刻改变各行各业的运作方式。从基础概念到核心技术，再到实际应用和伦理考量，AI技术的每一个环节都需要严谨的思考与实践。未来，随着计算能力的提升、算法的进步以及数据基础设施的完善，AI将在更多领域发挥关键作用。然而，技术的发展也伴随着挑战，如数据隐私、模型可解释性和伦理问题等。因此，在推动AI技术进步的同时，必须注重技术的可持续性、公平性和社会责任感，以确保AI真正造福社会。</p>]]></content>
+    
+    
+    <summary type="html">在网上看到《AI Product Manager’s Handbook》第二版的介绍，觉得内容颇具启发性，便找来一读。《AI Product Manager’s Handbook》是一本面向人工智能产品管理领域的实用指南，旨在帮助读者系统理解并掌握在实际工作中构建、管理和维护AI产品的关键方法与思路。该书由Irene Bratsis撰写，第二版于2024年11月由Packt Publishing出版。书中不仅介绍了AI产品管理的基础理论，还深入探讨了技术基础设施、模型开发与维护、深度学习、商业化策略以及产品设计等多个维度的内容。</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="产品经理" scheme="https://flashj.cn/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+    
+    <category term="学习" scheme="https://flashj.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>准备好入坑《明末：渊虚之羽》</title>
+    <link href="https://flashj.cn/2025/06/07/wuchang-fallen-feathers.html"/>
+    <id>https://flashj.cn/2025/06/07/wuchang-fallen-feathers.html</id>
+    <published>2025-06-07T08:43:00.000Z</published>
+    <updated>2025-06-07T09:12:28.027Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是今年国产单机游戏中首款值得入手的作品。我准备好踏入《明末：渊虚之羽》的世界了。这款基于古蜀文明打造的国产单机ARPG，让人充满期待。</p><p>今年钱包已经为《明末》和《影之刃零》预留了预算，再加上正在关注的英伦风格《湮灭之潮》和霓虹风格《昭和米国物語》，感觉国产独立游戏今年要起飞了🛫。</p><h2 id="背景故事预告片及2月研发日志更新"><a href="#背景故事预告片及2月研发日志更新" class="headerlink" title="背景故事预告片及2月研发日志更新"></a>背景故事预告片及2月研发日志更新</h2><iframe  class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=113958551814761&bvid=BV1whNxejETn&cid=28251130077&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>今年过年时刚好看了三星堆的展览，紧接着又了解到《明末》的故事背景，发现游戏中的设定与古蜀国、三星堆文明之间竟有几分契合，感觉真是奇妙的缘分。  </p><p>中国传统文化正以越来越丰富的形式融入游戏之中，这种融合令人欣喜，也让人对文化传承的方式有了更多期待。</p><h2 id="预购版-预购豪华版套装展示"><a href="#预购版-预购豪华版套装展示" class="headerlink" title="预购版+预购豪华版套装展示"></a>预购版+预购豪华版套装展示</h2><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=114409640821874&bvid=BV1AeLBzBEQD&cid=29590487189&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>四月底公布的豪华版和预购奖励颇有吸引力。为了套装“金虎祥瑞”，为了能开炮的明朝黑科技“九转尽乾”，必须预购豪华版嘛。</p><h2 id="夏日游戏节预告片"><a href="#夏日游戏节预告片" class="headerlink" title="夏日游戏节预告片"></a>夏日游戏节预告片</h2><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=114629757897963&bvid=BV1zhTxzkEDp&cid=30331437914&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>生死颠倒苍生凋，因果纠缠何时了。 落羽残烬成烟消，天道有诏自分晓。 7月24日 勘破无常 【诸行无常，因果之循，长存不灭】</p>]]></content>
+    
+    
+    <summary type="html">这是今年国产单机游戏中首款值得入手的作品。准备好踏入《明末：渊虚之羽》的世界了吗？这款基于古蜀文明打造的国产单机ARPG，让人充满期待。今年钱包已经为《明末》和《影之刃零》预留了预算，再加上正在关注的英伦风格《湮灭之潮》和霓虹风格《昭和米国物語》，感觉国产独立游戏今年要起飞了🛫。</summary>
+    
+    
+    
+    <category term="电脑游戏" scheme="https://flashj.cn/categories/%E7%94%B5%E8%84%91%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="动作游戏" scheme="https://flashj.cn/tags/%E5%8A%A8%E4%BD%9C%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="电脑游戏" scheme="https://flashj.cn/tags/%E7%94%B5%E8%84%91%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="单机游戏" scheme="https://flashj.cn/tags/%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="国产" scheme="https://flashj.cn/tags/%E5%9B%BD%E4%BA%A7/"/>
+    
+    <category term="明末" scheme="https://flashj.cn/tags/%E6%98%8E%E6%9C%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>大模型时代迫使人类重塑原创性与独特性</title>
     <link href="https://flashj.cn/2025/06/03/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html"/>
     <id>https://flashj.cn/2025/06/03/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html</id>
     <published>2025-06-03T00:56:00.000Z</published>
-    <updated>2025-06-05T06:12:26.780Z</updated>
+    <updated>2025-06-07T09:22:12.945Z</updated>
     
     <content type="html"><![CDATA[<p>大模型时代逼迫人类的教育变革，也迫使人类思考自己之所以区隔于AI的独特性。</p><h2 id="被AI误伤，我该怎么证明“我没有用AI作弊”"><a href="#被AI误伤，我该怎么证明“我没有用AI作弊”" class="headerlink" title="被AI误伤，我该怎么证明“我没有用AI作弊”"></a>被AI误伤，我该怎么证明“我没有用AI作弊”</h2><p>前几天看到一篇文章：  <a href="https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA">https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA</a></p><div class="tag-plugin link dis-select"><a class="link-card plain" title="被AI误伤，我该怎么证明“我没有用AI作弊”" href="https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">被AI误伤，我该怎么证明“我没有用AI作弊”</span><span class="cap link footnote">https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div><p>这篇文章主要讲了AI时代下，学生和老师在作业判定上产生的矛盾，以及被AI误判作弊后该如何自证清白的问题，具体内容如下：</p><ul><li><strong>学生被AI检测工具误判作弊的现象</strong><ul><li>美国休斯顿大学学生Leigh Burrell认真完成的英语作业被教授怀疑用AI作弊判了零分，她花了半个多月，提交15页写作过程截图、时间戳和作业过程视频才洗清嫌疑，之后为避免再被误判，她写作业时会架摄像机录全程。</li><li>布法罗大学一公共卫生专业学生独立完成的作业被Turnitin的AI检测工具误判为“可能由AI生成”，校方仅凭此就启动学术不端调查，且这类情况申诉难，举证责任全在学生，像英语非母语者、残障学生等群体更易遭遇。</li><li>有学生在同一门课上两次被误判用AI，还有学生全心投入写的元分析论文60%被Turnitin误判为AI生成，且不知如何用自己的话改写被标记内容。</li><li>一学生用Visual Studio Code完成web开发毕业设计，虽有各种开发过程资料，但教授怀疑一切，不认可其未用AI。</li></ul></li><li><strong>AI使用的不同极端案例</strong><ul><li>哥伦比亚大学计算机科学专业学生Chungin “Roy” Lee几乎每一份文科作业都用AI“参考”，还开发了程序员面试辅助工具并创业成功。</li><li>有老师因用AI备课，讲义中出现给ChatGPT的指令，被学生投诉，而该老师教学大纲却禁止使用AI等学术不端行为。</li></ul></li><li><strong>AI检测工具的问题</strong>：现在很多AI检测软件检测“是否由AI生成”，但整体准确率不高，这导致老师和学生越来越对立。</li><li><strong>各方的困扰与矛盾</strong><ul><li>学生方面：“好学生”因AI检测工具误判或写作风格“过于完美”被怀疑，自证清白困难；部分学生合理用AI辅助学习，而有些则过度依赖甚至作弊。</li><li>老师方面：面对大量带“AI腔调”的作业难辨真假，部分老师用AI辅助教学却被学生质疑虚伪，且不同老师对学生使用AI的“度”标准不一，易引发矛盾。</li></ul></li><li><strong>目前的解决办法</strong><ul><li>学生：代码类作业可保留丰富的git commit历史（含拼写错误、构建失败等）；文字类作业善用Word、Google Docs的历史记录功能，或录视频直播写作业过程，时刻留意保存写作业的“证据”。</li><li>老师：部分老师认为只能采用现场手写、真人监考的“原始”方式保证书面作业公平性，如课堂上手写论文并由真人导师监考。</li></ul></li></ul><h2 id="重塑原创性与人类独特性"><a href="#重塑原创性与人类独特性" class="headerlink" title="重塑原创性与人类独特性"></a>重塑原创性与人类独特性</h2><p>对我们启发最大的地方在于，教育方式是否应该跟随技术而迭代？ 既然AI可以在这些方面做得很好，那么为什么要布置这种AI可以做得很好的作业？ 人的独特性在哪里，在作业中难道不应该结合人类独特性吗？</p><p>大模型时代逼迫人类的教育变革，也迫使人类思考自己之所以区隔于AI的独特性。</p><p>我觉得，首先，作业设计得改改。别再搞那些模板化、机械化的作业了，得让学生发挥自己的创造力、批判性思维和情感体验。比如说写作文，别再让学生写那些千篇一律的题目，什么 “我的梦想”“难忘的一天”，这些题目都快被写烂了。可以让学生结合自己的生活经历，写一些更有深度、更有个性的内容，像 “我在一次失败经历中的成长”“我对某个社会现象的独特看法”，这样的具有个体差异的命题。<br>就像我面试别人时，也会比较侧重问之前项目中遇到的比较大的挑战是如何解决的。</p><p>在写作教学中，学生不再仅仅需要掌握语法和修辞技巧，更需要培养批判性思维、创造力和情感表达能力，这些是AI目前难以替代的。</p><p>其次，教育评价体系也得重构。不能再只看分数、只看结果了，得关注学生的思维过程和成长过程。就像我们做产品，不能只看最后产品卖得好不好，还得看研发过程中遇到了哪些问题，是怎么解决的。可以采用档案袋评价法，把学生的草稿、修改记录、反思日志都收集起来，综合评估他们的能力。</p><p>另外，老师们也得转型升级。要从传统的知识传授者，变成学生成长的教练和引导者。得学会用好 AI 工具，把它融入到教学中，而不是抵制它。就像我们做企业，不能拒绝新技术，得拥抱它，让它为我们所用。</p><p>AI 不是教育的敌人，而是重构教育的契机。我们得抓住这个机会，让教育变得更符合人性，更能培养出有独特性、有创造力的人才。希望未来的教育，能让每个学生都能找到自己的价值，在 AI 浪潮中站稳脚跟，而不是被浪潮淹没。</p><p>同时，人类也必须重新审视自身的独特性——我们不仅仅是信息的接收者和处理者，更是情感的载体、道德的判断者以及文化的传承者。在AI可以生成文章、创作音乐甚至进行艺术设计的时代，人类的独特价值在于我们对世界的感知、对生命的理解以及对伦理的思考。因此，教育变革不仅是技术驱动的结果，更是人类自我认知和未来发展的必然选择。</p>]]></content>
     
@@ -46,7 +102,7 @@
     <published>2025-05-28T12:31:00.000Z</published>
     <updated>2025-06-05T05:26:30.435Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Trae终于出收费版了"><a href="#Trae终于出收费版了" class="headerlink" title="Trae终于出收费版了"></a>Trae终于出收费版了</h1><p>今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！</p><p>哇塞价格太给力了！<br>7.5美元&#x2F;月，这不比cursor，GitHub copilot都省太多了！<br>还好没买Cursor。</p><p>7.5如果以后不用排队用Claude Sonnet3.7的话，这就太值了！</p><p>现在免费版每个月10次快速，50次慢速。<br>我先用完10次claude之后再看啊。</p><p>pro版 600次快速&#x2F;月</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>免费版</strong></td><td><strong>Pro 版</strong></td></tr><tr><td><strong>目标用户</strong></td><td>个人</td><td>个人</td></tr><tr><td><strong>定价</strong></td><td>免费</td><td>10 美金&#x2F;月</td></tr><tr><td><strong>折扣</strong></td><td>-</td><td>- 首次订阅（即新订阅用户）享受优惠价。<br>- 按年订阅可享受折扣。</td></tr><tr><td><strong>订阅类型</strong></td><td>-</td><td>- <strong>连续包月</strong>：当月订阅到期前，自动续费。<br>- <strong>包年</strong>：一次性支付一年的订阅费用。</td></tr><tr><td><strong>付款政策</strong></td><td>-</td><td>每次仅能发起一次订阅。</td></tr><tr><td><strong>退款政策</strong></td><td>-</td><td>不支持退款。若有特殊情况，可通过邮件（<a href="mailto:&#x66;&#x65;&#x65;&#100;&#98;&#x61;&#99;&#x6b;&#64;&#109;&#97;&#x69;&#108;&#46;&#116;&#x72;&#x61;&#101;&#x2e;&#x61;&#105;">feedback</a><a href="mailto:&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#64;&#x6d;&#97;&#x69;&#108;&#46;&#116;&#x72;&#97;&#101;&#46;&#x61;&#x69;">@mail.trae.ai</a>）联系 Trae 官方处理。</td></tr><tr><td><strong>代码自动补全</strong></td><td>5000 次&#x2F;月</td><td>无限次</td></tr><tr><td><strong>超级模型问答</strong></td><td>- 快速队列：每月 10 次<br>- 慢速队列：每月 50 次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td><td>- 快速队列：每月 600 次<br>- 慢速队列：无限次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td></tr><tr><td><strong>高级模型问答</strong></td><td>每月 1000 次（慢速队列）</td><td>无限次（慢速队列）</td></tr><tr><td>解释：</td><td></td><td></td></tr></tbody></table><ul><li>快速请求的意思是15秒以内，但beta模型可能依然排队。目前Claude sonnet3.7是正式版。600次的话一天可以用20～30次，不知道重度使用够不够了。之前因为排队的问题，我一天也就用个3～4次。</li><li>慢速请求，快速请求用完了就轮到排队。</li></ul><p>明天我再试试用它来写样式。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Trae终于出收费版了"><a href="#Trae终于出收费版了" class="headerlink" title="Trae终于出收费版了"></a>Trae终于出收费版了</h1><p>今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！</p><p>哇塞价格太给力了！<br>7.5美元&#x2F;月，这不比cursor，GitHub copilot都省太多了！<br>还好没买Cursor。</p><p>7.5如果以后不用排队用Claude Sonnet3.7的话，这就太值了！</p><p>现在免费版每个月10次快速，50次慢速。<br>我先用完10次claude之后再看啊。</p><p>pro版 600次快速&#x2F;月</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>免费版</strong></td><td><strong>Pro 版</strong></td></tr><tr><td><strong>目标用户</strong></td><td>个人</td><td>个人</td></tr><tr><td><strong>定价</strong></td><td>免费</td><td>10 美金&#x2F;月</td></tr><tr><td><strong>折扣</strong></td><td>-</td><td>- 首次订阅（即新订阅用户）享受优惠价。<br>- 按年订阅可享受折扣。</td></tr><tr><td><strong>订阅类型</strong></td><td>-</td><td>- <strong>连续包月</strong>：当月订阅到期前，自动续费。<br>- <strong>包年</strong>：一次性支付一年的订阅费用。</td></tr><tr><td><strong>付款政策</strong></td><td>-</td><td>每次仅能发起一次订阅。</td></tr><tr><td><strong>退款政策</strong></td><td>-</td><td>不支持退款。若有特殊情况，可通过邮件（<a href="mailto:&#102;&#101;&#x65;&#100;&#98;&#97;&#99;&#x6b;&#64;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x74;&#114;&#97;&#x65;&#46;&#97;&#105;">feedback</a><a href="mailto:&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x74;&#x72;&#97;&#x65;&#x2e;&#x61;&#x69;">@mail.trae.ai</a>）联系 Trae 官方处理。</td></tr><tr><td><strong>代码自动补全</strong></td><td>5000 次&#x2F;月</td><td>无限次</td></tr><tr><td><strong>超级模型问答</strong></td><td>- 快速队列：每月 10 次<br>- 慢速队列：每月 50 次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td><td>- 快速队列：每月 600 次<br>- 慢速队列：无限次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td></tr><tr><td><strong>高级模型问答</strong></td><td>每月 1000 次（慢速队列）</td><td>无限次（慢速队列）</td></tr><tr><td>解释：</td><td></td><td></td></tr></tbody></table><ul><li>快速请求的意思是15秒以内，但beta模型可能依然排队。目前Claude sonnet3.7是正式版。600次的话一天可以用20～30次，不知道重度使用够不够了。之前因为排队的问题，我一天也就用个3～4次。</li><li>慢速请求，快速请求用完了就轮到排队。</li></ul><p>明天我再试试用它来写样式。</p>]]></content>
     
     
     <summary type="html">今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！哇塞价格太给力了！7.5美元/月，这不比cursor，GitHub copilot都省太多了！</summary>
@@ -79,9 +135,9 @@
     <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
     
     
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="cursor" scheme="https://flashj.cn/tags/cursor/"/>
     
@@ -96,7 +152,7 @@
     <link href="https://flashj.cn/2025/04/29/qwen3-really-fast.html"/>
     <id>https://flashj.cn/2025/04/29/qwen3-really-fast.html</id>
     <published>2025-04-29T07:50:00.000Z</published>
-    <updated>2025-06-05T06:31:42.740Z</updated>
+    <updated>2025-06-07T09:22:48.930Z</updated>
     
     <content type="html"><![CDATA[<p>Qwen3 真的好快啊，首token 0.2秒，55TPS，比之前QwQ-32B快220%多……</p><p><img src="https://cdn.mousebomb.org/blog/auto/2025060429-1.png"></p><p><img src="https://cdn.mousebomb.org/blog/auto/2025060429-2.png"></p>]]></content>
     
@@ -135,13 +191,13 @@
     <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
     
     
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
     
     <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
     <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="fellou" scheme="https://flashj.cn/tags/fellou/"/>
     
@@ -372,9 +428,9 @@
     
     <category term="黑神话悟空" scheme="https://flashj.cn/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"/>
     
-    <category term="单机游戏" scheme="https://flashj.cn/tags/%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
-    
     <category term="动作游戏" scheme="https://flashj.cn/tags/%E5%8A%A8%E4%BD%9C%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="单机游戏" scheme="https://flashj.cn/tags/%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -484,13 +540,13 @@
     
     <category term="黑神话悟空" scheme="https://flashj.cn/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"/>
     
-    <category term="单机游戏" scheme="https://flashj.cn/tags/%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
-    
     <category term="动作游戏" scheme="https://flashj.cn/tags/%E5%8A%A8%E4%BD%9C%E6%B8%B8%E6%88%8F/"/>
     
     <category term="西游记" scheme="https://flashj.cn/tags/%E8%A5%BF%E6%B8%B8%E8%AE%B0/"/>
     
     <category term="电脑游戏" scheme="https://flashj.cn/tags/%E7%94%B5%E8%84%91%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="单机游戏" scheme="https://flashj.cn/tags/%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -549,56 +605,6 @@
     <category term="Hub" scheme="https://flashj.cn/tags/Hub/"/>
     
     <category term="Mac" scheme="https://flashj.cn/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>奶奶安葬回姜堰</title>
-    <link href="https://flashj.cn/2024/01/31/RIP-granny-bury.html"/>
-    <id>https://flashj.cn/2024/01/31/RIP-granny-bury.html</id>
-    <published>2024-01-31T12:35:42.000Z</published>
-    <updated>2024-01-31T12:35:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这次奶奶回到了老家，回到了心心念念的姜堰，安葬在这生前看好的好地方。在这里好生安息，永远不在有烦恼，永远快乐圆满了。</p><p>姜堰在变化，房子会推倒重建，永远回不到最初了。但奶奶可以永远在这里继续看着城市的发展了。也可以自由自在翱翔于星辰宇宙之间。</p><hr><p>已经两年了，我还是会怀念奶奶到身体会难以抑制地生病。</p><p>在宇宙尺度上，文明都是毫不起眼的存在，但还是有东西会被保存下来。在时空中留下印记。</p><p>就像太奶奶，虽然我们以后无法再相见了，但在宇宙中已经留下了印记。只是将来才会有某种方式可以读取出来。我们每个人都是，在时空这幅画卷中的一笔。</p><p>作为人类，意识只能感受到从过去往未来的过程，无法回到过去，但这只是意识的局限，对宇宙来说，意识微不足道，而人生的物理时空轨迹，在无限大的宇宙中已经烙印在那里了。<strong>总有无限个光锥可以观测到跟太奶奶再从头过一生</strong>。</p><p><strong>在光锥之外，太奶奶还将降临，宇宙永远铭记着一切</strong>。</p>]]></content>
-    
-    
-    <summary type="html">奶奶安葬在姜堰，我怀念她，也思考生命与宇宙的关系。虽然物是人非，但奶奶的痕迹将永远留在时空之中。人类虽无法回到过去，但每个人的轨迹都在宇宙中留下印记。我相信总有一天，能以某种方式再次与奶奶相遇。</summary>
-    
-    
-    
-    <category term="个人相关" scheme="https://flashj.cn/categories/%E4%B8%AA%E4%BA%BA%E7%9B%B8%E5%85%B3/"/>
-    
-    
-    <category term="奶奶" scheme="https://flashj.cn/tags/%E5%A5%B6%E5%A5%B6/"/>
-    
-    <category term="告别" scheme="https://flashj.cn/tags/%E5%91%8A%E5%88%AB/"/>
-    
-    <category term="姜堰" scheme="https://flashj.cn/tags/%E5%A7%9C%E5%A0%B0/"/>
-    
-    <category term="追忆" scheme="https://flashj.cn/tags/%E8%BF%BD%E5%BF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回忆奶奶再次泪奔</title>
-    <link href="https://flashj.cn/2024/01/04/i-will-take-you-there-granny.html"/>
-    <id>https://flashj.cn/2024/01/04/i-will-take-you-there-granny.html</id>
-    <published>2024-01-04T07:46:42.000Z</published>
-    <updated>2024-01-04T07:46:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天iPhone轻描淡写地给我推送了一份回忆，也许它不明白这份历史的厚重，也许它只是不忘给主人送来旧日温情。</p><p>与之相伴的，是它自动配的音乐，瞬间打开了我泪眼的水闸，让我泪流满面。</p><iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/i-will-take-you-there-alternate-mix/282822779?i=282822833"></iframe><p>歌是这么唱的：</p><blockquote><p>If only I could find a place</p><p>Where smiling strangers knew our faces</p><p>I would take you there</p><p>A place with constant melody</p><p>Where you and I could wander free</p><p>I would take you there</p><p>Seems like such a waste of time</p><p>Just trying to unwind the facts of life</p><p>If I could find a place， I’d take you</p><p>Where the pain don’t cut you like a knife</p><p>If only there were time enough</p><p>Or word enough, or rhyme enough</p><p>I would take you there</p></blockquote><p>– But maybe you’ve already been there. ☀️ R.I.P. 👵<br>– 希望我的奶奶涅槃寂静，一切圆满。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202501261711491.png" alt="👵"></p>]]></content>
-    
-    
-    <summary type="html">今天iPhone推送的回忆让我感动落泪，伴随的音乐勾起了我对奶奶的思念。歌词中的情感与我的心情深深共鸣，让我想起她曾经的温暖和离去的遗憾。我希望能为奶奶祈福，愿她在另一个世界安息。</summary>
-    
-    
-    
-    <category term="个人相关" scheme="https://flashj.cn/categories/%E4%B8%AA%E4%BA%BA%E7%9B%B8%E5%85%B3/"/>
-    
-    
-    <category term="奶奶" scheme="https://flashj.cn/tags/%E5%A5%B6%E5%A5%B6/"/>
-    
-    <category term="追忆" scheme="https://flashj.cn/tags/%E8%BF%BD%E5%BF%86/"/>
     
   </entry>
   
