@@ -18,8 +18,8 @@
   
   <entry>
     <title>跟着《AI Product Manager&#39;s Handbook》学产品：阅读与知识记录</title>
-    <link href="https://flashj.cn/2025/06/07/ai-product-managers-handbook-reading.html"/>
-    <id>https://flashj.cn/2025/06/07/ai-product-managers-handbook-reading.html</id>
+    <link href="https://flashj.cn/ai-product-managers-handbook-reading.html"/>
+    <id>https://flashj.cn/ai-product-managers-handbook-reading.html</id>
     <published>2025-06-07T09:16:00.000Z</published>
     <updated>2025-06-07T09:19:28.664Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>准备好入坑《明末：渊虚之羽》</title>
-    <link href="https://flashj.cn/2025/06/07/wuchang-fallen-feathers.html"/>
-    <id>https://flashj.cn/2025/06/07/wuchang-fallen-feathers.html</id>
+    <link href="https://flashj.cn/wuchang-fallen-feathers.html"/>
+    <id>https://flashj.cn/wuchang-fallen-feathers.html</id>
     <published>2025-06-07T08:43:00.000Z</published>
     <updated>2025-06-07T09:12:28.027Z</updated>
     
@@ -74,8 +74,8 @@
   
   <entry>
     <title>大模型时代迫使人类重塑原创性与独特性</title>
-    <link href="https://flashj.cn/2025/06/03/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html"/>
-    <id>https://flashj.cn/2025/06/03/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html</id>
+    <link href="https://flashj.cn/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html"/>
+    <id>https://flashj.cn/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html</id>
     <published>2025-06-03T00:56:00.000Z</published>
     <updated>2025-06-07T09:22:12.945Z</updated>
     
@@ -97,12 +97,12 @@
   
   <entry>
     <title>Trae终于出收费版了</title>
-    <link href="https://flashj.cn/2025/05/28/trae-pro.html"/>
-    <id>https://flashj.cn/2025/05/28/trae-pro.html</id>
+    <link href="https://flashj.cn/trae-pro.html"/>
+    <id>https://flashj.cn/trae-pro.html</id>
     <published>2025-05-28T12:31:00.000Z</published>
     <updated>2025-06-05T05:26:30.435Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Trae终于出收费版了"><a href="#Trae终于出收费版了" class="headerlink" title="Trae终于出收费版了"></a>Trae终于出收费版了</h1><p>今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！</p><p>哇塞价格太给力了！<br>7.5美元&#x2F;月，这不比cursor，GitHub copilot都省太多了！<br>还好没买Cursor。</p><p>7.5如果以后不用排队用Claude Sonnet3.7的话，这就太值了！</p><p>现在免费版每个月10次快速，50次慢速。<br>我先用完10次claude之后再看啊。</p><p>pro版 600次快速&#x2F;月</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>免费版</strong></td><td><strong>Pro 版</strong></td></tr><tr><td><strong>目标用户</strong></td><td>个人</td><td>个人</td></tr><tr><td><strong>定价</strong></td><td>免费</td><td>10 美金&#x2F;月</td></tr><tr><td><strong>折扣</strong></td><td>-</td><td>- 首次订阅（即新订阅用户）享受优惠价。<br>- 按年订阅可享受折扣。</td></tr><tr><td><strong>订阅类型</strong></td><td>-</td><td>- <strong>连续包月</strong>：当月订阅到期前，自动续费。<br>- <strong>包年</strong>：一次性支付一年的订阅费用。</td></tr><tr><td><strong>付款政策</strong></td><td>-</td><td>每次仅能发起一次订阅。</td></tr><tr><td><strong>退款政策</strong></td><td>-</td><td>不支持退款。若有特殊情况，可通过邮件（<a href="mailto:&#102;&#101;&#101;&#x64;&#x62;&#x61;&#x63;&#107;&#64;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x74;&#x72;&#97;&#101;&#46;&#x61;&#x69;">feedback</a><a href="mailto:&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x40;&#109;&#x61;&#105;&#108;&#x2e;&#x74;&#x72;&#97;&#x65;&#46;&#x61;&#x69;">@mail.trae.ai</a>）联系 Trae 官方处理。</td></tr><tr><td><strong>代码自动补全</strong></td><td>5000 次&#x2F;月</td><td>无限次</td></tr><tr><td><strong>超级模型问答</strong></td><td>- 快速队列：每月 10 次<br>- 慢速队列：每月 50 次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td><td>- 快速队列：每月 600 次<br>- 慢速队列：无限次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td></tr><tr><td><strong>高级模型问答</strong></td><td>每月 1000 次（慢速队列）</td><td>无限次（慢速队列）</td></tr><tr><td>解释：</td><td></td><td></td></tr></tbody></table><ul><li>快速请求的意思是15秒以内，但beta模型可能依然排队。目前Claude sonnet3.7是正式版。600次的话一天可以用20～30次，不知道重度使用够不够了。之前因为排队的问题，我一天也就用个3～4次。</li><li>慢速请求，快速请求用完了就轮到排队。</li></ul><p>明天我再试试用它来写样式。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Trae终于出收费版了"><a href="#Trae终于出收费版了" class="headerlink" title="Trae终于出收费版了"></a>Trae终于出收费版了</h1><p>今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！</p><p>哇塞价格太给力了！<br>7.5美元&#x2F;月，这不比cursor，GitHub copilot都省太多了！<br>还好没买Cursor。</p><p>7.5如果以后不用排队用Claude Sonnet3.7的话，这就太值了！</p><p>现在免费版每个月10次快速，50次慢速。<br>我先用完10次claude之后再看啊。</p><p>pro版 600次快速&#x2F;月</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>免费版</strong></td><td><strong>Pro 版</strong></td></tr><tr><td><strong>目标用户</strong></td><td>个人</td><td>个人</td></tr><tr><td><strong>定价</strong></td><td>免费</td><td>10 美金&#x2F;月</td></tr><tr><td><strong>折扣</strong></td><td>-</td><td>- 首次订阅（即新订阅用户）享受优惠价。<br>- 按年订阅可享受折扣。</td></tr><tr><td><strong>订阅类型</strong></td><td>-</td><td>- <strong>连续包月</strong>：当月订阅到期前，自动续费。<br>- <strong>包年</strong>：一次性支付一年的订阅费用。</td></tr><tr><td><strong>付款政策</strong></td><td>-</td><td>每次仅能发起一次订阅。</td></tr><tr><td><strong>退款政策</strong></td><td>-</td><td>不支持退款。若有特殊情况，可通过邮件（<a href="mailto:&#102;&#x65;&#x65;&#100;&#98;&#97;&#x63;&#107;&#x40;&#x6d;&#97;&#105;&#108;&#46;&#116;&#114;&#x61;&#101;&#46;&#97;&#105;">feedback</a><a href="mailto:&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#64;&#109;&#x61;&#x69;&#108;&#46;&#x74;&#114;&#97;&#x65;&#46;&#x61;&#105;">@mail.trae.ai</a>）联系 Trae 官方处理。</td></tr><tr><td><strong>代码自动补全</strong></td><td>5000 次&#x2F;月</td><td>无限次</td></tr><tr><td><strong>超级模型问答</strong></td><td>- 快速队列：每月 10 次<br>- 慢速队列：每月 50 次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td><td>- 快速队列：每月 600 次<br>- 慢速队列：无限次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td></tr><tr><td><strong>高级模型问答</strong></td><td>每月 1000 次（慢速队列）</td><td>无限次（慢速队列）</td></tr><tr><td>解释：</td><td></td><td></td></tr></tbody></table><ul><li>快速请求的意思是15秒以内，但beta模型可能依然排队。目前Claude sonnet3.7是正式版。600次的话一天可以用20～30次，不知道重度使用够不够了。之前因为排队的问题，我一天也就用个3～4次。</li><li>慢速请求，快速请求用完了就轮到排队。</li></ul><p>明天我再试试用它来写样式。</p>]]></content>
     
     
     <summary type="html">今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！哇塞价格太给力了！7.5美元/月，这不比cursor，GitHub copilot都省太多了！</summary>
@@ -120,8 +120,8 @@
   
   <entry>
     <title>使用Void(平替Cursor)的测试记录</title>
-    <link href="https://flashj.cn/2025/05/11/testlog-of-using-void-alternative-to-cursor.html"/>
-    <id>https://flashj.cn/2025/05/11/testlog-of-using-void-alternative-to-cursor.html</id>
+    <link href="https://flashj.cn/testlog-of-using-void-alternative-to-cursor.html"/>
+    <id>https://flashj.cn/testlog-of-using-void-alternative-to-cursor.html</id>
     <published>2025-05-11T14:52:00.000Z</published>
     <updated>2025-05-11T14:52:00.000Z</updated>
     
@@ -149,8 +149,8 @@
   
   <entry>
     <title>Qwen3真的好快啊</title>
-    <link href="https://flashj.cn/2025/04/29/qwen3-really-fast.html"/>
-    <id>https://flashj.cn/2025/04/29/qwen3-really-fast.html</id>
+    <link href="https://flashj.cn/qwen3-really-fast.html"/>
+    <id>https://flashj.cn/qwen3-really-fast.html</id>
     <published>2025-04-29T07:50:00.000Z</published>
     <updated>2025-06-07T09:22:48.930Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>Fellou浏览器</title>
-    <link href="https://flashj.cn/2025/04/24/fellou.html"/>
-    <id>https://flashj.cn/2025/04/24/fellou.html</id>
+    <link href="https://flashj.cn/fellou.html"/>
+    <id>https://flashj.cn/fellou.html</id>
     <published>2025-04-24T02:32:00.000Z</published>
     <updated>2025-06-05T05:31:39.440Z</updated>
     
@@ -205,8 +205,8 @@
   
   <entry>
     <title>Qbserve-RescueTime替代方案</title>
-    <link href="https://flashj.cn/2025/03/13/Qbserve.html"/>
-    <id>https://flashj.cn/2025/03/13/Qbserve.html</id>
+    <link href="https://flashj.cn/Qbserve.html"/>
+    <id>https://flashj.cn/Qbserve.html</id>
     <published>2025-03-13T12:02:28.000Z</published>
     <updated>2025-03-13T12:02:28.000Z</updated>
     
@@ -236,8 +236,8 @@
   
   <entry>
     <title>LMStudio运行QwQ-32B时报错的解决方法</title>
-    <link href="https://flashj.cn/2025/03/06/qwq-32B-jinja-error.html"/>
-    <id>https://flashj.cn/2025/03/06/qwq-32B-jinja-error.html</id>
+    <link href="https://flashj.cn/qwq-32B-jinja-error.html"/>
+    <id>https://flashj.cn/qwq-32B-jinja-error.html</id>
     <published>2025-03-06T11:01:38.000Z</published>
     <updated>2025-03-06T11:01:38.000Z</updated>
     
@@ -271,8 +271,8 @@
   
   <entry>
     <title>Manus和最近折腾的AI工具</title>
-    <link href="https://flashj.cn/2025/03/06/agi-future-like-manus.html"/>
-    <id>https://flashj.cn/2025/03/06/agi-future-like-manus.html</id>
+    <link href="https://flashj.cn/agi-future-like-manus.html"/>
+    <id>https://flashj.cn/agi-future-like-manus.html</id>
     <published>2025-03-06T04:49:51.000Z</published>
     <updated>2025-06-05T05:39:03.090Z</updated>
     
@@ -302,8 +302,8 @@
   
   <entry>
     <title>使用Linksys MX8400 访问互联网网速慢的问题</title>
-    <link href="https://flashj.cn/2025/02/10/linksys-mx8400-slow.html"/>
-    <id>https://flashj.cn/2025/02/10/linksys-mx8400-slow.html</id>
+    <link href="https://flashj.cn/linksys-mx8400-slow.html"/>
+    <id>https://flashj.cn/linksys-mx8400-slow.html</id>
     <published>2025-02-10T09:08:34.000Z</published>
     <updated>2025-02-10T09:08:34.000Z</updated>
     
@@ -331,8 +331,8 @@
   
   <entry>
     <title>本地调用大模型玩“谁是卧底”游戏</title>
-    <link href="https://flashj.cn/2025/01/30/llm-local-sheishiwodi-1.html"/>
-    <id>https://flashj.cn/2025/01/30/llm-local-sheishiwodi-1.html</id>
+    <link href="https://flashj.cn/llm-local-sheishiwodi-1.html"/>
+    <id>https://flashj.cn/llm-local-sheishiwodi-1.html</id>
     <published>2025-01-30T01:57:09.000Z</published>
     <updated>2025-01-30T01:57:09.000Z</updated>
     
@@ -374,8 +374,8 @@
   
   <entry>
     <title>推荐AnythingLLM搭建私人AI助理</title>
-    <link href="https://flashj.cn/2025/01/26/anythingllm.html"/>
-    <id>https://flashj.cn/2025/01/26/anythingllm.html</id>
+    <link href="https://flashj.cn/anythingllm.html"/>
+    <id>https://flashj.cn/anythingllm.html</id>
     <published>2025-01-26T06:43:14.000Z</published>
     <updated>2025-01-26T06:43:14.000Z</updated>
     
@@ -409,8 +409,8 @@
   
   <entry>
     <title>齐天二郎显圣真君打了147遍，终于过了</title>
-    <link href="https://flashj.cn/2025/01/24/bmw-erlangxianshengzhenjun.html"/>
-    <id>https://flashj.cn/2025/01/24/bmw-erlangxianshengzhenjun.html</id>
+    <link href="https://flashj.cn/bmw-erlangxianshengzhenjun.html"/>
+    <id>https://flashj.cn/bmw-erlangxianshengzhenjun.html</id>
     <published>2025-01-24T12:26:27.000Z</published>
     <updated>2025-01-24T12:26:27.000Z</updated>
     
@@ -436,8 +436,8 @@
   
   <entry>
     <title>_reactNativeHealth.default.initHealthKit is not a function (it is undefined) 报错</title>
-    <link href="https://flashj.cn/2025/01/20/react-native-health-undefined.html"/>
-    <id>https://flashj.cn/2025/01/20/react-native-health-undefined.html</id>
+    <link href="https://flashj.cn/react-native-health-undefined.html"/>
+    <id>https://flashj.cn/react-native-health-undefined.html</id>
     <published>2025-01-20T08:22:22.000Z</published>
     <updated>2025-06-05T05:47:38.356Z</updated>
     
@@ -463,8 +463,8 @@
   
   <entry>
     <title>nginx转发tsrpc服务端的配置</title>
-    <link href="https://flashj.cn/2025/01/15/nginx-conf-proxy-tsrpc.html"/>
-    <id>https://flashj.cn/2025/01/15/nginx-conf-proxy-tsrpc.html</id>
+    <link href="https://flashj.cn/nginx-conf-proxy-tsrpc.html"/>
+    <id>https://flashj.cn/nginx-conf-proxy-tsrpc.html</id>
     <published>2025-01-15T05:21:41.000Z</published>
     <updated>2025-01-15T05:21:41.000Z</updated>
     
@@ -494,8 +494,8 @@
   
   <entry>
     <title>Rider和Webstorm开放非商业免费版了</title>
-    <link href="https://flashj.cn/2024/10/26/jetbrains-rider-webstorm-free-non-commercial.html"/>
-    <id>https://flashj.cn/2024/10/26/jetbrains-rider-webstorm-free-non-commercial.html</id>
+    <link href="https://flashj.cn/jetbrains-rider-webstorm-free-non-commercial.html"/>
+    <id>https://flashj.cn/jetbrains-rider-webstorm-free-non-commercial.html</id>
     <published>2024-10-26T06:05:23.000Z</published>
     <updated>2024-10-26T06:05:23.000Z</updated>
     
@@ -521,8 +521,8 @@
   
   <entry>
     <title>黑神话悟空，启动！</title>
-    <link href="https://flashj.cn/2024/08/20/black-myth-wukong-launch.html"/>
-    <id>https://flashj.cn/2024/08/20/black-myth-wukong-launch.html</id>
+    <link href="https://flashj.cn/black-myth-wukong-launch.html"/>
+    <id>https://flashj.cn/black-myth-wukong-launch.html</id>
     <published>2024-08-20T04:14:08.000Z</published>
     <updated>2024-08-20T04:14:08.000Z</updated>
     
@@ -552,8 +552,8 @@
   
   <entry>
     <title>AI中医脉象测试</title>
-    <link href="https://flashj.cn/2024/07/17/AI-zhong-yi-mai-xiang.html"/>
-    <id>https://flashj.cn/2024/07/17/AI-zhong-yi-mai-xiang.html</id>
+    <link href="https://flashj.cn/AI-zhong-yi-mai-xiang.html"/>
+    <id>https://flashj.cn/AI-zhong-yi-mai-xiang.html</id>
     <published>2024-07-17T12:01:11.000Z</published>
     <updated>2024-07-17T12:01:11.000Z</updated>
     
@@ -585,8 +585,8 @@
   
   <entry>
     <title>Unity Hub Mac指定安装版本arm64</title>
-    <link href="https://flashj.cn/2024/04/10/unity-hub-mac-install-architecture-arm64.html"/>
-    <id>https://flashj.cn/2024/04/10/unity-hub-mac-install-architecture-arm64.html</id>
+    <link href="https://flashj.cn/unity-hub-mac-install-architecture-arm64.html"/>
+    <id>https://flashj.cn/unity-hub-mac-install-architecture-arm64.html</id>
     <published>2024-04-10T12:49:56.000Z</published>
     <updated>2024-04-10T12:49:56.000Z</updated>
     
