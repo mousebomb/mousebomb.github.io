@@ -64,6 +64,11 @@ iframe.bilibili {
 body {
   background: var(--site-bg) var(--bg-url) repeat fixed !important;
 }
+.md-text p:first-child img:first-child {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 :root {
   --theme-link: #2094f3;
   --theme-color: #1cd0fd;
