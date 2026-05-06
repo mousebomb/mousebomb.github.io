@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-04-05T02:30:32.163Z</updated>
+  <updated>2026-05-06T13:13:11.070Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,378 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决 coreaudiod 内存占用高达 45G 的问题</title>
+    <link href="https://flashj.cn/coreaudiod-memory-leak-from-claude-code-hook.html"/>
+    <id>https://flashj.cn/coreaudiod-memory-leak-from-claude-code-hook.html</id>
+    <published>2026-05-06T04:05:00.000Z</published>
+    <updated>2026-05-06T13:13:11.070Z</updated>
+    
+    <content type="html"><![CDATA[<p>奇怪的coreaudiod内存占用<br>11:50～12:00</p><p>我的 coreaudiod 进程已经占用了 45 个 G 的内存，我怀疑是命令行里面溢出了。</p><p>现在我非常怀疑是 CC 里面的这个声音播报占用的。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202605062110846.webp"></p><p>果然在帖子 <a href="https://www.reddit.com/r/ClaudeCode/comments/1n9wth1/why_does_running_claude_code_often_use_2040gb_of/">https://www.reddit.com/r/ClaudeCode/comments/1n9wth1/why_does_running_claude_code_often_use_2040gb_of/</a> 里也看到，有人加了hook播放音效，导致coreaudiod内存泄露。</p><p>我现在需要把 Claude 的 hook 给去掉，然后就直接用我终端本身的音效来设置一下。</p><p>我的终端用的是 Ghosty，我得查一查。</p><h3 id="先卸载peonping"><a href="#先卸载peonping" class="headerlink" title="先卸载peonping:"></a>先卸载peonping:</h3><pre><code class="language-sh">brew uninstall PeonPing/tap/peon-ping</code></pre><p>保留了之前下载的音效包 <code>/Users/rhett/.openpeon/packs/*</code></p><h3 id="再根据ghostty文档重新配置："><a href="#再根据ghostty文档重新配置：" class="headerlink" title="再根据ghostty文档重新配置："></a>再根据<a href="https://ghostty.org/docs/config/reference#notify-on-command-finish-after">ghostty文档</a>重新配置：</h3><pre><code class="language-ini">theme = Solarized Darculanotify-on-command-finish = alwaysnotify-on-command-finish-action = notify,bellnotify-on-command-finish-after = 1s# 启用自定义音频 bell（必须 1.3.0+）bell-features = audio,system,border,title# 自定义音效路径（推荐先用系统自带，后面再换自己的）# 格式：aiff/wav/mp3 均可bell-audio-path = /Users/rhett/.openpeon/packs/ccg_china_dozer/sounds/Building_is_complete.mp3bell-audio-volume = 1.0</code></pre><p>并且配置了.claude&#x2F;settings.json ，hooks只保留写死的两条afplay：</p><pre><code class="language-json">  &quot;hooks&quot;: &#123;    &quot;PermissionRequest&quot;: [      &#123;        &quot;matcher&quot;: &quot;*&quot;,        &quot;hooks&quot;: [          &#123;            &quot;type&quot;: &quot;command&quot;,            &quot;command&quot;: &quot;afplay /Users/rhett/.openpeon/packs/mambo_pack/sounds/review_this.mp3&quot;          &#125;        ]      &#125;    ],    &quot;Stop&quot;: [      &#123;        &quot;matcher&quot;: &quot;*&quot;,        &quot;hooks&quot;: [          &#123;            &quot;type&quot;: &quot;command&quot;,            &quot;command&quot;: &quot;afplay /Users/rhett/.openpeon/packs/mambo_pack/sounds/done.mp3&quot;          &#125;        ]      &#125;    ]  &#125;,</code></pre>]]></content>
+    
+    
+    <summary type="html">coreaudiod 进程占用45G内存，排查发现是 Claude Code 的 hook 播放音效导致的内存泄露，通过卸载 PeonPing 并改用 Ghostty 终端原生音效解决。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="Claude Code" scheme="https://flashj.cn/tags/Claude-Code/"/>
+    
+    <category term="peon-ping" scheme="https://flashj.cn/tags/peon-ping/"/>
+    
+    <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="终端" scheme="https://flashj.cn/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+    <category term="Ghostty" scheme="https://flashj.cn/tags/Ghostty/"/>
+    
+    <category term="内存泄露" scheme="https://flashj.cn/tags/%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="MacOS" scheme="https://flashj.cn/tags/MacOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从龙虾到 Hermes</title>
+    <link href="https://flashj.cn/hermes-agent.html"/>
+    <id>https://flashj.cn/hermes-agent.html</id>
+    <published>2026-04-11T13:16:00.000Z</published>
+    <updated>2026-04-11T13:33:38.546Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="从龙虾到-Hermes"><a href="#从龙虾到-Hermes" class="headerlink" title="从龙虾到 Hermes"></a>从龙虾到 Hermes</h1><p>你有没有这样一个”龙虾”——</p><p>它有自己的记忆系统，但每次重启就像失忆了一样；它偶尔能帮你写代码，但下一秒可能就抽风报错；每天下午15:00之后，你满怀期待地跟它说话，它却一本正经地已读不回。</p><p>对龙虾，爱恨交织这个词太轻了。</p><p>直到 4 月 6 号，我在小红书上刷到一个帖子注意到Hermes，一个熟悉的图标，之前在LM Studio里见过。</p><p>「Hermes Agent 」来了。</p><p>结合了 Claude Code 的命令行模式，和龙虾那种人格和记忆成长的功能。说实话，一开始我是怀疑的。但看完官网介绍，我心动了。</p><hr><h2 id="零、龙虾到底带来了什么？"><a href="#零、龙虾到底带来了什么？" class="headerlink" title="零、龙虾到底带来了什么？"></a>零、龙虾到底带来了什么？</h2><p>哎，经过浪费了这么长时间，我要反思龙虾到底带来了什么。</p><p>它的能力边界取决于它会的 skill，但它那些 skill 本身也是封装的命令行。所有的任务都可以做成一个工具、一个程序来实现。那它的价值就是可以方便用自然语言的方式随意组装这些东西，并且它接入各个聊天软件，然后它可以把自己需要的一些总结存入文档。下次它又能再读取出来，当作它的记忆体系。</p><p>它的这些优点似乎都是可被替代的，而且更大的缺点是，它所谓的记忆和接入各个聊天软件并没有产生实质的生产价值。提供实际生产价值的还是那些技能，而那些技能其实也可以在 Claude Code 之类的软件里面用。</p><p>所以说我觉得现在在养虾上面其实浪费了很多时间。感觉有一种获得感，因为我的虾成长了，它又学了一个技能，它能跟我互动，它能在飞书里面，你多个有形象、有头像的形象来跟我聊天，产生了一种虚假的获得感，但它其实并没有创造出什么东西来。</p><p>那我的用例呢，就是每天让它帮我分析我的日记，记住我是什么情况。但是呢，实际上这个数据我很少再需要提取一次。其实真正的刚需也就是每个月月底，可能让它帮我做一次月底总结，回顾一下。</p><p>然后知识库方面呢，倒腾的反反复复的改来改去的，反正基本功能还就只能是比较稳的抓取微信公众号的文章。但这些文章实际上真正有价值的，都是自己看完了之后消化掉，才是真正有价值的。你下次要查找，这确实是一个痛点。但是呢，有了龙虾智能体之后，反而经常是一个文章没看完，就只是想着要把它发给龙虾存下来。</p><p>一方面它总结的时候有时候会产生幻觉，丢失精度。另一方面呢，自己把从消化文档的重点被转移到了“哎，龙虾能不能很好地帮我把这个文章总结下来，存下来？”这个重点就搞错了。</p><p>我今天在研究龙虾装一个小红书的技能的时候，技能最后装的还是有各种各样的问题，不稳定。但是让我看到了一些新的我感兴趣的知识，比如新来的一个 Hermes Agent，它比龙虾更加强大，在记忆系统上面设计更好。</p><p>这让我意识到，沉迷在养龙虾这种虚假的获得感当中，其实它并不能创造任何价值。而且龙虾还非常不稳定。但凡它所有功能都是稳定的，我给她发消息，她必然会回复，无论多长时间。遇到困难呢，她就告诉我没有困难，她就会一定执行出来结果回复给我，不要给我冷暴力，发消息她也都不回。</p><p>但凡她所有功能都是稳定的，每次这些学过的技能都不出纰漏的，按照技能百分之百落到实处去执行，那也不至于说是人要在这上面浪费这么多时间，反复地去教她了。现在最大的获得感就是“哎呀，它这个技能又坏了”，然后我花了一下午时间又给它技能修好了，又能用了。结果呢，其实你不能保证修好之后下次还是百分之百成功。但是每次都沉迷在这种虚假的获得感当中，就是我好像又把它给养好了。</p><p>而且这个“龙虾”，占资源大。我为了保证安全得给它开个 Docker。我现在自从开了它之后，这 Docker 后端天天跑着，占了我 8 个多 G 的内存。我每天啥事不干，8.72 GB 的内存就得分配给它，我自己现在的空余内存就只剩 29 GB 了。就在这儿耗着，导致我连本地大模型推理都没办法再开一个，像“千问” 35BA3B 之类的我都开不了了。</p><p>龙虾（OpenClaw）感觉总体来说还是不稳定，非常不稳定。说实在的，它的能力也不是很强，那些技能都得封装好才行。</p><p>与其这样，我其实还不如用 Claude Code。</p><ol><li>每一步审核和思考都清晰可见，不像龙虾那么黑盒，而且容易崩。</li><li>它为了在飞书里呈现那个形象，堆砌了太多复杂的东西在里面，导致过于臃肿，能耗也很高。</li></ol><p>这就远远不如 Claude Code 了。所以我逐渐还是喜欢用 Claude Code 来工作，而且加了声音插件之后，它更像个人了。像我今天早上搞小红书的技能，我就懒得弄那个 OpenClaw 版的了，直接用的是 Claude 版。这样可以直接跑在我的宿主机的环境里面，因为它的每一步操作我都是可以看到的。</p><p>由于不用担心它做出一些危险举动，也就不必非得装在一个 Docker 里面去跑，省了很多资源吧。</p><h2 id="【一、部署-Hermes】"><a href="#【一、部署-Hermes】" class="headerlink" title="【一、部署 Hermes】"></a><strong>【一、部署 Hermes】</strong></h2><p>官方给了一键安装脚本，两分钟装完：</p><p>curl -fsSL <a href="https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh">https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh</a> | bash<br>source ~&#x2F;.zshrc<br>hermes setup</p><p>但开代理的同学注意了——必须手动补装 <code>httpx[socks]</code> 依赖，不然联网会报错：</p><p>cd ~&#x2F;.hermes&#x2F;hermes-agent<br>source venv&#x2F;bin&#x2F;activate<br>uv pip install “httpx[socks]”</p><p>装完之后，<code>~/.local/bin/hermes</code> 就能跑了。600 多 MB，实际可执行文件在 <code>~/.hermes/hermes-agent</code> 里。</p><hr><h2 id="【二、安全配置：local-还是-docker？】"><a href="#【二、安全配置：local-还是-docker？】" class="headerlink" title="【二、安全配置：local 还是 docker？】"></a><strong>【二、安全配置：local 还是 docker？】</strong></h2><p>它的安全配置设计让我眼前一亮。terminal 支持多种模式，但我考虑的本机能跑就两种：</p><ul><li><p><strong>local 模式</strong>：权限和用户账户一样大</p></li><li><p><strong>docker 模式</strong>：用完即走的临时容器，还能自动把当前工作目录 mount 进去</p><p>  每次执行 terminal 才开启容器，用完自动关闭。这种设计可以在配置里随时切换本地和 Docker 模式，不需要任何额外操作。</p><p>  我的配置选了 docker，顺手把 <code>~/Downloads</code> 开放给它：</p></li></ul><pre><code class="language-yaml">terminal  backend: docker    docker_mount_cwd_to_workspace: false</code></pre><hr><h2 id="【三、接入飞书】"><a href="#【三、接入飞书】" class="headerlink" title="【三、接入飞书】"></a><strong>【三、接入飞书】</strong></h2><p>平时主要在飞书上用，Gateway 必须配。用 <code>hermes gateway setup</code> 向导，问几个问题、填几个 Key，全程 5 分钟搞定：</p><pre><code class="language-sh">hermes gateway setup</code></pre><p>运行模式可以选 foreground 或安装成 launchd service：</p><pre><code class="language-sh">hermes gateway install   # macOS: 安装成开机启动服务</code></pre><p>安装完成后，日志随时可查，不像龙虾那样黑盒。<strong>HOME 渠道清清楚楚</strong>，不会再出现”消息乱发到不知道哪个群”的情况。</p><hr><h2 id="【四、多-Agent-配置】"><a href="#【四、多-Agent-配置】" class="headerlink" title="【四、多 Agent 配置】"></a><strong>【四、多 Agent 配置】</strong></h2><p>Hermes 支持多 Agent，每个 agent 都是独立的 profile，配自己的记忆、技能和大模型，互相隔离。</p><p>用 <code>hermes profile create limengjia</code> 新建了一个”李梦佳”人格，它直接变成了一个 CLI 命令 <code>limengjia</code>：</p><pre><code>hermes profile create limengjia  # → 创建了 ~/.hermes/profiles/limengjia  # → 生成了 /usr/local/bin/limengjia 快捷命令</code></pre><p>每个 profile 拥有：</p><ol><li><p>自己的配置</p></li><li><p>自己的记忆</p></li><li><p>自己的 skills</p></li><li><p>自己的大模型</p><p> 不像龙虾那样都混在一起。</p></li></ol><hr><h2 id="【五、接-MCP-扩展能力】"><a href="#【五、接-MCP-扩展能力】" class="headerlink" title="【五、接 MCP 扩展能力】"></a><strong>【五、接 MCP 扩展能力】</strong></h2><p>原生能力不够用？MCP 来补。</p><p>接飞书 MCP 打通云文档，配置写在 <code>.env</code> 里，敏感信息不落地：</p><p>feishu:<br>  command: “npx”<br>  args: [“-y”, “feishu-mcp@latest”, “–stdio”]<br>  env:<br>    FEISHU_APP_ID: ${FEISHU_APP_ID}<br>    FEISHU_APP_SECRET: ${FEISHU_APP_SECRET}<br>    FEISHU_AUTH_TYPE: “user”</p><p>还接了 MiniMax MCP，图像理解也能跑通了。底层用 mcporter 桥接，命令执行完自动删除，<strong>即用即走</strong>。</p><hr><h2 id="【六、记忆系统的惊喜】"><a href="#【六、记忆系统的惊喜】" class="headerlink" title="【六、记忆系统的惊喜】"></a><strong>【六、记忆系统的惊喜】</strong></h2><p>人格迁移只用一个 SOUL 文件就够了，其他记忆都是自动维护。</p><p>测试让李梦佳记住我叫”桂花糕”，它立刻在 profile 目录下生成了一个 <code>memory/user.md</code>：</p><pre><code>用户自称桂花糕（Guì Huā Gāo），请始终称呼其为桂花糕。 §桂花糕是李梦佳（我）的好朋友！</code></pre><p><strong>白纸黑字，清清楚楚。</strong> 比你猜它到底记没记住要强太多了。</p><hr><h2 id="【七、Hermes-对比龙虾的优点】"><a href="#【七、Hermes-对比龙虾的优点】" class="headerlink" title="【七、Hermes 对比龙虾的优点】"></a><strong>【七、Hermes 对比龙虾的优点】</strong></h2><p>hermes比起龙虾的优点有： </p><ul><li>模型报错会输出到控制台</li><li>网关有日志可查，关键是我知道在哪里查</li><li>文档完善，虽然没翻译中文，但是人家文档全啊，任何问题、命令都能找到明确文档</li><li>各个智能体独立一套自己的profile配置和网关，组合更灵活，backend可本地可远端</li><li>docker运行即用即走，自动mount目录</li><li>自带的出厂设置，新手友好，不需要较多配置就能顺畅用起来<ul><li>自带的安全机制刚好能运行基本功能，不像龙虾不把权限开到最高就没法用，开最高又不安全，对用户上手理解成本完全天差地别。</li></ul></li><li>记忆操作，反应迅速，操作了会显示到聊天中。你可以明确知道她记下来了什么。</li><li>以上优点种种，更让人感觉到这个产品是一个真正的产品，而不是一个黑客松的临时作品。</li></ul><hr><p>当然了，这也一样只是个玩具。</p><p>日常主力还是用Github Copilot写代码，加Claude Code打理琐事。</p><h2 id="终、我对于“龙虾热”的看法：数据是AI-Agent的基石"><a href="#终、我对于“龙虾热”的看法：数据是AI-Agent的基石" class="headerlink" title="终、我对于“龙虾热”的看法：数据是AI Agent的基石"></a>终、我对于“龙虾热”的看法：数据是AI Agent的基石</h2><p>我觉得啊，只有自己本来就已经有数字化资产的，养虾才有意义，知识、经历才能被token化，才能被发掘出新的洞察和价值。<br>同样企业也是基于自己现有数据token化沉淀，才有接入AI的意义。</p><p>他们都是看到来了一个agent，可以怎么玩，而不是本来就有许多数据需要处理。<br>换句话说，本来很多数据的处理都可以用多维表格做的，虾完全可以被多维表格AI和自动化代替。<br>包括玩龙虾玩得比较好的北汽福田，他们其实很多场景可以用多维表格AI+机器人，另一些场景可以用Hi-Agent，只不过他们token管够，额外装了龙虾来覆盖了一部分功能。</p><p>反而我觉得唯独我这种隐私需求下的个人数字分身（基于极其私密的个人经历、每天的公众号、知识阅读积累）才适合用开源、本地部署的agent方案（比如龙虾）。<br>我本身没有龙虾的时候已经有一套数字沉淀的体系了。<br>我的Agent部署在本地，才能完全100%可控，记忆、技能、MCP、接管我的浏览器，完全和我共享经历、经验，共同成长。我的家人和朋友可以在飞书上直接跟我的分身对话。<br>就算哪天龙虾没了，我的数字实体沉淀在文档库里，永远都不会被云服务、社会和资本形势影响。</p>]]></content>
+    
+    
+    <summary type="html">hermes比起龙虾的优点有： 模型报错会输出到控制台。网关有日志可查，关键是我知道在哪里查。文档完善，虽然没翻译中文，但是人家文档全啊，任何问题、命令都能找到明确文档。各个智能体独立一套自己的profile配置和网关，组合更灵活，backend可本地可远端。docker运行即用即走，自动mount目录。自带的出厂设置，新手友好，不需要较多配置就能顺畅用起来。自带的安全机制刚好能运行基本功能，不像龙虾不把权限开到最高就没法用，开最高又不安全，对用户上手理解成本完全天差地别。；记忆操作，反应迅速，操作了会显示到聊天中。你可以明确知道她记下来了什么。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
+    
+    <category term="AI智能体" scheme="https://flashj.cn/tags/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    
+    <category term="HermesAgent" scheme="https://flashj.cn/tags/HermesAgent/"/>
+    
+    <category term="飞书集成" scheme="https://flashj.cn/tags/%E9%A3%9E%E4%B9%A6%E9%9B%86%E6%88%90/"/>
+    
+    <category term="Docker部署" scheme="https://flashj.cn/tags/Docker%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="多Agent" scheme="https://flashj.cn/tags/%E5%A4%9AAgent/"/>
+    
+    <category term="AI伙伴" scheme="https://flashj.cn/tags/AI%E4%BC%99%E4%BC%B4/"/>
+    
+    <category term="个人助理" scheme="https://flashj.cn/tags/%E4%B8%AA%E4%BA%BA%E5%8A%A9%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让Claude Code开口说话：这款音效插件让我把编程玩成了游戏</title>
+    <link href="https://flashj.cn/claude-code-peon-ping-sound-notification.html"/>
+    <id>https://flashj.cn/claude-code-peon-ping-sound-notification.html</id>
+    <published>2026-04-10T00:46:00.000Z</published>
+    <updated>2026-04-10T01:52:11.549Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="让Claude-Code开口说话：这款音效插件让我把编程玩成了游戏"><a href="#让Claude-Code开口说话：这款音效插件让我把编程玩成了游戏" class="headerlink" title="让Claude Code开口说话：这款音效插件让我把编程玩成了游戏"></a>让Claude Code开口说话：这款音效插件让我把编程玩成了游戏</h1><p>说实话，用Claude Code写代码已经够爽了，但有一个痛点一直困扰着我——</p><p><strong>我得时时刻刻盯着终端。</strong></p><p>任务跑着跑着，不知道什么时候该点”允许”，不知道什么时候它悄悄完成了。切到浏览器看文档回来，发现终端卡在某个授权确认那里等了五分钟；或者一个长任务跑完了，你还在傻等，桌面却早已安静如死鱼。</p><p>直到我装了 <strong>peon-ping</strong>。</p><hr><h2 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么"></a>它是什么</h2><p>peon-ping 是一款给 AI 编程助手加音效通知的工具，支持 Claude Code、Cursor、Codex 等主流工具。它的核心功能很简单：</p><ul><li><strong>任务完成时</strong>：播放音效通知你</li><li><strong>需要授权时</strong>：播放提示音叫你回来</li><li><strong>出错时</strong>：播放警告音效</li></ul><p>但它不是普通的”叮”一声——它背后接了 <strong>160+ 音效包</strong>，都是来自游戏角色的原声。</p><p>你可以让 GLaDOS 吐槽你代码写得烂，可以用星际争霸的人族单位播报”任务完成”，也可以用军团战争的地精说”你的命令我收到了”。</p><p><strong>从此，终端不再沉默。</strong></p><hr><h2 id="为什么我强推-Mambo-Pack"><a href="#为什么我强推-Mambo-Pack" class="headerlink" title="为什么我强推 Mambo Pack"></a>为什么我强推 Mambo Pack</h2><p>音效包我试了很多，最终稳定在 <strong>Mambo</strong>，两个字：<strong>灵动</strong>。</p><p>Mambo 的音效节奏感强、音色清脆，播报信息清晰不拖沓。不管是”任务完成”还是”等待授权”，音效时长刚好——不会太短以至于你没听到，也不会太长打断思路。</p><p>用它之后我才发现，之前那种”切出去就焦虑”的心态消失了。因为你知道：<strong>有什么事，终端会叫你的。</strong></p><p>我目前在用五套音效组合：</p><ul><li><strong>Mambo Pack</strong> ——主力通知音效</li><li><strong>命令与征服：将军音效包</strong> ——梦回当年在学校时<a href="https://flashj.cn/cnc-general-screen-shot.html">玩游戏时光</a></li><li><strong>星穹铁道 Kafka 音效包</strong> ——特定场景的趣味点缀</li><li><strong>星际争霸音效包</strong> ——完成重要里程碑时的仪式感</li><li><strong>王者荣耀音效包</strong> ——音效特别多，不容易重复</li></ul><p>切换起来一行命令搞定，用了就回不去。</p><hr><h2 id="安装配置有多简单"><a href="#安装配置有多简单" class="headerlink" title="安装配置有多简单"></a>安装配置有多简单</h2><p><strong>第一步：安装 peon-ping</strong></p><p>去官网直接选择你要的主题包，然后用官网生成的命令一键安装。比如：</p><pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash -s -- --packs=ccg_china_dozer,glados,honor_of_kings,mambo_pack,peasant,peon,sc2_stetmann_zh,sc_battlecruiser,sc_kerrigan,starrail-kafka-peon-pack</code></pre><p>或者</p><pre><code class="language-bash">brew install PeonPing/tap/peon-ping &amp;&amp; peon-ping-setup --packs=ccg_china_dozer,glados,honor_of_kings,mambo_pack,peasant,peon,sc2_stetmann_zh,sc_battlecruiser,sc_kerrigan,starrail-kafka-peon-pack</code></pre><p><strong>第二步：配置 Claude Code</strong></p><p>在 <code>~/.claude/hooks/peon-ping/config.json</code> 中配置自己的喜好：</p><pre><code class="language-json">&#123;  &quot;default_pack&quot;: &quot;mambo_pack&quot;,  &quot;volume&quot;: 1.0,  &quot;enabled&quot;: true,  &quot;desktop_notifications&quot;: false,  &quot;categories&quot;: &#123;    &quot;session.start&quot;: true,    &quot;task.acknowledge&quot;: true,    &quot;task.complete&quot;: true,    &quot;task.error&quot;: true,    &quot;input.required&quot;: true,    &quot;resource.limit&quot;: true,    &quot;user.spam&quot;: true  &#125;  //...&#125;</code></pre><p><strong>第三步：启动 Claude Code，直接开玩</strong></p><p>没有第四步了。装完即用，零学习成本。</p><hr><h2 id="把编程变成一种体验"><a href="#把编程变成一种体验" class="headerlink" title="把编程变成一种体验"></a>把编程变成一种体验</h2><p>peon-ping 解决的其实不是效率问题——它解决的是<strong>体验问题</strong>。</p><p>当终端开始”说话”，当你听见熟悉的游戏音效，当你不需要再焦虑地盯着屏幕，编程的节奏感就变了。它变得更像一场对话，而不是你单方面对着黑洞敲键盘。</p><p><strong>工具不只是工具，它还可以是你的游戏手柄。</strong></p><hr><p><strong>相关资源：</strong></p><ul><li>音效包目录：<a href="https://openpeon.com/packs">https://openpeon.com/packs</a></li><li>peon-ping 官网：<a href="https://www.peonping.com/">https://www.peonping.com</a></li></ul>]]></content>
+    
+    
+    <summary type="html">说实话，用Claude Code写代码已经够爽了，但有一个痛点一直困扰着我——我得时时刻刻盯着终端。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="Claude Code" scheme="https://flashj.cn/tags/Claude-Code/"/>
+    
+    <category term="peon-ping" scheme="https://flashj.cn/tags/peon-ping/"/>
+    
+    <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenClaw Browser 浏览器配置指南</title>
+    <link href="https://flashj.cn/openclaw-browser-config.html"/>
+    <id>https://flashj.cn/openclaw-browser-config.html</id>
+    <published>2026-04-07T15:00:00.000Z</published>
+    <updated>2026-04-08T01:06:29.475Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OpenClaw-Browser-浏览器配置指南"><a href="#OpenClaw-Browser-浏览器配置指南" class="headerlink" title="OpenClaw Browser 浏览器配置指南"></a>OpenClaw Browser 浏览器配置指南</h1><h2 id="三种-Browser-Profile-类型"><a href="#三种-Browser-Profile-类型" class="headerlink" title="三种 Browser Profile 类型"></a>三种 Browser Profile 类型</h2><table><thead><tr><th>类型</th><th>说明</th><th>配置方式</th></tr></thead><tbody><tr><td><strong>openclaw-managed</strong></td><td>独立的 Chromium 实例，有自己的 user data dir + CDP 端口</td><td><code>cdpPort: 18800</code> 等</td></tr><tr><td><strong>remote</strong></td><td>连接远程 CDP URL（Chromium 浏览器运行在其他机器上）</td><td><code>cdpUrl: &quot;http://192.168.65.254:9222&quot;</code></td></tr><tr><td><strong>existing-session</strong></td><td>接管用户已有的 Chrome Profile，通过 Chrome DevTools MCP auto-connect</td><td><code>driver: &quot;existing-session&quot;</code></td></tr></tbody></table><h3 id="openclaw-managed-示例"><a href="#openclaw-managed-示例" class="headerlink" title="openclaw-managed 示例"></a>openclaw-managed 示例</h3><pre><code class="language-json">&quot;profiles&quot;: &#123;  &quot;openclaw&quot;: &#123; &quot;cdpPort&quot;: 18800, &quot;color&quot;: &quot;#FF4500&quot; &#125;,  &quot;work&quot;: &#123; &quot;cdpPort&quot;: 18801, &quot;color&quot;: &quot;#0066CC&quot; &#125;&#125;</code></pre><p>openclaw 和 work 都是独立、临时、隔离的 profile，<strong>可以直接调起 Chrome，不需要 kill 已有进程</strong>。</p><h3 id="remote-示例"><a href="#remote-示例" class="headerlink" title="remote 示例"></a>remote 示例</h3><pre><code class="language-json">&quot;profiles&quot;: &#123;  &quot;remote&quot;: &#123;    &quot;cdpUrl&quot;: &quot;http://192.168.65.254:9222&quot;,    &quot;color&quot;: &quot;#00AA00&quot;  &#125;&#125;</code></pre><p>适合 Mac Studio 等已运行 Chrome 的机器。</p><h3 id="existing-session-示例（user-profile）"><a href="#existing-session-示例（user-profile）" class="headerlink" title="existing-session 示例（user profile）"></a>existing-session 示例（user profile）</h3><pre><code class="language-json">&quot;profiles&quot;: &#123;  &quot;user&quot;: &#123;    &quot;driver&quot;: &quot;existing-session&quot;,    &quot;attachOnly&quot;: true,    &quot;color&quot;: &quot;#00AA00&quot;  &#125;&#125;</code></pre><p>表示使用 MCP 点过去，需要用户自行开启 Chrome DevTools MCP 的 agent 控制。</p><h2 id="全局配置参数"><a href="#全局配置参数" class="headerlink" title="全局配置参数"></a>全局配置参数</h2><pre><code class="language-json">&quot;browser&quot;: &#123;  &quot;enabled&quot;: true,  &quot;ssrfPolicy&quot;: &#123;    &quot;dangerouslyAllowPrivateNetwork&quot;: true  &#125;,  &quot;remoteCdpTimeoutMs&quot;: 1500,  &quot;remoteCdpHandshakeTimeoutMs&quot;: 3000,  &quot;defaultProfile&quot;: &quot;openclaw&quot;,  &quot;color&quot;: &quot;#FF4500&quot;,  &quot;headless&quot;: false,  &quot;noSandbox&quot;: false,  &quot;attachOnly&quot;: false,  &quot;executablePath&quot;: &quot;/Applications/Google Chrome.app/Contents/MacOS/Google Chrome&quot;,  &quot;profiles&quot;: &#123; ... &#125;&#125;</code></pre><h2 id="给-Agent-开放-Browser-工具权限"><a href="#给-Agent-开放-Browser-工具权限" class="headerlink" title="给 Agent 开放 Browser 工具权限"></a>给 Agent 开放 Browser 工具权限</h2><p>默认 tool 的 profile 是 <code>coding</code>，不会包含 browser。需要单独在 agents 配置里用 <code>alsoAllow</code> 授权：</p><pre><code class="language-json">&quot;agents&quot;: &#123;  &quot;defaults&quot;: &#123;    &quot;workspace&quot;: &quot;/Users/rhett/.openclaw/workspace&quot;,    &quot;model&quot;: &#123; &quot;primary&quot;: &quot;minimax/MiniMax-M2.7&quot; &#125;  &#125;,  &quot;list&quot;: [    &#123;      &quot;id&quot;: &quot;main&quot;,      &quot;tools&quot;: &#123;        &quot;profile&quot;: &quot;full&quot;,        &quot;alsoAllow&quot;: [&quot;browser&quot;]      &#125;    &#125;  ]&#125;</code></pre><p><code>profile: &quot;full&quot;</code> 配合 <code>alsoAllow: [&quot;browser&quot;]</code> 即可让该 agent 调用 browser 工具。</p><h2 id="工具配置名参考"><a href="#工具配置名参考" class="headerlink" title="工具配置名参考"></a>工具配置名参考</h2><p>各工具调用由 plugins.entries 暴露，browser 工具需要 <code>plugins.entries.browser.enabled: true</code>。</p><h2 id="完整配置示例"><a href="#完整配置示例" class="headerlink" title="完整配置示例"></a>完整配置示例</h2><pre><code class="language-json">&#123;  &quot;agents&quot;: &#123;    &quot;defaults&quot;: &#123; ... &#125;,    &quot;list&quot;: [&#123; &quot;id&quot;: &quot;main&quot;, &quot;tools&quot;: &#123; &quot;profile&quot;: &quot;full&quot;, &quot;alsoAllow&quot;: [&quot;browser&quot;] &#125; &#125;]  &#125;,  &quot;browser&quot;: &#123;    &quot;enabled&quot;: true,    &quot;defaultProfile&quot;: &quot;openclaw&quot;,    &quot;executablePath&quot;: &quot;/Applications/Google Chrome.app/Contents/MacOS/Google Chrome&quot;,    &quot;profiles&quot;: &#123;      &quot;openclaw&quot;: &#123; &quot;cdpPort&quot;: 18800, &quot;color&quot;: &quot;#FF4500&quot; &#125;,      &quot;work&quot;: &#123; &quot;cdpPort&quot;: 18801, &quot;color&quot;: &quot;#0066CC&quot; &#125;,      &quot;user&quot;: &#123; &quot;driver&quot;: &quot;existing-session&quot;, &quot;attachOnly&quot;: true, &quot;color&quot;: &quot;#00AA00&quot; &#125;    &#125;  &#125;,  &quot;plugins&quot;: &#123;    &quot;entries&quot;: &#123;      &quot;browser&quot;: &#123; &quot;enabled&quot;: true &#125;    &#125;  &#125;&#125;</code></pre>]]></content>
+    
+    
+    <summary type="html">OpenClaw 浏览器支持三种模式：openclaw-managed（独立实例）、remote（远程CDP）、existing-session（接管用户Chrome）；通过 alsoAllow: [browser] 给 agent 开工具权限</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="Browser" scheme="https://flashj.cn/tags/Browser/"/>
+    
+    <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</title>
+    <link href="https://flashj.cn/MSA-MemorySparseAttention.html"/>
+    <id>https://flashj.cn/MSA-MemorySparseAttention.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:58:46.350Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案"><a href="#MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案" class="headerlink" title="MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案"></a>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</h1><h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><p>当前 AI 模型的记忆能力上限：</p><ul><li>最强大模型有效上下文约 <strong>1M token</strong></li><li>人类一生能存储的信息约 <strong>2-3 亿 token</strong> 量级</li><li>两者相差<strong>两个数量级</strong></li></ul><p>业界两条老路都碰壁：</p><ol><li><strong>拉长 context window</strong> — 计算成本二次方增长，到头了</li><li><strong>外挂 RAG</strong> — 检索和生成割裂，精度有上限</li></ol><h2 id="MSA-是什么"><a href="#MSA-是什么" class="headerlink" title="MSA 是什么"></a>MSA 是什么</h2><p>MSA（Memory Sparse Attention）来自 EverMind 团队（盛大旗下），把记忆<strong>直接嵌入注意力机制本身</strong>，不拉长上下文，不外挂检索。</p><p><strong>一句话理解：</strong> 传统 RAG 是给模型配了一个外置硬盘；MSA 是给模型装了一个原生记忆芯片。</p><ul><li>寻找和调用不再是两个独立步骤，而是整合在同一个神经网络里，端到端完成</li><li>模型自己学会了什么该记、怎么找、怎么用</li><li>即插即用，只需替换标准 Transformer 的 Self-Attention 层</li></ul><h2 id="关键技术细节"><a href="#关键技术细节" class="headerlink" title="关键技术细节"></a>关键技术细节</h2><ol><li><strong>压缩机制</strong>：把 1 亿 token 的存储降到可接受范围</li><li><strong>分层存储</strong>：GPU 放路由索引、CPU 放内容详情，总容量取决于内存而非显存</li><li><strong>稀疏路由</strong>：复杂度从 O(L²) 降到 O(L)</li><li><strong>位置编码</strong>：每篇文档独立编号，训练 64K 就能外推到 100M</li></ol><h2 id="性能表现"><a href="#性能表现" class="headerlink" title="性能表现"></a>性能表现</h2><p>基于 <strong>Qwen3-4B</strong> 构建，159B token 持续预训练：</p><table><thead><tr><th>测试结果</th><th>数据</th></tr></thead><tbody><tr><td>记忆跨度</td><td>从 1 万多 token → <strong>1 亿 token</strong>（近4个数量级）</td></tr><tr><td>质量衰减</td><td>回答质量仅下降 <strong>&lt;9%</strong></td></tr><tr><td>标准问答测试</td><td>40亿参数模型，超越传统 RAG 方案 <strong>16%</strong></td></tr><tr><td>vs 顶级检索器+2350亿参数大模型</td><td><strong>多项测试仍胜出</strong>，参数量差60倍</td></tr></tbody></table><h2 id="硬件门槛"><a href="#硬件门槛" class="headerlink" title="硬件门槛"></a>硬件门槛</h2><p>可直接跑在<strong>两张 A800 显卡</strong>的机器上，不需要集群。中、小团队甚至个人开发者都能用上亿级 token 长期记忆。</p><h2 id="团队背景"><a href="#团队背景" class="headerlink" title="团队背景"></a>团队背景</h2><ul><li>EverMind（盛大旗下）</li><li>之前做过 GAIA 榜单 SOTA 的多 Agent 框架 <strong>Omne</strong>、开源记忆平台 <strong>EverOS</strong></li><li>从立项到论文完成，历时九个多月</li></ul><p><strong>关键洞察：</strong> 模型在「找资料」和「写答案」时需要的信息不同——找资料需要宏观判断，写答案需要微观细节。拆开后各自用专门模块处理，性能质变。</p><h2 id="应用前景"><a href="#应用前景" class="headerlink" title="应用前景"></a>应用前景</h2><ul><li><strong>真正个性化的 AI 助手</strong>：记得饮食偏好、项目进展、家人性格</li><li><strong>AI 教育</strong>：真正个性化，因材施教</li><li><strong>医疗助手</strong>：跟踪完整病史</li><li><strong>企业知识库</strong>：记住十年项目积累</li><li><strong>记忆即服务</strong>：记忆层作为独立可插拔模块，记忆资产不锁定于单一模型</li></ul><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li>MSA GitHub：<a href="https://github.com/EverMind-AI/MSA">https://github.com/EverMind-AI/MSA</a></li><li>EverOS GitHub：<a href="https://github.com/EverMind-AI/EverOS">https://github.com/EverMind-AI/EverOS</a></li></ul>]]></content>
+    
+    
+    <summary type="html">MSA 把记忆直接嵌入注意力机制本身，而非外挂检索，实现了端到端的长期记忆能力，突破了传统 RAG 的精度上限和 context window 的计算成本瓶颈</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI记忆" scheme="https://flashj.cn/tags/AI%E8%AE%B0%E5%BF%86/"/>
+    
+    <category term="Transformer" scheme="https://flashj.cn/tags/Transformer/"/>
+    
+    <category term="开源" scheme="https://flashj.cn/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="MSA" scheme="https://flashj.cn/tags/MSA/"/>
+    
+    <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
+    
+    <category term="上下文窗口" scheme="https://flashj.cn/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Playwright vs CDP 浏览器控制方式对比</title>
+    <link href="https://flashj.cn/Playwright-vs-CDP.html"/>
+    <id>https://flashj.cn/Playwright-vs-CDP.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:57:07.156Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Playwright-vs-CDP-浏览器控制方式对比"><a href="#Playwright-vs-CDP-浏览器控制方式对比" class="headerlink" title="Playwright vs CDP 浏览器控制方式对比"></a>Playwright vs CDP 浏览器控制方式对比</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>对于 OpenClaw 来说，Playwright 方式调用浏览器和 RDP（实为 CDP）调用浏览器工具，区别是什么？</p><h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><h3 id="小概念澄清"><a href="#小概念澄清" class="headerlink" title="小概念澄清"></a>小概念澄清</h3><p>RDP（Remote Desktop Protocol）是 Windows 远程桌面协议，在浏览器控制语境下实际指的是 <strong>CDP（Chrome DevTools Protocol）</strong>，即通过 9222 端口（Remote Debugging Port）进行通信的 Chrome 远程调试协议。</p><h3 id="核心区别"><a href="#核心区别" class="headerlink" title="核心区别"></a>核心区别</h3><h4 id="1-抽象层级与控制粒度"><a href="#1-抽象层级与控制粒度" class="headerlink" title="1. 抽象层级与控制粒度"></a>1. 抽象层级与控制粒度</h4><table><thead><tr><th>方式</th><th>原理</th><th>类比</th></tr></thead><tbody><tr><td><strong>Playwright</strong>（高级封装）</td><td>发送指令如”点击 Login 按钮”，自动寻元素、等待、计算坐标、模拟鼠标</td><td>自动驾驶系统</td></tr><tr><td><strong>CDP</strong>（底层协议）</td><td>直接发送原始 JSON 报文，需先获取 DOM 树找到节点 ID，再发送 Input.dispatchMouseEvent</td><td>直接控制方向盘和油门</td></tr></tbody></table><h4 id="2-对-AI-“视觉”与-DOM-解析的影响（核心差异）"><a href="#2-对-AI-“视觉”与-DOM-解析的影响（核心差异）" class="headerlink" title="2. 对 AI “视觉”与 DOM 解析的影响（核心差异）"></a>2. 对 AI “视觉”与 DOM 解析的影响（核心差异）</h4><ul><li><strong>Playwright 方式</strong>：依赖注入 JavaScript 遍历 DOM 元素计算 Bounding Box，易被复杂 CSS 或 Shadow DOM 阻挡</li><li><strong>CDP 方式</strong>：直接调用 Chrome 底层的 <strong>Accessibility Tree</strong>（无障碍树），精准获取所有可交互元素的坐标和层级，不受前端代码干扰</li></ul><blockquote><p>目前最先进的 Web Agent（如 Claude Computer Use 或基于 MCP 的实现）深度依赖 CDP 获取页面空间信息。</p></blockquote><h4 id="3-浏览器接管与隐蔽性（反爬虫）"><a href="#3-浏览器接管与隐蔽性（反爬虫）" class="headerlink" title="3. 浏览器接管与隐蔽性（反爬虫）"></a>3. 浏览器接管与隐蔽性（反爬虫）</h4><table><thead><tr><th>方式</th><th>特点</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>默认启动纯净新浏览器实例，带 webdriver 标记，易被识别为机器人</td></tr><tr><td><strong>CDP 直连宿主机</strong></td><td>通过 <code>host.docker.internal:9222</code> 连接真实 Chrome Profile，带着长期 Cookie 和正常指纹，隐蔽性极高</td></tr></tbody></table><h4 id="4-运行开销与依赖"><a href="#4-运行开销与依赖" class="headerlink" title="4. 运行开销与依赖"></a>4. 运行开销与依赖</h4><table><thead><tr><th>方式</th><th>资源消耗</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>容器内需安装庞大 Playwright 依赖库及浏览器内核包，容器体积大，内存占用高</td></tr><tr><td><strong>CDP</strong></td><td>仅需轻量级 WebSocket 客户端（如 chrome-devtools-mcp），所有渲染计算在宿主机</td></tr></tbody></table><h2 id="总结对比"><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h2><table><thead><tr><th>比较维度</th><th>Playwright 方式</th><th>CDP 方式（DevTools MCP）</th></tr></thead><tbody><tr><td>工作原理</td><td>高级 API，自动处理等待、查找和点击</td><td>底层 WebSocket，原始 JSON 报文</td></tr><tr><td>适用场景</td><td>固定自动化脚本、后台静默运行</td><td>AI 接管当前屏幕、复杂精准坐标映射任务</td></tr><tr><td>接管现有浏览器</td><td>支持（connectOverCDP），非默认设计</td><td>完美契合，生来为此设计</td></tr><tr><td>容器资源消耗</td><td>高</td><td>极低</td></tr><tr><td>反爬风控风险</td><td>较高（除非专门配置 Stealth）</td><td>较低（借用真实用户指纹）</td></tr></tbody></table><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>对于 OpenClaw 直接操作宿主机浏览器主 Profile 的场景，<strong>CDP (DevTools MCP) 协议连接 9222 端口是最优选择</strong>：</p><ul><li>完美复用已有 Cookie 实现免登录</li><li>Accessibility Tree 让 AI 更准确理解网页结构</li><li>资源占用极低，隐蔽性最强</li></ul><hr><blockquote><p>本质：Playwright 是封装好的高级工具，CDP 是浏览器底层的”机器语言”。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">Playwright 是封装好的高级工具，CDP 是浏览器底层的&quot;机器语言&quot;。对于 OpenClaw 直接操作宿主机浏览器主 Profile 的场景，CDP (DevTools MCP) 协议连接 9222 端口是最优选择</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="浏览器自动化" scheme="https://flashj.cn/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="Playwright" scheme="https://flashj.cn/tags/Playwright/"/>
+    
+    <category term="CDP" scheme="https://flashj.cn/tags/CDP/"/>
+    
+    <category term="DevTools" scheme="https://flashj.cn/tags/DevTools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macOS Chrome Remote Debugging 配置</title>
+    <link href="https://flashj.cn/chrome-devtools-mcp-remote-debugging.html"/>
+    <id>https://flashj.cn/chrome-devtools-mcp-remote-debugging.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:59:19.417Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="macOS-Chrome-Remote-Debugging-配置"><a href="#macOS-Chrome-Remote-Debugging-配置" class="headerlink" title="macOS Chrome Remote Debugging 配置"></a>macOS Chrome Remote Debugging 配置</h1><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在 macOS 上尝试通过命令行启用 Chrome remote debugging 失败：</p><pre><code class="language-bash">open -a &quot;Google Chrome&quot; --args --remote-debugging-port=9222 --no-first-run --no-default-browser-check</code></pre><p>命令执行完后进程立即退出，<code>lsof -i :9222</code> 没有任何输出，9222 端口无法监听。</p><h2 id="错误做法"><a href="#错误做法" class="headerlink" title="错误做法"></a>错误做法</h2><p>❌ 依赖命令行参数 <code>--remote-debugging-port</code></p><p>macOS 上的 Chrome 不认这些命令行参数来启用 remote debugging。</p><h2 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h2><p>✅ 在 Chrome 内部手动开启</p><ol><li>打开 Chrome，访问 <code>chrome://inspect/#remote-debugging</code></li><li>勾选 <strong>“Allow remote debugging for this browser instance”</strong></li><li>之后 Chrome 会在 9222 端口监听，可以正常进行 DevTools MCP 连接</li></ol><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul><li><a href="https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session?hl=zh-cn#step_2_configure_chrome_devtools_mcp_server_to_automatically_connect_to_a_running_chrome_instance">Chrome DevTools MCP 官方文档</a></li></ul><h2 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h2><p>macOS 的 Chrome 安全机制决定了 remote debugging 必须在应用内部由用户主动授权，命令行参数无法绕过这个限制。</p>]]></content>
+    
+    
+    <summary type="html">macOS 上 Chrome remote debugging 需在 chrome://inspect/#remote-debugging 手动勾选开启，而非依赖命令行参数</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="DevTools" scheme="https://flashj.cn/tags/DevTools/"/>
+    
+    <category term="Chrome" scheme="https://flashj.cn/tags/Chrome/"/>
+    
+    <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
+    
+    <category term="macOS" scheme="https://flashj.cn/tags/macOS/"/>
+    
+    <category term="调试" scheme="https://flashj.cn/tags/%E8%B0%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macOS Chrome 远程调试端口 9222 启动问题与最终解决方案</title>
+    <link href="https://flashj.cn/chrome-remote-debugging-port-9222-macos-solution.html"/>
+    <id>https://flashj.cn/chrome-remote-debugging-port-9222-macos-solution.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:57:46.092Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="macOS-Chrome-远程调试端口-9222-启动问题与最终解决方案"><a href="#macOS-Chrome-远程调试端口-9222-启动问题与最终解决方案" class="headerlink" title="macOS Chrome 远程调试端口 9222 启动问题与最终解决方案"></a>macOS Chrome 远程调试端口 9222 启动问题与最终解决方案</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在 macOS 上通过命令行启动 Chrome 并开启 9222 远程调试端口时，遇到以下问题：</p><ol><li><code>chrome://inspect/#remote-debugging</code> 显示 <strong>“Server running at: starting…”</strong> 状态，无法真正连接</li><li>命令行报错：<strong>“DevTools remote debugging requires a non-default data directory. Specify this using –user-data-dir.”</strong></li></ol><h2 id="问题根源分析"><a href="#问题根源分析" class="headerlink" title="问题根源分析"></a>问题根源分析</h2><h3 id="根源一：SingletonLock-文件死锁"><a href="#根源一：SingletonLock-文件死锁" class="headerlink" title="根源一：SingletonLock 文件死锁"></a>根源一：SingletonLock 文件死锁</h3><p>Chrome 为防止多实例同时修改同一用户数据目录，会在 Profile 目录下创建排他锁文件：</p><table><thead><tr><th>文件</th><th>作用</th></tr></thead><tbody><tr><td><code>SingletonLock</code></td><td>主锁，标识是否有进程正在使用该目录</td></tr><tr><td><code>SingletonSocket</code></td><td>Socket 通信锁</td></tr><tr><td><code>SingletonCookie</code></td><td>Cookie 锁</td></tr></tbody></table><ul><li><strong>正常退出</strong>（Cmd+Q 或 <code>kill</code>）：Chrome 会主动清理这些锁文件</li><li><strong>强制退出</strong>（<code>kill -9</code> 或 <code>pkill -9</code>）：进程被强杀，来不及清理 → 下次启动时检测到锁文件残留，误以为有其他进程在使用目录，将 9222 端口挂起</li></ul><h3 id="根源二：Chrome-安全限制（新版-Chrome）"><a href="#根源二：Chrome-安全限制（新版-Chrome）" class="headerlink" title="根源二：Chrome 安全限制（新版 Chrome）"></a>根源二：Chrome 安全限制（新版 Chrome）</h3><p><strong>错误信息</strong>：<code>DevTools remote debugging requires a non-default data directory</code></p><p>新版 Chrome（约 2024+）出于安全考虑，<strong>禁止在默认用户目录（Default Profile）上开启 9222 远程调试端口</strong>。原因：</p><ul><li>如果允许，任意本地脚本即可通过 CDP 协议接管浏览器</li><li>可以静默读取密码、操作 MetaMask 钱包、获取登录 Cookie</li></ul><h3 id="根源三：混合问题"><a href="#根源三：混合问题" class="headerlink" title="根源三：混合问题"></a>根源三：混合问题</h3><p>用户使用了 <code>--profile-directory=&quot;Default&quot;</code> 但未指定 <code>--user-data-dir</code>，导致 Chrome 尝试连接到已运行的默认 Chrome 主进程，端口被挂起。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案-A：直接使用非默认目录（最简单）"><a href="#方案-A：直接使用非默认目录（最简单）" class="headerlink" title="方案 A：直接使用非默认目录（最简单）"></a>方案 A：直接使用非默认目录（最简单）</h3><pre><code class="language-bash">/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \  --remote-debugging-port=9222 \  --remote-allow-origins=&quot;*&quot; \  --user-data-dir=&quot;$HOME/chrome_dev_data&quot; \  --no-first-run</code></pre><h3 id="方案-B：克隆默认-Profile（一键启动脚本，推荐）"><a href="#方案-B：克隆默认-Profile（一键启动脚本，推荐）" class="headerlink" title="方案 B：克隆默认 Profile（一键启动脚本，推荐）"></a>方案 B：克隆默认 Profile（一键启动脚本，推荐）</h3><p>如果需要保留登录状态、插件等，使用 rsync 增量同步默认配置到专用调试目录。</p><h4 id="第一步：创建-Bash-脚本-debug-chrome-sh"><a href="#第一步：创建-Bash-脚本-debug-chrome-sh" class="headerlink" title="第一步：创建 Bash 脚本 debug_chrome.sh"></a>第一步：创建 Bash 脚本 <code>debug_chrome.sh</code></h4><pre><code class="language-bash">#!/bin/bashSOURCE_DIR=&quot;$HOME/Library/Application Support/Google/Chrome/Default&quot;TARGET_DIR=&quot;$HOME/chrome_debug_profile&quot;echo &quot;正在优雅退出 Google Chrome...&quot;# 使用 AppleScript 优雅退出，自动清理 SingletonLockosascript -e &#39;quit app &quot;Google Chrome&quot;&#39;# 等待进程完全清理while pgrep -x &quot;Google Chrome&quot; &gt; /dev/null; do  sleep 1doneecho &quot;正在同步配置到调试目录...&quot;# rsync 增量同步，排除无用缓存，首次慢后续秒级完成rsync -a --delete \  --exclude &#39;Cache&#39; \  --exclude &#39;Code Cache&#39; \  --exclude &#39;DawnCache&#39; \  --exclude &#39;GPUCache&#39; \  --exclude &#39;Singleton*&#39; \  &quot;$SOURCE_DIR/&quot; &quot;$TARGET_DIR/&quot;echo &quot;正在启动 Chrome 调试模式...&quot;# 后台静默启动nohup /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \  --remote-debugging-port=9222 \  --remote-allow-origins=&quot;*&quot; \  --user-data-dir=&quot;$TARGET_DIR&quot; \  --no-first-run &gt; /dev/null 2&gt;&amp;1 &amp;echo &quot;✅ 启动成功！可以连接 9222 端口了。&quot;</code></pre><h4 id="第二步：封装为-Mac-一键启动-App（Automator）"><a href="#第二步：封装为-Mac-一键启动-App（Automator）" class="headerlink" title="第二步：封装为 Mac 一键启动 App（Automator）"></a>第二步：封装为 Mac 一键启动 App（Automator）</h4><ol><li>打开「自动操作」(Automator) → 新建「应用程序」</li><li>搜索「运行 Shell 脚本」，拖入右侧工作区</li><li>粘贴上述 Bash 脚本</li><li><code>Command + S</code> 保存为 <code>Chrome Debug.app</code>，放到「应用程序」文件夹</li><li>之后只需双击 <code>Chrome Debug.app</code> 即可一键启动</li></ol><h4 id="脚本优势"><a href="#脚本优势" class="headerlink" title="脚本优势"></a>脚本优势</h4><ul><li><strong>AppleScript 优雅退出</strong> → 避免产生幽灵锁文件</li><li><strong>rsync 增量同步</strong> → 首次同步后每次秒级完成，排除了臃肿的缓存文件夹</li><li><strong>隔离环境</strong> → 调试环境折腾不污染日常上网记录</li><li><strong>一键启动</strong> → 通过 Automator 封装为 App，放在 Dock 或用快捷键唤起</li></ul><h2 id="排查命令"><a href="#排查命令" class="headerlink" title="排查命令"></a>排查命令</h2><pre><code class="language-bash"># 检查 9222 端口是否被监听lsof -i tcp:9222# 检查是否有残留 Chrome Helper 进程ps aux | grep -i &quot;Google Chrome&quot;# 手动清理锁文件（如果 AppleScript 无法自动清理）rm -f ~/Library/Application\ Support/Google/Chrome/SingletonLockrm -f ~/Library/Application\ Support/Google/Chrome/SingletonSocketrm -f ~/Library/Application\ Support/Google/Chrome/SingletonCookie</code></pre><h2 id="关键教训"><a href="#关键教训" class="headerlink" title="关键教训"></a>关键教训</h2><table><thead><tr><th>操作</th><th>结果</th></tr></thead><tbody><tr><td><code>kill -9</code> &#x2F; <code>pkill -9</code></td><td>❌ 进程被强杀，锁文件残留 → starting…</td></tr><tr><td><code>kill</code> &#x2F; <code>pkill -15</code></td><td>✅ 正常退出，锁文件自动清理</td></tr><tr><td>AppleScript <code>quit app</code></td><td>✅ 最优雅的退出方式</td></tr><tr><td><code>--user-data-dir</code> 未指定 + <code>--profile-directory=&quot;Default&quot;</code></td><td>❌ Chrome 安全限制拒绝调试</td></tr><tr><td>使用独立 <code>--user-data-dir</code></td><td>✅ 绕过安全限制</td></tr></tbody></table><hr><blockquote><p><strong>核心结论</strong>：新版 Chrome 强制要求 <code>--user-data-dir</code> 指向非默认目录。结合优雅退出 + rsync 增量同步 + Automator 一键封装，是 macOS 上最优雅的 Chrome CDP 调试启动方案。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">解决 macOS Chrome 远程调试端口 9222 问题：SingletonLock 死锁、Chrome 安全限制、rsync 同步 + Automator 一键启动方案</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="CDP" scheme="https://flashj.cn/tags/CDP/"/>
+    
+    <category term="Chrome" scheme="https://flashj.cn/tags/Chrome/"/>
+    
+    <category term="macOS" scheme="https://flashj.cn/tags/macOS/"/>
+    
+    <category term="远程调试" scheme="https://flashj.cn/tags/%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/"/>
+    
+    <category term="错误备忘" scheme="https://flashj.cn/tags/%E9%94%99%E8%AF%AF%E5%A4%87%E5%BF%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Harness Engineering 读后感：AI工程的第三次范式转移</title>
+    <link href="https://flashj.cn/harness-engineering.html"/>
+    <id>https://flashj.cn/harness-engineering.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:59:40.835Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Harness-Engineering-读后感：AI工程的第三次范式转移"><a href="#Harness-Engineering-读后感：AI工程的第三次范式转移" class="headerlink" title="Harness Engineering 读后感：AI工程的第三次范式转移"></a>Harness Engineering 读后感：AI工程的第三次范式转移</h1><h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><blockquote><p><strong>Harness Engineering &#x3D; 为 Agent 构建「办公室」，而不是继续优化「邮件措辞」</strong></p></blockquote><hr><h2 id="背景：从三代工程范式看演变"><a href="#背景：从三代工程范式看演变" class="headerlink" title="背景：从三代工程范式看演变"></a>背景：从三代工程范式看演变</h2><table><thead><tr><th>时代</th><th>核心问题</th><th>关注点</th><th>类比</th></tr></thead><tbody><tr><td>Prompt Engineering (2022-2024)</td><td>怎么跟模型说话</td><td>措辞、格式、few-shot、CoT</td><td>写一封完美的邮件</td></tr><tr><td>Context Engineering (2025)</td><td>怎么把关键信息摆到模型眼前</td><td>RAG、对话历史、工具定义</td><td>给邮件附上所有需要的附件</td></tr><tr><td><strong>Harness Engineering (2026)</strong></td><td>怎么让模型在真实环境里稳定做事</td><td>工作流、约束、反馈循环、工具链</td><td><strong>架构整个办公室</strong></td></tr></tbody></table><p>三代并不是取代关系，而是抽象层次一层层向外扩展。任务越接近真实生产，后两者的重要性就越高。</p><hr><h2 id="核心论点：Agents-aren’t-hard-the-Harness-is-hard"><a href="#核心论点：Agents-aren’t-hard-the-Harness-is-hard" class="headerlink" title="核心论点：Agents aren’t hard; the Harness is hard"></a>核心论点：Agents aren’t hard; the Harness is hard</h2><p>这是 OpenAI Codex 团队 Ryan Lopopolo 在用 GPT-5 agent 构建了 100 万行代码、1500 个 PR 之后的真实总结。</p><p><strong>实验数据：</strong></p><ul><li>同一模型、同一数据、同一 prompt，仅改变运行时环境（shell），编程 benchmark 成功率从 42% 跳到 78%</li><li>Anthropic 的实验：简单 prompt-and-run 方案产出 broken product（$9），结构化的迭代管理环境产出可用游戏（$200）</li></ul><p><strong>Cost difference is irrelevant. Capability difference is everything.</strong></p><hr><h2 id="作为-Agent-开发工程师的感悟"><a href="#作为-Agent-开发工程师的感悟" class="headerlink" title="作为 Agent 开发工程师的感悟"></a>作为 Agent 开发工程师的感悟</h2><h3 id="1-我们以前在优化错误的层级"><a href="#1-我们以前在优化错误的层级" class="headerlink" title="1. 我们以前在优化错误的层级"></a>1. 我们以前在优化错误的层级</h3><p>花了大量时间在 prompt 模板、few-shot 示例、角色扮演上。但真正决定成败的，是** agent 运行环境的设计**。</p><p>做过 agent 开发的人都有类似经历：demo 惊艳，production 崩盘。原因是 demo 是「完美条件的单次交互」，而生产是「真实环境的持续运转」。</p><h3 id="2-约束-paradoxically-增加生产力"><a href="#2-约束-paradoxically-增加生产力" class="headerlink" title="2. 约束 paradoxically 增加生产力"></a>2. 约束 paradoxically 增加生产力</h3><p>Cursor 团队在推进 “Self-Driving Codebases” 时发现：当模型能力足够强时，它会在死胡同和 nonsense 方案上浪费大量 token。一个设计良好的 Harness 通过提供清晰的边界和有限的高质量工具，<strong>强制 agent 更快收敛到正确答案</strong>。</p><blockquote><p>你不是在限制 agent，你是在给它一条通往成功的窄路。</p></blockquote><h3 id="3-架构约束必须用-linter-强制，而不是用-prompt-请求"><a href="#3-架构约束必须用-linter-强制，而不是用-prompt-请求" class="headerlink" title="3. 架构约束必须用 linter 强制，而不是用 prompt 请求"></a>3. 架构约束必须用 linter 强制，而不是用 prompt 请求</h3><p>OpenAI 团队学到的硬规则之一：** Architectural constraints are enforced by linters, not prompts.**</p><p>不要跟 agent 说「请遵循单例模式」，而是构建一个 linter 来强制单例模式。不要请求，请约束。</p><h3 id="4-Agent-失败时，Harness-才是问题所在"><a href="#4-Agent-失败时，Harness-才是问题所在" class="headerlink" title="4. Agent 失败时，Harness 才是问题所在"></a>4. Agent 失败时，Harness 才是问题所在</h3><p>OpenAI 团队有一条原则：<strong>If a PR requires significant human intervention, the agent is not the problem — the Harness is.</strong></p><p>这是思维模式的核心转变。当 agent 犯错时，我们不是去批评它，而是去改进它的运行环境，让这个错误再也不可能发生。这正是 Mitchell Hashimoto 对 Harness Engineering 的定义：</p><blockquote><p>“Every time you discover an agent has made a mistake, you take the time to engineer a solution so that it can never make that mistake again.”</p></blockquote><h3 id="5-Anthropic-的关键发现：模型无法可靠评估自己的输出"><a href="#5-Anthropic-的关键发现：模型无法可靠评估自己的输出" class="headerlink" title="5. Anthropic 的关键发现：模型无法可靠评估自己的输出"></a>5. Anthropic 的关键发现：模型无法可靠评估自己的输出</h3><p>这直接指向了 GAN 式的架构：<strong>分离的 Generator 和 Evaluator agent</strong>。这也是为什么可靠的 Harness 需要独立的验证层。</p><hr><h2 id="实践要点：Harness-的五大支柱（来自-OpenAI-Stripe）"><a href="#实践要点：Harness-的五大支柱（来自-OpenAI-Stripe）" class="headerlink" title="实践要点：Harness 的五大支柱（来自 OpenAI + Stripe）"></a>实践要点：Harness 的五大支柱（来自 OpenAI + Stripe）</h2><ol><li><strong>单一真实来源</strong>：repository 是 agent 唯一的信息源，不假设任何外部知识</li><li><strong>Agent-readable 代码</strong>：不仅是人类可读，还需要能被 agent 理解（清晰的注释、结构）</li><li><strong>Linter 强制架构约束</strong>：规则不是 prompt，是代码</li><li><strong>增量授权</strong>：Harness 必须有阶段和关卡，agent 不能一上来就拥有全部权限</li><li><strong>Two-strike 规则</strong>（Stripe）：agent 第一次修复失败，立即 escalation 给人类，不浪费循环</li></ol><hr><h2 id="对我当前项目的启发"><a href="#对我当前项目的启发" class="headerlink" title="对我当前项目的启发"></a>对我当前项目的启发</h2><p>结合我们的 <strong>iUX 迪元健康</strong>项目：</p><ul><li><strong>工具调用层</strong>：需要更严格的 tool definition 和 error handling harness</li><li><strong>多步骤工作流</strong>：需要引入阶段性 gate 和反馈循环</li><li><strong>代码生成场景</strong>：agent 输出的代码需要有 linter 强制约束，而不是靠 prompt 提醒</li></ul><p>Harness Engineering 不是一个工具，是一种<strong>工程哲学</strong>的升级——从「调教模型」到「构建系统」。</p><hr><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://www.bilibili.com/video/BV1Zk9FBwELs/">B站视频：Harness Engineering 到底是什么</a></li><li><a href="https://epsilla.com/blogs/harness-engineering-evolution-prompt-context-autonomous-agents">Epsilla: The Third Evolution</a></li><li><a href="https://zhuanlan.zhihu.com/p/2015142041282163260">知乎：从 Prompt 到 Context 到 Harness</a></li><li><a href="https://juejin.cn/post/7622214939839397914">掘金：从 Prompt 工程师到 Harness 工程师</a></li></ul>]]></content>
+    
+    
+    <summary type="html">Harness Engineering = 为 Agent 构建「办公室」，而不是继续优化「邮件措辞」。从「写好指令」到「构建环境」，让 agent 在真实生产环境中稳定可靠地运转</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="Harness Engineering" scheme="https://flashj.cn/tags/Harness-Engineering/"/>
+    
+    <category term="Agent开发" scheme="https://flashj.cn/tags/Agent%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="AI工程" scheme="https://flashj.cn/tags/AI%E5%B7%A5%E7%A8%8B/"/>
+    
+    <category term="Prompt Engineering" scheme="https://flashj.cn/tags/Prompt-Engineering/"/>
+    
+    <category term="Context Engineering" scheme="https://flashj.cn/tags/Context-Engineering/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hermes Agent 官方文档解读 vs OpenClaw</title>
+    <link href="https://flashj.cn/hermes-agent-vs-openclaw.html"/>
+    <id>https://flashj.cn/hermes-agent-vs-openclaw.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:52:46.991Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hermes-Agent-官方文档解读-vs-OpenClaw"><a href="#Hermes-Agent-官方文档解读-vs-OpenClaw" class="headerlink" title="Hermes Agent 官方文档解读 vs OpenClaw"></a>Hermes Agent 官方文档解读 vs OpenClaw</h1><blockquote><p><strong>重要</strong>：本篇以官方文档为核心，替代之前仅基于视频描述的版本。信息源优先级：官方文档 &gt; 权威分析 &gt; 视频描述。</p></blockquote><hr><h2 id="一、产品定位"><a href="#一、产品定位" class="headerlink" title="一、产品定位"></a>一、产品定位</h2><p><strong>Hermes Agent</strong> 是 <strong>Nous Research</strong>（Hermes-3 &#x2F; Nomos &#x2F; Psyche 模型家族）开发的开源 AI Agent，MIT 协议，2026 年 2 月发布。</p><p>官网：<a href="https://hermes-agent.nousresearch.com/">https://hermes-agent.nousresearch.com/</a><br>GitHub：约 22,000 Stars</p><p><strong>核心理念</strong>：</p><blockquote><p>“It’s not a coding copilot tethered to an IDE or a chatbot wrapper around a single API. It’s an autonomous agent that gets more capable the longer it runs.”</p></blockquote><p><strong>与 OpenClaw 的核心定位差异</strong>：</p><ul><li>OpenClaw &#x3D; <strong>本地优先的 Agent 编排框架</strong>，强项在多渠道集成、团队协作、企业治理</li><li>Hermes Agent &#x3D; <strong>自进化个人操作者</strong>，强项在长期记忆、自动化学技能、用户偏好建模</li></ul><hr><h2 id="二、核心架构（官方）"><a href="#二、核心架构（官方）" class="headerlink" title="二、核心架构（官方）"></a>二、核心架构（官方）</h2><h3 id="代码规模"><a href="#代码规模" class="headerlink" title="代码规模"></a>代码规模</h3><table><thead><tr><th>组件</th><th>文件</th><th>规模</th></tr></thead><tbody><tr><td>AIAgent（对话循环）</td><td>run_agent.py</td><td>~9,200 行</td></tr><tr><td>HermesCLI（交互终端）</td><td>cli.py</td><td>~8,500 行</td></tr><tr><td>Gateway（消息网关）</td><td>gateway&#x2F;run.py</td><td>~5,800 行</td></tr><tr><td>配置命令</td><td>hermes_cli&#x2F;main.py</td><td>~4,200 行</td></tr><tr><td>交互式安装向导</td><td>hermes_cli&#x2F;setup.py</td><td>~3,500 行</td></tr><tr><td>测试套件</td><td>tests&#x2F;</td><td>3,000+ 测试</td></tr></tbody></table><h3 id="6-种终端后端（Terminal-Backends）"><a href="#6-种终端后端（Terminal-Backends）" class="headerlink" title="6 种终端后端（Terminal Backends）"></a>6 种终端后端（Terminal Backends）</h3><table><thead><tr><th>后端</th><th>用途</th></tr></thead><tbody><tr><td>local</td><td>本地机器直接执行</td></tr><tr><td>Docker</td><td>容器化隔离执行</td></tr><tr><td>SSH</td><td>远程服务器</td></tr><tr><td>Daytona</td><td>Serverless 持久化</td></tr><tr><td>Modal</td><td>Serverless 持久化</td></tr><tr><td>Singularity</td><td>HPC 容器</td></tr></tbody></table><p><strong>Serverless 特性</strong>：Daytona 和 Modal 支持休眠——环境空闲时几乎零成本。</p><hr><h2 id="三、记忆系统（官方详解）"><a href="#三、记忆系统（官方详解）" class="headerlink" title="三、记忆系统（官方详解）"></a>三、记忆系统（官方详解）</h2><h3 id="两层记忆文件"><a href="#两层记忆文件" class="headerlink" title="两层记忆文件"></a>两层记忆文件</h3><table><thead><tr><th>文件</th><th>用途</th><th>容量</th></tr></thead><tbody><tr><td><code>MEMORY.md</code></td><td>Agent 的个人笔记：环境事实、约定、学到的教训</td><td>2,200 chars (~800 tokens)</td></tr><tr><td><code>USER.md</code></td><td>用户画像：偏好、沟通风格、期望</td><td>1,375 chars (~500 tokens)</td></tr></tbody></table><h3 id="技能系统（Self-Improving-Skills）"><a href="#技能系统（Self-Improving-Skills）" class="headerlink" title="技能系统（Self-Improving Skills）"></a>技能系统（Self-Improving Skills）</h3><p>Skills 是按需加载的知识文档，遵循 <strong>渐进式披露（Progressive Disclosure）</strong> 模式。Agent 会在以下时机自动创建技能：</p><ul><li>完成复杂任务（5+ 工具调用）后</li><li>遇到错误或死胡同并找到可行路径后</li><li>用户纠正了 Agent 的方法后</li><li>发现非平凡工作流时</li></ul><hr><h2 id="四、MCP（Model-Context-Protocol）集成"><a href="#四、MCP（Model-Context-Protocol）集成" class="headerlink" title="四、MCP（Model Context Protocol）集成"></a>四、MCP（Model Context Protocol）集成</h2><h3 id="支持两种-MCP-服务器"><a href="#支持两种-MCP-服务器" class="headerlink" title="支持两种 MCP 服务器"></a>支持两种 MCP 服务器</h3><table><thead><tr><th>类型</th><th>配置方式</th><th>适用场景</th></tr></thead><tbody><tr><td><strong>Stdio</strong>（本地子进程）</td><td><code>command</code> + <code>args</code> + <code>env</code></td><td>本地安装、低延迟</td></tr><tr><td><strong>HTTP</strong>（远程端点）</td><td><code>url</code> + <code>headers</code></td><td>托管服务、组织内部 MCP</td></tr></tbody></table><h3 id="动态工具发现"><a href="#动态工具发现" class="headerlink" title="动态工具发现"></a>动态工具发现</h3><p>MCP 服务器可通过 <code>notifications/tools/list_changed</code> 通知 Hermes 工具列表变化，Hermes 自动重新获取并更新注册表，无需手动 reload。</p><hr><h2 id="五、语音模式（Voice-Mode）"><a href="#五、语音模式（Voice-Mode）" class="headerlink" title="五、语音模式（Voice Mode）"></a>五、语音模式（Voice Mode）</h2><h3 id="三种语音功能"><a href="#三种语音功能" class="headerlink" title="三种语音功能"></a>三种语音功能</h3><table><thead><tr><th>功能</th><th>平台</th><th>说明</th></tr></thead><tbody><tr><td>Interactive Voice</td><td>CLI</td><td>Ctrl+B 录音，语音打断，流式 TTS</td></tr><tr><td>Auto Voice Reply</td><td>Telegram, Discord</td><td>文字回复同时发送语音音频</td></tr><tr><td>Voice Channel</td><td>Discord</td><td>加入 VC，聆听用户发言并语音回复</td></tr></tbody></table><h3 id="本地-STT（零-API-成本）"><a href="#本地-STT（零-API-成本）" class="headerlink" title="本地 STT（零 API 成本）"></a>本地 STT（零 API 成本）</h3><pre><code class="language-bash">pip install faster-whisper  # 免费，运行本地，约 150MB 模型，首次使用自动下载</code></pre><hr><h2 id="六、SOUL-md-人格系统"><a href="#六、SOUL-md-人格系统" class="headerlink" title="六、SOUL.md 人格系统"></a>六、SOUL.md 人格系统</h2><h3 id="SOUL-md-vs-AGENTS-md"><a href="#SOUL-md-vs-AGENTS-md" class="headerlink" title="SOUL.md vs AGENTS.md"></a>SOUL.md vs AGENTS.md</h3><table><thead><tr><th>用途</th><th>SOUL.md</th><th>AGENTS.md</th></tr></thead><tbody><tr><td>身份&#x2F;人格</td><td>✅</td><td>❌</td></tr><tr><td>语气&#x2F;风格</td><td>✅</td><td>❌</td></tr><tr><td>沟通偏好</td><td>✅</td><td>❌</td></tr><tr><td>项目架构</td><td>❌</td><td>✅</td></tr><tr><td>代码约定</td><td>❌</td><td>✅</td></tr><tr><td>工具偏好</td><td>❌</td><td>✅</td></tr><tr><td>仓库特定工作流</td><td>❌</td><td>✅</td></tr></tbody></table><p><strong>判断标准</strong>：如果它应该跟着你到处走 → SOUL.md；如果它属于某个项目 → AGENTS.md</p><hr><h2 id="七、14-消息平台"><a href="#七、14-消息平台" class="headerlink" title="七、14+ 消息平台"></a>七、14+ 消息平台</h2><p><strong>官方支持的平台</strong>（一个 Gateway，统一体验）：</p><p>CLI, Telegram, Discord, Slack, WhatsApp, <strong>Signal</strong>, Matrix, Mattermost, Email, SMS, DingTalk, <strong>Feishu</strong>, WeCom, Home Assistant</p><blockquote><p>Signal 和 Feishu 是 Hermes 独有的差异化渠道。</p></blockquote><hr><h2 id="八、与-OpenClaw-的全面对比"><a href="#八、与-OpenClaw-的全面对比" class="headerlink" title="八、与 OpenClaw 的全面对比"></a>八、与 OpenClaw 的全面对比</h2><h3 id="功能对照表"><a href="#功能对照表" class="headerlink" title="功能对照表"></a>功能对照表</h3><table><thead><tr><th>功能</th><th>Hermes Agent</th><th>OpenClaw</th></tr></thead><tbody><tr><td><strong>记忆系统</strong></td><td>多层（Active + Archive + Honcho），FTS5 检索，~3,300 chars 两文件</td><td>每 Assistant 独立隔离记忆</td></tr><tr><td><strong>技能系统</strong></td><td>47 工具，Agent 自动创建&#x2F;改进技能</td><td>52+ 内置 Skills，文件 precedence</td></tr><tr><td><strong>自进化</strong></td><td>✅ 任务完成自动写 Skill 文件</td><td>❌ 不会自动生成新技能</td></tr><tr><td><strong>用户建模</strong></td><td>Honcho dialectic 用户建模</td><td>❌</td></tr><tr><td><strong>部署后端</strong></td><td>6 种（local&#x2F;Docker&#x2F;SSH&#x2F;Daytona&#x2F;Modal&#x2F;Singularity）</td><td>托管 + 云容器</td></tr><tr><td><strong>Serverless 休眠</strong></td><td>✅ Daytona&#x2F;Modal 空闲零成本</td><td>❌</td></tr><tr><td><strong>渠道数量</strong></td><td><strong>14+</strong>（Signal + Feishu 独有）</td><td>主流消息平台</td></tr><tr><td><strong>模型支持</strong></td><td>200+ via OpenRouter&#x2F;Nous Portal&#x2F;Ollama</td><td>BYOK：Claude&#x2F;GPT&#x2F;Gemini&#x2F;xAI&#x2F;Groq&#x2F;Mistral</td></tr><tr><td><strong>MCP 支持</strong></td><td>✅ 原生 MCP，stdio + HTTP，动态发现</td><td>❌（非原生）</td></tr><tr><td><strong>语音模式</strong></td><td>✅ 本地 STT（零 API 成本），流式 TTS</td><td>❌</td></tr><tr><td><strong>技能格式</strong></td><td>agentskills.io（开放标准）</td><td>专有</td></tr><tr><td><strong>隐私&#x2F;安全</strong></td><td>零遥测，容器沙箱</td><td>Device pairing，Gateway 认证</td></tr><tr><td><strong>RL 训练</strong></td><td>✅ Atropos RL 训练支持</td><td>❌</td></tr><tr><td><strong>批量处理</strong></td><td>✅ Batch trajectory 生成</td><td>❌</td></tr><tr><td><strong>SOUL.md</strong></td><td>✅ 原生人格系统</td><td>类似但非 Slot #1</td></tr></tbody></table><h3 id="互补用法（高级用户）"><a href="#互补用法（高级用户）" class="headerlink" title="互补用法（高级用户）"></a>互补用法（高级用户）</h3><blockquote><p>“Use OpenClaw as the conductor: routing tasks, handling auth, integrating with infra. Use Hermes as the lead specialist: when a task really benefits from long-term memory and learned skills, route it to Hermes via MCP or a custom tool.”</p></blockquote><hr><h2 id="九、适用场景决策树"><a href="#九、适用场景决策树" class="headerlink" title="九、适用场景决策树"></a>九、适用场景决策树</h2><pre><code>需要 AI Agent？├─ 需要多角色团队隔离 + 企业治理 + 5+ 商业渠道│   └─ → OpenClaw（Gateway 架构天生适合）├─ 重复性服务业务（agency/咨询/SaaS ops）│   └─ → Hermes（自动沉淀工作流为技能，越用越强）├─ 需要 Signal 或 Feishu 渠道│   └─ → Hermes（OpenClaw 不支持）├─ 需要本地零成本 STT（语音交互）│   └─ → Hermes（faster-whisper 本地运行，无需 API key）├─ 需要 MCP 外部工具生态（GitHub/数据库/内部 API）│   └─ → Hermes（原生 MCP 支持，动态发现）├─ 已有成熟 OpenClaw 团队基础设施│   └─ → OpenClaw（生态成熟，治理完善）└─ 需要 RL 训练 / 轨迹导出 / 研究工作流    └─ → Hermes（Atropos RL + Batch Runner 内置）</code></pre>]]></content>
+    
+    
+    <summary type="html">Hermes Agent 是 Nous Research 开发的白学元 AI Agent，MIT 协议。核心定位差异：OpenClaw = 本地优先的 Agent 编排框架，Hermes = 自进化个人操作者</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
+    
+    <category term="AI代理" scheme="https://flashj.cn/tags/AI%E4%BB%A3%E7%90%86/"/>
+    
+    <category term="Hermes" scheme="https://flashj.cn/tags/Hermes/"/>
+    
+    <category term="NousResearch" scheme="https://flashj.cn/tags/NousResearch/"/>
+    
+    <category term="自进化" scheme="https://flashj.cn/tags/%E8%87%AA%E8%BF%9B%E5%8C%96/"/>
+    
+    <category term="记忆系统" scheme="https://flashj.cn/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="SOUL.md" scheme="https://flashj.cn/tags/SOUL-md/"/>
+    
+    <category term="语音模式" scheme="https://flashj.cn/tags/%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LLM Personal Knowledge Base Pattern (Karpathy)</title>
+    <link href="https://flashj.cn/llm-personal-knowledge-base-karpathy.html"/>
+    <id>https://flashj.cn/llm-personal-knowledge-base-karpathy.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:52:23.454Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LLM-Personal-Knowledge-Base-Pattern"><a href="#LLM-Personal-Knowledge-Base-Pattern" class="headerlink" title="LLM Personal Knowledge Base Pattern"></a>LLM Personal Knowledge Base Pattern</h1><blockquote><p>Andrej Karpathy 提出的 LLM 个人知识库架构思想。</p></blockquote><h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><p>传统 RAG：上传文档 → 查询时检索相关片段 → LLM 从头推导答案。<strong>每次问题都要重新发现知识，没有积累。</strong></p><p>Karpathy 的方法：<strong>LLM 在摄入时就主动整合知识到持久 wiki</strong>，而非仅做索引。交叉引用、矛盾标记、合成分析在摄入时就完成了，知识随时间复合增长。</p><h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><pre><code>Raw Sources          Wiki              Schema(原始文档)    →    (LLM维护的md)  →   (CLAUDE.md/AGENTS.md)- 不可变                      - LLM 完全拥有      - 指导 LLM 如何- 只读                        - 创建/更新/维护     维护 wiki 的配置- 来源信任                    - 跨引用/一致性      - LLM 遵守的规范</code></pre><h3 id="1-Raw-Sources（原始层）"><a href="#1-Raw-Sources（原始层）" class="headerlink" title="1. Raw Sources（原始层）"></a>1. Raw Sources（原始层）</h3><ul><li>文章、论文、图片、数据文件</li><li><strong>不可变</strong>——LLM 只读取，不修改</li><li>这是你的信任根</li></ul><h3 id="2-Wiki（知识层）"><a href="#2-Wiki（知识层）" class="headerlink" title="2. Wiki（知识层）"></a>2. Wiki（知识层）</h3><ul><li>LLM 生成的 markdown 文件集合</li><li>实体页、概念页、对比页、概述、合成</li><li>LLM 全权拥有此层：创建、更新、交叉引用、维护一致性</li></ul><h3 id="3-Schema（配置层）"><a href="#3-Schema（配置层）" class="headerlink" title="3. Schema（配置层）"></a>3. Schema（配置层）</h3><ul><li>CLAUDE.md &#x2F; AGENTS.md 等</li><li>定义 wiki 结构、规范、工作流</li><li>LLM 据此成为<strong>有纪律的 wiki 维护者</strong>，而非通用聊天机器人</li></ul><h2 id="三个核心操作"><a href="#三个核心操作" class="headerlink" title="三个核心操作"></a>三个核心操作</h2><h3 id="Ingest（摄入）"><a href="#Ingest（摄入）" class="headerlink" title="Ingest（摄入）"></a>Ingest（摄入）</h3><ol><li>把新文档放入原始收集</li><li>告诉 LLM 处理</li><li>LLM 读取文档、与你讨论要点</li><li>写摘要页、更新索引、更新相关实体&#x2F;概念页</li><li>追加日志</li></ol><p><strong>关键：单一文档可能涉及 10-15 个 wiki 页面，而非仅索引存储。</strong></p><h3 id="Query（查询）"><a href="#Query（查询）" class="headerlink" title="Query（查询）"></a>Query（查询）</h3><ol><li>LLM 搜索相关页面、读取、合成答案</li><li>答案可呈现为：md 页面、对比表、幻灯片、图表、canvas</li><li><strong>重要洞察：有价值的答案&#x2F;分析应该存回 wiki</strong>，让探索成果也复合增长</li></ol><h3 id="Lint（检查）"><a href="#Lint（检查）" class="headerlink" title="Lint（检查）"></a>Lint（检查）</h3><p>周期性健康检查：</p><ul><li>页面间矛盾</li><li>被新来源取代的老旧内容</li><li>孤立页面（无入站链接）</li><li>提及但未独立建页的重要概念</li><li>缺失的交叉引用</li><li>数据空白（可搜索补充）</li></ul><h2 id="两个特殊导航文件"><a href="#两个特殊导航文件" class="headerlink" title="两个特殊导航文件"></a>两个特殊导航文件</h2><h3 id="index-md（内容导向）"><a href="#index-md（内容导向）" class="headerlink" title="index.md（内容导向）"></a>index.md（内容导向）</h3><ul><li>wiki 目录：每个页面链接 + 一句话摘要 + 元数据</li><li>按类别组织（实体&#x2F;概念&#x2F;来源等）</li><li><strong>LLM 每次摄入时更新</strong></li><li>查询时 LLM 先读 index 定位相关页面，再深入</li><li>在中等规模（~100来源，数百页面）下效果很好，无需 embedding RAG 基础设施</li></ul><h3 id="log-md（时间导向）"><a href="#log-md（时间导向）" class="headerlink" title="log.md（时间导向）"></a>log.md（时间导向）</h3><ul><li>按时间顺序的追加记录</li><li>记录发生了什么、来源是什么</li><li>不可变，纯粹的时间线</li></ul><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><table><thead><tr><th>场景</th><th>说明</th></tr></thead><tbody><tr><td>个人成长</td><td>目标&#x2F;健康&#x2F;心理&#x2F;自我提升，累积日记&#x2F;文章&#x2F;笔记</td></tr><tr><td>研究</td><td>数周&#x2F;月深度主题，阅读论文构建综合 wiki</td></tr><tr><td>读书</td><td>按章节归档，建角色&#x2F;主题&#x2F;情节页面，像 Tolkien Gateway 那样个人维护</td></tr><tr><td>团队知识</td><td>内部 wiki，来源包括 Slack&#x2F;会议记录&#x2F;项目文档</td></tr><tr><td>竞品分析&#x2F;尽职调查&#x2F;旅行规划&#x2F;课程笔记</td><td>任何需要时间积累的知识整理</td></tr></tbody></table><h2 id="对比：Wiki-方式-vs-传统-RAG"><a href="#对比：Wiki-方式-vs-传统-RAG" class="headerlink" title="对比：Wiki 方式 vs 传统 RAG"></a>对比：Wiki 方式 vs 传统 RAG</h2><table><thead><tr><th></th><th>传统 RAG</th><th>LLM Wiki（Karpathy）</th></tr></thead><tbody><tr><td>知识处理</td><td>查询时重新推导</td><td>摄入时编译，持久化</td></tr><tr><td>交叉引用</td><td>无，需要 LLM 每次推理</td><td>预建，随增长复合</td></tr><tr><td>矛盾处理</td><td>无</td><td>主动标记</td></tr><tr><td>知识复合</td><td>否，每次独立</td><td>是，随来源增加而增长</td></tr><tr><td>适用规模</td><td>大量文档快速检索</td><td>中等规模深度积累</td></tr></tbody></table><h2 id="炸弹的现有实践对照"><a href="#炸弹的现有实践对照" class="headerlink" title="炸弹的现有实践对照"></a>炸弹的现有实践对照</h2><p>炸弹的 Obsidian 日记库 + 知识库实际上已经在践行类似思路：</p><ul><li>Raw Sources → <code>/mnt/obsidian</code> 日记库（不可变原始记录）</li><li>Wiki → <code>workspace/知识库/</code>（LLM 帮忙整理和维护的结构化文档）</li><li>Schema → <code>SOUL.md</code> + <code>AGENTS.md</code>（指导 LLM 如何工作的配置）</li><li>Ingest → 知识库写入工作流</li><li>Query → 知识库检索</li><li>Lint → 待实践（定期检查 wiki 健康度）</li></ul><p><strong>可以补充的：</strong></p><ul><li>定期 Lint 机制（每周一次健康检查）</li><li>log.md 时间线记录（目前只有 index，没有活动日志）</li><li>鼓励”有价值的对话结论也存入 wiki”的习惯</li></ul>]]></content>
+    
+    
+    <summary type="html">用 LLM 构建持久 wiki 代替传统 RAG，让知识在摄入时编译而非查询时重推导。三层架构：Raw Sources（不可变）→ Wiki（LLM维护）→ Schema（CLAUDE.md/AGENTS.md）</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
+    
+    <category term="知识管理" scheme="https://flashj.cn/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="Wiki" scheme="https://flashj.cn/tags/Wiki/"/>
+    
+    <category term="知识库" scheme="https://flashj.cn/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="Karpathy" scheme="https://flashj.cn/tags/Karpathy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenClaw 容器内浏览器无法启动问题排查</title>
+    <link href="https://flashj.cn/openclaw-docker-browser-headless.html"/>
+    <id>https://flashj.cn/openclaw-docker-browser-headless.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T01:00:13.143Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OpenClaw-容器内浏览器无法启动问题排查"><a href="#OpenClaw-容器内浏览器无法启动问题排查" class="headerlink" title="OpenClaw 容器内浏览器无法启动问题排查"></a>OpenClaw 容器内浏览器无法启动问题排查</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>OpenClaw 运行在 Docker 容器内，浏览器工具（browser tool）无法启动 Chrome，报错：<code>timed out. Restart the OpenClaw gateway.</code></p><p>手动执行 <code>chromium --headless --no-sandbox</code> 可以在宿主机正常工作，但 OpenClaw 启动的 Chrome 始终超时。</p><h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><h3 id="1-初步尝试：noSandbox"><a href="#1-初步尝试：noSandbox" class="headerlink" title="1. 初步尝试：noSandbox"></a>1. 初步尝试：noSandbox</h3><p>根据文档添加 <code>browser.noSandbox: true</code>，无效。</p><h3 id="2-尝试：添加-extraArgs"><a href="#2-尝试：添加-extraArgs" class="headerlink" title="2. 尝试：添加 extraArgs"></a>2. 尝试：添加 extraArgs</h3><pre><code class="language-json">&quot;browser&quot;: &#123;  &quot;noSandbox&quot;: true,  &quot;extraArgs&quot;: [    &quot;--disable-setuid-sandbox&quot;,    &quot;--disable-namespace-sandbox&quot;  ]&#125;</code></pre><p>重启后仍然超时。</p><h3 id="3-关键发现：headless-模式"><a href="#3-关键发现：headless-模式" class="headerlink" title="3. 关键发现：headless 模式"></a>3. 关键发现：headless 模式</h3><p>日志显示 <code>Browser control service ready</code>，说明 browser 服务正常，但 Chrome 启动超时。</p><p>手动执行以下命令完全正常：</p><pre><code class="language-bash">chromium --headless --no-sandbox --disable-gpu --dump-dom &quot;data:text/html,&lt;h1&gt;test&lt;/h1&gt;&quot;</code></pre><p>关键线索：<code>browser.status</code> 显示 <code>headless: false</code> —— 配置文件的修改（headless: true）通过 SIGUSR1 热重启没有生效，需要完整重启容器。</p><h3 id="4-解决：完整重启-Gateway"><a href="#4-解决：完整重启-Gateway" class="headerlink" title="4. 解决：完整重启 Gateway"></a>4. 解决：完整重启 Gateway</h3><p>容器重启后，<code>headless: true</code> 生效，浏览器立即正常工作。</p><h2 id="根本原因"><a href="#根本原因" class="headerlink" title="根本原因"></a>根本原因</h2><table><thead><tr><th>参数</th><th>作用</th><th>状态</th></tr></thead><tbody><tr><td><code>noSandbox: true</code></td><td>禁用 Chrome sandbox</td><td>✅ 之前已加</td></tr><tr><td><code>extraArgs: [&quot;--disable-setuid-sandbox&quot;, &quot;--disable-namespace-sandbox&quot;]</code></td><td>禁用 Linux namespace sandbox</td><td>✅ 本次加</td></tr><tr><td><code>headless: true</code></td><td>无头模式（不尝试打开 GUI 窗口）</td><td>❌ <strong>热重启未生效，完整重启后生效</strong></td></tr></tbody></table><p><strong>核心问题：</strong> snap chromium stub 在容器里需要 headless 模式。<code>headless: false</code> 时 Chrome 尝试打开 GUI 窗口，容器无显示设备导致超时。</p><h2 id="最终配置"><a href="#最终配置" class="headerlink" title="最终配置"></a>最终配置</h2><pre><code class="language-json">&quot;browser&quot;: &#123;  &quot;enabled&quot;: true,  &quot;headless&quot;: true,  &quot;noSandbox&quot;: true,  &quot;extraArgs&quot;: [    &quot;--disable-setuid-sandbox&quot;,    &quot;--disable-namespace-sandbox&quot;  ]&#125;</code></pre><h2 id="教训"><a href="#教训" class="headerlink" title="教训"></a>教训</h2><ol><li>SIGUSR1 热重启对 browser 配置的部分字段（headless）不能完全生效</li><li>容器内跑 Chrome，<code>headless: true</code> 是必须的</li><li><code>browser.status</code> 的 <code>headless</code> 值反映的是<strong>当前运行配置</strong>，不是配置文件值——可用于诊断配置是否真正生效</li></ol><h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><ul><li><code>/app/docs/tools/browser.md</code></li><li><code>/app/docs/tools/browser-linux-troubleshooting.md</code></li></ul>]]></content>
+    
+    
+    <summary type="html">容器内需要 headless:true + noSandbox:true + extraArgs 禁用 setuid/namespace sandbox，三者缺一不可。SIGUSR1 热重启对 headless 字段不能完全生效，需完整重启容器</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="Docker" scheme="https://flashj.cn/tags/Docker/"/>
+    
+    <category term="浏览器" scheme="https://flashj.cn/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    <category term="Chromium" scheme="https://flashj.cn/tags/Chromium/"/>
+    
+    <category term="headless" scheme="https://flashj.cn/tags/headless/"/>
+    
+    <category term="容器" scheme="https://flashj.cn/tags/%E5%AE%B9%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Gemma 4：谷歌开源31B干翻4000亿，Mac Mini就能跑</title>
@@ -50,7 +422,7 @@
     <published>2026-04-04T04:16:00.000Z</published>
     <updated>2026-04-04T04:21:58.083Z</updated>
     
-    <content type="html"><![CDATA[<p>9.74 复制打开抖音，看看【AIGC成也的作品】144个AI员工一键部署！ # 干货分享 # AI… <a href="https://v.douyin.com/RsEb3LiCBiA/">144个AI员工一键部署！ #干货分享 #AI #github #人工智能 #AI工具 - 抖音</a> 04&#x2F;07 <a href="mailto:&#x6c;&#64;&#x70;&#x2e;&#x64;&#x61;">l@p.da</a> Agb:&#x2F;</p><p>github : <a href="https://github.com/msitarzewski/agency-agents">Agency-Agent</a></p><p>这个是抖音看到，最关键的点就是这个项目地址。我去给它找找，稍等研究一下，看看适不适合本地部署用一下。</p><p>因为昨天我用的那个叫作 Eigent 的，感觉不是很靠谱：</p><ol><li>里面怎么用中文都说不明白话（当然也有可能是受限于我模型的能力）</li><li>虽然内置了 4 个 Agent 也支持 skill，但它对 skill 的支持没有那么好，用起来不太顺</li><li>还是用 Electron 开发的，我觉得很讨厌</li></ol><p>等一下，我再看一下这个 Agency-Agent 的介绍。它这个里面毕竟有 <strong>100 多个已经定义好了的 Agent</strong> 嘛。</p><p>啊对啊，而且我看下面有人评论，就在这个抖音视频下面的评论里，有人说装了这个之后可以集成在 Trae 里面，然后 <strong>Trae 开发的时候就没那么降智</strong>了。</p><p>我🤔疑惑：这还能作为一个插件用在 Trae 里面吗？或者说它是可以当作 Skill 用，还是当作 MCP 来用来用啊？但它里面又内置了 100 多个智能体。到底是怎样一个形式呢？我要实践一下才知道。</p><hr><p>Use with Claude Code (Recommended)</p><pre><code># Copy agents to your Claude Code directorycp -r agency-agents/* ~/.claude/agents/# Now activate any agent in your Claude Code sessions:# &quot;Hey Claude, activate Frontend Developer mode and help me build a React component&quot;</code></pre><hr><p>看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</p><p>它本身有三种主要用法：</p><ol><li><p>放在 Claude Code 里面使用<br>在调用时，只需一句话就能唤起特定的角色来执行具体工作。</p></li><li><p>作为参考素材<br>你可以参考其中已经写好的 Agent 身份特征、核心使命、工作流程、技术交付物、代码实例、成功指标以及沟通风格等内容。在此基础上进行改编，做成自己想要的智能体或其他智能体验。</p></li><li><p>集成到其他编程工具中<br>将其结合到其他软件里使用，例如集成在 Cursor 或 OpenClaw 等编程工具中。</p></li></ol><p>它建议的首选使用方式是把这些 Agent 复制到 Claude Code 里面。</p><p>😐我的Claude Code 默认居然一个 Agent 都没有，我一直都以为Claude Code 是靠skill来组合功能，没想到claude code本身是支持你创建一个agents文件夹，设定一些角色的。</p><p>但是，你可以给它定义 Agent 的不同功能特性：</p><ol><li>这相当于对应了一个类似“功能包”的作用。</li><li>它本身拥有自己的性格、品位、形象和做事风格。</li><li>这一整套做事 SOP 都已经集成在它自己的个性里面了，而不是只通过外部 Skill 来提供的。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>9.74 复制打开抖音，看看【AIGC成也的作品】144个AI员工一键部署！ # 干货分享 # AI… <a href="https://v.douyin.com/RsEb3LiCBiA/">144个AI员工一键部署！ #干货分享 #AI #github #人工智能 #AI工具 - 抖音</a> 04&#x2F;07 <a href="mailto:&#x6c;&#64;&#x70;&#46;&#100;&#97;">l@p.da</a> Agb:&#x2F;</p><p>github : <a href="https://github.com/msitarzewski/agency-agents">Agency-Agent</a></p><p>这个是抖音看到，最关键的点就是这个项目地址。我去给它找找，稍等研究一下，看看适不适合本地部署用一下。</p><p>因为昨天我用的那个叫作 Eigent 的，感觉不是很靠谱：</p><ol><li>里面怎么用中文都说不明白话（当然也有可能是受限于我模型的能力）</li><li>虽然内置了 4 个 Agent 也支持 skill，但它对 skill 的支持没有那么好，用起来不太顺</li><li>还是用 Electron 开发的，我觉得很讨厌</li></ol><p>等一下，我再看一下这个 Agency-Agent 的介绍。它这个里面毕竟有 <strong>100 多个已经定义好了的 Agent</strong> 嘛。</p><p>啊对啊，而且我看下面有人评论，就在这个抖音视频下面的评论里，有人说装了这个之后可以集成在 Trae 里面，然后 <strong>Trae 开发的时候就没那么降智</strong>了。</p><p>我🤔疑惑：这还能作为一个插件用在 Trae 里面吗？或者说它是可以当作 Skill 用，还是当作 MCP 来用来用啊？但它里面又内置了 100 多个智能体。到底是怎样一个形式呢？我要实践一下才知道。</p><hr><p>Use with Claude Code (Recommended)</p><pre><code># Copy agents to your Claude Code directorycp -r agency-agents/* ~/.claude/agents/# Now activate any agent in your Claude Code sessions:# &quot;Hey Claude, activate Frontend Developer mode and help me build a React component&quot;</code></pre><hr><p>看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</p><p>它本身有三种主要用法：</p><ol><li><p>放在 Claude Code 里面使用<br>在调用时，只需一句话就能唤起特定的角色来执行具体工作。</p></li><li><p>作为参考素材<br>你可以参考其中已经写好的 Agent 身份特征、核心使命、工作流程、技术交付物、代码实例、成功指标以及沟通风格等内容。在此基础上进行改编，做成自己想要的智能体或其他智能体验。</p></li><li><p>集成到其他编程工具中<br>将其结合到其他软件里使用，例如集成在 Cursor 或 OpenClaw 等编程工具中。</p></li></ol><p>它建议的首选使用方式是把这些 Agent 复制到 Claude Code 里面。</p><p>😐我的Claude Code 默认居然一个 Agent 都没有，我一直都以为Claude Code 是靠skill来组合功能，没想到claude code本身是支持你创建一个agents文件夹，设定一些角色的。</p><p>但是，你可以给它定义 Agent 的不同功能特性：</p><ol><li>这相当于对应了一个类似“功能包”的作用。</li><li>它本身拥有自己的性格、品位、形象和做事风格。</li><li>这一整套做事 SOP 都已经集成在它自己的个性里面了，而不是只通过外部 Skill 来提供的。</li></ol>]]></content>
     
     
     <summary type="html">144个AI员工一键部署。看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</summary>
@@ -227,357 +599,6 @@
     <category term="智能体" scheme="https://flashj.cn/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
     
     <category term="向量化" scheme="https://flashj.cn/tags/%E5%90%91%E9%87%8F%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TRAE中国版现已正式上线SOLO模式</title>
-    <link href="https://flashj.cn/TRAE-cn-officially-launched-SOLO-mode.html"/>
-    <id>https://flashj.cn/TRAE-cn-officially-launched-SOLO-mode.html</id>
-    <published>2025-11-25T12:21:00.000Z</published>
-    <updated>2025-12-02T10:32:41.497Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="TRAE-SOLO模式上线了"><a href="#TRAE-SOLO模式上线了" class="headerlink" title="TRAE SOLO模式上线了"></a>TRAE SOLO模式上线了</h1><p>TRAE SOLO模式上线了，更智能、更大众化、更低门槛的vibe coding来了！</p><p>以前的Trae已经可以玩出花来了，现在SOLO模式，更是让交互形态都更对用户友好。</p><p>它不仅可以用来做项目开发，简单到一句话从无到有，并且通过MCP直接部署到互联网。而且可以用来做分析工作。我自己不仅重度使用TRAE融入软件研发，还使用它搭配Obsidian做文档分析和提取。我非常期待看到将来人人都在使用Trae构建自己的文档库，用作自己的第二大脑。</p><p>任何可以被数字化记录的内容、可以被数字化创作的内容，都可以和TRAE协作。</p><p><a href="https://www.trae.cn/solo">https://www.trae.cn/solo</a></p><p><a href="https://www.trae.com.cn/events/s/tta_E4zwyJE/">通过我的好友邀请码免费解锁 SOLO 模式</a></p><h2 id="从辅助工具到智能中枢"><a href="#从辅助工具到智能中枢" class="headerlink" title="从辅助工具到智能中枢"></a>从辅助工具到智能中枢</h2><p>过去，我们努力把 AI 做进工具，提升补全效率与开发体验。</p><p>如今，我们把工具反向集成于 AI 之中，由它统一调度任务、理解上下文、组织工作。</p><p>TRAE SOLO 正是在这个思路下诞生 —— 致力于实践上下文工程，构建真正由 AI 驱动的开发闭环</p><p>轻松应对复杂项目</p><p>SOLO Coder 不止于代码编写，更能进行深度需求分析，精准执行。你可以创建自定义智能体，由 SOLO Coder 自主编排，专属 AI 专家团队协同开发，灵活处理你交代的每个任务。</p><p>实时感知各步骤</p><p>SOLO 会通过 Plan、待办清单等结构化信息和你对齐目标，从执行进度到后续规划，每一步都透明可溯。实时跟随让你全程清晰地查看工作进展，并且可随时介入调整，真正实现对开发全流程的自主掌控。</p><p>随时掌控上下文</p><p>无论是终端、编辑器、文档、浏览器还是 Figma，SOLO 有机整合所有上下文。智能体为每项任务选取最适配的上下文与工具，即时响应你的每一步操作。在 SOLO 模式下，你的每一步探索，都在及时的反馈中高效推进。</p><p>多线程并行工作</p><p>SOLO 支持多任务并行处理，打破单线程工作局限，显著提升工作效率。任务状态直观可视，使复杂项目开发全程井然有序，精准掌控每一步进度。</p><hr><p>这次它的solo模式里新增了一个“压缩”(压缩上下文)的功能，这让我有些困惑——但它究竟是如何实现上下文压缩的呢？更让我觉得意外的是，我只是问了一个简单的问题，它就已经消耗了34%的上下文额度。如果是像四大名著那种长文本分析的场景，通常很快就会耗尽100%的上下文，等下我得测试一下。</p><p>让豆包搜集资料先解释一下（以下内容为AI搜索结果）：</p><h2 id="TRAE-SOLO模式上下文压缩机制"><a href="#TRAE-SOLO模式上下文压缩机制" class="headerlink" title="TRAE SOLO模式上下文压缩机制"></a>TRAE SOLO模式上下文压缩机制</h2><h3 id="一、什么是上下文压缩？"><a href="#一、什么是上下文压缩？" class="headerlink" title="一、什么是上下文压缩？"></a>一、什么是上下文压缩？</h3><p>TRAE SOLO模式的”压缩”指的是<strong>上下文压缩引擎</strong>，这是SOLO正式版(11月12日国际版&#x2F;11月25日中国版)的核心技术之一。它能将TB级代码库特征压缩至AI模型可处理的token窗口内，使智能体在340万行代码的超大型项目中仍保持90%的准确率。</p><h3 id="二、为什么需要压缩？"><a href="#二、为什么需要压缩？" class="headerlink" title="二、为什么需要压缩？"></a>二、为什么需要压缩？</h3><ul><li><strong>模型限制</strong>：大语言模型处理token数量有限，无法直接处理完整大型代码库</li><li><strong>效率需求</strong>：提升AI响应速度，减少计算资源消耗</li><li><strong>精准聚焦</strong>：让AI快速定位与当前任务相关的代码片段，避免”信息噪音”</li></ul><h3 id="三、压缩机制的实现原理"><a href="#三、压缩机制的实现原理" class="headerlink" title="三、压缩机制的实现原理"></a>三、压缩机制的实现原理</h3><h4 id="1-三层上下文分级架构"><a href="#1-三层上下文分级架构" class="headerlink" title="1. 三层上下文分级架构"></a>1. 三层上下文分级架构</h4><p>TRAE将代码库划分为清晰的三层结构：</p><table><thead><tr><th>层级</th><th>内容</th><th>用途</th></tr></thead><tbody><tr><td><strong>Code</strong></td><td>具体代码片段、函数、类</td><td>最细粒度的上下文，用于精确代码理解和生成</td></tr><tr><td><strong>File</strong></td><td>完整文件(如一个JavaScript文件)</td><td>中等粒度，用于文件级别的修改和分析</td></tr><tr><td><strong>Folder</strong></td><td>目录结构、项目模块</td><td>粗粒度，用于整体架构理解和任务规划</td></tr></tbody></table><h4 id="2-索引构建与特征提取"><a href="#2-索引构建与特征提取" class="headerlink" title="2. 索引构建与特征提取"></a>2. 索引构建与特征提取</h4><ul><li><strong>自动索引</strong>：对≤5000文件的项目自动构建代码索引</li><li><strong>静态分析</strong>：通过词法分析、语法树构建提取代码结构特征</li><li><strong>语义理解</strong>：识别变量、函数、类之间的关系，建立项目”知识图谱”</li></ul><h4 id="3-智能压缩算法"><a href="#3-智能压缩算法" class="headerlink" title="3. 智能压缩算法"></a>3. 智能压缩算法</h4><p>TRAE采用多种压缩策略组合：</p><p><strong>a) 精准信息提取</strong>：</p><ul><li>基于任务分析，只提取与当前开发任务相关的代码片段</li><li>使用”注意力机制”识别代码库中的关键部分(如频繁修改的核心模块)</li></ul><p><strong>b) 分层过滤</strong>：</p><ul><li>先从项目整体架构(Folder层)入手，确定相关模块</li><li>再深入到具体文件(File层)，最后聚焦到代码片段(Code层)</li><li>每一层都进行”相关性筛选”，减少冗余信息</li></ul><p><strong>c) 向量表示压缩</strong>：</p><ul><li>将代码特征转换为高维向量(embedding)</li><li>应用降维技术(如PCA)将向量空间压缩</li><li>建立快速检索索引，使AI能在毫秒级定位相关代码</li></ul><h3 id="四、压缩机制的工作流程"><a href="#四、压缩机制的工作流程" class="headerlink" title="四、压缩机制的工作流程"></a>四、压缩机制的工作流程</h3><p>当你在SOLO模式中启动一个任务(如”添加用户登录功能”)：</p><ol><li><strong>需求分析</strong>：SOLO Coder&#x2F;Builder智能体解析任务，确定需要的上下文范围</li><li><strong>上下文检索</strong>：<ul><li>压缩引擎从代码库索引中查找与”用户登录”相关的所有元素</li><li>按相关性排序，优先提取最相关的代码片段和架构信息</li></ul></li><li><strong>压缩转换</strong>：<ul><li>将检索到的内容压缩成模型可处理的token序列(约4096-8192 token)</li><li>生成”上下文摘要”，包含关键代码结构和调用关系</li></ul></li><li><strong>智能体处理</strong>：<ul><li>AI利用压缩后的上下文进行代码生成、调试和优化</li><li>在生成代码时，智能体持续与压缩引擎交互，获取更多细节信息</li></ul></li><li><strong>结果应用</strong>：<ul><li>生成的代码变更会应用到原项目中</li><li>压缩引擎跟踪这些变更，更新索引，确保下次任务的上下文准确性</li></ul></li></ol><h3 id="五、压缩技术的实际效果"><a href="#五、压缩技术的实际效果" class="headerlink" title="五、压缩技术的实际效果"></a>五、压缩技术的实际效果</h3><ul><li><strong>处理超大型项目</strong>：在340万行代码的金融系统中仍保持90%准确率</li><li><strong>效率提升</strong>：<ul><li>任务交付速度提升200%</li><li>复杂业务场景效率提升300%</li></ul></li><li><strong>资源优化</strong>：<ul><li>减少AI模型调用次数和token消耗(降低约70%)</li><li>显著缩短响应时间(平均减少40-60%)</li></ul></li><li><strong>智能协作</strong>：<ul><li>支持多智能体并行开发时的上下文共享与同步</li><li>确保不同任务间的上下文一致性，避免”信息孤岛”</li></ul></li></ul><h3 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h3><p>TRAE SOLO模式的上下文压缩是<strong>AI编程领域的突破性技术</strong>，它解决了大型代码库与AI模型处理能力之间的矛盾，使AI能真正”理解”和”掌控”企业级项目。</p><p>这项技术不仅是TRAE SOLO模式”随时可掌握(Responsive Context)”理念的核心支撑，也为AI编程工具如何处理复杂项目开辟了新路径。</p><p><em>注：以上信息基于TRAE官方发布的技术白皮书v2.3和SOLO模式文档，部分实现细节(如具体压缩算法参数)为商业机密，未完全公开。</em></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;TRAE-SOLO模式上线了&quot;&gt;&lt;a href=&quot;#TRAE-SOLO模式上线了&quot; class=&quot;headerlink&quot; title=&quot;TRAE SOLO模式上线了&quot;&gt;&lt;/a&gt;TRAE SOLO模式上线了&lt;/h1&gt;&lt;p&gt;TRAE SOLO模式上线了，更智能、更大众</summary>
-      
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
-    
-    <category term="vibecoding" scheme="https://flashj.cn/tags/vibecoding/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Trae 搭配 Obsidian日记 真好用</title>
-    <link href="https://flashj.cn/trae-diary-agent.html"/>
-    <id>https://flashj.cn/trae-diary-agent.html</id>
-    <published>2025-11-23T03:46:00.000Z</published>
-    <updated>2025-11-23T03:55:18.367Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Trae-搭配-Obsidian日记-效果"><a href="#Trae-搭配-Obsidian日记-效果" class="headerlink" title="Trae 搭配 Obsidian日记 效果"></a>Trae 搭配 Obsidian日记 效果</h1><p>我在最近3个月内也用过有一款开然的呃项目。叫什么”Day*”之类的名字，啊，它运行起来之后是呃一直监测我的屏幕，呃，把我的所有操作录制成一个一秒钟一帧的视频，然后会帮我做一天的总结。我现在想不起来这是个什么名字了。快帮我搜索我最近三个月的日记，找一找吧。</p><p>找到了！您提到的那个名为”Day*”的屏幕监测项目是<strong>Dayflow</strong>。根据您2025年9月26日的日记记录，这是一个刚开源不久就在GitHub上获得1500+ Star的工具。</p><p>Dayflow的主要功能和特点：</p><ol><li><strong>屏幕录制</strong>：它会监测您的屏幕活动，以1080P分辨率录制视频</li><li><strong>录制格式</strong>：1秒1帧的录制方式，非常节省空间（15秒视频只有400多KB）</li><li><strong>自动分析</strong>：每15分钟会对录制内容进行分析</li><li><strong>每日总结</strong>：能够为您提供一天的工作&#x2F;活动总结</li><li><strong>本地部署</strong>：支持本地使用，推荐搭配Qwen 2.5-VL 3B模型</li></ol><p>您在日记中还提到了它的数据存储位置和一些使用体验，包括一开始遇到的沙盒路径问题，以及后续成功使用后看到的自动分析效果。这个工具正是您想要找的那个能”录制一秒一帧的视频，然后会帮我做一天的总结”的应用。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202511231147356.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Trae-搭配-Obsidian日记-效果&quot;&gt;&lt;a href=&quot;#Trae-搭配-Obsidian日记-效果&quot; class=&quot;headerlink&quot; title=&quot;Trae 搭配 Obsidian日记 效果&quot;&gt;&lt;/a&gt;Trae 搭配 Obsidian日记 效果&lt;/</summary>
-      
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
-    
-    <category term="智能体" scheme="https://flashj.cn/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
-    
-    <category term="obsidian" scheme="https://flashj.cn/tags/obsidian/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025年11月AI大模型上下文窗口信息汇总</title>
-    <link href="https://flashj.cn/llm-context-window-2025-summary.html"/>
-    <id>https://flashj.cn/llm-context-window-2025-summary.html</id>
-    <published>2025-11-04T12:22:00.000Z</published>
-    <updated>2025-11-04T13:33:17.295Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Claude的“全文粘贴”建议与大模型上下文窗口实测"><a href="#Claude的“全文粘贴”建议与大模型上下文窗口实测" class="headerlink" title="Claude的“全文粘贴”建议与大模型上下文窗口实测"></a>Claude的“全文粘贴”建议与大模型上下文窗口实测</h1><p>下午我在看那个MCP相关的文档资料的时候，发现Claude的官方文档里面写的「MCP的开发可以用大模型协助」开发。他那个文档里面居然写说把他的整个文档全部都复制到Claude的对话里面去。其中一篇文档库的全文就已经超过5万字了，其中很多内容还只是索引。这一看就不适合粘贴到对话里去啊，但是它的文档里居然写着直接粘贴到对话里去。</p><p>我就无尽好奇啊，这Claude这么强的吗？</p><p>因为我平时主要是用豆包嘛，我就跟豆包App里面试了一下，很明显豆包的上下文就超出了。</p><p>豆包倒是也挺了解情况的，它直接回复我：</p><blockquote><p>It seems the content you provided got cut off in the middle of the “Build an MCP client” section, specifically in the Python tab where an image is referenced but not fully included. However, based on the information available, I can provide a summary and key points about the Model Context Protocol (MCP) and the client-building tutorial.</p></blockquote><p>而在Trae里的Builder也提示只能支持6000字符提问。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202511042035409.png"></p><p>当然平时正常使用中，像这种比较多的字符，肯定都是放在文档里面，然后再去提问。这是基操。</p><p>但是既然提到说，哎～可以直接粘贴在对话里？！好家伙，<strong>这么富裕的仗😜，我这辈子没打过</strong>，我也想了解一下。</p><p>因为我这用不了Claude的呀，所以我就很纳闷，哎，这Claude这么强的吗？十万字符级别的资料目录可以直接写在问题提示词里发过去的？</p><p>嗯，后来就是好奇，就让AI帮我统计了一下。在目前市面上各个主流的商业以及开源的大模型，上下文窗口都是多大。结果如下：</p><h1 id="AI大模型上下文窗口信息汇总网页版："><a href="#AI大模型上下文窗口信息汇总网页版：" class="headerlink" title="AI大模型上下文窗口信息汇总网页版："></a>AI大模型上下文窗口信息汇总网页版：</h1><p><a href="https://www.mousebomb.org/reports/llm-context-window-2025-summary.html">2025 年 11 月 AI 大模型上下文窗口信息汇总</a></p><h1 id="AI大模型上下文窗口信息汇总文字版："><a href="#AI大模型上下文窗口信息汇总文字版：" class="headerlink" title="AI大模型上下文窗口信息汇总文字版："></a>AI大模型上下文窗口信息汇总文字版：</h1><p>随着人工智能技术的快速发展，大语言模型（LLM）已成为推动各行业数字化转型的核心驱动力。截至 2025 年 11 月，全球 AI 大模型领域呈现出<strong>开源与商业化并行发展</strong>的格局，模型能力不断突破，特别是在<strong>上下文窗口</strong>这一关键指标上取得了显著进展。</p><p>上下文窗口决定了模型能够处理的文本长度，直接影响其在长文档分析、复杂对话、代码理解等场景的应用能力。从早期的几百个 token 发展到如今的<strong>千万级 token</strong>，这一技术突破不仅提升了模型的 “记忆” 能力，更为 AI 应用开辟了全新的可能性。本文将系统梳理截至 2025 年 11 月已发布的主要 AI 大模型，重点关注其上下文窗口的具体参数，为开发者和企业用户提供全面的技术参考。</p><h2 id="一、开源大模型上下文窗口分析"><a href="#一、开源大模型上下文窗口分析" class="headerlink" title="一、开源大模型上下文窗口分析"></a>一、开源大模型上下文窗口分析</h2><h3 id="1-1-Meta-Llama-系列"><a href="#1-1-Meta-Llama-系列" class="headerlink" title="1.1 Meta Llama 系列"></a>1.1 Meta Llama 系列</h3><p>Meta 的 Llama 系列一直是开源大模型的标杆。<strong>Llama 3.1</strong>作为 2024 年发布的版本，支持<strong>128K tokens</strong>的上下文窗口，可处理约 5 万字的输入内容。然而，其在市场上的表现并不理想，发布一个月后 Hugging Face 下载量仅 360 万次，远低于 Llama 3 发布首月的 580 万次。</p><p>真正的突破来自于<strong>Llama 4 系列</strong>（2025 年 4 月发布），该系列包含三个版本，每个版本在上下文窗口上有显著差异：</p><table><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>模型版本</td><td>发布时间</td><td>上下文窗口</td><td>特点说明</td></tr><tr><td>Llama 4 Scout</td><td>2025 年 4 月</td><td><strong>1000 万 tokens</strong></td><td>业界最长，支持 10M tokens，相当于 15000 页文本</td></tr><tr><td>Llama 4 Maverick</td><td>2025 年 4 月</td><td><strong>100 万 tokens</strong></td><td>约 1500 页文本，可在单张 H100 GPU 上运行</td></tr><tr><td>Llama 4 Behemoth</td><td>仍在训练</td><td>未公布</td><td>超大规模版本</td></tr></tbody></table><p>Llama 4 Scout 的 1000 万 token 上下文窗口是通过<strong>交错旋转位置编码（iRoPE）技术实现的</strong><strong>，这一技术突破使其能够处理极长的文档或对话历史。值得注意的是，Llama 4 是 Meta 首个采用混合专家（MoE）架构</strong>的模型，同时具备原生多模态能力。</p><h3 id="1-2-阿里巴巴-Qwen-系列"><a href="#1-2-阿里巴巴-Qwen-系列" class="headerlink" title="1.2 阿里巴巴 Qwen 系列"></a>1.2 阿里巴巴 Qwen 系列</h3><p>阿里巴巴的 Qwen 系列是中国开源大模型的代表，在 2025 年推出了多个版本，展现出强大的长文本处理能力：</p><p><strong>Qwen 3 基础系列</strong>：</p><ul><li><p>标准版本支持<strong>32K tokens</strong>的上下文窗口</p></li><li><p>中大型模型（8B 及以上）扩展至<strong>128K tokens</strong></p></li><li><p>较小模型（0.6B、1.7B）默认支持 32K 上下文</p></li></ul><p><strong>Qwen 3 增强版本</strong>：</p><ul><li><p>Qwen3-Coder：支持<strong>256K tokens</strong>原生上下文，通过 YaRN 技术可扩展至<strong>1M tokens</strong></p></li><li><p>Qwen3-235B：支持<strong>262,144 tokens</strong>（约 256K）上下文长度</p></li><li><p>Qwen3-VL（视觉语言模型）：原生支持 256K tokens，可扩展至百万 tokens</p></li></ul><p>Qwen 系列的技术特点包括：</p><ul><li><p>采用<strong>滑动窗口策略</strong>，窗口长度为 4096，每个 token 可看到前面 4096 个 token 的上下文</p></li><li><p>通过<strong>YaRN（Yet Another RoPE Extension）技术</strong>实现超长上下文扩展</p></li><li><p>在 Hugging Face 的开源模型榜单中，排名前十的开源大模型都是基于 Qwen 开源模型二次训练的衍生模型</p></li></ul><h3 id="1-3-深度求索-DeepSeek-系列"><a href="#1-3-深度求索-DeepSeek-系列" class="headerlink" title="1.3 深度求索 DeepSeek 系列"></a>1.3 深度求索 DeepSeek 系列</h3><p>DeepSeek 系列模型在 2025 年展现出强劲的性能和灵活的上下文配置：</p><table><thead><tr><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>模型版本</td><td>基础上下文</td><td>最大输入</td><td>最大输出</td><td>扩展能力</td></tr><tr><td>DeepSeek V3</td><td>64K-128K tokens</td><td>57,344 tokens</td><td>8,192 tokens</td><td>可扩展至 160K</td></tr><tr><td>DeepSeek R1</td><td>64K-128K tokens</td><td>57,344 tokens</td><td>32,768 tokens</td><td>可扩展至 160K</td></tr></tbody></table><p>具体参数说明：</p><ul><li><p><strong>基础版本</strong>：DeepSeek V1 的上下文长度为 65,792 tokens，最大输入 57,344 tokens，最大输出 8,192 tokens</p></li><li><p><strong>标准版本</strong>：DeepSeek V3 和 R1 默认支持<strong>128K tokens</strong>上下文</p></li><li><p><strong>扩展版本</strong>：通过 PPIO 等服务，可将上下文窗口扩展至<strong>160K tokens</strong>，最大输出也扩展至 160K tokens</p></li><li><p><strong>特殊说明</strong>：DeepSeek 模型包含思考和非思考两种模式，两种模式均支持 128K 上下文</p></li></ul><h3 id="1-4-月之暗面-Kimi-系列"><a href="#1-4-月之暗面-Kimi-系列" class="headerlink" title="1.4 月之暗面 Kimi 系列"></a>1.4 月之暗面 Kimi 系列</h3><p>Kimi 系列模型在 2025 年经历了显著的上下文窗口升级：</p><p><strong>Kimi K2 基础版本</strong>（2025 年 7 月发布）：</p><ul><li><p>支持<strong>128K tokens</strong>上下文长度</p></li><li><p>可处理约 25 万个中文字符或 10 万个英文单词</p></li><li><p>采用 MoE 架构，1 万亿参数</p></li></ul><p><strong>Kimi K2 增强版本</strong>（2025 年 9 月更新）：</p><ul><li><p>kimi-k2-0905-preview：上下文长度扩展至<strong>256K tokens</strong></p></li><li><p>能够流畅处理约 20 万字的中文内容，相当于一整本中篇小说或专业报告</p></li><li><p>在 0711 版本基础上增强了 Agentic Coding 能力和上下文理解能力</p></li></ul><p>Kimi K2 的技术特点：</p><ul><li><p>采用<strong>MLA 注意力机制</strong>结合 SwiGLU 激活函数，在 128K 上下文窗口中实现 89.8% 的 IFEval 严格模式评分</p></li><li><p>支持 ToolCalls 和 JSON Mode，在代码生成与智能体能力上实现突破性提升</p></li></ul><h3 id="1-5-Mistral-系列"><a href="#1-5-Mistral-系列" class="headerlink" title="1.5 Mistral 系列"></a>1.5 Mistral 系列</h3><p>Mistral AI 在 2025 年推出了多个高性能模型：</p><p><strong>Mistral Small 3.1&#x2F;3.2</strong>（2025 年 3 月发布）：</p><ul><li><p>支持<strong>128K tokens</strong>上下文窗口</p></li><li><p>240 亿参数，可在单张 RTX 4090 或 32GB 内存的 Mac 设备上运行</p></li><li><p>推理速度达到<strong>每秒 150 tokens</strong></p></li><li><p>在性能上超越 GPT-4o Mini、Gemma 3 等竞品</p></li></ul><p><strong>Mistral Magistral 系列</strong>（2025 年 6 月发布）：</p><ul><li><p>Magistral-Small 和 Magistral-Medium</p></li><li><p>自称为 “欧洲第一款理性推理大模型”</p></li><li><p>采用纯强化学习训练</p></li></ul><p><strong>Mistral Code</strong>（2025 年 6 月发布）：</p><ul><li><p>专为企业开发者设计的编码助手</p></li><li><p>支持 JetBrains 和 VS Code 平台</p></li><li><p>处于私人测试阶段</p></li></ul><h3 id="1-6-其他重要开源模型"><a href="#1-6-其他重要开源模型" class="headerlink" title="1.6 其他重要开源模型"></a>1.6 其他重要开源模型</h3><p><strong>MiniMax-M2</strong>（2025 年 10 月发布）：</p><ul><li><p>在全球权威测评榜单 Artificial Analysis（AA）中总分位列<strong>全球前五、开源第一</strong></p></li><li><p>真正进入 “可与全球顶尖模型竞争” 的阶段</p></li><li><p>API 成本极低</p></li></ul><p><strong>百度文心大模型 4.5</strong>（2025 年 3 月发布）：</p><ul><li><p>将于 2025 年 6 月 30 日正式开源</p></li><li><p>上下文窗口扩展至<strong>128K tokens</strong>，约 100 万字</p></li><li><p>采用 18 层 transformer 架构，配备 16 个注意力头</p></li><li><p>单卡显存占用低至 2.1GB（INT4 量化后）</p></li></ul><p><strong>IBM Granite 系列</strong>：</p><ul><li><p>完全开源，采用 Apache v.2 许可证</p></li><li><p>Granite 34B：340 亿参数，开源免费</p></li></ul><p><strong>Prime Intellect 模型</strong>（2024 年 11 月 22 日发布）：</p><ul><li><p>通过去中心化方式训练完成 10B 模型</p></li><li><p>11 月 30 日开源了基础模型、检查点、后训练模型、数据等所有内容</p></li><li><p>目标是将模型扩展到前沿规模，最终实现开源 AGI</p></li></ul><h2 id="二、商业化大模型上下文窗口分析"><a href="#二、商业化大模型上下文窗口分析" class="headerlink" title="二、商业化大模型上下文窗口分析"></a>二、商业化大模型上下文窗口分析</h2><h3 id="2-1-OpenAI-GPT-系列"><a href="#2-1-OpenAI-GPT-系列" class="headerlink" title="2.1 OpenAI GPT 系列"></a>2.1 OpenAI GPT 系列</h3><p>OpenAI 在 2025 年推出了多个重要版本，每个版本在上下文窗口上有所差异：</p><table><thead><tr><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>模型版本</td><td>发布时间</td><td>上下文窗口</td><td>最大输出</td><td>特点说明</td></tr><tr><td>GPT-4o</td><td>已发布</td><td>128,000 tokens</td><td>16,384 tokens</td><td>主流版本</td></tr><tr><td>GPT-4o mini</td><td>已发布</td><td>128,000 tokens</td><td>16,384 tokens</td><td>轻量化版本</td></tr><tr><td>GPT-4.5 “Orion”</td><td>2025 年 2 月 27 日</td><td>≥128,000 tokens</td><td>未公布</td><td>研究预览版</td></tr><tr><td>GPT-4.1 系列</td><td>2025 年 4 月 15 日</td><td>百万 tokens</td><td>未公布</td><td>包含 nano、mini 版本</td></tr></tbody></table><p><strong>GPT-4.5 “Orion”</strong>（2025 年 2 月 27 日发布）：</p><ul><li><p>内部代号为 “猎户座”，是 OpenAI 迄今为止最大的模型</p></li><li><p>上下文窗口 <strong>≥128K tokens</strong>，与 GPT-4o 相同</p></li><li><p>部分资料显示支持<strong>256K tokens</strong>（约 50 万字）</p></li><li><p>具有更高的 “情商”，在写作润色、编程和解决实际问题等任务中表现出色</p></li><li><p>采用扩大无监督学习规模的技术路径</p></li></ul><p><strong>GPT-4.1 系列</strong>（2025 年 4 月 15 日发布）：</p><ul><li><p>包含 GPT-4.1、GPT-4.1 mini 和 GPT-4.1 nano 三个版本</p></li><li><p>支持<strong>百万 token</strong>上下文窗口</p></li><li><p>史上最小、最快、最便宜的三大模型</p></li></ul><h3 id="2-2-Anthropic-Claude-系列"><a href="#2-2-Anthropic-Claude-系列" class="headerlink" title="2.2 Anthropic Claude 系列"></a>2.2 Anthropic Claude 系列</h3><p>Anthropic 的 Claude 系列在 2025 年实现了重大突破：</p><p><strong>Claude Opus 系列</strong>：</p><ul><li><p>Claude Opus 4：支持<strong>200,000 tokens</strong>（200K）上下文窗口</p></li><li><p>总可用上下文窗口代表存储对话历史和生成新输出的最大容量</p></li><li><p>输入阶段包含所有之前的对话历史加上当前用户消息</p></li><li><p>输出阶段生成成为未来输入一部分的文本响应</p></li></ul><p><strong>Claude Sonnet 系列</strong>：</p><ul><li><p>Claude Sonnet 3.7：首款混合推理模型，2025 年 2 月推出</p></li><li><p>Claude Sonnet 4：支持高达<strong>100 万 tokens</strong>的上下文窗口</p></li><li><p>Claude Sonnet 4.5：同样支持 100 万 tokens 上下文窗口，具有上下文感知功能</p></li></ul><p><strong>Claude 系列的技术特点</strong>：</p><ul><li><p>支持扩展思考（Extended Thinking）功能，思考块不会作为输入 token 传递到后续轮次</p></li><li><p>有效的上下文窗口计算：context_window &#x3D; (input_tokens - previous_thinking_tokens) + current_turn_tokens</p></li><li><p>1M 令牌上下文窗口目前为测试版功能，超过 200K 令牌的请求会自动按高级费率收费（输入 2 倍，输出 1.5 倍定价）</p></li></ul><h3 id="2-3-Google-Gemini-系列"><a href="#2-3-Google-Gemini-系列" class="headerlink" title="2.3 Google Gemini 系列"></a>2.3 Google Gemini 系列</h3><p>Google 的 Gemini 系列在 2025 年推出了多个版本，展现出强大的长文本处理能力：</p><table><thead><tr><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>模型版本</td><td>上下文窗口</td><td>输入限制</td><td>输出限制</td><td>特点说明</td></tr><tr><td>Gemini 2.5 Pro</td><td>100 万 tokens</td><td>1,048,576 tokens</td><td>65,535 tokens</td><td>高级订阅版</td></tr><tr><td>Gemini 2.5 Flash</td><td>100 万 tokens</td><td>-</td><td>-</td><td>混合推理模型</td></tr><tr><td>Gemini 2.5 Flash-Lite</td><td>100 万 tokens</td><td>-</td><td>-</td><td>低成本版本</td></tr><tr><td>Gemini 2.5 Ultra (企业版)</td><td>100 万 + tokens</td><td>-</td><td>-</td><td>流式输出</td></tr><tr><td>Gemini 2.5（标准版）</td><td>32,000 tokens</td><td>-</td><td>-</td><td>免费版本</td></tr></tbody></table><p><strong>Gemini 2.5 Pro</strong>：</p><ul><li><p>支持<strong>100 万 tokens</strong>上下文窗口，可处理约 750,000 字或 1,500 页文本</p></li><li><p>计划推出<strong>200 万 tokens</strong>的上下文窗口</p></li><li><p>在 Vertex AI 平台上，支持最多 1,048,576 个输入 tokens 和 65,535 个输出 tokens</p></li><li><p>采用双向 token 预算分配，例如 256K 窗口中，180K tokens 用于输入，76K 用于输出</p></li></ul><p><strong>Gemini 2.5 Flash</strong>：</p><ul><li><p>首个混合推理模型，支持 1M token 上下文窗口，具有思考预算（thinking budgets）</p></li><li><p>多模态能力出色，可处理图像、音频和视频</p></li></ul><p><strong>Gemini 2.5 Flash-Lite</strong>：</p><ul><li><p>支持 100 万 token 上下文长度</p></li><li><p>成本极低，每百万 token 仅 0.01 美元</p></li><li><p>响应时间压缩至毫秒级</p></li></ul><h3 id="2-4-中国商业化模型"><a href="#2-4-中国商业化模型" class="headerlink" title="2.4 中国商业化模型"></a>2.4 中国商业化模型</h3><p><strong>百度文心一言系列</strong>：</p><ul><li><p>文心一言 4.0：深度绑定政企市场，2025 年覆盖 98% 部委合规标准</p></li><li><p>文心一言 4.5 Turbo：</p></li><li><p>上下文窗口扩展至<strong>128K tokens</strong>，相当于一次性处理 20 万字的文本内容</p></li><li><p>原生多模态大模型，实现文本、图像、音频、视频的跨模态推理</p></li><li><p>数学推理准确率达 89.3%</p></li><li><p>开放 500 + 插件，日均调用量超 15 亿次</p></li><li><p>2025 年 4 月全面免费后用户规模突破 5 亿</p></li></ul><p><strong>阿里巴巴通义千问</strong>：</p><ul><li><p>通义千问 Turbo：平衡性能与成本，适合高频调用场景</p></li><li><p>定价：输入 0.002 元 &#x2F; 千 tokens，输出 0.006 元 &#x2F; 千 tokens</p></li></ul><p><strong>字节跳动豆包（Doubao）</strong>：</p><ul><li><p>豆包大模型 V1.6：提供最高<strong>256K tokens</strong>上下文</p></li><li><p>推出 Flash 推理，首 Token 延迟约 10ms</p></li><li><p>定价：通用模型 0.0008 元 &#x2F; 千 tokens（32K 窗口），0.005 元 &#x2F; 千 tokens（128K 窗口）</p></li><li><p>行业最低价，1 元可处理 125 万 tokens（约 200 万汉字）</p></li></ul><h3 id="2-5-其他商业化模型"><a href="#2-5-其他商业化模型" class="headerlink" title="2.5 其他商业化模型"></a>2.5 其他商业化模型</h3><p><strong>xAI Grok 系列</strong>：</p><ul><li><p>Grok 3：2025 年 2 月 17 日发布，引入重大改进</p></li><li><p>Grok 4：</p></li><li><p>支持<strong>256,000 tokens</strong>（256K）上下文窗口</p></li><li><p>Grok 4 Heavy 版本同样支持 256K tokens</p></li><li><p>部分资料显示 Grok 4 Fast 支持<strong>200 万 tokens</strong>超长上下文（相当于 1500 页文档）</p></li><li><p>推理速度达每秒 344 tokens</p></li><li><p>标志性幽默应答风格借鉴《银河系漫游指南》</p></li></ul><p><strong>Cohere Command 系列</strong>：</p><ul><li><p>Command R：</p></li><li><p>支持<strong>128,000 tokens</strong>上下文长度</p></li><li><p>在检索增强生成（RAG）和工具使用任务上具有高精度</p></li><li><p>低延迟和高吞吐量</p></li><li><p>支持 10 种关键语言</p></li><li><p>Command A：</p></li><li><p>上下文长度达到<strong>256,000 tokens</strong>（256K），是前身的两倍</p></li><li><p>相当于 600 页文本</p></li><li><p>每秒可生成 156 个 token，分别是 GPT-4o 的 1.75 倍、DeepSeek-V3 的 2.4 倍</p></li><li><p>仅需两张 GPU 即可运行</p></li></ul><h2 id="三、上下文窗口技术分析与发展趋势"><a href="#三、上下文窗口技术分析与发展趋势" class="headerlink" title="三、上下文窗口技术分析与发展趋势"></a>三、上下文窗口技术分析与发展趋势</h2><h3 id="3-1-主流上下文窗口标准"><a href="#3-1-主流上下文窗口标准" class="headerlink" title="3.1 主流上下文窗口标准"></a>3.1 主流上下文窗口标准</h3><p>通过对上述模型的分析可以发现，<strong>128K tokens</strong>已成为 2025 年大模型的主流上下文窗口标准。这一标准在开源和商业化模型中都得到了广泛采用：</p><p><strong>开源模型阵营</strong>：</p><ul><li><p>Qwen3 系列将 128k 作为上下文标配</p></li><li><p>DeepSeek V3&#x2F;R1 的官方最大上下文长度是 128k</p></li><li><p>Kimi K2 的上下文长度也是 128k</p></li><li><p>Llama 3.1 支持 128K 上下文</p></li><li><p>Mistral Small 3.1 支持 128K 上下文</p></li><li><p>Cohere Command R 支持 128K 上下文</p></li></ul><p><strong>商业化模型阵营</strong>：</p><ul><li><p>GPT-4-Turbo、GPT-4o 都支持 128k 上下文窗口</p></li><li><p>Gemini 1.5 Pro 以 128k 作为标准窗口（企业版可选更高）</p></li></ul><h3 id="3-2-超长上下文技术突破"><a href="#3-2-超长上下文技术突破" class="headerlink" title="3.2 超长上下文技术突破"></a>3.2 超长上下文技术突破</h3><p>尽管 128K 是主流标准，但许多模型正在探索更长的上下文窗口：</p><p><strong>技术突破方向</strong>：</p><ol><li><p><strong>YaRN 技术</strong>：如 Qwen3-235B-A22B 通过融合 YaRN 技术，将上下文窗口从原生 32,768 token 扩展至 131,072 token</p></li><li><p><strong>MoE 架构</strong>：通过混合专家架构实现更高效的长文本处理</p></li><li><p><strong>位置编码优化</strong>：如 Llama 4 Scout 采用交错旋转位置编码（iRoPE）实现 1000 万 token 上下文</p></li></ol><p><strong>超长上下文模型</strong>：</p><ul><li><p><strong>Llama 4 Scout</strong>：1000 万 tokens（业界最长）</p></li><li><p><strong>Gemini 2.5 系列</strong>：100 万 tokens（计划扩展至 200 万）</p></li><li><p><strong>Claude Sonnet 4&#x2F;4.5</strong>：100 万 tokens</p></li><li><p><strong>Grok 4 Fast</strong>：200 万 tokens（部分资料显示）</p></li></ul><h3 id="3-3-Token-换算比例与成本分析"><a href="#3-3-Token-换算比例与成本分析" class="headerlink" title="3.3 Token 换算比例与成本分析"></a>3.3 Token 换算比例与成本分析</h3><p>了解 token 与实际字数的换算关系对成本控制至关重要：</p><p><strong>Token 换算比例</strong>：</p><ul><li><p>1 个英文字符 ≈ 0.3 个 token</p></li><li><p>1 个中文字符 ≈ 0.6 个 token</p></li><li><p>中文：1 个汉字 ≈ 1 个 token</p></li><li><p>英文：1 个单词 ≈ 0.75 个 token</p></li></ul><p><strong>成本差异分析</strong>：</p><ul><li><p>输出 token 的价格通常是输入 token 的 2-5 倍</p></li><li><p>原因：输出需要逐个 token 生成，计算量更大，GPU 算力消耗约为输入的 3-5 倍</p></li><li><p>示例：GPT-4 Turbo 输入(0.01&#x2F;1K tokens，输出)0.03&#x2F;1K tokens；Claude 3 Opus 输入(0.015&#x2F;1K，输出)0.075&#x2F;1K</p></li></ul><h3 id="3-4-上下文窗口对应用场景的影响"><a href="#3-4-上下文窗口对应用场景的影响" class="headerlink" title="3.4 上下文窗口对应用场景的影响"></a>3.4 上下文窗口对应用场景的影响</h3><p>不同的上下文窗口长度适用于不同的应用场景：</p><p><strong>短上下文（&lt; 32K）</strong>：</p><ul><li><p>常规对话</p></li><li><p>轻量级任务</p></li><li><p>简单问答</p></li></ul><p><strong>标准上下文（32K-128K）</strong>：</p><ul><li><p>长文档摘要</p></li><li><p>代码生成</p></li><li><p>多轮对话</p></li><li><p>复杂推理</p></li><li><p>学术论文分析</p></li></ul><p><strong>超长上下文（&gt; 128K）</strong>：</p><ul><li><p>整本书籍处理</p></li><li><p>大型代码库分析</p></li><li><p>多文档协同处理</p></li><li><p>超长对话历史</p></li><li><p>基因组序列分析</p></li></ul><h3 id="3-5-技术发展趋势"><a href="#3-5-技术发展趋势" class="headerlink" title="3.5 技术发展趋势"></a>3.5 技术发展趋势</h3><ol><li><p><strong>从追求长度到追求效率</strong>：未来竞争焦点将从单纯的 “窗口长度” 转向 “信息利用效率”</p></li><li><p><strong>专业化小模型兴起</strong>：2025 年 10 月 Andrej Karpathy 发布的 nanochat 工具，允许在单个 GPU 上用不到 100 美元成本训练类 ChatGPT 模型</p></li><li><p><strong>模型服务优化</strong>：vLLM、SGLang、TensorRT-LLM 等高性能推理引擎快速发展</p></li><li><p><strong>多模态融合</strong>：文本、图像、视频、音频统一处理成为趋势</p></li><li><p><strong>推理成本优化</strong>：如何降低单位推理成本成为核心驱动力</p></li></ol><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>截至 2025 年 11 月，全球 AI 大模型在上下文窗口技术上取得了突破性进展。从早期的几千个 token 发展到如今的<strong>千万级 token</strong>，这一技术飞跃不仅提升了模型的 “记忆” 能力，更为 AI 应用开辟了全新的可能性。</p><p><strong>开源模型</strong>方面，中国力量正在崛起。Qwen 系列、DeepSeek、Kimi 等模型在技术创新和性能表现上已达到国际先进水平，特别是在超长上下文处理能力上展现出独特优势。<strong>商业化模型</strong>则在追求极致性能的同时，通过分层定价策略满足不同用户需求。</p><p>展望未来，随着技术的不断进步，我们可以期待：</p><ul><li><p><strong>更长的上下文窗口</strong>：从百万级向千万级甚至更高发展</p></li><li><p><strong>更智能的上下文管理</strong>：模型将具备更强的上下文感知和优化能力</p></li><li><p><strong>更高效的推理机制</strong>：通过架构创新和工程优化降低推理成本</p></li><li><p><strong>更丰富的应用场景</strong>：长文本处理、多模态融合、智能体交互等领域将迎来爆发式增长</p></li></ul><p>对于开发者和企业用户而言，选择合适的模型需要综合考虑应用场景、预算限制和技术需求。在这个 AI 技术快速演进的时代，保持对技术趋势的敏感度，选择最适合的工具和方案，将是在激烈竞争中胜出的关键。</p>]]></content>
-    
-    
-    <summary type="html">下午我看MCP相关文档时，发现Claude官方文档建议将超过5万字的文档全文复制到对话中开发，我觉得这不合理（超长输入token）。好奇现在的大模型是否真能处理，便用豆包试，结果上下文超出；Trae的Builder也提示仅支持6000字符提问。平时我都是文档提问，觉得直接粘贴对话“这么富裕的仗”很新奇，最后让AI统计了主流大模型的上下文窗口大小。</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
-    
-    <category term="上下文" scheme="https://flashj.cn/tags/%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重拾Flash旧时光：2025年运行Flash的方法</title>
-    <link href="https://flashj.cn/Ruffle-Flash-Emulator.html"/>
-    <id>https://flashj.cn/Ruffle-Flash-Emulator.html</id>
-    <published>2025-11-03T11:55:00.000Z</published>
-    <updated>2025-11-10T08:49:36.928Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一、时代的落幕"><a href="#一、时代的落幕" class="headerlink" title="一、时代的落幕"></a>一、时代的落幕</h2><p>我们都知道，flash已经在很多年前，乔布斯写下《Thoughts on Flash》的那一瞬间点下了崩溃键，开始崩塌了。而我总在某个深夜想起，那个用鼠标拖拽关键帧就能创造世界的年代，那些闪烁的加载进度条，曾是青春里最明亮的光。​</p><p>初识 Flash 是在小学时候亲戚家的电脑里，看着静态的矢量图形在时间轴上跳起舞来，像打开了潘多拉的魔盒。等有机会每天接触电脑后的每个晚上，我都对着《Flash MX 从入门到精通》逐字啃读，从绘制简单的按钮，到制作带交互的小游戏，指尖在键盘上敲击出的不仅是代码，更是少年人无处安放的热爱。​</p><p>自学路上最幸运的，是遇见了一群同样痴迷 Flash 的朋友。在简陋的技术论坛里，我们分享各自的作品，互相帮助解决各种技术问题。至今记得寂寞火山做的滚动条 —— 全用中文命名变量，比官方的臃肿版本轻巧太多，性能却高出一截。那些隔着屏幕的交流，没有利益纠葛，只有纯粹的技术共鸣，成了那段时光里最温暖的慰藉。</p><p>后来，WebGame 浪潮呼啸而至，Flash 成了网页游戏的黄金引擎。我们这群爱好者仿佛找到了用武之地，有人组建了小团队开发小游戏，有人加入创业公司深耕页游领域。我还记得自己参与制作的第一款网页虚拟社区上线，看着后台第一次达成百万用户数的数据时，那种成就感足以抵消所有熬夜的疲惫。彼时的互联网，满是 Flash 游戏的身影，从休闲益智到角色扮演，无数人的青春记忆里，都刻着点击Flash开始游戏的字样。​</p><p>然而，时代的车轮从不会为谁停留。iPhone 的面世像一颗投入湖面的石子，悄然拉开了移动互联网的序幕。当触控屏取代了鼠标键盘，当原生应用逐渐蚕食网页的领地，不支持移动设备的 Flash 开始显得格格不入。乔布斯那篇《Thoughts on Flash》，像一记重锤，击碎了所有 Flash 开发者的幻想。我们眼睁睁看着新潮设备的浏览器开始禁用 Flash 插件，网页游戏纷纷无法运行，曾经热闹的Blueidea蓝色理想、9ria天地会等技术论坛渐渐沉寂。​</p><p>更令人唏嘘的是，那些一起并肩作战的朋友，也开始各自踏上转型之路。寂寞火山转去了区块链方向，Halley 转做了 Unity 开发……我们渐渐淡出了彼此的生活，偶尔在朋友圈看到对方的动态，才惊觉已经多年未见。曾经以为会相伴一生的技术，最终成了青春里的过客；曾经无话不谈的朋友，也在时代的洪流中渐行渐远。​</p><p>如今，当我偶尔在怀旧网站上见到当年制作的 Flash 动画，看着一个大大的“Get Adobe Flash Player“，依然会心头一热。Flash 早已不是一门主流技术，但它教会我的不仅是动画制作和代码编写，更是用创意改变世界的勇气。那些年的热爱与执着，那些并肩同行的朋友，那些关于 Flash 的热血与遗憾，都已深深烙印在记忆里。​</p><p>或许，所有技术都会有落幕的一天，但承载在技术里的青春与情感，永远不会褪色。致 Flash，致那段呼啸而过的岁月，致我们再也回不去的旧时光。</p><h2 id="二、用-Ruffle-模拟器，让-Flash-“重获新生”"><a href="#二、用-Ruffle-模拟器，让-Flash-“重获新生”" class="headerlink" title="二、用 Ruffle 模拟器，让 Flash “重获新生”"></a>二、用 Ruffle 模拟器，让 Flash “重获新生”</h2><p>你敢信？！这年头的 Flash，竟和小霸王、红白机、GameBoy 一样，成了需要怀旧的 “历史遗物”—— 而总有人为这些遗物搭建新的生态。</p><p>今天逛<a href="https://zaixianwan.app/">https://zaixianwan.app</a> 时，我意外发现这里还能玩 Flash 游戏。查了下原理，原来是用了<a href="https://ruffle.rs/">Ruffl</a><a href="https://ruffle.rs/">e</a>—— 这个工具用 H5 模拟出了 Flash 环境，官网那句 “Putting Flash back on the web”，瞬间戳中了我。​</p><p>那我岂不是可以把以前我的老网站复活？！</p><p>部署一行代码，就可以把以前的flash网站复活，实测兼容以前的swfobj.js：</p><pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/@ruffle-rs/ruffle&quot;&gt;&lt;/script&gt;</code></pre><p><img src="https://cdn.mousebomb.org/blog/auto/202511032027275.png"></p><p><img src="https://cdn.mousebomb.org/blog/auto/202511032027962.png"></p><p><img src="https://cdn.mousebomb.org/blog/auto/202511032031943.png"></p><p>从截图能看到，兼容性虽未达完美：圆角矩形有些问题，动态文本的中文也显示不出来，但这份带着小缺憾的呈现，已经足够唤醒深埋的怀旧情绪 —— 毕竟能再看见这些熟悉的界面，就已经很满足了。</p><h2 id="三、普通用户指南：让你的浏览器再度支持Flash"><a href="#三、普通用户指南：让你的浏览器再度支持Flash" class="headerlink" title="三、普通用户指南：让你的浏览器再度支持Flash"></a>三、普通用户指南：让你的浏览器再度支持Flash</h2><p>Ruffle 不只是开发者的工具，普通用户也能靠它给浏览器装回 “Flash”（实际是模拟环境），步骤特别简单，直接对应浏览器装插件就行：</p><ul><li>chrome浏览器： <a href="https://chromewebstore.google.com/detail/ruffle-flash-emulator/donbcfbmhbcapadipfkeojnmajbakjdc">https://chromewebstore.google.com/detail/ruffle-flash-emulator/donbcfbmhbcapadipfkeojnmajbakjdc</a></li><li>火狐： <a href="https://addons.mozilla.org/firefox/addon/ruffle_rs">https://addons.mozilla.org/firefox/addon/ruffle_rs</a></li><li>edge： <a href="https://microsoftedge.microsoft.com/addons/detail/ruffle/pipjjbgofgieknlpefmcckdmgaaegban">https://microsoftedge.microsoft.com/addons/detail/ruffle/pipjjbgofgieknlpefmcckdmgaaegban</a></li></ul><p>如果想了解更多细节，也可以直接访问Ruffle官网：  <a href="https://ruffle.rs/downloads">https://ruffle.rs/downloads</a> </p>]]></content>
-    
-    
-    <summary type="html">我们都知道，flash已经在很多年前，乔布斯写下《Thoughts on Flash》的那一瞬间点下了崩溃键，开始崩塌了。我常追悼Flash技术，常怀念我从小喜欢flash，自学flash，认识了寂寞火山、Halley、Vin、KK、YBoy、Sun等朋友，并且迎来了网页游戏webgame的浪潮，后来随着iPhone的面世，拉开了移动互联网的序幕，flash逐渐走向末路，往昔的技术朋友们也各自转型。</summary>
-    
-    
-    
-    <category term="Flash" scheme="https://flashj.cn/categories/Flash/"/>
-    
-    
-    <category term="Flash" scheme="https://flashj.cn/tags/Flash/"/>
-    
-    <category term="怀旧" scheme="https://flashj.cn/tags/%E6%80%80%E6%97%A7/"/>
-    
-    <category term="Ruffle" scheme="https://flashj.cn/tags/Ruffle/"/>
-    
-    <category term="模拟器" scheme="https://flashj.cn/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/"/>
-    
-    <category term="浏览器插件" scheme="https://flashj.cn/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/"/>
-    
-    <category term="网页技术" scheme="https://flashj.cn/tags/%E7%BD%91%E9%A1%B5%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI语音输入法-代体</title>
-    <link href="https://flashj.cn/daiti.html"/>
-    <id>https://flashj.cn/daiti.html</id>
-    <published>2025-10-20T13:44:00.000Z</published>
-    <updated>2025-11-19T09:39:57.982Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="AI语音输入法-代体"><a href="#AI语音输入法-代体" class="headerlink" title="AI语音输入法-代体"></a>AI语音输入法-代体</h1><p>代体AI语音输入法：本地隐私安全，低延迟输入体验</p><blockquote><p><strong>代体 AI 语音输入法：绝对隐私，超低延迟</strong></p><p>官网：<a href="https://daiti.ai/">https://daiti.ai/</a></p><p>AI语音输入法赛道突然卷了起来，豆包输入法、Wispr Flow、Spokenly 等等， 本地模型、自配 API、默认模型服务商，方案也有不少，全看用户预算和对私密性、速度的要求。</p><p>「代体」是一款个人开发者作品，主打本地小模型+隐私安全，开发者介绍说是使用了通义的 funasr 模型。因为集成了模型，客户端体积有点点大。</p><ul><li><p>支持 Windows&#x2F;Mac，系统级输入框全覆盖；不用换输入软件，在哪都能用。</p></li><li><p>本地 AI 识别，约 200–300ms 出字；边说边看到文字，不用等进度条。</p></li><li><p>智能纠错与标点优化；可添加用户词典，行业术语、代码符号更准。</p></li><li><p>文档、代码、聊天、与 AI 对话场景顺畅；数据仅在电脑本机处理，永久免费。</p></li></ul><p>目前版本迭代比较快，开发者在官网放上了个人微信，有意见反馈可以联系开发者。</p></blockquote><div class="tag-plugin link dis-select"><a class="link-card plain" title="代体 AI 语音输入法：绝对隐私，超低延迟" href="https://daiti.ai/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">代体 AI 语音输入法：绝对隐私，超低延迟</span><span class="cap link footnote">https://daiti.ai/</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div><p>测试：</p><p>中文输入可能可以，但是中英文混合输入容易出错呀。不过也解决了大部分问题了。</p><p>另外，还有一点不太适应的是，总习惯性地想用键盘输入。</p>]]></content>
-    
-    
-    <summary type="html">代体AI语音输入法：本地隐私安全，低延迟输入体验</summary>
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="软件" scheme="https://flashj.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025火山引擎原动力大会的一些记录</title>
-    <link href="https://flashj.cn/force-2025-notes.html"/>
-    <id>https://flashj.cn/force-2025-notes.html</id>
-    <published>2025-06-12T13:50:00.000Z</published>
-    <updated>2025-06-12T14:36:59.124Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="观看后的总体感受"><a href="#观看后的总体感受" class="headerlink" title="观看后的总体感受"></a>观看后的总体感受</h2><p>字节在多方向发力。</p><p>每一个形态它都在产品层面做到很极致。不仅在多模态对话助手（to C端） 、云原生、faas等领域，而更在入口端、生态端已经飞驰在高速公路上。</p><p>最触动我的是Trae Solo。虽然说是个期货，暂时先不关注了，但</p><p>为什么Trae一个面向程序员的app在两天里有这么多场次，这么大篇幅来讲，我觉得野心勃勃。</p><p>Trae Solo 将来有可能成为另一种形式的浏览器、或者说是另一种形式的集成办公软件。<br>说它代替浏览器，是因为它将成为一切信息获取的入口。<br>说它成为办公软件是因为它将成为生产一切数字产出物的制作工具。</p><p>对我来说，trae可以代替豆包，可以代替扣子空间，可以代替manus，可以代替fellou，可以代替一切agent，靠MCP让它有着无与伦比的扩展性，靠本身是一个VSCode环境让他天然有底层运行各种本地工具的能力，靠代码编写和编译可以直接弥补以上都无法实现的最终fallback。</p><p>既可以产出代码，又可以产出文档，又可以分析数据，可以是任何形式的工作伙伴和专家。</p><p>我之前也用Trae给小朋友做过 数学计算题和英语背单词 自动出题和批改并发送成绩到飞书，都是几句话就做出来了。 这东西确实很好，普惠大众。日常生活需求不需要自己会写程序了。</p><h3 id="豆包大模型1-6新发布"><a href="#豆包大模型1-6新发布" class="headerlink" title="豆包大模型1.6新发布"></a>豆包大模型1.6新发布</h3><p>这次名字中带有“Seed”，我想，这表示是豆包的新AGI时代的新篇章开始，AGI强调多模态。火山的方案在多模态方面一直做得领先业界，从去年豆包的语音交互自然、流畅，当时就让人感到追平ChatGPT了，给了我不小的震撼。</p><p>全系列支持多模态输入和256K上下文，包括doubao-seed-1.6、1.6-thinking和1.6-flash三个版本。其中1.6-thinking在数学和逻辑推理方面表现突出，据称达到高考700分以上水平。</p><p><strong>DeepResearch功能</strong>：可在5～30分钟内完成深度研究任务，与Fellou、Manus等竞品直接竞争。该功能通过多轮思考和实时搜索相结合的方式，实现复杂问题的分析与解决。</p><p><strong>多模态能力提升</strong>：</p><ul><li>视频聊天功能支持自动识别画面内容，满足上下文相关的用户筛选需求</li><li>增强的GUI操作能力，疑似整合了UI Tars技术</li><li>支持图像、语音、音乐等多种模态的输入与处理</li></ul><p><strong>革命性定价模式</strong>：首创按”输入长度”区间定价，深度思考、多模态能力与基础语言模型统一价格：</p><ul><li>0-32K输入区间：输入0.8元&#x2F;百万tokens、输出8元&#x2F;百万tokens</li><li>32-128K输入区间：输入1.2元&#x2F;百万tokens、输出16元&#x2F;百万tokens</li><li>128-256K输入区间：输入2.4元&#x2F;百万tokens、输出24元&#x2F;百万tokens</li></ul><p>按输入输出3:1比例计算，综合成本仅为豆包1.5深度思考模型或DeepSeek R1的三分之一，极大降低了企业级应用门槛<mcreference link="https://money.ycwb.com/ikinvkmtjj/content_53464589.htm" index="3"></mcreference>。</p><p>$$ 3&#x2F;4*0.8 + 8&#x2F;4 &#x3D; 2.6¥ $$</p><h3 id="Trae"><a href="#Trae" class="headerlink" title="Trae"></a>Trae</h3><p>实现技术普惠。</p><p>Solo<br> 演示的Solo Web App Builder支持语音输入功能，为产品经理和开发人员等多角色协作提供了便捷交互方式。</p><p>多角色搭配功能允许产品经理通过语音快速输入需求，开发人员实时查看并转化为技术实现，显著提升协作效率。</p><p>期货，等着吧。</p><h3 id="视频生成"><a href="#视频生成" class="headerlink" title="视频生成"></a>视频生成</h3><p>火山引擎发布的Seedance 1.0系列视频生成模型带来了突破性的内容创作能力，包括Seedance 1.0 Pro和Seedance 1.0 Lite两个版本。</p><p><strong>Seedance 1.0 Pro技术特性</strong>：</p><ul><li><strong>多模态输入支持</strong>：接受文字描述与图片输入，可生成多镜头无缝切换的1080P高品质视频</li><li><strong>行业领先性能</strong>：在文生视频、图生视频任务中排名首位，尤其擅长复杂场景构建和人物动作生成</li><li><strong>精准指令遵循</strong>：能理解精细的拍摄要求，支持影视级运镜效果和合理的运动交互设计</li><li><strong>开放平台接入</strong>：已通过豆包App、即梦AI、火山引擎等平台对外开放服务</li></ul><p><strong>Seedance 1.0 Lite版本</strong>：</p><ul><li>轻量化视频生成方案，支持基础文生视频和图生视频功能</li><li>优化了生成速度和资源占用，适合快速原型制作和轻量化应用场景</li></ul><p><strong>颠覆性定价策略</strong>：</p><ul><li>Seedance 1.0 Pro每千tokens仅0.015元，生成一条5秒的1080P视频成本约3.67元</li><li>按此计算，一万元预算可生成约2725条5秒1080P视频，大幅降低了高质量视频内容的制作门槛</li></ul><p>深度思考的视频生成能力结合了豆包大模型的逻辑推理与Seedance的视觉生成能力，可自动分析文本需求，规划镜头序列，生成符合叙事逻辑的视频内容。</p><h3 id="豆包实时语音模型全量上线"><a href="#豆包实时语音模型全量上线" class="headerlink" title="豆包实时语音模型全量上线"></a>豆包实时语音模型全量上线</h3><p>开发者可以调用了<br>方言<br>轻声<br>唱歌<br>播客生成： 从：prompt、链接、长文本内容</p><h3 id="DeepSearch、Agent"><a href="#DeepSearch、Agent" class="headerlink" title="DeepSearch、Agent"></a>DeepSearch、Agent</h3><p>居然是在火山方舟的应用，没有上豆包，也没有上扣子空间？？<br>功能和fellou一模一样，但是可以手动加装MCP，生成产出物可以更多样。<br>嗯好吧，对于我来说还是用Trae + MCP 实现吧。</p><p>生成网页可以勾选Canvas查看实时预览。</p><p>veFaaS MCP 可以公网部署，火山提供veFaaS MCP。</p><p>制作视频<br>Trae 爆款视频智造官 ： 😐这玩意是自己创建的啊，需要搭配vevod MCP</p><p>这里有详细操作步骤：  <a href="https://www.volcengine.com/docs/82379/1592795">https://www.volcengine.com/docs/82379/1592795</a></p><ul><li><a href="https://www.volcengine.com/docs/82379/1592797">Agent开发指南：“显眼包”市场策略分析和报告生成</a></li><li><a href="https://www.volcengine.com/docs/82379/1592796">Agent开发指南：生成“显眼包”网站</a></li><li><a href="https://www.volcengine.com/docs/82379/1592815">Agent开发指南：创作“显眼包”营销视频</a></li></ul><h3 id="PromptPilot"><a href="#PromptPilot" class="headerlink" title="PromptPilot"></a>PromptPilot</h3><p>火山引擎发布的PromptPilot是一款专为大型AI模型设计的智能提示词优化平台，致力于解决用户提示词编写门槛高的核心痛点。它提供了一站式的自动化解决方案，覆盖提示词生成、调试、优化到迭代的完整生命周期。</p><p><strong>核心功能</strong>：</p><ul><li><strong>需求翻译器</strong>：通过互动方式精准捕捉用户意图，将模糊需求转化为清晰指令</li><li><strong>智能优化</strong>：采用简化的”选择题”模式，自动生成多样化答案选项，引导用户明确需求</li><li><strong>复杂任务拆解</strong>：针对图片和视频场景表现尤为出色，能将多模态任务自动拆解成多个步骤并搜索最优路径</li><li><strong>闭环优化体系</strong>：支持用户标记Bad Case，将问题案例转化为数据资产，推动模型持续进化</li><li><strong>反思迭代能力</strong>：具备模拟人类思考的能力，能进行反思、总结和错误分析，通过多轮自动迭代找到稳定产出最佳结果的”黄金提问”</li></ul><p><strong>开发者支持</strong>：</p><ul><li><strong>case雷达</strong>：帮助开发者积累case资产</li><li><strong>Prompt SDK集成</strong>：可在应用中接入SDK，实现提示词数据持续回流</li><li><strong>支持联网搜索与知识库</strong>：能结合实时网络信息和自定义领域知识库优化提示词</li></ul><p>视觉理解solution展示了PromptPilot的强大能力：自动设计方案识别停车场车辆数量，生成解决方案，并能用新样本持续验证优化。其生成代码的能力表明它已超越传统提示词工具范畴，成为连接自然语言与机器执行的桥梁。</p><h3 id="落地"><a href="#落地" class="headerlink" title="落地"></a>落地</h3><p>知识产品管理</p><p>强化学习<br>veRL框架，已开源。</p><p>多模态数据湖<br>向量化、以图搜图、导出到火山方舟</p><p>AI数据专家，data agent产品。</p><ul><li>知识库、SQL、会议纪要等，一小时内得到结果。</li><li>5小时内得到可执行的营销方案。</li></ul><p>AgentKit： 集成了各种前面的基建<br>TrainingKit: 比开源方案提高30%，集成了veRL<br>ServingKit: 推理优化。<br>这些，用火山方舟不就是直接有了吗，它只是适合想要接入原子能力的客户。自己打造大模型并且部署自己的模型用。</p><p>客户：微博智搜。 哈哈微博的人说大实话了：deepseek舆论炸场，但是部署成本不堪重负。</p><p>veOmniverse 居然合作了。</p><h3 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h3><p>HiAgent 变厉害了，<br>边学边干，在线学习 （底层应该用的是prompt sdk）<br>自动快速规划 搭建。</p><p>HiAgent智能体案例：<br>南开大学：科研智能体-科研情报<br>西安交大：口腔影像解读</p><p>agent元年</p><p>安全，但是人家客户就认死理就要私有化部署也没辙</p><h3 id="分会场"><a href="#分会场" class="headerlink" title="分会场"></a>分会场</h3><h4 id="多模态数据湖"><a href="#多模态数据湖" class="headerlink" title="多模态数据湖"></a>多模态数据湖</h4><p>火山引擎推出的多模态数据湖是AI云原生全栈服务的核心组件之一，专为处理和管理大规模多模态数据而设计。其核心功能包括：</p><ul><li><strong>多模态数据统一存储</strong>：支持文本、图像、音频、视频等多种数据类型的一体化存储与管理</li><li><strong>智能处理能力</strong>：内置自动向量化转换，可将非结构化数据转化为高维向量，支持高效相似度检索</li><li><strong>跨模态检索</strong>：实现”以图搜图”、”以文搜图”等跨模态查询能力</li><li><strong>与大模型协同</strong>：无缝对接豆包大模型等AI能力，支持直接从数据湖调取数据进行模型训练或推理</li><li><strong>火山方舟集成</strong>：支持将处理后的数据导出到火山方舟平台，构建企业级知识库</li></ul><p><strong>典型应用场景</strong>：</p><ul><li>UGC内容分析与管理：社交媒体平台的图片、视频、文本内容的统一管理与智能检索</li><li>企业知识库构建：整合文档、会议录音、产品图片等多模态知识资产</li><li>智能媒体生产：支持视频素材的智能标记、检索与重组</li><li>多模态训练数据准备：为AI模型训练提供结构化的多模态数据集</li></ul><h4 id="LanceDB"><a href="#LanceDB" class="headerlink" title="LanceDB"></a>LanceDB</h4><p>火山引擎已接入LanceDB（目前最受欢迎的开源向量数据库格式之一），为多模态数据湖提供了高效的向量存储和检索能力。LanceDB采用列存格式，支持高并发查询和动态数据更新，特别适合大规模AI应用场景。</p><p>多模态数据湖的底层原理涉及向量嵌入技术、分布式存储架构和跨模态数据关联算法，通过将不同类型的数据映射到统一的向量空间，实现高效的存储、检索和分析。这一技术为企业处理日益增长的非结构化数据提供了强有力的解决方案。</p><h4 id="多模态数据治理"><a href="#多模态数据治理" class="headerlink" title="多模态数据治理"></a>多模态数据治理</h4><p>视频、标注<br>处理PB级别数据……<br>Nemo Curator<br>视频标注模型优化</p><p>也挺硬核，暂时用不到</p><h4 id="Data-agent-全场景革命"><a href="#Data-agent-全场景革命" class="headerlink" title="Data agent 全场景革命"></a>Data agent 全场景革命</h4><p>拥抱Agentic Data 最好的时机。<br>嗯我觉得还不成熟，主要是我没有那么多数据让我测，所以完全无法体会到它案例的价值。也不知道会有什么样的幻觉和掉链子。</p><h3 id="方舟"><a href="#方舟" class="headerlink" title="方舟"></a>方舟</h3><p>prompt调优</p><h3 id="trae"><a href="#trae" class="headerlink" title="trae"></a>trae</h3><p>trae 有个内测版，更进一步未来</p><h3 id="扣子"><a href="#扣子" class="headerlink" title="扣子"></a>扣子</h3><p>agent低代码 、全代码搭建<br>评测平台</p><h4 id="Eino"><a href="#Eino" class="headerlink" title="Eino"></a>Eino</h4><p>这个还真可以自己去评估一下</p><p>今年总体都有一些思路上的设计：<br>沉淀case，增长循环<br>prompt工程调优</p><p>Deerflow 方舟可以免费体验<br>UI-Tars</p><p>欢迎关注火山引擎 Force 原动力大会开发者论坛！下午还有 3 场精彩的分论坛，感兴趣的可以关注👇👇👇</p><p>火山方舟开发者日：<a href="https://www.volcengine.com/live/event/force-2506-developer-fangzhou">https://www.volcengine.com/live/event/force-2506-developer-fangzhou</a><br>扣子企业交流日：<a href="https://www.volcengine.com/live/event/force-2506-developer-coze">https://www.volcengine.com/live/event/force-2506-developer-coze</a><br>字节跳动开源开发者日：<a href="https://www.volcengine.com/live/event/force-2506-developer-opensource">https://www.volcengine.com/live/event/force-2506-developer-opensource</a></p><h3 id="开源场"><a href="#开源场" class="headerlink" title="开源场"></a>开源场</h3><p>KV cache<br>PD分离</p><hr><p><a href="https://deerflow.tech/">https://deerflow.tech</a> 深度研究<br>基于LongChain，</p><p>demo:<br>直接问问题<br>加入【背景调查】，对问题先调查然后拆解任务 ： 在userpropmt中把搜索结果加入，一下子就有更好的上下文了。<br>【魔术棒】： prompt优化。<br>【edit plan】：提出修改意见</p><p>！！不能依赖于大模型做任何数学计算；<br>策略：用python生成程序，然后运行程序计算数学问题。</p><p>report，进一步编辑<br>支持MCP</p><p>部署方式：火山引擎FaaS demo，直接部署</p><p>langchain推广员啊哈哈 一行代码实现memory，两行代码集成MCP<br><a href="https://www.langchain.com/">https://www.langchain.com/</a></p><p>层级：<br>第一层意图识别， Coordinator，极低成本对问题做意图识别，没必要则不进入大模型回答的流程。<br>第二层，Planner，根据用户语义生成计划。<br>Research Team，机械化完全按照Planner的规划执行。 这一层不需要用大模型，因为大模型也会follow计划，完全是浪费。<br>researcher：包括调用 browser use<br>coder: 写代码<br>Planner对researcher team 的结果做判定，检查计划是否满足，并对所有team的多个计划任务做归总。</p>]]></content>
-    
-    
-    <summary type="html">字节在多方向发力。每一个形态它都在产品层面做到很极致。不仅在多模态对话助手（to C端） 、云原生、faas等领域，而更在入口端、生态端已经飞驰在高速公路上。最触动我的是Trae Solo。虽然说是个期货，暂时先不关注了，但为什么Trae一个面向程序员的app在两天里有这么多场次，这么大篇幅来讲，我觉得野心勃勃。Trae Solo 将来有可能成为另一种形式的浏览器、或者说是另一种形式的集成办公软件。说它代替浏览器，是因为它将成为一切信息获取的入口。说它成为办公软件是因为它将成为生产一切数字产出物的制作工具。对我来说，trae可以代替豆包，可以代替扣子空间，可以代替manus，可以代替fellou，可以代替一切agent，靠MCP让它有着无与伦比的扩展性，靠本身是一个VSCode环境让他天然有底层运行各种本地工具的能力，靠代码编写和编译可以直接弥补以上都无法实现的最终fallback。既可以产出代码，又可以产出文档，又可以分析数据，可以是任何形式的工作伙伴和专家。</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
-    
-    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
-    
-    <category term="火山引擎" scheme="https://flashj.cn/tags/%E7%81%AB%E5%B1%B1%E5%BC%95%E6%93%8E/"/>
-    
-    <category term="字节跳动" scheme="https://flashj.cn/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WWDC 2025 keynote中对我比较重要的记录</title>
-    <link href="https://flashj.cn/wwdc-2025-keynote.html"/>
-    <id>https://flashj.cn/wwdc-2025-keynote.html</id>
-    <published>2025-06-10T02:12:00.000Z</published>
-    <updated>2025-06-10T02:42:38.347Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://cdn.mousebomb.org/blog/auto/202506101034214.jpg"></p><h2 id="对我比较重要的记录"><a href="#对我比较重要的记录" class="headerlink" title="对我比较重要的记录"></a>对我比较重要的记录</h2><ul><li>foundation models framework 可以开放调用</li><li>Liquid glass 透明、折射光线、灵动层级<ul><li>设计语言的更新</li><li>桌面壁纸新审美，图片3D透视化</li><li>相机回到iOS6风格图标，终于回到photo&#x2F;video 两个大tab了 </li><li>新的设计语言，对前端程序员肯定造成一定的冲击，不知道会不会影响微信小程序的设计风格</li><li>Metal的渲染性能过剩，用在这种华丽的细节渲染上，不知道会不会降低续航</li></ul></li><li>Workout Buddy 哈哈很不错，私教在耳边</li><li>macOS Tahoe<ul><li>自定义文件夹图标、颜色，哈哈以前我的项目文件夹就一直是手动做文件夹图标的，以后终于不用我自己做icon了。有用！👍</li><li>Spotlight<ul><li>全局搜索和执行动作，短语触发，代替alfred之类的app。 没啥新意，只是把社区的结果吞并到官方实现了。看起来有用！不过spotlight这玩意搜索的命中一言难尽，如果搜索准度达不到的话，还是白扯。🤷</li><li>Quick keys，不再需要设置以及记录各个快捷键了。每个app都可以有命令行的使用方式，让GUI的app都变得和bash一样方便，或者说autoCAD的交互。 期待！😚</li><li>干掉了Clipy历史剪贴板，看起来有用！做剪贴板app的哭晕在厕所。但看起来又要多一次点击交互，不确定是否好用🫤</li></ul></li><li>我无法确定说很希望macOS把各种其他app的功能都缝合到系统内置去，系统更新毕竟没那么频繁，却会变得越来越臃肿。</li></ul></li><li>iPadOS <ul><li>窗口化，菜单栏，和macOS操作方式几乎接近；但是这么小的点击区域，如果没有买妙控键盘那么应该用不了吧？ 另外这关闭和最小化有什么区别，关闭的意义是什么？Mac上关闭窗口是因为一个app可以有0到多个窗口，iPadOS上关闭窗口是和 <code>⌘+Q</code> 退出应用一样呢还是和macOS上 <code>⌘+w</code> 关闭窗口一样呢？</li><li>文件的打开方式可以设置默认app了</li><li>文件夹可以pin到dock了，和Mac一样了。</li><li>FaceTime等在线视频可系统级录制</li><li>这次真像电脑了，iPad这么多年，终于熬出头了。</li></ul></li></ul>]]></content>
-    
-    
-    <summary type="html">- foundation models framework 可以开放调用- Liquid glass 透明、折射光线、灵动层级	- 设计语言的更新	- 桌面壁纸新审美，图片3D透视化	- 相机回到iOS6风格图标，终于回到photo/video 两个大tab了 	- 新的设计语言，对前端程序员肯定造成一定的冲击，不知道会不会影响微信小程序的设计风格	- Metal的渲染性能过剩，用在这种华丽的细节渲染上，不知道会不会降低续航</summary>
-    
-    
-    
-    <category term="影音娱乐" scheme="https://flashj.cn/categories/%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90/"/>
-    
-    
-    <category term="apple" scheme="https://flashj.cn/tags/apple/"/>
-    
-    <category term="ios" scheme="https://flashj.cn/tags/ios/"/>
-    
-    <category term="mac" scheme="https://flashj.cn/tags/mac/"/>
-    
-    <category term="App" scheme="https://flashj.cn/tags/App/"/>
-    
-    <category term="游戏开发" scheme="https://flashj.cn/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="macOS" scheme="https://flashj.cn/tags/macOS/"/>
-    
-    <category term="iPadOS" scheme="https://flashj.cn/tags/iPadOS/"/>
-    
-    <category term="WWDC" scheme="https://flashj.cn/tags/WWDC/"/>
-    
-    <category term="设计语言" scheme="https://flashj.cn/tags/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="前端开发" scheme="https://flashj.cn/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发了一款 Obsidian 日记同步日历插件：Diary ICS</title>
-    <link href="https://flashj.cn/obsidian-diary-ics.html"/>
-    <id>https://flashj.cn/obsidian-diary-ics.html</id>
-    <published>2025-06-09T05:02:00.000Z</published>
-    <updated>2025-11-04T04:50:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="开发了一款-Obsidian-日记同步日历插件：Diary-ICS"><a href="#开发了一款-Obsidian-日记同步日历插件：Diary-ICS" class="headerlink" title="开发了一款 Obsidian 日记同步日历插件：Diary ICS"></a>开发了一款 Obsidian 日记同步日历插件：Diary ICS</h1><p>最近开发了一款 Obsidian 插件——Diary ICS，主要解决 Obsidian 日记内容与系统日历同步的问题。</p><div class="tag-plugin video" style="max-width:100%;">  <video controls preload>  <source src="https://cdn.mousebomb.org/demo/obsidian-diary-ics/record-zh.mp4" type="video/mp4">Your browser does not support the video tag.  </video>  </div>  <h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><ol><li><p><strong>ICS 日历订阅生成</strong><br>插件会基于日记内容自动生成 ICS 格式文件，通过本地 HTTP 服务器（默认端口 19347）提供订阅链接（如 <code>http://127.0.0.1:19347/feed.ics</code>），支持局域网内其他设备订阅。</p></li><li><p><strong>日记内容解析规则</strong>  </p><ul><li>提取指定级别标题（一级或二级，可配置）作为日历事件</li><li>标题包含时间（如 <code>19:00</code> 或 <code>10:00~12:00</code>）时，自动解析为事件时间；无时间则视为全天事件</li><li>事件包含跳转链接（<code>obsidian://</code> 协议），点击可直接打开对应日记</li><li>子标题内容会作为事件备注</li></ul></li><li><p><strong>Frontmatter 支持</strong><br>可将日记的属性字段（frontmatter）作为独立事件同步，支持自定义标题和内容模板（如 <code>天气:&#123;&#123;weather&#125;&#125; 心情:&#123;&#123;mood&#125;&#125;</code>）。</p></li></ol><h2 id="使用流程"><a href="#使用流程" class="headerlink" title="使用流程"></a>使用流程</h2><ol><li>安装并启用插件</li><li>在设置中配置：<ul><li>标题提取级别</li><li>服务器端口</li><li>日记文件格式与存放路径（默认 <code>YYYY-MM-DD</code> 命名）</li></ul></li><li>复制插件生成的 ICS 链接</li><li>在系统日历（macOS 日历、Windows 日历等）中添加订阅</li></ol><h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><ul><li>基于 TypeScript 开发，使用 <code>ics</code> 库生成标准日历文件</li><li>本地 HTTP 服务提供实时订阅能力</li><li>解析 Obsidian 元数据缓存获取标题结构，避免重复读取文件</li></ul><h2 id="下载与反馈"><a href="#下载与反馈" class="headerlink" title="下载与反馈"></a>下载与反馈</h2><p>源码地址：<a href="https://github.com/mousebomb/obsidian-diary-ics">github.com&#x2F;mousebomb&#x2F;obsidian-diary-ics</a><br>支持 Obsidian 0.15.0 及以上版本，欢迎提交 Issue 反馈问题。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;开发了一款-Obsidian-日记同步日历插件：Diary-ICS&quot;&gt;&lt;a href=&quot;#开发了一款-Obsidian-日记同步日历插件：Diary-ICS&quot; class=&quot;headerlink&quot; title=&quot;开发了一款 Obsidian 日记同步日历插件：Di</summary>
-      
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="日历" scheme="https://flashj.cn/tags/%E6%97%A5%E5%8E%86/"/>
-    
-    <category term="日记" scheme="https://flashj.cn/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-    <category term="obsidian" scheme="https://flashj.cn/tags/obsidian/"/>
-    
-    <category term="插件" scheme="https://flashj.cn/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-    <category term="ics" scheme="https://flashj.cn/tags/ics/"/>
-    
-    <category term="同步" scheme="https://flashj.cn/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>跟着《AI Product Manager&#39;s Handbook》学产品：阅读与知识记录</title>
-    <link href="https://flashj.cn/ai-product-managers-handbook-reading.html"/>
-    <id>https://flashj.cn/ai-product-managers-handbook-reading.html</id>
-    <published>2025-06-07T09:16:00.000Z</published>
-    <updated>2025-06-07T09:19:28.664Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="《AI-Product-Manager’s-Handbook》第二版阅读准备"><a href="#《AI-Product-Manager’s-Handbook》第二版阅读准备" class="headerlink" title="《AI Product Manager’s Handbook》第二版阅读准备"></a>《AI Product Manager’s Handbook》第二版阅读准备</h2><p>在网上看到《AI Product Manager’s Handbook》第二版的介绍，觉得内容颇具启发性，便找来一读。</p><p>《<a href="https://download.packt.com/free-ebook/9781835882849">AI Product Manager’s Handbook</a>》是一本面向人工智能产品管理领域的实用指南，旨在帮助读者系统理解并掌握在实际工作中构建、管理和维护AI产品的关键方法与思路。该书由Irene Bratsis撰写，第二版于2024年11月由Packt Publishing出版。书中不仅介绍了AI产品管理的基础理论，还深入探讨了技术基础设施、模型开发与维护、深度学习、商业化策略以及产品设计等多个维度的内容。</p><h3 id="书籍特点"><a href="#书籍特点" class="headerlink" title="书籍特点"></a>书籍特点</h3><ol><li><p><strong>全面覆盖</strong>：本书以AI产品的全生命周期为脉络，从概念设计到实际部署，层层递进。无论是初学者还是已有经验的产品管理者，都能从中获得启发与收获。</p></li><li><p><strong>实践导向</strong>：书中提供了大量的案例研究、流程图和检查清单，帮助读者更好地理解和应用所学知识。这些实用工具使得本书不仅是一本理论书籍，更是一部操作手册。</p></li><li><p><strong>技术深度</strong>：本书不仅面向产品管理者，也适合对AI有一定了解的读者。书中深入解析了机器学习与深度学习等核心技术，并结合实际应用场景进行说明，增强了内容的可理解性与实用性。</p></li><li><p><strong>伦理思考</strong>：作者特别关注AI产品在伦理层面的挑战，如数据隐私、算法偏见等问题，并提出了相应的应对思路。这使得本书不仅是一本技术参考书，更是一部富有思考深度的伦理探讨之作。</p></li><li><p><strong>行业洞察</strong>：书中还对当前AI产品的市场动态进行了分析，并探讨了传统软件向AI产品转型的路径。这些内容对希望在AI领域深耕的人士具有重要的参考价值。</p></li></ol><h3 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h3><ul><li><strong>AI产品管理者</strong>：本书为AI产品的管理提供了系统性的指导，有助于提升对复杂问题的理解与应对能力。</li><li><strong>AI技术开发者</strong>：对于希望将AI技术融入产品开发的工程师而言，本书提供了兼具技术深度与管理视角的知识体系。</li><li><strong>创业者</strong>：书中关于AI产品商业化策略的分析和案例，对初创企业具有重要的借鉴意义。</li><li><strong>学生与研究者</strong>：本书不仅适用于从业者，也适合对AI领域感兴趣的学生和研究人员，有助于构建系统的知识框架。</li></ul><h1 id="重点知识提取"><a href="#重点知识提取" class="headerlink" title="重点知识提取"></a>重点知识提取</h1><h2 id="第一部分：人工智能基础概念"><a href="#第一部分：人工智能基础概念" class="headerlink" title="第一部分：人工智能基础概念"></a>第一部分：人工智能基础概念</h2><h3 id="1-1-人工智能的定义与发展阶段"><a href="#1-1-人工智能的定义与发展阶段" class="headerlink" title="1.1 人工智能的定义与发展阶段"></a>1.1 人工智能的定义与发展阶段</h3><p>人工智能（Artificial Intelligence, AI）是一门旨在使机器模拟人类智能行为的计算机科学分支。根据其能力水平，AI可以分为两类：<strong>强人工智能（AGI）与弱人工智能（ANI）</strong>。  </p><ul><li><strong>强人工智能（Artificial General Intelligence, AGI）</strong>：指具备与人类相当的通用智能，能够执行任何智力任务的能力。尽管AGI在理论上具有广阔前景，但当前技术尚未达到这一目标，仍处于研究阶段。  </li><li><strong>弱人工智能（Artificial Narrow Intelligence, ANI）</strong>：当前大多数AI应用属于这一类，专注于执行特定任务。例如，语音识别、图像分类、推荐系统等都属于弱AI的范畴。</li></ul><p>AI的发展历程可以划分为三个阶段：  </p><ol><li><strong>符号主义阶段（Symbolic AI）</strong>：基于规则和逻辑推理，代表技术包括专家系统、知识图谱等。这一阶段的AI依赖人工定义规则，在数据量和复杂性受限的情况下表现有限。  </li><li><strong>统计机器学习阶段（Statistical ML）</strong>：随着大数据的兴起，AI从基于规则的方法转向数据驱动的学习模型。这一阶段的核心是通过算法自动从数据中提取特征并进行预测，常见技术包括线性回归、支持向量机（SVM）、决策树等。  </li><li><strong>深度学习阶段</strong>：以神经网络为基础的AI技术，通过多层结构自动提取复杂特征。深度学习的突破使得AI在图像识别、自然语言处理（NLP）等领域取得显著进展。</li></ol><h3 id="1-2-机器学习的核心要素与技术分类"><a href="#1-2-机器学习的核心要素与技术分类" class="headerlink" title="1.2 机器学习的核心要素与技术分类"></a>1.2 机器学习的核心要素与技术分类</h3><p>机器学习（Machine Learning, ML）是AI的子领域，其核心目标是让计算机通过数据学习规律并实现预测或决策。ML系统通常包含以下关键要素：  </p><ul><li><strong>模型（Model）</strong>：用于描述数据间关系的数学结构，如线性回归模型、神经网络等。  </li><li><strong>训练数据（Training Data）</strong>：用于模型参数优化的数据集，通常包含输入和对应的标签。</li></ul><p>根据数据的标注情况，ML可以分为三种主要学习范式：  </p><ol><li><strong>监督学习（Supervised Learning）</strong>：需要标注数据，模型通过学习输入与输出之间的映射关系进行预测。常见的算法包括线性回归、逻辑回归、支持向量机（SVM）等。  </li><li><strong>无监督学习（Unsupervised Learning）</strong>：数据没有标注，模型通过发现数据中的内在结构进行学习。例如聚类算法（如K-means）和降维技术（如主成分分析，PCA）。  </li><li><strong>强化学习（Reinforcement Learning）</strong>：模型通过与环境的交互，以最大化奖励为目标进行学习。该范式广泛应用于游戏AI、机器人控制等领域。</li></ol><h3 id="1-3-深度学习的核心概念与模型类型"><a href="#1-3-深度学习的核心概念与模型类型" class="headerlink" title="1.3 深度学习的核心概念与模型类型"></a>1.3 深度学习的核心概念与模型类型</h3><p>深度学习（Deep Learning, DL）是机器学习的一个子领域，其核心在于利用**人工神经网络（Artificial Neural Networks, ANNs）**来模拟人脑的计算机制。深度学习模型通常包含多个隐藏层，能够自动提取数据中的高层特征，从而提高模型的泛化能力。  </p><h4 id="1-3-1-神经网络的基本结构"><a href="#1-3-1-神经网络的基本结构" class="headerlink" title="1.3.1 神经网络的基本结构"></a>1.3.1 神经网络的基本结构</h4><p>神经网络由输入层、隐藏层和输出层构成。每个神经元通过加权求和与激活函数来处理输入数据，从而实现非线性建模。常见的神经网络类型包括：  </p><ul><li><strong>多层感知器（MLP）</strong>：基础的前馈神经网络，适用于分类和回归任务。  </li><li><strong>卷积神经网络（CNN）</strong>：擅长处理图像数据，通过卷积层提取局部特征。  </li><li><strong>循环神经网络（RNN）</strong>：适用于序列数据，如文本和时间序列分析。  </li><li><strong>长短期记忆网络（LSTM）</strong>：解决RNN中的长期依赖问题，广泛应用于自然语言处理。</li></ul><h4 id="1-3-2-深度学习的挑战与解决方案"><a href="#1-3-2-深度学习的挑战与解决方案" class="headerlink" title="1.3.2 深度学习的挑战与解决方案"></a>1.3.2 深度学习的挑战与解决方案</h4><p>尽管深度学习在多个领域取得了显著成果，但其在实际应用中仍面临以下挑战：  </p><ol><li><strong>数据需求大</strong>：深度学习模型需要大量高质量的数据进行训练。为解决这一问题，研究者提出了数据增强（Data Augmentation）、迁移学习（Transfer Learning）等技术。  </li><li><strong>模型“黑箱”问题</strong>：深度学习模型的决策过程难以解释，影响了其在医疗、金融等高敏感领域的应用。为此，研究者开发了可解释性工具（如LIME、SHAP）来提高模型的透明度。  </li><li><strong>计算资源消耗高</strong>：深度学习需要高性能硬件支持，如GPU和TPU。云计算平台（如AWS、Google Cloud）提供了强大的计算资源支持，降低了深度学习的门槛。</li></ol><h2 id="第二部分：机器学习与深度学习技术解析"><a href="#第二部分：机器学习与深度学习技术解析" class="headerlink" title="第二部分：机器学习与深度学习技术解析"></a>第二部分：机器学习与深度学习技术解析</h2><h3 id="2-1-监督学习的原理与应用"><a href="#2-1-监督学习的原理与应用" class="headerlink" title="2.1 监督学习的原理与应用"></a>2.1 监督学习的原理与应用</h3><p>监督学习是机器学习中最常见的范式，其核心在于通过标注数据训练模型。以下是几种典型的监督学习算法及其应用场景：  </p><h4 id="2-1-1-线性回归（Linear-Regression）"><a href="#2-1-1-线性回归（Linear-Regression）" class="headerlink" title="2.1.1 线性回归（Linear Regression）"></a>2.1.1 线性回归（Linear Regression）</h4><p>线性回归是一种用于预测连续值的算法，其数学模型为：<br>$$ y &#x3D; \beta_0 + \beta_1 x_1 + \beta_2 x_2 + … + \beta_n x_n $$<br>其中，$y$ 为预测值，$x_1, x_2, …, x_n$ 为特征变量，$ \beta_0, \beta_1, …, \beta_n $ 为模型参数。线性回归广泛应用于房价预测、销售趋势分析等领域。  </p><h4 id="2-1-2-分类算法：逻辑回归与支持向量机"><a href="#2-1-2-分类算法：逻辑回归与支持向量机" class="headerlink" title="2.1.2 分类算法：逻辑回归与支持向量机"></a>2.1.2 分类算法：逻辑回归与支持向量机</h4><ul><li><strong>逻辑回归（Logistic Regression）</strong>：适用于二分类问题，通过Sigmoid函数将线性输出映射到概率空间。  </li><li><strong>支持向量机（SVM）</strong>：通过寻找最大间隔超平面来实现分类，适用于高维数据。</li></ul><h4 id="2-1-3-集成学习：随机森林与梯度提升树"><a href="#2-1-3-集成学习：随机森林与梯度提升树" class="headerlink" title="2.1.3 集成学习：随机森林与梯度提升树"></a>2.1.3 集成学习：随机森林与梯度提升树</h4><p>集成学习通过组合多个基模型来提高预测性能。常见的算法包括：  </p><ul><li><strong>随机森林（Random Forest）</strong>：通过构建多个决策树并取平均结果，降低过拟合风险。  </li><li><strong>梯度提升树（Gradient Boosting Trees, GBT）</strong>：通过逐步优化残差，提高模型的准确性。</li></ul><h3 id="2-2-无监督学习的应用与挑战"><a href="#2-2-无监督学习的应用与挑战" class="headerlink" title="2.2 无监督学习的应用与挑战"></a>2.2 无监督学习的应用与挑战</h3><p>无监督学习无需标注数据，通过对数据内在结构的挖掘实现分类或降维。以下是两种常见的无监督学习方法：  </p><h4 id="2-2-1-聚类算法"><a href="#2-2-1-聚类算法" class="headerlink" title="2.2.1 聚类算法"></a>2.2.1 聚类算法</h4><ul><li><strong>K-means聚类</strong>：通过迭代优化中心点，将数据划分为K个簇。  </li><li><strong>层次聚类</strong>：基于树状结构进行分层分类，适用于数据层次关系复杂的场景。</li></ul><h4 id="2-2-2-降维技术"><a href="#2-2-2-降维技术" class="headerlink" title="2.2.2 降维技术"></a>2.2.2 降维技术</h4><ul><li><strong>主成分分析（PCA）</strong>：通过线性变换将高维数据投影到低维空间，保留最大方差。  </li><li><strong>自编码器（Autoencoder）</strong>：通过神经网络实现非线性降维，常用于图像压缩和特征提取。</li></ul><h3 id="2-3-强化学习的原理与应用"><a href="#2-3-强化学习的原理与应用" class="headerlink" title="2.3 强化学习的原理与应用"></a>2.3 强化学习的原理与应用</h3><p>强化学习是一种通过试错机制优化决策策略的方法，其核心在于智能体（Agent）与环境的互动。以下是强化学习的关键概念：  </p><h4 id="2-3-1-马尔可夫决策过程（MDP）"><a href="#2-3-1-马尔可夫决策过程（MDP）" class="headerlink" title="2.3.1 马尔可夫决策过程（MDP）"></a>2.3.1 马尔可夫决策过程（MDP）</h4><p>强化学习的数学框架基于马尔可夫决策过程，包括状态空间、动作空间和奖励函数。智能体的目标是最大化累积奖励。  </p><h4 id="2-3-2-深度强化学习（DRL）"><a href="#2-3-2-深度强化学习（DRL）" class="headerlink" title="2.3.2 深度强化学习（DRL）"></a>2.3.2 深度强化学习（DRL）</h4><p>深度强化学习结合了深度学习与强化学习，通过神经网络近似价值函数或策略。典型应用包括：  </p><ul><li><strong>AlphaGo</strong>：通过深度强化学习在围棋比赛中击败人类冠军。  </li><li><strong>自动驾驶</strong>：利用DRL优化车辆的路径规划与决策控制。</li></ul><h2 id="第三部分：深度学习的核心模型与技术"><a href="#第三部分：深度学习的核心模型与技术" class="headerlink" title="第三部分：深度学习的核心模型与技术"></a>第三部分：深度学习的核心模型与技术</h2><h3 id="3-1-神经网络的演变与优化"><a href="#3-1-神经网络的演变与优化" class="headerlink" title="3.1 神经网络的演变与优化"></a>3.1 神经网络的演变与优化</h3><p>神经网络的发展经历了从浅层结构到深层结构的转变。早期的人工神经网络（如感知机）仅包含单层，难以处理复杂任务。随着计算能力的提升和算法改进，深度神经网络（DNN）应运而生，并在多个领域取得突破性进展。  </p><h4 id="3-1-1-卷积神经网络（CNN）"><a href="#3-1-1-卷积神经网络（CNN）" class="headerlink" title="3.1.1 卷积神经网络（CNN）"></a>3.1.1 卷积神经网络（CNN）</h4><p>卷积神经网络通过局部感受野和参数共享机制，大幅减少了模型的计算量。其核心结构包括：  </p><ul><li><strong>卷积层（Convolutional Layer）</strong>：提取局部特征，通过滤波器进行滑动窗口计算。  </li><li><strong>池化层（Pooling Layer）</strong>：降低特征图的尺寸，增强模型的平移不变性。  </li><li><strong>全连接层（Fully Connected Layer）</strong>：将提取的特征映射到最终的输出空间。</li></ul><p>CNN广泛应用于图像识别、目标检测和人脸识别等领域，例如ResNet、VGG等经典模型。  </p><h4 id="3-1-2-循环神经网络（RNN）"><a href="#3-1-2-循环神经网络（RNN）" class="headerlink" title="3.1.2 循环神经网络（RNN）"></a>3.1.2 循环神经网络（RNN）</h4><p>循环神经网络专门用于处理序列数据，其核心在于通过隐藏状态传递历史信息。然而，传统RNN在处理长序列时容易出现梯度消失或爆炸问题。为此，研究者提出了改进模型：  </p><ul><li><strong>长短期记忆网络（LSTM）</strong>：通过门控机制控制信息流，解决长期依赖问题。  </li><li><strong>门控循环单元（GRU）</strong>：简化LSTM的结构，仅使用更新门和重置门。</li></ul><p>RNN及其变体在自然语言处理（NLP）中广泛应用，如机器翻译、文本生成等任务。  </p><h3 id="3-2-生成式模型与对抗训练"><a href="#3-2-生成式模型与对抗训练" class="headerlink" title="3.2 生成式模型与对抗训练"></a>3.2 生成式模型与对抗训练</h3><p>生成式模型是深度学习的一个重要分支，其目标是学习数据的分布并生成新的样本。以下是两种主要的生成式模型：  </p><h4 id="3-2-1-生成对抗网络（GAN）"><a href="#3-2-1-生成对抗网络（GAN）" class="headerlink" title="3.2.1 生成对抗网络（GAN）"></a>3.2.1 生成对抗网络（GAN）</h4><p>生成对抗网络由生成器和判别器组成，通过对抗训练优化模型。其核心思想是：  </p><ul><li><strong>生成器（Generator）</strong>：学习数据分布，生成与真实数据相似的样本。  </li><li><strong>判别器（Discriminator）</strong>：区分生成样本与真实数据，提供反馈。</li></ul><p>GAN在图像生成、风格迁移和数据增强等领域取得显著成果。例如，StyleGAN通过引入可调节的潜在空间，实现了高质量图像生成。  </p><h4 id="3-2-2-变分自编码器（VAE）"><a href="#3-2-2-变分自编码器（VAE）" class="headerlink" title="3.2.2 变分自编码器（VAE）"></a>3.2.2 变分自编码器（VAE）</h4><p>变分自编码器通过引入概率模型，实现了对数据的生成和采样。其核心结构包括：  </p><ul><li><strong>编码器（Encoder）</strong>：将输入数据映射到潜空间，学习潜在变量的分布。  </li><li><strong>解码器（Decoder）</strong>：从潜空间采样并重构为输出数据。</li></ul><p>VAE在图像生成、数据压缩和异常检测中具有广泛应用，其优势在于模型的可解释性和稳定性。  </p><h3 id="3-3-深度学习的技术挑战与优化策略"><a href="#3-3-深度学习的技术挑战与优化策略" class="headerlink" title="3.3 深度学习的技术挑战与优化策略"></a>3.3 深度学习的技术挑战与优化策略</h3><p>尽管深度学习在多个领域取得了显著进展，但其应用过程中仍面临诸多挑战。以下是一些关键问题及其解决方案：  </p><h4 id="3-3-1-数据偏差与模型泛化"><a href="#3-3-1-数据偏差与模型泛化" class="headerlink" title="3.3.1 数据偏差与模型泛化"></a>3.3.1 数据偏差与模型泛化</h4><p>深度学习依赖大量数据进行训练，但现实世界中的数据可能存在偏差。为解决这一问题，研究者提出了以下策略：  </p><ul><li><strong>数据增强（Data Augmentation）</strong>：通过旋转、翻转、裁剪等操作增加训练数据的多样性。  </li><li><strong>迁移学习（Transfer Learning）</strong>：利用预训练模型在新任务上进行微调，减少数据需求。</li></ul><h4 id="3-3-2-模型可解释性"><a href="#3-3-2-模型可解释性" class="headerlink" title="3.3.2 模型可解释性"></a>3.3.2 模型可解释性</h4><p>深度学习模型的“黑箱”特性限制了其在高敏感领域的应用。为此，研究者提出了以下方法：  </p><ul><li><strong>LIME（Local Interpretable Model-agnostic Explanations）</strong>：通过局部线性模型近似复杂模型的决策过程。  </li><li><strong>SHAP（Shapley Additive Explanations）</strong>：基于博弈论的解释方法，量化特征对模型输出的影响。</li></ul><h4 id="3-3-3-计算效率与硬件优化"><a href="#3-3-3-计算效率与硬件优化" class="headerlink" title="3.3.3 计算效率与硬件优化"></a>3.3.3 计算效率与硬件优化</h4><p>深度学习模型通常需要大量计算资源，为此研究者提出以下解决方案：  </p><ul><li><strong>模型压缩（Model Compression）</strong>：通过剪枝、量化和知识蒸馏等技术减少模型规模。  </li><li><strong>硬件加速</strong>：利用GPU、TPU和专用芯片（如NVIDIA Jetson）提高计算效率。</li></ul><h2 id="第四部分：AI产品开发流程与关键技术"><a href="#第四部分：AI产品开发流程与关键技术" class="headerlink" title="第四部分：AI产品开发流程与关键技术"></a>第四部分：AI产品开发流程与关键技术</h2><h3 id="4-1-AI产品的定义与成功因素"><a href="#4-1-AI产品的定义与成功因素" class="headerlink" title="4.1 AI产品的定义与成功因素"></a>4.1 AI产品的定义与成功因素</h3><p>AI产品的核心在于将人工智能技术转化为实际可交付的解决方案。一个成功的AI产品应具备以下特征：  </p><ul><li><strong>明确的需求对齐</strong>：确保技术方案与业务目标一致。  </li><li><strong>用户导向设计</strong>：以用户体验为中心，提供直观的操作界面和清晰的反馈机制。  </li><li><strong>可扩展性与鲁棒性</strong>：支持大规模数据处理，并具备良好的容错能力。</li></ul><h3 id="4-2-AI产品开发流程"><a href="#4-2-AI产品开发流程" class="headerlink" title="4.2 AI产品开发流程"></a>4.2 AI产品开发流程</h3><p>AI产品的开发通常遵循以下步骤：  </p><h4 id="4-2-1-问题定义与需求分析"><a href="#4-2-1-问题定义与需求分析" class="headerlink" title="4.2.1 问题定义与需求分析"></a>4.2.1 问题定义与需求分析</h4><p>在项目初期，需明确业务目标，并评估AI能否有效解决问题。关键步骤包括：  </p><ul><li><strong>与利益相关者沟通</strong>：明确需求并建立成功标准。  </li><li><strong>定义MVP（最小可行产品）</strong>：快速验证市场反馈，降低开发风险。</li></ul><h4 id="4-2-2-数据准备与预处理"><a href="#4-2-2-数据准备与预处理" class="headerlink" title="4.2.2 数据准备与预处理"></a>4.2.2 数据准备与预处理</h4><p>数据是AI模型的核心，需确保其多样性、代表性和高质量。主要工作包括：  </p><ul><li><strong>数据收集</strong>：从多种来源获取结构化或非结构化数据。  </li><li><strong>数据清洗</strong>：处理缺失值、异常值和重复数据。  </li><li><strong>特征工程</strong>：提取有意义的特征，提高模型性能。</li></ul><h4 id="4-2-3-模型选择与训练"><a href="#4-2-3-模型选择与训练" class="headerlink" title="4.2.3 模型选择与训练"></a>4.2.3 模型选择与训练</h4><p>根据任务类型（如分类、回归、聚类）选择合适的算法。常见模型包括：  </p><ul><li><strong>监督学习</strong>：线性回归、逻辑回归、支持向量机（SVM）。  </li><li><strong>无监督学习</strong>：K-means聚类、主成分分析（PCA）。  </li><li><strong>深度学习模型</strong>：卷积神经网络（CNN）、循环神经网络（RNN）。</li></ul><h4 id="4-2-4-模型评估与优化"><a href="#4-2-4-模型评估与优化" class="headerlink" title="4.2.4 模型评估与优化"></a>4.2.4 模型评估与优化</h4><p>通过交叉验证、超参数调优等方法提高模型性能。关键指标包括：  </p><ul><li><strong>准确率（Accuracy）</strong>：预测正确的样本比例。  </li><li><strong>精确率（Precision）与召回率（Recall）</strong>：衡量分类任务的性能。  </li><li><strong>F1分数</strong>：精确率与召回率的调和平均值。</li></ul><h4 id="4-2-5-部署与持续维护"><a href="#4-2-5-部署与持续维护" class="headerlink" title="4.2.5 部署与持续维护"></a>4.2.5 部署与持续维护</h4><p>将训练好的模型集成到生产系统中，并定期更新以应对数据漂移（Data Drift）和模型衰减（Model Decay）。常见的部署策略包括：  </p><ul><li><strong>影子部署（Shadow Deployment）</strong>：新模型与旧模型并行运行，监控效果。  </li><li><strong>A&#x2F;B测试（A&#x2F;B Testing）</strong>：比较不同模型的性能，选择最优方案。  </li><li><strong>金丝雀部署（Canary Deployment）</strong>：逐步上线新模型，降低风险。</li></ul><h3 id="4-3-AI基础设施与平台支持"><a href="#4-3-AI基础设施与平台支持" class="headerlink" title="4.3 AI基础设施与平台支持"></a>4.3 AI基础设施与平台支持</h3><p>AI产品的开发和部署需要强大的计算资源和工具链支持。以下是常见的基础设施与平台：  </p><h4 id="4-3-1-数据存储方案"><a href="#4-3-1-数据存储方案" class="headerlink" title="4.3.1 数据存储方案"></a>4.3.1 数据存储方案</h4><ul><li><strong>数据库（Database）</strong>：适用于结构化数据，支持快速查询。  </li><li><strong>数据仓库（Data Warehouse）</strong>：集中存储结构化数据，支持复杂分析。  </li><li><strong>数据湖（Data Lake）</strong>：存储原始、非结构化数据，适合大数据处理。  </li><li><strong>Lakehouse</strong>：结合数据湖和数据仓库的优势，提供统一的数据管理平台。</li></ul><h4 id="4-3-2-模型管理与部署工具"><a href="#4-3-2-模型管理与部署工具" class="headerlink" title="4.3.2 模型管理与部署工具"></a>4.3.2 模型管理与部署工具</h4><ul><li><strong>MLflow</strong>：支持实验跟踪、模型管理和部署。  </li><li><strong>TensorFlow Extended (TFX)</strong>：提供生产级ML流水线工具链。  </li><li><strong>SageMaker</strong>（AWS）：一站式AI开发平台，支持端到端模型训练与部署。  </li><li><strong>FBLearner Flow</strong>（Meta）：支持大规模模型训练与优化。</li></ul><h4 id="4-3-3-MLOps与AIOps"><a href="#4-3-3-MLOps与AIOps" class="headerlink" title="4.3.3 MLOps与AIOps"></a>4.3.3 MLOps与AIOps</h4><ul><li><strong>MLOps</strong>：优化ML模型的生命周期管理，包括数据监控、模型更新和自动化部署。  </li><li><strong>AIOps</strong>：利用AI自动化IT运维，提高系统可用性和响应速度。</li></ul><h3 id="4-4-AI产品的伦理与法律考量"><a href="#4-4-AI产品的伦理与法律考量" class="headerlink" title="4.4 AI产品的伦理与法律考量"></a>4.4 AI产品的伦理与法律考量</h3><p>AI产品的广泛应用带来了诸多伦理和法律问题，需特别关注以下方面：  </p><ul><li><strong>数据隐私</strong>：确保用户数据的安全性和合规性，遵循GDPR等法规。  </li><li><strong>模型公平性</strong>：避免数据偏差导致的算法歧视，提高模型的可解释性和透明度。  </li><li><strong>责任归属</strong>：明确AI决策的责任主体，制定相应的法律框架。</li></ul><h2 id="第五部分：案例研究与实践应用"><a href="#第五部分：案例研究与实践应用" class="headerlink" title="第五部分：案例研究与实践应用"></a>第五部分：案例研究与实践应用</h2><h3 id="5-1-Waterbear-Inc-的AI产品开发经验"><a href="#5-1-Waterbear-Inc-的AI产品开发经验" class="headerlink" title="5.1 Waterbear Inc.的AI产品开发经验"></a>5.1 Waterbear Inc.的AI产品开发经验</h3><p>Waterbear Inc.是一家专注于心理健康领域的AI公司，其核心产品Akeira通过自然语言处理（NLP）分析用户日记，提供个性化建议。其产品开发流程包括以下几个关键步骤：  </p><ul><li><strong>问题定义</strong>：明确目标用户（女性心理健康群体），评估AI能否有效解决其需求。  </li><li><strong>数据准备</strong>：构建统一的数据存储系统，包括数据库、数据仓库和数据湖。  </li><li><strong>模型选择与训练</strong>：采用Transformer架构，结合K-means聚类分析用户行为模式。  </li><li><strong>部署与优化</strong>：通过影子部署和A&#x2F;B测试验证模型性能，并定期更新以应对数据漂移。  </li><li><strong>伦理与法律合规</strong>：确保用户数据隐私，遵循AI伦理准则（如欧盟《人工智能法案》）。</li></ul><h3 id="5-2-ProjectABZ的AI转型案例"><a href="#5-2-ProjectABZ的AI转型案例" class="headerlink" title="5.2 ProjectABZ的AI转型案例"></a>5.2 ProjectABZ的AI转型案例</h3><p>ProjectABZ是ABCDZCo开发的一款项目管理工具，通过集成AI功能提升用户效率。其关键创新包括：  </p><ul><li><strong>任务优先级预测</strong>：利用时间序列分析预测项目进度，优化资源分配。  </li><li><strong>智能聊天机器人</strong>：基于自然语言处理技术提供实时支持，提高用户满意度。  </li><li><strong>自动化报告生成</strong>：通过深度学习模型自动生成项目分析报告，节省人工成本。</li></ul><p>在AI转型过程中，ABCDZCo克服了以下挑战：  </p><ul><li><strong>数据质量</strong>：通过数据增强和迁移学习提高模型性能。  </li><li><strong>模型可解释性</strong>：引入LIME工具，增强用户对AI决策的信任。  </li><li><strong>团队协作</strong>：建立跨职能团队（包括数据科学家、产品经理和工程师），确保技术与业务目标一致。</li></ul><h2 id="第六部分：未来趋势与挑战"><a href="#第六部分：未来趋势与挑战" class="headerlink" title="第六部分：未来趋势与挑战"></a>第六部分：未来趋势与挑战</h2><h3 id="6-1-AI技术的前沿方向"><a href="#6-1-AI技术的前沿方向" class="headerlink" title="6.1 AI技术的前沿方向"></a>6.1 AI技术的前沿方向</h3><p>随着计算能力的提升和算法的进步，AI领域正在向以下几个方向发展：  </p><ul><li><strong>联邦学习（Federated Learning）</strong>：在保护数据隐私的前提下，实现多机构协同训练模型。  </li><li><strong>小样本学习（Few-shot Learning）</strong>：通过少量数据实现高效模型训练，降低数据依赖性。  </li><li><strong>自监督学习（Self-supervised Learning）</strong>：利用未标注数据进行预训练，提高模型的泛化能力。</li></ul><h3 id="6-2-AI在传统行业的应用潜力"><a href="#6-2-AI在传统行业的应用潜力" class="headerlink" title="6.2 AI在传统行业的应用潜力"></a>6.2 AI在传统行业的应用潜力</h3><p>AI技术正在加速渗透至传统行业，如制造业、农业和金融等。例如：  </p><ul><li><strong>智能制造</strong>：通过工业物联网（IIoT）与AI结合，实现预测性维护和质量控制。  </li><li><strong>智慧农业</strong>：利用计算机视觉与传感器技术优化作物管理，提高产量和资源利用率。  </li><li><strong>金融科技</strong>：通过机器学习模型进行信用评分、欺诈检测和投资决策，提升金融服务的智能化水平。</li></ul><h3 id="6-3-AI伦理与法律框架的完善"><a href="#6-3-AI伦理与法律框架的完善" class="headerlink" title="6.3 AI伦理与法律框架的完善"></a>6.3 AI伦理与法律框架的完善</h3><p>随着AI技术的广泛应用，其伦理和法律问题日益受到关注。未来需重点关注：  </p><ul><li><strong>算法透明性</strong>：要求AI系统提供可解释的决策过程，避免“黑箱”问题。  </li><li><strong>数据主权</strong>：明确用户对个人数据的控制权，防止数据滥用。  </li><li><strong>责任追溯机制</strong>：建立AI决策的责任归属体系，确保技术应用的合规性。</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>人工智能与机器学习作为当前最具潜力的技术领域，正在深刻改变各行各业的运作方式。从基础概念到核心技术，再到实际应用和伦理考量，AI技术的每一个环节都需要严谨的思考与实践。未来，随着计算能力的提升、算法的进步以及数据基础设施的完善，AI将在更多领域发挥关键作用。然而，技术的发展也伴随着挑战，如数据隐私、模型可解释性和伦理问题等。因此，在推动AI技术进步的同时，必须注重技术的可持续性、公平性和社会责任感，以确保AI真正造福社会。</p>]]></content>
-    
-    
-    <summary type="html">在网上看到《AI Product Manager’s Handbook》第二版的介绍，觉得内容颇具启发性，便找来一读。《AI Product Manager’s Handbook》是一本面向人工智能产品管理领域的实用指南，旨在帮助读者系统理解并掌握在实际工作中构建、管理和维护AI产品的关键方法与思路。该书由Irene Bratsis撰写，第二版于2024年11月由Packt Publishing出版。书中不仅介绍了AI产品管理的基础理论，还深入探讨了技术基础设施、模型开发与维护、深度学习、商业化策略以及产品设计等多个维度的内容。</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-    <category term="产品经理" scheme="https://flashj.cn/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
-    
-    <category term="学习" scheme="https://flashj.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>准备好入坑《明末：渊虚之羽》</title>
-    <link href="https://flashj.cn/wuchang-fallen-feathers.html"/>
-    <id>https://flashj.cn/wuchang-fallen-feathers.html</id>
-    <published>2025-06-07T08:43:00.000Z</published>
-    <updated>2025-07-28T05:32:46.702Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是今年国产单机游戏中首款值得入手的作品。我准备好踏入《明末：渊虚之羽》的世界了。这款基于古蜀文明打造的国产单机ARPG，让人充满期待。</p><p>今年钱包已经为《明末》和《影之刃零》预留了预算，再加上正在关注的英伦风格《湮灭之潮》和霓虹风格《昭和米国物語》，感觉国产游戏今年要起飞了🛫。</p><h2 id="背景故事预告片及2月研发日志更新"><a href="#背景故事预告片及2月研发日志更新" class="headerlink" title="背景故事预告片及2月研发日志更新"></a>背景故事预告片及2月研发日志更新</h2><iframe  class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=113958551814761&bvid=BV1whNxejETn&cid=28251130077&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>今年过年时刚好看了三星堆的展览，紧接着又了解到《明末》的故事背景，发现游戏中的设定与古蜀国、三星堆文明之间竟有几分契合，感觉真是奇妙的缘分。  </p><p>中国传统文化正以越来越丰富的形式融入游戏之中，这种融合令人欣喜，也让人对文化传承的方式有了更多期待。</p><h2 id="预购版-预购豪华版套装展示"><a href="#预购版-预购豪华版套装展示" class="headerlink" title="预购版+预购豪华版套装展示"></a>预购版+预购豪华版套装展示</h2><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=114409640821874&bvid=BV1AeLBzBEQD&cid=29590487189&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>四月底公布的豪华版和预购奖励颇有吸引力。为了套装“金虎祥瑞”，为了能开炮的明朝黑科技“九转尽乾”，必须预购豪华版嘛。</p><h2 id="夏日游戏节预告片"><a href="#夏日游戏节预告片" class="headerlink" title="夏日游戏节预告片"></a>夏日游戏节预告片</h2><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=114629757897963&bvid=BV1zhTxzkEDp&cid=30331437914&p=1&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>生死颠倒苍生凋，因果纠缠何时了。 落羽残烬成烟消，天道有诏自分晓。 7月24日 勘破无常 【诸行无常，因果之循，长存不灭】</p><p>7.28 补记：</p><p>我不是对明末失望,我只是认清了魂游不适合我的事实.</p><p>战斗毫无乐趣,画质开高就卡,开低了纯受罪,走路奇慢无比,看别的人玩的战斗花样挺多,但是我进去只感受到我各种硬直和怪各种两三下带走我. 会玩和不会玩有天差地别.</p><p>你说我不适合玩魂游,没错,可黑神话那时候你们也说黑神话是类魂游戏. 黑神话我玩得挺带劲啊.</p><p>而这游戏,进去各种懵逼,那么多术语,技能树除了看文字天书描述以外,图标一点看不出来是啥,对不起对于没玩过魂的玩家来说还是门槛太高了. 高门槛的游戏,就不应该按照全民游戏的热度去推广. 我只是一个普通的休闲玩家,骗我买了这游戏还真是高看我了.</p><p>现在这画质和流畅度，看着糊的画质和僵硬的动作，纯受罪，就算我开个锁血作弊玩，都玩不下去。 </p><p>恰好还遇到现在网上都在骂，做攻略的太少了的倒霉情况。导致我现在连“学会如何用正确方式打开”都没地方学。</p><p>等网上针对「没玩过魂的萌新」的攻略多了、我的电脑配置升级之后再来受罪吧。</p><p>等《影之刃零》发布。</p>]]></content>
-    
-    
-    <summary type="html">这是今年国产单机游戏中首款值得入手的作品。准备好踏入《明末：渊虚之羽》的世界了吗？这款基于古蜀文明打造的国产单机ARPG，让人充满期待。今年钱包已经为《明末》和《影之刃零》预留了预算，再加上正在关注的英伦风格《湮灭之潮》和霓虹风格《昭和米国物語》，感觉国产游戏今年要起飞了🛫。</summary>
-    
-    
-    
-    <category term="电脑游戏" scheme="https://flashj.cn/categories/%E7%94%B5%E8%84%91%E6%B8%B8%E6%88%8F/"/>
-    
-    
-    <category term="动作游戏" scheme="https://flashj.cn/tags/%E5%8A%A8%E4%BD%9C%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="电脑游戏" scheme="https://flashj.cn/tags/%E7%94%B5%E8%84%91%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="单机游戏" scheme="https://flashj.cn/tags/%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="国产" scheme="https://flashj.cn/tags/%E5%9B%BD%E4%BA%A7/"/>
-    
-    <category term="明末" scheme="https://flashj.cn/tags/%E6%98%8E%E6%9C%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大模型时代迫使人类重塑原创性与独特性</title>
-    <link href="https://flashj.cn/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html"/>
-    <id>https://flashj.cn/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html</id>
-    <published>2025-06-03T00:56:00.000Z</published>
-    <updated>2025-06-07T09:22:12.945Z</updated>
-    
-    <content type="html"><![CDATA[<p>大模型时代逼迫人类的教育变革，也迫使人类思考自己之所以区隔于AI的独特性。</p><h2 id="被AI误伤，我该怎么证明“我没有用AI作弊”"><a href="#被AI误伤，我该怎么证明“我没有用AI作弊”" class="headerlink" title="被AI误伤，我该怎么证明“我没有用AI作弊”"></a>被AI误伤，我该怎么证明“我没有用AI作弊”</h2><p>前几天看到一篇文章：  <a href="https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA">https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA</a></p><div class="tag-plugin link dis-select"><a class="link-card plain" title="被AI误伤，我该怎么证明“我没有用AI作弊”" href="https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">被AI误伤，我该怎么证明“我没有用AI作弊”</span><span class="cap link footnote">https://mp.weixin.qq.com/s/GQdnxdyJ-L4pijcuYAf5rA</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div><p>这篇文章主要讲了AI时代下，学生和老师在作业判定上产生的矛盾，以及被AI误判作弊后该如何自证清白的问题，具体内容如下：</p><ul><li><strong>学生被AI检测工具误判作弊的现象</strong><ul><li>美国休斯顿大学学生Leigh Burrell认真完成的英语作业被教授怀疑用AI作弊判了零分，她花了半个多月，提交15页写作过程截图、时间戳和作业过程视频才洗清嫌疑，之后为避免再被误判，她写作业时会架摄像机录全程。</li><li>布法罗大学一公共卫生专业学生独立完成的作业被Turnitin的AI检测工具误判为“可能由AI生成”，校方仅凭此就启动学术不端调查，且这类情况申诉难，举证责任全在学生，像英语非母语者、残障学生等群体更易遭遇。</li><li>有学生在同一门课上两次被误判用AI，还有学生全心投入写的元分析论文60%被Turnitin误判为AI生成，且不知如何用自己的话改写被标记内容。</li><li>一学生用Visual Studio Code完成web开发毕业设计，虽有各种开发过程资料，但教授怀疑一切，不认可其未用AI。</li></ul></li><li><strong>AI使用的不同极端案例</strong><ul><li>哥伦比亚大学计算机科学专业学生Chungin “Roy” Lee几乎每一份文科作业都用AI“参考”，还开发了程序员面试辅助工具并创业成功。</li><li>有老师因用AI备课，讲义中出现给ChatGPT的指令，被学生投诉，而该老师教学大纲却禁止使用AI等学术不端行为。</li></ul></li><li><strong>AI检测工具的问题</strong>：现在很多AI检测软件检测“是否由AI生成”，但整体准确率不高，这导致老师和学生越来越对立。</li><li><strong>各方的困扰与矛盾</strong><ul><li>学生方面：“好学生”因AI检测工具误判或写作风格“过于完美”被怀疑，自证清白困难；部分学生合理用AI辅助学习，而有些则过度依赖甚至作弊。</li><li>老师方面：面对大量带“AI腔调”的作业难辨真假，部分老师用AI辅助教学却被学生质疑虚伪，且不同老师对学生使用AI的“度”标准不一，易引发矛盾。</li></ul></li><li><strong>目前的解决办法</strong><ul><li>学生：代码类作业可保留丰富的git commit历史（含拼写错误、构建失败等）；文字类作业善用Word、Google Docs的历史记录功能，或录视频直播写作业过程，时刻留意保存写作业的“证据”。</li><li>老师：部分老师认为只能采用现场手写、真人监考的“原始”方式保证书面作业公平性，如课堂上手写论文并由真人导师监考。</li></ul></li></ul><h2 id="重塑原创性与人类独特性"><a href="#重塑原创性与人类独特性" class="headerlink" title="重塑原创性与人类独特性"></a>重塑原创性与人类独特性</h2><p>对我们启发最大的地方在于，教育方式是否应该跟随技术而迭代？ 既然AI可以在这些方面做得很好，那么为什么要布置这种AI可以做得很好的作业？ 人的独特性在哪里，在作业中难道不应该结合人类独特性吗？</p><p>大模型时代逼迫人类的教育变革，也迫使人类思考自己之所以区隔于AI的独特性。</p><p>我觉得，首先，作业设计得改改。别再搞那些模板化、机械化的作业了，得让学生发挥自己的创造力、批判性思维和情感体验。比如说写作文，别再让学生写那些千篇一律的题目，什么 “我的梦想”“难忘的一天”，这些题目都快被写烂了。可以让学生结合自己的生活经历，写一些更有深度、更有个性的内容，像 “我在一次失败经历中的成长”“我对某个社会现象的独特看法”，这样的具有个体差异的命题。<br>就像我面试别人时，也会比较侧重问之前项目中遇到的比较大的挑战是如何解决的。</p><p>在写作教学中，学生不再仅仅需要掌握语法和修辞技巧，更需要培养批判性思维、创造力和情感表达能力，这些是AI目前难以替代的。</p><p>其次，教育评价体系也得重构。不能再只看分数、只看结果了，得关注学生的思维过程和成长过程。就像我们做产品，不能只看最后产品卖得好不好，还得看研发过程中遇到了哪些问题，是怎么解决的。可以采用档案袋评价法，把学生的草稿、修改记录、反思日志都收集起来，综合评估他们的能力。</p><p>另外，老师们也得转型升级。要从传统的知识传授者，变成学生成长的教练和引导者。得学会用好 AI 工具，把它融入到教学中，而不是抵制它。就像我们做企业，不能拒绝新技术，得拥抱它，让它为我们所用。</p><p>AI 不是教育的敌人，而是重构教育的契机。我们得抓住这个机会，让教育变得更符合人性，更能培养出有独特性、有创造力的人才。希望未来的教育，能让每个学生都能找到自己的价值，在 AI 浪潮中站稳脚跟，而不是被浪潮淹没。</p><p>同时，人类也必须重新审视自身的独特性——我们不仅仅是信息的接收者和处理者，更是情感的载体、道德的判断者以及文化的传承者。在AI可以生成文章、创作音乐甚至进行艺术设计的时代，人类的独特价值在于我们对世界的感知、对生命的理解以及对伦理的思考。因此，教育变革不仅是技术驱动的结果，更是人类自我认知和未来发展的必然选择。</p>]]></content>
-    
-    
-    <summary type="html">被AI误伤，我该怎么证明“我没有用AI作弊”？对我们启发最大的地方在于，教育方式是否应该跟随技术而迭代？ 既然AI可以在这些方面做得很好，那么为什么要布置这种AI可以做得很好的作业？ 人的独特性在哪里，在作业中难道不应该结合人类独特性吗？</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Trae终于出收费版了</title>
-    <link href="https://flashj.cn/trae-pro.html"/>
-    <id>https://flashj.cn/trae-pro.html</id>
-    <published>2025-05-28T12:31:00.000Z</published>
-    <updated>2025-11-25T12:36:25.104Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Trae终于出收费版了"><a href="#Trae终于出收费版了" class="headerlink" title="Trae终于出收费版了"></a>Trae终于出收费版了</h1><p>今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！</p><p>哇塞价格太给力了！<br>7.5美元&#x2F;月，这不比cursor，GitHub copilot都省太多了！<br>还好没买Cursor。</p><p>7.5如果以后不用排队用Claude Sonnet3.7的话，这就太值了！</p><p>现在免费版每个月10次快速，50次慢速。<br>我先用完10次claude之后再看啊。</p><p>pro版 600次快速&#x2F;月</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>免费版</strong></td><td><strong>Pro 版</strong></td></tr><tr><td><strong>目标用户</strong></td><td>个人</td><td>个人</td></tr><tr><td><strong>定价</strong></td><td>免费</td><td>10 美金&#x2F;月</td></tr><tr><td><strong>折扣</strong></td><td>-</td><td>- 首次订阅（即新订阅用户）享受优惠价。<br>- 按年订阅可享受折扣。</td></tr><tr><td><strong>订阅类型</strong></td><td>-</td><td>- <strong>连续包月</strong>：当月订阅到期前，自动续费。<br>- <strong>包年</strong>：一次性支付一年的订阅费用。</td></tr><tr><td><strong>付款政策</strong></td><td>-</td><td>每次仅能发起一次订阅。</td></tr><tr><td><strong>退款政策</strong></td><td>-</td><td>不支持退款。若有特殊情况，可通过邮件（<a href="mailto:&#x66;&#101;&#x65;&#x64;&#x62;&#x61;&#99;&#107;&#64;&#109;&#97;&#105;&#x6c;&#46;&#116;&#114;&#x61;&#101;&#46;&#x61;&#105;">feedback</a><a href="mailto:&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#64;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x74;&#x72;&#97;&#101;&#x2e;&#97;&#105;">@mail.trae.ai</a>）联系 Trae 官方处理。</td></tr><tr><td><strong>代码自动补全</strong></td><td>5000 次&#x2F;月</td><td>无限次</td></tr><tr><td><strong>超级模型问答</strong></td><td>- 快速队列：每月 10 次<br>- 慢速队列：每月 50 次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td><td>- 快速队列：每月 600 次<br>- 慢速队列：无限次<br><br><em><strong>提示</strong></em>：对于 Beta 模型，你在快速队列中使用时也可能需要排队等待。</td></tr><tr><td><strong>高级模型问答</strong></td><td>每月 1000 次（慢速队列）</td><td>无限次（慢速队列）</td></tr><tr><td>解释：</td><td></td><td></td></tr></tbody></table><ul><li>快速请求的意思是15秒以内，但beta模型可能依然排队。目前Claude sonnet3.7是正式版。600次的话一天可以用20～30次，不知道重度使用够不够了。之前因为排队的问题，我一天也就用个3～4次。</li><li>慢速请求，快速请求用完了就轮到排队。</li></ul><p>明天我再试试用它来写样式。</p>]]></content>
-    
-    
-    <summary type="html">今天打开 Trae 突然发现右上角显示“升级到Pro” ，哇塞，终于出收费版了！哇塞价格太给力了！7.5美元/月，这不比cursor，GitHub copilot都省太多了！</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
-    
-    <category term="vibecoding" scheme="https://flashj.cn/tags/vibecoding/"/>
     
   </entry>
   
