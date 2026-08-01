@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-07-31T03:13:08.611Z</updated>
+  <updated>2026-08-01T04:04:52.634Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>娱乐至死的人类和下一个世代的媒体</title>
+    <link href="https://flashj.cn/next-gen-media-generative-narrative.html"/>
+    <id>https://flashj.cn/next-gen-media-generative-narrative.html</id>
+    <published>2026-07-31T04:30:00.000Z</published>
+    <updated>2026-08-01T04:04:52.634Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="娱乐至死的人类和下一个世代的媒体"><a href="#娱乐至死的人类和下一个世代的媒体" class="headerlink" title="娱乐至死的人类和下一个世代的媒体"></a>娱乐至死的人类和下一个世代的媒体</h1><p>我今天早上是有点郁闷。当然也有一点是对整个人类的郁闷。</p><p>人类在这条娱乐至死的路上，越行越远了。</p><h2 id="一、降智化：供给侧产能爆炸的必然"><a href="#一、降智化：供给侧产能爆炸的必然" class="headerlink" title="一、降智化：供给侧产能爆炸的必然"></a>一、降智化：供给侧产能爆炸的必然</h2><p>你看现在写番茄小说这种网文，哇塞，都得把自己降智了才写得出来，而且还要搞抽象，才能整出一些反套路的。</p><p>但正常人能想到的思路，这么多年早就被写完了。现在必须搞抽象，弄一些贼离谱的——现实生活中你完全没有办法想到、或者体会到的那种离谱。</p><p>现代的网文读者，对爽点要求的阈值已经很高了。</p><p>所以我想，哎，人类呀，这将来怎么办啊？</p><p>先把这个逻辑捋清楚。现在搞生产创造，你很难搞出什么创业机会。生产力过于旺盛，消费端却非常疲乏——消费端金字塔主体现在只能看这些很低俗、很幼稚、很降智的内容。</p><p>网文的降智化，就是这个逻辑的典型案例：</p><p><strong>供给侧产能爆炸</strong>（AI辅助写作 + 海量作者），<strong>消费侧注意力总量不变</strong>，那只能卷「刺激强度」。阈值被不断拉高，正常的起承转合已经满足不了读者了，只能上抽象的、反逻辑的反转。</p><p>这不是作者变蠢了，是系统性的「军备竞赛」。</p><h2 id="二、这种轮回，历史上不是第一次"><a href="#二、这种轮回，历史上不是第一次" class="headerlink" title="二、这种轮回，历史上不是第一次"></a>二、这种轮回，历史上不是第一次</h2><p>这种「劣币驱逐良币」的周期，历史上不是第一次。</p><p>十九世纪末，工业革命让廉价纸张泛滥，地摊文学和黄色小报横行，当时精英阶层也痛呼「人类完蛋了」。</p><p>然后呢？然后电影出现了，广播出现了，电视、游戏、互联网……每一次新媒介的诞生，都是一波洗牌。</p><p>这历史的轮回是有道理的。但问题是——</p><h2 id="三、人类还有机会发明新的媒体形式吗？"><a href="#三、人类还有机会发明新的媒体形式吗？" class="headerlink" title="三、人类还有机会发明新的媒体形式吗？"></a>三、人类还有机会发明新的媒体形式吗？</h2><p>文字、图片、声音、视频、交互、VR&#x2F;AR。视听触三大感官通道，基本全被覆盖了。</p><p>还能发明什么？把气味通过网络传播？那是技术难题，不是媒介革命。脑机接口直接把情绪写进大脑？那一天到来，搞不好 AI 和人的界限都没了。</p><p>以我的浅薄理解，这条路暂时是走到头了。</p><p>下一个能释放消费端新需求的媒介形态是什么？目前还看不到。</p><p>AI 这一波是纯生产端革命，它没有创造任何新的消费场景。</p><h2 id="四、但我们可能看漏了一个维度：时间维度的生成式叙事"><a href="#四、但我们可能看漏了一个维度：时间维度的生成式叙事" class="headerlink" title="四、但我们可能看漏了一个维度：时间维度的生成式叙事"></a>四、但我们可能看漏了一个维度：时间维度的生成式叙事</h2><p>所有现存的媒介，都有一个共同特点：<strong>「作者生产完，消费者被动接收」。</strong></p><p>哪怕是游戏——最互动的媒介——也不过是在预设的几棵技能树之间做分支选择。本质上还是作者种好了所有的树，你只是挑一棵往上爬。</p><p>但如果 AI 能实时生成呢？</p><p>同样的故事种子，每个人进去之后故事都不一样——这个形态目前还不存在。</p><p>现在只是有一些零星的局部探索，比如酒馆（<a href="https://github.com/SillyTavern/SillyTavern">SillyTavern</a>），还完全没有形成终局形态。</p><p>如果这种「时间维度的生成式叙事」真的成为下一个阶段的媒介主流，创作者怎么办？</p><h2 id="五、创作者的核心会变成什么"><a href="#五、创作者的核心会变成什么" class="headerlink" title="五、创作者的核心会变成什么"></a>五、创作者的核心会变成什么</h2><p>如果叙事从「一次性交付」变成「实时生成」，创作者的价值就从一个具体的文本，上移成了制造这个世界的元能力：</p><ul><li><strong>世界观架构师</strong> — 不是写一个故事，而是搭一套规则自洽的世界体系</li><li><strong>角色设计师</strong> — 不是写好台词，而是设计出能在无数分支里保持人格一致的灵魂</li><li><strong>情绪节奏编排师</strong> — 不是铺一个情绪曲线，而是设计出能应对任意剧情走向的节奏框架</li><li><strong>品味把关人</strong> — 在无限生成的雪崩里，替用户筛选出值得体验的那部分</li></ul><p><strong>创作者不再生产「结果」，而是生产「可能性的边界」。</strong></p><p>保持观察，保持记录，让子弹飞一会儿。</p>]]></content>
+    
+    
+    <summary type="html">生产端产能爆炸、消费端阈值被无限拉高，网文的降智化是人类在娱乐至死的路上越走越远的缩影。历史上每一次新媒介都是一次洗牌，但文字、图片、声音、视频、交互、VR/AR，感官通道基本被覆盖完了。下一个能释放消费端新需求的媒介形态是什么？也许答案是「时间维度的生成式叙事」——同样的故事种子，每个人进去之后故事都不一样。</summary>
+    
+    
+    
+    <category term="生命感悟" scheme="https://flashj.cn/categories/%E7%94%9F%E5%91%BD%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="网文" scheme="https://flashj.cn/tags/%E7%BD%91%E6%96%87/"/>
+    
+    <category term="媒体" scheme="https://flashj.cn/tags/%E5%AA%92%E4%BD%93/"/>
+    
+    <category term="生成式叙事" scheme="https://flashj.cn/tags/%E7%94%9F%E6%88%90%E5%BC%8F%E5%8F%99%E4%BA%8B/"/>
+    
+    <category term="媒介" scheme="https://flashj.cn/tags/%E5%AA%92%E4%BB%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>从飞书和豆包合并想到的</title>
@@ -209,9 +238,9 @@
     
     <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
     
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
     
@@ -563,7 +592,7 @@
     <published>2026-04-04T04:16:00.000Z</published>
     <updated>2026-04-04T04:21:58.083Z</updated>
     
-    <content type="html"><![CDATA[<p>9.74 复制打开抖音，看看【AIGC成也的作品】144个AI员工一键部署！ # 干货分享 # AI… <a href="https://v.douyin.com/RsEb3LiCBiA/">144个AI员工一键部署！ #干货分享 #AI #github #人工智能 #AI工具 - 抖音</a> 04&#x2F;07 <a href="mailto:&#x6c;&#64;&#x70;&#46;&#x64;&#x61;">l@p.da</a> Agb:&#x2F;</p><p>github : <a href="https://github.com/msitarzewski/agency-agents">Agency-Agent</a></p><p>这个是抖音看到，最关键的点就是这个项目地址。我去给它找找，稍等研究一下，看看适不适合本地部署用一下。</p><p>因为昨天我用的那个叫作 Eigent 的，感觉不是很靠谱：</p><ol><li>里面怎么用中文都说不明白话（当然也有可能是受限于我模型的能力）</li><li>虽然内置了 4 个 Agent 也支持 skill，但它对 skill 的支持没有那么好，用起来不太顺</li><li>还是用 Electron 开发的，我觉得很讨厌</li></ol><p>等一下，我再看一下这个 Agency-Agent 的介绍。它这个里面毕竟有 <strong>100 多个已经定义好了的 Agent</strong> 嘛。</p><p>啊对啊，而且我看下面有人评论，就在这个抖音视频下面的评论里，有人说装了这个之后可以集成在 Trae 里面，然后 <strong>Trae 开发的时候就没那么降智</strong>了。</p><p>我🤔疑惑：这还能作为一个插件用在 Trae 里面吗？或者说它是可以当作 Skill 用，还是当作 MCP 来用来用啊？但它里面又内置了 100 多个智能体。到底是怎样一个形式呢？我要实践一下才知道。</p><hr><p>Use with Claude Code (Recommended)</p><pre><code># Copy agents to your Claude Code directorycp -r agency-agents/* ~/.claude/agents/# Now activate any agent in your Claude Code sessions:# &quot;Hey Claude, activate Frontend Developer mode and help me build a React component&quot;</code></pre><hr><p>看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</p><p>它本身有三种主要用法：</p><ol><li><p>放在 Claude Code 里面使用<br>在调用时，只需一句话就能唤起特定的角色来执行具体工作。</p></li><li><p>作为参考素材<br>你可以参考其中已经写好的 Agent 身份特征、核心使命、工作流程、技术交付物、代码实例、成功指标以及沟通风格等内容。在此基础上进行改编，做成自己想要的智能体或其他智能体验。</p></li><li><p>集成到其他编程工具中<br>将其结合到其他软件里使用，例如集成在 Cursor 或 OpenClaw 等编程工具中。</p></li></ol><p>它建议的首选使用方式是把这些 Agent 复制到 Claude Code 里面。</p><p>😐我的Claude Code 默认居然一个 Agent 都没有，我一直都以为Claude Code 是靠skill来组合功能，没想到claude code本身是支持你创建一个agents文件夹，设定一些角色的。</p><p>但是，你可以给它定义 Agent 的不同功能特性：</p><ol><li>这相当于对应了一个类似“功能包”的作用。</li><li>它本身拥有自己的性格、品位、形象和做事风格。</li><li>这一整套做事 SOP 都已经集成在它自己的个性里面了，而不是只通过外部 Skill 来提供的。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>9.74 复制打开抖音，看看【AIGC成也的作品】144个AI员工一键部署！ # 干货分享 # AI… <a href="https://v.douyin.com/RsEb3LiCBiA/">144个AI员工一键部署！ #干货分享 #AI #github #人工智能 #AI工具 - 抖音</a> 04&#x2F;07 <a href="mailto:&#108;&#x40;&#112;&#46;&#100;&#97;">l@p.da</a> Agb:&#x2F;</p><p>github : <a href="https://github.com/msitarzewski/agency-agents">Agency-Agent</a></p><p>这个是抖音看到，最关键的点就是这个项目地址。我去给它找找，稍等研究一下，看看适不适合本地部署用一下。</p><p>因为昨天我用的那个叫作 Eigent 的，感觉不是很靠谱：</p><ol><li>里面怎么用中文都说不明白话（当然也有可能是受限于我模型的能力）</li><li>虽然内置了 4 个 Agent 也支持 skill，但它对 skill 的支持没有那么好，用起来不太顺</li><li>还是用 Electron 开发的，我觉得很讨厌</li></ol><p>等一下，我再看一下这个 Agency-Agent 的介绍。它这个里面毕竟有 <strong>100 多个已经定义好了的 Agent</strong> 嘛。</p><p>啊对啊，而且我看下面有人评论，就在这个抖音视频下面的评论里，有人说装了这个之后可以集成在 Trae 里面，然后 <strong>Trae 开发的时候就没那么降智</strong>了。</p><p>我🤔疑惑：这还能作为一个插件用在 Trae 里面吗？或者说它是可以当作 Skill 用，还是当作 MCP 来用来用啊？但它里面又内置了 100 多个智能体。到底是怎样一个形式呢？我要实践一下才知道。</p><hr><p>Use with Claude Code (Recommended)</p><pre><code># Copy agents to your Claude Code directorycp -r agency-agents/* ~/.claude/agents/# Now activate any agent in your Claude Code sessions:# &quot;Hey Claude, activate Frontend Developer mode and help me build a React component&quot;</code></pre><hr><p>看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</p><p>它本身有三种主要用法：</p><ol><li><p>放在 Claude Code 里面使用<br>在调用时，只需一句话就能唤起特定的角色来执行具体工作。</p></li><li><p>作为参考素材<br>你可以参考其中已经写好的 Agent 身份特征、核心使命、工作流程、技术交付物、代码实例、成功指标以及沟通风格等内容。在此基础上进行改编，做成自己想要的智能体或其他智能体验。</p></li><li><p>集成到其他编程工具中<br>将其结合到其他软件里使用，例如集成在 Cursor 或 OpenClaw 等编程工具中。</p></li></ol><p>它建议的首选使用方式是把这些 Agent 复制到 Claude Code 里面。</p><p>😐我的Claude Code 默认居然一个 Agent 都没有，我一直都以为Claude Code 是靠skill来组合功能，没想到claude code本身是支持你创建一个agents文件夹，设定一些角色的。</p><p>但是，你可以给它定义 Agent 的不同功能特性：</p><ol><li>这相当于对应了一个类似“功能包”的作用。</li><li>它本身拥有自己的性格、品位、形象和做事风格。</li><li>这一整套做事 SOP 都已经集成在它自己的个性里面了，而不是只通过外部 Skill 来提供的。</li></ol>]]></content>
     
     
     <summary type="html">144个AI员工一键部署。看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</summary>
@@ -578,29 +607,6 @@
     <category term="agent" scheme="https://flashj.cn/tags/agent/"/>
     
     <category term="sop" scheme="https://flashj.cn/tags/sop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新知识： MineContext</title>
-    <link href="https://flashj.cn/minecontext.html"/>
-    <id>https://flashj.cn/minecontext.html</id>
-    <published>2026-04-04T04:12:00.000Z</published>
-    <updated>2026-04-04T04:21:45.616Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>MineContext：字节出品，让 AI 看懂你一天都在干什么**</p><p>GitHub：<a href="https://github.com/volcengine/MineContext/tree/main">https://github.com/volcengine/MineContext/tree/main</a></p><p>平时和 ChatGPT 聊天、提问，往往受限于 <strong>prompt 的长度和时间成本</strong>。一次只能提供一点上下文，没法让 AI 真正了解我们在做的事。</p><p>MineContext 想解决的，就是这个“AI 记不住你的世界”的问题。</p><p>它是一款开源的 <strong>上下文感知 AI 工具（context-aware AI partner）</strong>，能通过截图和内容解析理解你的数字世界——在写代码、读文档、查资料还是开会，它都能自动识别并提炼信息。AI 会基于这些上下文生成日报、总结、待办和洞察，主动推送给你，不再需要一遍遍解释背景。</p><p>所有数据都在本地存储，支持 OpenAI、豆包等模型（需要用到自己的 API）。</p><p><strong>MineContext</strong> 的命名也很有意思：既是 “我的上下文”，也是 “挖掘上下文”。它的灵感来自 Minecraft——如果海量的 context 是散落各处的“方块”，MineContext 就是那个能让你自由搭建、组合、再创造的“世界”。</p><p>使用文档：<a href="https://bytedance.larkoffice.com/wiki/W9m8whhMDiYuZyk1uQpc0chWnnc">如何快速上手 MineContext</a></p></blockquote><p>这个东西乍一听，好像跟我去年<a href="obsidian://open?vault=%E7%94%9F%E5%91%BD%E5%8E%86%E7%A8%8B&file=2025-09-27">9月用的 DayFlow</a> 差不多。 </p><p>我可以再试一下，DayFlow 当时我没有再用了，因为他用的是本地算力做视频分析，分析得太不准了。我用的是那个千问的 4B 视觉模型，分析得太不准了，就不用了。</p><p>我刚才看了一下官方文档的使用手册，发现它和我去年用的 DayFlow 功能完全一模一样。</p><p>但是它的视觉理解需要使用火山引擎的 API Key。我看群里面人家反馈，一天大概要花一块钱，这简直太离谱了。</p><p>如果我的视觉理解是通过上传截图到网上，等它处理完后再给我打标传回本地，那不等于还是一样泄露隐私吗？</p><p>我本地的屏幕天天都在给别人看，结果还得收我钱？</p><p>这种产品还是要依靠视觉理解模型。只有当大家都能在本地部署、企业端也能大规模跑起来的时候，才能真正动起来。</p><p>现在这个发展阶段有点像早期的电脑：</p><ol><li>客户机的配置肯定不可能是很高的。</li><li>它作为一个终端，必须连接到远程的大型计算机，使用大型计算机的算力来进行运算。</li></ol><p>但是电脑发展了几年之后，千家万户都能买一个 Mac 或者买一个 IBM 的机子，所有的功能就都已经具备了。以前那些需要用终端连接到远程才能使用的服务和功能，全部都在本地客户端里面独立实现了，完全不需要联网就能运行。</p><p>对应现在这个 AI 时代，我觉得它就相当于早期还在使用终端的年代。</p><p>我们现在买的 token 都需要云端来帮我们处理，好像在付电费一样。但是这个时间不会很长，<strong>最多过十年，就会从终端机变成家用机的时代，所有的 token 都会在本地运行</strong>。</p>]]></content>
-    
-    
-    <summary type="html">这个东西乍一听，好像跟我去年9月用的 DayFlow 差不多。 我可以再试一下，DayFlow 当时我没有再用了，因为他用的是本地算力做视频分析，分析得太不准了。我用的是那个千问的 4B 视觉模型，分析得太不准了，就不用了。我刚才看了一下官方文档的使用手册，发现它和我去年用的 DayFlow 功能完全一模一样。</summary>
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="日记" scheme="https://flashj.cn/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
