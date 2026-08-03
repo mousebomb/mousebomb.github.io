@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-08-01T04:11:44.384Z</updated>
+  <updated>2026-08-03T12:22:27.622Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>接入 OpenViking，统一 OpenCode 和 Hermes 的记忆</title>
+    <link href="https://flashj.cn/openviking-setup.html"/>
+    <id>https://flashj.cn/openviking-setup.html</id>
+    <published>2026-08-02T04:25:00.000Z</published>
+    <updated>2026-08-03T12:22:27.622Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="openviking接入"><a href="#openviking接入" class="headerlink" title="openviking接入"></a>openviking接入</h2><p><a href="https://www.openviking.ai/">https://www.openviking.ai/</a></p><p>uv tool安装</p><pre><code>uv tool install openviking --python 3.12</code></pre><p>按照道理来讲，安装完了这个就可以使用Ov和OpenViking Server了。 也可以接入OpenCode，OpenCode要装个插件。但是我现在需要解决embedding模型的问题和VLM模型的问题。<br>VLM可以用小米的模型。<br>Embedding模型用Agent Plan带的吧。</p><p>Embedding:</p><ul><li>embedding 模型id： <code>doubao-embedding-vision</code></li><li>baseURL : <code>https://ark.cn-beijing.volces.com/api/plan/v3</code><br>VLM:</li><li>Opencode Go的 mimo2.5</li></ul><p>在整理这个资料的过程当中，学习到了几个新的知识：</p><ul><li>uv管理的python是只占用同一份存储空间的</li><li>uv tool install 是安装全局，且工具使用自己的python解释器，互相独立</li><li>之前的markitdown其实也可以用uv tool install安装，而并不要找一个路径uv sync装</li></ul><p>好那就开始安装openviking吧。<br>具体步骤记录：</p><h3 id="安装ov"><a href="#安装ov" class="headerlink" title="安装ov"></a>安装ov</h3><pre><code class="language-sh">uv tool install openviking --upgrade</code></pre><p>Installed 4 executables: openviking, openviking-server, ov, vikingbot</p><p>安装完成，可以使用客户端命令 <code>ov</code>（<code>openviking</code> 是其别名）和服务端命令 <code>openviking-server</code>。</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><pre><code>openviking-server init</code></pre><p>通过它自带的配置了一下。然后呢我发现它火山引擎配的那个URL不对，因为我是Agent的plan。所以我就手动去配置文件里面改了一下。</p><p>然后再运行<code>openviking-server doctor</code>报一个socks错（因为我命令行有时候开了代理）：</p><pre><code> openviking-server doctorOpenViking Doctor  Config:        PASS  /Users/rhett/.openviking/ov.conf  Python:        PASS  3.14.2 (&gt;= 3.10 required)  Native Engine: PASS  variant=native  AGFS:          PASS  AGFS SDK 0.1.713:05:11 - LiteLLM:WARNING: get_model_cost_map.py:264 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: Using SOCKS proxy, but the &#39;socksio&#39; package is not installed. Make sure to install httpx using `pip install httpx[socks]`.. Falling back to local backup.  Embedding:     FAIL  volcengine/doubao-embedding-vision api_base=https://ark.cn-beijing.volces.com/api/plan/v3 dimension=1024 (invalid embedding config: Using SOCKS proxy, but the &#39;socksio&#39; package is not installed. Make sure to install httpx using `pip install httpx[socks]`.)                 Fix: Fix embedding.dense provider/model/api_base/dimension in ov.conf  VLM:           PASS  openai/mimo-v2.5  Ollama:        PASS  not configured  VikingBot:     PASS  VikingBot aligned with dev OpenViking auth  Disk:          PASS  2164.6 GB free in /Users/rhett/.openviking/data  1 check(s) failed. See above for fix suggestions.</code></pre><p>但我现在不知道怎么，因为我是用UV tool install 安装的ov，那怎么给这个ov的依赖安装<code>httpx[socks]</code>呢？</p><p>查询发现可以用<code>--with</code>来安装。</p><p>追加重装了一次：</p><pre><code>uv tool install openviking --reinstall --with &quot;httpx[socks]&quot;</code></pre><p>这次校验通过了。</p><pre><code class="language-sh">at 13:09 ❯ openviking-server doctorOpenViking Doctor  Config:        PASS  /Users/rhett/.openviking/ov.conf  Python:        PASS  3.14.2 (&gt;= 3.10 required)  Native Engine: PASS  variant=native  AGFS:          PASS  AGFS SDK 0.1.7  Embedding:     PASS  volcengine/doubao-embedding-vision api_base=https://ark.cn-beijing.volces.com/api/plan/v3 dimension=1024 probe ok (dimension=1024)  VLM:           PASS  openai/mimo-v2.5  Ollama:        PASS  not configured  VikingBot:     PASS  VikingBot aligned with dev OpenViking auth  Disk:          PASS  2164.5 GB free in /Users/rhett/.openviking/data  All checks passed.</code></pre><h3 id="运行服务端"><a href="#运行服务端" class="headerlink" title="运行服务端"></a>运行服务端</h3><p>居然报错：</p><pre><code class="language-sh">openviking-serverTraceback (most recent call last):  File &quot;/Users/rhett/.local/bin/openviking-server&quot;, line 10, in &lt;module&gt;    sys.exit(main())             ~~~~^^  File &quot;/Users/rhett/.local/share/uv/tools/openviking/lib/python3.14/site-packages/openviking_cli/server_bootstrap.py&quot;, line 104, in main    _real_main()    ~~~~~~~~~~^^  File &quot;/Users/rhett/.local/share/uv/tools/openviking/lib/python3.14/site-packages/openviking/server/bootstrap.py&quot;, line 282, in main    app = create_app(config)  File &quot;/Users/rhett/.local/share/uv/tools/openviking/lib/python3.14/site-packages/openviking/server/app.py&quot;, line 716, in create_app    from openviking.server.mcp_endpoint import create_mcp_app  File &quot;/Users/rhett/.local/share/uv/tools/openviking/lib/python3.14/site-packages/openviking/server/mcp_endpoint.py&quot;, line 27, in &lt;module&gt;    from mcp.server.fastmcp import FastMCPModuleNotFoundError: No module named &#39;mcp.server.fastmcp&#39;</code></pre><pre><code class="language-sh">$ uv tool uninstall openviking &amp;&amp; uv tool install openviking --python 3.12 --with &quot;httpx[socks]&quot; 2&gt;&amp;1 | tail -15</code></pre><p>降级3.12 依然不行，</p><pre><code>$ uv tool install openviking --python 3.12 --with &quot;httpx[socks]&quot; --with &quot;mcp&lt;2&quot; --reinstall 2&gt;&amp;1 | tail -6</code></pre><p>mcp 报错的原因（和 httpx[socks] 无关）：</p><ul><li>openviking 依赖声明 mcp&gt;&#x3D;1.27.0 无上限，uv 解析时拿了刚发布的 mcp 2.0.0</li><li>mcp 2.0 是破坏性重构，删掉了 mcp.server.fastmcp 模块，openviking 0.4.11 还在用旧 API<br>修复：重装并 pin mcp&lt;2：</li></ul><pre><code>uv tool install openviking --python 3.12 --with &quot;httpx[socks]&quot; --with &quot;mcp&lt;2&quot; --reinstall</code></pre><p>两个关键选择：</p><ol><li>Python 3.12（不是 3.14）：mcp 1.x 不支持 3.14，3.14 会强迫 uv 用 mcp 2.0</li><li><code>--with &quot;mcp&lt;2&quot;</code>：显式锁住 mcp 1.x，这是核心修复</li></ol><p>启动成功，可在浏览器打开<code>http://localhost:1933/</code>。</p><h3 id="配置OpenCode接入"><a href="#配置OpenCode接入" class="headerlink" title="配置OpenCode接入"></a>配置OpenCode接入</h3><pre><code class="language-sh">bash &lt;(curl -fsSL https://ovrelease.tos-cn-beijing.volces.com/memory-plugin-shared/install.sh) --harness opencode# 输入 http://127.0.0.1:1933；如果启用了认证，再输入 API Key</code></pre><pre><code class="language-sh">at 13:31 ❯ bash &lt;(curl -fsSL https://ovrelease.tos-cn-beijing.volces.com/memory-plugin-shared/install.sh) --harness opencodeLanguage / 语言   ( ) English &gt; (•) 中文   ↑/↓ move · 1-9 jump · enter confirm1. 环境检查==&gt; OS: Darwin==&gt; 已选择： opencode安装源模式   ( ) GitHub  （默认；支持远程更新） &gt; (•) 火山引擎 TOS 镜像（无法访问 GitHub 时使用）   ↑/↓ 移动 · 数字直选 · 回车确认2. OpenViking 凭据配置 (/Users/rhett/.openviking/ovcli.conf)==&gt; 未找到已有配置。连接到哪个 OpenViking 服务？   ( ) 自建 / 本地  [http://127.0.0.1:1933]   ( ) 火山引擎 OpenViking 云服务  [api.vikingdb.cn-beijing.volces.com] &gt; (•) 自定义 URL / 保持当前  [http://127.0.0.1:1933]   ↑/↓ 移动 · 数字直选 · 回车确认??  服务地址 [http://127.0.0.1:1933]:??  API key（本地免鉴权模式请直接回车）:==&gt; 已更新： url: — -&gt; http://127.0.0.1:1933==&gt; 凭据已就绪： /Users/rhett/.openviking/ovcli.conf==&gt; 之后可重跑本安装脚本重新配置。==&gt; 安装源模式： archive (渠道: tos)3. Marketplace 归档==&gt; 下载归档==&gt;   https://ovrelease.tos-cn-beijing.volces.com/releases/latest/memory-plugin-marketplace.zip4. OpenCode 插件==&gt; OpenCode 文件插件已安装： /Users/rhett/.config/opencode/plugins/openviking5. 安装校验==&gt; opencode: openviking-memory 看起来已安装==&gt; opencode: MCP server 已注册完成==&gt; 凭据： /Users/rhett/.openviking/ovcli.conf==&gt; OpenCode: @openviking/opencode-plugin~/Downloads took 42sat 13:32 ❯</code></pre><p>重启Opencode生效，可以在<code>/status</code>里看到。<br>后续聊天会自动被hook写入记忆到openviking中。</p><h3 id="设置开机自启动server"><a href="#设置开机自启动server" class="headerlink" title="设置开机自启动server"></a>设置开机自启动server</h3><p>手动创建<code>~/Library/LaunchAgents/com.openviking.server.plist</code>：</p><pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;&lt;plist version=&quot;1.0&quot;&gt;&lt;dict&gt;    &lt;key&gt;Label&lt;/key&gt;    &lt;string&gt;com.openviking.server&lt;/string&gt;    &lt;key&gt;ProgramArguments&lt;/key&gt;    &lt;array&gt;        &lt;string&gt;/Users/rhett/.local/bin/openviking-server&lt;/string&gt;    &lt;/array&gt;    &lt;key&gt;RunAtLoad&lt;/key&gt;    &lt;true/&gt;    &lt;key&gt;KeepAlive&lt;/key&gt;    &lt;true/&gt;    &lt;key&gt;WorkingDirectory&lt;/key&gt;    &lt;string&gt;/Users/rhett/.openviking&lt;/string&gt;    &lt;key&gt;StandardOutPath&lt;/key&gt;    &lt;string&gt;/Users/rhett/.openviking/openviking.log&lt;/string&gt;    &lt;key&gt;StandardErrorPath&lt;/key&gt;    &lt;string&gt;/Users/rhett/.openviking/openviking.err.log&lt;/string&gt;&lt;/dict&gt;&lt;/plist&gt;</code></pre><h3 id="配置hermes接入"><a href="#配置hermes接入" class="headerlink" title="配置hermes接入"></a>配置hermes接入</h3><p>原始状态：</p><pre><code>at 13:55 ❯ hermes memory statusMemory status────────────────────────────────────────  Built-in:  always active  Provider:  (none — built-in only)  Installed plugins:    • byterover  (API key / local)    • hindsight  (API key / local)    • holographic  (local)    • honcho  (API key / local)    • mem0  (API key / local)    • openviking  (API key / local)    • retaindb  (API key / local)    • supermemory  (requires API key)</code></pre><p>改成接入openviking：</p><pre><code>hermes memory setup# 选择 openviking，然后输入 endpoint / API Keyhermes memory status</code></pre><h3 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h3><p>随着在Paseo中使用OpenCode对话，或者在terminal中直接跟Hermes发起对话。在对话结束时，它就会把一些记忆自动地归档进去，提取并归档。然后同时session也会完整地保存到库当中，这倒是挺方便。</p><p>但是像Identity啊、 Soul啊，这几个文档，它并不是完整的从Hermes当中同步过来，而是自动根据所需提取一些关键信息。</p><p>目前对我来说好像能够体会到的就是Hermes跟Open Code的记忆可以互相打通了，那之前是各存各的。那当然了，其实之前我如果一定要互相调取的话，也能调得到，这其实都是存在本地磁盘上嘛，只是路径不一样。但是现在有一个统一管理呢，也还好。而且这个统一管理之后，它会把每一次的对话都做embedding，相当于一个全自动的复盘。比之前只存原始对话记录要更科学一些。</p><p>目前我感受到最大的好处就是我每天零散的布置给Open Code的各种任务，可以晚上一句话让它复盘总结。</p>]]></content>
+    
+    
+    <summary type="html">每天零散布置给 OpenCode 各种任务，晚上想一句话就让它复盘总结。但之前 OpenCode 的记忆和 Hermes 的记忆各存各的，没法统一。用 uv 装好 OpenViking，踩了两个坑（httpx[socks]、mcp 2.0 破坏性升级），最后把 OpenCode 和 Hermes 的记忆打通，实现全自动归档与复盘。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
+    
+    <category term="火山引擎" scheme="https://flashj.cn/tags/%E7%81%AB%E5%B1%B1%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="Hermes" scheme="https://flashj.cn/tags/Hermes/"/>
+    
+    <category term="记忆系统" scheme="https://flashj.cn/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="OpenViking" scheme="https://flashj.cn/tags/OpenViking/"/>
+    
+    <category term="uv" scheme="https://flashj.cn/tags/uv/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
+    
+  </entry>
   
   <entry>
     <title>娱乐至死的人类和下一个世代的媒体</title>
@@ -582,31 +615,6 @@
     <category term="开源" scheme="https://flashj.cn/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="google" scheme="https://flashj.cn/tags/google/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Agency-Agent:144个AI员工一键部署</title>
-    <link href="https://flashj.cn/agency-agent.html"/>
-    <id>https://flashj.cn/agency-agent.html</id>
-    <published>2026-04-04T04:16:00.000Z</published>
-    <updated>2026-04-04T04:21:58.083Z</updated>
-    
-    <content type="html"><![CDATA[<p>9.74 复制打开抖音，看看【AIGC成也的作品】144个AI员工一键部署！ # 干货分享 # AI… <a href="https://v.douyin.com/RsEb3LiCBiA/">144个AI员工一键部署！ #干货分享 #AI #github #人工智能 #AI工具 - 抖音</a> 04&#x2F;07 <a href="mailto:&#108;&#x40;&#x70;&#46;&#x64;&#97;">l@p.da</a> Agb:&#x2F;</p><p>github : <a href="https://github.com/msitarzewski/agency-agents">Agency-Agent</a></p><p>这个是抖音看到，最关键的点就是这个项目地址。我去给它找找，稍等研究一下，看看适不适合本地部署用一下。</p><p>因为昨天我用的那个叫作 Eigent 的，感觉不是很靠谱：</p><ol><li>里面怎么用中文都说不明白话（当然也有可能是受限于我模型的能力）</li><li>虽然内置了 4 个 Agent 也支持 skill，但它对 skill 的支持没有那么好，用起来不太顺</li><li>还是用 Electron 开发的，我觉得很讨厌</li></ol><p>等一下，我再看一下这个 Agency-Agent 的介绍。它这个里面毕竟有 <strong>100 多个已经定义好了的 Agent</strong> 嘛。</p><p>啊对啊，而且我看下面有人评论，就在这个抖音视频下面的评论里，有人说装了这个之后可以集成在 Trae 里面，然后 <strong>Trae 开发的时候就没那么降智</strong>了。</p><p>我🤔疑惑：这还能作为一个插件用在 Trae 里面吗？或者说它是可以当作 Skill 用，还是当作 MCP 来用来用啊？但它里面又内置了 100 多个智能体。到底是怎样一个形式呢？我要实践一下才知道。</p><hr><p>Use with Claude Code (Recommended)</p><pre><code># Copy agents to your Claude Code directorycp -r agency-agents/* ~/.claude/agents/# Now activate any agent in your Claude Code sessions:# &quot;Hey Claude, activate Frontend Developer mode and help me build a React component&quot;</code></pre><hr><p>看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</p><p>它本身有三种主要用法：</p><ol><li><p>放在 Claude Code 里面使用<br>在调用时，只需一句话就能唤起特定的角色来执行具体工作。</p></li><li><p>作为参考素材<br>你可以参考其中已经写好的 Agent 身份特征、核心使命、工作流程、技术交付物、代码实例、成功指标以及沟通风格等内容。在此基础上进行改编，做成自己想要的智能体或其他智能体验。</p></li><li><p>集成到其他编程工具中<br>将其结合到其他软件里使用，例如集成在 Cursor 或 OpenClaw 等编程工具中。</p></li></ol><p>它建议的首选使用方式是把这些 Agent 复制到 Claude Code 里面。</p><p>😐我的Claude Code 默认居然一个 Agent 都没有，我一直都以为Claude Code 是靠skill来组合功能，没想到claude code本身是支持你创建一个agents文件夹，设定一些角色的。</p><p>但是，你可以给它定义 Agent 的不同功能特性：</p><ol><li>这相当于对应了一个类似“功能包”的作用。</li><li>它本身拥有自己的性格、品位、形象和做事风格。</li><li>这一整套做事 SOP 都已经集成在它自己的个性里面了，而不是只通过外部 Skill 来提供的。</li></ol>]]></content>
-    
-    
-    <summary type="html">144个AI员工一键部署。看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="agent" scheme="https://flashj.cn/tags/agent/"/>
-    
-    <category term="sop" scheme="https://flashj.cn/tags/sop/"/>
     
   </entry>
   
