@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-08-05T01:25:22.120Z</updated>
+  <updated>2026-08-24T00:10:20.504Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DeepSeek Harness 和 Qwen3.8 都不是我的刚需</title>
+    <link href="https://flashj.cn/no-more-fomo-dsh-qwen38.html"/>
+    <id>https://flashj.cn/no-more-fomo-dsh-qwen38.html</id>
+    <published>2026-08-23T14:10:00.000Z</published>
+    <updated>2026-08-24T00:10:20.504Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近DeepSeek Harness 让AI圈子里的很多人沸腾了，但我用了一次就没有继续。</p><p>究其原因，<br>DSH现在还是preview，官方明确标注了，随时会做影响兼容性的大改动，现在是社区激烈碰撞、共创的时期。</p><p>对于我这样求新又求稳定的人来说，我求新，却没那么新。</p><p>我求稳，需要每天能稳定让Agent辅助我，作为我的第二大脑，我不能轻易接受破坏性的改造。</p><p>我发现现在有很多人转到用DSH居然是从OpenClaw&#x2F;Hermes转的，这当然对他们来说是很大的进化。<br>但我OpenCode + Paseo + OpenViking用得实在太顺了，顺到我想不出来有任何刚需是需要用到DSH。</p><p>我也希望DSH能接入Paseo，但目前比较方便的是ACP方式接入，这个达不到我的要求。<br>如果我要急着用的话，基于 <code>opencode-agent.ts</code> 改造一份<code>dsh-agent.ts</code>也未尝不可，<br>但是代价是，短期内可能要跟着dsh频繁改动，这我受不了。</p><p>紧接着Qwen3.8 27B能力起飞了，但我没有本地部署。</p><p>究其原因，<br>我这点本地算力虽然能运行，但是去年和前年一路用下来，已经疲劳了。<br>还是opencode go简单粗暴，量大管饱，有这点折腾本地部署的功夫还不如直接用MaaS的。<br>我本地Ollama跑着Qwen-embedding 0.6B给OpenViking做embedding就很适合我。</p><p>拒绝FOMO，一切对我没有实质、可控、稳定帮助的新玩意儿，都是噪音。</p>]]></content>
+    
+    
+    <summary type="html">DeepSeek Harness 让很多人沸腾了，我用了一次就没继续；Qwen3.8 27B 能力起飞了，我也没有本地部署。求新又求稳的取舍之下，OpenCode + Paseo + OpenViking 已经足够顺，一切没有实质、可控、稳定帮助的新玩意儿，都是噪音。</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
+    
+    <category term="Agent" scheme="https://flashj.cn/tags/Agent/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
+    
+    <category term="Qwen" scheme="https://flashj.cn/tags/Qwen/"/>
+    
+  </entry>
   
   <entry>
     <title>接入 OpenViking，统一 OpenCode 和 Hermes 的记忆</title>
@@ -41,11 +70,11 @@
     
     <category term="记忆系统" scheme="https://flashj.cn/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/"/>
     
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
+    
     <category term="OpenViking" scheme="https://flashj.cn/tags/OpenViking/"/>
     
     <category term="uv" scheme="https://flashj.cn/tags/uv/"/>
-    
-    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
     
   </entry>
   
@@ -588,33 +617,6 @@
     <category term="headless" scheme="https://flashj.cn/tags/headless/"/>
     
     <category term="容器" scheme="https://flashj.cn/tags/%E5%AE%B9%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gemma 4：谷歌开源31B干翻4000亿，Mac Mini就能跑</title>
-    <link href="https://flashj.cn/gemma4.html"/>
-    <id>https://flashj.cn/gemma4.html</id>
-    <published>2026-04-05T02:25:00.000Z</published>
-    <updated>2026-04-05T02:30:32.163Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Gemma-4：谷歌开源31B干翻4000亿，Mac-Mini就能跑"><a href="#Gemma-4：谷歌开源31B干翻4000亿，Mac-Mini就能跑" class="headerlink" title="Gemma 4：谷歌开源31B干翻4000亿，Mac Mini就能跑"></a>Gemma 4：谷歌开源31B干翻4000亿，Mac Mini就能跑</h1><p>就在前两天，Google DeepMind CEO Demis Hassabis 发了一条推文，AI圈炸锅了。</p><p><strong>Gemma 4 来了。</strong></p><p>31B参数，开源，Apache 2.0协议，Mac Mini能跑，打爆4000亿参数的巨无霸。</p><p>Google之前开源过 Gemma，但一直差点意思——参数小、 benchmark 打不过竞品、许可证也一堆破事。这次全改了。</p><hr><h2 id="一、四个型号，总有一款适合你"><a href="#一、四个型号，总有一款适合你" class="headerlink" title="一、四个型号，总有一款适合你"></a>一、四个型号，总有一款适合你</h2><p>Gemma 4 发了四个型号，从手机到工作站都能跑：</p><ul><li><p><strong>E2B</strong>（2.3B有效参数 &#x2F; 5.1B含词表）——手机、树莓派。带原生音频，128K上下文。ARM设备上跑实时语音AI没问题。</p></li><li><p><strong>E4B</strong>（4.5B有效参数 &#x2F; 8B含词表）——笔记本、边缘设备。同样带音频，128K上下文。</p></li><li><p><strong>26B MoE</strong>（总26B，激活4B）——这次最亮眼的型号。MoE架构，推理时只激活3.8B参数，速度约等于4B模型，质量接近26B。256K上下文。Mac Mini 24GB内存可以流畅跑。</p></li><li><p><strong>31B Dense</strong>（30.7B）——满血版工作站旗舰。256K上下文，不带音频但视觉理解拉满。H100单卡可以跑bf16精度，消费级显卡量化后也能跑。</p></li></ul><p>E2B&#x2F;E4B的E是 effective（有效参数），实际推理时embedding层加起来是5.1B和8B。这种设计与Per-Layer Embeddings（PLE，每层独立embedding表）技术有关，专门优化端侧内存效率。</p><hr><h2 id="二、跨代飞跃——数字有多炸"><a href="#二、跨代飞跃——数字有多炸" class="headerlink" title="二、跨代飞跃——数字有多炸"></a>二、跨代飞跃——数字有多炸</h2><p>Gemma 4 直接把上一代的短板全补上了，还顺带翻倍。</p><ul><li><p><strong>数学（AIME 2026 no-tools）</strong>：20.8% → 89.2%，提升了68.4个百分点。翻了超过4倍。上一代基本做不了竞赛数学题，Gemma 4 能做出接近满分。</p></li><li><p><strong>代码（LiveCodeBench v6）</strong>：29.1% → 80.0%，提升50.9个百分点。上一代代码能力约等于新手，Gemma 4 已经可以当半个Code Assistant用了。</p></li><li><p><strong>研究生级科学推理（GPQA Diamond）</strong>：42.4% → 84.3%，提升41.9个百分点。考的是博士级别科学问题，Gemma 4 能答对八成以上。</p></li><li><p><strong>BigBench Extra Hard</strong>：19.3% → 74.4%，提升55.1个百分点。需要多步推理的复杂任务，提升幅度极大。</p></li><li><p><strong>上下文记忆（MRCR v2，128K长文本检索）</strong>：13.5% → 66.4%，提升52.9个百分点。上一代的长上下文基本是假的——能接收但用不好。Gemma 4 的256K上下文是真实可用的。</p></li><li><p><strong>Codeforces ELO</strong>：110 → 2150。110分约等于刚学会编程，2150分约等于有竞赛经验的程序员。这个跨越在开源模型里极为罕见。</p></li></ul><blockquote><p>资料来源：Google官方model card（ai.google.dev&#x2F;gemma&#x2F;docs&#x2F;core&#x2F;model_card_4），Stable Learn整理版（stable-learn.com&#x2F;en&#x2F;gemma-4-model-card&#x2F;），AI.rs横向评测（ai.rs&#x2F;ai-developer&#x2F;gemma-4-vs-qwen-3-5-vs-llama-4-compared）</p></blockquote><hr><h2 id="三、Arena-AI-排行榜——第三方怎么说"><a href="#三、Arena-AI-排行榜——第三方怎么说" class="headerlink" title="三、Arena AI 排行榜——第三方怎么说"></a>三、Arena AI 排行榜——第三方怎么说</h2><p>Google自己吹不算数，来看看第三方。Arena AI是众包聊天偏好排行榜，模型不知道自己在被比较，是目前最接近真实使用体验的排名。</p><p>截至2026年3月31日（数据来源：Maniac.ai引用Arena AI页面，maniac.ai&#x2F;blog&#x2F;qwen-3-5-vs-gemma-4-benchmarks-by-size）：</p><table><thead><tr><th>模型</th><th>Arena AI排名</th><th>Elo分数</th></tr></thead><tbody><tr><td>Gemma 4 31B</td><td>#3开源模型</td><td>1452 ± 9</td></tr><tr><td>Qwen3.5-397B-A17B</td><td>#4</td><td>1449 ± 6</td></tr><tr><td>Gemma 4 26B MoE</td><td>#6</td><td>1441 ± 9</td></tr><tr><td>Qwen3.5-122B-A10B</td><td>—</td><td>1416 ± 6</td></tr><tr><td>Qwen3.5-27B</td><td>—</td><td>1404 ± 6</td></tr><tr><td>Qwen3.5-35B-A3B</td><td>—</td><td>1400 ± 6</td></tr></tbody></table><p>Arena AI是聊天偏好排名，和静态benchmark不完全相关。但它说明了一个事实：在真实对话场景下，Gemma 4 的大模型已经可以和4000亿参数的Qwen掰手腕了。</p><hr><h2 id="四、跟-Qwen-3-5-比怎么样——同尺寸正面battle"><a href="#四、跟-Qwen-3-5-比怎么样——同尺寸正面battle" class="headerlink" title="四、跟 Qwen 3.5 比怎么样——同尺寸正面battle"></a>四、跟 Qwen 3.5 比怎么样——同尺寸正面battle</h2><p>Maniac.ai做了非常详细的同尺寸横向对比，把model card里两者都发布的benchmark拿来逐行比。结论比较微妙，不是「谁全面碾压谁」那么简单。</p><h3 id="31B-vs-27B（工作站旗舰档）"><a href="#31B-vs-27B（工作站旗舰档）" class="headerlink" title="31B vs 27B（工作站旗舰档）"></a>31B vs 27B（工作站旗舰档）</h3><table><thead><tr><th>Benchmark</th><th>Gemma 4 31B</th><th>Qwen3.5-27B</th><th>谁赢</th></tr></thead><tbody><tr><td>MMLU-Pro（通用知识推理）</td><td>85.2%</td><td>86.1%</td><td>Qwen小幅领先</td></tr><tr><td>GPQA Diamond（研究生科学）</td><td>84.3%</td><td>85.5%</td><td>Qwen小幅领先</td></tr><tr><td>LiveCodeBench v6（代码）</td><td>80.0%</td><td>80.7%</td><td>几乎相同</td></tr><tr><td>TAU2（Agent工具调用）</td><td>76.9%</td><td>79.0%</td><td>Qwen领先</td></tr><tr><td>MMMLU（多语言）</td><td>88.4%</td><td>85.9%</td><td><strong>Gemma领先</strong></td></tr><tr><td>MMMU-Pro（多模态）</td><td>76.9%</td><td>75.0%</td><td><strong>Gemma领先</strong></td></tr></tbody></table><p>静态benchmark Qwen略优，但差距极小；多语言和多模态Gemma反超。这个尺寸两家打得有来有回。</p><h3 id="26B-MoE-vs-35B-MoE（消费级MoE档）"><a href="#26B-MoE-vs-35B-MoE（消费级MoE档）" class="headerlink" title="26B MoE vs 35B MoE（消费级MoE档）"></a>26B MoE vs 35B MoE（消费级MoE档）</h3><p>这是Gemma最亮眼的档位。26B MoE推理只激活3.8B参数，但质量达到了31B dense的97%：</p><table><thead><tr><th>Benchmark</th><th>Gemma 4 26B MoE</th><th>Gemma 4 31B Dense</th></tr></thead><tbody><tr><td>MMLU-Pro</td><td>82.6%</td><td>85.2%</td></tr><tr><td>AIME 2026</td><td>88.3%</td><td>89.2%</td></tr><tr><td>LiveCodeBench v6</td><td>77.1%</td><td>80.0%</td></tr><tr><td>Arena AI排名</td><td>1441</td><td>1452（只差11分）</td></tr></tbody></table><p>花4B模型的推理成本，拿到31B模型97%的质量。这个效率比任何Dense模型都强。</p><p>对比同类的Qwen3.5-35B-A3B（激活3B参数）：Arena AI里Gemma 26B MoE（1441）领先Qwen 35B MoE（1400）41分，差距明显。</p><h3 id="E2B-E4B（小模型档）"><a href="#E2B-E4B（小模型档）" class="headerlink" title="E2B &#x2F; E4B（小模型档）"></a>E2B &#x2F; E4B（小模型档）</h3><p>这个档位比较意外：Qwen 3.5 在多数benchmark上领先。</p><ul><li><p>E4B（4B） vs Qwen3.5-4B：Qwen在MMLU-Pro（79.1% vs 69.4%）、GPQA（76.2% vs 58.6%）、LiveCodeBench（55.8% vs 52.0%）、TAU2（79.9% vs 42.2%）上全面领先。</p></li><li><p>E2B（2B） vs Qwen3.5-2B：同样的趋势，Qwen在3&#x2F;4个overlap benchmark上领先。</p></li></ul><p>Gemma E2B&#x2F;E4B的优势是：原生音频支持（Qwen小模型没有）、Google移动生态（Android AICore）、128K上下文。</p><p>结论：小模型党如果纯看文本benchmark，Qwen 3.5 更强；如果需要音频或者在Android上跑，Gemma E系列是唯一选择。</p><hr><h2 id="五、Mac-本地能跑吗"><a href="#五、Mac-本地能跑吗" class="headerlink" title="五、Mac 本地能跑吗"></a>五、Mac 本地能跑吗</h2><ul><li><p><strong>26B MoE（推荐）</strong>：Mac Studio M2 Max 64GB 完全没问题，量化后Q4_K_M版本约14GB显存，24GB内存的Mac Mini也能跑。速度大约每秒15-25 tokens。</p></li><li><p><strong>31B Dense（高性能）</strong>：M2 Max跑Q4量化约20GB内存，需要32GB内存的机器才比较流畅。</p></li><li><p><strong>E4B（笔记本日常）</strong>：任何有16GB内存的MacBook都能跑，8GB显存也够。适合日常对话、文案、代码补全。</p></li></ul><p>推荐工具：LM Studio（图形界面）、Ollama（命令行）、llama.cpp（原生推理，性能最优）。</p><hr><h2 id="六、这次为什么不一样——许可证的意义"><a href="#六、这次为什么不一样——许可证的意义" class="headerlink" title="六、这次为什么不一样——许可证的意义"></a>六、这次为什么不一样——许可证的意义</h2><p>Gemma 4 切到了 Apache 2.0——这是什么意思？</p><ul><li><p><strong>随便用</strong>：任何商业产品、任何数量、任何场景，完全免费。</p></li><li><p><strong>随便改</strong>：可以修改代码、可以训练、可以蒸馏，不需要通知Google。</p></li><li><p><strong>随便分发</strong>：可以做成SaaS、可以做成API服务、可以集成进别人的产品，不需要开源衍生代码。</p></li></ul><p>对比 Qwen 3.5：也是 Apache 2.0，两家打平。</p><p>对比 Llama 4：Community License，700M MAU上限 + Meta Acceptable Use Policy，商用有诸多限制。Gemma 4 的许可证反而比 Llama 4 更宽松。</p><p>对于想做独立开发、AI产品创业的人来说，Gemma 4 基本上没有法律风险了。</p><hr><h2 id="七、还有一些值得关注的技术细节"><a href="#七、还有一些值得关注的技术细节" class="headerlink" title="七、还有一些值得关注的技术细节"></a>七、还有一些值得关注的技术细节</h2><ul><li><p><strong>Thinking Mode（思考模式）</strong>：Gemma 4 支持链式推理，模型会在回答前输出内部思考过程，最长可达4000+ tokens。类似 DeepSeek-R1 和 OpenAI o1 的技术路线，是这次数学和代码能力大幅提升的关键。</p></li><li><p><strong>Native Function Calling</strong>：所有型号都支持结构化函数调用，不需要特殊提示词，直接返回JSON格式的工具调用指令。但和 o1、DeepSeek-R1 这类以工具调用见长的模型相比，Gemma 4 的工具调用成功率仍有差距——GitHub 上有用户直接向 Google 官方请求加强工具调用能力（TAU2 基准测试 Gemma 4 31B 为 76.9%，也低于 Qwen 3.5 的 79%）。</p></li><li><p><strong>Per-Layer Embeddings（PLE）</strong>：每层decoder有独立的embedding表，小参数模型性能提升的重要原因之一。</p></li><li><p><strong>Hybrid Attention</strong>：MoE模型使用了局部滑动窗口attention和全局attention混合的设计，保证速度的同时不丢失长上下文理解能力。</p></li><li><p><strong>Shared KV Cache</strong>：后几层共享KV张量，长上下文推理时显著降低显存占用。</p></li></ul><hr><h2 id="八、中文支持怎么样——中国用户最关心的问题"><a href="#八、中文支持怎么样——中国用户最关心的问题" class="headerlink" title="八、中文支持怎么样——中国用户最关心的问题"></a>八、中文支持怎么样——中国用户最关心的问题</h2><p>Gemma 4 比前代大幅进步，但 Qwen 3.5 在中文上仍然有优势。看数据说话。</p><p>Gemma 4 的多语言 benchmark（MMMLU）在31B上拿到了88.4%，这个进步是真实的——Gemma 4 的多语言能力已经不是短板了。</p><p>但 AI.rs 的横向评测里说：「Qwen 3.5 仍然保有 multilingual crown（多语言王冠）」。原因有两个：</p><ul><li><p><strong>词表大小</strong>：Qwen 3.5 用的是250K词汇表，专门为中文优化。Gemma 4 用的是140+语言混合训练，词表更偏多语言通用，中文词切词效率不如 Qwen。</p></li><li><p><strong>语言数量</strong>：Qwen 3.5 支持201种语言，Gemma 4 支持140+种。Qwen 覆盖的语言更广，尤其是中文方言、特定中文知识等方面，Qwen 的训练数据量和中文占比都更高。</p></li></ul><p>Qwen 是「中文优先」设计，Gemma 4 是「多语言一视同仁」设计。如果主要处理中国本地文化内容、网络用语、中文专业知识，Qwen 3.5 仍然是更稳的选择。</p><h3 id="Gemma-4-适合中国用户部署吗？"><a href="#Gemma-4-适合中国用户部署吗？" class="headerlink" title="Gemma 4 适合中国用户部署吗？"></a>Gemma 4 适合中国用户部署吗？</h3><p><strong>能部署吗？</strong> 完全能。Gemma 4 是完全开源的 Apache 2.0 模型，权重在 HuggingFace 上可以直接下载，不需要联网，不需要 Google 账号，不受任何地区限制。Llama 要担心被美国限制的问题，Gemma 4 没有这个风险。</p><p><strong>好用吗？</strong> 看做什么。如果主要处理英文任务（写代码、读英文技术文档、英文写作），Gemma 4 在31B这个尺寸上极强。如果主要处理中文内容，Qwen 3.5 目前仍然是更匹配的选择。</p><p>一个值得考虑的方案：<strong>双模型组合</strong>。用 Gemma 4 26B MoE 处理英文代码和复杂推理任务，用 Qwen 3.5 处理中文对话和本地知识。</p><p>Gemma 4 的 Thinking Mode 对中文思考链的支持是完整的，模型可以用中文做逐步推理，这对需要看推理过程的用户来说体验会比较好。</p><p><strong>总结：</strong></p><ul><li><p><strong>中文能力</strong>：Gemma 4 比前代强很多，多语言 benchmark 88.4% 是实打实的进步。但 Qwen 3.5 的中文词表（250K）和中文训练数据量更多，中文场景仍然是 Qwen 主场。</p></li><li><p><strong>部署友好度</strong>：Gemma 4 是纯开源（Apache 2.0），没有任何地区使用限制，对中国开发者非常友好。</p></li><li><p><strong>推荐策略</strong>：纯中文场景继续用 Qwen 3.5；英文为主或者需要强推理&#x2F;代码能力可以上 Gemma 4；Mac 用户推荐 Gemma 4 26B MoE，本地跑起来很舒服。</p></li></ul><p><strong>参考资料：</strong></p><ul><li><p>MMMLU（多语言通用知识）：Gemma 4 31B 88.4%，数据来自 Google 官方 model card（ai.google.dev&#x2F;gemma&#x2F;docs&#x2F;core&#x2F;model_card_4）</p></li><li><p>Qwen 多语言王冠评价：AI.rs 原文「Qwen 3.5 still holds the multilingual crown」——ai.rs&#x2F;ai-developer&#x2F;gemma-4-vs-qwen-3-5-vs-llama-4-compared</p></li><li><p>Qwen 词表数据（250K vocab，201语言）：github.com&#x2F;QwenLM&#x2F;Qwen3.5</p></li><li><p>Gemma 4 多语言支持（140+语言）：blog.google&#x2F;innovation-and-ai&#x2F;technology&#x2F;developers-tools&#x2F;gemma-4&#x2F;</p></li></ul><hr><h2 id="九、参考资料"><a href="#九、参考资料" class="headerlink" title="九、参考资料"></a>九、参考资料</h2><ol><li><p><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Google官方博客</a> — Gemma 4发布公告</p></li><li><p><a href="https://deepmind.google/models/gemma/gemma-4/">Google DeepMind Gemma 4页面</a> — 模型家族总览</p></li><li><p><a href="https://ai.google.dev/gemma/docs/core/model_card_4">Google AI Model Card</a> — 技术规格和benchmark数据</p></li><li><p><a href="https://ai.rs/ai-developer/gemma-4-vs-qwen-3-5-vs-llama-4-compared">AI.rs 横向评测</a> — Gemma 4 vs Qwen 3.5 vs Llama 4</p></li><li><p><a href="https://maniac.ai/blog/qwen-3-5-vs-gemma-4-benchmarks-by-size">Maniac.ai 逐尺寸对比</a> — 按模型尺寸逐行对比，含Arena AI第三方排名</p></li><li><p><a href="https://stable-learn.com/en/gemma-4-model-card/">Stable Learn Gemma 4整理版</a> — 架构详解</p></li><li><p><a href="https://lmstudio.ai/models/gemma-4">LM Studio支持页面</a> — 本地部署工具支持情况</p></li><li><p><a href="https://huggingface.co/gg-hf-gg/gemma-4-31B-it">HuggingFace下载页</a> — 31B指令微调版下载</p></li></ol><hr><p>开源模型从「差口气」到「真能打」，Gemma 4 用了四代。4000亿参数不是终点，31B也不是起点。参数大小和模型强弱之间的关系，正在被一次又一次地打破。</p><p>——写于2026年4月3日，资料核实过，数据有源头，不确定的地方也注明了。如有疏漏欢迎指出。</p><hr><h2 id="彩蛋：一个判断"><a href="#彩蛋：一个判断" class="headerlink" title="彩蛋：一个判断"></a>彩蛋：一个判断</h2><p>Gemma 4 这个节点，让我想到了一个有意思的类比。</p><p>我们现在 AI 算力的发展阶段，有点像早期的大型机时代：</p><ol><li><p>客户机的配置不可能很高</p></li><li><p>它作为终端，必须连接到远程的大型计算机，使用大型机的算力来运算</p></li></ol><p>但电脑发展了几年之后，千家万户都能买 Mac 或 IBM 机子，所有功能在本地就能跑，联网才能用的服务全部进了本地客户端。</p><p><strong>对应现在的 AI 时代，我们相当于还在「终端机」阶段。</strong></p><p>现在买的 token 都需要云端处理，像在付电费。但这个窗口不会很长——最多十年，会从「终端机」变成「家用机」时代，token 都会在本地运行。</p><p>Gemma 4 这样的开源模型出现，正在加速这个进程。</p>]]></content>
-    
-    
-    <summary type="html">31B参数，Apache 2.0协议，Mac Mini能跑，AIME数学从20%飙到89%——Google开源模型这次真的翻身了。但工具调用还是短板</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
-    
-    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
-    
-    <category term="开源" scheme="https://flashj.cn/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="google" scheme="https://flashj.cn/tags/google/"/>
     
   </entry>
   
