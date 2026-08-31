@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-08-24T00:10:20.504Z</updated>
+  <updated>2026-08-31T14:24:32.974Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头</title>
+    <link href="https://flashj.cn/opencode-goat-commandcode-config.html"/>
+    <id>https://flashj.cn/opencode-goat-commandcode-config.html</id>
+    <published>2026-08-31T14:13:00.000Z</published>
+    <updated>2026-08-31T14:24:32.974Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>订阅了 CommandCode 的 goat 套餐，想把里面的模型接进 opencode 当副模型用。过程不复杂，就两步：<code>/connect</code> 存 key + 在 <code>opencode.json</code> 里声明 provider。</p><p>唯一的小坑是 goat 套餐要ZDR的化，要求每个请求带一个 <code>x-cmd-zdr: 1</code> 请求头，这个也能在配置里解决。</p><h2 id="第一步：-connect-录入-API-Key"><a href="#第一步：-connect-录入-API-Key" class="headerlink" title="第一步：/connect 录入 API Key"></a>第一步：<code>/connect</code> 录入 API Key</h2><p>在 opencode 里运行：</p><pre><code>/connect</code></pre><p>选 <strong>Other provider</strong>，录入 provider 名 <code>goat</code>，粘贴 API Key 回车。</p><p>Key 会存到 <code>~/.local/share/opencode/auth.json</code>（权限 600，仅当前用户可读），opencode 自动把它作为 <code>Authorization: Bearer &lt;key&gt;</code> 带上，<strong>不需要</strong>写进 opencode.json，避免密钥进 git。</p><h2 id="第二步：配置-opencode-json"><a href="#第二步：配置-opencode-json" class="headerlink" title="第二步：配置 opencode.json"></a>第二步：配置 opencode.json</h2><p>在全局配置 <code>~/.config/opencode/opencode.json</code>（项目级 <code>.opencode/opencode.json</code> 同理）加一个 provider：</p><pre><code class="language-json">&#123;  &quot;provider&quot;: &#123;    &quot;goat&quot;: &#123;      &quot;npm&quot;: &quot;@ai-sdk/openai-compatible&quot;,      &quot;name&quot;: &quot;goat&quot;,      &quot;options&quot;: &#123;        &quot;baseURL&quot;: &quot;https://api.commandcode.ai/provider/v1&quot;      &#125;,      &quot;models&quot;: &#123;        &quot;deepseek/deepseek-v4-flash-vision-exp&quot;: &#123;          &quot;name&quot;: &quot;deepseek-v4-flash-vision-exp&quot;,          &quot;limit&quot;: &#123;            &quot;context&quot;: 1000000,            &quot;output&quot;: 262144          &#125;        &#125;,        &quot;deepseek/deepseek-v4-flash&quot;:&#123;          &quot;name&quot;:&quot;deepseek-v4-flash&quot;,          &quot;limit&quot;:          &#123;            &quot;context&quot;: 1000000,            &quot;output&quot;: 262144          &#125;        &#125;,        &quot;z-ai/glm-5.3-flash&quot;:&#123;          &quot;name&quot;:&quot;glm-5.3-flash&quot;,          &quot;limit&quot;:          &#123;            &quot;context&quot;: 1000000,            &quot;output&quot;: 262144          &#125;        &#125;      &#125;    &#125;  &#125;&#125;</code></pre><p>要点：</p><ul><li><code>npm</code> 用 <code>@ai-sdk/openai-compatible</code>，CommandCode 提供 OpenAI 兼容接口</li><li><code>baseURL</code> 填 provider 网关地址（不是模型名）</li><li><code>models</code> 的 key 是 API 侧完整模型 ID <code>deepseek/deepseek-v4-flash-vision-exp</code>，<code>limit</code> 按套餐给的上下文&#x2F;输出上限填</li><li>改完<strong>重启 opencode</strong> 生效（配置只在启动时加载，不热更新）</li></ul><h2 id="可选：zdr-自定义请求头"><a href="#可选：zdr-自定义请求头" class="headerlink" title="可选：zdr 自定义请求头"></a>可选：zdr 自定义请求头</h2><p>goat 套餐官方要求每个请求带 <code>x-cmd-zdr: 1</code>。opencode 会把 provider 的 <code>options</code> 原样透传给 <code>@ai-sdk/openai-compatible</code> 构造器，而它原生支持 <code>headers</code>，所以直接写：</p><pre><code class="language-json">&quot;options&quot;: &#123;  &quot;baseURL&quot;: &quot;https://api.commandcode.ai/provider/v1&quot;,  &quot;headers&quot;: &#123;    &quot;x-cmd-zdr&quot;: &quot;1&quot;  &#125;&#125;</code></pre><p>这个头会随每个请求发出，和 <code>/connect</code> 存的 key 互不冲突。<strong>已实测生效。</strong></p><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>重启 opencode 后 <code>/models</code> 切到 <code>goat/deepseek/deepseek-v4-flash-vision-exp</code> 发一句话，能正常回复就是全套就位了。</p><h3 id="实际使用"><a href="#实际使用" class="headerlink" title="实际使用"></a>实际使用</h3><p>发现deepseek-v4-flash-vision-exp居然不是zdr的upstream？？？？</p><p>好吧，那只能关闭zdr使用了。</p><p>平时不用vision-exp模型。<br>测了ds-v4-flash和glm-5.3-flash都是支持zdr的。</p><p>我也就导入这三个模型用用。<br>commandcode goat套餐里的GLM-5.3-flash比opencode的用量大。</p>]]></content>
+    
+    
+    <summary type="html">买了 CommandCode 的 goat 套餐，想把它当 opencode 的副模型用。整个接入就两步：先 /connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每个请求带 x-cmd-zdr: 1 请求头，实测也能在配置里加。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="opencode" scheme="https://flashj.cn/tags/opencode/"/>
+    
+    <category term="CommandCode" scheme="https://flashj.cn/tags/CommandCode/"/>
+    
+    <category term="goat" scheme="https://flashj.cn/tags/goat/"/>
+    
+  </entry>
   
   <entry>
     <title>DeepSeek Harness 和 Qwen3.8 都不是我的刚需</title>
@@ -586,37 +613,6 @@
     <category term="知识库" scheme="https://flashj.cn/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
     
     <category term="Karpathy" scheme="https://flashj.cn/tags/Karpathy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenClaw 容器内浏览器无法启动问题排查</title>
-    <link href="https://flashj.cn/openclaw-docker-browser-headless.html"/>
-    <id>https://flashj.cn/openclaw-docker-browser-headless.html</id>
-    <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-04-08T01:00:13.143Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="OpenClaw-容器内浏览器无法启动问题排查"><a href="#OpenClaw-容器内浏览器无法启动问题排查" class="headerlink" title="OpenClaw 容器内浏览器无法启动问题排查"></a>OpenClaw 容器内浏览器无法启动问题排查</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>OpenClaw 运行在 Docker 容器内，浏览器工具（browser tool）无法启动 Chrome，报错：<code>timed out. Restart the OpenClaw gateway.</code></p><p>手动执行 <code>chromium --headless --no-sandbox</code> 可以在宿主机正常工作，但 OpenClaw 启动的 Chrome 始终超时。</p><h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><h3 id="1-初步尝试：noSandbox"><a href="#1-初步尝试：noSandbox" class="headerlink" title="1. 初步尝试：noSandbox"></a>1. 初步尝试：noSandbox</h3><p>根据文档添加 <code>browser.noSandbox: true</code>，无效。</p><h3 id="2-尝试：添加-extraArgs"><a href="#2-尝试：添加-extraArgs" class="headerlink" title="2. 尝试：添加 extraArgs"></a>2. 尝试：添加 extraArgs</h3><pre><code class="language-json">&quot;browser&quot;: &#123;  &quot;noSandbox&quot;: true,  &quot;extraArgs&quot;: [    &quot;--disable-setuid-sandbox&quot;,    &quot;--disable-namespace-sandbox&quot;  ]&#125;</code></pre><p>重启后仍然超时。</p><h3 id="3-关键发现：headless-模式"><a href="#3-关键发现：headless-模式" class="headerlink" title="3. 关键发现：headless 模式"></a>3. 关键发现：headless 模式</h3><p>日志显示 <code>Browser control service ready</code>，说明 browser 服务正常，但 Chrome 启动超时。</p><p>手动执行以下命令完全正常：</p><pre><code class="language-bash">chromium --headless --no-sandbox --disable-gpu --dump-dom &quot;data:text/html,&lt;h1&gt;test&lt;/h1&gt;&quot;</code></pre><p>关键线索：<code>browser.status</code> 显示 <code>headless: false</code> —— 配置文件的修改（headless: true）通过 SIGUSR1 热重启没有生效，需要完整重启容器。</p><h3 id="4-解决：完整重启-Gateway"><a href="#4-解决：完整重启-Gateway" class="headerlink" title="4. 解决：完整重启 Gateway"></a>4. 解决：完整重启 Gateway</h3><p>容器重启后，<code>headless: true</code> 生效，浏览器立即正常工作。</p><h2 id="根本原因"><a href="#根本原因" class="headerlink" title="根本原因"></a>根本原因</h2><table><thead><tr><th>参数</th><th>作用</th><th>状态</th></tr></thead><tbody><tr><td><code>noSandbox: true</code></td><td>禁用 Chrome sandbox</td><td>✅ 之前已加</td></tr><tr><td><code>extraArgs: [&quot;--disable-setuid-sandbox&quot;, &quot;--disable-namespace-sandbox&quot;]</code></td><td>禁用 Linux namespace sandbox</td><td>✅ 本次加</td></tr><tr><td><code>headless: true</code></td><td>无头模式（不尝试打开 GUI 窗口）</td><td>❌ <strong>热重启未生效，完整重启后生效</strong></td></tr></tbody></table><p><strong>核心问题：</strong> snap chromium stub 在容器里需要 headless 模式。<code>headless: false</code> 时 Chrome 尝试打开 GUI 窗口，容器无显示设备导致超时。</p><h2 id="最终配置"><a href="#最终配置" class="headerlink" title="最终配置"></a>最终配置</h2><pre><code class="language-json">&quot;browser&quot;: &#123;  &quot;enabled&quot;: true,  &quot;headless&quot;: true,  &quot;noSandbox&quot;: true,  &quot;extraArgs&quot;: [    &quot;--disable-setuid-sandbox&quot;,    &quot;--disable-namespace-sandbox&quot;  ]&#125;</code></pre><h2 id="教训"><a href="#教训" class="headerlink" title="教训"></a>教训</h2><ol><li>SIGUSR1 热重启对 browser 配置的部分字段（headless）不能完全生效</li><li>容器内跑 Chrome，<code>headless: true</code> 是必须的</li><li><code>browser.status</code> 的 <code>headless</code> 值反映的是<strong>当前运行配置</strong>，不是配置文件值——可用于诊断配置是否真正生效</li></ol><h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><ul><li><code>/app/docs/tools/browser.md</code></li><li><code>/app/docs/tools/browser-linux-troubleshooting.md</code></li></ul>]]></content>
-    
-    
-    <summary type="html">容器内需要 headless:true + noSandbox:true + extraArgs 禁用 setuid/namespace sandbox，三者缺一不可。SIGUSR1 热重启对 headless 字段不能完全生效，需完整重启容器</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
-    
-    <category term="Docker" scheme="https://flashj.cn/tags/Docker/"/>
-    
-    <category term="浏览器" scheme="https://flashj.cn/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-    <category term="Chromium" scheme="https://flashj.cn/tags/Chromium/"/>
-    
-    <category term="headless" scheme="https://flashj.cn/tags/headless/"/>
-    
-    <category term="容器" scheme="https://flashj.cn/tags/%E5%AE%B9%E5%99%A8/"/>
     
   </entry>
   
