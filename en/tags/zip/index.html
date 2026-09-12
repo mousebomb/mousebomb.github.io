@@ -1,0 +1,790 @@
+
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.0" theme-name="Stellar" theme-version="1.30.0">
+  <meta name="robots" content="noindex,follow">
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>Tag: zip - FlashJ</title>
+
+  
+    <meta name="description" content="Mousebomb&#39;s blog — web apps, games and 3D interaction.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FlashJ">
+<meta property="og:url" content="https://flashj.cn/tags/zip/index.html">
+<meta property="og:site_name" content="FlashJ">
+<meta property="og:description" content="Mousebomb&#39;s blog — web apps, games and 3D interaction.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Mousebomb">
+<meta property="article:tag" content="flash,as,air,ios,apple,unity,cocos,ai,LMStudio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@mousebomb">
+  
+  
+  
+  <meta name="keywords" content="flash,as,air,ios,apple,unity,cocos,ai,LMStudio">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/en/atom.xml" title="FlashJ" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/en/css/main.css?v=1.30.0">
+
+
+  
+    <link rel="shortcut icon" href="https://flashj.cn/favicon.ico">
+  
+
+  
+
+  <style>
+.mb-langbar{position:sticky;top:0;z-index:9;display:flex;align-items:center;gap:12px;
+padding:8px 16px;font-size:13px;line-height:1.5;color:var(--text-p2,#4d4d4d);
+background:var(--alpha60,rgba(255,255,255,.6));
+-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+border-bottom:1px solid var(--block-border,#e3e5e8)}
+.mb-langbar .t{flex:1;min-width:0}
+.mb-langbar .go{flex-shrink:0;padding:4px 14px;border-radius:999px;font-weight:500;
+background:var(--theme-color,#1cd0fd);color:#fff;text-decoration:none;white-space:nowrap}
+.mb-langbar .go:hover{opacity:.85}
+.mb-langbar .x{flex-shrink:0;border:0;padding:2px 4px;background:none;cursor:pointer;
+color:var(--text-p3,#808080);font-size:18px;line-height:1}
+.mb-langbar .x:hover{color:var(--text-p1,#333)}
+@media screen and (max-width:600px){.mb-langbar{gap:8px;padding:8px 12px;font-size:12px}}
+/* 页脚常驻语言入口。用 .page-footer .text 前缀压过主题的
+   `.page-footer a:hover{background:var(--block-hover)}`，否则 hover 时
+   胶囊背景会被主题规则盖掉。 */
+.page-footer .text a.mb-lang-foot{display:inline-flex;align-items:center;gap:4px;
+padding:1px 10px;border-radius:999px;font-weight:500;text-decoration:none;
+color:var(--text-p1,#333);background:transparent;white-space:nowrap;
+border:1px solid var(--block-border,#e3e5e8);transition:all .2s ease-out}
+.page-footer .text a.mb-lang-foot:hover{color:#fff;border-color:transparent;
+background:var(--theme-color,#1cd0fd)}
+</style>
+
+</head>
+<body>
+
+<div class="l_body index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://mousebomb.org/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/en/"><div class="main" ff="title">FlashJ</div><div class="sub normal cap">Mousebomb's blog</div><div class="sub hover cap" style="opacity:0"> Tech + life</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/en/opencode-goat-reasoning-variants.html"><span class="title">Configuring thinking-effort switching after hooking the GOAT plan up to opencode</span></a><a class="item title" href="/en/paseo-solarized-light.html"><span class="title">Paseo Solarized Light theme plugin: low contrast and easy on the eyes, installed from GitHub with a single command</span></a><a class="item title" href="/en/opencode-goat-commandcode-config.html"><span class="title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span></a><a class="item title" href="/en/opencode-go-limits.html"><span class="title">OpenCode Go plan usage estimate: see all models on one page</span></a><a class="item title" href="/en/no-more-fomo-dsh-qwen38.html"><span class="title">Neither DeepSeek Harness nor Qwen3.8 is a must-have for me</span></a><a class="item title" href="/en/openviking-setup.html"><span class="title">Integrating OpenViking to unify OpenCode and Hermes memory</span></a><a class="item title" href="/en/next-gen-media-generative-narrative.html"><span class="title">A Humanity Amusing Itself to Death, and the Media of the Next Generation</span></a><a class="item title" href="/en/feishu-doubao-merger-thoughts.html"><span class="title">Thoughts on the Feishu and Doubao merger</span></a><a class="item title" href="/en/llm-principle-creativity.html"><span class="title">Can LLMs Be Creative? An Answer from a Programmer Who Spent Three Months Writing Web Novels</span></a><a class="item title" href="/en/paseo.html"><span class="title">Paseo, the killer tool that connects multiple coding agents</span></a><a class="item title" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html"><span class="title">cc-connect: Plugging Claude Code into Feishu</span></a><a class="item title" href="/en/trae-solo-shi-yong-ji-lu.html"><span class="title">Notes on Using the TRAE SOLO Standalone Edition</span></a><a class="item title" href="/en/coreaudiod-memory-leak-from-claude-code-hook.html"><span class="title">Fixing coreaudiod eating up to 45G of memory</span></a><a class="item title" href="/en/hermes-agent.html"><span class="title">From Lobster to Hermes</span></a><a class="item title" href="/en/claude-code-peon-ping-sound-notification.html"><span class="title">Getting Claude Code to talk: this sound-effect plugin turned my coding sessions into a game</span></a><a class="item title" href="/en/openclaw-browser-config.html"><span class="title">OpenClaw Browser configuration guide</span></a><a class="item title" href="/en/MSA-MemorySparseAttention.html"><span class="title">MSA (Memory Sparse Attention) — an open-source way to break through the AI memory bottleneck</span></a><a class="item title" href="/en/Playwright-vs-CDP.html"><span class="title">Playwright vs CDP: Comparing Browser Control Approaches</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/mousebomb" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/github-142-svgrepo-com.svg"/></a><a class="social" href="http://wpa.qq.com/msgrd?v=3&uin=405572555&site=qq&menu=yes" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/tencentqq-svgrepo-com.svg"/></a><a class="social" href="https://www.douban.com/people/mousebomb/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/douban-logo-svgrepo-com.svg"/></a><a class="social" href="https://x.com/mousebomb" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/twitter-154-svgrepo-com.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://mousebomb.org/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/en/"><div class="main" ff="title">FlashJ</div><div class="sub normal cap">Mousebomb's blog</div><div class="sub hover cap" style="opacity:0"> Tech + life</div></a></div></header>
+
+ 
+
+
+
+
+<div class="navbar top"><nav class="post"><a href="/en/">Recent</a><a href="/en/categories/">Categories</a><a class="active" href="/en/tags/">Tag: zip</a><a href="/en/archives/">Archives</a></nav></div>
+<div class="post-list post"><a class="post-card post" href="/en/as3-ziparchive.html">
+<article class="md-text"><h2 class="post-title">as3-ziparchive</h2><div class="excerpt"><p>ZipArchive is a Zip archive handling class that can read and write various zip format files.
+
+ZipArchive (Google Code)
+Online API
+</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2009-03-19T07:22:25.000Z">2009-03-19</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>Flash</span></span></div></article>
+</a></div>
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>Built by <a href="/">Mousebomb</a> with the <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.0">Stellar 1.30.0</a> theme.<br>Unless stated otherwise, all posts here are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — please credit the source when reposting.<br>Language &#x2F; 语言: <a class="mb-lang-foot" href="/" hreflang="zh-CN" lang="zh-CN">简体中文</a><br><span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span></span> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">粤ICP备16007529号-2</a></p>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script defer src="https://mousebomb.org/api/stats/t.js"></script>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+<widget class="widget-wrapper user-card ghuser"><div class="widget-body"><div class="avatar"><img no-lazy type="img" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><p class="username" ff="title">Mousebomb</p><p class="bio"><span class="l" style="display:block">Indie developer in Shenzhen </span><span class="l" style="display:block;margin-top:.5em">Building products &amp; tools with full-stack + AI</span><span class="l" style="display:block;margin-top:.5em">Previously shipped games with 100M+ downloads</span></p><a class="follow" target="_blank" rel="noopener" href="https://github.com/mousebomb"><svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Follow</a></div></widget>
+
+<widget class="widget-wrapper tagcloud"><div class="widget-header dis-select"><span class="name">Tag Cloud</span></div><div class="widget-body fs14"><a href="/en/tags/ea/" style="font-size: 18.46px;" class="tag -5">ea</a> <a href="/en/tags/Blizzard/" style="font-size: 18.92px;" class="tag -6">Blizzard</a> <a href="/en/tags/Game/" style="font-size: 20.77px;" class="tag -7">Game</a> <a href="/en/tags/ff/" style="font-size: 12px;" class="tag -0">ff</a> <a href="/en/tags/Download/" style="font-size: 23.08px;" class="tag -9">Download</a> <a href="/en/tags/Event/" style="font-size: 12.46px;" class="tag -0">Event</a> <a href="/en/tags/as3/" style="font-size: 23.54px;" class="tag -10">as3</a> <a href="/en/tags/ria/" style="font-size: 21.23px;" class="tag -8">ria</a> <a href="/en/tags/Tiandi-Hui/" style="font-size: 12.46px;" class="tag -0">Tiandi Hui</a> <a href="/en/tags/Gathering/" style="font-size: 12.46px;" class="tag -0">Gathering</a> <a href="/en/tags/wow/" style="font-size: 18.46px;" class="tag -5">wow</a> <a href="/en/tags/Warcraft/" style="font-size: 14.31px;" class="tag -2">Warcraft</a> <a href="/en/tags/Shanghai/" style="font-size: 12.92px;" class="tag -1">Shanghai</a> <a href="/en/tags/Work/" style="font-size: 14.77px;" class="tag -2">Work</a> <a href="/en/tags/Qoolu-Network/" style="font-size: 12.46px;" class="tag -0">Qoolu Network</a> <a href="/en/tags/Jiutian/" style="font-size: 12px;" class="tag -0">Jiutian</a> <a href="/en/tags/Music-Player/" style="font-size: 12px;" class="tag -0">Music Player</a> <a href="/en/tags/AI/" style="font-size: 22.62px;" class="tag -9">AI</a> <a href="/en/tags/openclaw/" style="font-size: 12px;" class="tag -0">openclaw</a> <a href="/en/tags/Trae/" style="font-size: 14.31px;" class="tag -2">Trae</a> <a href="/en/tags/vibecoding/" style="font-size: 13.38px;" class="tag -1">vibecoding</a> <a href="/en/tags/ClaudeCode/" style="font-size: 13.85px;" class="tag -2">ClaudeCode</a> <a href="/en/tags/TCM/" style="font-size: 12px;" class="tag -0">TCM</a> <a href="/en/tags/LLM/" style="font-size: 21.69px;" class="tag -8">LLM</a> <a href="/en/tags/Pulse-Diagnosis/" style="font-size: 12px;" class="tag -0">Pulse Diagnosis</a> <a href="/en/tags/AI-Memory/" style="font-size: 12px;" class="tag -0">AI Memory</a> <a href="/en/tags/Transformer/" style="font-size: 12px;" class="tag -0">Transformer</a> <a href="/en/tags/Open-Source/" style="font-size: 13.38px;" class="tag -1">Open Source</a> <a href="/en/tags/MSA/" style="font-size: 12px;" class="tag -0">MSA</a> <a href="/en/tags/RAG/" style="font-size: 12.46px;" class="tag -0">RAG</a> <a href="/en/tags/Context-Window/" style="font-size: 12px;" class="tag -0">Context Window</a> <a href="/en/tags/OpenClaw/" style="font-size: 14.31px;" class="tag -2">OpenClaw</a> <a href="/en/tags/Browser-Automation/" style="font-size: 12px;" class="tag -0">Browser Automation</a> <a href="/en/tags/Playwright/" style="font-size: 12px;" class="tag -0">Playwright</a> <a href="/en/tags/CDP/" style="font-size: 12.46px;" class="tag -0">CDP</a> <a href="/en/tags/DevTools/" style="font-size: 12.46px;" class="tag -0">DevTools</a> <a href="/en/tags/Efficiency/" style="font-size: 12px;" class="tag -0">Efficiency</a> <a href="/en/tags/Tool/" style="font-size: 17.08px;" class="tag -4">Tool</a> <a href="/en/tags/Productivity/" style="font-size: 12.92px;" class="tag -1">Productivity</a> <a href="/en/tags/Time-Tracking/" style="font-size: 12px;" class="tag -0">Time Tracking</a> <a href="/en/tags/Qbserve/" style="font-size: 12px;" class="tag -0">Qbserve</a> <a href="/en/tags/RescueTime/" style="font-size: 12px;" class="tag -0">RescueTime</a> <a href="/en/tags/Grandma/" style="font-size: 13.85px;" class="tag -2">Grandma</a> <a href="/en/tags/Farewell/" style="font-size: 12.46px;" class="tag -0">Farewell</a> <a href="/en/tags/Jiangyan/" style="font-size: 12.46px;" class="tag -0">Jiangyan</a> <a href="/en/tags/Remembrance/" style="font-size: 13.38px;" class="tag -1">Remembrance</a> <a href="/en/tags/Flash/" style="font-size: 12px;" class="tag -0">Flash</a> <a href="/en/tags/Nostalgia/" style="font-size: 12.92px;" class="tag -1">Nostalgia</a> <a href="/en/tags/Ruffle/" style="font-size: 12px;" class="tag -0">Ruffle</a> <a href="/en/tags/Emulator/" style="font-size: 12px;" class="tag -0">Emulator</a> <a href="/en/tags/Browser-Plugin/" style="font-size: 12px;" class="tag -0">Browser Plugin</a> <a href="/en/tags/Web-Technology/" style="font-size: 12px;" class="tag -0">Web Technology</a> <a href="/en/tags/SarahBrightman/" style="font-size: 12.46px;" class="tag -0">SarahBrightman</a> <a href="/en/tags/Music/" style="font-size: 19.85px;" class="tag -7">Music</a> <a href="/en/tags/flash/" style="font-size: 24px;" class="tag -10">flash</a> <a href="/en/tags/Web-Games/" style="font-size: 12px;" class="tag -0">Web Games</a> <a href="/en/tags/Virtual-Community/" style="font-size: 12px;" class="tag -0">Virtual Community</a> <a href="/en/tags/addEventListener/" style="font-size: 12px;" class="tag -0">addEventListener</a> <a href="/en/tags/event/" style="font-size: 12px;" class="tag -0">event</a> <a href="/en/tags/air/" style="font-size: 20.31px;" class="tag -7">air</a> <a href="/en/tags/Cookbook/" style="font-size: 12px;" class="tag -0">Cookbook</a> <a href="/en/tags/Book/" style="font-size: 12.46px;" class="tag -0">Book</a> <a href="/en/tags/adobe/" style="font-size: 16.62px;" class="tag -4">adobe</a> <a href="/en/tags/as/" style="font-size: 15.69px;" class="tag -3">as</a> <a href="/en/tags/rtmp/" style="font-size: 12.46px;" class="tag -0">rtmp</a> <a href="/en/tags/Tech-Summit/" style="font-size: 12px;" class="tag -0">Tech Summit</a> <a href="/en/tags/agent/" style="font-size: 13.38px;" class="tag -1">agent</a> <a href="/en/tags/sop/" style="font-size: 12px;" class="tag -0">sop</a> <a href="/en/tags/AGI/" style="font-size: 12px;" class="tag -0">AGI</a> <a href="/en/tags/manus/" style="font-size: 12px;" class="tag -0">manus</a> <a href="/en/tags/DeepSeek/" style="font-size: 13.85px;" class="tag -2">DeepSeek</a> <a href="/en/tags/QwQ/" style="font-size: 12.46px;" class="tag -0">QwQ</a> <a href="/en/tags/Product-Manager/" style="font-size: 12px;" class="tag -0">Product Manager</a> <a href="/en/tags/Learning/" style="font-size: 12.92px;" class="tag -1">Learning</a> <a href="/en/tags/FOX/" style="font-size: 12px;" class="tag -0">FOX</a> <a href="/en/tags/Family/" style="font-size: 12px;" class="tag -0">Family</a> <a href="/en/tags/Children-s/" style="font-size: 12px;" class="tag -0">Children's</a> <a href="/en/tags/Movie/" style="font-size: 22.15px;" class="tag -8">Movie</a> <a href="/en/tags/flex/" style="font-size: 16.62px;" class="tag -4">flex</a> <a href="/en/tags/Fanfou/" style="font-size: 13.38px;" class="tag -1">Fanfou</a> <a href="/en/tags/Taskbar/" style="font-size: 12px;" class="tag -0">Taskbar</a> <a href="/en/tags/Minimize/" style="font-size: 12px;" class="tag -0">Minimize</a> <a href="/en/tags/System-Tray/" style="font-size: 12px;" class="tag -0">System Tray</a> <a href="/en/tags/file/" style="font-size: 12.92px;" class="tag -1">file</a> <a href="/en/tags/fileStream/" style="font-size: 12.46px;" class="tag -0">fileStream</a> <a href="/en/tags/File-Operations/" style="font-size: 12.92px;" class="tag -1">File Operations</a> <a href="/en/tags/File-System/" style="font-size: 12.92px;" class="tag -1">File System</a> <a href="/en/tags/File-Association/" style="font-size: 12px;" class="tag -0">File Association</a> <a href="/en/tags/File-Format/" style="font-size: 12.46px;" class="tag -0">File Format</a> <a href="/en/tags/httpbasic/" style="font-size: 12px;" class="tag -0">httpbasic</a> <a href="/en/tags/URL-scheme/" style="font-size: 12px;" class="tag -0">URL scheme</a> <a href="/en/tags/Ads/" style="font-size: 12.46px;" class="tag -0">Ads</a> <a href="/en/tags/President-Shoe-Throwing-Sparks-Bloodbath/" style="font-size: 12px;" class="tag -0">President Shoe-Throwing Sparks Bloodbath</a> <a href="/en/tags/Comedy/" style="font-size: 13.38px;" class="tag -1">Comedy</a> <a href="/en/tags/Alibaba/" style="font-size: 12px;" class="tag -0">Alibaba</a> <a href="/en/tags/Trailer/" style="font-size: 12px;" class="tag -0">Trailer</a> <a href="/en/tags/ant/" style="font-size: 12px;" class="tag -0">ant</a> <a href="/en/tags/fdt/" style="font-size: 12.92px;" class="tag -1">fdt</a> <a href="/en/tags/mxmlc/" style="font-size: 12px;" class="tag -0">mxmlc</a> <a href="/en/tags/AnythingLLM/" style="font-size: 12px;" class="tag -0">AnythingLLM</a> <a href="/en/tags/LM/" style="font-size: 12px;" class="tag -0">LM</a> <a href="/en/tags/Studio/" style="font-size: 12px;" class="tag -0">Studio</a> <a href="/en/tags/CodeGPT/" style="font-size: 12px;" class="tag -0">CodeGPT</a> <a href="/en/tags/IDEA/" style="font-size: 12px;" class="tag -0">IDEA</a> <a href="/en/tags/apple/" style="font-size: 16.62px;" class="tag -4">apple</a> <a href="/en/tags/xbmc/" style="font-size: 12.92px;" class="tag -1">xbmc</a> <a href="/en/tags/Color/" style="font-size: 12px;" class="tag -0">Color</a> <a href="/en/tags/Array/" style="font-size: 12px;" class="tag -0">Array</a> <a href="/en/tags/object/" style="font-size: 12px;" class="tag -0">object</a> <a href="/en/tags/Shenzhen/" style="font-size: 14.31px;" class="tag -2">Shenzhen</a> <a href="/en/tags/action/" style="font-size: 12px;" class="tag -0">action</a> <a href="/en/tags/cocos2d/" style="font-size: 12.46px;" class="tag -0">cocos2d</a> <a href="/en/tags/ios/" style="font-size: 16.15px;" class="tag -3">ios</a> <a href="/en/tags/objective-c/" style="font-size: 13.38px;" class="tag -1">objective-c</a> <a href="/en/tags/GTween/" style="font-size: 12.92px;" class="tag -1">GTween</a> <a href="/en/tags/Effect/" style="font-size: 12px;" class="tag -0">Effect</a> <a href="/en/tags/Source/" style="font-size: 13.85px;" class="tag -2">Source</a> <a href="/en/tags/Sound/" style="font-size: 12px;" class="tag -0">Sound</a> <a href="/en/tags/alchemy/" style="font-size: 12px;" class="tag -0">alchemy</a> <a href="/en/tags/ByteArray/" style="font-size: 12.46px;" class="tag -0">ByteArray</a> <a href="/en/tags/flashplayer/" style="font-size: 13.85px;" class="tag -2">flashplayer</a> <a href="/en/tags/Memory/" style="font-size: 12.46px;" class="tag -0">Memory</a> <a href="/en/tags/encode/" style="font-size: 12px;" class="tag -0">encode</a> <a href="/en/tags/gif/" style="font-size: 12px;" class="tag -0">gif</a> <a href="/en/tags/1009/" style="font-size: 12px;" class="tag -0">1009</a> <a href="/en/tags/Error/" style="font-size: 18px;" class="tag -5">Error</a> <a href="/en/tags/Development-resources/" style="font-size: 12px;" class="tag -0">Development resources</a> <a href="/en/tags/Class-library/" style="font-size: 12px;" class="tag -0">Class library</a> <a href="/en/tags/zip/" style="font-size: 12px;" class="tag -0">zip</a> <a href="/en/tags/Ashbringer/" style="font-size: 12px;" class="tag -0">Ashbringer</a> <a href="/en/tags/World-of-Warcraft/" style="font-size: 17.54px;" class="tag -5">World of Warcraft</a> <a href="/en/tags/404/" style="font-size: 12.92px;" class="tag -1">404</a> <a href="/en/tags/asp/" style="font-size: 12px;" class="tag -0">asp</a> <a href="/en/tags/iis/" style="font-size: 13.38px;" class="tag -1">iis</a> <a href="/en/tags/avatar/" style="font-size: 12.92px;" class="tag -1">avatar</a> <a href="/en/tags/Aliens/" style="font-size: 15.23px;" class="tag -3">Aliens</a> <a href="/en/tags/Universe/" style="font-size: 17.54px;" class="tag -5">Universe</a> <a href="/en/tags/Sci-Fi/" style="font-size: 19.38px;" class="tag -6">Sci-Fi</a> <a href="/en/tags/Plan/" style="font-size: 12px;" class="tag -0">Plan</a> <a href="/en/tags/drama/" style="font-size: 12px;" class="tag -0">drama</a> <a href="/en/tags/mv/" style="font-size: 12px;" class="tag -0">mv</a> <a href="/en/tags/smash/" style="font-size: 12px;" class="tag -0">smash</a> <a href="/en/tags/tv/" style="font-size: 12px;" class="tag -0">tv</a> <a href="/en/tags/TV-Series/" style="font-size: 18px;" class="tag -5">TV Series</a> <a href="/en/tags/IT/" style="font-size: 12.46px;" class="tag -0">IT</a> <a href="/en/tags/Other/" style="font-size: 13.38px;" class="tag -1">Other</a> <a href="/en/tags/Microsoft/" style="font-size: 12.46px;" class="tag -0">Microsoft</a> <a href="/en/tags/Bill-Gates/" style="font-size: 12px;" class="tag -0">Bill Gates</a> <a href="/en/tags/Optimization/" style="font-size: 12px;" class="tag -0">Optimization</a> <a href="/en/tags/Bitmap-engine/" style="font-size: 12px;" class="tag -0">Bitmap engine</a> <a href="/en/tags/Rendering/" style="font-size: 12px;" class="tag -0">Rendering</a> <a href="/en/tags/Black-Myth-Wukong/" style="font-size: 12.46px;" class="tag -0">Black Myth: Wukong</a> <a href="/en/tags/Action-Game/" style="font-size: 14.31px;" class="tag -2">Action Game</a> <a href="/en/tags/Journey-to-the-West/" style="font-size: 12px;" class="tag -0">Journey to the West</a> <a href="/en/tags/Video-Games/" style="font-size: 15.69px;" class="tag -3">Video Games</a> <a href="/en/tags/Single-player-game/" style="font-size: 14.77px;" class="tag -2">Single-player game</a> <a href="/en/tags/airport/" style="font-size: 12px;" class="tag -0">airport</a> <a href="/en/tags/loader/" style="font-size: 12.92px;" class="tag -1">loader</a> <a href="/en/tags/AI-tools/" style="font-size: 12px;" class="tag -0">AI tools</a> <a href="/en/tags/Claude-Code/" style="font-size: 12.92px;" class="tag -1">Claude Code</a> <a href="/en/tags/Feishu-bot/" style="font-size: 12px;" class="tag -0">Feishu bot</a> <a href="/en/tags/cc-connect/" style="font-size: 12px;" class="tag -0">cc-connect</a> <a href="/en/tags/Middle-earth-Battle/" style="font-size: 12px;" class="tag -0">Middle-earth Battle</a> <a href="/en/tags/Strategy-Game/" style="font-size: 18px;" class="tag -5">Strategy Game</a> <a href="/en/tags/Patch/" style="font-size: 12.46px;" class="tag -0">Patch</a> <a href="/en/tags/cecile-corbel/" style="font-size: 12px;" class="tag -0">cecile corbel</a> <a href="/en/tags/Chrome/" style="font-size: 12.46px;" class="tag -0">Chrome</a> <a href="/en/tags/MCP/" style="font-size: 13.38px;" class="tag -1">MCP</a> <a href="/en/tags/macOS/" style="font-size: 12.92px;" class="tag -1">macOS</a> <a href="/en/tags/Debugging/" style="font-size: 12px;" class="tag -0">Debugging</a> <a href="/en/tags/scrollTop/" style="font-size: 12px;" class="tag -0">scrollTop</a> <a href="/en/tags/Webpage/" style="font-size: 14.31px;" class="tag -2">Webpage</a> <a href="/en/tags/Remote-Debugging/" style="font-size: 12px;" class="tag -0">Remote Debugging</a> <a href="/en/tags/Error-Notes/" style="font-size: 12px;" class="tag -0">Error Notes</a> <a href="/en/tags/chrome/" style="font-size: 12px;" class="tag -0">chrome</a> <a href="/en/tags/debug/" style="font-size: 13.38px;" class="tag -1">debug</a> <a href="/en/tags/peon-ping/" style="font-size: 12.46px;" class="tag -0">peon-ping</a> <a href="/en/tags/Tools/" style="font-size: 13.85px;" class="tag -2">Tools</a> <a href="/en/tags/Generals/" style="font-size: 12px;" class="tag -0">Generals</a> <a href="/en/tags/Screenshot/" style="font-size: 13.38px;" class="tag -1">Screenshot</a> <a href="/en/tags/tw/" style="font-size: 12px;" class="tag -0">tw</a> <a href="/en/tags/Esports/" style="font-size: 12.46px;" class="tag -0">Esports</a> <a href="/en/tags/Kane/" style="font-size: 12.46px;" class="tag -0">Kane</a> <a href="/en/tags/Command-Conquer/" style="font-size: 13.38px;" class="tag -1">Command & Conquer</a> <a href="/en/tags/Tiberium-Wars/" style="font-size: 12px;" class="tag -0">Tiberium Wars</a> <a href="/en/tags/Competitive-Game/" style="font-size: 14.77px;" class="tag -2">Competitive Game</a> <a href="/en/tags/Demo/" style="font-size: 12px;" class="tag -0">Demo</a> <a href="/en/tags/cntv/" style="font-size: 12px;" class="tag -0">cntv</a> <a href="/en/tags/National-Network-Television/" style="font-size: 12px;" class="tag -0">National Network Television</a> <a href="/en/tags/c/" style="font-size: 12px;" class="tag -0">c++</a> <a href="/en/tags/cocos2dx/" style="font-size: 12.46px;" class="tag -0">cocos2dx</a> <a href="/en/tags/googleplay/" style="font-size: 12px;" class="tag -0">googleplay</a> <a href="/en/tags/java/" style="font-size: 12.46px;" class="tag -0">java</a> <a href="/en/tags/Mobile/" style="font-size: 14.31px;" class="tag -2">Mobile</a> <a href="/en/tags/Space/" style="font-size: 12px;" class="tag -0">Space</a> <a href="/en/tags/Sounds-of-Nature/" style="font-size: 12.46px;" class="tag -0">Sounds of Nature</a> <a href="/en/tags/Child-s-Voice/" style="font-size: 12px;" class="tag -0">Child's Voice</a> <a href="/en/tags/Terminal/" style="font-size: 12px;" class="tag -0">Terminal</a> <a href="/en/tags/Ghostty/" style="font-size: 12px;" class="tag -0">Ghostty</a> <a href="/en/tags/Memory-leak/" style="font-size: 12px;" class="tag -0">Memory leak</a> <a href="/en/tags/MacOS/" style="font-size: 12px;" class="tag -0">MacOS</a> <a href="/en/tags/Software/" style="font-size: 12px;" class="tag -0">Software</a> <a href="/en/tags/China/" style="font-size: 13.38px;" class="tag -1">China</a> <a href="/en/tags/Martial-Arts-Fiction/" style="font-size: 12px;" class="tag -0">Martial Arts Fiction</a> <a href="/en/tags/DAZ/" style="font-size: 12px;" class="tag -0">DAZ</a> <a href="/en/tags/unity/" style="font-size: 12.92px;" class="tag -1">unity</a> <a href="/en/tags/Material/" style="font-size: 12px;" class="tag -0">Material</a> <a href="/en/tags/Fantasy/" style="font-size: 14.77px;" class="tag -2">Fantasy</a> <a href="/en/tags/Role-Playing-Game/" style="font-size: 13.85px;" class="tag -2">Role-Playing Game</a> <a href="/en/tags/Diablo/" style="font-size: 13.38px;" class="tag -1">Diablo</a> <a href="/en/tags/District-9/" style="font-size: 12px;" class="tag -0">District 9</a> <a href="/en/tags/Bored-x2/" style="font-size: 12px;" class="tag -0">Bored x2</a> <a href="/en/tags/Snowballing/" style="font-size: 12px;" class="tag -0">Snowballing</a> <a href="/en/tags/Roll-call/" style="font-size: 12px;" class="tag -0">Roll call</a> <a href="/en/tags/Life/" style="font-size: 12.92px;" class="tag -1">Life</a> <a href="/en/tags/Consciousness/" style="font-size: 12px;" class="tag -0">Consciousness</a> <a href="/en/tags/Soul/" style="font-size: 12px;" class="tag -0">Soul</a> <a href="/en/tags/The-First-Notion/" style="font-size: 12px;" class="tag -0">The First Notion</a> <a href="/en/tags/DND/" style="font-size: 12.46px;" class="tag -0">DND</a> <a href="/en/tags/TRPG/" style="font-size: 12.46px;" class="tag -0">TRPG</a> <a href="/en/tags/Tabletop-Games/" style="font-size: 12.46px;" class="tag -0">Tabletop Games</a> <a href="/en/tags/Inspiration/" style="font-size: 12px;" class="tag -0">Inspiration</a> <a href="/en/tags/Advice/" style="font-size: 12px;" class="tag -0">Advice</a> <a href="/en/tags/Judgment/" style="font-size: 12px;" class="tag -0">Judgment</a> <a href="/en/tags/Dongdong/" style="font-size: 12px;" class="tag -0">Dongdong</a> <a href="/en/tags/StarCraft/" style="font-size: 14.31px;" class="tag -2">StarCraft</a> <a href="/en/tags/Computer/" style="font-size: 13.85px;" class="tag -2">Computer</a> <a href="/en/tags/NetEase/" style="font-size: 13.38px;" class="tag -1">NetEase</a> <a href="/en/tags/List/" style="font-size: 12px;" class="tag -0">List</a> <a href="/en/tags/Drag-and-drop/" style="font-size: 12px;" class="tag -0">Drag and drop</a> <a href="/en/tags/Symphony/" style="font-size: 12px;" class="tag -0">Symphony</a> <a href="/en/tags/Stellar/" style="font-size: 12.46px;" class="tag -0">Stellar</a> <a href="/en/tags/Doomsday/" style="font-size: 12px;" class="tag -0">Doomsday</a> <a href="/en/tags/The-Bible/" style="font-size: 12px;" class="tag -0">The Bible</a> <a href="/en/tags/Large-Hadron-Collider/" style="font-size: 12px;" class="tag -0">Large Hadron Collider</a> <a href="/en/tags/Space-Time/" style="font-size: 12.92px;" class="tag -1">Space-Time</a> <a href="/en/tags/eaze/" style="font-size: 12px;" class="tag -0">eaze</a> <a href="/en/tags/tween/" style="font-size: 14.77px;" class="tag -2">tween</a> <a href="/en/tags/elva/" style="font-size: 12.46px;" class="tag -0">elva</a> <a href="/en/tags/enya/" style="font-size: 12px;" class="tag -0">enya</a> <a href="/en/tags/ane/" style="font-size: 12.92px;" class="tag -1">ane</a> <a href="/en/tags/libiconv/" style="font-size: 12px;" class="tag -0">libiconv</a> <a href="/en/tags/newAge/" style="font-size: 12px;" class="tag -0">newAge</a> <a href="/en/tags/Xianxia/" style="font-size: 12px;" class="tag -0">Xianxia</a> <a href="/en/tags/Dong-Zhen/" style="font-size: 12px;" class="tag -0">Dong Zhen</a> <a href="/en/tags/Zodiac/" style="font-size: 12px;" class="tag -0">Zodiac</a> <a href="/en/tags/Aquarius/" style="font-size: 12px;" class="tag -0">Aquarius</a> <a href="/en/tags/Management-Simulation/" style="font-size: 12.92px;" class="tag -1">Management Simulation</a> <a href="/en/tags/Farm-Frenzy/" style="font-size: 12px;" class="tag -0">Farm Frenzy</a> <a href="/en/tags/itunesconnect/" style="font-size: 12px;" class="tag -0">itunesconnect</a> <a href="/en/tags/3D/" style="font-size: 13.38px;" class="tag -1">3D</a> <a href="/en/tags/Crack/" style="font-size: 12.46px;" class="tag -0">Crack</a> <a href="/en/tags/Feishu/" style="font-size: 12px;" class="tag -0">Feishu</a> <a href="/en/tags/Doubao/" style="font-size: 12px;" class="tag -0">Doubao</a> <a href="/en/tags/ByteDance/" style="font-size: 12.46px;" class="tag -0">ByteDance</a> <a href="/en/tags/Life-Insights/" style="font-size: 12.46px;" class="tag -0">Life Insights</a> <a href="/en/tags/fellou/" style="font-size: 12px;" class="tag -0">fellou</a> <a href="/en/tags/Epic/" style="font-size: 12px;" class="tag -0">Epic</a> <a href="/en/tags/The-Lord-of-the-Rings/" style="font-size: 12px;" class="tag -0">The Lord of the Rings</a> <a href="/en/tags/amfphp/" style="font-size: 12px;" class="tag -0">amfphp</a> <a href="/en/tags/remote/" style="font-size: 12px;" class="tag -0">remote</a> <a href="/en/tags/Works/" style="font-size: 17.54px;" class="tag -5">Works</a> <a href="/en/tags/Calendar/" style="font-size: 12.46px;" class="tag -0">Calendar</a> <a href="/en/tags/robotlegs/" style="font-size: 12.46px;" class="tag -0">robotlegs</a> <a href="/en/tags/swf/" style="font-size: 12px;" class="tag -0">swf</a> <a href="/en/tags/firefox/" style="font-size: 12px;" class="tag -0">firefox</a> <a href="/en/tags/wmode/" style="font-size: 12.92px;" class="tag -1">wmode</a> <a href="/en/tags/Garbled-Text/" style="font-size: 12.46px;" class="tag -0">Garbled Text</a> <a href="/en/tags/Input-text/" style="font-size: 12px;" class="tag -0">Input text</a> <a href="/en/tags/control/" style="font-size: 12px;" class="tag -0">control</a> <a href="/en/tags/Internals/" style="font-size: 12px;" class="tag -0">Internals</a> <a href="/en/tags/seo/" style="font-size: 12px;" class="tag -0">seo</a> <a href="/en/tags/mochi/" style="font-size: 12.46px;" class="tag -0">mochi</a> <a href="/en/tags/snda/" style="font-size: 12px;" class="tag -0">snda</a> <a href="/en/tags/Flash-Games/" style="font-size: 12.46px;" class="tag -0">Flash Games</a> <a href="/en/tags/Profit/" style="font-size: 12px;" class="tag -0">Profit</a> <a href="/en/tags/Skin/" style="font-size: 12px;" class="tag -0">Skin</a> <a href="/en/tags/Slider/" style="font-size: 12px;" class="tag -0">Slider</a> <a href="/en/tags/ui/" style="font-size: 12px;" class="tag -0">ui</a> <a href="/en/tags/height/" style="font-size: 12px;" class="tag -0">height</a> <a href="/en/tags/net/" style="font-size: 12px;" class="tag -0">.net</a> <a href="/en/tags/fluorineFx/" style="font-size: 12px;" class="tag -0">fluorineFx</a> <a href="/en/tags/Time/" style="font-size: 12.92px;" class="tag -1">Time</a> <a href="/en/tags/Volcengine/" style="font-size: 12.46px;" class="tag -0">Volcengine</a> <a href="/en/tags/fringe/" style="font-size: 12px;" class="tag -0">fringe</a> <a href="/en/tags/Mystery/" style="font-size: 14.31px;" class="tag -2">Mystery</a> <a href="/en/tags/Minecraft/" style="font-size: 12px;" class="tag -0">Minecraft</a> <a href="/en/tags/Game-Design/" style="font-size: 12px;" class="tag -0">Game Design</a> <a href="/en/tags/Indie-Games/" style="font-size: 12.46px;" class="tag -0">Indie Games</a> <a href="/en/tags/Game-Planning/" style="font-size: 12px;" class="tag -0">Game Planning</a> <a href="/en/tags/Needs/" style="font-size: 12px;" class="tag -0">Needs</a> <a href="/en/tags/web2-0/" style="font-size: 12.46px;" class="tag -0">web2.0</a> <a href="/en/tags/Keyword/" style="font-size: 12px;" class="tag -0">Keyword</a> <a href="/en/tags/Search/" style="font-size: 12px;" class="tag -0">Search</a> <a href="/en/tags/Funny/" style="font-size: 12px;" class="tag -0">Funny</a> <a href="/en/tags/google/" style="font-size: 13.85px;" class="tag -2">google</a> <a href="/en/tags/getBounds/" style="font-size: 12px;" class="tag -0">getBounds</a> <a href="/en/tags/IE/" style="font-size: 13.38px;" class="tag -1">IE</a> <a href="/en/tags/navigateToURL/" style="font-size: 12px;" class="tag -0">navigateToURL</a> <a href="/en/tags/Blocked/" style="font-size: 12px;" class="tag -0">Blocked</a> <a href="/en/tags/Github-Copilot/" style="font-size: 12px;" class="tag -0">Github-Copilot</a> <a href="/en/tags/Music-Search/" style="font-size: 12px;" class="tag -0">Music Search</a> <a href="/en/tags/World-famous-paintings/" style="font-size: 12.46px;" class="tag -0">World-famous paintings</a> <a href="/en/tags/Art/" style="font-size: 12px;" class="tag -0">Art</a> <a href="/en/tags/Design/" style="font-size: 12px;" class="tag -0">Design</a> <a href="/en/tags/Services/" style="font-size: 12px;" class="tag -0">Services</a> <a href="/en/tags/Clubs/" style="font-size: 12px;" class="tag -0">Clubs</a> <a href="/en/tags/QianQian/" style="font-size: 12px;" class="tag -0">QianQian</a> <a href="/en/tags/Angry-Birds/" style="font-size: 12px;" class="tag -0">Angry Birds</a> <a href="/en/tags/Rio/" style="font-size: 12px;" class="tag -0">Rio</a> <a href="/en/tags/js/" style="font-size: 14.31px;" class="tag -2">js</a> <a href="/en/tags/tweenlite/" style="font-size: 12px;" class="tag -0">tweenlite</a> <a href="/en/tags/GTA/" style="font-size: 14.77px;" class="tag -2">GTA</a> <a href="/en/tags/rockstar/" style="font-size: 13.85px;" class="tag -2">rockstar</a> <a href="/en/tags/Violence/" style="font-size: 12.92px;" class="tag -1">Violence</a> <a href="/en/tags/Nonsense/" style="font-size: 12px;" class="tag -0">Nonsense</a> <a href="/en/tags/Guo-Jing/" style="font-size: 12px;" class="tag -0">Guo Jing</a> <a href="/en/tags/Harness-Engineering/" style="font-size: 12px;" class="tag -0">Harness Engineering</a> <a href="/en/tags/Agent-Development/" style="font-size: 12px;" class="tag -0">Agent Development</a> <a href="/en/tags/AI-Engineering/" style="font-size: 12px;" class="tag -0">AI Engineering</a> <a href="/en/tags/Prompt-Engineering/" style="font-size: 12px;" class="tag -0">Prompt Engineering</a> <a href="/en/tags/Context-Engineering/" style="font-size: 12px;" class="tag -0">Context Engineering</a> <a href="/en/tags/heartbeat/" style="font-size: 12px;" class="tag -0">heartbeat</a> <a href="/en/tags/Wang-Leehom/" style="font-size: 12px;" class="tag -0">Wang Leehom</a> <a href="/en/tags/awful/" style="font-size: 12px;" class="tag -0">awful</a> <a href="/en/tags/AI-Agents/" style="font-size: 12px;" class="tag -0">AI Agents</a> <a href="/en/tags/Hermes/" style="font-size: 12.92px;" class="tag -1">Hermes</a> <a href="/en/tags/NousResearch/" style="font-size: 12px;" class="tag -0">NousResearch</a> <a href="/en/tags/Self-Evolving/" style="font-size: 12px;" class="tag -0">Self-Evolving</a> <a href="/en/tags/Memory-System/" style="font-size: 12.46px;" class="tag -0">Memory System</a> <a href="/en/tags/SOUL-md/" style="font-size: 12px;" class="tag -0">SOUL.md</a> <a href="/en/tags/Voice-Mode/" style="font-size: 12px;" class="tag -0">Voice Mode</a> <a href="/en/tags/AI-Agent/" style="font-size: 12px;" class="tag -0">AI Agent</a> <a href="/en/tags/HermesAgent/" style="font-size: 12px;" class="tag -0">HermesAgent</a> <a href="/en/tags/Feishu-Integration/" style="font-size: 12px;" class="tag -0">Feishu Integration</a> <a href="/en/tags/Docker-Deployment/" style="font-size: 12px;" class="tag -0">Docker Deployment</a> <a href="/en/tags/Multi-Agent/" style="font-size: 12px;" class="tag -0">Multi-Agent</a> <a href="/en/tags/AI-Companion/" style="font-size: 12px;" class="tag -0">AI Companion</a> <a href="/en/tags/Personal-Assistant/" style="font-size: 12px;" class="tag -0">Personal Assistant</a> <a href="/en/tags/Heroes/" style="font-size: 12.46px;" class="tag -0">Heroes</a> <a href="/en/tags/html5/" style="font-size: 13.38px;" class="tag -1">html5</a> <a href="/en/tags/error/" style="font-size: 12px;" class="tag -0">error</a> <a href="/en/tags/httpService/" style="font-size: 12px;" class="tag -0">httpService</a> <a href="/en/tags/Security/" style="font-size: 12.46px;" class="tag -0">Security</a> <a href="/en/tags/xml/" style="font-size: 13.38px;" class="tag -1">xml</a> <a href="/en/tags/input/" style="font-size: 12px;" class="tag -0">input</a> <a href="/en/tags/type/" style="font-size: 12px;" class="tag -0">type</a> <a href="/en/tags/jquery/" style="font-size: 12.46px;" class="tag -0">jquery</a> <a href="/en/tags/resize/" style="font-size: 12px;" class="tag -0">resize</a> <a href="/en/tags/window/" style="font-size: 12px;" class="tag -0">window</a> <a href="/en/tags/Zoom/" style="font-size: 12px;" class="tag -0">Zoom</a> <a href="/en/tags/immt/" style="font-size: 12px;" class="tag -0">immt</a> <a href="/en/tags/Anime/" style="font-size: 12.46px;" class="tag -0">Anime</a> <a href="/en/tags/web/" style="font-size: 12.92px;" class="tag -1">web</a> <a href="/en/tags/Creative-Factory/" style="font-size: 12px;" class="tag -0">Creative Factory</a> <a href="/en/tags/Kai-Fu-Lee/" style="font-size: 12px;" class="tag -0">Kai-Fu Lee</a> <a href="/en/tags/Web-Standards/" style="font-size: 12px;" class="tag -0">Web Standards</a> <a href="/en/tags/map/" style="font-size: 12px;" class="tag -0">map</a> <a href="/en/tags/ipa/" style="font-size: 12px;" class="tag -0">ipa</a> <a href="/en/tags/mac/" style="font-size: 12.92px;" class="tag -1">mac</a> <a href="/en/tags/provision/" style="font-size: 12px;" class="tag -0">provision</a> <a href="/en/tags/Jane-Zhang/" style="font-size: 12px;" class="tag -0">Jane Zhang</a> <a href="/en/tags/jay/" style="font-size: 12px;" class="tag -0">jay</a> <a href="/en/tags/Jay-Chou/" style="font-size: 12px;" class="tag -0">Jay Chou</a> <a href="/en/tags/Capricorn/" style="font-size: 12px;" class="tag -0">Capricorn</a> <a href="/en/tags/App/" style="font-size: 12.46px;" class="tag -0">App</a> <a href="/en/tags/WebStorm/" style="font-size: 12px;" class="tag -0">WebStorm</a> <a href="/en/tags/Rider/" style="font-size: 12px;" class="tag -0">Rider</a> <a href="/en/tags/Unity/" style="font-size: 12.92px;" class="tag -1">Unity</a> <a href="/en/tags/Fish-Leong/" style="font-size: 12px;" class="tag -0">Fish Leong</a> <a href="/en/tags/baidu/" style="font-size: 12px;" class="tag -0">baidu</a> <a href="/en/tags/Internet/" style="font-size: 13.38px;" class="tag -1">Internet</a> <a href="/en/tags/Translation/" style="font-size: 12px;" class="tag -0">Translation</a> <a href="/en/tags/Kingsoft/" style="font-size: 12px;" class="tag -0">Kingsoft</a> <a href="/en/tags/Qoolu/" style="font-size: 12px;" class="tag -0">Qoolu</a> <a href="/en/tags/Jobs/" style="font-size: 12px;" class="tag -0">Jobs</a> <a href="/en/tags/mobile/" style="font-size: 12px;" class="tag -0">mobile</a> <a href="/en/tags/Jumper/" style="font-size: 12px;" class="tag -0">Jumper</a> <a href="/en/tags/Childhood/" style="font-size: 12.46px;" class="tag -0">Childhood</a> <a href="/en/tags/Pencil-drawing/" style="font-size: 12px;" class="tag -0">Pencil drawing</a> <a href="/en/tags/JiongJiongTV/" style="font-size: 12px;" class="tag -0">JiongJiongTV</a> <a href="/en/tags/JiongStar/" style="font-size: 12px;" class="tag -0">JiongStar</a> <a href="/en/tags/Otaku-Master/" style="font-size: 12.46px;" class="tag -0">Otaku Master</a> <a href="/en/tags/Culture/" style="font-size: 12px;" class="tag -0">Culture</a> <a href="/en/tags/osx/" style="font-size: 12.46px;" class="tag -0">osx</a> <a href="/en/tags/Flash-games/" style="font-size: 12px;" class="tag -0">Flash games</a> <a href="/en/tags/KOF/" style="font-size: 12px;" class="tag -0">KOF</a> <a href="/en/tags/The-King-of-Fighters/" style="font-size: 12px;" class="tag -0">The King of Fighters</a> <a href="/en/tags/Samurai-Shodown/" style="font-size: 12px;" class="tag -0">Samurai Shodown</a> <a href="/en/tags/Street-Fighter/" style="font-size: 12px;" class="tag -0">Street Fighter</a> <a href="/en/tags/lietome/" style="font-size: 12px;" class="tag -0">lietome</a> <a href="/en/tags/Crime/" style="font-size: 12px;" class="tag -0">Crime</a> <a href="/en/tags/feathers/" style="font-size: 12px;" class="tag -0">feathers</a> <a href="/en/tags/starling/" style="font-size: 12px;" class="tag -0">starling</a> <a href="/en/tags/mx8400/" style="font-size: 12px;" class="tag -0">mx8400</a> <a href="/en/tags/Linksys/" style="font-size: 12px;" class="tag -0">Linksys</a> <a href="/en/tags/Router/" style="font-size: 12px;" class="tag -0">Router</a> <a href="/en/tags/Network/" style="font-size: 12.46px;" class="tag -0">Network</a> <a href="/en/tags/Network-issues/" style="font-size: 12px;" class="tag -0">Network issues</a> <a href="/en/tags/AI-Notes/" style="font-size: 12px;" class="tag -0">AI Notes</a> <a href="/en/tags/LlamaIndex/" style="font-size: 12px;" class="tag -0">LlamaIndex</a> <a href="/en/tags/Agent/" style="font-size: 12.92px;" class="tag -1">Agent</a> <a href="/en/tags/Vectorization/" style="font-size: 12px;" class="tag -0">Vectorization</a> <a href="/en/tags/Context/" style="font-size: 12px;" class="tag -0">Context</a> <a href="/en/tags/Who-is-the-Undercover/" style="font-size: 12px;" class="tag -0">Who is the Undercover</a> <a href="/en/tags/qwen/" style="font-size: 12.46px;" class="tag -0">qwen</a> <a href="/en/tags/nodejs/" style="font-size: 12.92px;" class="tag -1">nodejs</a> <a href="/en/tags/ai/" style="font-size: 12px;" class="tag -0">ai</a> <a href="/en/tags/Backend-Server/" style="font-size: 12px;" class="tag -0">Backend Server</a> <a href="/en/tags/python/" style="font-size: 12px;" class="tag -0">python</a> <a href="/en/tags/cosyvoice/" style="font-size: 12px;" class="tag -0">cosyvoice</a> <a href="/en/tags/conda/" style="font-size: 12px;" class="tag -0">conda</a> <a href="/en/tags/Knowledge-Management/" style="font-size: 12px;" class="tag -0">Knowledge Management</a> <a href="/en/tags/Wiki/" style="font-size: 12px;" class="tag -0">Wiki</a> <a href="/en/tags/Knowledge-Base/" style="font-size: 12px;" class="tag -0">Knowledge Base</a> <a href="/en/tags/Karpathy/" style="font-size: 12px;" class="tag -0">Karpathy</a> <a href="/en/tags/Creativity/" style="font-size: 12px;" class="tag -0">Creativity</a> <a href="/en/tags/Fiction-Writing/" style="font-size: 12px;" class="tag -0">Fiction Writing</a> <a href="/en/tags/Web-Novels/" style="font-size: 12.46px;" class="tag -0">Web Novels</a> <a href="/en/tags/org-eclipse-php-core/" style="font-size: 12px;" class="tag -0">org.eclipse.php.core</a> <a href="/en/tags/PHP/" style="font-size: 14.31px;" class="tag -2">PHP</a> <a href="/en/tags/zend4eclipse/" style="font-size: 12px;" class="tag -0">zend4eclipse</a> <a href="/en/tags/Tower-Defense/" style="font-size: 12px;" class="tag -0">Tower Defense</a> <a href="/en/tags/Love/" style="font-size: 14.31px;" class="tag -2">Love</a> <a href="/en/tags/Memories/" style="font-size: 12px;" class="tag -0">Memories</a> <a href="/en/tags/Machinarium/" style="font-size: 12px;" class="tag -0">Machinarium</a> <a href="/en/tags/Walkthrough/" style="font-size: 12.46px;" class="tag -0">Walkthrough</a> <a href="/en/tags/Image-processing/" style="font-size: 12.46px;" class="tag -0">Image processing</a> <a href="/en/tags/Century-Thunder/" style="font-size: 12px;" class="tag -0">Century Thunder</a> <a href="/en/tags/Beauty-Genesis-2/" style="font-size: 12px;" class="tag -0">Beauty Genesis 2</a> <a href="/en/tags/ipad/" style="font-size: 12px;" class="tag -0">ipad</a> <a href="/en/tags/xcode/" style="font-size: 12.92px;" class="tag -1">xcode</a> <a href="/en/tags/merlin/" style="font-size: 12px;" class="tag -0">merlin</a> <a href="/en/tags/beyond/" style="font-size: 12px;" class="tag -0">beyond</a> <a href="/en/tags/Cover/" style="font-size: 12px;" class="tag -0">Cover</a> <a href="/en/tags/Antivirus-Software/" style="font-size: 12px;" class="tag -0">Antivirus Software</a> <a href="/en/tags/Diary/" style="font-size: 12.46px;" class="tag -0">Diary</a> <a href="/en/tags/minecraft/" style="font-size: 12px;" class="tag -0">minecraft</a> <a href="/en/tags/Mini-Ninjas/" style="font-size: 12px;" class="tag -0">Mini Ninjas</a> <a href="/en/tags/Maqiu/" style="font-size: 12px;" class="tag -0">Maqiu</a> <a href="/en/tags/Personal-Website/" style="font-size: 12px;" class="tag -0">Personal Website</a> <a href="/en/tags/Dream/" style="font-size: 12.46px;" class="tag -0">Dream</a> <a href="/en/tags/2006/" style="font-size: 12px;" class="tag -0">2006</a> <a href="/en/tags/fetch/" style="font-size: 12px;" class="tag -0">fetch</a> <a href="/en/tags/FormData/" style="font-size: 12px;" class="tag -0">FormData</a> <a href="/en/tags/react/" style="font-size: 12px;" class="tag -0">react</a> <a href="/en/tags/react-native/" style="font-size: 12.46px;" class="tag -0">react-native</a> <a href="/en/tags/Platform/" style="font-size: 12px;" class="tag -0">Platform</a> <a href="/en/tags/E-magazine/" style="font-size: 12px;" class="tag -0">E-magazine</a> <a href="/en/tags/Website/" style="font-size: 12px;" class="tag -0">Website</a> <a href="/en/tags/Gear/" style="font-size: 12.92px;" class="tag -1">Gear</a> <a href="/en/tags/Fairy-tale/" style="font-size: 12px;" class="tag -0">Fairy tale</a> <a href="/en/tags/Need-for-Speed/" style="font-size: 12px;" class="tag -0">Need for Speed</a> <a href="/en/tags/3D-Engine/" style="font-size: 12px;" class="tag -0">3D Engine</a> <a href="/en/tags/newX3D/" style="font-size: 12px;" class="tag -0">newX3D</a> <a href="/en/tags/Awesome-3D/" style="font-size: 12px;" class="tag -0">Awesome 3D</a> <a href="/en/tags/Media/" style="font-size: 12px;" class="tag -0">Media</a> <a href="/en/tags/Generative-Narrative/" style="font-size: 12px;" class="tag -0">Generative Narrative</a> <a href="/en/tags/Medium/" style="font-size: 12px;" class="tag -0">Medium</a> <a href="/en/tags/tsrpc/" style="font-size: 12px;" class="tag -0">tsrpc</a> <a href="/en/tags/nginx/" style="font-size: 12px;" class="tag -0">nginx</a> <a href="/en/tags/BaoTa-Panel/" style="font-size: 12px;" class="tag -0">BaoTa Panel</a> <a href="/en/tags/Reverse-proxy/" style="font-size: 12px;" class="tag -0">Reverse proxy</a> <a href="/en/tags/Forwarding/" style="font-size: 12px;" class="tag -0">Forwarding</a> <a href="/en/tags/Kung-Fu-Panda/" style="font-size: 12px;" class="tag -0">Kung Fu Panda</a> <a href="/en/tags/awkward/" style="font-size: 12px;" class="tag -0">awkward</a> <a href="/en/tags/OpenCode/" style="font-size: 13.38px;" class="tag -1">OpenCode</a> <a href="/en/tags/Qwen/" style="font-size: 12px;" class="tag -0">Qwen</a> <a href="/en/tags/E-payment-card/" style="font-size: 12px;" class="tag -0">E-payment card</a> <a href="/en/tags/Bank/" style="font-size: 12px;" class="tag -0">Bank</a> <a href="/en/tags/nvm/" style="font-size: 12px;" class="tag -0">nvm</a> <a href="/en/tags/GFW/" style="font-size: 12px;" class="tag -0">GFW</a> <a href="/en/tags/Obama/" style="font-size: 12px;" class="tag -0">Obama</a> <a href="/en/tags/obsidian/" style="font-size: 12.46px;" class="tag -0">obsidian</a> <a href="/en/tags/Plugin/" style="font-size: 12px;" class="tag -0">Plugin</a> <a href="/en/tags/ics/" style="font-size: 12px;" class="tag -0">ics</a> <a href="/en/tags/Sync/" style="font-size: 12px;" class="tag -0">Sync</a> <a href="/en/tags/embed/" style="font-size: 12px;" class="tag -0">embed</a> <a href="/en/tags/json/" style="font-size: 12px;" class="tag -0">json</a> <a href="/en/tags/oEmbed/" style="font-size: 12px;" class="tag -0">oEmbed</a> <a href="/en/tags/Browser/" style="font-size: 12.46px;" class="tag -0">Browser</a> <a href="/en/tags/Configuration/" style="font-size: 12.92px;" class="tag -1">Configuration</a> <a href="/en/tags/Docker/" style="font-size: 12px;" class="tag -0">Docker</a> <a href="/en/tags/Chromium/" style="font-size: 12px;" class="tag -0">Chromium</a> <a href="/en/tags/headless/" style="font-size: 12px;" class="tag -0">headless</a> <a href="/en/tags/Container/" style="font-size: 12px;" class="tag -0">Container</a> <a href="/en/tags/token/" style="font-size: 12.46px;" class="tag -0">token</a> <a href="/en/tags/opencode/" style="font-size: 12.46px;" class="tag -0">opencode</a> <a href="/en/tags/CommandCode/" style="font-size: 12.46px;" class="tag -0">CommandCode</a> <a href="/en/tags/goat/" style="font-size: 12.46px;" class="tag -0">goat</a> <a href="/en/tags/Paseo/" style="font-size: 12.46px;" class="tag -0">Paseo</a> <a href="/en/tags/reasoning/" style="font-size: 12px;" class="tag -0">reasoning</a> <a href="/en/tags/OpenViking/" style="font-size: 12px;" class="tag -0">OpenViking</a> <a href="/en/tags/uv/" style="font-size: 12px;" class="tag -0">uv</a> <a href="/en/tags/Face-Changing/" style="font-size: 12px;" class="tag -0">Face Changing</a> <a href="/en/tags/Chinese-Paladin/" style="font-size: 13.85px;" class="tag -2">Chinese Paladin</a> <a href="/en/tags/Online-Games/" style="font-size: 15.23px;" class="tag -3">Online Games</a> <a href="/en/tags/ost/" style="font-size: 12.46px;" class="tag -0">ost</a> <a href="/en/tags/Pantheon/" style="font-size: 12px;" class="tag -0">Pantheon</a> <a href="/en/tags/Animation/" style="font-size: 12.92px;" class="tag -1">Animation</a> <a href="/en/tags/Solarized/" style="font-size: 12px;" class="tag -0">Solarized</a> <a href="/en/tags/Theme/" style="font-size: 12px;" class="tag -0">Theme</a> <a href="/en/tags/Sigh/" style="font-size: 12px;" class="tag -0">Sigh</a> <a href="/en/tags/System/" style="font-size: 12px;" class="tag -0">System</a> <a href="/en/tags/MYSQL/" style="font-size: 12.46px;" class="tag -0">MYSQL</a> <a href="/en/tags/pdo/" style="font-size: 12px;" class="tag -0">pdo</a> <a href="/en/tags/transaction/" style="font-size: 12px;" class="tag -0">transaction</a> <a href="/en/tags/Blog/" style="font-size: 12.46px;" class="tag -0">Blog</a> <a href="/en/tags/Image/" style="font-size: 12px;" class="tag -0">Image</a> <a href="/en/tags/Cat/" style="font-size: 13.85px;" class="tag -2">Cat</a> <a href="/en/tags/session/" style="font-size: 12px;" class="tag -0">session</a> <a href="/en/tags/DomDocument/" style="font-size: 12px;" class="tag -0">DomDocument</a> <a href="/en/tags/useCodepage/" style="font-size: 12px;" class="tag -0">useCodepage</a> <a href="/en/tags/500-error/" style="font-size: 12px;" class="tag -0">500 error</a> <a href="/en/tags/wimp/" style="font-size: 12.46px;" class="tag -0">wimp</a> <a href="/en/tags/Permissions/" style="font-size: 12px;" class="tag -0">Permissions</a> <a href="/en/tags/TD/" style="font-size: 12px;" class="tag -0">TD</a> <a href="/en/tags/Plants-vs-Zombies/" style="font-size: 12px;" class="tag -0">Plants vs. Zombies</a> <a href="/en/tags/2d/" style="font-size: 12px;" class="tag -0">2d</a> <a href="/en/tags/FOV/" style="font-size: 12px;" class="tag -0">FOV</a> <a href="/en/tags/stage3d/" style="font-size: 12px;" class="tag -0">stage3d</a> <a href="/en/tags/Projection/" style="font-size: 12px;" class="tag -0">Projection</a> <a href="/en/tags/Perspective/" style="font-size: 12px;" class="tag -0">Perspective</a> <a href="/en/tags/webgame/" style="font-size: 12px;" class="tag -0">webgame</a> <a href="/en/tags/Team/" style="font-size: 12px;" class="tag -0">Team</a> <a href="/en/tags/thought/" style="font-size: 12px;" class="tag -0">thought</a> <a href="/en/tags/prayer/" style="font-size: 12px;" class="tag -0">prayer</a> <a href="/en/tags/360/" style="font-size: 12px;" class="tag -0">360</a> <a href="/en/tags/Qihoo/" style="font-size: 12px;" class="tag -0">Qihoo</a> <a href="/en/tags/Rising/" style="font-size: 12px;" class="tag -0">Rising</a> <a href="/en/tags/Fans/" style="font-size: 12px;" class="tag -0">Fans</a> <a href="/en/tags/QQ/" style="font-size: 12.46px;" class="tag -0">QQ</a> <a href="/en/tags/Email/" style="font-size: 12px;" class="tag -0">Email</a> <a href="/en/tags/LMStudio/" style="font-size: 12px;" class="tag -0">LMStudio</a> <a href="/en/tags/MLX/" style="font-size: 12px;" class="tag -0">MLX</a> <a href="/en/tags/jinja/" style="font-size: 12px;" class="tag -0">jinja</a> <a href="/en/tags/iphone/" style="font-size: 12px;" class="tag -0">iphone</a> <a href="/en/tags/Red-Alert-3/" style="font-size: 14.31px;" class="tag -2">Red Alert 3</a> <a href="/en/tags/Update/" style="font-size: 12px;" class="tag -0">Update</a> <a href="/en/tags/healthkit/" style="font-size: 12px;" class="tag -0">healthkit</a> <a href="/en/tags/app/" style="font-size: 12px;" class="tag -0">app</a> <a href="/en/tags/The-Sims/" style="font-size: 12px;" class="tag -0">The Sims</a> <a href="/en/tags/Simulation/" style="font-size: 12px;" class="tag -0">Simulation</a> <a href="/en/tags/samp/" style="font-size: 12px;" class="tag -0">samp</a> <a href="/en/tags/Video/" style="font-size: 12.92px;" class="tag -1">Video</a> <a href="/en/tags/Photo/" style="font-size: 12px;" class="tag -0">Photo</a> <a href="/en/tags/urlRequest/" style="font-size: 12px;" class="tag -0">urlRequest</a> <a href="/en/tags/Cache/" style="font-size: 12px;" class="tag -0">Cache</a> <a href="/en/tags/Private-Notes/" style="font-size: 12px;" class="tag -0">Private Notes</a> <a href="/en/tags/Security-Sandbox/" style="font-size: 12px;" class="tag -0">Security Sandbox</a> <a href="/en/tags/Hit-a-big-watermelon/" style="font-size: 12px;" class="tag -0">Hit a big watermelon</a> <a href="/en/tags/pv3d/" style="font-size: 12px;" class="tag -0">pv3d</a> <a href="/en/tags/svn/" style="font-size: 12px;" class="tag -0">svn</a> <a href="/en/tags/Install/" style="font-size: 12px;" class="tag -0">Install</a> <a href="/en/tags/The-Settlers/" style="font-size: 12px;" class="tag -0">The Settlers</a> <a href="/en/tags/Simulation-management-game/" style="font-size: 12px;" class="tag -0">Simulation management game</a> <a href="/en/tags/Harry-Potter/" style="font-size: 12px;" class="tag -0">Harry Potter</a> <a href="/en/tags/SGA/" style="font-size: 13.85px;" class="tag -2">SGA</a> <a href="/en/tags/Stargate/" style="font-size: 14.31px;" class="tag -2">Stargate</a> <a href="/en/tags/Divine-Land/" style="font-size: 12px;" class="tag -0">Divine Land</a> <a href="/en/tags/SimCity-4/" style="font-size: 12px;" class="tag -0">SimCity 4</a> <a href="/en/tags/sns/" style="font-size: 12px;" class="tag -0">sns</a> <a href="/en/tags/Oak-Pacific-Interactive/" style="font-size: 12px;" class="tag -0">Oak Pacific Interactive</a> <a href="/en/tags/Kaixin001/" style="font-size: 12px;" class="tag -0">Kaixin001</a> <a href="/en/tags/Xiaonei/" style="font-size: 12px;" class="tag -0">Xiaonei</a> <a href="/en/tags/Solar/" style="font-size: 12px;" class="tag -0">Solar</a> <a href="/en/tags/Sins-of-a-Solar-Empire/" style="font-size: 12px;" class="tag -0">Sins of a Solar Empire</a> <a href="/en/tags/spore/" style="font-size: 12px;" class="tag -0">spore</a> <a href="/en/tags/SampleDataEvent/" style="font-size: 12px;" class="tag -0">SampleDataEvent</a> <a href="/en/tags/wav/" style="font-size: 12px;" class="tag -0">wav</a> <a href="/en/tags/audio-processing/" style="font-size: 12px;" class="tag -0">audio processing</a> <a href="/en/tags/Comics/" style="font-size: 12px;" class="tag -0">Comics</a> <a href="/en/tags/StarCraft-2/" style="font-size: 12.46px;" class="tag -0">StarCraft 2</a> <a href="/en/tags/release/" style="font-size: 12px;" class="tag -0">release</a> <a href="/en/tags/Heart-of-the-Swarm/" style="font-size: 12px;" class="tag -0">Heart of the Swarm</a> <a href="/en/tags/NASA/" style="font-size: 12px;" class="tag -0">NASA</a> <a href="/en/tags/Gulf-of-Aden/" style="font-size: 12px;" class="tag -0">Gulf of Aden</a> <a href="/en/tags/RPG/" style="font-size: 12px;" class="tag -0">RPG</a> <a href="/en/tags/AppleTV/" style="font-size: 12px;" class="tag -0">AppleTV</a> <a href="/en/tags/raspberry-pi/" style="font-size: 12px;" class="tag -0">raspberry pi</a> <a href="/en/tags/Raspberry-Pi/" style="font-size: 12px;" class="tag -0">Raspberry Pi</a> <a href="/en/tags/Weibo/" style="font-size: 12px;" class="tag -0">Weibo</a> <a href="/en/tags/Tencent/" style="font-size: 12px;" class="tag -0">Tencent</a> <a href="/en/tags/Teldrassil/" style="font-size: 12px;" class="tag -0">Teldrassil</a> <a href="/en/tags/cursor/" style="font-size: 12px;" class="tag -0">cursor</a> <a href="/en/tags/void/" style="font-size: 12px;" class="tag -0">void</a> <a href="/en/tags/Programming/" style="font-size: 12.46px;" class="tag -0">Programming</a> <a href="/en/tags/Musings/" style="font-size: 12.92px;" class="tag -1">Musings</a> <a href="/en/tags/Reincarnation/" style="font-size: 12px;" class="tag -0">Reincarnation</a> <a href="/en/tags/Cause-and-effect/" style="font-size: 12px;" class="tag -0">Cause and effect</a> <a href="/en/tags/2008-Olympic-Opening-Ceremony/" style="font-size: 12px;" class="tag -0">2008 Olympic Opening Ceremony</a> <a href="/en/tags/Disaster/" style="font-size: 12.46px;" class="tag -0">Disaster</a> <a href="/en/tags/Liu-Cixin/" style="font-size: 12.46px;" class="tag -0">Liu Cixin</a> <a href="/en/tags/Domestic/" style="font-size: 13.38px;" class="tag -1">Domestic</a> <a href="/en/tags/The-Wandering-Earth/" style="font-size: 12.46px;" class="tag -0">The Wandering Earth</a> <a href="/en/tags/Weakness/" style="font-size: 12px;" class="tag -0">Weakness</a> <a href="/en/tags/Desire/" style="font-size: 12px;" class="tag -0">Desire</a> <a href="/en/tags/Contentment-Brings-Happiness/" style="font-size: 12px;" class="tag -0">Contentment Brings Happiness</a> <a href="/en/tags/Temptation/" style="font-size: 12px;" class="tag -0">Temptation</a> <a href="/en/tags/magazine/" style="font-size: 12px;" class="tag -0">magazine</a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
+    },
+    root : `/en/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function (response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function (data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function (error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/en/js/main.js?v=1.30.0" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `Switched to Light Mode`,
+      dark: `Switched to Dark Mode`,
+      auto: `Switched to Auto Mode`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+<script>
+(function () {
+  var KEY = 'mb_lang_hint';
+  var page = /^zh/i.test(document.documentElement.lang || '') ? 'zh' : 'en';
+  var raw = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+  if (!raw) return;
+  var sys = /^zh/i.test(raw) ? 'zh' : 'en';
+  if (sys === page) return;
+  try { if (localStorage.getItem(KEY) === page) return; } catch (e) {}
+  if (/^\/(en\/)?404\.html$/.test(location.pathname)) return;
+  var alt = page === 'zh' ? 'en' : 'zh-CN';
+  var link = document.querySelector('link[rel="alternate"][hreflang="' + alt + '"]');
+  var href = (link && link.href) ? new URL(link.href).pathname : (page === 'zh' ? '/en/' : '/');
+  var isZh = page === 'zh';
+  var bar = document.createElement('div');
+  bar.className = 'mb-langbar';
+  bar.setAttribute('role', 'region');
+  bar.setAttribute('aria-label', isZh ? 'Language' : '语言');
+  bar.innerHTML = '<span class="t">' + (isZh ? 'This page has an English version.' : '本文有简体中文版。') + '</span>'
+    + '<a class="go" href="' + href + '">' + (isZh ? 'Read in English' : '阅读中文版') + '</a>'
+    + '<button class="x" type="button" aria-label="' + (isZh ? 'Dismiss' : '关闭') + '">&times;</button>';
+  function remember(remove) {
+    try { localStorage.setItem(KEY, page); } catch (e) {}
+    if (remove) bar.remove();
+  }
+  bar.querySelector('.x').addEventListener('click', function () { remember(true); });
+  bar.querySelector('.go').addEventListener('click', function () { remember(false); });
+  document.body.insertBefore(bar, document.body.firstChild);
+})();
+</script>
+<script>
+(function () {
+  var a = document.querySelector('.page-footer .text a.mb-lang-foot');
+  if (!a) return;
+  var alt = /^zh/i.test(document.documentElement.lang || '') ? 'en' : 'zh-CN';
+  var link = document.querySelector('link[rel="alternate"][hreflang="' + alt + '"]');
+  if (!link || !link.href) return;
+  try {
+    var p = new URL(link.href, location.origin).pathname;
+    if (p) a.setAttribute('href', p);
+  } catch (e) {}
+})();
+</script>
+
+</div></body></html>
