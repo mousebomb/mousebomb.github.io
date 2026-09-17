@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-09-17T08:59:52.452Z</updated>
+  <updated>2026-09-17T09:10:28.442Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://flashj.cn/llm-boundary-human-reserve.html"/>
     <id>https://flashj.cn/llm-boundary-human-reserve.html</id>
     <published>2026-09-17T08:10:00.000Z</published>
-    <updated>2026-09-17T08:59:52.452Z</updated>
+    <updated>2026-09-17T09:10:28.442Z</updated>
     
-    <content type="html"><![CDATA[<p>最近 9 月发生了几件事情，挺让人震撼的。</p><p>第一件事，是 GPT6 Computer Use 的功能更加完善。通过烧更多 Token 的方式使用 Computer Use，很多人用它从建模到实现最终产品。其实就算不用 GPT6，只要装上 Blender MCP，也都可以实现。只是 GPT6 一站式用 Computer Use 全部解决了。只要你财大气粗、算力无限，就可以把各种事情交给他去办。比如<a href="https://hangzhou.thewang.net/#place=lingyin">杭州漫游</a>、<a href="https://gtasz.vercel.app/">GTA6-深圳</a>。</p><p>这是第一件令人震撼的事情。</p><p>第二件令人震撼的事情，是最近看到一个很火的项目：把果蝇的神经元上传到电脑里，用果蝇的算力驱动了很多很神奇的事情，比如驾驶无人机、玩《毁灭战士》。反正挺多神奇的项目，都是用果蝇的神经连接去做的。</p><p>果蝇的神经元数量远远小于现在的大模型规模，但是当它全功率做推理的时候，能够实现的具身智能所需的智能水平（行动、避障等），几乎可以算是超过现在 VLM 大模型的智能水平了吧。</p><p>第三件令人震撼的事情是，最近有一个困扰了人类 90 年的数学问题，被大模型解决了。OpenAI 用一个未发布的更强模型，做长时间、长任务、多 Agent 配合的推理，把这个问题解决了。</p><p>这相当于说，困扰人类的许多数学问题，最近都可以用大语言模型驱动，通过长任务来解决。</p><h2 id="AI-大模型有没有边界？"><a href="#AI-大模型有没有边界？" class="headerlink" title="AI 大模型有没有边界？"></a>AI 大模型有没有边界？</h2><p>AI 大模型有没有边界？</p><p>如果有边界，我们所有人的最优策略应该是转向 AI 边界以外的技能素养培养；如果没有边界，那么我们所有人的最优策略应该是想尽办法参与算力端。</p><p>在某些范围内，在有衡量器的情况下，AI 的能力是可以做到左脚踩右脚，并且做得很好的。</p><p>从这个角度来说，我们人类可能需要去开发恰当的衡量器。但工作量不会很大，相关工作窗口也不会很多，工作机会应该也会很少，只需要顶尖的人就行了。</p><p>幸运的是，更多机会其实在 AI 有边界的那些方向，也就是我以前一篇文章里提到过的：创造力，以及面对人类情绪产出的方向，AI 没有办法替代人类。</p><p>因为 AI 只是个词语接龙机，只是个高概率事件预测机。它没有办法产生人类的情感，没有这个底层机制，没有这种生物运转的机制。人类是由情感、情绪和事件共同驱动的，但 AI 只是对词语高概率分布、命中、预演的陈述。</p><p>所以，人类远远超出 AI 的能力，就在于一切以情绪驱动的产出物，而不是逻辑驱动的产出物。</p><p>因为逻辑再怎么着，最终都是一个数学问题。生活中的高级逻辑，也就是一个概率分布的数学问题。这些大模型从底层原理上都是具备的。</p><p>结合我前几天看到的，我们数学家、菲尔兹奖得主邓煜说，现在感觉数学界弥漫着一股浮躁不安的氛围。但是我看他的观点，也是要等这两年这一波过去，让子弹先飞一会儿，数学界就会自然慢慢适应，新的生态也会逐渐形成。</p><p>反正，如果人工智能能够解决所有数学问题，他将从数学界退休，并开始创作百合小说。</p><p>我觉得他的选择非常绝妙。这也就是为什么我一个写程序的码农，用了这么多年 AI（尤其是今年桌面 AI Agent 爆发，并且重度使用）之后，决定去写言情小说(&#x2F;狗头)：</p><p>因为这是离 AI 最远的地方，也是人类的保留地。</p><h2 id="人类的学习、就业策略变化"><a href="#人类的学习、就业策略变化" class="headerlink" title="人类的学习、就业策略变化"></a>人类的学习、就业策略变化</h2><p>这几天，还看到南方科技大学的马兆远教授讲：闲暇是创造力的前提。所以说，我们人类真不能现在这么卷了。卷，都是在透支未来。</p><p>人类真正应该做的，是围绕自己的情绪和生物特点，去创作真正属于人类的、独一无二的内容，完成每个人的自我实现。</p><p>另外，前两天还看到一个有趣的报告。大致意思是：他们研究了中国一批学生，2 万多个学生，时间跨度长达 30 个月，观察孩子们使用 AI 参与学习对学习成绩的影响。所以这个数据还是挺不容易的，也挺有参考价值。</p><p>研究发现，学生用 AI 完成作业之后，作业平均成绩都提升了，并且完成时间也缩短了很多。但是在脱离 AI 之后的闭卷考试中，平均成绩都下滑了。</p><p>但这里面比较有趣的一个价值，或者说比较有趣的启发在于：虽然整体平均来看，脱离 AI 之后成绩下降了，但有一部分学生，也就是真正有自驱力、想要学习、对学习有兴趣的学生，他们借助 AI 做作业的时间其实并没有减少，反而更长了。他们在脱离 AI 之后，考试分数反而更高。</p><p>所以，借助 AI 来学习，和借助 AI 来完成学校布置的学习任务，结果完全是天差地别的两种。</p><p>本来从原理上讲，大模型的预测机制就是会以人类的平均线为基准来预测的。加上这行业的主要用户的需求是解决编程问题，就更让需求导向更可预测的结果。</p><p>所以说，AI 大模型厂商一定会让 AI 变得更加中庸。为什么？因为每次出来一个新东西，那帮人的测评，都是用什么画个鹈鹕自行车来测它。但是它稍微有一点不中庸，就没有办法保证这个东西每次测出来的结果都是好的，是吧？所以它的能力越被那帮测评的人测得强，就越要求它刷题、刷应试考卷的分。这就跟应试教育培养人一样，最终就他妈丧失了灵魂。</p><p>但是人类的创造力就不一样，每个人都有自己的独特生活，有自己的独特经历，有自己的情绪感受，也有自己天生的生物推理能力和形成的情绪反馈机制，所以他有自己的独特品味。这个天然就是区分于 AI 的。</p><p>所以每个人都是世界的一级，但 AI 永远都是世界的平均线上，不可能倾向于任何一级。因为一旦有任何一个厂商做出这种倾向于一级的东西，它画醍醐自行车，就会测试失败。比如豆包和 Gemini，这俩是现在 AI 界的人类之光，他们在理性的基础上，保有了少许对人类创造力模仿的灵气。</p><p>说了这么多，懒得自己总结了，请 AI 帮我结个尾吧：</p><blockquote><p>说到底，AI 能搞定所有逻辑、算力、数理与重复任务，是极致高效的工具，却永远复刻不了人类的情绪、热爱与内生创造力。未来不用盲目内卷算力和逻辑，学会借 AI 借力增效，深耕人类独有的情感创作与自我表达，守住专属人类的精神自留地，才是普通人最稳妥的生存与成长策略。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>最近 9 月发生了几件事情，挺让人震撼的。</p><p>第一件事，是 GPT6 Computer Use 的功能更加完善。通过烧更多 Token 的方式使用 Computer Use，很多人用它从建模到实现最终产品。其实就算不用 GPT6，只要装上 Blender MCP，也都可以实现。只是 GPT6 一站式用 Computer Use 全部解决了。只要你财大气粗、算力无限，就可以把各种事情交给他去办。比如<a href="https://hangzhou.thewang.net/#place=lingyin">杭州漫游</a>、<a href="https://gtasz.vercel.app/">GTA6-深圳</a>。</p><p>这是第一件令人震撼的事情。</p><p>第二件令人震撼的事情，是最近看到一个很火的项目：把果蝇的神经元上传到电脑里，用果蝇的算力驱动了很多很神奇的事情，比如驾驶无人机、玩《毁灭战士》。反正挺多神奇的项目，都是用果蝇的神经连接去做的。</p><p>果蝇的神经元数量远远小于现在的大模型规模，但是当它全功率做推理的时候，能够实现的具身智能所需的智能水平（行动、避障等），几乎可以算是超过现在 VLM 大模型的智能水平了吧。</p><p>第三件令人震撼的事情是，最近有一个困扰了人类 90 年的数学问题，被大模型解决了。OpenAI 用一个未发布的更强模型，做长时间、长任务、多 Agent 配合的推理，把这个问题解决了。</p><p>这相当于说，困扰人类的许多数学问题，最近都可以用大语言模型驱动，通过长任务来解决。</p><h2 id="AI-大模型有没有边界？"><a href="#AI-大模型有没有边界？" class="headerlink" title="AI 大模型有没有边界？"></a>AI 大模型有没有边界？</h2><p>AI 大模型有没有边界？</p><p>如果有边界，我们所有人的最优策略应该是转向 AI 边界以外的技能素养培养；如果没有边界，那么我们所有人的最优策略应该是想尽办法参与算力端。</p><p>在某些范围内，在有衡量器的情况下，AI 的能力是可以做到左脚踩右脚，并且做得很好的。</p><p>从这个角度来说，我们人类可能需要去开发恰当的衡量器。但工作量不会很大，相关工作窗口也不会很多，工作机会应该也会很少，只需要顶尖的人就行了。</p><p>幸运的是，更多机会其实在 AI 有边界的那些方向，也就是我以前<a href="https://www.flashj.cn/llm-principle-creativity.html">一篇文章</a>里提到过的：<a href="https://www.flashj.cn/llm-principle-creativity.html">创造力，以及面对人类情绪产出的方向，AI 没有办法替代人类</a>。</p><p>因为 AI 只是个词语接龙机，只是个高概率事件预测机。它没有办法产生人类的情感，没有这个底层机制，没有这种生物运转的机制。人类是由情感、情绪和事件共同驱动的，但 AI 只是对词语高概率分布、命中、预演的陈述。</p><p>所以，人类远远超出 AI 的能力，就在于一切以情绪驱动的产出物，而不是逻辑驱动的产出物。</p><p>因为逻辑再怎么着，最终都是一个数学问题。生活中的高级逻辑，也就是一个概率分布的数学问题。这些大模型从底层原理上都是具备的。</p><p>结合我前几天看到的，我们数学家、菲尔兹奖得主邓煜说，现在感觉数学界弥漫着一股浮躁不安的氛围。但是我看他的观点，也是要等这两年这一波过去，让子弹先飞一会儿，数学界就会自然慢慢适应，新的生态也会逐渐形成。</p><p>反正，如果人工智能能够解决所有数学问题，他将从数学界退休，并开始创作百合小说。</p><p>我觉得他的选择非常绝妙。这也就是为什么我一个写程序的码农，用了这么多年 AI（尤其是今年桌面 AI Agent 爆发，并且重度使用）之后，决定去写言情小说(&#x2F;狗头)：</p><p>因为这是离 AI 最远的地方，也是人类的保留地。</p><h2 id="人类的学习、就业策略变化"><a href="#人类的学习、就业策略变化" class="headerlink" title="人类的学习、就业策略变化"></a>人类的学习、就业策略变化</h2><p>这几天，还看到南方科技大学的马兆远教授讲：闲暇是创造力的前提。所以说，我们人类真不能现在这么卷了。卷，都是在透支未来。</p><p>人类真正应该做的，是围绕自己的情绪和生物特点，去创作真正属于人类的、独一无二的内容，完成每个人的自我实现。</p><p>另外，前两天还看到一个有趣的报告。大致意思是：他们研究了中国一批学生，2 万多个学生，时间跨度长达 30 个月，观察孩子们使用 AI 参与学习对学习成绩的影响。所以这个数据还是挺不容易的，也挺有参考价值。</p><p>研究发现，学生用 AI 完成作业之后，作业平均成绩都提升了，并且完成时间也缩短了很多。但是在脱离 AI 之后的闭卷考试中，平均成绩都下滑了。</p><p>但这里面比较有趣的一个价值，或者说比较有趣的启发在于：虽然整体平均来看，脱离 AI 之后成绩下降了，但有一部分学生，也就是真正有自驱力、想要学习、对学习有兴趣的学生，他们借助 AI 做作业的时间其实并没有减少，反而更长了。他们在脱离 AI 之后，考试分数反而更高。</p><p>所以，借助 AI 来学习，和借助 AI 来完成学校布置的学习任务，结果完全是天差地别的两种。</p><p>本来从原理上讲，大模型的预测机制就是会以人类的平均线为基准来预测的。加上这行业的主要用户的需求是解决编程问题，就更让需求导向更可预测的结果。</p><p>所以说，AI 大模型厂商一定会让 AI 变得更加中庸。为什么？因为每次出来一个新东西，那帮人的测评，都是用什么画个鹈鹕自行车来测它。但是它稍微有一点不中庸，就没有办法保证这个东西每次测出来的结果都是好的，是吧？所以它的能力越被那帮测评的人测得强，就越要求它刷题、刷应试考卷的分。这就跟应试教育培养人一样，最终就他妈丧失了灵魂。</p><p>但是人类的创造力就不一样，每个人都有自己的独特生活，有自己的独特经历，有自己的情绪感受，也有自己天生的生物推理能力和形成的情绪反馈机制，所以他有自己的独特品味。这个天然就是区分于 AI 的。</p><p>所以每个人都是世界的一级，但 AI 永远都是世界的平均线上，不可能倾向于任何一级。因为一旦有任何一个厂商做出这种倾向于一级的东西，它画醍醐自行车，就会测试失败。比如豆包和 Gemini，这俩是现在 AI 界的人类之光，他们在理性的基础上，保有了少许对人类创造力模仿的灵气。</p><p>说了这么多，懒得自己总结了，请 AI 帮我结个尾吧：</p><blockquote><p>说到底，AI 能搞定所有逻辑、算力、数理与重复任务，是极致高效的工具，却永远复刻不了人类的情绪、热爱与内生创造力。未来不用盲目内卷算力和逻辑，学会借 AI 借力增效，深耕人类独有的情感创作与自我表达，守住专属人类的精神自留地，才是普通人最稳妥的生存与成长策略。</p></blockquote>]]></content>
     
     
     <summary type="html">9 月发生了几件挺让人震撼的事情：GPT6 Computer Use 更加完善、果蝇的神经连接驱动出的具身智能、以及一个困扰了人类 90 年的数学问题被大模型解决。它们指向同一个问题——AI 大模型有没有边界？如果有边界，最优策略是转向 AI 边界以外的技能素养培养；如果没有边界，最优策略是想尽办法参与算力端。</summary>
@@ -565,35 +565,6 @@
   </entry>
   
   <entry>
-    <title>Playwright vs CDP 浏览器控制方式对比</title>
-    <link href="https://flashj.cn/Playwright-vs-CDP.html"/>
-    <id>https://flashj.cn/Playwright-vs-CDP.html</id>
-    <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-04-08T00:57:07.156Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Playwright-vs-CDP-浏览器控制方式对比"><a href="#Playwright-vs-CDP-浏览器控制方式对比" class="headerlink" title="Playwright vs CDP 浏览器控制方式对比"></a>Playwright vs CDP 浏览器控制方式对比</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>对于 OpenClaw 来说，Playwright 方式调用浏览器和 RDP（实为 CDP）调用浏览器工具，区别是什么？</p><h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><h3 id="小概念澄清"><a href="#小概念澄清" class="headerlink" title="小概念澄清"></a>小概念澄清</h3><p>RDP（Remote Desktop Protocol）是 Windows 远程桌面协议，在浏览器控制语境下实际指的是 <strong>CDP（Chrome DevTools Protocol）</strong>，即通过 9222 端口（Remote Debugging Port）进行通信的 Chrome 远程调试协议。</p><h3 id="核心区别"><a href="#核心区别" class="headerlink" title="核心区别"></a>核心区别</h3><h4 id="1-抽象层级与控制粒度"><a href="#1-抽象层级与控制粒度" class="headerlink" title="1. 抽象层级与控制粒度"></a>1. 抽象层级与控制粒度</h4><table><thead><tr><th>方式</th><th>原理</th><th>类比</th></tr></thead><tbody><tr><td><strong>Playwright</strong>（高级封装）</td><td>发送指令如”点击 Login 按钮”，自动寻元素、等待、计算坐标、模拟鼠标</td><td>自动驾驶系统</td></tr><tr><td><strong>CDP</strong>（底层协议）</td><td>直接发送原始 JSON 报文，需先获取 DOM 树找到节点 ID，再发送 Input.dispatchMouseEvent</td><td>直接控制方向盘和油门</td></tr></tbody></table><h4 id="2-对-AI-“视觉”与-DOM-解析的影响（核心差异）"><a href="#2-对-AI-“视觉”与-DOM-解析的影响（核心差异）" class="headerlink" title="2. 对 AI “视觉”与 DOM 解析的影响（核心差异）"></a>2. 对 AI “视觉”与 DOM 解析的影响（核心差异）</h4><ul><li><strong>Playwright 方式</strong>：依赖注入 JavaScript 遍历 DOM 元素计算 Bounding Box，易被复杂 CSS 或 Shadow DOM 阻挡</li><li><strong>CDP 方式</strong>：直接调用 Chrome 底层的 <strong>Accessibility Tree</strong>（无障碍树），精准获取所有可交互元素的坐标和层级，不受前端代码干扰</li></ul><blockquote><p>目前最先进的 Web Agent（如 Claude Computer Use 或基于 MCP 的实现）深度依赖 CDP 获取页面空间信息。</p></blockquote><h4 id="3-浏览器接管与隐蔽性（反爬虫）"><a href="#3-浏览器接管与隐蔽性（反爬虫）" class="headerlink" title="3. 浏览器接管与隐蔽性（反爬虫）"></a>3. 浏览器接管与隐蔽性（反爬虫）</h4><table><thead><tr><th>方式</th><th>特点</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>默认启动纯净新浏览器实例，带 webdriver 标记，易被识别为机器人</td></tr><tr><td><strong>CDP 直连宿主机</strong></td><td>通过 <code>host.docker.internal:9222</code> 连接真实 Chrome Profile，带着长期 Cookie 和正常指纹，隐蔽性极高</td></tr></tbody></table><h4 id="4-运行开销与依赖"><a href="#4-运行开销与依赖" class="headerlink" title="4. 运行开销与依赖"></a>4. 运行开销与依赖</h4><table><thead><tr><th>方式</th><th>资源消耗</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>容器内需安装庞大 Playwright 依赖库及浏览器内核包，容器体积大，内存占用高</td></tr><tr><td><strong>CDP</strong></td><td>仅需轻量级 WebSocket 客户端（如 chrome-devtools-mcp），所有渲染计算在宿主机</td></tr></tbody></table><h2 id="总结对比"><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h2><table><thead><tr><th>比较维度</th><th>Playwright 方式</th><th>CDP 方式（DevTools MCP）</th></tr></thead><tbody><tr><td>工作原理</td><td>高级 API，自动处理等待、查找和点击</td><td>底层 WebSocket，原始 JSON 报文</td></tr><tr><td>适用场景</td><td>固定自动化脚本、后台静默运行</td><td>AI 接管当前屏幕、复杂精准坐标映射任务</td></tr><tr><td>接管现有浏览器</td><td>支持（connectOverCDP），非默认设计</td><td>完美契合，生来为此设计</td></tr><tr><td>容器资源消耗</td><td>高</td><td>极低</td></tr><tr><td>反爬风控风险</td><td>较高（除非专门配置 Stealth）</td><td>较低（借用真实用户指纹）</td></tr></tbody></table><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>对于 OpenClaw 直接操作宿主机浏览器主 Profile 的场景，<strong>CDP (DevTools MCP) 协议连接 9222 端口是最优选择</strong>：</p><ul><li>完美复用已有 Cookie 实现免登录</li><li>Accessibility Tree 让 AI 更准确理解网页结构</li><li>资源占用极低，隐蔽性最强</li></ul><hr><blockquote><p>本质：Playwright 是封装好的高级工具，CDP 是浏览器底层的”机器语言”。</p></blockquote>]]></content>
-    
-    
-    <summary type="html">Playwright 是封装好的高级工具，CDP 是浏览器底层的&quot;机器语言&quot;。对于 OpenClaw 直接操作宿主机浏览器主 Profile 的场景，CDP (DevTools MCP) 协议连接 9222 端口是最优选择</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
-    
-    <category term="浏览器自动化" scheme="https://flashj.cn/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-    <category term="Playwright" scheme="https://flashj.cn/tags/Playwright/"/>
-    
-    <category term="CDP" scheme="https://flashj.cn/tags/CDP/"/>
-    
-    <category term="DevTools" scheme="https://flashj.cn/tags/DevTools/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</title>
     <link href="https://flashj.cn/MSA-MemorySparseAttention.html"/>
     <id>https://flashj.cn/MSA-MemorySparseAttention.html</id>
@@ -621,6 +592,35 @@
     <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
     
     <category term="上下文窗口" scheme="https://flashj.cn/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Playwright vs CDP 浏览器控制方式对比</title>
+    <link href="https://flashj.cn/Playwright-vs-CDP.html"/>
+    <id>https://flashj.cn/Playwright-vs-CDP.html</id>
+    <published>2026-04-07T13:17:00.000Z</published>
+    <updated>2026-04-08T00:57:07.156Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Playwright-vs-CDP-浏览器控制方式对比"><a href="#Playwright-vs-CDP-浏览器控制方式对比" class="headerlink" title="Playwright vs CDP 浏览器控制方式对比"></a>Playwright vs CDP 浏览器控制方式对比</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>对于 OpenClaw 来说，Playwright 方式调用浏览器和 RDP（实为 CDP）调用浏览器工具，区别是什么？</p><h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><h3 id="小概念澄清"><a href="#小概念澄清" class="headerlink" title="小概念澄清"></a>小概念澄清</h3><p>RDP（Remote Desktop Protocol）是 Windows 远程桌面协议，在浏览器控制语境下实际指的是 <strong>CDP（Chrome DevTools Protocol）</strong>，即通过 9222 端口（Remote Debugging Port）进行通信的 Chrome 远程调试协议。</p><h3 id="核心区别"><a href="#核心区别" class="headerlink" title="核心区别"></a>核心区别</h3><h4 id="1-抽象层级与控制粒度"><a href="#1-抽象层级与控制粒度" class="headerlink" title="1. 抽象层级与控制粒度"></a>1. 抽象层级与控制粒度</h4><table><thead><tr><th>方式</th><th>原理</th><th>类比</th></tr></thead><tbody><tr><td><strong>Playwright</strong>（高级封装）</td><td>发送指令如”点击 Login 按钮”，自动寻元素、等待、计算坐标、模拟鼠标</td><td>自动驾驶系统</td></tr><tr><td><strong>CDP</strong>（底层协议）</td><td>直接发送原始 JSON 报文，需先获取 DOM 树找到节点 ID，再发送 Input.dispatchMouseEvent</td><td>直接控制方向盘和油门</td></tr></tbody></table><h4 id="2-对-AI-“视觉”与-DOM-解析的影响（核心差异）"><a href="#2-对-AI-“视觉”与-DOM-解析的影响（核心差异）" class="headerlink" title="2. 对 AI “视觉”与 DOM 解析的影响（核心差异）"></a>2. 对 AI “视觉”与 DOM 解析的影响（核心差异）</h4><ul><li><strong>Playwright 方式</strong>：依赖注入 JavaScript 遍历 DOM 元素计算 Bounding Box，易被复杂 CSS 或 Shadow DOM 阻挡</li><li><strong>CDP 方式</strong>：直接调用 Chrome 底层的 <strong>Accessibility Tree</strong>（无障碍树），精准获取所有可交互元素的坐标和层级，不受前端代码干扰</li></ul><blockquote><p>目前最先进的 Web Agent（如 Claude Computer Use 或基于 MCP 的实现）深度依赖 CDP 获取页面空间信息。</p></blockquote><h4 id="3-浏览器接管与隐蔽性（反爬虫）"><a href="#3-浏览器接管与隐蔽性（反爬虫）" class="headerlink" title="3. 浏览器接管与隐蔽性（反爬虫）"></a>3. 浏览器接管与隐蔽性（反爬虫）</h4><table><thead><tr><th>方式</th><th>特点</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>默认启动纯净新浏览器实例，带 webdriver 标记，易被识别为机器人</td></tr><tr><td><strong>CDP 直连宿主机</strong></td><td>通过 <code>host.docker.internal:9222</code> 连接真实 Chrome Profile，带着长期 Cookie 和正常指纹，隐蔽性极高</td></tr></tbody></table><h4 id="4-运行开销与依赖"><a href="#4-运行开销与依赖" class="headerlink" title="4. 运行开销与依赖"></a>4. 运行开销与依赖</h4><table><thead><tr><th>方式</th><th>资源消耗</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>容器内需安装庞大 Playwright 依赖库及浏览器内核包，容器体积大，内存占用高</td></tr><tr><td><strong>CDP</strong></td><td>仅需轻量级 WebSocket 客户端（如 chrome-devtools-mcp），所有渲染计算在宿主机</td></tr></tbody></table><h2 id="总结对比"><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h2><table><thead><tr><th>比较维度</th><th>Playwright 方式</th><th>CDP 方式（DevTools MCP）</th></tr></thead><tbody><tr><td>工作原理</td><td>高级 API，自动处理等待、查找和点击</td><td>底层 WebSocket，原始 JSON 报文</td></tr><tr><td>适用场景</td><td>固定自动化脚本、后台静默运行</td><td>AI 接管当前屏幕、复杂精准坐标映射任务</td></tr><tr><td>接管现有浏览器</td><td>支持（connectOverCDP），非默认设计</td><td>完美契合，生来为此设计</td></tr><tr><td>容器资源消耗</td><td>高</td><td>极低</td></tr><tr><td>反爬风控风险</td><td>较高（除非专门配置 Stealth）</td><td>较低（借用真实用户指纹）</td></tr></tbody></table><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>对于 OpenClaw 直接操作宿主机浏览器主 Profile 的场景，<strong>CDP (DevTools MCP) 协议连接 9222 端口是最优选择</strong>：</p><ul><li>完美复用已有 Cookie 实现免登录</li><li>Accessibility Tree 让 AI 更准确理解网页结构</li><li>资源占用极低，隐蔽性最强</li></ul><hr><blockquote><p>本质：Playwright 是封装好的高级工具，CDP 是浏览器底层的”机器语言”。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">Playwright 是封装好的高级工具，CDP 是浏览器底层的&quot;机器语言&quot;。对于 OpenClaw 直接操作宿主机浏览器主 Profile 的场景，CDP (DevTools MCP) 协议连接 9222 端口是最优选择</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="浏览器自动化" scheme="https://flashj.cn/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="Playwright" scheme="https://flashj.cn/tags/Playwright/"/>
+    
+    <category term="CDP" scheme="https://flashj.cn/tags/CDP/"/>
+    
+    <category term="DevTools" scheme="https://flashj.cn/tags/DevTools/"/>
     
   </entry>
   
