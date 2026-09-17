@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-09-15T04:23:55.155Z</updated>
+  <updated>2026-09-17T08:59:52.452Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 大模型能力对人类的策略影响</title>
+    <link href="https://flashj.cn/llm-boundary-human-reserve.html"/>
+    <id>https://flashj.cn/llm-boundary-human-reserve.html</id>
+    <published>2026-09-17T08:10:00.000Z</published>
+    <updated>2026-09-17T08:59:52.452Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近 9 月发生了几件事情，挺让人震撼的。</p><p>第一件事，是 GPT6 Computer Use 的功能更加完善。通过烧更多 Token 的方式使用 Computer Use，很多人用它从建模到实现最终产品。其实就算不用 GPT6，只要装上 Blender MCP，也都可以实现。只是 GPT6 一站式用 Computer Use 全部解决了。只要你财大气粗、算力无限，就可以把各种事情交给他去办。比如<a href="https://hangzhou.thewang.net/#place=lingyin">杭州漫游</a>、<a href="https://gtasz.vercel.app/">GTA6-深圳</a>。</p><p>这是第一件令人震撼的事情。</p><p>第二件令人震撼的事情，是最近看到一个很火的项目：把果蝇的神经元上传到电脑里，用果蝇的算力驱动了很多很神奇的事情，比如驾驶无人机、玩《毁灭战士》。反正挺多神奇的项目，都是用果蝇的神经连接去做的。</p><p>果蝇的神经元数量远远小于现在的大模型规模，但是当它全功率做推理的时候，能够实现的具身智能所需的智能水平（行动、避障等），几乎可以算是超过现在 VLM 大模型的智能水平了吧。</p><p>第三件令人震撼的事情是，最近有一个困扰了人类 90 年的数学问题，被大模型解决了。OpenAI 用一个未发布的更强模型，做长时间、长任务、多 Agent 配合的推理，把这个问题解决了。</p><p>这相当于说，困扰人类的许多数学问题，最近都可以用大语言模型驱动，通过长任务来解决。</p><h2 id="AI-大模型有没有边界？"><a href="#AI-大模型有没有边界？" class="headerlink" title="AI 大模型有没有边界？"></a>AI 大模型有没有边界？</h2><p>AI 大模型有没有边界？</p><p>如果有边界，我们所有人的最优策略应该是转向 AI 边界以外的技能素养培养；如果没有边界，那么我们所有人的最优策略应该是想尽办法参与算力端。</p><p>在某些范围内，在有衡量器的情况下，AI 的能力是可以做到左脚踩右脚，并且做得很好的。</p><p>从这个角度来说，我们人类可能需要去开发恰当的衡量器。但工作量不会很大，相关工作窗口也不会很多，工作机会应该也会很少，只需要顶尖的人就行了。</p><p>幸运的是，更多机会其实在 AI 有边界的那些方向，也就是我以前一篇文章里提到过的：创造力，以及面对人类情绪产出的方向，AI 没有办法替代人类。</p><p>因为 AI 只是个词语接龙机，只是个高概率事件预测机。它没有办法产生人类的情感，没有这个底层机制，没有这种生物运转的机制。人类是由情感、情绪和事件共同驱动的，但 AI 只是对词语高概率分布、命中、预演的陈述。</p><p>所以，人类远远超出 AI 的能力，就在于一切以情绪驱动的产出物，而不是逻辑驱动的产出物。</p><p>因为逻辑再怎么着，最终都是一个数学问题。生活中的高级逻辑，也就是一个概率分布的数学问题。这些大模型从底层原理上都是具备的。</p><p>结合我前几天看到的，我们数学家、菲尔兹奖得主邓煜说，现在感觉数学界弥漫着一股浮躁不安的氛围。但是我看他的观点，也是要等这两年这一波过去，让子弹先飞一会儿，数学界就会自然慢慢适应，新的生态也会逐渐形成。</p><p>反正，如果人工智能能够解决所有数学问题，他将从数学界退休，并开始创作百合小说。</p><p>我觉得他的选择非常绝妙。这也就是为什么我一个写程序的码农，用了这么多年 AI（尤其是今年桌面 AI Agent 爆发，并且重度使用）之后，决定去写言情小说(&#x2F;狗头)：</p><p>因为这是离 AI 最远的地方，也是人类的保留地。</p><h2 id="人类的学习、就业策略变化"><a href="#人类的学习、就业策略变化" class="headerlink" title="人类的学习、就业策略变化"></a>人类的学习、就业策略变化</h2><p>这几天，还看到南方科技大学的马兆远教授讲：闲暇是创造力的前提。所以说，我们人类真不能现在这么卷了。卷，都是在透支未来。</p><p>人类真正应该做的，是围绕自己的情绪和生物特点，去创作真正属于人类的、独一无二的内容，完成每个人的自我实现。</p><p>另外，前两天还看到一个有趣的报告。大致意思是：他们研究了中国一批学生，2 万多个学生，时间跨度长达 30 个月，观察孩子们使用 AI 参与学习对学习成绩的影响。所以这个数据还是挺不容易的，也挺有参考价值。</p><p>研究发现，学生用 AI 完成作业之后，作业平均成绩都提升了，并且完成时间也缩短了很多。但是在脱离 AI 之后的闭卷考试中，平均成绩都下滑了。</p><p>但这里面比较有趣的一个价值，或者说比较有趣的启发在于：虽然整体平均来看，脱离 AI 之后成绩下降了，但有一部分学生，也就是真正有自驱力、想要学习、对学习有兴趣的学生，他们借助 AI 做作业的时间其实并没有减少，反而更长了。他们在脱离 AI 之后，考试分数反而更高。</p><p>所以，借助 AI 来学习，和借助 AI 来完成学校布置的学习任务，结果完全是天差地别的两种。</p><p>本来从原理上讲，大模型的预测机制就是会以人类的平均线为基准来预测的。加上这行业的主要用户的需求是解决编程问题，就更让需求导向更可预测的结果。</p><p>所以说，AI 大模型厂商一定会让 AI 变得更加中庸。为什么？因为每次出来一个新东西，那帮人的测评，都是用什么画个鹈鹕自行车来测它。但是它稍微有一点不中庸，就没有办法保证这个东西每次测出来的结果都是好的，是吧？所以它的能力越被那帮测评的人测得强，就越要求它刷题、刷应试考卷的分。这就跟应试教育培养人一样，最终就他妈丧失了灵魂。</p><p>但是人类的创造力就不一样，每个人都有自己的独特生活，有自己的独特经历，有自己的情绪感受，也有自己天生的生物推理能力和形成的情绪反馈机制，所以他有自己的独特品味。这个天然就是区分于 AI 的。</p><p>所以每个人都是世界的一级，但 AI 永远都是世界的平均线上，不可能倾向于任何一级。因为一旦有任何一个厂商做出这种倾向于一级的东西，它画醍醐自行车，就会测试失败。比如豆包和 Gemini，这俩是现在 AI 界的人类之光，他们在理性的基础上，保有了少许对人类创造力模仿的灵气。</p><p>说了这么多，懒得自己总结了，请 AI 帮我结个尾吧：</p><blockquote><p>说到底，AI 能搞定所有逻辑、算力、数理与重复任务，是极致高效的工具，却永远复刻不了人类的情绪、热爱与内生创造力。未来不用盲目内卷算力和逻辑，学会借 AI 借力增效，深耕人类独有的情感创作与自我表达，守住专属人类的精神自留地，才是普通人最稳妥的生存与成长策略。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">9 月发生了几件挺让人震撼的事情：GPT6 Computer Use 更加完善、果蝇的神经连接驱动出的具身智能、以及一个困扰了人类 90 年的数学问题被大模型解决。它们指向同一个问题——AI 大模型有没有边界？如果有边界，最优策略是转向 AI 边界以外的技能素养培养；如果没有边界，最优策略是想尽办法参与算力端。</summary>
+    
+    
+    
+    <category term="生命感悟" scheme="https://flashj.cn/categories/%E7%94%9F%E5%91%BD%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="大模型" scheme="https://flashj.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="生命感悟" scheme="https://flashj.cn/tags/%E7%94%9F%E5%91%BD%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="创造力" scheme="https://flashj.cn/tags/%E5%88%9B%E9%80%A0%E5%8A%9B/"/>
+    
+    <category term="数学" scheme="https://flashj.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="教育" scheme="https://flashj.cn/tags/%E6%95%99%E8%82%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>该让 AI 删文件前先进废纸篓了</title>
@@ -534,37 +565,6 @@
   </entry>
   
   <entry>
-    <title>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</title>
-    <link href="https://flashj.cn/MSA-MemorySparseAttention.html"/>
-    <id>https://flashj.cn/MSA-MemorySparseAttention.html</id>
-    <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-04-08T00:58:46.350Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案"><a href="#MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案" class="headerlink" title="MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案"></a>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</h1><h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><p>当前 AI 模型的记忆能力上限：</p><ul><li>最强大模型有效上下文约 <strong>1M token</strong></li><li>人类一生能存储的信息约 <strong>2-3 亿 token</strong> 量级</li><li>两者相差<strong>两个数量级</strong></li></ul><p>业界两条老路都碰壁：</p><ol><li><strong>拉长 context window</strong> — 计算成本二次方增长，到头了</li><li><strong>外挂 RAG</strong> — 检索和生成割裂，精度有上限</li></ol><h2 id="MSA-是什么"><a href="#MSA-是什么" class="headerlink" title="MSA 是什么"></a>MSA 是什么</h2><p>MSA（Memory Sparse Attention）来自 EverMind 团队（盛大旗下），把记忆<strong>直接嵌入注意力机制本身</strong>，不拉长上下文，不外挂检索。</p><p><strong>一句话理解：</strong> 传统 RAG 是给模型配了一个外置硬盘；MSA 是给模型装了一个原生记忆芯片。</p><ul><li>寻找和调用不再是两个独立步骤，而是整合在同一个神经网络里，端到端完成</li><li>模型自己学会了什么该记、怎么找、怎么用</li><li>即插即用，只需替换标准 Transformer 的 Self-Attention 层</li></ul><h2 id="关键技术细节"><a href="#关键技术细节" class="headerlink" title="关键技术细节"></a>关键技术细节</h2><ol><li><strong>压缩机制</strong>：把 1 亿 token 的存储降到可接受范围</li><li><strong>分层存储</strong>：GPU 放路由索引、CPU 放内容详情，总容量取决于内存而非显存</li><li><strong>稀疏路由</strong>：复杂度从 O(L²) 降到 O(L)</li><li><strong>位置编码</strong>：每篇文档独立编号，训练 64K 就能外推到 100M</li></ol><h2 id="性能表现"><a href="#性能表现" class="headerlink" title="性能表现"></a>性能表现</h2><p>基于 <strong>Qwen3-4B</strong> 构建，159B token 持续预训练：</p><table><thead><tr><th>测试结果</th><th>数据</th></tr></thead><tbody><tr><td>记忆跨度</td><td>从 1 万多 token → <strong>1 亿 token</strong>（近4个数量级）</td></tr><tr><td>质量衰减</td><td>回答质量仅下降 <strong>&lt;9%</strong></td></tr><tr><td>标准问答测试</td><td>40亿参数模型，超越传统 RAG 方案 <strong>16%</strong></td></tr><tr><td>vs 顶级检索器+2350亿参数大模型</td><td><strong>多项测试仍胜出</strong>，参数量差60倍</td></tr></tbody></table><h2 id="硬件门槛"><a href="#硬件门槛" class="headerlink" title="硬件门槛"></a>硬件门槛</h2><p>可直接跑在<strong>两张 A800 显卡</strong>的机器上，不需要集群。中、小团队甚至个人开发者都能用上亿级 token 长期记忆。</p><h2 id="团队背景"><a href="#团队背景" class="headerlink" title="团队背景"></a>团队背景</h2><ul><li>EverMind（盛大旗下）</li><li>之前做过 GAIA 榜单 SOTA 的多 Agent 框架 <strong>Omne</strong>、开源记忆平台 <strong>EverOS</strong></li><li>从立项到论文完成，历时九个多月</li></ul><p><strong>关键洞察：</strong> 模型在「找资料」和「写答案」时需要的信息不同——找资料需要宏观判断，写答案需要微观细节。拆开后各自用专门模块处理，性能质变。</p><h2 id="应用前景"><a href="#应用前景" class="headerlink" title="应用前景"></a>应用前景</h2><ul><li><strong>真正个性化的 AI 助手</strong>：记得饮食偏好、项目进展、家人性格</li><li><strong>AI 教育</strong>：真正个性化，因材施教</li><li><strong>医疗助手</strong>：跟踪完整病史</li><li><strong>企业知识库</strong>：记住十年项目积累</li><li><strong>记忆即服务</strong>：记忆层作为独立可插拔模块，记忆资产不锁定于单一模型</li></ul><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li>MSA GitHub：<a href="https://github.com/EverMind-AI/MSA">https://github.com/EverMind-AI/MSA</a></li><li>EverOS GitHub：<a href="https://github.com/EverMind-AI/EverOS">https://github.com/EverMind-AI/EverOS</a></li></ul>]]></content>
-    
-    
-    <summary type="html">MSA 把记忆直接嵌入注意力机制本身，而非外挂检索，实现了端到端的长期记忆能力，突破了传统 RAG 的精度上限和 context window 的计算成本瓶颈</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI记忆" scheme="https://flashj.cn/tags/AI%E8%AE%B0%E5%BF%86/"/>
-    
-    <category term="Transformer" scheme="https://flashj.cn/tags/Transformer/"/>
-    
-    <category term="开源" scheme="https://flashj.cn/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="MSA" scheme="https://flashj.cn/tags/MSA/"/>
-    
-    <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
-    
-    <category term="上下文窗口" scheme="https://flashj.cn/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Playwright vs CDP 浏览器控制方式对比</title>
     <link href="https://flashj.cn/Playwright-vs-CDP.html"/>
     <id>https://flashj.cn/Playwright-vs-CDP.html</id>
@@ -594,31 +594,33 @@
   </entry>
   
   <entry>
-    <title>macOS Chrome Remote Debugging 配置</title>
-    <link href="https://flashj.cn/chrome-devtools-mcp-remote-debugging.html"/>
-    <id>https://flashj.cn/chrome-devtools-mcp-remote-debugging.html</id>
+    <title>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</title>
+    <link href="https://flashj.cn/MSA-MemorySparseAttention.html"/>
+    <id>https://flashj.cn/MSA-MemorySparseAttention.html</id>
     <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-04-08T00:59:19.417Z</updated>
+    <updated>2026-04-08T00:58:46.350Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="macOS-Chrome-Remote-Debugging-配置"><a href="#macOS-Chrome-Remote-Debugging-配置" class="headerlink" title="macOS Chrome Remote Debugging 配置"></a>macOS Chrome Remote Debugging 配置</h1><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在 macOS 上尝试通过命令行启用 Chrome remote debugging 失败：</p><pre><code class="language-bash">open -a &quot;Google Chrome&quot; --args --remote-debugging-port=9222 --no-first-run --no-default-browser-check</code></pre><p>命令执行完后进程立即退出，<code>lsof -i :9222</code> 没有任何输出，9222 端口无法监听。</p><h2 id="错误做法"><a href="#错误做法" class="headerlink" title="错误做法"></a>错误做法</h2><p>❌ 依赖命令行参数 <code>--remote-debugging-port</code></p><p>macOS 上的 Chrome 不认这些命令行参数来启用 remote debugging。</p><h2 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h2><p>✅ 在 Chrome 内部手动开启</p><ol><li>打开 Chrome，访问 <code>chrome://inspect/#remote-debugging</code></li><li>勾选 <strong>“Allow remote debugging for this browser instance”</strong></li><li>之后 Chrome 会在 9222 端口监听，可以正常进行 DevTools MCP 连接</li></ol><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul><li><a href="https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session?hl=zh-cn#step_2_configure_chrome_devtools_mcp_server_to_automatically_connect_to_a_running_chrome_instance">Chrome DevTools MCP 官方文档</a></li></ul><h2 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h2><p>macOS 的 Chrome 安全机制决定了 remote debugging 必须在应用内部由用户主动授权，命令行参数无法绕过这个限制。</p>]]></content>
-    
-    
-    <summary type="html">macOS 上 Chrome remote debugging 需在 chrome://inspect/#remote-debugging 手动勾选开启，而非依赖命令行参数</summary>
+    <content type="html"><![CDATA[<h1 id="MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案"><a href="#MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案" class="headerlink" title="MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案"></a>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</h1><h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><p>当前 AI 模型的记忆能力上限：</p><ul><li>最强大模型有效上下文约 <strong>1M token</strong></li><li>人类一生能存储的信息约 <strong>2-3 亿 token</strong> 量级</li><li>两者相差<strong>两个数量级</strong></li></ul><p>业界两条老路都碰壁：</p><ol><li><strong>拉长 context window</strong> — 计算成本二次方增长，到头了</li><li><strong>外挂 RAG</strong> — 检索和生成割裂，精度有上限</li></ol><h2 id="MSA-是什么"><a href="#MSA-是什么" class="headerlink" title="MSA 是什么"></a>MSA 是什么</h2><p>MSA（Memory Sparse Attention）来自 EverMind 团队（盛大旗下），把记忆<strong>直接嵌入注意力机制本身</strong>，不拉长上下文，不外挂检索。</p><p><strong>一句话理解：</strong> 传统 RAG 是给模型配了一个外置硬盘；MSA 是给模型装了一个原生记忆芯片。</p><ul><li>寻找和调用不再是两个独立步骤，而是整合在同一个神经网络里，端到端完成</li><li>模型自己学会了什么该记、怎么找、怎么用</li><li>即插即用，只需替换标准 Transformer 的 Self-Attention 层</li></ul><h2 id="关键技术细节"><a href="#关键技术细节" class="headerlink" title="关键技术细节"></a>关键技术细节</h2><ol><li><strong>压缩机制</strong>：把 1 亿 token 的存储降到可接受范围</li><li><strong>分层存储</strong>：GPU 放路由索引、CPU 放内容详情，总容量取决于内存而非显存</li><li><strong>稀疏路由</strong>：复杂度从 O(L²) 降到 O(L)</li><li><strong>位置编码</strong>：每篇文档独立编号，训练 64K 就能外推到 100M</li></ol><h2 id="性能表现"><a href="#性能表现" class="headerlink" title="性能表现"></a>性能表现</h2><p>基于 <strong>Qwen3-4B</strong> 构建，159B token 持续预训练：</p><table><thead><tr><th>测试结果</th><th>数据</th></tr></thead><tbody><tr><td>记忆跨度</td><td>从 1 万多 token → <strong>1 亿 token</strong>（近4个数量级）</td></tr><tr><td>质量衰减</td><td>回答质量仅下降 <strong>&lt;9%</strong></td></tr><tr><td>标准问答测试</td><td>40亿参数模型，超越传统 RAG 方案 <strong>16%</strong></td></tr><tr><td>vs 顶级检索器+2350亿参数大模型</td><td><strong>多项测试仍胜出</strong>，参数量差60倍</td></tr></tbody></table><h2 id="硬件门槛"><a href="#硬件门槛" class="headerlink" title="硬件门槛"></a>硬件门槛</h2><p>可直接跑在<strong>两张 A800 显卡</strong>的机器上，不需要集群。中、小团队甚至个人开发者都能用上亿级 token 长期记忆。</p><h2 id="团队背景"><a href="#团队背景" class="headerlink" title="团队背景"></a>团队背景</h2><ul><li>EverMind（盛大旗下）</li><li>之前做过 GAIA 榜单 SOTA 的多 Agent 框架 <strong>Omne</strong>、开源记忆平台 <strong>EverOS</strong></li><li>从立项到论文完成，历时九个多月</li></ul><p><strong>关键洞察：</strong> 模型在「找资料」和「写答案」时需要的信息不同——找资料需要宏观判断，写答案需要微观细节。拆开后各自用专门模块处理，性能质变。</p><h2 id="应用前景"><a href="#应用前景" class="headerlink" title="应用前景"></a>应用前景</h2><ul><li><strong>真正个性化的 AI 助手</strong>：记得饮食偏好、项目进展、家人性格</li><li><strong>AI 教育</strong>：真正个性化，因材施教</li><li><strong>医疗助手</strong>：跟踪完整病史</li><li><strong>企业知识库</strong>：记住十年项目积累</li><li><strong>记忆即服务</strong>：记忆层作为独立可插拔模块，记忆资产不锁定于单一模型</li></ul><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li>MSA GitHub：<a href="https://github.com/EverMind-AI/MSA">https://github.com/EverMind-AI/MSA</a></li><li>EverOS GitHub：<a href="https://github.com/EverMind-AI/EverOS">https://github.com/EverMind-AI/EverOS</a></li></ul>]]></content>
     
     
+    <summary type="html">MSA 把记忆直接嵌入注意力机制本身，而非外挂检索，实现了端到端的长期记忆能力，突破了传统 RAG 的精度上限和 context window 的计算成本瓶颈</summary>
     
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
     
-    <category term="DevTools" scheme="https://flashj.cn/tags/DevTools/"/>
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
     
-    <category term="Chrome" scheme="https://flashj.cn/tags/Chrome/"/>
     
-    <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
+    <category term="AI记忆" scheme="https://flashj.cn/tags/AI%E8%AE%B0%E5%BF%86/"/>
     
-    <category term="macOS" scheme="https://flashj.cn/tags/macOS/"/>
+    <category term="Transformer" scheme="https://flashj.cn/tags/Transformer/"/>
     
-    <category term="调试" scheme="https://flashj.cn/tags/%E8%B0%83%E8%AF%95/"/>
+    <category term="开源" scheme="https://flashj.cn/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="MSA" scheme="https://flashj.cn/tags/MSA/"/>
+    
+    <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
+    
+    <category term="上下文窗口" scheme="https://flashj.cn/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3/"/>
     
   </entry>
   
