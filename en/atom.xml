@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-09-17T09:11:52.838Z</updated>
+  <updated>2026-09-20T02:23:05.444Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Feishu&#39;s official MCP causes a memory leak: tracking down orphan processes from lark-mcp</title>
+    <link href="https://flashj.cn/lark-mcp-memory-leak-from-orphan-processes.html"/>
+    <id>https://flashj.cn/lark-mcp-memory-leak-from-orphan-processes.html</id>
+    <published>2026-09-20T01:53:00.000Z</published>
+    <updated>2026-09-20T02:23:05.444Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Investigating-Memory-Usage"><a href="#Investigating-Memory-Usage" class="headerlink" title="Investigating Memory Usage"></a>Investigating Memory Usage</h2><p>Damn it, less than 20G of memory left.<br>I couldn’t believe it. I took a look, and holy crap, there were a ton of node processes.<br><img src="https://cdn.mousebomb.org/blog/auto/202609200955028.webp"></p><p>Manual cleanup:</p><pre><code>pkill -f &quot;lark-mcp&quot;</code></pre><p>I’d already been seeing constant leaks when using its MCP in Paseo, so I disabled this MCP in my opencode and Claude configs. Later I added this MCP in TRAE too, and toggling a project open and closed a few times in TRAE would devour a huge chunk of system memory. Was this MCP written by an intern?</p><p>I investigated this once back on 08-28, and here’s what that round concluded:</p><p>The root cause is lark-mcp itself, not Paseo &#x2F; opencode &#x2F; how it’s launched.<br>The experiment was decisive: send a real lark-mcp its <code>initialize</code>, then close stdin (simulating the parent process exiting) → the process is still alive 3 seconds later, exitCode stays null the whole time. Counterexample: run the same test raw with the MCP SDK, and it exits the moment stdin closes.</p><p>The StdioServerTransport that <code>lark-mcp</code> uses (official MCP SDK 1.29.0) only listens for ‘data’ &#x2F; ‘error’. It never handles ‘end’ (EOF), and it never calls process.exit() itself.</p><p>I was about to fix this bug and send a PR upstream. Then I checked — someone had already hit the same problem, already fixed it and opened a PR, but it’s been sitting there unmerged forever.</p><p><strong>Issue #59</strong> (filed 2026-02-09 by YFDmai): the title is literally <em>“Orphan processes not cleaned up when parent (Claude Code) exits”</em>, describing <code>PPID=1</code> orphans and 32+ leftover processes. Exactly the same problem I ran into. (He also writes “each process ~1.1–1.2 GB <strong>virtual memory</strong>“.)</p><p>Great, so the official project is a total mess.<br>What they probably mean is: just use their agent in the web UI to do the searching, instead of searching through MCP.</p><p>So I just removed lark-mcp from TRAE as well — I barely use that scenario anyway.</p><p>I saw someone in Issue #65 say you can use <code>lark cli</code> now and it’s better.<br>But for developers, is <code>lark-cli</code> really enough for looking up Open Platform dev docs?</p><p>I verified it. I wouldn’t call it full coverage — more like a different angle on different use cases, but it can do doc and API lookups just as well. After installing lark-cli, the skill it ships with, <code>~/.agents/skills/lark-openapi-explorer/SKILL.md</code>, explicitly documents the approach that guides the Agent to make API calls.<br>The mechanism is that it scrapes the Open Platform’s <code>llms.txt</code>.<br>Fine, that works as a drop-in substitute — and it’s cleaner.</p>]]></content>
+    
+    
+    <summary type="html">Mac memory mysteriously eaten up, and it turns out dozens of orphan node processes were left behind by Feishu&#39;s official lark-mcp. The root cause is that its stdio lifecycle only handles data inflow, not pipe closure, so the process doesn&#39;t kill itself after the host exits. Upstream issues and PRs were filed but have just sat there unmerged, and the repo hasn&#39;t been updated for over a year.</summary>
+    
+    
+    
+    <category term="Tools" scheme="https://flashj.cn/categories/Tools/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="agent" scheme="https://flashj.cn/tags/agent/"/>
+    
+    <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
+    
+    <category term="Memory leak" scheme="https://flashj.cn/tags/Memory-leak/"/>
+    
+    <category term="Feishu" scheme="https://flashj.cn/tags/Feishu/"/>
+    
+    <category term="nodejs" scheme="https://flashj.cn/tags/nodejs/"/>
+    
+    <category term="TRAE" scheme="https://flashj.cn/tags/TRAE/"/>
+    
+  </entry>
   
   <entry>
     <title>The strategic impact of large AI model capabilities on humanity</title>
@@ -492,9 +525,9 @@
     
     <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
     
-    <category term="Tool" scheme="https://flashj.cn/tags/Tool/"/>
-    
     <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="Tool" scheme="https://flashj.cn/tags/Tool/"/>
     
     <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
     
@@ -592,35 +625,6 @@
     <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
     
     <category term="Context Window" scheme="https://flashj.cn/tags/Context-Window/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Playwright vs CDP: Comparing Browser Control Approaches</title>
-    <link href="https://flashj.cn/Playwright-vs-CDP.html"/>
-    <id>https://flashj.cn/Playwright-vs-CDP.html</id>
-    <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-09-12T00:57:49.764Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Playwright-vs-CDP-A-Comparison-of-Browser-Control-Approaches"><a href="#Playwright-vs-CDP-A-Comparison-of-Browser-Control-Approaches" class="headerlink" title="Playwright vs CDP: A Comparison of Browser Control Approaches"></a>Playwright vs CDP: A Comparison of Browser Control Approaches</h1><h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>For OpenClaw, what’s the difference between controlling the browser via Playwright and via RDP (actually CDP) tools?</p><h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><h3 id="A-quick-clarification"><a href="#A-quick-clarification" class="headerlink" title="A quick clarification"></a>A quick clarification</h3><p>RDP (Remote Desktop Protocol) is Windows’ remote desktop protocol. In the context of browser control, what’s actually meant is <strong>CDP (Chrome DevTools Protocol)</strong> — the Chrome remote debugging protocol that communicates over port 9222 (the Remote Debugging Port).</p><h3 id="Core-differences"><a href="#Core-differences" class="headerlink" title="Core differences"></a>Core differences</h3><h4 id="1-Level-of-abstraction-and-control-granularity"><a href="#1-Level-of-abstraction-and-control-granularity" class="headerlink" title="1. Level of abstraction and control granularity"></a>1. Level of abstraction and control granularity</h4><table><thead><tr><th>Approach</th><th>How it works</th><th>Analogy</th></tr></thead><tbody><tr><td><strong>Playwright</strong> (high-level wrapper)</td><td>Sends commands like “click the Login button,” automatically locating elements, waiting, computing coordinates, and simulating the mouse</td><td>An autonomous driving system</td></tr><tr><td><strong>CDP</strong> (low-level protocol)</td><td>Sends raw JSON messages directly; you first fetch the DOM tree to find the node ID, then send Input.dispatchMouseEvent</td><td>Directly controlling the steering wheel and gas pedal</td></tr></tbody></table><h4 id="2-Impact-on-AI-“vision”-and-DOM-parsing-the-key-difference"><a href="#2-Impact-on-AI-“vision”-and-DOM-parsing-the-key-difference" class="headerlink" title="2. Impact on AI “vision” and DOM parsing (the key difference)"></a>2. Impact on AI “vision” and DOM parsing (the key difference)</h4><ul><li><strong>Playwright approach</strong>: Relies on injected JavaScript to traverse DOM elements and compute Bounding Boxes, easily blocked by complex CSS or Shadow DOM</li><li><strong>CDP approach</strong>: Directly calls Chrome’s underlying <strong>Accessibility Tree</strong>, precisely obtaining the coordinates and hierarchy of every interactive element, unaffected by front-end code</li></ul><blockquote><p>The most advanced Web Agents today (such as Claude Computer Use or MCP-based implementations) rely heavily on CDP to obtain spatial information about the page.</p></blockquote><h4 id="3-Browser-takeover-and-stealth-anti-scraping"><a href="#3-Browser-takeover-and-stealth-anti-scraping" class="headerlink" title="3. Browser takeover and stealth (anti-scraping)"></a>3. Browser takeover and stealth (anti-scraping)</h4><table><thead><tr><th>Approach</th><th>Characteristics</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>Launches a clean new browser instance by default, carries the webdriver flag, easily detected as a bot</td></tr><tr><td><strong>CDP connected directly to the host</strong></td><td>Connects to a real Chrome Profile via <code>host.docker.internal:9222</code>, carrying long-lived cookies and a normal fingerprint — extremely stealthy</td></tr></tbody></table><h4 id="4-Runtime-overhead-and-dependencies"><a href="#4-Runtime-overhead-and-dependencies" class="headerlink" title="4. Runtime overhead and dependencies"></a>4. Runtime overhead and dependencies</h4><table><thead><tr><th>Approach</th><th>Resource consumption</th></tr></thead><tbody><tr><td><strong>Playwright</strong></td><td>Requires installing the bulky Playwright dependency libraries and browser engine packages inside the container — large container size, high memory usage</td></tr><tr><td><strong>CDP</strong></td><td>Only needs a lightweight WebSocket client (such as chrome-devtools-mcp); all rendering computation happens on the host</td></tr></tbody></table><h2 id="Summary-comparison"><a href="#Summary-comparison" class="headerlink" title="Summary comparison"></a>Summary comparison</h2><table><thead><tr><th>Dimension</th><th>Playwright approach</th><th>CDP approach (DevTools MCP)</th></tr></thead><tbody><tr><td>How it works</td><td>High-level API, automatically handles waiting, finding, and clicking</td><td>Low-level WebSocket, raw JSON messages</td></tr><tr><td>Best suited for</td><td>Fixed automation scripts, silent background operation</td><td>AI taking over the current screen, complex precise coordinate-mapping tasks</td></tr><tr><td>Taking over an existing browser</td><td>Supported (connectOverCDP), not the default design</td><td>A perfect fit — designed for exactly this</td></tr><tr><td>Container resource consumption</td><td>High</td><td>Very low</td></tr><tr><td>Anti-scraping risk</td><td>Relatively high (unless Stealth is specifically configured)</td><td>Relatively low (borrows a real user’s fingerprint)</td></tr></tbody></table><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>For the scenario where OpenClaw directly operates the host browser’s main Profile, <strong>connecting via the CDP (DevTools MCP) protocol to port 9222 is the optimal choice</strong>:</p><ul><li>Perfectly reuses existing cookies to skip login</li><li>The Accessibility Tree lets the AI understand web page structure more accurately</li><li>Extremely low resource usage, and the strongest stealth</li></ul><hr><blockquote><p>In essence: Playwright is a high-level, ready-made tool, while CDP is the browser’s low-level “machine language.”</p></blockquote>]]></content>
-    
-    
-    <summary type="html">Playwright is a well-packaged high-level tool, while CDP is the browser&#39;s low-level &quot;machine language&quot;. For scenarios where OpenClaw directly drives the host machine&#39;s browser main Profile, connecting to port 9222 via the CDP (DevTools MCP) protocol is the best choice</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
-    
-    <category term="Browser Automation" scheme="https://flashj.cn/tags/Browser-Automation/"/>
-    
-    <category term="Playwright" scheme="https://flashj.cn/tags/Playwright/"/>
-    
-    <category term="CDP" scheme="https://flashj.cn/tags/CDP/"/>
-    
-    <category term="DevTools" scheme="https://flashj.cn/tags/DevTools/"/>
     
   </entry>
   
