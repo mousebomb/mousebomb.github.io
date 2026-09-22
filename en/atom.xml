@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-09-20T02:23:05.444Z</updated>
+  <updated>2026-09-22T06:04:35.654Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jev isn&#39;t a new species: it&#39;s a classifier, so don&#39;t ride the self-media hype</title>
+    <link href="https://flashj.cn/jev-zero-shot-classifier.html"/>
+    <id>https://flashj.cn/jev-zero-shot-classifier.html</id>
+    <published>2026-09-22T05:43:00.000Z</published>
+    <updated>2026-09-22T06:04:35.654Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Jev"><a href="#Jev" class="headerlink" title="Jev"></a>Jev</h2><p>Jev is a model TypeSafe released on September 15.</p><p>Lately it’s been flooding my feed again.<br>Let me jot down a few thoughts.</p><p>In principle, since it’s a zero-shot classifier rather than an autoregressive large model, it’s only good for fast “decisions.” The official term is a “System One” model.</p><p><a href="https://docs.typesafe.ai/concepts/system-one">https://docs.typesafe.ai/concepts/system-one</a></p><p>Don’t get swept up in the self-media hype — it’s fast because it’s a classifier, and that also means you can’t count on it to produce options for you, or to give you explanations.</p><p>You provide [options + a natural-language description], and it produces [a decision].</p><p>This combination is especially well suited to real-time games and operating machinery.</p><p>Could AI playing StarCraft II take off again?</p><p>This combination suddenly blew up, but none of the pieces here are actually new. The main thing really is — look, no matter how technology develops, it still takes people to apply it flexibly, to turn it into products and services.</p><h2 id="Does-it-support-multimodality"><a href="#Does-it-support-multimodality" class="headerlink" title="Does it support multimodality?"></a>Does it support multimodality?</h2><p><strong>It is not a multimodal model at present</strong> — images, audio, and video all have to be converted outside into text or structured fields before you feed them to it.</p><p>So it can’t play general games yet — it can’t see the screen. To play StarCraft, you’d first need a module that turns the visuals into structured state it can read.</p><h2 id="Its-weak-spots-determine-how-you-use-it"><a href="#Its-weak-spots-determine-how-you-use-it" class="headerlink" title="Its weak spots determine how you use it"></a>Its weak spots determine how you use it</h2><ul><li>It can’t provide explanations.</li><li>Its Chinese comprehension is weak.</li><li>The context is short — 32k&#x2F;64k — and accuracy drops as irrelevant material piles up.</li><li>It can’t handle quantitative requirements and can’t do arithmetic; the official guidance is explicitly that computation should be done in code, with Jev handling only semantic impressions.</li><li>Fast reflex rather than slow thinking, which means it’s unsuited to tasks with lots of reasoning conditions or multi-layer reasoning. Its judgment gets diluted.</li><li>It can’t be fine-tuned.</li></ul><h2 id="What-use-is-it-to-me"><a href="#What-use-is-it-to-me" class="headerlink" title="What use is it to me"></a>What use is it to me</h2><p>Personally, I don’t seem to have a use for it for now. Even for document review, I need feedback comments. It’s not enough for that. And for style-verification scenarios, it isn’t directly up to the job either, because style requirements are fairly complex with many intersecting dimensions, and they need deep thinking.</p><p>For the company’s project, if the path from samples to decisions gradually gets complex enough to need routing, some of the steps could be handed off to Jev.</p>]]></content>
+    
+    
+    <summary type="html">TypeSafe&#39;s Jev has been hyped across China these past few days as a &quot;new AGI species.&quot; But it&#39;s just a classifier: you give it 【options + a natural-language description】, it gives you 【a decision】. It doesn&#39;t generate options, and it doesn&#39;t generate explanations. Fast? Genuinely fast. And its weak spots are just as real. The tech isn&#39;t new — whether it becomes a product still comes down to the people.</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="Tools" scheme="https://flashj.cn/tags/Tools/"/>
+    
+    <category term="Jev" scheme="https://flashj.cn/tags/Jev/"/>
+    
+    <category term="TypeSafe" scheme="https://flashj.cn/tags/TypeSafe/"/>
+    
+    <category term="Classifier" scheme="https://flashj.cn/tags/Classifier/"/>
+    
+    <category term="SystemOne" scheme="https://flashj.cn/tags/SystemOne/"/>
+    
+  </entry>
   
   <entry>
     <title>Feishu&#39;s official MCP causes a memory leak: tracking down orphan processes from lark-mcp</title>
@@ -147,16 +180,16 @@
   </entry>
   
   <entry>
-    <title>Paseo Solarized Light theme plugin: low contrast, easy on the eyes, install from GitHub with one command</title>
+    <title>Paseo Solarized Light theme plugin: low contrast and easy on the eyes, install from GitHub with one command</title>
     <link href="https://flashj.cn/paseo-solarized-light.html"/>
     <id>https://flashj.cn/paseo-solarized-light.html</id>
     <published>2026-09-01T16:00:00.000Z</published>
-    <updated>2026-09-21T06:07:56.295Z</updated>
+    <updated>2026-09-22T06:04:39.777Z</updated>
     
-    <content type="html"><![CDATA[<p>Paseo’s 6 built-in themes all have contrast that’s way too high — the whites are too white and the blacks are too black, and staring at them while writing code hurts your eyes. So I built a <strong>Solarized Light</strong> theme plugin for Paseo: low contrast, soft on the eyes, easy to look at for long stretches.</p><p>I’d thought about patching Paseo’s bundle to inject a theme, but that means re-patching on every upgrade. Not needed anymore — Paseo officially introduced the plugin theme API <code>plugin.addTheme</code> in v0.5.0, so you can just do it with a plugin, <strong>without modifying a single Paseo file, and nothing is lost on upgrade</strong>. Even better, I found out yesterday that Paseo has already been updated to 0.7.0, which supports adding plugins&#x2F;themes straight from GitHub.</p><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=117307468743130&bvid=BV1Nfhi6tEn8&cid=42074442644&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><h2 id="Installation-Paseo-0-7-0"><a href="#Installation-Paseo-0-7-0" class="headerlink" title="Installation (Paseo 0.7.0+)"></a>Installation (Paseo 0.7.0+)</h2><p>One command:</p><pre><code class="language-bash">paseo plugin add mousebomb/paseo-solarized-light</code></pre><p>Then go to <strong>Settings → Appearance</strong> → Theme and pick <strong>Solarized Light</strong>. Done.</p><p><img src="https://cdn.mousebomb.org/blog/auto/202609020734575.png"></p><blockquote><p>Versions before 0.7.0 work too, via installing from the source directory — see the <a href="https://github.com/mousebomb/paseo-solarized-light">README</a> for details.</p></blockquote><h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>Based on Ethan Schoonover’s <a href="https://ethanschoonover.com/solarized">Solarized</a> palette, the classic low-contrast, eye-friendly color scheme:</p><ul><li>Background <code>#fdf6e3</code> (base3, beige)</li><li>Foreground <code>#657b83</code> (base00)</li><li>Accent <code>#cb4b16</code> (orange)</li></ul><p>My eyes feel much better after using it. I’ve already switched over myself — besides writing code, I now look at diffs and logs in Paseo in this same palette.</p><p>The plugin and theme are both MIT licensed, and the code is at <a href="https://github.com/mousebomb/paseo-solarized-light">github.com&#x2F;mousebomb&#x2F;paseo-solarized-light</a> — stars and issues welcome.</p>]]></content>
+    <content type="html"><![CDATA[<p>Paseo’s 6 built-in themes all have too-high contrast — the whites are too white and the blacks are too black, and staring at them while writing code is hard on the eyes. So I built a <strong>Solarized Light</strong> theme plugin for Paseo: low contrast, soft and easy on the eyes, friendly for long sessions staring at the screen.</p><p>I’d previously thought about modifying Paseo’s bundle to inject a theme, but that would mean re-patching on every upgrade — too much hassle. Not anymore — Paseo officially introduced the plugin theme interface <code>plugin.addTheme</code> in v0.5.0, so you can implement it directly as a plugin, <strong>without modifying any Paseo files, and it won’t be lost on upgrade</strong>. Even better, I discovered yesterday that Paseo has been updated to 0.7.0 and now supports adding plugins&#x2F;themes directly from GitHub.</p><iframe class="bilibili" src="//player.bilibili.com/player.html?isOutside=true&aid=117307468743130&bvid=BV1Nfhi6tEn8&cid=42074442644&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><h2 id="Installation-Paseo-0-7-0"><a href="#Installation-Paseo-0-7-0" class="headerlink" title="Installation (Paseo 0.7.0+)"></a>Installation (Paseo 0.7.0+)</h2><p>One-line command:</p><pre><code class="language-bash">paseo plugin add mousebomb/paseo-solarized-light</code></pre><p>Then just go to <strong>Settings → Appearance</strong> → Theme and pick <strong>Solarized Light</strong> — done.</p><p><img src="https://cdn.mousebomb.org/blog/auto/202609020734575.png"></p><blockquote><p>Versions before 0.7.0 work too — install from the source directory. See the <a href="https://github.com/mousebomb/paseo-solarized-light">README</a> for details.</p></blockquote><h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>Based on Ethan Schoonover’s <a href="https://ethanschoonover.com/solarized">Solarized</a> palette, the classic low-contrast, eye-friendly color scheme:</p><ul><li>Background <code>#fdf6e3</code> (base3 beige)</li><li>Foreground <code>#657b83</code> (base00)</li><li>Accent <code>#cb4b16</code> (orange)</li></ul><p>My eyes feel much better after using it. I’ve already switched over myself — besides writing code, when I’m normally looking at diffs and logs in Paseo, they’re all in this tone too.</p><p>Both the plugin and the theme are MIT-licensed. The code is at <a href="https://github.com/mousebomb/paseo-solarized-light">github.com&#x2F;mousebomb&#x2F;paseo-solarized-light</a> — stars and issues welcome.</p>]]></content>
     
     
-    <summary type="html">I built a Solarized Light eye-friendly theme plugin for Paseo. It&#39;s implemented with the official addTheme plugin API, so you don&#39;t need to modify any Paseo files and nothing gets lost when you upgrade. Paseo 0.7.0 and later supports installing plugins straight from GitHub — one command and you&#39;re done.</summary>
+    <summary type="html">I built a Solarized Light eye-friendly theme plugin for Paseo using the official addTheme plugin API. No need to touch any Paseo files, and nothing is lost on upgrade. Since Paseo 0.7.0 you can install plugins straight from GitHub, one command and you&#39;re done.</summary>
     
     
     
@@ -594,37 +627,6 @@
     <category term="Browser" scheme="https://flashj.cn/tags/Browser/"/>
     
     <category term="Configuration" scheme="https://flashj.cn/tags/Configuration/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MSA (Memory Sparse Attention) — an open-source way to break through the AI memory bottleneck</title>
-    <link href="https://flashj.cn/MSA-MemorySparseAttention.html"/>
-    <id>https://flashj.cn/MSA-MemorySparseAttention.html</id>
-    <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-09-12T00:57:40.070Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="MSA-Memory-Sparse-Attention-—-An-Open-Source-Answer-to-AI’s-Memory-Bottleneck"><a href="#MSA-Memory-Sparse-Attention-—-An-Open-Source-Answer-to-AI’s-Memory-Bottleneck" class="headerlink" title="MSA (Memory Sparse Attention) — An Open-Source Answer to AI’s Memory Bottleneck"></a>MSA (Memory Sparse Attention) — An Open-Source Answer to AI’s Memory Bottleneck</h1><h2 id="The-Core-Problem"><a href="#The-Core-Problem" class="headerlink" title="The Core Problem"></a>The Core Problem</h2><p>Where AI memory stands today:</p><ul><li>The strongest models have an effective context of roughly <strong>1M tokens</strong></li><li>The information a human can store in a lifetime is on the order of <strong>200–300 million tokens</strong></li><li>That’s a gap of <strong>two orders of magnitude</strong></li></ul><p>Both of the industry’s well-worn paths have hit a wall:</p><ol><li><strong>Stretching the context window</strong> — compute cost grows quadratically; that road ends here</li><li><strong>Bolting on RAG</strong> — retrieval and generation stay disconnected, and accuracy has a ceiling</li></ol><h2 id="What-MSA-Is"><a href="#What-MSA-Is" class="headerlink" title="What MSA Is"></a>What MSA Is</h2><p>MSA (Memory Sparse Attention) comes from the EverMind team (under Shanda). It <strong>embeds memory directly into the attention mechanism itself</strong> — no longer context, no external retrieval.</p><p><strong>In one sentence:</strong> traditional RAG gives a model an external hard drive; MSA gives it a native memory chip.</p><ul><li>Finding and using are no longer two separate steps — they’re fused into a single neural network and done end to end</li><li>The model learns on its own what to remember, how to find it, and how to use it</li><li>Plug and play: you only swap out the Self-Attention layer of a standard Transformer</li></ul><h2 id="Key-Technical-Details"><a href="#Key-Technical-Details" class="headerlink" title="Key Technical Details"></a>Key Technical Details</h2><ol><li><strong>Compression mechanism</strong>: brings 100 million tokens of storage down to an acceptable footprint</li><li><strong>Tiered storage</strong>: routing indexes on the GPU, content details on the CPU — total capacity depends on memory, not VRAM</li><li><strong>Sparse routing</strong>: complexity drops from O(L²) to O(L)</li><li><strong>Positional encoding</strong>: each document is numbered independently, so training at 64K extrapolates to 100M</li></ol><h2 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h2><p>Built on <strong>Qwen3-4B</strong>, with 159B tokens of continued pre-training:</p><table><thead><tr><th>Result</th><th>Data</th></tr></thead><tbody><tr><td>Memory span</td><td>from ~10K tokens → <strong>100 million tokens</strong> (nearly 4 orders of magnitude)</td></tr><tr><td>Quality degradation</td><td>answer quality drops only <strong>&lt;9%</strong></td></tr><tr><td>Standard QA benchmarks</td><td>a 4-billion-parameter model beats traditional RAG approaches by <strong>16%</strong></td></tr><tr><td>vs. top-tier retriever + 235-billion-parameter LLM</td><td><strong>still wins on multiple tests</strong>, with a 60× parameter gap</td></tr></tbody></table><h2 id="Hardware-Bar"><a href="#Hardware-Bar" class="headerlink" title="Hardware Bar"></a>Hardware Bar</h2><p>It runs directly on a machine with <strong>two A800 GPUs</strong> — no cluster needed. Small and mid-sized teams, even individual developers, can have long-term memory at the hundred-million-token scale.</p><h2 id="Team-Background"><a href="#Team-Background" class="headerlink" title="Team Background"></a>Team Background</h2><ul><li>EverMind (under Shanda)</li><li>Previously built <strong>Omne</strong>, the multi-agent framework that reached SOTA on the GAIA leaderboard, and <strong>EverOS</strong>, an open-source memory platform</li><li>More than nine months from project kickoff to completed paper</li></ul><p><strong>Key insight:</strong> a model needs different information when it’s “finding material” versus “writing the answer” — finding calls for macro-level judgment, writing calls for micro-level detail. Split them apart and handle each with a dedicated module, and performance changes qualitatively.</p><h2 id="Application-Prospects"><a href="#Application-Prospects" class="headerlink" title="Application Prospects"></a>Application Prospects</h2><ul><li><strong>Genuinely personalized AI assistants</strong>: remembering dietary preferences, project progress, family members’ personalities</li><li><strong>AI education</strong>: truly personalized, teaching to the individual</li><li><strong>Medical assistants</strong>: tracking a complete medical history</li><li><strong>Enterprise knowledge bases</strong>: remembering a decade of accumulated project knowledge</li><li><strong>Memory as a service</strong>: the memory layer as an independent, pluggable module, so memory assets aren’t locked to a single model</li></ul><h2 id="Related-Links"><a href="#Related-Links" class="headerlink" title="Related Links"></a>Related Links</h2><ul><li>MSA GitHub: <a href="https://github.com/EverMind-AI/MSA">https://github.com/EverMind-AI/MSA</a></li><li>EverOS GitHub: <a href="https://github.com/EverMind-AI/EverOS">https://github.com/EverMind-AI/EverOS</a></li></ul>]]></content>
-    
-    
-    <summary type="html">Instead of bolting on retrieval, MSA embeds memory directly into the attention mechanism itself. That gives you end-to-end long-term memory and breaks past the accuracy ceiling of traditional RAG and the compute-cost bottleneck of the context window.</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI Memory" scheme="https://flashj.cn/tags/AI-Memory/"/>
-    
-    <category term="Transformer" scheme="https://flashj.cn/tags/Transformer/"/>
-    
-    <category term="Open Source" scheme="https://flashj.cn/tags/Open-Source/"/>
-    
-    <category term="MSA" scheme="https://flashj.cn/tags/MSA/"/>
-    
-    <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
-    
-    <category term="Context Window" scheme="https://flashj.cn/tags/Context-Window/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-09-20T02:16:07.455Z</updated>
+  <updated>2026-09-22T06:02:48.902Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jev 不是新物种：它是个分类器，别跟着自媒体嗨</title>
+    <link href="https://flashj.cn/jev-zero-shot-classifier.html"/>
+    <id>https://flashj.cn/jev-zero-shot-classifier.html</id>
+    <published>2026-09-22T05:43:00.000Z</published>
+    <updated>2026-09-22T06:02:48.902Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Jev"><a href="#Jev" class="headerlink" title="Jev"></a>Jev</h2><p>Jev 是 TypeSafe 在 9 月 15 日放出来的一个模型。</p><p>最近又开始轰炸我的信息流。<br>记录一下一些看法。</p><p>从原理上讲，它既然是零样本分类器，不是自回归大模型，那么它就只适合干快速‘决策’。官方说法叫“System One”模型。</p><p><a href="https://docs.typesafe.ai/concepts/system-one">https://docs.typesafe.ai/concepts/system-one</a></p><p>不要跟着自媒体自嗨，它的快是因为它既然是分类器，这也就意味着你是不能指望它帮你产出选项，也不能帮你给解释。</p><p>你提供【选项 + 自然语言的描述】，它产出【决策】。</p><p>这种组合尤其适合玩实时游戏、操作机械。</p><p>是不是AI玩星际争霸2又可以再搞起来了？</p><p>这种组合突然之间就爆开了，但这里面每一项东西其实也不是什么新的。主要还真是你看，技术再怎么发展，都得靠人去灵活运用它，把它做成产品、做成服务。</p><h2 id="多模态支持吗？"><a href="#多模态支持吗？" class="headerlink" title="多模态支持吗？"></a>多模态支持吗？</h2><p><strong>目前不是多模态模型</strong>，图像、音频、视频都得你在外面先转成文字或结构化字段再喂给它。</p><p>所以现在还打不了通用游戏——它看不见屏幕。想玩星际，得先有个模块把画面转成它能读的结构化状态。</p><h2 id="短板决定你怎么使用它"><a href="#短板决定你怎么使用它" class="headerlink" title="短板决定你怎么使用它"></a>短板决定你怎么使用它</h2><ul><li>无法做出解释。</li><li>中文理解能力差。</li><li>上下文短，32k&#x2F;64k，准确率会随着无关材料增多而下降。</li><li>无法处理量化要求，不会算术，官方明确要求计算放在代码里做，Jev只做语义印象。</li><li>快反射，而非慢思考，意味着不适合做很多推理条件、多层推理的任务。判断力会被稀释。</li><li>不能微调。</li></ul><h2 id="对我有啥用"><a href="#对我有啥用" class="headerlink" title="对我有啥用"></a>对我有啥用</h2><p>我好像个人暂时用不上，我就算是文档审核都是需要反馈意见的。用它不够。而文风验证的场景，它也不能直接胜任，因为文风要求的复杂度较大、交叉维度较多，需要深度思考。</p><p>公司项目那边从样本到决策如果逐渐复杂到要分路由的话，可以把一部分环节交给Jev。</p>]]></content>
+    
+    
+    <summary type="html">TypeSafe 的 Jev 这几天在国内被吹成&quot;AGI 新物种&quot;。但它就是个分类器：你给它【选项 + 自然语言描述】，它给你【决策】，不产出选项、不产出解释。快是真的快，短板也是真的短。技术不新，能不能做成产品，还是看人。</summary>
+    
+    
+    
+    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="LLM" scheme="https://flashj.cn/tags/LLM/"/>
+    
+    <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Jev" scheme="https://flashj.cn/tags/Jev/"/>
+    
+    <category term="TypeSafe" scheme="https://flashj.cn/tags/TypeSafe/"/>
+    
+    <category term="分类器" scheme="https://flashj.cn/tags/%E5%88%86%E7%B1%BB%E5%99%A8/"/>
+    
+    <category term="SystemOne" scheme="https://flashj.cn/tags/SystemOne/"/>
+    
+  </entry>
   
   <entry>
     <title>飞书官方 MCP 导致内存泄露：lark-mcp 孤儿进程排查</title>
@@ -594,37 +627,6 @@
     <category term="Browser" scheme="https://flashj.cn/tags/Browser/"/>
     
     <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</title>
-    <link href="https://flashj.cn/MSA-MemorySparseAttention.html"/>
-    <id>https://flashj.cn/MSA-MemorySparseAttention.html</id>
-    <published>2026-04-07T13:17:00.000Z</published>
-    <updated>2026-04-08T00:58:46.350Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案"><a href="#MSA（Memory-Sparse-Attention）—-突破-AI-记忆瓶颈的开源方案" class="headerlink" title="MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案"></a>MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</h1><h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><p>当前 AI 模型的记忆能力上限：</p><ul><li>最强大模型有效上下文约 <strong>1M token</strong></li><li>人类一生能存储的信息约 <strong>2-3 亿 token</strong> 量级</li><li>两者相差<strong>两个数量级</strong></li></ul><p>业界两条老路都碰壁：</p><ol><li><strong>拉长 context window</strong> — 计算成本二次方增长，到头了</li><li><strong>外挂 RAG</strong> — 检索和生成割裂，精度有上限</li></ol><h2 id="MSA-是什么"><a href="#MSA-是什么" class="headerlink" title="MSA 是什么"></a>MSA 是什么</h2><p>MSA（Memory Sparse Attention）来自 EverMind 团队（盛大旗下），把记忆<strong>直接嵌入注意力机制本身</strong>，不拉长上下文，不外挂检索。</p><p><strong>一句话理解：</strong> 传统 RAG 是给模型配了一个外置硬盘；MSA 是给模型装了一个原生记忆芯片。</p><ul><li>寻找和调用不再是两个独立步骤，而是整合在同一个神经网络里，端到端完成</li><li>模型自己学会了什么该记、怎么找、怎么用</li><li>即插即用，只需替换标准 Transformer 的 Self-Attention 层</li></ul><h2 id="关键技术细节"><a href="#关键技术细节" class="headerlink" title="关键技术细节"></a>关键技术细节</h2><ol><li><strong>压缩机制</strong>：把 1 亿 token 的存储降到可接受范围</li><li><strong>分层存储</strong>：GPU 放路由索引、CPU 放内容详情，总容量取决于内存而非显存</li><li><strong>稀疏路由</strong>：复杂度从 O(L²) 降到 O(L)</li><li><strong>位置编码</strong>：每篇文档独立编号，训练 64K 就能外推到 100M</li></ol><h2 id="性能表现"><a href="#性能表现" class="headerlink" title="性能表现"></a>性能表现</h2><p>基于 <strong>Qwen3-4B</strong> 构建，159B token 持续预训练：</p><table><thead><tr><th>测试结果</th><th>数据</th></tr></thead><tbody><tr><td>记忆跨度</td><td>从 1 万多 token → <strong>1 亿 token</strong>（近4个数量级）</td></tr><tr><td>质量衰减</td><td>回答质量仅下降 <strong>&lt;9%</strong></td></tr><tr><td>标准问答测试</td><td>40亿参数模型，超越传统 RAG 方案 <strong>16%</strong></td></tr><tr><td>vs 顶级检索器+2350亿参数大模型</td><td><strong>多项测试仍胜出</strong>，参数量差60倍</td></tr></tbody></table><h2 id="硬件门槛"><a href="#硬件门槛" class="headerlink" title="硬件门槛"></a>硬件门槛</h2><p>可直接跑在<strong>两张 A800 显卡</strong>的机器上，不需要集群。中、小团队甚至个人开发者都能用上亿级 token 长期记忆。</p><h2 id="团队背景"><a href="#团队背景" class="headerlink" title="团队背景"></a>团队背景</h2><ul><li>EverMind（盛大旗下）</li><li>之前做过 GAIA 榜单 SOTA 的多 Agent 框架 <strong>Omne</strong>、开源记忆平台 <strong>EverOS</strong></li><li>从立项到论文完成，历时九个多月</li></ul><p><strong>关键洞察：</strong> 模型在「找资料」和「写答案」时需要的信息不同——找资料需要宏观判断，写答案需要微观细节。拆开后各自用专门模块处理，性能质变。</p><h2 id="应用前景"><a href="#应用前景" class="headerlink" title="应用前景"></a>应用前景</h2><ul><li><strong>真正个性化的 AI 助手</strong>：记得饮食偏好、项目进展、家人性格</li><li><strong>AI 教育</strong>：真正个性化，因材施教</li><li><strong>医疗助手</strong>：跟踪完整病史</li><li><strong>企业知识库</strong>：记住十年项目积累</li><li><strong>记忆即服务</strong>：记忆层作为独立可插拔模块，记忆资产不锁定于单一模型</li></ul><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li>MSA GitHub：<a href="https://github.com/EverMind-AI/MSA">https://github.com/EverMind-AI/MSA</a></li><li>EverOS GitHub：<a href="https://github.com/EverMind-AI/EverOS">https://github.com/EverMind-AI/EverOS</a></li></ul>]]></content>
-    
-    
-    <summary type="html">MSA 把记忆直接嵌入注意力机制本身，而非外挂检索，实现了端到端的长期记忆能力，突破了传统 RAG 的精度上限和 context window 的计算成本瓶颈</summary>
-    
-    
-    
-    <category term="AI" scheme="https://flashj.cn/categories/AI/"/>
-    
-    
-    <category term="AI记忆" scheme="https://flashj.cn/tags/AI%E8%AE%B0%E5%BF%86/"/>
-    
-    <category term="Transformer" scheme="https://flashj.cn/tags/Transformer/"/>
-    
-    <category term="开源" scheme="https://flashj.cn/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="MSA" scheme="https://flashj.cn/tags/MSA/"/>
-    
-    <category term="RAG" scheme="https://flashj.cn/tags/RAG/"/>
-    
-    <category term="上下文窗口" scheme="https://flashj.cn/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3/"/>
     
   </entry>
   
