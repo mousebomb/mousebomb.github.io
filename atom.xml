@@ -231,6 +231,8 @@
     
     <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
     
+    <category term="token" scheme="https://flashj.cn/tags/token/"/>
+    
     <category term="opencode" scheme="https://flashj.cn/tags/opencode/"/>
     
     <category term="CommandCode" scheme="https://flashj.cn/tags/CommandCode/"/>
@@ -238,8 +240,6 @@
     <category term="goat" scheme="https://flashj.cn/tags/goat/"/>
     
     <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
-    
-    <category term="token" scheme="https://flashj.cn/tags/token/"/>
     
   </entry>
   
@@ -558,9 +558,9 @@
     
     <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
     
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
     
