@@ -6,7 +6,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-10-13T12:29:13.217Z</updated>
+  <updated>2026-10-13T13:35:16.580Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://flashj.cn/photocraft-rea-software-industry-change.html"/>
     <id>https://flashj.cn/photocraft-rea-software-industry-change.html</id>
     <published>2026-10-13T12:15:00.000Z</published>
-    <updated>2026-10-13T12:29:13.217Z</updated>
+    <updated>2026-10-13T13:35:16.580Z</updated>
     
     <content type="html"><![CDATA[<p>As soon as the National Day holiday wrapped up, two open-source projects took over my WeChat Moments and every feed I scrolled.</p><p>One is <strong>PhotoCraft</strong>, a from-scratch rewrite of Photoshop in pure Rust. The other is <strong>REA</strong>, which lets an AI Agent read the binary of any piece of software, turning the grind of reverse engineering into saying one plain sentence to your computer.</p><p>I joined the crowd and took a look. It’s not as miraculous as self-media makes it out to be. But it did keep me thinking for a good while: where does the software industry go from here?</p><h2 id="First-these-two-things"><a href="#First-these-two-things" class="headerlink" title="First, these two things"></a>First, these two things</h2><p><strong>PhotoCraft</strong> is a “clean-room rewrite” — working only from public specs and observed behavior, without touching a single line of Adobe’s code. It’s a serious amount of engineering: PSD read&#x2F;write fidelity is quite high, and the tests are solid.</p><p>But what hit me hardest wasn’t any of that — it’s that it doesn’t even put on an act: menus, keyboard shortcuts, panels, all copied straight from Photoshop.</p><p>That matters more than anything else. GIMP has its own design philosophy, and I can’t get comfortable with it; PhotoCraft has no philosophy — it just means you don’t have to relearn anything. Fifteen years ago, when I switched from Windows to Snow Leopard, the first thing I did was install OpenOffice and GIMP, and to this day I still can’t use GIMP. Later I switched to Affinity, and I still find PS shortcuts the most natural — the certification exams I took in school were all on the Adobe suite, so that’s years of muscle memory.</p><p>So cloning the interaction really does have value. As a user, it feels exactly like what I expect.</p><p>Still, its own website says it plainly: early alpha, not yet a Photoshop replacement you can get work done with. It’s missing AI generation features, missing a batch of tools, not deep enough for layout and professional workflows, plugins aren’t compatible, and plenty of areas are waiting for the community to build together.</p><p><strong>REA</strong> is a different animal. It’s an MCP tool: install it and your coding Agent can read the software itself — pseudocode and assembly from native binaries, Electron modules and IPC, .NET assemblies, Android APKs, websites, firmware, the whole lot. Analysis runs entirely locally, and conclusions must come with evidence and limitations. One example from the official demo stuck with me: restoring the audio-visual algorithm of the old game DX-Ball from assembly back into C, passing over three thousand original test cases, and reproducing the compiled function byte for byte. That kind of work used to take real hard skill.</p><h2 id="But-hold-off-on-the-celebration"><a href="#But-hold-off-on-the-celebration" class="headerlink" title="But hold off on the celebration"></a>But hold off on the celebration</h2><p>PhotoCraft is open source, and there is indeed a business behind it: the software itself is free, and the money comes from its sister product ArtCraft, that AI studio.</p><p>I went and dug through its source code (a bit pedantic of me): there isn’t a single paywall popup anywhere in the software, just a few links in the Help menu and on the startup screen. So it’s not the “crippled version playbook”, but it is indeed “give the tool away free, collect the money elsewhere”.</p><p>And that paid product — its pricing page converts credits directly into generation counts for Nano Banana Pro, GPT-Image-1.5, Seedance, and Kling. In plain terms, it’s reselling other companies’ models wrapped in a nice-looking interface.</p><p>This model is nothing new. Open source plus value-added services has been around for ages; it’s just that when it’s time to promote it, you can use it flexibly: tell the story of “open source and free defeats the landlord” on one hand, while everyone has suffered Adobe for so long that once the wall starts to fall, everyone pushes.</p><p><strong>But the wall hasn’t actually fallen.</strong></p><p>More than a decade ago, the open-source world was already building replacements: OpenOffice vs. Office, GIMP vs. PS. After twenty or thirty years, neither has killed the other. Recently someone rewrote Office again, and the outcome will probably be the same.</p><p>So when self-media says “the price of professional tools will approach zero”, I don’t buy it.</p><p>When a tool lands in your hands, what’s delivered isn’t just code — it’s that team’s design, time, and judgment, plus your trust in them. As long as that’s still part of the deliverable, they can charge for it — if not openly, then some other way. Free plus value-added services is still SaaS at heart.</p><p>As for me: if I open the official site and see a pricing page, I’m not planning to use it. Especially when there’s a pile of features not yet implemented and waiting for people to help build. Playing guinea pig — a middle-aged person doesn’t have that much time.</p><h2 id="So-what’s-the-future-of-the-software-industry"><a href="#So-what’s-the-future-of-the-software-industry" class="headerlink" title="So what’s the future of the software industry?"></a>So what’s the future of the software industry?</h2><p>Here’s roughly what I’ve been mulling over:</p><p><strong>One: keep moving toward compliant SaaS.</strong> At its core, it’s selling skills, experience, time, judgment, and trust.</p><p><strong>Two: move toward the completely non-general, highly vertical directions.</strong> Personalized needs will only grow, and this kind of thing is also well suited to SaaS. Because human attention is scarce, and Vibe Coding itself needs someone watching over it and intervening, professionals will inevitably still have to do it — it’s just that the professional bar is much lower than before.</p><p><strong>Three: after the barrier drops, new barriers grow back.</strong> New models will spawn new engineering methods and methodologies, which will likewise become increasingly professionalized. The barrier doesn’t disappear; it re-emerges somewhere else.</p><p><strong>Four: the long tail market.</strong> This might be the new growth point small teams can grab in the future.</p><h2 id="I-also-don’t-buy-that-“everyone-can-build-their-own-software”"><a href="#I-also-don’t-buy-that-“everyone-can-build-their-own-software”" class="headerlink" title="I also don’t buy that “everyone can build their own software”"></a>I also don’t buy that “everyone can build their own software”</h2><p>A lot of people say that now that AI capacity is up and anyone can vibe code, nobody will need to buy software.</p><p>I don’t see it that way.</p><p>It’s like kitchens. Every household has a kitchen and can cook; none of the means of production needed for cooking is held by a few people, and anyone can quickly get a meal done. So why do we still need restaurants, cafeterias, fine dining, even street stalls and food courts?</p><p>Productive capacity has increased, everyone is empowered to vibe code, but human attention and time are still scarce. The division of labor in society won’t be shaken.</p>]]></content>
     
@@ -72,9 +72,9 @@
     
     <category term="Life Insights" scheme="https://flashj.cn/tags/Life-Insights/"/>
     
-    <category term="Parenting" scheme="https://flashj.cn/tags/Parenting/"/>
-    
     <category term="Education" scheme="https://flashj.cn/tags/Education/"/>
+    
+    <category term="Parenting" scheme="https://flashj.cn/tags/Parenting/"/>
     
     <category term="Writing" scheme="https://flashj.cn/tags/Writing/"/>
     
@@ -169,11 +169,11 @@
     
     <category term="Life Insights" scheme="https://flashj.cn/tags/Life-Insights/"/>
     
-    <category term="Education" scheme="https://flashj.cn/tags/Education/"/>
-    
     <category term="Creativity" scheme="https://flashj.cn/tags/Creativity/"/>
     
     <category term="Mathematics" scheme="https://flashj.cn/tags/Mathematics/"/>
+    
+    <category term="Education" scheme="https://flashj.cn/tags/Education/"/>
     
   </entry>
   
