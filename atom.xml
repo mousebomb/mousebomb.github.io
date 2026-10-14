@@ -343,7 +343,7 @@
     <link href="https://flashj.cn/no-more-fomo-dsh-qwen38.html"/>
     <id>https://flashj.cn/no-more-fomo-dsh-qwen38.html</id>
     <published>2026-08-23T14:10:00.000Z</published>
-    <updated>2026-08-24T00:10:20.504Z</updated>
+    <updated>2026-10-14T04:58:45.801Z</updated>
     
     <content type="html"><![CDATA[<p>最近DeepSeek Harness 让AI圈子里的很多人沸腾了，但我用了一次就没有继续。</p><p>究其原因，<br>DSH现在还是preview，官方明确标注了，随时会做影响兼容性的大改动，现在是社区激烈碰撞、共创的时期。</p><p>对于我这样求新又求稳定的人来说，我求新，却没那么新。</p><p>我求稳，需要每天能稳定让Agent辅助我，作为我的第二大脑，我不能轻易接受破坏性的改造。</p><p>我发现现在有很多人转到用DSH居然是从OpenClaw&#x2F;Hermes转的，这当然对他们来说是很大的进化。<br>但我OpenCode + Paseo + OpenViking用得实在太顺了，顺到我想不出来有任何刚需是需要用到DSH。</p><p>我也希望DSH能接入Paseo，但目前比较方便的是ACP方式接入，这个达不到我的要求。<br>如果我要急着用的话，基于 <code>opencode-agent.ts</code> 改造一份<code>dsh-agent.ts</code>也未尝不可，<br>但是代价是，短期内可能要跟着dsh频繁改动，这我受不了。</p><p>紧接着Qwen3.8 27B能力起飞了，但我没有本地部署。</p><p>究其原因，<br>我这点本地算力虽然能运行，但是去年和前年一路用下来，已经疲劳了。<br>还是opencode go简单粗暴，量大管饱，有这点折腾本地部署的功夫还不如直接用MaaS的。<br>我本地Ollama跑着Qwen-embedding 0.6B给OpenViking做embedding就很适合我。</p><p>拒绝FOMO，一切对我没有实质、可控、稳定帮助的新玩意儿，都是噪音。</p>]]></content>
     
@@ -550,7 +550,7 @@
     <link href="https://flashj.cn/trae-solo-shi-yong-ji-lu.html"/>
     <id>https://flashj.cn/trae-solo-shi-yong-ji-lu.html</id>
     <published>2026-05-06T11:45:00.000Z</published>
-    <updated>2026-05-08T01:33:20.231Z</updated>
+    <updated>2026-10-14T04:58:47.774Z</updated>
     
     <content type="html"><![CDATA[<h1 id="TRAE-SOLO-独立版使用记录"><a href="#TRAE-SOLO-独立版使用记录" class="headerlink" title="TRAE SOLO 独立版使用记录"></a>TRAE SOLO 独立版使用记录</h1><p>这两天上线的 Trae Solo 新版支持手机远程控制，出门时也能让家里的电脑自己写代码了。虽然需要排队，但可以趁吃饭的时候让它写，还是有一点优势的。</p><p>不过相比 Trae IDE，功能稍弱：</p><ol><li>没有继承原有的规则</li><li>没有继承原有的 Skill，需要单独安装</li><li>技能中心更偏向办公场景，很多技能都没有</li><li>自动调用的大模型有几率选到「智商」稍低的，有些问题可能需要改好几次才能改好</li></ol>]]></content>
     
@@ -575,7 +575,7 @@
     <link href="https://flashj.cn/coreaudiod-memory-leak-from-claude-code-hook.html"/>
     <id>https://flashj.cn/coreaudiod-memory-leak-from-claude-code-hook.html</id>
     <published>2026-05-06T04:05:00.000Z</published>
-    <updated>2026-05-06T13:13:11.070Z</updated>
+    <updated>2026-10-14T04:58:41.463Z</updated>
     
     <content type="html"><![CDATA[<p>奇怪的coreaudiod内存占用<br>11:50～12:00</p><p>我的 coreaudiod 进程已经占用了 45 个 G 的内存，我怀疑是命令行里面溢出了。</p><p>现在我非常怀疑是 CC 里面的这个声音播报占用的。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202605062110846.webp"></p><p>果然在帖子 <a href="https://www.reddit.com/r/ClaudeCode/comments/1n9wth1/why_does_running_claude_code_often_use_2040gb_of/">https://www.reddit.com/r/ClaudeCode/comments/1n9wth1/why_does_running_claude_code_often_use_2040gb_of/</a> 里也看到，有人加了hook播放音效，导致coreaudiod内存泄露。</p><p>我现在需要把 Claude 的 hook 给去掉，然后就直接用我终端本身的音效来设置一下。</p><p>我的终端用的是 Ghosty，我得查一查。</p><h3 id="先卸载peonping"><a href="#先卸载peonping" class="headerlink" title="先卸载peonping:"></a>先卸载peonping:</h3><pre><code class="language-sh">brew uninstall PeonPing/tap/peon-ping</code></pre><p>保留了之前下载的音效包 <code>/Users/rhett/.openpeon/packs/*</code></p><h3 id="再根据ghostty文档重新配置："><a href="#再根据ghostty文档重新配置：" class="headerlink" title="再根据ghostty文档重新配置："></a>再根据<a href="https://ghostty.org/docs/config/reference#notify-on-command-finish-after">ghostty文档</a>重新配置：</h3><pre><code class="language-ini">theme = Solarized Darculanotify-on-command-finish = alwaysnotify-on-command-finish-action = notify,bellnotify-on-command-finish-after = 1s# 启用自定义音频 bell（必须 1.3.0+）bell-features = audio,system,border,title# 自定义音效路径（推荐先用系统自带，后面再换自己的）# 格式：aiff/wav/mp3 均可bell-audio-path = /Users/rhett/.openpeon/packs/ccg_china_dozer/sounds/Building_is_complete.mp3bell-audio-volume = 1.0</code></pre><p>并且配置了.claude&#x2F;settings.json ，hooks只保留写死的两条afplay：</p><pre><code class="language-json">  &quot;hooks&quot;: &#123;    &quot;PermissionRequest&quot;: [      &#123;        &quot;matcher&quot;: &quot;*&quot;,        &quot;hooks&quot;: [          &#123;            &quot;type&quot;: &quot;command&quot;,            &quot;command&quot;: &quot;afplay /Users/rhett/.openpeon/packs/mambo_pack/sounds/review_this.mp3&quot;          &#125;        ]      &#125;    ],    &quot;Stop&quot;: [      &#123;        &quot;matcher&quot;: &quot;*&quot;,        &quot;hooks&quot;: [          &#123;            &quot;type&quot;: &quot;command&quot;,            &quot;command&quot;: &quot;afplay /Users/rhett/.openpeon/packs/mambo_pack/sounds/done.mp3&quot;          &#125;        ]      &#125;    ]  &#125;,</code></pre>]]></content>
     
@@ -622,9 +622,9 @@
     
     <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
     
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
     
