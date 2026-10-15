@@ -3,45 +3,52 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.0" theme-name="Stellar" theme-version="1.30.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0" theme-name="Stellar" theme-version="1.44.0">
+  
   <meta name="robots" content="noindex,follow">
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  
   <title>Tag: LLM - FlashJ</title>
 
-  
-    <meta name="description" content="Mousebomb&#39;s blog — web apps, games and 3D interaction.">
+  <meta name="description" content="Mousebomb&#39;s blog — web apps, games and 3D interaction.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FlashJ">
-<meta property="og:url" content="https://flashj.cn/tags/LLM/page/2/index.html">
+<meta property="og:url" content="https://flashj.cn/en/tags/LLM/page/2/index.html">
 <meta property="og:site_name" content="FlashJ">
 <meta property="og:description" content="Mousebomb&#39;s blog — web apps, games and 3D interaction.">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.mousebomb.org/blog/avatar.png">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="flash,as,air,ios,apple,unity,cocos,ai,LMStudio">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.mousebomb.org/blog/avatar.png">
 <meta name="twitter:creator" content="@mousebomb">
-  
   
   
   <meta name="keywords" content="flash,as,air,ios,apple,unity,cocos,ai,LMStudio">
 
   <!-- feed -->
   
-    <link rel="alternate" href="/en/atom.xml" title="FlashJ" type="application/atom+xml">
+    
+
+    
+      
+        <link rel="alternate" href="/en/atom.xml" title="FlashJ" type="application/atom+xml">
+      
+    
   
 
-  <link rel="stylesheet" href="/en/css/main.css?v=1.30.0">
+  <link rel="preload" href="/en/css/main.css?v=1.44.0" as="style">
+  <link rel="stylesheet" href="/en/css/main.css?v=1.44.0">
 
 
   
@@ -50,6 +57,7 @@
 
   
 
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://flashj.cn/en","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"name":"FlashJ","description":"Mousebomb's blog — web apps, games and 3D interaction.","url":"https://flashj.cn/en"}</script>
   <script>
 (function () {
   try {
@@ -71,11 +79,22 @@
      · 划过头就自动收起（.is-hidden），回到顶部再回来
      · PC / 移动端同一套，只在小屏收紧内边距与字号
    结构由 inject.script 里那段脚本生成；样式只在这里。
+   ⚠️ 底色必须用 --bg-a75，别再写 --alpha75：后者 1.44 起已从主题删除
+      （全主题搜不到定义），整条 background 会落到 fallback 的
+      rgba(255,255,255,.75)，结果暗色模式下顶栏恒为白底。
+      --bg-a75 由主题 x-set-bg-colors() 按明暗自动反转
+      （亮色 = 白 75%、暗色 = 黑 75%），与主题自己的玻璃条
+      --blur-bg（= --bg-a50）同源。
+      ⚠️ 同理，主色一律写 var(--theme)。--theme-color 这个变量在 1.44
+         里同样不存在，之前四处（语言胶囊 hover、toggle 拨杆图标、
+         toggle 打开态、页脚语言入口 hover）全靠 fallback 的 #1cd0fd
+         撑着 —— 值碰巧与站点主题色相同才没露馅；换成 --theme 后，
+         以后改主题色这几处会跟着走。
    ============================================================ */
 .mb-topbar{position:sticky;top:0;z-index:9;display:flex;align-items:center;
 justify-content:space-between;gap:12px;padding:7px 16px;
 font-size:13px;line-height:1.5;color:var(--text-p2,#4d4d4d);
-background:var(--alpha75,rgba(255,255,255,.75));
+background:var(--bg-a75,rgba(255,255,255,.75));
 -webkit-backdrop-filter:blur(16px) saturate(180%);
 backdrop-filter:blur(16px) saturate(180%);
 border-bottom:1px solid var(--block-border,#e3e5e8);
@@ -87,7 +106,7 @@ transition:transform .28s ease,opacity .28s ease}
 padding:4px 13px;border-radius:999px;font-weight:500;text-decoration:none;
 white-space:nowrap;color:var(--text-p1,#333);background:var(--card,#fff);
 border:1px solid var(--block-border,#e3e5e8);transition:all .2s ease-out}
-.mb-tb-lang:hover{color:#fff;border-color:transparent;background:var(--theme-color,#1cd0fd)}
+.mb-tb-lang:hover{color:#fff;border-color:transparent;background:var(--theme,#1cd0fd)}
 .mb-tb-lang svg{width:15px;height:15px;flex-shrink:0}
 
 /* 右：深浅色 toggle */
@@ -99,9 +118,9 @@ transition:background .22s ease-out,box-shadow .22s ease-out;
 .mb-tb-knob{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;
 display:flex;align-items:center;justify-content:center;background:var(--card,#fff);
 box-shadow:0 1px 3px rgba(0,0,0,.22);transition:transform .22s ease-out}
-.mb-tb-knob svg{width:13px;height:13px;color:var(--theme-color,#1cd0fd)}
+.mb-tb-knob svg{width:13px;height:13px;color:var(--theme,#1cd0fd)}
 .mb-tb-sw .mb-tb-moon{display:none}
-.mb-tb-sw[aria-checked="true"]{background:var(--theme-color,#1cd0fd);box-shadow:none}
+.mb-tb-sw[aria-checked="true"]{background:var(--theme,#1cd0fd);box-shadow:none}
 .mb-tb-sw[aria-checked="true"] .mb-tb-knob{transform:translateX(22px)}
 .mb-tb-sw[aria-checked="true"] .mb-tb-sun{display:none}
 .mb-tb-sw[aria-checked="true"] .mb-tb-moon{display:block}
@@ -111,7 +130,7 @@ box-shadow:0 1px 3px rgba(0,0,0,.22);transition:transform .22s ease-out}
    ------------------------------------------------------------
    顶栏是 sticky，会在文档流里实打实占掉自己的高度（实测 45px），
    于是所有「也 sticky」的兄弟的粘滞起点被整体下推：
-     · .l_left（左侧栏，主题给的 top:8px + height:calc(100vh - 16px)）
+     · .l_left（左侧栏）
        → 它在 scrollY 0~45 之间还没咬住阈值，会跟着页面往上滑一段，
          看上去就是「左侧栏自己上下动了一下」。
      · .navbar（主栏的 tab 条，主题给的 top:0）
@@ -120,31 +139,53 @@ box-shadow:0 1px 3px rgba(0,0,0,.22);transition:transform .22s ease-out}
    inject.script 里那段脚本实测后写进 <html>（顶栏收起时写 0px，两边
    一起复位）；这里只声明默认值 0px —— 没跑 JS 时顶栏本身也还没生成，
    退回 0px 恰好一致，不会出现「让了位却看不到顶栏」。
-   ⚠️ 左侧栏让位后，它的下沿仍在 100vh - 8px 处（= 高度与 top 一起减），
-     所以卡片底边不会跟着动，只有顶边在顶栏出现/收起时上下。
+   ⚠️⚠️ 2026-10-15 升级 1.44.0 后这段改过三处，别再照旧版抄：
+     ① 基准值不能再写死 8px —— 1.42 把间距令牌重构成 --gap-base /
+        --gap-page，左侧栏的粘滞基准现在是 var(--gap-page)（=16px，
+        旧版是硬编码 8px）。写死就会每页都偏 8px。
+     ② 高度不能加在 .l_left 上 —— 1.44 把左侧栏的高度挪到了子元素
+        .l_left .leftbar-container（height: calc(100vh - var(--gap-page)*2)），
+        只改父级的话让位后容器会溢出。
+     ③ 整段只对 ≥668px 生效 —— ≤667px 时主题把侧栏变成 fixed + translateX
+        的抽屉（top:8pt / --inset:8px，z-index:10，比顶栏高），
+        抽屉本来就该盖在顶栏上，不需要让位；不限定的话桌面公式会
+        套到抽屉上，把它顶下去。
+     让位后下沿恒在 100vh - var(--gap-page)，卡片底边不动，只有顶边动。
    ============================================================ */
 :root{--mb-topbar-h:0px}
-.l_body .l_left{top:calc(8px + var(--mb-topbar-h));
-height:calc(100vh - 16px - var(--mb-topbar-h))}
+@media screen and (min-width:668px){
+  .l_body .l_left{top:calc(var(--gap-page) + var(--mb-topbar-h));
+  max-height:calc(100vh - var(--gap-page)*2 - var(--mb-topbar-h))}
+  .l_body .l_left .leftbar-container{
+  height:calc(100vh - var(--gap-page)*2 - var(--mb-topbar-h))}
+}
 .l_body .l_main .navbar{top:var(--mb-topbar-h)}
 
 /* 让位动画：上面两条改的是 --mb-topbar-h，不加过渡就是瞬时跳变。
    时长与缓动跟 .mb-topbar 的 transform 对齐（.28s ease）——两者位移量
    相同（45px）、方向相同、曲线相同，于是顶栏下沿与侧栏顶边之间那 8px
    间隙全程不变，看上去就是「一起走的」。
-   `top` 与 `height` 同时走完，下沿恒在 100vh - 8px，卡片底边不动，
-   只有顶边在顶栏出现/收起时上下。
+   `top` 与 `height` 同时走完，下沿恒在 100vh - var(--gap-page)，卡片底边
+   不动，只有顶边在顶栏出现/收起时上下。
+   ⚠️ height 那条现在挂在 .l_left .leftbar-container 上（见上面 ②），
+     所以过渡也要同时写给这个子元素，否则高度是瞬变、底边会跳。
    ⚠️ 必须把 `transform .38s ease-out` 一并写上：这条规则与主题的
      `.l_body .l_left` 同权重、位置更靠后，只写 top/height 会把主题给
      移动端抽屉（≤667px 时变成 fixed + translateX）的滑出动画整个抹掉。
+   ⚠️⚠️ 2026-10-15 升级 1.44.0 后新增：主题给左侧栏加了
+     `view-transition-name: leftbar`（1.43 的 page_transition 特性支持的
+     原生跨文档过渡）。它与本段无冲突，但如果翻页时侧栏/顶栏出现闪烁或
+     错位动画，先把 style.page_transition.enable 设成 false 再排查这里。
    ⚠️ 用 html.mb-anim 当开关：首帧量高度时 --mb-topbar-h 会从 0px 变成
      45px，不挡住的话每次刷新都会看到侧栏先滑一下（比原来的瞬时跳变更显眼）。
      由 inject.script 那段在首帧之后加类。 */
 html.mb-anim .l_body .l_left{
-transition:top .28s ease,height .28s ease,transform .38s ease-out}
+transition:top .28s ease,max-height .28s ease,transform .38s ease-out}
+html.mb-anim .l_body .l_left .leftbar-container{transition:height .28s ease}
 html.mb-anim .l_body .l_main .navbar{transition:top .28s ease}
 @media (prefers-reduced-motion:reduce){
   html.mb-anim .l_body .l_left,
+  html.mb-anim .l_body .l_left .leftbar-container,
   html.mb-anim .l_body .l_main .navbar{transition:none}
 }
 
@@ -160,103 +201,697 @@ padding:1px 10px;border-radius:999px;font-weight:500;text-decoration:none;
 color:var(--text-p1,#333);background:transparent;white-space:nowrap;
 border:1px solid var(--block-border,#e3e5e8);transition:all .2s ease-out}
 .page-footer .text a.mb-lang-foot:hover{color:#fff;border-color:transparent;
-background:var(--theme-color,#1cd0fd)}
+background:var(--theme,#1cd0fd)}
 </style>
 <style>
-.widget-wrapper.linklist .widget-body{border-radius:12px;padding:14px 10px 10px;
-background:var(--card);box-shadow:0 1px 2px 0px rgba(0,0,0,.1)}
-.widget-wrapper.linklist .linklist > .link{background:none;
-border:1px dashed var(--text-p3-opa)}
-.widget-wrapper.linklist .linklist > .link:last-child{grid-column:1/-1;margin-top:2px;
-border:0;border-radius:0;background:none;min-height:auto;padding:2px 0;
-font-size:12px;color:var(--text-p3,#808080)}
-.widget-wrapper.linklist .linklist > .link:hover{background:var(--block-hover);
-color:var(--text-p1)}
-/* ③ leftbar 的 menubar 方块。
-   同 linklist：主题把它写成 `.nav-item{background:var(--alpha50)}`，
-   浅色下等于没有，坐实「裸奔」。换成实色卡片。 */
-.nav-area .menu .nav-item{background:var(--card);border:1px solid var(--block-border)}
-.nav-area .menu .nav-item:hover,.nav-area .menu .nav-item.active{
-background:var(--block-hover)}
+.widget-wrapper.link-list-widget .widget-body{border-radius:12px;
+padding:14px 10px 10px;background:var(--card);box-shadow:0 1px 2px 0 rgba(0,0,0,.1)}
+.widget-wrapper.link-list-widget .ui-collection[data-layout='grid']{
+grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.widget-wrapper.link-list-widget .ui-collection__item{justify-content:center;
+text-align:center;gap:0;padding:0 4px;background:none;
+border:1px dashed var(--text-p4);
+transition:background-color .2s ease-out,color .2s ease-out}
+.widget-wrapper.link-list-widget .ui-collection__leading{width:auto;height:auto}
+.widget-wrapper.link-list-widget .ui-collection__leading svg{max-height:18px;
+width:auto;padding:0 2px;transition:opacity .2s ease-out,color .2s ease-out}
+/* 让 content 收成「文字宽」，居中才真的成立（主题基础样式是 flex:1 撑满） */
+.widget-wrapper.link-list-widget .ui-collection__content{flex:initial}
+.widget-wrapper.link-list-widget .ui-collection__title{padding:0 4px}
+.widget-wrapper.link-list-widget .card-hover__spotlight{display:none}
+.widget-wrapper.link-list-widget .ui-collection__item:last-child{grid-column:1/-1;
+margin-top:2px;border:0;border-radius:0;background:none;box-shadow:none;
+min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
+.widget-wrapper.link-list-widget .ui-collection__item:hover{
+background:var(--block);color:var(--text-p1)}
 </style>
 
+
+  <!-- icons.yml 驱动的 CSS 装饰图标 -->
+  
+  
+  <style>:root {
+  --icon-h3-left: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20Solar%20by%20480%20Design%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M17.75%2019a.75.75%200%200%201-1.32.488l-6-7a.75.75%200%200%201%200-.976l6-7A.75.75%200%200%201%2017.75%205z%22%20opacity%3D%22.5%22%2F%3E%3Cpath%20fill%3D%22currentColor%22%20fill-rule%3D%22evenodd%22%20d%3D%22M13.488%2019.57a.75.75%200%200%200%20.081-1.058L7.988%2012l5.581-6.512a.75.75%200%201%200-1.138-.976l-6%207a.75.75%200%200%200%200%20.976l6%207a.75.75%200%200%200%201.057.082%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  --icon-h3-right: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20Solar%20by%20480%20Design%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M6.25%2019a.75.75%200%200%200%201.32.488l6-7a.75.75%200%200%200%200-.976l-6-7A.75.75%200%200%200%206.25%205z%22%20opacity%3D%22.5%22%2F%3E%3Cpath%20fill%3D%22currentColor%22%20fill-rule%3D%22evenodd%22%20d%3D%22M10.512%2019.57a.75.75%200%200%201-.081-1.058L16.012%2012l-5.581-6.512a.75.75%200%201%201%201.139-.976l6%207a.75.75%200%200%201%200%20.976l-6%207a.75.75%200%200%201-1.058.082%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  --icon-quote-left: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20BoxIcons%20Solid%20by%20Atisa%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M3.691%206.292C5.094%204.771%207.217%204%2010%204h1v2.819l-.804.161c-1.37.274-2.323.813-2.833%201.604A2.9%202.9%200%200%200%206.925%2010H10a1%201%200%200%201%201%201v7c0%201.103-.897%202-2%202H3a1%201%200%200%201-1-1v-5l.003-2.919c-.009-.111-.199-2.741%201.688-4.789M20%2020h-6a1%201%200%200%201-1-1v-5l.003-2.919c-.009-.111-.199-2.741%201.688-4.789C16.094%204.771%2018.217%204%2021%204h1v2.819l-.804.161c-1.37.274-2.323.813-2.833%201.604A2.9%202.9%200%200%200%2017.925%2010H21a1%201%200%200%201%201%201v7c0%201.103-.897%202-2%202%22%2F%3E%3C%2Fsvg%3E");
+  --icon-quote-right: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20BoxIcons%20Solid%20by%20Atisa%20-%20https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M20.309%2017.708C22.196%2015.66%2022.006%2013.03%2022%2013V5a1%201%200%200%200-1-1h-6c-1.103%200-2%20.897-2%202v7a1%201%200%200%200%201%201h3.078a2.9%202.9%200%200%201-.429%201.396c-.508.801-1.465%201.348-2.846%201.624l-.803.16V20h1c2.783%200%204.906-.771%206.309-2.292m-11.007%200C11.19%2015.66%2010.999%2013.03%2010.993%2013V5a1%201%200%200%200-1-1h-6c-1.103%200-2%20.897-2%202v7a1%201%200%200%200%201%201h3.078a2.9%202.9%200%200%201-.429%201.396c-.508.801-1.465%201.348-2.846%201.624l-.803.16V20h1c2.783%200%204.906-.771%206.309-2.292%22%2F%3E%3C%2Fsvg%3E");
+  --icon-loading: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.67%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.33%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E");
+}</style>
+  
 </head>
-<body>
-
-<div class="l_body index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<body><div id="l_cover"></div><div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://mousebomb.org/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/en/"><div class="main" ff="title">FlashJ</div><div class="sub normal cap">Mousebomb's blog</div><div class="sub hover cap" style="opacity:0"> Tech + life</div></a></div></header>
 
-<div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+<header class="header"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://mousebomb.org/"><div class="bg"></div><img no-lazy class="avatar" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">FlashJ</div><div class="sub normal cap">Mousebomb's blog</div><div class="sub hover cap" style="opacity:0"> Tech + life</div></a></div></header>
 
 
-<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/en/" style="color:#1cd0fd"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="友情链接" href="/en/friends/" style="color:#1cd0fd"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a><a class="nav-item" title="关于" href="/en/about/" style="color:#1cd0fd"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M225.86 102.82c-3.77-3.94-7.67-8-9.14-11.57c-1.36-3.27-1.44-8.69-1.52-13.94c-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52c-3.56-1.47-7.63-5.37-11.57-9.14C146.28 23.51 138.44 16 128 16s-18.27 7.51-25.18 14.14c-3.94 3.77-8 7.67-11.57 9.14c-3.25 1.36-8.69 1.44-13.94 1.52c-9.76.15-20.82.31-28.51 8s-7.8 18.75-8 28.51c-.08 5.25-.16 10.67-1.52 13.94c-1.47 3.56-5.37 7.63-9.14 11.57C23.51 109.72 16 117.56 16 128s7.51 18.27 14.14 25.18c3.77 3.94 7.67 8 9.14 11.57c1.36 3.27 1.44 8.69 1.52 13.94c.15 9.76.31 20.82 8 28.51s18.75 7.85 28.51 8c5.25.08 10.67.16 13.94 1.52c3.56 1.47 7.63 5.37 11.57 9.14c6.9 6.63 14.74 14.14 25.18 14.14s18.27-7.51 25.18-14.14c3.94-3.77 8-7.67 11.57-9.14c3.27-1.36 8.69-1.44 13.94-1.52c9.76-.15 20.82-.31 28.51-8s7.85-18.75 8-28.51c.08-5.25.16-10.67 1.52-13.94c1.47-3.56 5.37-7.63 9.14-11.57c6.63-6.9 14.14-14.74 14.14-25.18s-7.51-18.27-14.14-25.18M128 192a12 12 0 1 1 12-12a12 12 0 0 1-12 12m8-48.72v.72a8 8 0 0 1-16 0v-8a8 8 0 0 1 8-8c13.23 0 24-9 24-20s-10.77-20-24-20s-24 9-24 20v4a8 8 0 0 1-16 0v-4c0-19.85 17.94-36 40-36s40 16.15 40 36c0 17.38-13.76 31.93-32 35.28"/></svg></a></nav>
-</div>
+<div class="search-wrapper" id="search-wrapper"><div class="search-form" role="search"><label class="search-button" for="search-input" aria-hidden="true"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></label><input type="search" class="search-input" id="search-input" aria-label="Search" placeholder="Search"></div><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
 <div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/en/photocraft-rea-software-industry-change.html"><span class="title">PhotoCraft and REA: The software industry is starting to change</span></a><a class="item title" href="/en/laurel-water-cup.html"><span class="title">Laurel's Little Water Cup</span></a><a class="item title" href="/en/jev-zero-shot-classifier.html"><span class="title">Jev isn't a new species: it's a classifier, so don't ride the self-media hype</span></a><a class="item title" href="/en/lark-mcp-memory-leak-from-orphan-processes.html"><span class="title">Feishu's official MCP causes a memory leak: tracking down orphan processes from lark-mcp</span></a><a class="item title" href="/en/llm-boundary-human-reserve.html"><span class="title">The strategic impact of large AI model capabilities on humanity</span></a><a class="item title" href="/en/macos-trash-instead-of-rm.html"><span class="title">It's Time to Make AI Put Files in the Trash Before Deleting Them</span></a><a class="item title" href="/en/opencode-goat-reasoning-variants.html"><span class="title">Configuring thinking-effort switching after hooking the GOAT plan up to opencode</span></a><a class="item title" href="/en/paseo-solarized-light.html"><span class="title">Paseo Solarized Light theme plugin: low contrast and easy on the eyes, install from GitHub with one command</span></a><a class="item title" href="/en/opencode-goat-commandcode-config.html"><span class="title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span></a><a class="item title" href="/en/opencode-go-limits.html"><span class="title">OpenCode Go plan usage estimates: see every model on one page</span></a><a class="item title" href="/en/no-more-fomo-dsh-qwen38.html"><span class="title">Neither DeepSeek Harness nor Qwen3.8 is a must-have for me</span></a><a class="item title" href="/en/openviking-setup.html"><span class="title">Integrating OpenViking to unify OpenCode and Hermes memory</span></a><a class="item title" href="/en/next-gen-media-generative-narrative.html"><span class="title">A Humanity Amusing Itself to Death, and the Media of the Next Generation</span></a><a class="item title" href="/en/feishu-doubao-merger-thoughts.html"><span class="title">Thoughts on the Feishu and Doubao merger</span></a><a class="item title" href="/en/paseo.html"><span class="title">Paseo, the killer tool that connects multiple coding agents</span></a><a class="item title" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html"><span class="title">cc-connect: Plugging Claude Code into Feishu</span></a><a class="item title" href="/en/trae-solo-shi-yong-ji-lu.html"><span class="title">Notes on Using the TRAE SOLO Standalone Edition</span></a><a class="item title" href="/en/coreaudiod-memory-leak-from-claude-code-hook.html"><span class="title">Fixing coreaudiod eating up to 45G of memory</span></a></div></widget>
-</div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/mousebomb" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/github-142-svgrepo-com.svg"/></a><a class="social" href="http://wpa.qq.com/msgrd?v=3&uin=405572555&site=qq&menu=yes" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/tencentqq-svgrepo-com.svg"/></a><a class="social" href="https://www.douban.com/people/mousebomb/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/douban-logo-svgrepo-com.svg"/></a><a class="social" href="https://x.com/mousebomb" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/twitter-154-svgrepo-com.svg"/></a></div></footer>
-</div></aside><div class="l_main" id="main">
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="leftbar-active-icon-grad" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+<div class="nav-area">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://mousebomb.org/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/en/"><div class="main" ff="title">FlashJ</div><div class="sub normal cap">Mousebomb's blog</div><div class="sub hover cap" style="opacity:0"> Tech + life</div></a></div></header>
+<nav class="menu dis-select">
+<div class="ui-collection" data-layout="list" data-variant="nav" data-density="auto">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-active is-themed" href="/en/" title="Blog" aria-current="page" style="--item-theme:#1cd0fd;--item-grad:url(#menu-grad-post);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Blog</span>
+      
+      
+    </span>
+  
+  
+  <span class="ui-collection__indicator"></span>
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-post" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/en/friends/" title="Friends" style="--item-theme:#1cd0fd;--item-grad:url(#menu-grad-friends);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Friends</span>
+      
+      
+    </span>
+  
+  
+  
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-friends" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/en/about/" title="About" style="--item-theme:#1cd0fd;--item-grad:url(#menu-grad-about);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M225.86 102.82c-3.77-3.94-7.67-8-9.14-11.57c-1.36-3.27-1.44-8.69-1.52-13.94c-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52c-3.56-1.47-7.63-5.37-11.57-9.14C146.28 23.51 138.44 16 128 16s-18.27 7.51-25.18 14.14c-3.94 3.77-8 7.67-11.57 9.14c-3.25 1.36-8.69 1.44-13.94 1.52c-9.76.15-20.82.31-28.51 8s-7.8 18.75-8 28.51c-.08 5.25-.16 10.67-1.52 13.94c-1.47 3.56-5.37 7.63-9.14 11.57C23.51 109.72 16 117.56 16 128s7.51 18.27 14.14 25.18c3.77 3.94 7.67 8 9.14 11.57c1.36 3.27 1.44 8.69 1.52 13.94c.15 9.76.31 20.82 8 28.51s18.75 7.85 28.51 8c5.25.08 10.67.16 13.94 1.52c3.56 1.47 7.63 5.37 11.57 9.14c6.9 6.63 14.74 14.14 25.18 14.14s18.27-7.51 25.18-14.14c3.94-3.77 8-7.67 11.57-9.14c3.27-1.36 8.69-1.44 13.94-1.52c9.76-.15 20.82-.31 28.51-8s7.85-18.75 8-28.51c.08-5.25.16-10.67 1.52-13.94c1.47-3.56 5.37-7.63 9.14-11.57c6.63-6.9 14.14-14.74 14.14-25.18s-7.51-18.27-14.14-25.18M128 192a12 12 0 1 1 12-12a12 12 0 0 1-12 12m8-48.72v.72a8 8 0 0 1-16 0v-8a8 8 0 0 1 8-8c13.23 0 24-9 24-20s-10.77-20-24-20s-24 9-24 20v4a8 8 0 0 1-16 0v-4c0-19.85 17.94-36 40-36s40 16.15 40 36c0 17.38-13.76 31.93-32 35.28"/></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">About</span>
+      
+      
+    </span>
+  
+  
+  
+  
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="menu-grad-about" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+
+</a>
+
+  
+</div>
+
+</nav>
+</div>
+
+<widget class="widget-wrapper slide-up recent-widget">
+  
+    <div class="widget-header dis-select">
+      <span class="name">Recent Update</span>
+      <a class="cap-action" id="rss" title="Subscribe" href="&#x2F;en&#x2F;atom.xml"><svg class="icon" data-icon="default:rss" aria-hidden="true"></svg></a>
+    </div>
+  
+  <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/photocraft-rea-software-industry-change.html" title="PhotoCraft and REA: The software industry is starting to change">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">PhotoCraft and REA: The software industry is starting to change</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/laurel-water-cup.html" title="Laurel&#39;s Little Water Cup">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Laurel&#39;s Little Water Cup</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/jev-zero-shot-classifier.html" title="Jev isn&#39;t a new species: it&#39;s a classifier, so don&#39;t ride the self-media hype">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Jev isn&#39;t a new species: it&#39;s a classifier, so don&#39;t ride the self-media hype</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/lark-mcp-memory-leak-from-orphan-processes.html" title="Feishu&#39;s official MCP causes a memory leak: tracking down orphan processes from lark-mcp">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Feishu&#39;s official MCP causes a memory leak: tracking down orphan processes from lark-mcp</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/llm-boundary-human-reserve.html" title="The strategic impact of large AI model capabilities on humanity">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">The strategic impact of large AI model capabilities on humanity</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/macos-trash-instead-of-rm.html" title="It&#39;s Time to Make AI Put Files in the Trash Before Deleting Them">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">It&#39;s Time to Make AI Put Files in the Trash Before Deleting Them</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-goat-reasoning-variants.html" title="Configuring thinking-effort switching after hooking the GOAT plan up to opencode">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Configuring thinking-effort switching after hooking the GOAT plan up to opencode</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-solarized-light.html" title="Paseo Solarized Light theme plugin: low contrast and easy on the eyes, install from GitHub with one command">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Paseo Solarized Light theme plugin: low contrast and easy on the eyes, install from GitHub with one command</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-goat-commandcode-config.html" title="Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-go-limits.html" title="OpenCode Go plan usage estimates: see every model on one page">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">OpenCode Go plan usage estimates: see every model on one page</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/no-more-fomo-dsh-qwen38.html" title="Neither DeepSeek Harness nor Qwen3.8 is a must-have for me">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Neither DeepSeek Harness nor Qwen3.8 is a must-have for me</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/openviking-setup.html" title="Integrating OpenViking to unify OpenCode and Hermes memory">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Integrating OpenViking to unify OpenCode and Hermes memory</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/next-gen-media-generative-narrative.html" title="A Humanity Amusing Itself to Death, and the Media of the Next Generation">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">A Humanity Amusing Itself to Death, and the Media of the Next Generation</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/feishu-doubao-merger-thoughts.html" title="Thoughts on the Feishu and Doubao merger">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Thoughts on the Feishu and Doubao merger</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo.html" title="Paseo, the killer tool that connects multiple coding agents">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Paseo, the killer tool that connects multiple coding agents</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/trae-solo-shi-yong-ji-lu.html" title="Notes on Using the TRAE SOLO Standalone Edition">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Notes on Using the TRAE SOLO Standalone Edition</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/coreaudiod-memory-leak-from-claude-code-hook.html" title="Fixing coreaudiod eating up to 45G of memory">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Fixing coreaudiod eating up to 45G of memory</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+</div></div>
+  
+</widget>
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap" style="--item-grad:url(#footer-social-icon-grad)">
+<svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="footer-social-icon-grad" x1="75%" y1="6.7%" x2="6.7%" y2="125%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></linearGradient></defs></svg>
+<a class="social" href="https:&#x2F;&#x2F;github.com&#x2F;mousebomb" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/github-142-svgrepo-com.svg"/></a><a class="social" href="http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;405572555&amp;site&#x3D;qq&amp;menu&#x3D;yes" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/tencentqq-svgrepo-com.svg"/></a><a class="social" href="https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;mousebomb&#x2F;" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/douban-logo-svgrepo-com.svg"/></a><a class="social" href="https:&#x2F;&#x2F;x.com&#x2F;mousebomb" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/twitter-154-svgrepo-com.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main" data-ui-surface="content">
+
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://mousebomb.org/"><div class="bg"></div><img no-lazy class="avatar" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">FlashJ</div><div class="sub normal cap">Mousebomb's blog</div><div class="sub hover cap" style="opacity:0"> Tech + life</div></a></div></header>
 
  
 
 
 
 
-<div class="navbar top"><nav class="post"><a href="/en/">Recent</a><a href="/en/categories/">Categories</a><a class="active" href="/en/tags/">Tag: LLM</a><a href="/en/archives/">Archives</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/en/llm-context-window-2025-summary.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></div><h2 class="post-title">Summary of AI Large Model Context Window Info — November 2025</h2><div class="excerpt"><p>This afternoon, while reading through the MCP docs, I noticed that Claude's official documentation suggests copying the full text of documents longer than 50,000 characters straight into the conversation, which struck me as unreasonable (way too many input tokens). Curious whether today's large models can actually handle that, I gave it a try with Doubao — and the context overflowed. Trae's Builder also warned that it only supports prompts up to 6,000 characters. I normally ask questions with documents, so pasting content directly into the chat felt like "a battle fought with such deep pockets" — a novelty. In the end I had the AI tally up the context window sizes of mainstream large models.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-11-04T12:22:00.000Z">2025-11-04</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/force-2025-notes.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/auto/202506122234589.webp"/></div><h2 class="post-title">Some notes from the 2025 Volcano Engine Force Conference</h2><div class="excerpt"><p>ByteDance is pushing on many fronts at once. It takes every form factor to the extreme at the product level — not only in multimodal conversational assistants (consumer-facing), cloud native, FaaS and other areas, but it's already speeding down the highway on the entry-point and ecosystem side. What struck me most was Trae Solo. Sure, it's vaporware, so I'll hold off on it for now — but why would Trae, an app aimed at programmers, get so many sessions and so much airtime over two days? I think it's wildly ambitious. Trae Solo could someday become another kind of browser, or another kind of integrated office suite. I say it replaces the browser because it will become the entry point for getting all information. I say it becomes office software because it will become the tool for producing every digital output. For me, Trae can replace Doubao, replace Coze Space, replace Manus, replace Fellou, replace any agent. MCP gives it unmatched extensibility; being a VSCode environment means it inherently has the low-level ability to run all kinds of local tools; and writing and compiling code is the ultimate fallback for whatever the above can't do. It can produce code, produce documents, analyze data — it can be a work partner and an expert in any form.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-06-12T13:50:00.000Z">2025-06-12</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/ai-product-managers-handbook-reading.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/auto/AI-Product-Managers-Handbook.jpg"/></div><h2 class="post-title">Learning Product with the AI Product Manager's Handbook: Reading and Knowledge Notes</h2><div class="excerpt"><p>I came across an introduction to the second edition of the AI Product Manager’s Handbook online, found it quite thought-provoking, and went and got myself a copy to read. The AI Product Manager’s Handbook is a practical guide to the field of AI product management, intended to help readers systematically understand and master the key methods and approaches for building, managing, and maintaining AI products in real-world work. The book was written by Irene Bratsis, and the second edition was published by Packt Publishing in November 2024. It not only covers the fundamentals of AI product management but also digs deep into technical infrastructure, model development and maintenance, deep learning, commercialization strategy, and product design, among other areas.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-06-07T09:16:00.000Z">2025-06-07</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></div><h2 class="post-title">The era of large models forces humans to reimagine originality and uniqueness</h2><div class="excerpt"><p>Wrongly flagged by AI, how do I prove “I didn't cheat with AI”? What struck us most is this: should the way we teach evolve along with technology? If AI can already do these things so well, why assign homework that AI can do so well? Where does human uniqueness come in — shouldn't homework be built around what makes humans unique?</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-06-03T00:56:00.000Z">2025-06-03</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/qwen3-really-fast.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/qwen3-banner.png"/></div><h2 class="post-title">Qwen3 is really fast</h2><div class="excerpt"><p>Qwen3 is really fast — 0.2 seconds to first token, 55 TPS, more than 220% faster than the previous QwQ-32B...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-04-29T07:50:00.000Z">2025-04-29</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/fellou.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/auto/202506051102297.jpg"/></div><h2 class="post-title">Fellou browser</h2><div class="excerpt"><p>Recently, the updated Trae added support for MCP, opening up a whole new way to use it — for programmers, this is another form of Manus. Then right after, I got my hands on something new that makes digital life better: a **Fellou** that puts the browser to work for me, automatically running deep research and boosting efficiency. Both are shining examples of homegrown tech.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-04-24T02:32:00.000Z">2025-04-24</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/qwq-32B-jinja-error.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://camo.githubusercontent.com/f792bfe6c6ec3fff47331dc415ceb99d4d7116e54c72dc55e12c77bac9f57c07/68747470733a2f2f7169616e77656e2d7265732e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f5177512f5177515f6c6f676f2e706e67"/></div><h2 class="post-title">How to fix errors when running QwQ-32B in LMStudio</h2><div class="excerpt"><p>When using QwQ-32B, the MLX version throws this error during chat: “Error rendering prompt with jinja template: Error: Parser Error: Expected closing statement token. OpenSquareBracket !== CloseStatement.”, which you need to fix by modifying the jinja template. The gguf version doesn't have this problem. After the fix it ran successfully, as shown in the image.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-03-06T11:01:38.000Z">2025-03-06</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/agi-future-like-manus.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"/></div><h2 class="post-title">Manus and the AI tools I've been tinkering with lately</h2><div class="excerpt"><p>Trae's China version now supports DeepSeek, and it outperforms Claude3.5-Sonnet in some scenarios. QwQ-32B's performance is close to R1, making it a good fit for local deployment. If Manus goes mainstream, it will upend existing technology, and future AI will need cloud resources to support multimodal operations and agent collaboration.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-03-06T04:49:51.000Z">2025-03-06</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/llm-local-sheishiwodi-1.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/auto/202501312231105.png"/></div><h2 class="post-title">Playing “Who's the Spy” locally with an LLM</h2><div class="excerpt"><p>It's Chinese New Year, and everyone is talking about DeepSeek. Laurel wants to play "Who's the Spy" but can never round up enough people, so I built an AI-powered "Who's the Spy" game bot that calls an LLM to generate character descriptions and voting strategies — but I ran into problems like unstable model output and formatting errors. After tweaking the model and the prompts over and over, I finally got the basic functionality working, and the whole process was full of funny mistakes and challenges.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-01-30T01:57:09.000Z">2025-01-30</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a><a class="post-card post" href="/en/anythingllm.html">
-<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/auto/202501261515014.png"/></div><h2 class="post-title">Recommending AnythingLLM for building a private AI assistant</h2><div class="excerpt"><p>I'd like to recommend AnythingLLM. Combined with LM Studio, it can run local large models as a private AI assistant. I'll share my experience trying it out for document processing and studying traditional Chinese medicine. The results are only so-so for now, but the journey from zero to one is well worth it.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-01-26T06:43:14.000Z">2025-01-26</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>AI</span></span></div></article>
-</a></div>
 
-  <div class='paginator-wrap dis-select'>
-  <a class="extend prev" rel="prev" href="/en/tags/LLM/"></a><a class="page-number" href="/en/tags/LLM/">1</a><span class="page-number current">2</span><a class="page-number" href="/en/tags/LLM/page/3/">3</a><a class="extend next" rel="next" href="/en/tags/LLM/page/3/"></a>
+<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/en/">Recent</a><a href="/en/categories/">Categories</a><a class="active" href="/en/tags/">Tag: LLM</a><a href="/en/archives/">Archives</a></nav></div></div></div>
+
+<div class="post-list post"><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/llm-context-window-2025-summary.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;plus.unsplash.com&#x2F;premium_photo-1683121710572-7723bd2e235d?q&#x3D;80&amp;w&#x3D;3132&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;ixlib&#x3D;rb-4.1.0&amp;ixid&#x3D;M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></div><h2 class="post-title">Summary of AI Large Model Context Window Info — November 2025</h2><div class="excerpt"><p>This afternoon, while reading through the MCP docs, I noticed that Claude&#39;s official documentation suggests copying the full text of documents longer than 50,000 characters straight into the conversation, which struck me as unreasonable (way too many input tokens). Curious whether today&#39;s large models can actually handle that, I gave it a try with Doubao — and the context overflowed. Trae&#39;s Builder also warned that it only supports prompts up to 6,000 characters. I normally ask questions with documents, so pasting content directly into the chat felt like &quot;a battle fought with such deep pockets&quot; — a novelty. In the end I had the AI tally up the context window sizes of mainstream large models.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-11-04T12:22:00.000Z">2025-11-04</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/force-2025-notes.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;cdn.mousebomb.org&#x2F;blog&#x2F;auto&#x2F;202506122234589.webp"/></div><h2 class="post-title">Some notes from the 2025 Volcano Engine Force Conference</h2><div class="excerpt"><p>ByteDance is pushing on many fronts at once. It takes every form factor to the extreme at the product level — not only in multimodal conversational assistants (consumer-facing), cloud native, FaaS and other areas, but it&#39;s already speeding down the highway on the entry-point and ecosystem side. What struck me most was Trae Solo. Sure, it&#39;s vaporware, so I&#39;ll hold off on it for now — but why would Trae, an app aimed at programmers, get so many sessions and so much airtime over two days? I think it&#39;s wildly ambitious. Trae Solo could someday become another kind of browser, or another kind of integrated office suite. I say it replaces the browser because it will become the entry point for getting all information. I say it becomes office software because it will become the tool for producing every digital output. For me, Trae can replace Doubao, replace Coze Space, replace Manus, replace Fellou, replace any agent. MCP gives it unmatched extensibility; being a VSCode environment means it inherently has the low-level ability to run all kinds of local tools; and writing and compiling code is the ultimate fallback for whatever the above can&#39;t do. It can produce code, produce documents, analyze data — it can be a work partner and an expert in any form.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-06-12T13:50:00.000Z">2025-06-12</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/ai-product-managers-handbook-reading.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;cdn.mousebomb.org&#x2F;blog&#x2F;auto&#x2F;AI-Product-Managers-Handbook.jpg"/></div><h2 class="post-title">Learning Product with the AI Product Manager&#39;s Handbook: Reading and Knowledge Notes</h2><div class="excerpt"><p>I came across an introduction to the second edition of the AI Product Manager’s Handbook online, found it quite thought-provoking, and went and got myself a copy to read. The AI Product Manager’s Handbook is a practical guide to the field of AI product management, intended to help readers systematically understand and master the key methods and approaches for building, managing, and maintaining AI products in real-world work. The book was written by Irene Bratsis, and the second edition was published by Packt Publishing in November 2024. It not only covers the fundamentals of AI product management but also digs deep into technical infrastructure, model development and maintenance, deep learning, commercialization strategy, and product design, among other areas.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-06-07T09:16:00.000Z">2025-06-07</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/the-age-of-LLMs-forces-humans-to-rethink-originality-and-uniqueness.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;plus.unsplash.com&#x2F;premium_photo-1683121710572-7723bd2e235d?q&#x3D;80&amp;w&#x3D;3132&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;ixlib&#x3D;rb-4.1.0&amp;ixid&#x3D;M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></div><h2 class="post-title">The era of large models forces humans to reimagine originality and uniqueness</h2><div class="excerpt"><p>Wrongly flagged by AI, how do I prove “I didn&#39;t cheat with AI”? What struck us most is this: should the way we teach evolve along with technology? If AI can already do these things so well, why assign homework that AI can do so well? Where does human uniqueness come in — shouldn&#39;t homework be built around what makes humans unique?</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-06-03T00:56:00.000Z">2025-06-03</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/qwen3-really-fast.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;qianwen-res.oss-accelerate-overseas.aliyuncs.com&#x2F;qwen3-banner.png"/></div><h2 class="post-title">Qwen3 is really fast</h2><div class="excerpt"><p>Qwen3 is really fast — 0.2 seconds to first token, 55 TPS, more than 220% faster than the previous QwQ-32B...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-04-29T07:50:00.000Z">2025-04-29</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/fellou.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;cdn.mousebomb.org&#x2F;blog&#x2F;auto&#x2F;202506051102297.jpg"/></div><h2 class="post-title">Fellou browser</h2><div class="excerpt"><p>Recently, the updated Trae added support for MCP, opening up a whole new way to use it — for programmers, this is another form of Manus. Then right after, I got my hands on something new that makes digital life better: a **Fellou** that puts the browser to work for me, automatically running deep research and boosting efficiency. Both are shining examples of homegrown tech.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-04-24T02:32:00.000Z">2025-04-24</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/qwq-32B-jinja-error.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;camo.githubusercontent.com&#x2F;f792bfe6c6ec3fff47331dc415ceb99d4d7116e54c72dc55e12c77bac9f57c07&#x2F;68747470733a2f2f7169616e77656e2d7265732e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f5177512f5177515f6c6f676f2e706e67"/></div><h2 class="post-title">How to fix errors when running QwQ-32B in LMStudio</h2><div class="excerpt"><p>When using QwQ-32B, the MLX version throws this error during chat: “Error rendering prompt with jinja template: Error: Parser Error: Expected closing statement token. OpenSquareBracket !&#x3D;&#x3D; CloseStatement.”, which you need to fix by modifying the jinja template. The gguf version doesn&#39;t have this problem. After the fix it ran successfully, as shown in the image.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-03-06T11:01:38.000Z">2025-03-06</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/agi-future-like-manus.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;cdn.mousebomb.org&#x2F;blog&#x2F;auto&#x2F;cover-B-deep-ink.webp"/></div><h2 class="post-title">Manus and the AI tools I&#39;ve been tinkering with lately</h2><div class="excerpt"><p>Trae&#39;s China version now supports DeepSeek, and it outperforms Claude3.5-Sonnet in some scenarios. QwQ-32B&#39;s performance is close to R1, making it a good fit for local deployment. If Manus goes mainstream, it will upend existing technology, and future AI will need cloud resources to support multimodal operations and agent collaboration.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-03-06T04:49:51.000Z">2025-03-06</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/llm-local-sheishiwodi-1.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;cdn.mousebomb.org&#x2F;blog&#x2F;auto&#x2F;202501312231105.png"/></div><h2 class="post-title">Playing “Who&#39;s the Spy” locally with an LLM</h2><div class="excerpt"><p>It&#39;s Chinese New Year, and everyone is talking about DeepSeek. Laurel wants to play &quot;Who&#39;s the Spy&quot; but can never round up enough people, so I built an AI-powered &quot;Who&#39;s the Spy&quot; game bot that calls an LLM to generate character descriptions and voting strategies — but I ran into problems like unstable model output and formatting errors. After tweaking the model and the prompts over and over, I finally got the basic functionality working, and the whole process was full of funny mistakes and challenges.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-01-30T01:57:09.000Z">2025-01-30</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/en/anythingllm.html">
+<article class="md-text"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https:&#x2F;&#x2F;cdn.mousebomb.org&#x2F;blog&#x2F;auto&#x2F;202501261515014.png"/></div><h2 class="post-title">Recommending AnythingLLM for building a private AI assistant</h2><div class="excerpt"><p>I&#39;d like to recommend AnythingLLM. Combined with LM Studio, it can run local large models as a private AI assistant. I&#39;ll share my experience trying it out for document processing and studying traditional Chinese medicine. The results are only so-so for now, but the journey from zero to one is well worth it.</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2025-01-26T06:43:14.000Z">2025-01-26</time></span><span class="cap breadcrumb"><svg class="icon" data-icon="default:category" aria-hidden="true"></svg><span>AI</span></span></div></article>
+</a></div></div>
+
+  <div class='paginator-wrap dis-select slide-up'>
+  <a class="extend prev" rel="prev" href="/en/tags/LLM/"><svg class="icon" data-icon="default:arrow-left" aria-hidden="true"></svg></a><a class="page-number" href="/en/tags/LLM/">1</a><span class="page-number current">2</span><a class="page-number" href="/en/tags/LLM/page/3/">3</a><a class="extend next" rel="next" href="/en/tags/LLM/page/3/"><svg class="icon" data-icon="default:arrow-right" aria-hidden="true"></svg></a>
   </div>
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>Built by <a href="/">Mousebomb</a> with the <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.0">Stellar 1.30.0</a> theme.<br>Unless stated otherwise, all posts here are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — please credit the source when reposting.<br>Language &#x2F; 语言: <a class="mb-lang-foot" href="/" hreflang="zh-CN" lang="zh-CN">简体中文</a><br><span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span></span> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">粤ICP备16007529号-2</a></p>
+
+
+
+<footer class="page-footer slide-up footnote"><hr><div class="text"><p>Built by <a href="/">Mousebomb</a> with the <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.44.0">Stellar 1.44.0</a> theme.<br>Unless stated otherwise, all posts here are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — please credit the source when reposting.<br>Language &#x2F; 语言: <a class="mb-lang-foot" href="/" hreflang="zh-CN" lang="zh-CN">简体中文</a><br><span id="busuanzi_container_site_pv">Total visits <span id="busuanzi_value_site_pv"></span></span> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">粤ICP备16007529号-2</a></p>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script defer src="https://mousebomb.org/api/stats/t.js"></script>
 </div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-<widget class="widget-wrapper user-card ghuser"><div class="widget-body"><div class="avatar"><img no-lazy type="img" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><p class="username" ff="title">Mousebomb</p><p class="bio"><span class="l" style="display:block">Indie developer in Shenzhen </span><span class="l" style="display:block;margin-top:.5em">Building products &amp; tools with full-stack + AI</span><span class="l" style="display:block;margin-top:.5em">Previously shipped games with 100M+ downloads</span></p><a class="follow" target="_blank" rel="noopener" href="https://github.com/mousebomb"><svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Follow</a></div></widget>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"><div class="widgets">
+<widget class="widget-wrapper slide-up user-card ghuser"><div class="widget-body"><div class="avatar"><img no-lazy type="img" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><p class="username" ff="title">Mousebomb</p><p class="bio"><span class="l" style="display:block">Indie developer in Shenzhen </span><span class="l" style="display:block;margin-top:.5em">Building products &amp; tools with full-stack + AI</span><span class="l" style="display:block;margin-top:.5em">Previously shipped games with 100M+ downloads</span></p><a class="follow" target="_blank" rel="noopener" href="https://github.com/mousebomb"><svg class="icon" data-icon="github:logo" aria-hidden="true"></svg>Follow</a></div></widget>
 
-<widget class="widget-wrapper linklist"><div class="widget-header dis-select"><span class="name">Friends</span></div><div class="widget-body fs14">
-<div class="linklist center" style="grid-template-columns:repeat(2,1fr);">
-<a class="link" title="Travellings" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3" width="17" height="12" rx="3.2"/><path d="M3.5 10.2h17"/><circle cx="8" cy="17.8" r="1.6"/><circle cx="16" cy="17.8" r="1.6"/><path d="M3.5 21.4h17"/></svg><span>Travellings</span></div></a>
-<a class="link" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/go.html"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.0 10.2 L12.5 10.1 L13.0 10.1 L13.5 10.3 L14.0 10.7 L14.4 11.3 L14.5 11.9 L14.5 12.7 L14.2 13.4 L13.7 14.1 L12.9 14.6 L12.0 14.9 L11.0 14.9 L10.0 14.6 L9.0 14.1 L8.2 13.2 L7.7 12.2 L7.6 11.0 L7.8 9.8 L8.4 8.6 L9.3 7.6 L10.5 6.9 L12.0 6.5 L13.6 6.6 L15.1 7.0 L16.4 7.9 L17.5 9.2 L18.2 10.8 L18.3 12.5 L18.0 14.2 L17.1 15.8 L15.7 17.1 L14.0 18.1 L12.0 18.5 L9.9 18.4 L7.9 17.7 L6.1 16.5 L4.7 14.7 L3.9 12.7 L3.8 10.5 L4.3 8.2 L5.4 6.2 L7.2 4.5 L9.5 3.4 L12.0 2.9"/></svg><span>十年之约</span></div></a>
-<a class="link" title="jimohuoshan" target="_blank" rel="noopener" href="http://www.huoshan.org/"><div class="flex"><span>jimohuoshan</span></div></a>
-<a class="link" title="molayc" target="_blank" rel="noopener" href="http://www.molayc.com/blog/"><div class="flex"><span>molayc</span></div></a>
-<a class="link" title="Seven" target="_blank" rel="noopener" href="https://www.askdaddy.io/"><div class="flex"><span>Seven</span></div></a>
-<a class="link" title="SUNNY GAO" target="_blank" rel="noopener" href="http://www.sunshineg.com/"><div class="flex"><span>SUNNY GAO</span></div></a>
-<a class="link" title="JESSAMINE" target="_blank" rel="noopener" href="https://www.jessamine.net/"><div class="flex"><span>JESSAMINE</span></div></a>
-<a class="link" title="WOW Expo" target="_blank" rel="noopener" href="http://www.flashj.cn/wow/"><div class="flex"><span>WOW Expo</span></div></a>
-<a class="link" title="View all →" href="/en/friends/"><div class="flex"><span>View all →</span></div></a></div></div></widget>
 
-<widget class="widget-wrapper tagcloud"><div class="widget-header dis-select"><span class="name">Tag Cloud</span></div><div class="widget-body fs14"><a href="/en/tags/ea/" style="font-size: 18.72px;" class="tag -6">ea</a> <a href="/en/tags/Blizzard/" style="font-size: 19.2px;" class="tag -6">Blizzard</a> <a href="/en/tags/Game/" style="font-size: 21.12px;" class="tag -8">Game</a> <a href="/en/tags/ff/" style="font-size: 12px;" class="tag -0">ff</a> <a href="/en/tags/Download/" style="font-size: 23.04px;" class="tag -9">Download</a> <a href="/en/tags/Event/" style="font-size: 12.48px;" class="tag -0">Event</a> <a href="/en/tags/as3/" style="font-size: 23.52px;" class="tag -10">as3</a> <a href="/en/tags/ria/" style="font-size: 21.6px;" class="tag -8">ria</a> <a href="/en/tags/Tiandi-Hui/" style="font-size: 12.48px;" class="tag -0">Tiandi Hui</a> <a href="/en/tags/Gathering/" style="font-size: 12.48px;" class="tag -0">Gathering</a> <a href="/en/tags/wow/" style="font-size: 18.72px;" class="tag -6">wow</a> <a href="/en/tags/Warcraft/" style="font-size: 14.4px;" class="tag -2">Warcraft</a> <a href="/en/tags/Jiutian/" style="font-size: 12px;" class="tag -0">Jiutian</a> <a href="/en/tags/Music-Player/" style="font-size: 12px;" class="tag -0">Music Player</a> <a href="/en/tags/Shanghai/" style="font-size: 12.96px;" class="tag -1">Shanghai</a> <a href="/en/tags/Work/" style="font-size: 14.88px;" class="tag -2">Work</a> <a href="/en/tags/Qoolu-Network/" style="font-size: 12.48px;" class="tag -0">Qoolu Network</a> <a href="/en/tags/AI/" style="font-size: 22.56px;" class="tag -9">AI</a> <a href="/en/tags/openclaw/" style="font-size: 12px;" class="tag -0">openclaw</a> <a href="/en/tags/Trae/" style="font-size: 14.4px;" class="tag -2">Trae</a> <a href="/en/tags/vibecoding/" style="font-size: 13.44px;" class="tag -1">vibecoding</a> <a href="/en/tags/ClaudeCode/" style="font-size: 13.92px;" class="tag -2">ClaudeCode</a> <a href="/en/tags/TCM/" style="font-size: 12px;" class="tag -0">TCM</a> <a href="/en/tags/LLM/" style="font-size: 22.08px;" class="tag -8">LLM</a> <a href="/en/tags/Pulse-Diagnosis/" style="font-size: 12px;" class="tag -0">Pulse Diagnosis</a> <a href="/en/tags/AI-Memory/" style="font-size: 12px;" class="tag -0">AI Memory</a> <a href="/en/tags/Transformer/" style="font-size: 12px;" class="tag -0">Transformer</a> <a href="/en/tags/Open-Source/" style="font-size: 13.92px;" class="tag -2">Open Source</a> <a href="/en/tags/MSA/" style="font-size: 12px;" class="tag -0">MSA</a> <a href="/en/tags/RAG/" style="font-size: 12.48px;" class="tag -0">RAG</a> <a href="/en/tags/Context-Window/" style="font-size: 12px;" class="tag -0">Context Window</a> <a href="/en/tags/OpenClaw/" style="font-size: 14.4px;" class="tag -2">OpenClaw</a> <a href="/en/tags/Browser-Automation/" style="font-size: 12px;" class="tag -0">Browser Automation</a> <a href="/en/tags/Playwright/" style="font-size: 12px;" class="tag -0">Playwright</a> <a href="/en/tags/CDP/" style="font-size: 12.48px;" class="tag -0">CDP</a> <a href="/en/tags/DevTools/" style="font-size: 12.48px;" class="tag -0">DevTools</a> <a href="/en/tags/Efficiency/" style="font-size: 12px;" class="tag -0">Efficiency</a> <a href="/en/tags/Tool/" style="font-size: 17.28px;" class="tag -4">Tool</a> <a href="/en/tags/Productivity/" style="font-size: 12.96px;" class="tag -1">Productivity</a> <a href="/en/tags/Time-Tracking/" style="font-size: 12px;" class="tag -0">Time Tracking</a> <a href="/en/tags/Qbserve/" style="font-size: 12px;" class="tag -0">Qbserve</a> <a href="/en/tags/RescueTime/" style="font-size: 12px;" class="tag -0">RescueTime</a> <a href="/en/tags/Grandma/" style="font-size: 13.92px;" class="tag -2">Grandma</a> <a href="/en/tags/Farewell/" style="font-size: 12.48px;" class="tag -0">Farewell</a> <a href="/en/tags/Jiangyan/" style="font-size: 12.48px;" class="tag -0">Jiangyan</a> <a href="/en/tags/Remembrance/" style="font-size: 13.44px;" class="tag -1">Remembrance</a> <a href="/en/tags/Flash/" style="font-size: 12px;" class="tag -0">Flash</a> <a href="/en/tags/Nostalgia/" style="font-size: 12.96px;" class="tag -1">Nostalgia</a> <a href="/en/tags/Ruffle/" style="font-size: 12px;" class="tag -0">Ruffle</a> <a href="/en/tags/Emulator/" style="font-size: 12px;" class="tag -0">Emulator</a> <a href="/en/tags/Browser-Plugin/" style="font-size: 12px;" class="tag -0">Browser Plugin</a> <a href="/en/tags/Web-Technology/" style="font-size: 12px;" class="tag -0">Web Technology</a> <a href="/en/tags/SarahBrightman/" style="font-size: 12.48px;" class="tag -0">SarahBrightman</a> <a href="/en/tags/Music/" style="font-size: 20.16px;" class="tag -7">Music</a> <a href="/en/tags/flash/" style="font-size: 24px;" class="tag -10">flash</a> <a href="/en/tags/Web-Games/" style="font-size: 12px;" class="tag -0">Web Games</a> <a href="/en/tags/Virtual-Community/" style="font-size: 12px;" class="tag -0">Virtual Community</a> <a href="/en/tags/addEventListener/" style="font-size: 12px;" class="tag -0">addEventListener</a> <a href="/en/tags/event/" style="font-size: 12px;" class="tag -0">event</a> <a href="/en/tags/air/" style="font-size: 20.64px;" class="tag -7">air</a> <a href="/en/tags/Cookbook/" style="font-size: 12px;" class="tag -0">Cookbook</a> <a href="/en/tags/Book/" style="font-size: 12.48px;" class="tag -0">Book</a> <a href="/en/tags/adobe/" style="font-size: 17.28px;" class="tag -4">adobe</a> <a href="/en/tags/Tech-Summit/" style="font-size: 12px;" class="tag -0">Tech Summit</a> <a href="/en/tags/as/" style="font-size: 15.84px;" class="tag -3">as</a> <a href="/en/tags/rtmp/" style="font-size: 12.48px;" class="tag -0">rtmp</a> <a href="/en/tags/agent/" style="font-size: 14.4px;" class="tag -2">agent</a> <a href="/en/tags/sop/" style="font-size: 12px;" class="tag -0">sop</a> <a href="/en/tags/AGI/" style="font-size: 12px;" class="tag -0">AGI</a> <a href="/en/tags/manus/" style="font-size: 12px;" class="tag -0">manus</a> <a href="/en/tags/DeepSeek/" style="font-size: 13.92px;" class="tag -2">DeepSeek</a> <a href="/en/tags/QwQ/" style="font-size: 12.48px;" class="tag -0">QwQ</a> <a href="/en/tags/Product-Manager/" style="font-size: 12px;" class="tag -0">Product Manager</a> <a href="/en/tags/Learning/" style="font-size: 12.96px;" class="tag -1">Learning</a> <a href="/en/tags/FOX/" style="font-size: 12px;" class="tag -0">FOX</a> <a href="/en/tags/Family/" style="font-size: 12px;" class="tag -0">Family</a> <a href="/en/tags/Children-s/" style="font-size: 12px;" class="tag -0">Children's</a> <a href="/en/tags/Movie/" style="font-size: 22.08px;" class="tag -8">Movie</a> <a href="/en/tags/flex/" style="font-size: 16.8px;" class="tag -4">flex</a> <a href="/en/tags/Taskbar/" style="font-size: 12px;" class="tag -0">Taskbar</a> <a href="/en/tags/Minimize/" style="font-size: 12px;" class="tag -0">Minimize</a> <a href="/en/tags/System-Tray/" style="font-size: 12px;" class="tag -0">System Tray</a> <a href="/en/tags/Fanfou/" style="font-size: 13.44px;" class="tag -1">Fanfou</a> <a href="/en/tags/file/" style="font-size: 12.96px;" class="tag -1">file</a> <a href="/en/tags/fileStream/" style="font-size: 12.48px;" class="tag -0">fileStream</a> <a href="/en/tags/File-Operations/" style="font-size: 12.96px;" class="tag -1">File Operations</a> <a href="/en/tags/File-System/" style="font-size: 12.96px;" class="tag -1">File System</a> <a href="/en/tags/File-Association/" style="font-size: 12px;" class="tag -0">File Association</a> <a href="/en/tags/File-Format/" style="font-size: 12.48px;" class="tag -0">File Format</a> <a href="/en/tags/httpbasic/" style="font-size: 12px;" class="tag -0">httpbasic</a> <a href="/en/tags/URL-scheme/" style="font-size: 12px;" class="tag -0">URL scheme</a> <a href="/en/tags/Ads/" style="font-size: 12.48px;" class="tag -0">Ads</a> <a href="/en/tags/President-Shoe-Throwing-Sparks-Bloodbath/" style="font-size: 12px;" class="tag -0">President Shoe-Throwing Sparks Bloodbath</a> <a href="/en/tags/Comedy/" style="font-size: 13.44px;" class="tag -1">Comedy</a> <a href="/en/tags/Alibaba/" style="font-size: 12px;" class="tag -0">Alibaba</a> <a href="/en/tags/Trailer/" style="font-size: 12px;" class="tag -0">Trailer</a> <a href="/en/tags/ant/" style="font-size: 12px;" class="tag -0">ant</a> <a href="/en/tags/fdt/" style="font-size: 12.96px;" class="tag -1">fdt</a> <a href="/en/tags/mxmlc/" style="font-size: 12px;" class="tag -0">mxmlc</a> <a href="/en/tags/AnythingLLM/" style="font-size: 12px;" class="tag -0">AnythingLLM</a> <a href="/en/tags/LM/" style="font-size: 12px;" class="tag -0">LM</a> <a href="/en/tags/Studio/" style="font-size: 12px;" class="tag -0">Studio</a> <a href="/en/tags/CodeGPT/" style="font-size: 12px;" class="tag -0">CodeGPT</a> <a href="/en/tags/IDEA/" style="font-size: 12px;" class="tag -0">IDEA</a> <a href="/en/tags/apple/" style="font-size: 16.8px;" class="tag -4">apple</a> <a href="/en/tags/xbmc/" style="font-size: 12.96px;" class="tag -1">xbmc</a> <a href="/en/tags/Color/" style="font-size: 12px;" class="tag -0">Color</a> <a href="/en/tags/Array/" style="font-size: 12px;" class="tag -0">Array</a> <a href="/en/tags/object/" style="font-size: 12px;" class="tag -0">object</a> <a href="/en/tags/Shenzhen/" style="font-size: 14.4px;" class="tag -2">Shenzhen</a> <a href="/en/tags/action/" style="font-size: 12px;" class="tag -0">action</a> <a href="/en/tags/cocos2d/" style="font-size: 12.48px;" class="tag -0">cocos2d</a> <a href="/en/tags/ios/" style="font-size: 16.32px;" class="tag -4">ios</a> <a href="/en/tags/objective-c/" style="font-size: 13.44px;" class="tag -1">objective-c</a> <a href="/en/tags/GTween/" style="font-size: 12.96px;" class="tag -1">GTween</a> <a href="/en/tags/Effect/" style="font-size: 12px;" class="tag -0">Effect</a> <a href="/en/tags/Source/" style="font-size: 13.92px;" class="tag -2">Source</a> <a href="/en/tags/Sound/" style="font-size: 12px;" class="tag -0">Sound</a> <a href="/en/tags/alchemy/" style="font-size: 12px;" class="tag -0">alchemy</a> <a href="/en/tags/ByteArray/" style="font-size: 12.48px;" class="tag -0">ByteArray</a> <a href="/en/tags/flashplayer/" style="font-size: 13.92px;" class="tag -2">flashplayer</a> <a href="/en/tags/Memory/" style="font-size: 12.48px;" class="tag -0">Memory</a> <a href="/en/tags/encode/" style="font-size: 12px;" class="tag -0">encode</a> <a href="/en/tags/gif/" style="font-size: 12px;" class="tag -0">gif</a> <a href="/en/tags/1009/" style="font-size: 12px;" class="tag -0">1009</a> <a href="/en/tags/Error/" style="font-size: 18.24px;" class="tag -5">Error</a> <a href="/en/tags/zip/" style="font-size: 12px;" class="tag -0">zip</a> <a href="/en/tags/Development-resources/" style="font-size: 12px;" class="tag -0">Development resources</a> <a href="/en/tags/Class-library/" style="font-size: 12px;" class="tag -0">Class library</a> <a href="/en/tags/Ashbringer/" style="font-size: 12px;" class="tag -0">Ashbringer</a> <a href="/en/tags/World-of-Warcraft/" style="font-size: 17.76px;" class="tag -5">World of Warcraft</a> <a href="/en/tags/404/" style="font-size: 12.96px;" class="tag -1">404</a> <a href="/en/tags/asp/" style="font-size: 12px;" class="tag -0">asp</a> <a href="/en/tags/iis/" style="font-size: 13.44px;" class="tag -1">iis</a> <a href="/en/tags/avatar/" style="font-size: 12.96px;" class="tag -1">avatar</a> <a href="/en/tags/Aliens/" style="font-size: 15.36px;" class="tag -3">Aliens</a> <a href="/en/tags/Universe/" style="font-size: 17.76px;" class="tag -5">Universe</a> <a href="/en/tags/Sci-Fi/" style="font-size: 19.68px;" class="tag -6">Sci-Fi</a> <a href="/en/tags/Plan/" style="font-size: 12px;" class="tag -0">Plan</a> <a href="/en/tags/drama/" style="font-size: 12px;" class="tag -0">drama</a> <a href="/en/tags/mv/" style="font-size: 12px;" class="tag -0">mv</a> <a href="/en/tags/smash/" style="font-size: 12px;" class="tag -0">smash</a> <a href="/en/tags/tv/" style="font-size: 12px;" class="tag -0">tv</a> <a href="/en/tags/TV-Series/" style="font-size: 18.24px;" class="tag -5">TV Series</a> <a href="/en/tags/IT/" style="font-size: 12.48px;" class="tag -0">IT</a> <a href="/en/tags/Other/" style="font-size: 13.44px;" class="tag -1">Other</a> <a href="/en/tags/Microsoft/" style="font-size: 12.48px;" class="tag -0">Microsoft</a> <a href="/en/tags/Bill-Gates/" style="font-size: 12px;" class="tag -0">Bill Gates</a> <a href="/en/tags/Optimization/" style="font-size: 12px;" class="tag -0">Optimization</a> <a href="/en/tags/Bitmap-engine/" style="font-size: 12px;" class="tag -0">Bitmap engine</a> <a href="/en/tags/Rendering/" style="font-size: 12px;" class="tag -0">Rendering</a> <a href="/en/tags/Black-Myth-Wukong/" style="font-size: 12.48px;" class="tag -0">Black Myth: Wukong</a> <a href="/en/tags/Action-Game/" style="font-size: 14.4px;" class="tag -2">Action Game</a> <a href="/en/tags/Journey-to-the-West/" style="font-size: 12px;" class="tag -0">Journey to the West</a> <a href="/en/tags/Video-Games/" style="font-size: 15.84px;" class="tag -3">Video Games</a> <a href="/en/tags/Single-player-game/" style="font-size: 14.88px;" class="tag -2">Single-player game</a> <a href="/en/tags/airport/" style="font-size: 12px;" class="tag -0">airport</a> <a href="/en/tags/loader/" style="font-size: 12.96px;" class="tag -1">loader</a> <a href="/en/tags/AI-tools/" style="font-size: 12px;" class="tag -0">AI tools</a> <a href="/en/tags/Claude-Code/" style="font-size: 12.96px;" class="tag -1">Claude Code</a> <a href="/en/tags/Feishu-bot/" style="font-size: 12px;" class="tag -0">Feishu bot</a> <a href="/en/tags/cc-connect/" style="font-size: 12px;" class="tag -0">cc-connect</a> <a href="/en/tags/Middle-earth-Battle/" style="font-size: 12px;" class="tag -0">Middle-earth Battle</a> <a href="/en/tags/Strategy-Game/" style="font-size: 18.24px;" class="tag -5">Strategy Game</a> <a href="/en/tags/Patch/" style="font-size: 12.48px;" class="tag -0">Patch</a> <a href="/en/tags/cecile-corbel/" style="font-size: 12px;" class="tag -0">cecile corbel</a> <a href="/en/tags/Chrome/" style="font-size: 12.48px;" class="tag -0">Chrome</a> <a href="/en/tags/MCP/" style="font-size: 13.92px;" class="tag -2">MCP</a> <a href="/en/tags/macOS/" style="font-size: 13.44px;" class="tag -1">macOS</a> <a href="/en/tags/Debugging/" style="font-size: 12px;" class="tag -0">Debugging</a> <a href="/en/tags/scrollTop/" style="font-size: 12px;" class="tag -0">scrollTop</a> <a href="/en/tags/Webpage/" style="font-size: 14.4px;" class="tag -2">Webpage</a> <a href="/en/tags/Remote-Debugging/" style="font-size: 12px;" class="tag -0">Remote Debugging</a> <a href="/en/tags/Error-Notes/" style="font-size: 12px;" class="tag -0">Error Notes</a> <a href="/en/tags/chrome/" style="font-size: 12px;" class="tag -0">chrome</a> <a href="/en/tags/debug/" style="font-size: 13.44px;" class="tag -1">debug</a> <a href="/en/tags/peon-ping/" style="font-size: 12.48px;" class="tag -0">peon-ping</a> <a href="/en/tags/Tools/" style="font-size: 14.4px;" class="tag -2">Tools</a> <a href="/en/tags/Generals/" style="font-size: 12px;" class="tag -0">Generals</a> <a href="/en/tags/Screenshot/" style="font-size: 13.44px;" class="tag -1">Screenshot</a> <a href="/en/tags/tw/" style="font-size: 12px;" class="tag -0">tw</a> <a href="/en/tags/Esports/" style="font-size: 12.48px;" class="tag -0">Esports</a> <a href="/en/tags/Kane/" style="font-size: 12.48px;" class="tag -0">Kane</a> <a href="/en/tags/Command-Conquer/" style="font-size: 13.44px;" class="tag -1">Command & Conquer</a> <a href="/en/tags/Tiberium-Wars/" style="font-size: 12px;" class="tag -0">Tiberium Wars</a> <a href="/en/tags/Competitive-Game/" style="font-size: 14.88px;" class="tag -2">Competitive Game</a> <a href="/en/tags/Demo/" style="font-size: 12px;" class="tag -0">Demo</a> <a href="/en/tags/cntv/" style="font-size: 12px;" class="tag -0">cntv</a> <a href="/en/tags/National-Network-Television/" style="font-size: 12px;" class="tag -0">National Network Television</a> <a href="/en/tags/c/" style="font-size: 12px;" class="tag -0">c++</a> <a href="/en/tags/cocos2dx/" style="font-size: 12.48px;" class="tag -0">cocos2dx</a> <a href="/en/tags/googleplay/" style="font-size: 12px;" class="tag -0">googleplay</a> <a href="/en/tags/java/" style="font-size: 12.48px;" class="tag -0">java</a> <a href="/en/tags/Mobile/" style="font-size: 14.4px;" class="tag -2">Mobile</a> <a href="/en/tags/Space/" style="font-size: 12px;" class="tag -0">Space</a> <a href="/en/tags/Sounds-of-Nature/" style="font-size: 12.48px;" class="tag -0">Sounds of Nature</a> <a href="/en/tags/Child-s-Voice/" style="font-size: 12px;" class="tag -0">Child's Voice</a> <a href="/en/tags/Terminal/" style="font-size: 12.48px;" class="tag -0">Terminal</a> <a href="/en/tags/Ghostty/" style="font-size: 12px;" class="tag -0">Ghostty</a> <a href="/en/tags/Memory-leak/" style="font-size: 12.48px;" class="tag -0">Memory leak</a> <a href="/en/tags/MacOS/" style="font-size: 12px;" class="tag -0">MacOS</a> <a href="/en/tags/Software/" style="font-size: 12px;" class="tag -0">Software</a> <a href="/en/tags/China/" style="font-size: 13.44px;" class="tag -1">China</a> <a href="/en/tags/Martial-Arts-Fiction/" style="font-size: 12px;" class="tag -0">Martial Arts Fiction</a> <a href="/en/tags/DAZ/" style="font-size: 12px;" class="tag -0">DAZ</a> <a href="/en/tags/unity/" style="font-size: 12.96px;" class="tag -1">unity</a> <a href="/en/tags/Material/" style="font-size: 12px;" class="tag -0">Material</a> <a href="/en/tags/Fantasy/" style="font-size: 14.88px;" class="tag -2">Fantasy</a> <a href="/en/tags/Diablo/" style="font-size: 13.44px;" class="tag -1">Diablo</a> <a href="/en/tags/Role-Playing-Game/" style="font-size: 13.92px;" class="tag -2">Role-Playing Game</a> <a href="/en/tags/Bored-x2/" style="font-size: 12px;" class="tag -0">Bored x2</a> <a href="/en/tags/Snowballing/" style="font-size: 12px;" class="tag -0">Snowballing</a> <a href="/en/tags/Roll-call/" style="font-size: 12px;" class="tag -0">Roll call</a> <a href="/en/tags/District-9/" style="font-size: 12px;" class="tag -0">District 9</a> <a href="/en/tags/Life/" style="font-size: 12.96px;" class="tag -1">Life</a> <a href="/en/tags/Consciousness/" style="font-size: 12px;" class="tag -0">Consciousness</a> <a href="/en/tags/Soul/" style="font-size: 12px;" class="tag -0">Soul</a> <a href="/en/tags/The-First-Notion/" style="font-size: 12px;" class="tag -0">The First Notion</a> <a href="/en/tags/DND/" style="font-size: 12.48px;" class="tag -0">DND</a> <a href="/en/tags/TRPG/" style="font-size: 12.48px;" class="tag -0">TRPG</a> <a href="/en/tags/Tabletop-Games/" style="font-size: 12.48px;" class="tag -0">Tabletop Games</a> <a href="/en/tags/Inspiration/" style="font-size: 12px;" class="tag -0">Inspiration</a> <a href="/en/tags/Advice/" style="font-size: 12px;" class="tag -0">Advice</a> <a href="/en/tags/Judgment/" style="font-size: 12px;" class="tag -0">Judgment</a> <a href="/en/tags/Dongdong/" style="font-size: 12px;" class="tag -0">Dongdong</a> <a href="/en/tags/StarCraft/" style="font-size: 14.4px;" class="tag -2">StarCraft</a> <a href="/en/tags/Computer/" style="font-size: 13.92px;" class="tag -2">Computer</a> <a href="/en/tags/NetEase/" style="font-size: 13.44px;" class="tag -1">NetEase</a> <a href="/en/tags/List/" style="font-size: 12px;" class="tag -0">List</a> <a href="/en/tags/Drag-and-drop/" style="font-size: 12px;" class="tag -0">Drag and drop</a> <a href="/en/tags/Doomsday/" style="font-size: 12px;" class="tag -0">Doomsday</a> <a href="/en/tags/The-Bible/" style="font-size: 12px;" class="tag -0">The Bible</a> <a href="/en/tags/Large-Hadron-Collider/" style="font-size: 12px;" class="tag -0">Large Hadron Collider</a> <a href="/en/tags/Space-Time/" style="font-size: 12.96px;" class="tag -1">Space-Time</a> <a href="/en/tags/eaze/" style="font-size: 12px;" class="tag -0">eaze</a> <a href="/en/tags/tween/" style="font-size: 14.88px;" class="tag -2">tween</a> <a href="/en/tags/Symphony/" style="font-size: 12px;" class="tag -0">Symphony</a> <a href="/en/tags/Stellar/" style="font-size: 12.48px;" class="tag -0">Stellar</a> <a href="/en/tags/elva/" style="font-size: 12.48px;" class="tag -0">elva</a> <a href="/en/tags/enya/" style="font-size: 12px;" class="tag -0">enya</a> <a href="/en/tags/ane/" style="font-size: 12.96px;" class="tag -1">ane</a> <a href="/en/tags/libiconv/" style="font-size: 12px;" class="tag -0">libiconv</a> <a href="/en/tags/newAge/" style="font-size: 12px;" class="tag -0">newAge</a> <a href="/en/tags/Xianxia/" style="font-size: 12px;" class="tag -0">Xianxia</a> <a href="/en/tags/Dong-Zhen/" style="font-size: 12px;" class="tag -0">Dong Zhen</a> <a href="/en/tags/Zodiac/" style="font-size: 12px;" class="tag -0">Zodiac</a> <a href="/en/tags/Aquarius/" style="font-size: 12px;" class="tag -0">Aquarius</a> <a href="/en/tags/Management-Simulation/" style="font-size: 12.96px;" class="tag -1">Management Simulation</a> <a href="/en/tags/Farm-Frenzy/" style="font-size: 12px;" class="tag -0">Farm Frenzy</a> <a href="/en/tags/itunesconnect/" style="font-size: 12px;" class="tag -0">itunesconnect</a> <a href="/en/tags/3D/" style="font-size: 13.44px;" class="tag -1">3D</a> <a href="/en/tags/Crack/" style="font-size: 12.48px;" class="tag -0">Crack</a> <a href="/en/tags/Feishu/" style="font-size: 12.48px;" class="tag -0">Feishu</a> <a href="/en/tags/Doubao/" style="font-size: 12px;" class="tag -0">Doubao</a> <a href="/en/tags/ByteDance/" style="font-size: 12.48px;" class="tag -0">ByteDance</a> <a href="/en/tags/Life-Insights/" style="font-size: 13.44px;" class="tag -1">Life Insights</a> <a href="/en/tags/fellou/" style="font-size: 12px;" class="tag -0">fellou</a> <a href="/en/tags/Epic/" style="font-size: 12px;" class="tag -0">Epic</a> <a href="/en/tags/The-Lord-of-the-Rings/" style="font-size: 12px;" class="tag -0">The Lord of the Rings</a> <a href="/en/tags/amfphp/" style="font-size: 12px;" class="tag -0">amfphp</a> <a href="/en/tags/remote/" style="font-size: 12px;" class="tag -0">remote</a> <a href="/en/tags/Works/" style="font-size: 17.76px;" class="tag -5">Works</a> <a href="/en/tags/Calendar/" style="font-size: 12.48px;" class="tag -0">Calendar</a> <a href="/en/tags/robotlegs/" style="font-size: 12.48px;" class="tag -0">robotlegs</a> <a href="/en/tags/swf/" style="font-size: 12px;" class="tag -0">swf</a> <a href="/en/tags/firefox/" style="font-size: 12px;" class="tag -0">firefox</a> <a href="/en/tags/wmode/" style="font-size: 12.96px;" class="tag -1">wmode</a> <a href="/en/tags/Garbled-Text/" style="font-size: 12.48px;" class="tag -0">Garbled Text</a> <a href="/en/tags/Input-text/" style="font-size: 12px;" class="tag -0">Input text</a> <a href="/en/tags/control/" style="font-size: 12px;" class="tag -0">control</a> <a href="/en/tags/Internals/" style="font-size: 12px;" class="tag -0">Internals</a> <a href="/en/tags/seo/" style="font-size: 12px;" class="tag -0">seo</a> <a href="/en/tags/mochi/" style="font-size: 12.48px;" class="tag -0">mochi</a> <a href="/en/tags/snda/" style="font-size: 12px;" class="tag -0">snda</a> <a href="/en/tags/Flash-Games/" style="font-size: 12.48px;" class="tag -0">Flash Games</a> <a href="/en/tags/Profit/" style="font-size: 12px;" class="tag -0">Profit</a> <a href="/en/tags/Skin/" style="font-size: 12px;" class="tag -0">Skin</a> <a href="/en/tags/Slider/" style="font-size: 12px;" class="tag -0">Slider</a> <a href="/en/tags/ui/" style="font-size: 12px;" class="tag -0">ui</a> <a href="/en/tags/height/" style="font-size: 12px;" class="tag -0">height</a> <a href="/en/tags/net/" style="font-size: 12px;" class="tag -0">.net</a> <a href="/en/tags/fluorineFx/" style="font-size: 12px;" class="tag -0">fluorineFx</a> <a href="/en/tags/Time/" style="font-size: 12.96px;" class="tag -1">Time</a> <a href="/en/tags/Volcengine/" style="font-size: 12.48px;" class="tag -0">Volcengine</a> <a href="/en/tags/fringe/" style="font-size: 12px;" class="tag -0">fringe</a> <a href="/en/tags/Mystery/" style="font-size: 14.4px;" class="tag -2">Mystery</a> <a href="/en/tags/Minecraft/" style="font-size: 12px;" class="tag -0">Minecraft</a> <a href="/en/tags/Game-Design/" style="font-size: 12px;" class="tag -0">Game Design</a> <a href="/en/tags/Indie-Games/" style="font-size: 12.48px;" class="tag -0">Indie Games</a> <a href="/en/tags/Game-Planning/" style="font-size: 12px;" class="tag -0">Game Planning</a> <a href="/en/tags/Needs/" style="font-size: 12px;" class="tag -0">Needs</a> <a href="/en/tags/web2-0/" style="font-size: 12.48px;" class="tag -0">web2.0</a> <a href="/en/tags/Keyword/" style="font-size: 12px;" class="tag -0">Keyword</a> <a href="/en/tags/Search/" style="font-size: 12px;" class="tag -0">Search</a> <a href="/en/tags/Funny/" style="font-size: 12px;" class="tag -0">Funny</a> <a href="/en/tags/google/" style="font-size: 13.92px;" class="tag -2">google</a> <a href="/en/tags/getBounds/" style="font-size: 12px;" class="tag -0">getBounds</a> <a href="/en/tags/IE/" style="font-size: 13.44px;" class="tag -1">IE</a> <a href="/en/tags/navigateToURL/" style="font-size: 12px;" class="tag -0">navigateToURL</a> <a href="/en/tags/Blocked/" style="font-size: 12px;" class="tag -0">Blocked</a></div></widget>
-</div></aside><div class='float-panel blur'>
+<widget class="widget-wrapper link-list-widget">
+  
+    <div class="widget-header dis-select">
+      <span class="name">Friends</span>
+      
+    </div>
+  
+  <div class="widget-body"><div class="ui-collection" data-layout="grid" data-variant="nav" data-density="auto" style="--ui-columns:2">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title="Travellings" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3" width="17" height="12" rx="3.2"/><path d="M3.5 10.2h17"/><circle cx="8" cy="17.8" r="1.6"/><circle cx="16" cy="17.8" r="1.6"/><path d="M3.5 21.4h17"/></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Travellings</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="https://www.foreverblog.cn/go.html" title="十年之约" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.0 10.2 L12.5 10.1 L13.0 10.1 L13.5 10.3 L14.0 10.7 L14.4 11.3 L14.5 11.9 L14.5 12.7 L14.2 13.4 L13.7 14.1 L12.9 14.6 L12.0 14.9 L11.0 14.9 L10.0 14.6 L9.0 14.1 L8.2 13.2 L7.7 12.2 L7.6 11.0 L7.8 9.8 L8.4 8.6 L9.3 7.6 L10.5 6.9 L12.0 6.5 L13.6 6.6 L15.1 7.0 L16.4 7.9 L17.5 9.2 L18.2 10.8 L18.3 12.5 L18.0 14.2 L17.1 15.8 L15.7 17.1 L14.0 18.1 L12.0 18.5 L9.9 18.4 L7.9 17.7 L6.1 16.5 L4.7 14.7 L3.9 12.7 L3.8 10.5 L4.3 8.2 L5.4 6.2 L7.2 4.5 L9.5 3.4 L12.0 2.9"/></svg></span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">十年之约</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.huoshan.org/" title="jimohuoshan" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">jimohuoshan</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.molayc.com/blog/" title="molayc" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">molayc</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="https://www.askdaddy.io/" title="Seven" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Seven</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.sunshineg.com/" title="SUNNY GAO" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">SUNNY GAO</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="https://www.jessamine.net/" title="JESSAMINE" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">JESSAMINE</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.flashj.cn/wow/" title="WOW Expo" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">WOW Expo</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/friends/" title="View all →" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">View all →</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+</div></div>
+  
+</widget>
+
+
+
+<widget class="widget-wrapper slide-up tagcloud"><div class="widget-header dis-select"><span class="name">Tag Cloud</span></div><div class="widget-body fs14"><a href="/en/tags/ea/" style="font-size: 18.72px;" class="tag -6">ea</a> <a href="/en/tags/Blizzard/" style="font-size: 19.2px;" class="tag -6">Blizzard</a> <a href="/en/tags/Game/" style="font-size: 21.12px;" class="tag -8">Game</a> <a href="/en/tags/ff/" style="font-size: 12px;" class="tag -0">ff</a> <a href="/en/tags/Download/" style="font-size: 23.04px;" class="tag -9">Download</a> <a href="/en/tags/Event/" style="font-size: 12.48px;" class="tag -0">Event</a> <a href="/en/tags/as3/" style="font-size: 23.52px;" class="tag -10">as3</a> <a href="/en/tags/ria/" style="font-size: 21.6px;" class="tag -8">ria</a> <a href="/en/tags/Tiandi-Hui/" style="font-size: 12.48px;" class="tag -0">Tiandi Hui</a> <a href="/en/tags/Gathering/" style="font-size: 12.48px;" class="tag -0">Gathering</a> <a href="/en/tags/wow/" style="font-size: 18.72px;" class="tag -6">wow</a> <a href="/en/tags/Warcraft/" style="font-size: 14.4px;" class="tag -2">Warcraft</a> <a href="/en/tags/Shanghai/" style="font-size: 12.96px;" class="tag -1">Shanghai</a> <a href="/en/tags/Work/" style="font-size: 14.88px;" class="tag -2">Work</a> <a href="/en/tags/Qoolu-Network/" style="font-size: 12.48px;" class="tag -0">Qoolu Network</a> <a href="/en/tags/Jiutian/" style="font-size: 12px;" class="tag -0">Jiutian</a> <a href="/en/tags/Music-Player/" style="font-size: 12px;" class="tag -0">Music Player</a> <a href="/en/tags/AI/" style="font-size: 22.56px;" class="tag -9">AI</a> <a href="/en/tags/openclaw/" style="font-size: 12px;" class="tag -0">openclaw</a> <a href="/en/tags/Trae/" style="font-size: 14.4px;" class="tag -2">Trae</a> <a href="/en/tags/vibecoding/" style="font-size: 13.44px;" class="tag -1">vibecoding</a> <a href="/en/tags/ClaudeCode/" style="font-size: 13.92px;" class="tag -2">ClaudeCode</a> <a href="/en/tags/TCM/" style="font-size: 12px;" class="tag -0">TCM</a> <a href="/en/tags/LLM/" style="font-size: 22.08px;" class="tag -8">LLM</a> <a href="/en/tags/Pulse-Diagnosis/" style="font-size: 12px;" class="tag -0">Pulse Diagnosis</a> <a href="/en/tags/AI-Memory/" style="font-size: 12px;" class="tag -0">AI Memory</a> <a href="/en/tags/Transformer/" style="font-size: 12px;" class="tag -0">Transformer</a> <a href="/en/tags/Open-Source/" style="font-size: 13.92px;" class="tag -2">Open Source</a> <a href="/en/tags/MSA/" style="font-size: 12px;" class="tag -0">MSA</a> <a href="/en/tags/RAG/" style="font-size: 12.48px;" class="tag -0">RAG</a> <a href="/en/tags/Context-Window/" style="font-size: 12px;" class="tag -0">Context Window</a> <a href="/en/tags/OpenClaw/" style="font-size: 14.4px;" class="tag -2">OpenClaw</a> <a href="/en/tags/Browser-Automation/" style="font-size: 12px;" class="tag -0">Browser Automation</a> <a href="/en/tags/Playwright/" style="font-size: 12px;" class="tag -0">Playwright</a> <a href="/en/tags/CDP/" style="font-size: 12.48px;" class="tag -0">CDP</a> <a href="/en/tags/DevTools/" style="font-size: 12.48px;" class="tag -0">DevTools</a> <a href="/en/tags/Efficiency/" style="font-size: 12px;" class="tag -0">Efficiency</a> <a href="/en/tags/Tool/" style="font-size: 17.28px;" class="tag -4">Tool</a> <a href="/en/tags/Productivity/" style="font-size: 12.96px;" class="tag -1">Productivity</a> <a href="/en/tags/Time-Tracking/" style="font-size: 12px;" class="tag -0">Time Tracking</a> <a href="/en/tags/Qbserve/" style="font-size: 12px;" class="tag -0">Qbserve</a> <a href="/en/tags/RescueTime/" style="font-size: 12px;" class="tag -0">RescueTime</a> <a href="/en/tags/Grandma/" style="font-size: 13.92px;" class="tag -2">Grandma</a> <a href="/en/tags/Farewell/" style="font-size: 12.48px;" class="tag -0">Farewell</a> <a href="/en/tags/Jiangyan/" style="font-size: 12.48px;" class="tag -0">Jiangyan</a> <a href="/en/tags/Remembrance/" style="font-size: 13.44px;" class="tag -1">Remembrance</a> <a href="/en/tags/Flash/" style="font-size: 12px;" class="tag -0">Flash</a> <a href="/en/tags/Nostalgia/" style="font-size: 12.96px;" class="tag -1">Nostalgia</a> <a href="/en/tags/Ruffle/" style="font-size: 12px;" class="tag -0">Ruffle</a> <a href="/en/tags/Emulator/" style="font-size: 12px;" class="tag -0">Emulator</a> <a href="/en/tags/Browser-Plugin/" style="font-size: 12px;" class="tag -0">Browser Plugin</a> <a href="/en/tags/Web-Technology/" style="font-size: 12px;" class="tag -0">Web Technology</a> <a href="/en/tags/SarahBrightman/" style="font-size: 12.48px;" class="tag -0">SarahBrightman</a> <a href="/en/tags/Music/" style="font-size: 20.16px;" class="tag -7">Music</a> <a href="/en/tags/flash/" style="font-size: 24px;" class="tag -10">flash</a> <a href="/en/tags/Web-Games/" style="font-size: 12px;" class="tag -0">Web Games</a> <a href="/en/tags/Virtual-Community/" style="font-size: 12px;" class="tag -0">Virtual Community</a> <a href="/en/tags/addEventListener/" style="font-size: 12px;" class="tag -0">addEventListener</a> <a href="/en/tags/event/" style="font-size: 12px;" class="tag -0">event</a> <a href="/en/tags/air/" style="font-size: 20.64px;" class="tag -7">air</a> <a href="/en/tags/Cookbook/" style="font-size: 12px;" class="tag -0">Cookbook</a> <a href="/en/tags/Book/" style="font-size: 12.48px;" class="tag -0">Book</a> <a href="/en/tags/adobe/" style="font-size: 17.28px;" class="tag -4">adobe</a> <a href="/en/tags/Tech-Summit/" style="font-size: 12px;" class="tag -0">Tech Summit</a> <a href="/en/tags/as/" style="font-size: 15.84px;" class="tag -3">as</a> <a href="/en/tags/rtmp/" style="font-size: 12.48px;" class="tag -0">rtmp</a> <a href="/en/tags/agent/" style="font-size: 14.4px;" class="tag -2">agent</a> <a href="/en/tags/sop/" style="font-size: 12px;" class="tag -0">sop</a> <a href="/en/tags/AGI/" style="font-size: 12px;" class="tag -0">AGI</a> <a href="/en/tags/manus/" style="font-size: 12px;" class="tag -0">manus</a> <a href="/en/tags/DeepSeek/" style="font-size: 13.92px;" class="tag -2">DeepSeek</a> <a href="/en/tags/QwQ/" style="font-size: 12.48px;" class="tag -0">QwQ</a> <a href="/en/tags/Product-Manager/" style="font-size: 12px;" class="tag -0">Product Manager</a> <a href="/en/tags/Learning/" style="font-size: 12.96px;" class="tag -1">Learning</a> <a href="/en/tags/FOX/" style="font-size: 12px;" class="tag -0">FOX</a> <a href="/en/tags/Family/" style="font-size: 12px;" class="tag -0">Family</a> <a href="/en/tags/Children-s/" style="font-size: 12px;" class="tag -0">Children's</a> <a href="/en/tags/Movie/" style="font-size: 22.08px;" class="tag -8">Movie</a> <a href="/en/tags/flex/" style="font-size: 16.8px;" class="tag -4">flex</a> <a href="/en/tags/Fanfou/" style="font-size: 13.44px;" class="tag -1">Fanfou</a> <a href="/en/tags/Taskbar/" style="font-size: 12px;" class="tag -0">Taskbar</a> <a href="/en/tags/Minimize/" style="font-size: 12px;" class="tag -0">Minimize</a> <a href="/en/tags/System-Tray/" style="font-size: 12px;" class="tag -0">System Tray</a> <a href="/en/tags/file/" style="font-size: 12.96px;" class="tag -1">file</a> <a href="/en/tags/fileStream/" style="font-size: 12.48px;" class="tag -0">fileStream</a> <a href="/en/tags/File-Operations/" style="font-size: 12.96px;" class="tag -1">File Operations</a> <a href="/en/tags/File-System/" style="font-size: 12.96px;" class="tag -1">File System</a> <a href="/en/tags/File-Association/" style="font-size: 12px;" class="tag -0">File Association</a> <a href="/en/tags/File-Format/" style="font-size: 12.48px;" class="tag -0">File Format</a> <a href="/en/tags/httpbasic/" style="font-size: 12px;" class="tag -0">httpbasic</a> <a href="/en/tags/URL-scheme/" style="font-size: 12px;" class="tag -0">URL scheme</a> <a href="/en/tags/Ads/" style="font-size: 12.48px;" class="tag -0">Ads</a> <a href="/en/tags/President-Shoe-Throwing-Sparks-Bloodbath/" style="font-size: 12px;" class="tag -0">President Shoe-Throwing Sparks Bloodbath</a> <a href="/en/tags/Comedy/" style="font-size: 13.44px;" class="tag -1">Comedy</a> <a href="/en/tags/Alibaba/" style="font-size: 12px;" class="tag -0">Alibaba</a> <a href="/en/tags/Trailer/" style="font-size: 12px;" class="tag -0">Trailer</a> <a href="/en/tags/ant/" style="font-size: 12px;" class="tag -0">ant</a> <a href="/en/tags/fdt/" style="font-size: 12.96px;" class="tag -1">fdt</a> <a href="/en/tags/mxmlc/" style="font-size: 12px;" class="tag -0">mxmlc</a> <a href="/en/tags/AnythingLLM/" style="font-size: 12px;" class="tag -0">AnythingLLM</a> <a href="/en/tags/LM/" style="font-size: 12px;" class="tag -0">LM</a> <a href="/en/tags/Studio/" style="font-size: 12px;" class="tag -0">Studio</a> <a href="/en/tags/CodeGPT/" style="font-size: 12px;" class="tag -0">CodeGPT</a> <a href="/en/tags/IDEA/" style="font-size: 12px;" class="tag -0">IDEA</a> <a href="/en/tags/apple/" style="font-size: 16.8px;" class="tag -4">apple</a> <a href="/en/tags/xbmc/" style="font-size: 12.96px;" class="tag -1">xbmc</a> <a href="/en/tags/Color/" style="font-size: 12px;" class="tag -0">Color</a> <a href="/en/tags/Array/" style="font-size: 12px;" class="tag -0">Array</a> <a href="/en/tags/object/" style="font-size: 12px;" class="tag -0">object</a> <a href="/en/tags/Shenzhen/" style="font-size: 14.4px;" class="tag -2">Shenzhen</a> <a href="/en/tags/action/" style="font-size: 12px;" class="tag -0">action</a> <a href="/en/tags/cocos2d/" style="font-size: 12.48px;" class="tag -0">cocos2d</a> <a href="/en/tags/ios/" style="font-size: 16.32px;" class="tag -4">ios</a> <a href="/en/tags/objective-c/" style="font-size: 13.44px;" class="tag -1">objective-c</a> <a href="/en/tags/GTween/" style="font-size: 12.96px;" class="tag -1">GTween</a> <a href="/en/tags/Effect/" style="font-size: 12px;" class="tag -0">Effect</a> <a href="/en/tags/Source/" style="font-size: 13.92px;" class="tag -2">Source</a> <a href="/en/tags/Sound/" style="font-size: 12px;" class="tag -0">Sound</a> <a href="/en/tags/alchemy/" style="font-size: 12px;" class="tag -0">alchemy</a> <a href="/en/tags/ByteArray/" style="font-size: 12.48px;" class="tag -0">ByteArray</a> <a href="/en/tags/flashplayer/" style="font-size: 13.92px;" class="tag -2">flashplayer</a> <a href="/en/tags/Memory/" style="font-size: 12.48px;" class="tag -0">Memory</a> <a href="/en/tags/encode/" style="font-size: 12px;" class="tag -0">encode</a> <a href="/en/tags/gif/" style="font-size: 12px;" class="tag -0">gif</a> <a href="/en/tags/1009/" style="font-size: 12px;" class="tag -0">1009</a> <a href="/en/tags/Error/" style="font-size: 18.24px;" class="tag -5">Error</a> <a href="/en/tags/Development-resources/" style="font-size: 12px;" class="tag -0">Development resources</a> <a href="/en/tags/Class-library/" style="font-size: 12px;" class="tag -0">Class library</a> <a href="/en/tags/zip/" style="font-size: 12px;" class="tag -0">zip</a> <a href="/en/tags/Ashbringer/" style="font-size: 12px;" class="tag -0">Ashbringer</a> <a href="/en/tags/World-of-Warcraft/" style="font-size: 17.76px;" class="tag -5">World of Warcraft</a> <a href="/en/tags/404/" style="font-size: 12.96px;" class="tag -1">404</a> <a href="/en/tags/asp/" style="font-size: 12px;" class="tag -0">asp</a> <a href="/en/tags/iis/" style="font-size: 13.44px;" class="tag -1">iis</a> <a href="/en/tags/avatar/" style="font-size: 12.96px;" class="tag -1">avatar</a> <a href="/en/tags/Aliens/" style="font-size: 15.36px;" class="tag -3">Aliens</a> <a href="/en/tags/Universe/" style="font-size: 17.76px;" class="tag -5">Universe</a> <a href="/en/tags/Sci-Fi/" style="font-size: 19.68px;" class="tag -6">Sci-Fi</a> <a href="/en/tags/Plan/" style="font-size: 12px;" class="tag -0">Plan</a> <a href="/en/tags/drama/" style="font-size: 12px;" class="tag -0">drama</a> <a href="/en/tags/mv/" style="font-size: 12px;" class="tag -0">mv</a> <a href="/en/tags/smash/" style="font-size: 12px;" class="tag -0">smash</a> <a href="/en/tags/tv/" style="font-size: 12px;" class="tag -0">tv</a> <a href="/en/tags/TV-Series/" style="font-size: 18.24px;" class="tag -5">TV Series</a> <a href="/en/tags/IT/" style="font-size: 12.48px;" class="tag -0">IT</a> <a href="/en/tags/Other/" style="font-size: 13.44px;" class="tag -1">Other</a> <a href="/en/tags/Microsoft/" style="font-size: 12.48px;" class="tag -0">Microsoft</a> <a href="/en/tags/Bill-Gates/" style="font-size: 12px;" class="tag -0">Bill Gates</a> <a href="/en/tags/Optimization/" style="font-size: 12px;" class="tag -0">Optimization</a> <a href="/en/tags/Bitmap-engine/" style="font-size: 12px;" class="tag -0">Bitmap engine</a> <a href="/en/tags/Rendering/" style="font-size: 12px;" class="tag -0">Rendering</a> <a href="/en/tags/Black-Myth-Wukong/" style="font-size: 12.48px;" class="tag -0">Black Myth: Wukong</a> <a href="/en/tags/Action-Game/" style="font-size: 14.4px;" class="tag -2">Action Game</a> <a href="/en/tags/Journey-to-the-West/" style="font-size: 12px;" class="tag -0">Journey to the West</a> <a href="/en/tags/Video-Games/" style="font-size: 15.84px;" class="tag -3">Video Games</a> <a href="/en/tags/Single-player-game/" style="font-size: 14.88px;" class="tag -2">Single-player game</a> <a href="/en/tags/airport/" style="font-size: 12px;" class="tag -0">airport</a> <a href="/en/tags/loader/" style="font-size: 12.96px;" class="tag -1">loader</a> <a href="/en/tags/AI-tools/" style="font-size: 12px;" class="tag -0">AI tools</a> <a href="/en/tags/Claude-Code/" style="font-size: 12.96px;" class="tag -1">Claude Code</a> <a href="/en/tags/Feishu-bot/" style="font-size: 12px;" class="tag -0">Feishu bot</a> <a href="/en/tags/cc-connect/" style="font-size: 12px;" class="tag -0">cc-connect</a> <a href="/en/tags/Middle-earth-Battle/" style="font-size: 12px;" class="tag -0">Middle-earth Battle</a> <a href="/en/tags/Strategy-Game/" style="font-size: 18.24px;" class="tag -5">Strategy Game</a> <a href="/en/tags/Patch/" style="font-size: 12.48px;" class="tag -0">Patch</a> <a href="/en/tags/cecile-corbel/" style="font-size: 12px;" class="tag -0">cecile corbel</a> <a href="/en/tags/Chrome/" style="font-size: 12.48px;" class="tag -0">Chrome</a> <a href="/en/tags/MCP/" style="font-size: 13.92px;" class="tag -2">MCP</a> <a href="/en/tags/macOS/" style="font-size: 13.44px;" class="tag -1">macOS</a> <a href="/en/tags/Debugging/" style="font-size: 12px;" class="tag -0">Debugging</a> <a href="/en/tags/scrollTop/" style="font-size: 12px;" class="tag -0">scrollTop</a> <a href="/en/tags/Webpage/" style="font-size: 14.4px;" class="tag -2">Webpage</a> <a href="/en/tags/Remote-Debugging/" style="font-size: 12px;" class="tag -0">Remote Debugging</a> <a href="/en/tags/Error-Notes/" style="font-size: 12px;" class="tag -0">Error Notes</a> <a href="/en/tags/chrome/" style="font-size: 12px;" class="tag -0">chrome</a> <a href="/en/tags/debug/" style="font-size: 13.44px;" class="tag -1">debug</a> <a href="/en/tags/peon-ping/" style="font-size: 12.48px;" class="tag -0">peon-ping</a> <a href="/en/tags/Tools/" style="font-size: 14.4px;" class="tag -2">Tools</a> <a href="/en/tags/Generals/" style="font-size: 12px;" class="tag -0">Generals</a> <a href="/en/tags/Screenshot/" style="font-size: 13.44px;" class="tag -1">Screenshot</a> <a href="/en/tags/tw/" style="font-size: 12px;" class="tag -0">tw</a> <a href="/en/tags/Esports/" style="font-size: 12.48px;" class="tag -0">Esports</a> <a href="/en/tags/Kane/" style="font-size: 12.48px;" class="tag -0">Kane</a> <a href="/en/tags/Command-Conquer/" style="font-size: 13.44px;" class="tag -1">Command & Conquer</a> <a href="/en/tags/Tiberium-Wars/" style="font-size: 12px;" class="tag -0">Tiberium Wars</a> <a href="/en/tags/Competitive-Game/" style="font-size: 14.88px;" class="tag -2">Competitive Game</a> <a href="/en/tags/Demo/" style="font-size: 12px;" class="tag -0">Demo</a> <a href="/en/tags/cntv/" style="font-size: 12px;" class="tag -0">cntv</a> <a href="/en/tags/National-Network-Television/" style="font-size: 12px;" class="tag -0">National Network Television</a> <a href="/en/tags/Space/" style="font-size: 12px;" class="tag -0">Space</a> <a href="/en/tags/c/" style="font-size: 12px;" class="tag -0">c++</a> <a href="/en/tags/cocos2dx/" style="font-size: 12.48px;" class="tag -0">cocos2dx</a> <a href="/en/tags/googleplay/" style="font-size: 12px;" class="tag -0">googleplay</a> <a href="/en/tags/java/" style="font-size: 12.48px;" class="tag -0">java</a> <a href="/en/tags/Mobile/" style="font-size: 14.4px;" class="tag -2">Mobile</a> <a href="/en/tags/Sounds-of-Nature/" style="font-size: 12.48px;" class="tag -0">Sounds of Nature</a> <a href="/en/tags/Child-s-Voice/" style="font-size: 12px;" class="tag -0">Child's Voice</a> <a href="/en/tags/Terminal/" style="font-size: 12.48px;" class="tag -0">Terminal</a> <a href="/en/tags/Ghostty/" style="font-size: 12px;" class="tag -0">Ghostty</a> <a href="/en/tags/Memory-leak/" style="font-size: 12.48px;" class="tag -0">Memory leak</a> <a href="/en/tags/MacOS/" style="font-size: 12px;" class="tag -0">MacOS</a> <a href="/en/tags/Software/" style="font-size: 12px;" class="tag -0">Software</a> <a href="/en/tags/China/" style="font-size: 13.44px;" class="tag -1">China</a> <a href="/en/tags/Martial-Arts-Fiction/" style="font-size: 12px;" class="tag -0">Martial Arts Fiction</a> <a href="/en/tags/DAZ/" style="font-size: 12px;" class="tag -0">DAZ</a> <a href="/en/tags/unity/" style="font-size: 12.96px;" class="tag -1">unity</a> <a href="/en/tags/Material/" style="font-size: 12px;" class="tag -0">Material</a> <a href="/en/tags/Fantasy/" style="font-size: 14.88px;" class="tag -2">Fantasy</a> <a href="/en/tags/Role-Playing-Game/" style="font-size: 13.92px;" class="tag -2">Role-Playing Game</a> <a href="/en/tags/Diablo/" style="font-size: 13.44px;" class="tag -1">Diablo</a> <a href="/en/tags/Bored-x2/" style="font-size: 12px;" class="tag -0">Bored x2</a> <a href="/en/tags/Snowballing/" style="font-size: 12px;" class="tag -0">Snowballing</a> <a href="/en/tags/Roll-call/" style="font-size: 12px;" class="tag -0">Roll call</a> <a href="/en/tags/District-9/" style="font-size: 12px;" class="tag -0">District 9</a> <a href="/en/tags/Life/" style="font-size: 12.96px;" class="tag -1">Life</a> <a href="/en/tags/Consciousness/" style="font-size: 12px;" class="tag -0">Consciousness</a> <a href="/en/tags/Soul/" style="font-size: 12px;" class="tag -0">Soul</a> <a href="/en/tags/The-First-Notion/" style="font-size: 12px;" class="tag -0">The First Notion</a> <a href="/en/tags/DND/" style="font-size: 12.48px;" class="tag -0">DND</a> <a href="/en/tags/TRPG/" style="font-size: 12.48px;" class="tag -0">TRPG</a> <a href="/en/tags/Tabletop-Games/" style="font-size: 12.48px;" class="tag -0">Tabletop Games</a> <a href="/en/tags/Inspiration/" style="font-size: 12px;" class="tag -0">Inspiration</a> <a href="/en/tags/Advice/" style="font-size: 12px;" class="tag -0">Advice</a> <a href="/en/tags/Judgment/" style="font-size: 12px;" class="tag -0">Judgment</a> <a href="/en/tags/Dongdong/" style="font-size: 12px;" class="tag -0">Dongdong</a> <a href="/en/tags/StarCraft/" style="font-size: 14.4px;" class="tag -2">StarCraft</a> <a href="/en/tags/Computer/" style="font-size: 13.92px;" class="tag -2">Computer</a> <a href="/en/tags/NetEase/" style="font-size: 13.44px;" class="tag -1">NetEase</a> <a href="/en/tags/List/" style="font-size: 12px;" class="tag -0">List</a> <a href="/en/tags/Drag-and-drop/" style="font-size: 12px;" class="tag -0">Drag and drop</a> <a href="/en/tags/Doomsday/" style="font-size: 12px;" class="tag -0">Doomsday</a> <a href="/en/tags/The-Bible/" style="font-size: 12px;" class="tag -0">The Bible</a> <a href="/en/tags/Large-Hadron-Collider/" style="font-size: 12px;" class="tag -0">Large Hadron Collider</a> <a href="/en/tags/Space-Time/" style="font-size: 12.96px;" class="tag -1">Space-Time</a> <a href="/en/tags/eaze/" style="font-size: 12px;" class="tag -0">eaze</a> <a href="/en/tags/tween/" style="font-size: 14.88px;" class="tag -2">tween</a> <a href="/en/tags/Symphony/" style="font-size: 12px;" class="tag -0">Symphony</a> <a href="/en/tags/Stellar/" style="font-size: 12.48px;" class="tag -0">Stellar</a> <a href="/en/tags/elva/" style="font-size: 12.48px;" class="tag -0">elva</a> <a href="/en/tags/enya/" style="font-size: 12px;" class="tag -0">enya</a> <a href="/en/tags/ane/" style="font-size: 12.96px;" class="tag -1">ane</a> <a href="/en/tags/libiconv/" style="font-size: 12px;" class="tag -0">libiconv</a> <a href="/en/tags/newAge/" style="font-size: 12px;" class="tag -0">newAge</a> <a href="/en/tags/Xianxia/" style="font-size: 12px;" class="tag -0">Xianxia</a> <a href="/en/tags/Dong-Zhen/" style="font-size: 12px;" class="tag -0">Dong Zhen</a> <a href="/en/tags/Zodiac/" style="font-size: 12px;" class="tag -0">Zodiac</a> <a href="/en/tags/Aquarius/" style="font-size: 12px;" class="tag -0">Aquarius</a> <a href="/en/tags/Management-Simulation/" style="font-size: 12.96px;" class="tag -1">Management Simulation</a> <a href="/en/tags/Farm-Frenzy/" style="font-size: 12px;" class="tag -0">Farm Frenzy</a> <a href="/en/tags/itunesconnect/" style="font-size: 12px;" class="tag -0">itunesconnect</a> <a href="/en/tags/3D/" style="font-size: 13.44px;" class="tag -1">3D</a> <a href="/en/tags/Crack/" style="font-size: 12.48px;" class="tag -0">Crack</a> <a href="/en/tags/Feishu/" style="font-size: 12.48px;" class="tag -0">Feishu</a> <a href="/en/tags/Doubao/" style="font-size: 12px;" class="tag -0">Doubao</a> <a href="/en/tags/ByteDance/" style="font-size: 12.48px;" class="tag -0">ByteDance</a> <a href="/en/tags/Life-Insights/" style="font-size: 13.44px;" class="tag -1">Life Insights</a> <a href="/en/tags/fellou/" style="font-size: 12px;" class="tag -0">fellou</a> <a href="/en/tags/Epic/" style="font-size: 12px;" class="tag -0">Epic</a> <a href="/en/tags/The-Lord-of-the-Rings/" style="font-size: 12px;" class="tag -0">The Lord of the Rings</a> <a href="/en/tags/amfphp/" style="font-size: 12px;" class="tag -0">amfphp</a> <a href="/en/tags/remote/" style="font-size: 12px;" class="tag -0">remote</a> <a href="/en/tags/Works/" style="font-size: 17.76px;" class="tag -5">Works</a> <a href="/en/tags/Calendar/" style="font-size: 12.48px;" class="tag -0">Calendar</a> <a href="/en/tags/robotlegs/" style="font-size: 12.48px;" class="tag -0">robotlegs</a> <a href="/en/tags/swf/" style="font-size: 12px;" class="tag -0">swf</a> <a href="/en/tags/firefox/" style="font-size: 12px;" class="tag -0">firefox</a> <a href="/en/tags/wmode/" style="font-size: 12.96px;" class="tag -1">wmode</a> <a href="/en/tags/Garbled-Text/" style="font-size: 12.48px;" class="tag -0">Garbled Text</a> <a href="/en/tags/Input-text/" style="font-size: 12px;" class="tag -0">Input text</a> <a href="/en/tags/control/" style="font-size: 12px;" class="tag -0">control</a> <a href="/en/tags/Internals/" style="font-size: 12px;" class="tag -0">Internals</a> <a href="/en/tags/seo/" style="font-size: 12px;" class="tag -0">seo</a> <a href="/en/tags/mochi/" style="font-size: 12.48px;" class="tag -0">mochi</a> <a href="/en/tags/snda/" style="font-size: 12px;" class="tag -0">snda</a> <a href="/en/tags/Flash-Games/" style="font-size: 12.48px;" class="tag -0">Flash Games</a> <a href="/en/tags/Profit/" style="font-size: 12px;" class="tag -0">Profit</a> <a href="/en/tags/Skin/" style="font-size: 12px;" class="tag -0">Skin</a> <a href="/en/tags/Slider/" style="font-size: 12px;" class="tag -0">Slider</a> <a href="/en/tags/ui/" style="font-size: 12px;" class="tag -0">ui</a> <a href="/en/tags/height/" style="font-size: 12px;" class="tag -0">height</a> <a href="/en/tags/net/" style="font-size: 12px;" class="tag -0">.net</a> <a href="/en/tags/fluorineFx/" style="font-size: 12px;" class="tag -0">fluorineFx</a> <a href="/en/tags/Volcengine/" style="font-size: 12.48px;" class="tag -0">Volcengine</a> <a href="/en/tags/Time/" style="font-size: 12.96px;" class="tag -1">Time</a> <a href="/en/tags/fringe/" style="font-size: 12px;" class="tag -0">fringe</a> <a href="/en/tags/Mystery/" style="font-size: 14.4px;" class="tag -2">Mystery</a> <a href="/en/tags/Minecraft/" style="font-size: 12px;" class="tag -0">Minecraft</a> <a href="/en/tags/Game-Design/" style="font-size: 12px;" class="tag -0">Game Design</a> <a href="/en/tags/Indie-Games/" style="font-size: 12.48px;" class="tag -0">Indie Games</a> <a href="/en/tags/Game-Planning/" style="font-size: 12px;" class="tag -0">Game Planning</a> <a href="/en/tags/Needs/" style="font-size: 12px;" class="tag -0">Needs</a> <a href="/en/tags/web2-0/" style="font-size: 12.48px;" class="tag -0">web2.0</a> <a href="/en/tags/Keyword/" style="font-size: 12px;" class="tag -0">Keyword</a> <a href="/en/tags/Search/" style="font-size: 12px;" class="tag -0">Search</a> <a href="/en/tags/Funny/" style="font-size: 12px;" class="tag -0">Funny</a> <a href="/en/tags/google/" style="font-size: 13.92px;" class="tag -2">google</a> <a href="/en/tags/getBounds/" style="font-size: 12px;" class="tag -0">getBounds</a> <a href="/en/tags/IE/" style="font-size: 13.44px;" class="tag -1">IE</a> <a href="/en/tags/navigateToURL/" style="font-size: 12px;" class="tag -0">navigateToURL</a> <a href="/en/tags/Blocked/" style="font-size: 12px;" class="tag -0">Blocked</a></div></widget>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
@@ -265,7 +900,141 @@ background:var(--block-hover)}
   </button>
 </div>
 </div><div class="scripts">
+
+
 <script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  window.canonical["param"] = {"permalink":null,"checklink":"/js/plugins/video.js"};
+  // Fix: Ensure page is at the correct top position on data load
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'auto';
+  }
+  (function() {
+    const scrollHandler = () => {
+      // 存在有效锚点时，等待布局稳定后滚动到目标
+      // （浏览器原生锚点滚动发生在布局完成前，长文章的懒加载图片/异步组件会把目标顶偏）
+      const hash = window.location.hash;
+      if (hash.length > 1) {
+        let anchorId = hash.slice(1);
+        try {
+          anchorId = decodeURIComponent(anchorId);
+        } catch (e) {
+          // 片段含非法编码时按原样查找
+        }
+        const anchor = document.getElementById(anchorId);
+        if (anchor) {
+          // #start 锚点贴顶，不预留 offset；其余锚点与 TOC 点击滚动保持一致
+          const offset = anchorId === 'start' ? 0 : 32;
+          const targetY = () => anchor.getBoundingClientRect().top + window.scrollY - offset;
+          let timer = null;
+          let lastY = null;
+          let quiet = 0;
+          let attempts = 0;
+          // 记录最近一次资源加载完成时间，判断异步数据/图片是否仍在改变布局
+          let lastResourceTime = performance.now();
+          let observer = null;
+          try {
+            observer = new PerformanceObserver(function (list) {
+              lastResourceTime = performance.now();
+            });
+            observer.observe({ entryTypes: ['resource'] });
+          } catch (e) {}
+          // 统计进行中的 fetch/XHR 请求，异步组件（timeline 等）未完成前不判定布局稳定
+          let pendingRequests = 0;
+          const trackRequest = (fn) => {
+            pendingRequests++;
+            try {
+              const result = fn();
+              if (result && typeof result.finally === 'function') {
+                result.finally(function () {
+                  pendingRequests = Math.max(0, pendingRequests - 1);
+                });
+              } else {
+                pendingRequests = Math.max(0, pendingRequests - 1);
+              }
+              return result;
+            } catch (e) {
+              pendingRequests = Math.max(0, pendingRequests - 1);
+              throw e;
+            }
+          };
+          if (typeof window.fetch === 'function') {
+            const origFetch = window.fetch.bind(window);
+            window.fetch = function () {
+              const args = arguments;
+              return trackRequest(function () {
+                return origFetch.apply(window, args);
+              });
+            };
+          }
+          if (window.XMLHttpRequest) {
+            const origOpen = window.XMLHttpRequest.prototype.open;
+            const origSend = window.XMLHttpRequest.prototype.send;
+            window.XMLHttpRequest.prototype.open = function () {
+              this.__anchorTracked = true;
+              return origOpen.apply(this, arguments);
+            };
+            window.XMLHttpRequest.prototype.send = function () {
+              if (this.__anchorTracked) {
+                pendingRequests++;
+                const done = () => {
+                  if (this.__anchorTracked) {
+                    this.__anchorTracked = false;
+                    pendingRequests = Math.max(0, pendingRequests - 1);
+                  }
+                };
+                this.addEventListener('loadend', done);
+              }
+              return origSend.apply(this, arguments);
+            };
+          }
+          const cancel = () => {
+            if (timer !== null) {
+              clearInterval(timer);
+              timer = null;
+            }
+            if (observer !== null) {
+              try {
+                observer.disconnect();
+              } catch (e) {}
+            }
+          };
+          const adjust = () => {
+            const y = targetY();
+            const atTarget = Math.abs(window.scrollY - y) <= 2;
+            if (!atTarget || lastY === null || Math.abs(y - lastY) > 2) {
+              window.scrollTo({ top: y, behavior: 'instant' });
+              lastY = y;
+              quiet = 0;
+            } else {
+              quiet++;
+            }
+            attempts++;
+            const resourceQuiet = performance.now() - lastResourceTime > 3000;
+            // 位置连续 1.8 秒无变化、无进行中的请求且最近 3 秒无资源加载才视为稳定；最长等待 30 秒
+            if ((quiet >= 3 && pendingRequests === 0 && resourceQuiet) || attempts >= 50) {
+              cancel();
+            }
+          };
+          requestAnimationFrame(() => {
+            // 锚点链接打开时直接定位，不做动画；用户主动点击（如 TOC）仍走平滑滚动
+            window.scrollTo({ top: targetY(), behavior: 'instant' });
+            timer = setInterval(adjust, 600);
+          });
+          // 用户主动滚动时停止自动校正
+          window.addEventListener('wheel', cancel, { passive: true });
+          window.addEventListener('touchstart', cancel, { passive: true });
+          window.addEventListener('mousedown', cancel, { passive: true });
+          window.addEventListener('keydown', cancel, { passive: true });
+          return;
+        }
+      }
+      // 没有锚点时始终保持页面顶部；Wiki Hero 只在用户显式访问 #start 时定位正文。
+      window.scrollTo(0, 0);
+    };
+    if (document.readyState !== 'loading') scrollHandler();
+    else document.addEventListener('DOMContentLoaded', scrollHandler);
+  })();
   const ctx = {
     date_suffix: {
       just: `Just`,
@@ -276,7 +1045,10 @@ background:var(--block-hover)}
     root : `/en/`,
     tag_plugins: {
       chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
-    }
+    },
+    // 图标由构建期生成的 /js/stellar-icons.js 填充（defer，早于 DOMContentLoaded 就绪）
+    icons: {},
+    services: {"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"},"rss":{"js":"/js/services/rss.js"}},
   };
 
   // required plugins (only load if needs)
@@ -284,516 +1056,118 @@ background:var(--block-hover)}
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":86400,"skip_search":null,"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
   const def = {
     avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
     cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    data_cache: {"enable":true,"default_ttl":3600,"ttl":{"giscus":600,"waline":600,"artalk":600,"memos":600,"memos-user":86400,"sites":86400,"friends":86400,"friends_and_posts":86400,"siteinfo":86400},"max_entries":200},
   };
   const deps = {
-    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
-    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
-  }
-  
-
-</script>
-
-<script type="text/javascript">
-  function RunItem() {
-    this.list = []; // 存放回调函数
-    this.start = () => {
-      for (var i = 0; i < this.list.length; i++) {
-        this.list[i].run();
-      }
-    };
-    this.push = (fn, name, setRequestAnimationFrame = true) => {
-      let myfn = fn
-      if (setRequestAnimationFrame) {
-        myfn = () => {
-          utils.requestAnimationFrame(fn)
-        }
-      }
-      var f = new Item(myfn, name);
-      this.list.push(f);
-    };
-    this.remove = (name) => {
-      for (let index = 0; index < this.list.length; index++) {
-        const e = this.list[index];
-        if (e.name == name) {
-          this.list.splice(index, 1);
-        }
-      }
-    }
-    // 构造一个可以run的对象
-    function Item(fn, name) {
-      // 函数名称
-      this.name = name || fn.name;
-      // run方法
-      this.run = () => {
-        try {
-          fn()
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    }
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js`
   }
 
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
-
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')) {
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function () {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function (response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function (data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function (error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-    /********************** requestAnimationFrame ********************************/
-    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
-    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
-    requestAnimationFrame: (fn) => {
-      if (!window.requestAnimationFrame) {
-        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
-      }
-      window.requestAnimationFrame(fn)
-    },
-    dark: {},
+  // 主题切换提示文案（供 /js/theme.js 使用）
+  window.__STELLAR_I18N__ = {
+    light: `Switched to Light Mode`,
+    dark: `Switched to Dark Mode`,
+    auto: `Switched to Auto Mode`,
   };
 
-  // utils.dark.mode 当前模式 dark or light
-  // utils.dark.toggle() 暗黑模式触发器
-  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
-  utils.dark.method = {
-    toggle: new RunItem(),
-  };
-  utils.dark = Object.assign(utils.dark, {
-    push: utils.dark.method.toggle.push,
-  });
-</script>
-<script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
-    }
-  }
-</script>
-<script type="text/javascript">
-  (() => {
-    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
-    for (const tagSwitcher of tagSwitchers) {
-      tagSwitcher.addEventListener('click', (e) => {
-        const parent = e.target.closest('.tag-subtree.parent-tag')
-        parent.classList.toggle('expanded')
-        e.preventDefault()
-      })
-    }
-
-    // Get active tag from query string, then activate it.
-    const urlParams = new URLSearchParams(window.location.search)
-    const activeTag = urlParams.get('tag')
-    if (activeTag) {
-      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
-      if (tag) {
-        tag.querySelector('a').classList.add('active')
-        
-        while (tag) {
-          tag.classList.add('expanded')
-          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
-        }
-      }
-    }
-  })()
-</script>
-
-
-<!-- required -->
-<script src="/en/js/main.js?v=1.30.0" defer></script>
-
-<script type="text/javascript">
-  const applyTheme = (theme) => {
-    if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
-    } else {
-      document.documentElement.setAttribute('data-theme', theme)
-    }
-
-    applyThemeToGiscus(theme)
-  }
-
-  const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
-
-    const cmt = document.getElementById('giscus')
-    if (cmt) {
-      // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
-    }
-
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
-    if (iframe) {
-      // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
-    }
-  }
-
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
-    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
-    utils.dark.method.toggle.start();
-
-    const messages = {
-      light: `Switched to Light Mode`,
-      dark: `Switched to Dark Mode`,
-      auto: `Switched to Auto Mode`,
-    }
-    hud?.toast?.(messages[newTheme])
-  }
-
-  (() => {
-    // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
-    if (theme !== null) {
-      applyTheme(theme)
-    } else {
-      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    utils.dark.method.toggle.start();
-  })()
-</script>
-
-
-<!-- optional -->
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else if (id == 'voice') {
-        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
-        if (ctx.voiceAudios?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            createVoiceDom(ctx.voiceAudios);
-          });
-        }
-      } else if (id == 'video') {
-        ctx.videos = document.querySelectorAll('.video>video');
-        if (ctx.videos?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            videoEvents(ctx.videos);
-          });
-        }
-      } else if (id == 'download-file') {
-        ctx.files = document.querySelectorAll('.file');
-        if (ctx.files?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            downloadFileEvent(ctx.files);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-
-    // chat iphone time
-    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
-
-    if (phoneTimes.length > 0) {
-      NowTime();
-      var date = new Date();
-      var sec = date.getSeconds();
-      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
-    }
-
-    function firstAdjustTime() {
-      NowTime();
-      clearInterval(firstAdjustInterval);
-      setInterval(NowTime, 1000 * 60);
-    }
-
-    function NowTime() {
-      for (let i = 0; i < phoneTimes.length; ++i) {
-        var timeSpan = phoneTimes[i];
-        var date = new Date();
-        var hour = date.getHours();
-        var min = date.getMinutes();
-        timeSpan.innerHTML = check(hour) + ":" + check(min);
-      }
-    };
-
-    function check(val) {
-      if (val < 10) {
-        return ("0" + val);
-      }
-      return (val);
-    }
-
-    // chat quote
-    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
-      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
-          observer.unobserve(entry.target);
-          setTimeout(() => {
-            entry.target.classList.add('quote-blink');
-            setTimeout(() => {
-              entry.target.classList.remove('quote-blink');
-            }, 1000);
-          }, Math.max(100, 16) * (index + 1));
-        });
-    });
-
-    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
-    chatQuotes.forEach((quote) => {
-      quote.addEventListener('click', function () {
-        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
-        if (chatCellDom) {
-          var chatDiv = chatCellDom.parentElement;
-          var mid = chatDiv.clientHeight / 2;
-          var offsetTop = chatCellDom.offsetTop;
-          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
-            chatDiv.scrollTo({
-              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
-              behavior: "smooth"
-            });
-          } else {
-            chatDiv.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
-          }
-          chat_quote_obverser.observe(chatCellDom);
+  // 搜索跳转高亮：URL 带 ?kw= 时按需加载，定位正文中的匹配词
+  (function () {
+    try {
+      if (!window.location.search) return;
+      if (!new URLSearchParams(window.location.search).has('kw')) return;
+      document.addEventListener('DOMContentLoaded', function () {
+        // utils 由 /js/utils.js 定义（同时暴露 window.utils）；
+        // 未就绪时由 bootstrap 队列兜底，此处按就绪状态判断
+        if (typeof utils === 'object' && typeof utils.js === 'function') {
+          utils.js('/en/js/search/highlight.js', { defer: true }).catch(function () {});
         }
       });
-    });
+    } catch (e) {}
+  })();
+</script>
+
+
+<script>
+  // 插件注册队列：utils.js 尚未就绪时先缓存注册请求，就绪后统一补跑，
+  // 保证解析期注册的插件不因加载时序丢失。
+  window.stellar = window.stellar || {};
+  window.stellar._pluginQueue = window.stellar._pluginQueue || [];
+  window.stellar.initPlugin = function (fn, name, options) {
+    if (typeof utils === 'object' && typeof utils.initPlugin === 'function') {
+      return utils.initPlugin(fn, name, options);
+    }
+    window.stellar._pluginQueue.push({ fn: fn, name: name, options: options || {} });
+  };
+  window.stellar._flushPlugins = function () {
+    var pending = window.stellar._pluginQueue.splice(0);
+    if (typeof utils !== 'object' || typeof utils.initPlugin !== 'function') return;
+    for (var i = 0; i < pending.length; i++) {
+      try {
+        utils.initPlugin(pending[i].fn, pending[i].name, pending[i].options);
+      } catch (e) {
+        console.error('[Stellar] 插件补注册失败:', e);
+      }
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof utils === 'object') return;
+    // utils 未就绪时补载；加载成功后由 utils.js 内部补跑插件队列
+    var s = document.createElement('script');
+    // 用 setAttribute 赋值 src，避免被基于 `s.src = "..."` 的正则
+    // （图片懒加载 / 脚本延迟优化器）误改写
+    s.setAttribute('src', '/en/js/utils.js?v=1.44.0');
+    s.async = false;
+    s.onerror = function () {
+      console.error('[Stellar] 无法加载 /js/utils.js，已启用内容兜底显示（sr-fallback）');
+      document.documentElement.classList.add('sr-fallback');
+    };
+    document.head.appendChild(s);
   });
 </script>
 
+
+<!-- core: utils 必须同步加载（页尾内联插件片段在解析期即调用 utils.initPlugin） -->
+<script src="/en/js/utils.js?v=1.44.0"></script>
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
+  // 解析期检测 utils 是否已就绪；未就绪时同步补载，
+  // 保证「utils 先于页尾插件片段定义」的不变量。
+  if (typeof utils === 'undefined') {
+    document.write('<script src="/en/js/utils.js?v=1.44.0"><\/script>');
+  }
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script defer src="/en/js/stellar-icons.js?v=1.44.0"></script>
+<!-- 非首屏图标异步加载：占位符替换依赖构建期生成的 js/icons/{ns}.json -->
+<script defer src="/en/js/icons.js?v=1.44.0" data-version="1.44.0"></script>
+<script defer src="/en/js/plugins/dropdown.js?v=1.44.0"></script>
+<script src="/en/js/main.js?v=1.44.0" defer></script>
+<script defer src="/en/js/theme.js?v=1.44.0"></script>
+
+
+
 <script>
+  // 先声明配置与初始化监听，再异步加载库：
+  // 保证库执行时 lazyLoadOptions 已就绪，避免 async 脚本抢先执行导致自初始化失败
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
   // to make LazyLoad self-initialize
   window.lazyLoadOptions = {
     elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      // {% image %} 没有 .lazy-box 包裹，回退到父元素查找加载图标
+      const wrapper = el.closest('.lazy-box') || el.parentElement;
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
   };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
+  // 监听初始化事件，获取 LazyLoad 实例
   window.addEventListener(
     "LazyLoad::Initialized",
     function (event) {
@@ -804,26 +1178,159 @@ background:var(--block-hover)}
   document.addEventListener('DOMContentLoaded', function () {
     window.lazyLoadInstance?.update();
   });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
-    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+
+  // 兜底：动态插入的 .lazy 元素（如站点自定义脚本在 update() 之后追加的图片）
+  // 不会被 vanilla-lazyload 自动扫描，未注册的 img.lazy 会被 CSS opacity:0 永久隐藏。
+  // MutationObserver 检测到新增 .lazy 元素后自动调用 update() 重新注册。
+  if (window.MutationObserver) {
+    window.lazyMutationObserver = new MutationObserver((mutations) => {
+      if (window.lazyMutationObserver._pending) return;
+      const hasLazy = mutations.some((m) =>
+        Array.prototype.some.call(m.addedNodes, (node) =>
+          node.nodeType === 1 &&
+          (node.matches?.('.lazy') || !!node.querySelector?.('.lazy'))
+        )
+      );
+      if (!hasLazy) return;
+      window.lazyMutationObserver._pending = requestAnimationFrame(() => {
+        window.lazyMutationObserver._pending = null;
+        window.lazyLoadInstance?.update();
+      });
+    });
+    window.lazyMutationObserver.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+</script>
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+
+
+<!-- optional -->
+
+
+
+<script defer src="/en/js/services.js?v=1.44.0"></script>
+<script>
+  // 防御：bootstrap 被第三方优化器改写/移除导致 window.stellar.initPlugin 缺失时，
+  // 在此补一个等价注册点：utils 就绪时直接委托，未就绪时入队，utils 加载后自动补跑。
+  if (typeof window.stellar === 'undefined' || typeof window.stellar.initPlugin !== 'function') {
+    window.stellar = window.stellar || {};
+    window.stellar._pluginQueue = window.stellar._pluginQueue || [];
+    window.stellar.initPlugin = function (fn, name, options) {
+      if (typeof utils === 'object' && typeof utils.initPlugin === 'function') {
+        return utils.initPlugin(fn, name, options);
+      }
+      window.stellar._pluginQueue.push({ fn: fn, name: name, options: options || {} });
+    };
+    window.stellar._flushPlugins = function () {
+      var pending = window.stellar._pluginQueue.splice(0);
+      if (typeof utils !== 'object' || typeof utils.initPlugin !== 'function') return;
+      for (var i = 0; i < pending.length; i++) {
+        try {
+          utils.initPlugin(pending[i].fn, pending[i].name, pending[i].options);
+        } catch (e) {
+          console.error('[Stellar] 插件补注册失败:', e);
+        }
+      }
+    };
+  }
+</script>
+
+<script>window.addEventListener('DOMContentLoaded', function () { utils.js('/js/search/shortcut.js', { defer: true }); });</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = Object.assign({}, ctx.search, {
+      path: `/search.json`,
+      local_search: {"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":86400,"skip_search":null,"sort":"-date"},
+    });
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script>
+<script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
   };
-  var selector = '[data-fancybox]:not(.error)';
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    mode: `auto`,
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  // auto=按需：页面存在可弹窗图片才加载；global=全局：所有页面加载
+  const isGlobal = ctx.fancybox.mode === 'global';
+  // 评论区图片（artalk/twikoo/waline）显示较小，自动支持放大；
+  // 仅绑定各评论服务的评论内容区，编辑器、表情面板等非内容区图片不弹窗
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon]):not([class*="emo"]), .with-fancybox .tk-content img:not([atk-emoticon]):not([class*="emo"]), .with-fancybox .wl-content img:not([atk-emoticon]):not([class*="emo"])';
   if (ctx.fancybox.selector) {
     selector += `, ${ctx.fancybox.selector}`
   }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  var needFancybox = isGlobal;
   if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
+    needFancybox = document.querySelectorAll(selector).length !== 0;
+    if (!needFancybox) {
+      // 图片型评论系统容器：评论区图片小图需要 fancybox
+      const withFancybox = document.getElementsByClassName('with-fancybox');
+      if (withFancybox != undefined && withFancybox.length > 0) {
+        needFancybox = true;
+      }
+    }
+    if (!needFancybox) {
+      // 动态数据服务：memos 渲染的图片需要 fancybox
+      const memos = document.getElementsByClassName('ds-memos');
+      if (memos != undefined && memos.length > 0) {
+        needFancybox = true;
+      }
     }
   }
   if (needFancybox) {
+    utils.css(`/en/css/plugins/fancybox.css?v=1.44.0`);
     utils.css(ctx.fancybox.css);
     utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      if (isGlobal) {
+        // 全局模式：正文所有非内联图片均可弹窗
+        selector += ', .md-text img:not(.inline):not([atk-emoticon])';
+      }
       Fancybox.bind(selector, {
         hideScrollbar: false,
         Thumbs: {
@@ -837,11 +1344,12 @@ background:var(--block-hover)}
   }
 </script>
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
+  stellar.initPlugin(() => {
     const swiper_api = document.getElementById('swiper-api');
     if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+      utils.css(`/en/css/plugins/swiper.css?v=1.44.0`);
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
         const effect = swiper_api.getAttribute('effect') || '';
         var swiper = new Swiper('.swiper#swiper-api', {
           slidesPerView: 'auto',
@@ -860,21 +1368,139 @@ background:var(--block-hover)}
         });
       })
     }
-  });
+  }, 'swiper');
 </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
+  (function () {
+    // 兜底看门狗独立于插件初始化：3 秒内未完成 reveal 时强制显示 .slide-up 内容
+    let fallbackApplied = false;
+    const revealFallback = () => {
+      if (fallbackApplied) return;
+      fallbackApplied = true;
+      document.documentElement.classList.add('sr-fallback');
+    };
+    const watchdog = setTimeout(() => revealFallback(), 3000);
+
+    stellar.initPlugin(() => {
+      const els = Array.prototype.slice.call(document.querySelectorAll('.slide-up'));
+      if (els.length === 0) {
+        clearTimeout(watchdog);
+        return;
+      }
+
+    // 吸顶/固定定位容器内的元素始终在视口内（或由容器控制显隐），
+    // 但 ScrollReveal 按文档坐标判断可见性，会误判这类元素为不可见，
+    // 导致带锚点/恢复滚动位置打开页面时组件一直不显示。
+    // 解决方式：以最近的吸顶/固定祖先作为该组元素的容器，
+    // 使可见性判断恒成立，入场动画保留且不再依赖主文档滚动。
+    const findPinnedContainer = (el) => {
+      let node = el;
+      while (node && node.nodeType === 1) {
+        const pos = window.getComputedStyle(node).position;
+        if (pos === 'sticky' || pos === 'fixed') return node;
+        node = node.parentElement;
+      }
+      return null;
+    };
+
+    // 最近的滚动容器（overflow-y: auto/scroll）
+    // 吸顶容器内可能存在内部滚动容器（如侧栏 .widgets），
+    // 若直接用吸顶容器做 reveal 容器，折叠区下方的元素永远不会进入视口，导致一直不显示。
+    const findScrollContainer = (el) => {
+      let node = el.parentElement;
+      while (node && node.nodeType === 1) {
+        const oy = window.getComputedStyle(node).overflowY;
+        if (oy === 'auto' || oy === 'scroll') return node;
+        node = node.parentElement;
+      }
+      return null;
+    };
+
+    const pinnedGroups = new Map(); // 容器 -> 元素列表
+    const targets = [];
+    els.forEach((el) => {
+      const pinned = findPinnedContainer(el);
+      if (pinned) {
+        // 优先使用最近的滚动容器，其次才用吸顶容器
+        const container = findScrollContainer(el) || pinned;
+        const group = pinnedGroups.get(container) || [];
+        group.push(el);
+        pinnedGroups.set(container, group);
+      } else {
+        targets.push(el);
+      }
+    });
+    if (pinnedGroups.size === 0 && targets.length === 0) {
+      clearTimeout(watchdog);
+      return;
+    }
+
+    const slideUp = {
+      distance: `8px`,
+      duration: `1000`,
+      interval: `100`,
+      scale: `1`,
+      opacity: 0,
+      easing: "ease-out"
+    };
+
+    utils.js(`https://gcore.jsdelivr.net/npm/scrollreveal@4.0/dist/scrollreveal.min.js`, { defer: true })
+      .then(() => {
+        if (fallbackApplied) return;
+        if (typeof ScrollReveal !== 'function') {
+          revealFallback();
+          return;
+        }
+        try {
+          const sr = ScrollReveal();
+          if (targets.length > 0) {
+            sr.reveal(targets, { ...slideUp });
+          }
+          pinnedGroups.forEach((group, container) => {
+            sr.reveal(group, { ...slideUp, container: container });
+          });
+          clearTimeout(watchdog);
+        } catch (err) {
+          console.error('[Plugin scrollreveal] 初始化失败:', err);
+          revealFallback();
+        }
+      })
+      .catch((err) => {
+        console.error('[Plugin scrollreveal] 加载失败:', err);
+        revealFallback();
+      });
+    }, 'scrollreveal');
+  })();
+</script>
+<script>
+  stellar.initPlugin(() => {
+    const codeElements = document.querySelectorAll('.code');
+    if (codeElements.length > 0) {
       ctx.copycode = {
         default_text: `Copy`,
         success_text: `Copied`,
         toast: `复制成功`,
       };
-      utils.js('/js/plugins/copycode.js');
+      utils.js('/js/plugins/copycode.js', { defer: true }).then(() => {
+        if (typeof createCopyButtons === 'function') {
+          createCopyButtons(codeElements);
+        }
+      });
     }
-  });
+  }, 'copycode');
 </script>
+<script>
+  stellar.initPlugin(() => {
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-text-adaptive]'));
+    if (els.length === 0) return;
+    utils.js('/js/color.js').then(() => utils.js('/js/plugins/adaptive-text.js')).then(() => {
+      if (typeof applyAdaptiveText === 'function') {
+        applyAdaptiveText(els);
+      }
+    });
+  }, 'adaptive-text');
+</script>
+
 
 
 <!-- inject -->

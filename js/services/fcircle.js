@@ -1,15 +1,15 @@
-utils.jq(() => {
-  $(function () {
-    const els = document.getElementsByClassName('ds-fcircle');
+(function () {
+  const els = document.getElementsByClassName('ds-fcircle');
     for (var i = 0; i < els.length; i++) {
       const el = els[i];
-      const api = el.getAttribute('api');
+      const api = el.dataset.api;
       if (api == null) {
         continue;
       }
       const default_avatar = def.avatar;
       // layout
-      utils.request(el, api, function(data) {
+      utils.request(el, api, async resp => {
+        const data = await resp.json();
         const arr = data.article_data || [];
         const limit = el.getAttribute('limit');
         arr.forEach((item, i) => {
@@ -28,9 +28,8 @@ utils.jq(() => {
           cell += item.title;
           cell += '</a>';
           cell += '</div>';
-          $(el).append(cell);
+          utils.dom(el).append(cell);
         });
       });
     }
-  });
-});
+})();
