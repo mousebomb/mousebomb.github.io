@@ -339,6 +339,24 @@ background:var(--block);color:var(--text-p1)}
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/trae-signed-commit-as-claude.html" title="TRAE committed code for me — why is it signed as Claude?">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">TRAE committed code for me — why is it signed as Claude?</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/photocraft-rea-software-industry-change.html" title="PhotoCraft and REA: The software industry is starting to change">
   
   
@@ -644,24 +662,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/coreaudiod-memory-leak-from-claude-code-hook.html" title="Fixing coreaudiod eating up to 45G of memory">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">Fixing coreaudiod eating up to 45G of memory</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -752,7 +752,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;TRAE-cn-officially-launched-SOLO-mode.html" title="TRAE China Edition has officially launched SOLO mode"><span class="title">TRAE China Edition has officially launched SOLO mode</span></a><a class="item" href="&#x2F;en&#x2F;trae-pro.html" title="Trae finally launched a paid version"><span class="title">Trae finally launched a paid version</span><span class="excerpt">Opened Trae today and suddenly saw “Upgrade to Pro” in the top right corner. Wow, it finally has a paid version! Wow,...</span></a><a class="item" href="&#x2F;en&#x2F;trae-runs-ssh-without-permission.html" title="TRAE&#39;s Overreach: The ssh Restart Scare and the Manual Authorization Dilemma"><span class="title">TRAE&#39;s Overreach: The ssh Restart Scare and the Manual Authorization Dilemma</span><span class="excerpt">**TRAE used ssh to connect to the server and restart it without my consent — and it didn&#39;t even need my approval?!**</span></a><a class="item" href="&#x2F;en&#x2F;claude-code-long-context-management-strategy-analysis.html" title="Analysis of Claude Code&#39;s Long-Context Management Strategy"><span class="title">Analysis of Claude Code&#39;s Long-Context Management Strategy</span><span class="excerpt">Claude Code doesn&#39;t simply rely on the LLM&#39;s 256K&#x2F;512K&#x2F;1M context window to brute-force its way through. Instead, it ...</span></a><a class="item" href="&#x2F;en&#x2F;diyinian-isnotequalto-first-idea.html" title="The first instant of thought ≠ the first idea"><span class="title">The first instant of thought ≠ the first idea</span><span class="excerpt">Last night after finishing a phone call with my mom, combined with some of the wisdom Lukia had shared with me before...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;trae-signed-commit-as-claude.html" title="TRAE committed code for me — why is it signed as Claude?"><span class="title">TRAE committed code for me — why is it signed as Claude?</span><span class="excerpt">After I fixed a small bug, TRAE went ahead and added Co-Authored-By: Claude Sonnet 4.6 to the commit message on its o...</span></a><a class="item" href="&#x2F;en&#x2F;TRAE-cn-officially-launched-SOLO-mode.html" title="TRAE China Edition has officially launched SOLO mode"><span class="title">TRAE China Edition has officially launched SOLO mode</span></a><a class="item" href="&#x2F;en&#x2F;trae-pro.html" title="Trae finally launched a paid version"><span class="title">Trae finally launched a paid version</span><span class="excerpt">Opened Trae today and suddenly saw “Upgrade to Pro” in the top right corner. Wow, it finally has a paid version! Wow,...</span></a><a class="item" href="&#x2F;en&#x2F;trae-runs-ssh-without-permission.html" title="TRAE&#39;s Overreach: The ssh Restart Scare and the Manual Authorization Dilemma"><span class="title">TRAE&#39;s Overreach: The ssh Restart Scare and the Manual Authorization Dilemma</span><span class="excerpt">**TRAE used ssh to connect to the server and restart it without my consent — and it didn&#39;t even need my approval?!**</span></a><a class="item" href="&#x2F;en&#x2F;diyinian-isnotequalto-first-idea.html" title="The first instant of thought ≠ the first idea"><span class="title">The first instant of thought ≠ the first idea</span><span class="excerpt">Last night after finishing a phone call with my mom, combined with some of the wisdom Lukia had shared with me before...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
@@ -1136,7 +1136,7 @@ background:var(--block);color:var(--text-p1)}
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":86400,"skip_search":null,"sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":0,"skip_search":null,"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
@@ -1392,7 +1392,7 @@ background:var(--block);color:var(--text-p1)}
   window.addEventListener('DOMContentLoaded', (event) => {
     ctx.search = Object.assign({}, ctx.search, {
       path: `/search.json`,
-      local_search: {"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":86400,"skip_search":null,"sort":"-date"},
+      local_search: {"field":"all","path":"/search.json","content":true,"lazy_load":true,"cache_ttl":0,"skip_search":null,"sort":"-date"},
     });
     utils.js('/js/search/local-search.js', { defer: true });
   });
@@ -1762,6 +1762,74 @@ background:var(--block);color:var(--text-p1)}
     var p = new URL(link.href, location.origin).pathname;
     if (p) a.setAttribute('href', p);
   } catch (e) {}
+})();
+</script>
+<script>
+(function () {
+  var CACHE_KEY = 'search_cache_v4';   // 主题的搜索数据缓存键
+  var MIGRATED_KEY = 'mb_search_url_migrated_v1';
+  var warned = false;
+
+  // 索引里以 .html 结尾的路径 = 真实存在的文章文件（其余是目录式页面）
+  function htmlPaths() {
+    var cache = window.searchCache;
+    if (!Array.isArray(cache)) return null;
+    var set = {};
+    cache.forEach(function (item) {
+      var p = item && item.path;
+      if (typeof p === 'string' && /\.html$/.test(p)) set[p] = true;
+    });
+    return set;
+  }
+
+  // /xxx/ 与 /xxx/?kw=yyy#zzz 都补回 .html；集合里没有的路径（目录式页面）不动
+  function fixIn(box) {
+    var set = htmlPaths();
+    if (!set) {
+      if (!warned) {
+        warned = true;
+        console.warn('[mb-search-url] 没读到主题的 searchCache，搜索结果 URL 未修正');
+      }
+      return;
+    }
+    var links = box.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      var href = a.getAttribute('href') || '';
+      var m = href.match(/^([^?#]*?)\/(?=[?#]|$)/);
+      if (!m) continue;
+      var real = m[1] + '.html';
+      if (set[real]) a.setAttribute('href', real + href.slice(m[1].length + 1));
+    }
+  }
+
+  /* 升级前存下来的索引里 path 还是 /xxx/（没有 .html）：不清掉的话，
+     最长一个 cache_ttl（默认 24h）内用户看到的还是 404。只删「确认是旧格式」
+     的那一份，清完主题下次聚焦搜索框会自己重新拉，用户无感；
+     新格式的缓存不会被误删。做一次就够，用 MIGRATED_KEY 记着。 */
+  try {
+    if (!localStorage.getItem(MIGRATED_KEY)) {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (raw && !/"path":"[^"]+\.html"/.test(raw)) localStorage.removeItem(CACHE_KEY);
+      localStorage.setItem(MIGRATED_KEY, '1');
+    }
+  } catch (e) {}
+
+  /* 结果由搜索框的 input 事件即时生成 → 盯住 #search-result 的子节点变化。
+     只观察 childList：改 href 属于属性变更，不会把自己再触发一遍。
+     没挂搜索组件的页面（page.leftbar 为空）找不到这个节点，直接跳过。 */
+  function observe() {
+    var box = document.getElementById('search-result');
+    if (!box || box.__mbSearchUrl) return;
+    box.__mbSearchUrl = true;
+    new MutationObserver(function () { fixIn(box); })
+      .observe(box, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observe);
+  } else {
+    observe();
+  }
 })();
 </script>
 

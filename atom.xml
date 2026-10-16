@@ -7,7 +7,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-10-15T12:24:29.816Z</updated>
+  <updated>2026-10-16T05:53:35.633Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -16,6 +16,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  
+  
+  <entry>
+    <title>TRAE 替我提交代码，怎么署名成了 Claude？</title>
+    <link href="https://flashj.cn/trae-signed-commit-as-claude.html"/>
+    <id>https://flashj.cn/trae-signed-commit-as-claude.html</id>
+    <published>2026-10-16T03:11:00.000Z</published>
+    <updated>2026-10-16T05:53:35.633Z</updated>
+    
+    
+    <content type="html"><![CDATA[<h1 id="被-Claude-鸠占鹊巢？TRAE-越来越让人不放心了"><a href="#被-Claude-鸠占鹊巢？TRAE-越来越让人不放心了" class="headerlink" title="被 Claude 鸠占鹊巢？TRAE 越来越让人不放心了"></a>被 Claude 鸠占鹊巢？TRAE 越来越让人不放心了</h1><p>今天TRAE给我来了个特别离谱的事情，你知道吗？</p><p>我早上在改一个小bug，改完之后，他给我提交的时候，居然在署名上加了一个Claude的署名。</p><pre><code>fix(personnel-log): 修复确认组合筛选后表格仍显示旧数据的响应竞态cleanup 中 req.cancel() 的 abort 可能落在&quot;响应已到达、JS 侧仍在解析&quot;的窗口，导致 Promise 永不 settle、过滤后的响应被静默丢弃。改为依赖变化不取消 +请求序号守卫，仅应用最新请求的响应；卸载时统一取消进行中请求。Co-Authored-By: Claude Sonnet 4.6 noreply@anthropic.com</code></pre><p><img src="https://cdn.mousebomb.org/blog/auto/trae-commit-coauthored-claude.webp"></p><p>然后我就很纳闷，因为我最近用Deepseek官方API，在Claude Code里面提交git时，都没有看见claudecode会给我加Claude的署名。</p><p>而且之前很长时间，对于简单的前端项目，我在TRAE里面也都是用GLM Flash做的，从来没有遇到过提交的时候会署名Claude的情况。</p><p>今年字节跳动的这几个AI产品，感觉都是临时工在捣蛋，是吧？这就是他们所说的，80% 的代码是AI写的，是吧？我明白了，所以他们开发TRAE是用Claude开发的，被Claude鸠占鹊巢了属于是。</p><p>也不至于啊，这个问题的这个时间点，是最近TRAE Work和TRAE IDE 再度合并之后出现的，署名还用Sonnet 4.6，这不太合理啊。</p><p><img src="https://cdn.mousebomb.org/blog/auto/trae-glm-admits-claude-signature.webp"></p><p>不过，也能看出来TRAE的推理是云端追加了规则的，暗箱操作，随时可以修复，也可能随时出问题，你也不可能知道有没有拿你的语料做训练。</p><p>自从今年TRAE开始商业化大力推广之后，就越来越觉得TRAE不好用了。</p><p>‘个人用户终身免费’变成积分制。</p><p>‘排队制’变成‘token限速’提升‘用户体验’。</p><p>被爆出上传用户项目文件到云端分析。</p><p>原来爱会消失的，对吗？</p><p>对，AI时代，用户就是这么没有忠诚度。</p><p>我还是觉得opencode最好，各方面都相对透明、可控、自由组装。加上开源部署的openviking就足够。</p>]]></content>
+    
+    
+    <summary type="html">改完一个小 bug，TRAE 提交时自作主张在 commit message 里加上了 Co-Authored-By: Claude Sonnet 4.6。大爷的离谱，我用 Claude Code 提交都不会加Claude署名。再加上积分制、token 限速、上传项目文件——TRAE 商业化之后，越来越让人不放心了。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
+    
+    <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
+    
+    <category term="vibecoding" scheme="https://flashj.cn/tags/vibecoding/"/>
+    
+    <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="字节跳动" scheme="https://flashj.cn/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
+    
+    <category term="Claude" scheme="https://flashj.cn/tags/Claude/"/>
+    
+  </entry>
   
   
   
@@ -572,7 +610,7 @@
     <link href="https://flashj.cn/trae-solo-shi-yong-ji-lu.html"/>
     <id>https://flashj.cn/trae-solo-shi-yong-ji-lu.html</id>
     <published>2026-05-06T11:45:00.000Z</published>
-    <updated>2026-10-15T12:13:28.776Z</updated>
+    <updated>2026-10-16T03:49:47.870Z</updated>
     
     
     <content type="html"><![CDATA[<h1 id="TRAE-SOLO-独立版使用记录"><a href="#TRAE-SOLO-独立版使用记录" class="headerlink" title="TRAE SOLO 独立版使用记录"></a>TRAE SOLO 独立版使用记录</h1><p>这两天上线的 Trae Solo 新版支持手机远程控制，出门时也能让家里的电脑自己写代码了。虽然需要排队，但可以趁吃饭的时候让它写，还是有一点优势的。</p><p>不过相比 Trae IDE，功能稍弱：</p><ol><li>没有继承原有的规则</li><li>没有继承原有的 Skill，需要单独安装</li><li>技能中心更偏向办公场景，很多技能都没有</li><li>自动调用的大模型有几率选到「智商」稍低的，有些问题可能需要改好几次才能改好</li></ol>]]></content>
@@ -651,9 +689,9 @@
     
     <category term="ClaudeCode" scheme="https://flashj.cn/tags/ClaudeCode/"/>
     
-    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="OpenClaw" scheme="https://flashj.cn/tags/OpenClaw/"/>
+    
+    <category term="工具" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="MCP" scheme="https://flashj.cn/tags/MCP/"/>
     
@@ -670,34 +708,6 @@
     <category term="AI伙伴" scheme="https://flashj.cn/tags/AI%E4%BC%99%E4%BC%B4/"/>
     
     <category term="个人助理" scheme="https://flashj.cn/tags/%E4%B8%AA%E4%BA%BA%E5%8A%A9%E7%90%86/"/>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>让Claude Code开口说话：这款音效插件让我把编程玩成了游戏</title>
-    <link href="https://flashj.cn/claude-code-peon-ping-sound-notification.html"/>
-    <id>https://flashj.cn/claude-code-peon-ping-sound-notification.html</id>
-    <published>2026-04-10T00:46:00.000Z</published>
-    <updated>2026-10-15T12:13:27.794Z</updated>
-    
-    
-    <content type="html"><![CDATA[<h1 id="让Claude-Code开口说话：这款音效插件让我把编程玩成了游戏"><a href="#让Claude-Code开口说话：这款音效插件让我把编程玩成了游戏" class="headerlink" title="让Claude Code开口说话：这款音效插件让我把编程玩成了游戏"></a>让Claude Code开口说话：这款音效插件让我把编程玩成了游戏</h1><p>说实话，用Claude Code写代码已经够爽了，但有一个痛点一直困扰着我——</p><p><strong>我得时时刻刻盯着终端。</strong></p><p>任务跑着跑着，不知道什么时候该点”允许”，不知道什么时候它悄悄完成了。切到浏览器看文档回来，发现终端卡在某个授权确认那里等了五分钟；或者一个长任务跑完了，你还在傻等，桌面却早已安静如死鱼。</p><p>直到我装了 <strong>peon-ping</strong>。</p><hr><h2 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么"></a>它是什么</h2><p>peon-ping 是一款给 AI 编程助手加音效通知的工具，支持 Claude Code、Cursor、Codex 等主流工具。它的核心功能很简单：</p><ul><li><strong>任务完成时</strong>：播放音效通知你</li><li><strong>需要授权时</strong>：播放提示音叫你回来</li><li><strong>出错时</strong>：播放警告音效</li></ul><p>但它不是普通的”叮”一声——它背后接了 <strong>160+ 音效包</strong>，都是来自游戏角色的原声。</p><p>你可以让 GLaDOS 吐槽你代码写得烂，可以用星际争霸的人族单位播报”任务完成”，也可以用军团战争的地精说”你的命令我收到了”。</p><p><strong>从此，终端不再沉默。</strong></p><hr><h2 id="为什么我强推-Mambo-Pack"><a href="#为什么我强推-Mambo-Pack" class="headerlink" title="为什么我强推 Mambo Pack"></a>为什么我强推 Mambo Pack</h2><p>音效包我试了很多，最终稳定在 <strong>Mambo</strong>，两个字：<strong>灵动</strong>。</p><p>Mambo 的音效节奏感强、音色清脆，播报信息清晰不拖沓。不管是”任务完成”还是”等待授权”，音效时长刚好——不会太短以至于你没听到，也不会太长打断思路。</p><p>用它之后我才发现，之前那种”切出去就焦虑”的心态消失了。因为你知道：<strong>有什么事，终端会叫你的。</strong></p><p>我目前在用五套音效组合：</p><ul><li><strong>Mambo Pack</strong> ——主力通知音效</li><li><strong>命令与征服：将军音效包</strong> ——梦回当年在学校时<a href="https://flashj.cn/cnc-general-screen-shot.html">玩游戏时光</a></li><li><strong>星穹铁道 Kafka 音效包</strong> ——特定场景的趣味点缀</li><li><strong>星际争霸音效包</strong> ——完成重要里程碑时的仪式感</li><li><strong>王者荣耀音效包</strong> ——音效特别多，不容易重复</li></ul><p>切换起来一行命令搞定，用了就回不去。</p><hr><h2 id="安装配置有多简单"><a href="#安装配置有多简单" class="headerlink" title="安装配置有多简单"></a>安装配置有多简单</h2><p><strong>第一步：安装 peon-ping</strong></p><p>去官网直接选择你要的主题包，然后用官网生成的命令一键安装。比如：</p><pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash -s -- --packs=ccg_china_dozer,glados,honor_of_kings,mambo_pack,peasant,peon,sc2_stetmann_zh,sc_battlecruiser,sc_kerrigan,starrail-kafka-peon-pack</code></pre><p>或者</p><pre><code class="language-bash">brew install PeonPing/tap/peon-ping &amp;&amp; peon-ping-setup --packs=ccg_china_dozer,glados,honor_of_kings,mambo_pack,peasant,peon,sc2_stetmann_zh,sc_battlecruiser,sc_kerrigan,starrail-kafka-peon-pack</code></pre><p><strong>第二步：配置 Claude Code</strong></p><p>在 <code>~/.claude/hooks/peon-ping/config.json</code> 中配置自己的喜好：</p><pre><code class="language-json">&#123;  &quot;default_pack&quot;: &quot;mambo_pack&quot;,  &quot;volume&quot;: 1.0,  &quot;enabled&quot;: true,  &quot;desktop_notifications&quot;: false,  &quot;categories&quot;: &#123;    &quot;session.start&quot;: true,    &quot;task.acknowledge&quot;: true,    &quot;task.complete&quot;: true,    &quot;task.error&quot;: true,    &quot;input.required&quot;: true,    &quot;resource.limit&quot;: true,    &quot;user.spam&quot;: true  &#125;  //...&#125;</code></pre><p><strong>第三步：启动 Claude Code，直接开玩</strong></p><p>没有第四步了。装完即用，零学习成本。</p><hr><h2 id="把编程变成一种体验"><a href="#把编程变成一种体验" class="headerlink" title="把编程变成一种体验"></a>把编程变成一种体验</h2><p>peon-ping 解决的其实不是效率问题——它解决的是<strong>体验问题</strong>。</p><p>当终端开始”说话”，当你听见熟悉的游戏音效，当你不需要再焦虑地盯着屏幕，编程的节奏感就变了。它变得更像一场对话，而不是你单方面对着黑洞敲键盘。</p><p><strong>工具不只是工具，它还可以是你的游戏手柄。</strong></p><hr><p><strong>相关资源：</strong></p><ul><li>音效包目录：<a href="https://openpeon.com/packs">https://openpeon.com/packs</a></li><li>peon-ping 官网：<a href="https://www.peonping.com/">https://www.peonping.com</a></li></ul>]]></content>
-    
-    
-    <summary type="html">说实话，用Claude Code写代码已经够爽了，但有一个痛点一直困扰着我——我得时时刻刻盯着终端。</summary>
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="Claude Code" scheme="https://flashj.cn/tags/Claude-Code/"/>
-    
-    <category term="peon-ping" scheme="https://flashj.cn/tags/peon-ping/"/>
-    
-    <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   

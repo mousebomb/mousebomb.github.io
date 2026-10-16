@@ -341,6 +341,24 @@ background:var(--block);color:var(--text-p1)}
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/trae-signed-commit-as-claude.html" title="TRAE 替我提交代码，怎么署名成了 Claude？">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">TRAE 替我提交代码，怎么署名成了 Claude？</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/photocraft-rea-software-industry-change.html" title="PhotoCraft 与 REA：软件行业正在起变化">
   
   
@@ -646,24 +664,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/coreaudiod-memory-leak-from-claude-code-hook.html" title="解决 coreaudiod 内存占用高达 45G 的问题">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">解决 coreaudiod 内存占用高达 45G 的问题</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -722,7 +722,9 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;ra3-damage-type.html" title="红色警戒3中伤害类型详解"><span class="title">红色警戒3中伤害类型详解</span><span class="excerpt"> 红色警戒3中伤害种类共9种,分别是加农炮、自动炮、枪、火箭、高射炮、爆炸、磁暴、光棱、震荡伤害。各个兵种对不同伤害都有不同抗性。详细情况见本文图鉴：</span></a><a class="item" href="&#x2F;ra3-screenshot.html" title="红色警戒3截图"><span class="title">红色警戒3截图</span></a><a class="item" href="&#x2F;cdkeyfix-bfme.html" title="指环王:中土大战1,2防自爆补丁"><span class="title">指环王:中土大战1,2防自爆补丁</span><span class="excerpt"> 最近在玩指环王：中土大战这样的经典战略游戏。 D版盘玩出来的效果自然就是会出现自爆的情况：</span></a><a class="item" href="&#x2F;cnc4.html" title="EA宣布《命令与征服4》将在2010年来临"><span class="title">EA宣布《命令与征服4》将在2010年来临</span><span class="excerpt"> EA近日宣布将在2010年发布命令与征服4，该作将会带领玩家体验泰伯伦战争传奇版的结局。 EA真是高产。明年又能见到凯恩了，支持凯恩嘿嘿。</span></a><a class="item" href="&#x2F;09-1-6-pcgame-list.html" title="09年上半年关注游戏单"><span class="title">09年上半年关注游戏单</span><span class="excerpt">
+    <div class="related-posts"><a class="item" href="&#x2F;ra3-damage-type.html" title="红色警戒3中伤害类型详解"><span class="title">红色警戒3中伤害类型详解</span><span class="excerpt"> 红色警戒3中伤害种类共9种,分别是加农炮、自动炮、枪、火箭、高射炮、爆炸、磁暴、光棱、震荡伤害。各个兵种对不同伤害都有不同抗性。详细情况见本文图鉴：</span></a><a class="item" href="&#x2F;ra3-screenshot.html" title="红色警戒3截图"><span class="title">红色警戒3截图</span></a><a class="item" href="&#x2F;cdkeyfix-bfme.html" title="指环王:中土大战1,2防自爆补丁"><span class="title">指环王:中土大战1,2防自爆补丁</span><span class="excerpt"> 最近在玩指环王：中土大战这样的经典战略游戏。 D版盘玩出来的效果自然就是会出现自爆的情况：</span></a><a class="item" href="&#x2F;cnc4-mp-download.html" title="《命令与征服4》多人游戏试玩版已经出现[更新下载]"><span class="title">《命令与征服4》多人游戏试玩版已经出现[更新下载]</span><span class="excerpt"> 
+EA速度就是大快人心的那种，之前宣布《命令与征服4》将在2010年来临，刚听到消息不出一年，就能玩到试玩了。洛杉矶工作室似乎对日本风情有独钟，做过红色警戒3之后更是上瘾，连CNC4的预订购宣传画中的凯恩都成帝国武士造型了。
+《命令...</span></a><a class="item" href="&#x2F;09-1-6-pcgame-list.html" title="09年上半年关注游戏单"><span class="title">09年上半年关注游戏单</span><span class="excerpt">
 
 EA - 指环王：征服者 09-01-13
 SEGA - 帝国之全面战争 (Empire Total War) 09-03
@@ -1733,6 +1735,74 @@ EA - 教父2 09-02-24
     var p = new URL(link.href, location.origin).pathname;
     if (p) a.setAttribute('href', p);
   } catch (e) {}
+})();
+</script>
+<script>
+(function () {
+  var CACHE_KEY = 'search_cache_v4';   // 主题的搜索数据缓存键
+  var MIGRATED_KEY = 'mb_search_url_migrated_v1';
+  var warned = false;
+
+  // 索引里以 .html 结尾的路径 = 真实存在的文章文件（其余是目录式页面）
+  function htmlPaths() {
+    var cache = window.searchCache;
+    if (!Array.isArray(cache)) return null;
+    var set = {};
+    cache.forEach(function (item) {
+      var p = item && item.path;
+      if (typeof p === 'string' && /\.html$/.test(p)) set[p] = true;
+    });
+    return set;
+  }
+
+  // /xxx/ 与 /xxx/?kw=yyy#zzz 都补回 .html；集合里没有的路径（目录式页面）不动
+  function fixIn(box) {
+    var set = htmlPaths();
+    if (!set) {
+      if (!warned) {
+        warned = true;
+        console.warn('[mb-search-url] 没读到主题的 searchCache，搜索结果 URL 未修正');
+      }
+      return;
+    }
+    var links = box.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      var href = a.getAttribute('href') || '';
+      var m = href.match(/^([^?#]*?)\/(?=[?#]|$)/);
+      if (!m) continue;
+      var real = m[1] + '.html';
+      if (set[real]) a.setAttribute('href', real + href.slice(m[1].length + 1));
+    }
+  }
+
+  /* 升级前存下来的索引里 path 还是 /xxx/（没有 .html）：不清掉的话，
+     最长一个 cache_ttl（默认 24h）内用户看到的还是 404。只删「确认是旧格式」
+     的那一份，清完主题下次聚焦搜索框会自己重新拉，用户无感；
+     新格式的缓存不会被误删。做一次就够，用 MIGRATED_KEY 记着。 */
+  try {
+    if (!localStorage.getItem(MIGRATED_KEY)) {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (raw && !/"path":"[^"]+\.html"/.test(raw)) localStorage.removeItem(CACHE_KEY);
+      localStorage.setItem(MIGRATED_KEY, '1');
+    }
+  } catch (e) {}
+
+  /* 结果由搜索框的 input 事件即时生成 → 盯住 #search-result 的子节点变化。
+     只观察 childList：改 href 属于属性变更，不会把自己再触发一遍。
+     没挂搜索组件的页面（page.leftbar 为空）找不到这个节点，直接跳过。 */
+  function observe() {
+    var box = document.getElementById('search-result');
+    if (!box || box.__mbSearchUrl) return;
+    box.__mbSearchUrl = true;
+    new MutationObserver(function () { fixIn(box); })
+      .observe(box, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observe);
+  } else {
+    observe();
+  }
 })();
 </script>
 

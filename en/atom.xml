@@ -7,7 +7,7 @@
   <link href="https://flashj.cn/en/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/en/"/>
-  <updated>2026-10-15T12:13:29.189Z</updated>
+  <updated>2026-10-16T03:51:39.063Z</updated>
   <id>https://flashj.cn/en/</id>
   
   <author>
@@ -16,6 +16,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  
+  
+  <entry>
+    <title>TRAE committed code for me — why is it signed as Claude?</title>
+    <link href="https://flashj.cn/en/trae-signed-commit-as-claude.html"/>
+    <id>https://flashj.cn/en/trae-signed-commit-as-claude.html</id>
+    <published>2026-10-16T03:11:00.000Z</published>
+    <updated>2026-10-16T03:51:39.063Z</updated>
+    
+    
+    <content type="html"><![CDATA[<h1 id="Taken-Over-by-Claude-TRAE-Is-Getting-Less-and-Less-Trustworthy"><a href="#Taken-Over-by-Claude-TRAE-Is-Getting-Less-and-Less-Trustworthy" class="headerlink" title="Taken Over by Claude? TRAE Is Getting Less and Less Trustworthy"></a>Taken Over by Claude? TRAE Is Getting Less and Less Trustworthy</h1><p>TRAE pulled something truly absurd on me today — you know what happened?</p><p>I was fixing a small bug this morning, and when it committed my changes, it actually tacked a Claude signature onto the attribution.</p><pre><code>fix(personnel-log): 修复确认组合筛选后表格仍显示旧数据的响应竞态cleanup 中 req.cancel() 的 abort 可能落在&quot;响应已到达、JS 侧仍在解析&quot;的窗口，导致 Promise 永不 settle、过滤后的响应被静默丢弃。改为依赖变化不取消 +请求序号守卫，仅应用最新请求的响应；卸载时统一取消进行中请求。Co-Authored-By: Claude Sonnet 4.6 noreply@anthropic.com</code></pre><p><img src="https://cdn.mousebomb.org/blog/auto/trae-commit-coauthored-claude.webp"></p><p>I was pretty baffled, because recently I’ve been using the official DeepSeek API, and when I commit to git inside Claude Code, I’ve never once seen Claude Code add a Claude signature for me.</p><p>And for a long stretch before that, for simple front-end projects, I was also using GLM Flash in TRAE, and I never ran into a commit signed with Claude.</p><p>This year, all these ByteDance AI products feel like they’re being sabotaged by temp workers, huh? So this is what they mean by “80% of the code is written by AI,” right? I get it now — they built TRAE with Claude, and Claude has taken over the nest, so to speak.</p><p>Though that doesn’t quite add up either. The timing of this issue is right after TRAE Work and TRAE IDE were merged again recently, and the signature still says Sonnet 4.6 — that doesn’t make much sense.</p><p><img src="https://cdn.mousebomb.org/blog/auto/trae-glm-admits-claude-signature.webp"></p><p>Still, you can tell that TRAE’s inference has rules appended on the cloud side. It’s a black box: they can fix it at any moment, and it can break at any moment, and there’s no way for you to know whether your data is being used for training.</p><p>Ever since TRAE started pushing hard on commercialization this year, it’s felt less and less usable.</p><p>“Lifetime free for individual users” turned into a credits system.</p><p>The “queue system” became “token rate limiting” to improve the “user experience.”</p><p>It got caught uploading users’ project files to the cloud for analysis.</p><p>So love does fade away, doesn’t it?</p><p>Yep. In the AI era, users just have no loyalty.</p><p>I still think opencode is the best — it’s relatively transparent, controllable, and freely composable across the board. Pair that with a self-hosted openviking and that’s enough.</p>]]></content>
+    
+    
+    <summary type="html">After I fixed a small bug, TRAE went ahead and added Co-Authored-By: Claude Sonnet 4.6 to the commit message on its own. That&#39;s ridiculous as hell — even when I commit with Claude Code, it doesn&#39;t add a Claude signature. Add the credit system, token rate limiting, and project file uploads on top of that — ever since TRAE went commercial, it&#39;s getting less and less reassuring.</summary>
+    
+    
+    
+    <category term="Tools" scheme="https://flashj.cn/en/categories/Tools/"/>
+    
+    
+    <category term="AI" scheme="https://flashj.cn/en/tags/AI/"/>
+    
+    <category term="Trae" scheme="https://flashj.cn/en/tags/Trae/"/>
+    
+    <category term="vibecoding" scheme="https://flashj.cn/en/tags/vibecoding/"/>
+    
+    <category term="ClaudeCode" scheme="https://flashj.cn/en/tags/ClaudeCode/"/>
+    
+    <category term="Tool" scheme="https://flashj.cn/en/tags/Tool/"/>
+    
+    <category term="ByteDance" scheme="https://flashj.cn/en/tags/ByteDance/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/en/tags/OpenCode/"/>
+    
+    <category term="Claude" scheme="https://flashj.cn/en/tags/Claude/"/>
+    
+  </entry>
   
   
   
@@ -572,7 +610,7 @@
     <link href="https://flashj.cn/en/trae-solo-shi-yong-ji-lu.html"/>
     <id>https://flashj.cn/en/trae-solo-shi-yong-ji-lu.html</id>
     <published>2026-05-06T11:45:00.000Z</published>
-    <updated>2026-10-15T12:13:29.196Z</updated>
+    <updated>2026-10-16T03:50:30.740Z</updated>
     
     
     <content type="html"><![CDATA[<h1 id="Notes-on-Using-TRAE-SOLO-Standalone"><a href="#Notes-on-Using-TRAE-SOLO-Standalone" class="headerlink" title="Notes on Using TRAE SOLO Standalone"></a>Notes on Using TRAE SOLO Standalone</h1><p>The new version of Trae Solo that launched these past couple of days supports remote control from your phone, so when you’re out you can still have your home computer write code on its own. There’s a queue, but you can let it work while you’re eating, which is still a bit of an advantage.</p><p>That said, compared to Trae IDE, it’s a little weaker in features:</p><ol><li>It doesn’t inherit your existing rules</li><li>It doesn’t inherit your existing Skills — you have to install them separately</li><li>The skill center leans more toward office scenarios, and a lot of skills just aren’t there</li><li>The large model it calls automatically has a chance of picking one with slightly lower “IQ”, so some problems may take several tries to fix properly</li></ol>]]></content>
@@ -670,34 +708,6 @@
     <category term="AI Companion" scheme="https://flashj.cn/en/tags/AI-Companion/"/>
     
     <category term="Personal Assistant" scheme="https://flashj.cn/en/tags/Personal-Assistant/"/>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Getting Claude Code to talk: this sound-effect plugin turned my coding sessions into a game</title>
-    <link href="https://flashj.cn/en/claude-code-peon-ping-sound-notification.html"/>
-    <id>https://flashj.cn/en/claude-code-peon-ping-sound-notification.html</id>
-    <published>2026-04-10T00:46:00.000Z</published>
-    <updated>2026-10-15T12:13:29.011Z</updated>
-    
-    
-    <content type="html"><![CDATA[<h1 id="Making-Claude-Code-Speak-This-Sound-Effect-Plugin-Turned-My-Coding-Into-a-Game"><a href="#Making-Claude-Code-Speak-This-Sound-Effect-Plugin-Turned-My-Coding-Into-a-Game" class="headerlink" title="Making Claude Code Speak: This Sound-Effect Plugin Turned My Coding Into a Game"></a>Making Claude Code Speak: This Sound-Effect Plugin Turned My Coding Into a Game</h1><p>Honestly, coding with Claude Code is already a joy, but one pain point has been nagging me the whole time—</p><p><strong>I have to keep my eyes glued to the terminal.</strong></p><p>A task is running and you have no idea when you need to click “Allow,” or when it quietly finished on its own. You switch to the browser to read docs, come back, and find the terminal stuck on some permission prompt that’s been waiting five minutes; or a long task finishes while you’re still sitting there waiting like an idiot, and your desktop has long since gone quiet as a dead fish.</p><p>Until I installed <strong>peon-ping</strong>.</p><hr><h2 id="What-It-Is"><a href="#What-It-Is" class="headerlink" title="What It Is"></a>What It Is</h2><p>peon-ping is a tool that adds sound-effect notifications to AI coding assistants, supporting mainstream tools like Claude Code, Cursor, and Codex. Its core features are simple:</p><ul><li><strong>When a task completes</strong>: play a sound to notify you</li><li><strong>When authorization is needed</strong>: play an alert to call you back</li><li><strong>On errors</strong>: play a warning sound</li></ul><p>But it’s not your ordinary single “ding”—it hooks into <strong>160+ sound packs</strong>, all original voice clips from game characters.</p><p>You can have GLaDOS mock your terrible code, have a StarCraft Terran unit announce “mission complete,” or have a Legion War goblin say “your command has been received.”</p><p><strong>From then on, the terminal is no longer silent.</strong></p><hr><h2 id="Why-I-Strongly-Recommend-the-Mambo-Pack"><a href="#Why-I-Strongly-Recommend-the-Mambo-Pack" class="headerlink" title="Why I Strongly Recommend the Mambo Pack"></a>Why I Strongly Recommend the Mambo Pack</h2><p>I tried a lot of sound packs, and eventually settled on <strong>Mambo</strong>. Two words: <strong>lively</strong>.</p><p>Mambo’s sounds have a strong sense of rhythm and a crisp tone, and the announcements are clear and never drag. Whether it’s “task complete” or “awaiting authorization,” the sound length is just right—not so short you miss it, not so long it breaks your train of thought.</p><p>Only after using it did I realize that the old “switch away and get anxious” mindset had disappeared. Because you know: <strong>if something happens, the terminal will call you.</strong></p><p>I’m currently running a combo of five sound packs:</p><ul><li><strong>Mambo Pack</strong> — the main notification sound</li><li><strong>Command &amp; Conquer: Generals sound pack</strong> — takes me back to <a href="https://flashj.cn/cnc-general-screen-shot.html">gaming sessions</a> at school back in the day</li><li><strong>Honkai: Star Rail Kafka sound pack</strong> — a fun touch for specific situations</li><li><strong>StarCraft sound pack</strong> — the sense of ceremony when hitting an important milestone</li><li><strong>Honor of Kings sound pack</strong> — tons of sounds, so it rarely repeats</li></ul><p>Switching takes a single command, and once you try it you can’t go back.</p><hr><h2 id="How-Simple-the-Install-and-Setup-Is"><a href="#How-Simple-the-Install-and-Setup-Is" class="headerlink" title="How Simple the Install and Setup Is"></a>How Simple the Install and Setup Is</h2><p><strong>Step 1: Install peon-ping</strong></p><p>Go to the official site, pick the theme packs you want, then one-click install with the command the site generates for you. For example:</p><pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash -s -- --packs=ccg_china_dozer,glados,honor_of_kings,mambo_pack,peasant,peon,sc2_stetmann_zh,sc_battlecruiser,sc_kerrigan,starrail-kafka-peon-pack</code></pre><p>or</p><pre><code class="language-bash">brew install PeonPing/tap/peon-ping &amp;&amp; peon-ping-setup --packs=ccg_china_dozer,glados,honor_of_kings,mambo_pack,peasant,peon,sc2_stetmann_zh,sc_battlecruiser,sc_kerrigan,starrail-kafka-peon-pack</code></pre><p><strong>Step 2: Configure Claude Code</strong></p><p>Set your preferences in <code>~/.claude/hooks/peon-ping/config.json</code>:</p><pre><code class="language-json">&#123;  &quot;default_pack&quot;: &quot;mambo_pack&quot;,  &quot;volume&quot;: 1.0,  &quot;enabled&quot;: true,  &quot;desktop_notifications&quot;: false,  &quot;categories&quot;: &#123;    &quot;session.start&quot;: true,    &quot;task.acknowledge&quot;: true,    &quot;task.complete&quot;: true,    &quot;task.error&quot;: true,    &quot;input.required&quot;: true,    &quot;resource.limit&quot;: true,    &quot;user.spam&quot;: true  &#125;  //...&#125;</code></pre><p><strong>Step 3: Launch Claude Code and just start playing</strong></p><p>There is no step 4. Ready to use the moment it’s installed, zero learning curve.</p><hr><h2 id="Turning-Programming-Into-an-Experience"><a href="#Turning-Programming-Into-an-Experience" class="headerlink" title="Turning Programming Into an Experience"></a>Turning Programming Into an Experience</h2><p>What peon-ping solves isn’t really an efficiency problem—it solves an <strong>experience problem</strong>.</p><p>When the terminal starts to “talk,” when you hear familiar game sound effects, when you no longer need to anxiously stare at the screen, the rhythm of programming changes. It feels more like a conversation, rather than you typing one-sidedly into a black hole.</p><p><strong>A tool isn’t just a tool—it can also be your game controller.</strong></p><hr><p><strong>Related resources:</strong></p><ul><li>Sound pack catalog: <a href="https://openpeon.com/packs">https://openpeon.com/packs</a></li><li>peon-ping official site: <a href="https://www.peonping.com/">https://www.peonping.com</a></li></ul>]]></content>
-    
-    
-    <summary type="html">Honestly, writing code with Claude Code is already a blast, but there&#39;s one pain point that&#39;s been nagging me — I have to keep my eyes glued to the terminal at all times.</summary>
-    
-    
-    
-    <category term="Tools" scheme="https://flashj.cn/en/categories/Tools/"/>
-    
-    
-    <category term="Claude Code" scheme="https://flashj.cn/en/tags/Claude-Code/"/>
-    
-    <category term="peon-ping" scheme="https://flashj.cn/en/tags/peon-ping/"/>
-    
-    <category term="Tools" scheme="https://flashj.cn/en/tags/Tools/"/>
     
   </entry>
   
