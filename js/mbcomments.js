@@ -306,6 +306,20 @@
       else roots.push(node);
     }
 
+    // 排序：顶层按「最新活动」倒序（有新回复的楼会顶上来）；楼内回复按时间正序
+    const ts = (value) => {
+      const t = Date.parse(value || '');
+      return Number.isNaN(t) ? 0 : t;
+    };
+    const oldest = (a, b) => ts(a.createdAt) - ts(b.createdAt) || a.id - b.id;
+    const latestAt = (node) => {
+      let max = ts(node.createdAt);
+      for (const child of node.children) max = Math.max(max, latestAt(child));
+      return max;
+    };
+    for (const node of map.values()) node.children.sort(oldest);
+    roots.sort((a, b) => latestAt(b) - latestAt(a) || b.id - a.id);
+
     list.textContent = '';
     const renderInto = (parentEl, nodes, depth) => {
       for (const node of nodes) {
