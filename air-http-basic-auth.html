@@ -31,17 +31,17 @@
 <meta property="article:modified_time" content="2008-05-16T02:23:30.000Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="flash">
-<meta property="article:tag" content="flex">
 <meta property="article:tag" content="as3">
 <meta property="article:tag" content="ria">
 <meta property="article:tag" content="air">
+<meta property="article:tag" content="flex">
 <meta property="article:tag" content="httpbasic">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="AIR的Http basic验证">
   
   
-  <meta name="keywords" content="flash,flex,as3,ria,air,httpbasic">
+  <meta name="keywords" content="flash,as3,ria,air,flex,httpbasic">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-16T10:23:30+08:00","dateModified":"2008-05-16T10:23:30+08:00","datePublished":"2008-05-16T10:23:30+08:00","description":"flex3或者FLASHcs3开发AIR中如何与需要Http basic验证的web通信？比如饭否http://fanfou.com/home 用户名中有@符号，如果直接访问http:&#x2F;&#x2F;“+loginName+”:”+loginPass+”@api.fanfou.com&#x2F;statuses&#x2F;update.xml的话会ioErr的.曾经在蓝色理想提问过,等到现在都没回复，网络上也搜索过，大多都是讲如何配置服务器端验证，而不是讲客户端如何登陆……有人提问C#和JAVA的登陆方法， 但是都没有回复，唯一可用的信息是VBs和Js里的方法，ajax实现起来很容易，xml的open方法的参数里就有user和pwd信息。\n去年在flex代码里一条一条扫描，发现urlRequest里有个setLoginCredentials方法，加上urlR.setLoginCredentials(loginName,loginPass);这行就可以发送用户验证信息了\n现在新版的AIR发布后,这个方法又废弃了.由于我一直没时间去修改我去年的饭否AIR客户端,所以也没关心这事.今天去官网查了个究竟.取而代之的方法:","headline":"AIR的Http basic验证","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-http-basic-auth.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-http-basic-auth.html","keywords":"flash, flex, as3, ria, air, httpbasic","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-16T10:23:30+08:00","dateModified":"2008-05-16T10:23:30+08:00","datePublished":"2008-05-16T10:23:30+08:00","description":"flex3或者FLASHcs3开发AIR中如何与需要Http basic验证的web通信？比如饭否http://fanfou.com/home 用户名中有@符号，如果直接访问http:&#x2F;&#x2F;“+loginName+”:”+loginPass+”@api.fanfou.com&#x2F;statuses&#x2F;update.xml的话会ioErr的.曾经在蓝色理想提问过,等到现在都没回复，网络上也搜索过，大多都是讲如何配置服务器端验证，而不是讲客户端如何登陆……有人提问C#和JAVA的登陆方法， 但是都没有回复，唯一可用的信息是VBs和Js里的方法，ajax实现起来很容易，xml的open方法的参数里就有user和pwd信息。\n去年在flex代码里一条一条扫描，发现urlRequest里有个setLoginCredentials方法，加上urlR.setLoginCredentials(loginName,loginPass);这行就可以发送用户验证信息了\n现在新版的AIR发布后,这个方法又废弃了.由于我一直没时间去修改我去年的饭否AIR客户端,所以也没关心这事.今天去官网查了个究竟.取而代之的方法:","headline":"AIR的Http basic验证","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-http-basic-auth.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-http-basic-auth.html","keywords":"flash, as3, ria, air, flex, httpbasic","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -245,9 +245,6 @@ background:var(--block);color:var(--text-p1)}
   --icon-loading: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.67%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.33%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E");
 }</style>
   
-  <link rel="alternate" hreflang="zh-CN" href="https://flashj.cn/air-http-basic-auth.html">
-  <link rel="alternate" hreflang="en" href="https://flashj.cn/en/air-http-basic-auth.html">
-  <link rel="alternate" hreflang="x-default" href="https://flashj.cn/air-http-basic-auth.html">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
 
