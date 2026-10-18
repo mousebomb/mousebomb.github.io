@@ -724,20 +724,26 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;AI-1min-5yrs-prowess-vs-Sweeping-Monk-Formless-Skill.html" title="AI一分钟给你5年功力，却练不出扫地僧的“无招胜有招”"><span class="title">AI一分钟给你5年功力，却练不出扫地僧的“无招胜有招”</span><span class="excerpt">AI能给你速成的招式，能让你快速从门外汉变成能比划两下的入门者，却给不了真正的高手在江湖里滚了几十年，挨过刀、踩过坑、看透了规矩背后的门道，磨出来的那一身“功夫之外的功夫”。那些真正的扫地僧，心中装的从来不是一招一式的标准动作，而是整...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;14-xiang-xin-li-ding-lv-jiao-ni-zou-ren-sheng-zhai.html" title="14项心理定律教你走人生[摘]"><span class="title">14项心理定律教你走人生[摘]</span><span class="excerpt">太阳的东升西落，地球运行的轨道，潮起潮落，月亮的阴阳圆缺，春夏秋冬的更替，一切都是那么的有规律。其实在人类的心灵里也存在着许多规律，然而却很少有人了解它们。以下是十四项心理定律，你可以应用它们在任何的领域里。无论是销售沟通、还是设立目...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="自我意识的边界"
+       data-post-title="自我意识的边界"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1291,39 +1297,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

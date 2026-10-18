@@ -715,25 +715,26 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;linksys-mx8400-slow.html" title="使用Linksys MX8400 访问互联网网速慢的问题"><span class="title">使用Linksys MX8400 访问互联网网速慢的问题</span><span class="excerpt">升级千兆宽带后网速仍仅百兆，经测试发现是Linksys路由器限制了设备速度。通过调整优先级设置并关闭限速功能，网速提升至800Mbps以上。问题源于路由器误判外网速度，导致设备间带宽被限制，正确配置后网络性能恢复正常。</span></a><a class="item" href="&#x2F;2008firefox3-download-day.html" title="2008Firefox3的下载日确定:6月17日!"><span class="title">2008Firefox3的下载日确定:6月17日!</span><span class="excerpt">(6.18日更新于后文) 今早收邮件，看到了下载日活动的信函
-
-别忘了加入我们Firefox 3的下载日！
-下载日就要到来了!标注您的日历，写在手心上，或者贴个小记事贴。下载日会在2008年June月17日开始。 承诺分布图
-
-hoh...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;linksys-mx8400-slow.html" title="使用Linksys MX8400 访问互联网网速慢的问题"><span class="title">使用Linksys MX8400 访问互联网网速慢的问题</span><span class="excerpt">升级千兆宽带后网速仍仅百兆，经测试发现是Linksys路由器限制了设备速度。通过调整优先级设置并关闭限速功能，网速提升至800Mbps以上。问题源于路由器误判外网速度，导致设备间带宽被限制，正确配置后网络性能恢复正常。</span></a><a class="item" href="&#x2F;08-nian-3-yue-13-ri.html" title="08年3月13日"><span class="title">08年3月13日</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="qihu-vs-ruixing"
+       data-post-title="奇虎又向瑞星宣战？"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1287,39 +1288,10 @@ hoh...</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

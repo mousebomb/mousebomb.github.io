@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2009-10-20T03:39:44.000Z">
 <meta property="article:modified_time" content="2009-10-20T03:39:44.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="下载">
 <meta property="article:tag" content="flash">
+<meta property="article:tag" content="下载">
 <meta property="article:tag" content="Machinarium">
 <meta property="article:tag" content="攻略">
 <meta name="twitter:card" content="summary_large_image">
@@ -39,7 +39,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="大型Flash游戏 机械迷城(Machinarium)">
   
   
-  <meta name="keywords" content="下载,flash,Machinarium,攻略">
+  <meta name="keywords" content="flash,下载,Machinarium,攻略">
 
   <!-- feed -->
   
@@ -62,7 +62,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-10-20T11:39:44+08:00","dateModified":"2009-10-20T11:39:44+08:00","datePublished":"2009-10-20T11:39:44+08:00","description":" 前几天看了《机器人9号》那部剧情一般但视觉效果宏大的电影，里面的未来机器人的形象历历在目。\n昨天，大型Flash游戏机械迷城(Machinarium)进入了我的游戏旅程。","headline":"大型Flash游戏 机械迷城(Machinarium)","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/machinarium.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/machinarium.html","keywords":"下载, flash, Machinarium, 攻略","thumbnailUrl":"https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/10/machinarium.jpg","image":["https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/10/machinarium.jpg"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-10-20T11:39:44+08:00","dateModified":"2009-10-20T11:39:44+08:00","datePublished":"2009-10-20T11:39:44+08:00","description":" 前几天看了《机器人9号》那部剧情一般但视觉效果宏大的电影，里面的未来机器人的形象历历在目。\n昨天，大型Flash游戏机械迷城(Machinarium)进入了我的游戏旅程。","headline":"大型Flash游戏 机械迷城(Machinarium)","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/machinarium.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/machinarium.html","keywords":"flash, 下载, Machinarium, 攻略","thumbnailUrl":"https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/10/machinarium.jpg","image":["https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/10/machinarium.jpg"]}</script>
   <script>
 (function () {
   try {
@@ -744,15 +744,21 @@ EA - 教父2 09-02-24
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="machinarium"
+       data-post-title="大型Flash游戏 机械迷城(Machinarium)"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1306,39 +1312,10 @@ EA - 教父2 09-02-24
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

@@ -695,7 +695,7 @@ background:var(--block);color:var(--text-p1)}
     
   </div>
   </div></div>
-<article class="md-text content slide-up"><p>9.74 Copy and open Douyin, check out [AIGC成也’s work] 144 AI employees deployed with one click! # PracticalTips # AI… <a target="_blank" rel="noopener" href="https://v.douyin.com/RsEb3LiCBiA/">144 AI employees deployed with one click! #PracticalTips #AI #github #ArtificialIntelligence #AITools - Douyin</a> 04&#x2F;07 <a href="mailto:&#108;&#x40;&#112;&#x2e;&#x64;&#x61;">l@p.da</a> Agb:&#x2F;</p>
+<article class="md-text content slide-up"><p>9.74 Copy and open Douyin, check out [AIGC成也’s work] 144 AI employees deployed with one click! # PracticalTips # AI… <a target="_blank" rel="noopener" href="https://v.douyin.com/RsEb3LiCBiA/">144 AI employees deployed with one click! #PracticalTips #AI #github #ArtificialIntelligence #AITools - Douyin</a> 04&#x2F;07 <a href="mailto:&#108;&#64;&#x70;&#x2e;&#100;&#x61;">l@p.da</a> Agb:&#x2F;</p>
 <p>github : <a target="_blank" rel="noopener" href="https://github.com/msitarzewski/agency-agents">Agency-Agent</a></p>
 <p>I saw this on Douyin — the most important thing is this project address. Let me go find it, hang on while I dig into it and see whether it’s worth deploying locally.</p>
 <p>Because the one I used yesterday, called Eigent, didn’t feel very reliable:</p>
@@ -760,12 +760,18 @@ cp -r agency-agents/* ~/.claude/agents/
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="agency-agent"
+       data-post-title="Agency-Agent: One-click deployment of 144 AI employees"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1319,39 +1325,10 @@ cp -r agency-agents/* ~/.claude/agents/
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

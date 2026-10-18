@@ -30,9 +30,9 @@
 <meta property="article:published_time" content="2008-06-26T00:44:22.000Z">
 <meta property="article:modified_time" content="2008-06-26T00:44:22.000Z">
 <meta property="article:author" content="Mousebomb">
+<meta property="article:tag" content="flash">
 <meta property="article:tag" content="as3">
 <meta property="article:tag" content="ria">
-<meta property="article:tag" content="flash">
 <meta property="article:tag" content="air">
 <meta property="article:tag" content="任务栏">
 <meta property="article:tag" content="最小化">
@@ -42,7 +42,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="AIR应用与任务栏,系统托盘,Dock">
   
   
-  <meta name="keywords" content="as3,ria,flash,air,任务栏,最小化,系统托盘">
+  <meta name="keywords" content="flash,as3,ria,air,任务栏,最小化,系统托盘">
 
   <!-- feed -->
   
@@ -65,7 +65,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-06-26T08:44:22+08:00","dateModified":"2008-06-26T08:44:22+08:00","datePublished":"2008-06-26T08:44:22+08:00","description":"反省:我太懒,懒到没有查阅官方资料寻找最小化到托盘的方法,其实AIR早有这方面的设计.见官方AIR文档DEV_GUIDE_FLASH中&lt;Chapter 13: Taskbar icons&gt; 现学习之,顺便整理一份中文档以赎罪.\n概述,关于任务栏图标许多操作系统都提供有任务栏来让应用程序显示一个小图标来代表之.ADOBE AIR通过NativeApplication.nativeApplication.icon属性来提供一个与应用程序任务栏图标相互交互的接口. AIR自动创建NativeApplication.nativeApplication.icon对象.这个对象类型是SystemTrayIcon或DockIcon之一,依赖于操作系统.","headline":"AIR应用与任务栏,系统托盘,Dock","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-dock-taskbar.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-dock-taskbar.html","keywords":"as3, ria, flash, air, 任务栏, 最小化, 系统托盘","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-06-26T08:44:22+08:00","dateModified":"2008-06-26T08:44:22+08:00","datePublished":"2008-06-26T08:44:22+08:00","description":"反省:我太懒,懒到没有查阅官方资料寻找最小化到托盘的方法,其实AIR早有这方面的设计.见官方AIR文档DEV_GUIDE_FLASH中&lt;Chapter 13: Taskbar icons&gt; 现学习之,顺便整理一份中文档以赎罪.\n概述,关于任务栏图标许多操作系统都提供有任务栏来让应用程序显示一个小图标来代表之.ADOBE AIR通过NativeApplication.nativeApplication.icon属性来提供一个与应用程序任务栏图标相互交互的接口. AIR自动创建NativeApplication.nativeApplication.icon对象.这个对象类型是SystemTrayIcon或DockIcon之一,依赖于操作系统.","headline":"AIR应用与任务栏,系统托盘,Dock","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-dock-taskbar.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-dock-taskbar.html","keywords":"flash, as3, ria, air, 任务栏, 最小化, 系统托盘","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -750,15 +750,21 @@ background:var(--block);color:var(--text-p1)}
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="air-dock-taskbar"
+       data-post-title="AIR应用与任务栏,系统托盘,Dock"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1317,39 +1323,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

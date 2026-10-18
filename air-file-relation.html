@@ -30,10 +30,10 @@
 <meta property="article:published_time" content="2008-05-25T08:11:30.000Z">
 <meta property="article:modified_time" content="2008-05-25T08:11:30.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="ria">
 <meta property="article:tag" content="flash">
-<meta property="article:tag" content="air">
 <meta property="article:tag" content="flex">
+<meta property="article:tag" content="ria">
+<meta property="article:tag" content="air">
 <meta property="article:tag" content="文件关联">
 <meta property="article:tag" content="文件格式">
 <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +41,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="AIR管理文件关联">
   
   
-  <meta name="keywords" content="ria,flash,air,flex,文件关联,文件格式">
+  <meta name="keywords" content="flash,flex,ria,air,文件关联,文件格式">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-25T16:11:30+08:00","dateModified":"2008-05-25T16:11:30+08:00","datePublished":"2008-05-25T16:11:30+08:00","description":"对于文件关联管理，air中的flash.desktop.NativeApplication类提供了4个方法：\nisSetAsDefaultApplication(extension:String):Boolean 返回当前AIR应用程序是否是指定文件格式的默认打开方式 参数extension是文件扩展名字符串，不用写”.”，比如”flv”，下面3条的extension一样\nsetAsDefaultApplication(extension:String):void 使当前应用程序与某种文件格式关联\nremoveAsDefaultApplication(extension:String):void 移除某个AIR应用程序与文件之间的关联\ngetDefaultApplication(extension:String):String 报告某个文件所关联的应用程序路径 返回应用程序路径的字符串","headline":"AIR管理文件关联","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-file-relation.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-file-relation.html","keywords":"ria, flash, air, flex, 文件关联, 文件格式","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-25T16:11:30+08:00","dateModified":"2008-05-25T16:11:30+08:00","datePublished":"2008-05-25T16:11:30+08:00","description":"对于文件关联管理，air中的flash.desktop.NativeApplication类提供了4个方法：\nisSetAsDefaultApplication(extension:String):Boolean 返回当前AIR应用程序是否是指定文件格式的默认打开方式 参数extension是文件扩展名字符串，不用写”.”，比如”flv”，下面3条的extension一样\nsetAsDefaultApplication(extension:String):void 使当前应用程序与某种文件格式关联\nremoveAsDefaultApplication(extension:String):void 移除某个AIR应用程序与文件之间的关联\ngetDefaultApplication(extension:String):String 报告某个文件所关联的应用程序路径 返回应用程序路径的字符串","headline":"AIR管理文件关联","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-file-relation.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-file-relation.html","keywords":"flash, flex, ria, air, 文件关联, 文件格式","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -740,15 +740,21 @@ background:var(--block);color:var(--text-p1)}
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="air-file-relation"
+       data-post-title="AIR管理文件关联"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1302,39 +1308,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

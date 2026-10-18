@@ -716,7 +716,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;9sky-9box.html" title="Nine Heavens Song King"><span class="title">Nine Heavens Song King</span><span class="excerpt"> Today I noticed that Jiutian has released a PC music player — Jiutian Guange Wang.</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;88-wow.html" title="Goodbye, World of Warcraft"><span class="title">Goodbye, World of Warcraft</span><span class="excerpt"> “It has been 4 years since The9 and Blizzard fought shoulder to shoulder, together resisting the invasion of countle...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
@@ -724,12 +724,18 @@ background:var(--block);color:var(--text-p1)}
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="king-of-2b"
+       data-post-title="King of 2B"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1283,39 +1289,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

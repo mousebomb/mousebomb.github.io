@@ -800,20 +800,26 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;testlog-of-using-void-alternative-to-cursor.html" title="使用Void(平替Cursor)的测试记录"><span class="title">使用Void(平替Cursor)的测试记录</span><span class="excerpt">Void是一款开源AI代码编辑器，可替代Cursor。测试中发现其在生成HTML页面时存在理解偏差和功能缺失，但通过调整配置和更换模型（如Qwen2.5-Coder-32B）可实现较好效果。</span></a><a class="item" href="&#x2F;wwdc-2025-keynote.html" title="WWDC 2025 keynote中对我比较重要的记录"><span class="title">WWDC 2025 keynote中对我比较重要的记录</span><span class="excerpt">- foundation models framework 可以开放调用- Liquid glass 透明、折射光线、灵动层级	- 设计语言的更新	- 桌面壁纸新审美，图片3D透视化	- 相机回到iOS6风格图标，终于回到photo&#x2F;...</span></a><a class="item" href="&#x2F;as-to-cocos2d-action.html" title="从AS到cocos2d-Action"><span class="title">从AS到cocos2d-Action</span><span class="excerpt">我之前是一个ASer，去年开始搞oc，今年接触cocos2d，学习的过程中有些体会，回顾一下，分享出来，也为更多从flash开发想转到cocos2d的同学做一个汇报和参考。学习cocos2d是一个愉快的过程，因为从starling转换...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;testlog-of-using-void-alternative-to-cursor.html" title="使用Void(平替Cursor)的测试记录"><span class="title">使用Void(平替Cursor)的测试记录</span><span class="excerpt">Void是一款开源AI代码编辑器，可替代Cursor。测试中发现其在生成HTML页面时存在理解偏差和功能缺失，但通过调整配置和更换模型（如Qwen2.5-Coder-32B）可实现较好效果。</span></a><a class="item" href="&#x2F;xin-shu-tui-jian-flex-di-yi-bu.html" title="新书推荐——Flex第一步"><span class="title">新书推荐——Flex第一步</span><span class="excerpt">这是国内第一本Flex开发的书　　Flex是开发富互联网应用程序（Rich Internet Application，缩写为RIA）的利器，目前已广泛应用于各种商业领域，如电子商务、行政管理，企业业务流程自动化等方面。本书全面、详尽、...</span></a><a class="item" href="&#x2F;wwdc-2025-keynote.html" title="WWDC 2025 keynote中对我比较重要的记录"><span class="title">WWDC 2025 keynote中对我比较重要的记录</span><span class="excerpt">- foundation models framework 可以开放调用- Liquid glass 透明、折射光线、灵动层级	- 设计语言的更新	- 桌面壁纸新审美，图片3D透视化	- 相机回到iOS6风格图标，终于回到photo&#x2F;...</span></a><a class="item" href="&#x2F;as-to-cocos2d-action.html" title="从AS到cocos2d-Action"><span class="title">从AS到cocos2d-Action</span><span class="excerpt">我之前是一个ASer，去年开始搞oc，今年接触cocos2d，学习的过程中有些体会，回顾一下，分享出来，也为更多从flash开发想转到cocos2d的同学做一个汇报和参考。学习cocos2d是一个愉快的过程，因为从starling转换...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="understanding-goal-based-vector-field-pathfinding-cn"
+       data-post-title="基于目标的矢量场寻路"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1372,39 +1378,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

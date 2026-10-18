@@ -728,25 +728,26 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;geturl-navigatetourl-ie-block.html" title="getURL或navigateToURL弹出窗口被IE拦截"><span class="title">getURL或navigateToURL弹出窗口被IE拦截</span><span class="excerpt">问题描述：下午遇到个麻烦：IE7和IE8会拦截flash中navigateToURL(‘xxx’,’_blank’); as2下的getURL一样被拦截。 貌似曾经遇到过这情况，但并不是经常出现，所以一直没去研究被拦截的条件。今天又出...</span></a><a class="item" href="&#x2F;ie-type-readonly.html" title="IE中input元素的.type为只读!"><span class="title">IE中input元素的.type为只读!</span><span class="excerpt">今天遇到一处错误，发现IE中input元素的.type为只读!</span></a><a class="item" href="&#x2F;ie7-js.html" title="ie7-js"><span class="title">ie7-js</span></a><a class="item" href="&#x2F;jquerymobile-link-page-nostyle.html" title="杂记-jQueryMobile链接page不被样式化"><span class="title">杂记-jQueryMobile链接page不被样式化</span></a><a class="item" href="&#x2F;as3-gifplayer-and-encoder.html" title="AS3的GIF播放器及Encoder"><span class="title">AS3的GIF播放器及Encoder</span><span class="excerpt">AS3GIF 让flash可以播放GIF动画文件，以及用ActionScript 3实现GIF编码的功能.
-
-介绍
-as3gif下载地址(Google Code)
-
-收藏与此，查询方便。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;geturl-navigatetourl-ie-block.html" title="getURL或navigateToURL弹出窗口被IE拦截"><span class="title">getURL或navigateToURL弹出窗口被IE拦截</span><span class="excerpt">问题描述：下午遇到个麻烦：IE7和IE8会拦截flash中navigateToURL(‘xxx’,’_blank’); as2下的getURL一样被拦截。 貌似曾经遇到过这情况，但并不是经常出现，所以一直没去研究被拦截的条件。今天又出...</span></a><a class="item" href="&#x2F;ie-type-readonly.html" title="IE中input元素的.type为只读!"><span class="title">IE中input元素的.type为只读!</span><span class="excerpt">今天遇到一处错误，发现IE中input元素的.type为只读!</span></a><a class="item" href="&#x2F;ie7-js.html" title="ie7-js"><span class="title">ie7-js</span></a><a class="item" href="&#x2F;jquerymobile-link-page-nostyle.html" title="杂记-jQueryMobile链接page不被样式化"><span class="title">杂记-jQueryMobile链接page不被样式化</span></a><a class="item" href="&#x2F;04-nian-gui-ao-lin-pi-ke-zuo-pin-xuan-ji-zhuo-mian-zhu-ti.html" title="04年GUI奥林匹克作品选集（桌面主题）"><span class="title">04年GUI奥林匹克作品选集（桌面主题）</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="ie-window-resize"
+       data-post-title="JQuery在ie下window.resize的麻烦"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1300,39 +1301,10 @@ as3gif下载地址(Google Code)
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

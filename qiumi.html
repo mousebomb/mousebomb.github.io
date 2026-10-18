@@ -728,26 +728,28 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;gamer-sns-adoogen.html" title="啊嘟哏(Adoogen)——刻录你我的游戏生涯"><span class="title">啊嘟哏(Adoogen)——刻录你我的游戏生涯</span><span class="excerpt">
-今天上午偶然的机会，我被一个传送门送到了“啊嘟哏(Adoogen) - 连接天下游戏爱好者”。几分钟的全站扫描后了解到——这是我所期待的游戏交流网站。</span></a><a class="item" href="&#x2F;2008firefox3-download-day.html" title="2008Firefox3的下载日确定:6月17日!"><span class="title">2008Firefox3的下载日确定:6月17日!</span><span class="excerpt">(6.18日更新于后文) 今早收邮件，看到了下载日活动的信函
-
-别忘了加入我们Firefox 3的下载日！
-下载日就要到来了!标注您的日历，写在手心上，或者贴个小记事贴。下载日会在2008年June月17日开始。 承诺分布图
-
-hoh...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;cheng-ye-jiao-ben-bai-ye-jiao-ben-ajax-you-lv-yu-qi-fa.html" title="成也脚本，败也脚本 AJAX忧虑与启发[转载]"><span class="title">成也脚本，败也脚本 AJAX忧虑与启发[转载]</span><span class="excerpt">转自http:&#x2F;&#x2F;www.awflasher.com&#x2F;blog&#x2F;article.asp?id&#x3D;602
+对Ajax的研究有了一段时间了，从最初的远观，到近看，再到实际动手实现，认识越来越深，想法也越来越多。特别是曾经有一阵子跑去研究we...</span></a><a class="item" href="&#x2F;gamer-sns-adoogen.html" title="啊嘟哏(Adoogen)——刻录你我的游戏生涯"><span class="title">啊嘟哏(Adoogen)——刻录你我的游戏生涯</span><span class="excerpt">
+今天上午偶然的机会，我被一个传送门送到了“啊嘟哏(Adoogen) - 连接天下游戏爱好者”。几分钟的全站扫描后了解到——这是我所期待的游戏交流网站。</span></a><a class="item" href="&#x2F;gbs-ji-jiang-mian-fei-fa-bu-ju-you-qiang-da-quan-xian-guan.html" title="GBS即将免费发布具有强大权限管理的.net论坛"><span class="title">GBS即将免费发布具有强大权限管理的.net论坛</span><span class="excerpt">为了和大家学习交流，GB Studio即将发布具有强大权限管理的.net论坛整站，欢迎届时下载。GB Studio开发的BBS特色有：1遵循web2.0标准2..net2.0开发，完全使用面向对象的开发思想3.皮肤自由变换，前后台（表...</span></a><a class="item" href="&#x2F;wang-ye-zhi-zuo-gai-bian-ni-de-si-wei-fang-shi-zhuan.html" title="网页制作,改变你的思维方式[转]"><span class="title">网页制作,改变你的思维方式[转]</span><span class="excerpt">“重构”的春风吹遍大江南北，互联网一时间风声鹤唳，“div+CSS”俨然已成为一种“时尚”，难以尽数的网站都不约而同地开始了自己的“重构”。然而打开这形形色色网站的源代码，却时常令人哑然失笑——我们看到有嵌套6、7层的div布局，有不...</span></a><a class="item" href="&#x2F;08-nian-3-yue-13-ri.html" title="08年3月13日"><span class="title">08年3月13日</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="qiumi"
+       data-post-title="球迷网！赛程小范围beta"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1301,39 +1303,10 @@ hoh...</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

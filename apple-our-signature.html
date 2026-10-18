@@ -716,26 +716,27 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;alibaba-crazy-ad.html" title="雷人的电影预告片式广告"><span class="title">雷人的电影预告片式广告</span></a><a class="item" href="&#x2F;appletv-2th-g-notes.html" title="AppleTV2G的一些杂记"><span class="title">AppleTV2G的一些杂记</span></a><a class="item" href="&#x2F;bs-airport-extreme.html" title="对AirPort Extreme 基站期待过高了"><span class="title">对AirPort Extreme 基站期待过高了</span><span class="excerpt"> 要升级到千兆家用路由器，我在思科的e4200和苹果的AirPort Extreme之间纠结很久，最后因为1月6号苹果大促销当机立断选购了大AE(MD031)。
-大AE配合MyBookLive使用，相对于TimeCapsule来说是物...</span></a><a class="item" href="&#x2F;guoguo-zhuanzhuan.html" title="一个巴掌一个故事-果果和砖砖"><span class="title">一个巴掌一个故事-果果和砖砖</span><span class="excerpt">从前有两个小孩，一个叫果果，一个叫砖砖。
-果果因为RP问题，从小被野狗咬过一口，所以脸上缺一块肉。
-砖砖从小就多才多艺，由于根基很稳，所以对得起“砖砖”的名号。
-果果和砖砖小时候一起上学，一起长大。
-时光飞逝，果果和砖砖都长大了。
-果...</span></a><a class="item" href="&#x2F;88-wow.html" title="再见了，魔兽世界"><span class="title">再见了，魔兽世界</span><span class="excerpt"> “自从九城和暴雪并肩作战，共同抵抗无数网游的入侵 已经过去了4年，尽管成功地赚到了无数玩家钞票 九城和暴雪之间脆弱的协议却早已荡然无存 如今，震天的战鼓再一次响起……”</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;alibaba-crazy-ad.html" title="雷人的电影预告片式广告"><span class="title">雷人的电影预告片式广告</span></a><a class="item" href="&#x2F;guang-gao-ba-wo-gei-yan-mo-le.html" title="广告把我给淹没了"><span class="title">广告把我给淹没了</span></a><a class="item" href="&#x2F;appletv-2th-g-notes.html" title="AppleTV2G的一些杂记"><span class="title">AppleTV2G的一些杂记</span></a><a class="item" href="&#x2F;bs-airport-extreme.html" title="对AirPort Extreme 基站期待过高了"><span class="title">对AirPort Extreme 基站期待过高了</span><span class="excerpt"> 要升级到千兆家用路由器，我在思科的e4200和苹果的AirPort Extreme之间纠结很久，最后因为1月6号苹果大促销当机立断选购了大AE(MD031)。
+大AE配合MyBookLive使用，相对于TimeCapsule来说是物...</span></a><a class="item" href="&#x2F;88-wow.html" title="再见了，魔兽世界"><span class="title">再见了，魔兽世界</span><span class="excerpt"> “自从九城和暴雪并肩作战，共同抵抗无数网游的入侵 已经过去了4年，尽管成功地赚到了无数玩家钞票 九城和暴雪之间脆弱的协议却早已荡然无存 如今，震天的战鼓再一次响起……”</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="apple-our-signature"
+       data-post-title="苹果的新广告-Our Signature"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1289,39 +1290,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

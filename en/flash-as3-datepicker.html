@@ -735,7 +735,7 @@ background:var(--block);color:var(--text-p1)}
     <section class='body'>
     <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;mousebomb-ver2009-flash-site-download.html" title="Mousebomb Ver.2009 Flash website source files"><span class="title">Mousebomb Ver.2009 Flash website source files</span></a><a class="item" href="&#x2F;en&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[Download]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[Download]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds Book Overview
 The demand for multiplayer games and virtual worl...</span></a><a class="item" href="&#x2F;en&#x2F;as3-baiyechuang-qiehuan.html" title="Flash blinds-style transition effect"><span class="title">Flash blinds-style transition effect</span><span class="excerpt">Requires Flash Player 10</span></a><a class="item" href="&#x2F;en&#x2F;as3-useful-lib-collection.html" title="AS3 library resources — lots of very useful class libraries"><span class="title">AS3 library resources — lots of very useful class libraries</span><span class="excerpt">The following content is reposted from http:&#x2F;&#x2F;www.eoocy.com&#x2F;article.asp?id&#x3D;3
-Below are some extremely useful librarie...</span></a><a class="item" href="&#x2F;en&#x2F;fanfou-air-16-upper.html" title="Fanfou AIR client released (1.6+)"><span class="title">Fanfou AIR client released (1.6+)</span><span class="excerpt">Online installation link Click to download Fanfou AIR Client 1.6 Download the latest AIR runtime Download the referen...</span></a></div></section></div>
+Below are some extremely useful librarie...</span></a><a class="item" href="&#x2F;en&#x2F;fanfou-air-17-release.html" title="Fanfou AIR Client 1.7 Update Released"><span class="title">Fanfou AIR Client 1.7 Update Released</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
@@ -743,12 +743,18 @@ Below are some extremely useful librarie...</span></a><a class="item" href="&#x2
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="flash-as3-datepicker"
+       data-post-title="Pure AS3 calendar control for Flash"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1302,39 +1308,10 @@ Below are some extremely useful librarie...</span></a><a class="item" href="&#x2
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

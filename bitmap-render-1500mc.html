@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2010-06-22T11:54:08.000Z">
 <meta property="article:modified_time" content="2010-06-22T11:54:08.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="as3">
 <meta property="article:tag" content="flash">
+<meta property="article:tag" content="as3">
 <meta property="article:tag" content="flashplayer">
 <meta property="article:tag" content="优化">
 <meta property="article:tag" content="位图引擎">
@@ -41,7 +41,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="写了个位图缓存优化渲染方案">
   
   
-  <meta name="keywords" content="as3,flash,flashplayer,优化,位图引擎,渲染">
+  <meta name="keywords" content="flash,as3,flashplayer,优化,位图引擎,渲染">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-06-22T19:54:08+08:00","dateModified":"2010-06-22T19:54:08+08:00","datePublished":"2010-06-22T19:54:08+08:00","description":"由于项目中需要用到大量角色同屏幕的功能，需要提高flash player的渲染性能。下午做了个渲染性能测试，并完善了去年写的位图优化代码库。\n画面大小2880*2880500个矢量人物动画MC（嵌套2层），循环播放都不把屏幕外的区域removeChild统一是用Flashplayer sa 10.0 debug版测试\n1.不优化，直接addChild    fps&#x3D;4,CPU占满,内存18M29M2.增加了cacheAsBitmap    FPS&#x3D;1,cpu占满，内存156196M，内存不断波动","headline":"写了个位图缓存优化渲染方案","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/bitmap-render-1500mc.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/bitmap-render-1500mc.html","keywords":"as3, flash, flashplayer, 优化, 位图引擎, 渲染","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-06-22T19:54:08+08:00","dateModified":"2010-06-22T19:54:08+08:00","datePublished":"2010-06-22T19:54:08+08:00","description":"由于项目中需要用到大量角色同屏幕的功能，需要提高flash player的渲染性能。下午做了个渲染性能测试，并完善了去年写的位图优化代码库。\n画面大小2880*2880500个矢量人物动画MC（嵌套2层），循环播放都不把屏幕外的区域removeChild统一是用Flashplayer sa 10.0 debug版测试\n1.不优化，直接addChild    fps&#x3D;4,CPU占满,内存18M29M2.增加了cacheAsBitmap    FPS&#x3D;1,cpu占满，内存156196M，内存不断波动","headline":"写了个位图缓存优化渲染方案","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/bitmap-render-1500mc.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/bitmap-render-1500mc.html","keywords":"flash, as3, flashplayer, 优化, 位图引擎, 渲染","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -713,7 +713,7 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>Document Class :</strong></p>
 <p>package<br>{<br>import org.mousebomb.Math.MousebombMath;<br>import org.mousebomb.bmpdisplay.Animation;<br>import org.mousebomb.bmpdisplay.BmdObject;<br>import org.mousebomb.bmpdisplay.BmdResourcePool;<br>import org.mousebomb.bmpdisplay.BmpDisplayObject;<br>import org.mousebomb.bmpdisplay.Image;<br>import org.mousebomb.utils.SystemStatus;</p>
 <p>import flash.display.Sprite;<br>import flash.display.StageAlign;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#111;&#117;&#115;&#x65;&#x62;&#x6f;&#x6d;&#98;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-6-21<br> *&#x2F;<br>public class BmdEngineMC extends Sprite<br>{<br>&#x2F;**<br> * BMD化的测试<br> *&#x2F;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#111;&#117;&#x73;&#x65;&#x62;&#111;&#109;&#98;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-6-21<br> *&#x2F;<br>public class BmdEngineMC extends Sprite<br>{<br>&#x2F;**<br> * BMD化的测试<br> *&#x2F;</p>
 <p>private var bmdStage : BmpDisplayObject;<br>private var bmdRoot : Image; </p>
 <p>public function BmdEngineMC()<br>{<br>bmdRoot &#x3D; new Image(800, 600);<br>bmdStage &#x3D; new BmpDisplayObject(bmdRoot);<br>&#x2F;&#x2F;创建位图序列<br>var src : MovieClip &#x3D; new RoleD();<br>BmdResourcePool.getInstance().regResource(“roleD”, src);<br>addChild(bmdStage);</p>
 <p>for (var i : int &#x3D; 0;i &lt; 1500;i++)<br>{<br>var bmdChild : BmdObject &#x3D; BmdResourcePool.getInstance().getNewResource(“roleD”);<br>(bmdChild as Animation).play();<br>bmdChild.x &#x3D; MousebombMath.randomFromRange(20, 600);<br>bmdChild.y &#x3D; MousebombMath.randomFromRange(20, 550);<br>bmdRoot.addChild(bmdChild);<br>}<br>&#x2F;&#x2F;开始渲染<br>bmdStage.renderEnterFrame &#x3D; true;<br>this.stage.align &#x3D; StageAlign.TOP_LEFT;<br>addChild(SystemStatus.getInstance());<br>}<br>}<br>}</p>
@@ -736,10 +736,9 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[下载]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[下载]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds图书概述
-The demand for multiplayer games and virtual worlds has exp...</span></a><a class="item" href="&#x2F;addeventlistener-with-arg.html" title="addEventListener事件监听传递参数"><span class="title">addEventListener事件监听传递参数</span><span class="excerpt">as3中的addEventListener事件监听会自动传递一个事件对象参数给处理函数,可是不能传递其他参数. 如果要为事件处理函数送参数的话可以用这种方法: 见代码: var sayHello:String &#x3D; “欢迎光临...</span></a><a class="item" href="&#x2F;adobe-air-15-cookbook.html" title="Adobe AIR 1.5 Cookbook!"><span class="title">Adobe AIR 1.5 Cookbook!</span><span class="excerpt">Adobe AIR 1.5 Cookbook已经问世了。
-
-In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also being r...</span></a><a class="item" href="&#x2F;air-dock-taskbar.html" title="AIR应用与任务栏,系统托盘,Dock"><span class="title">AIR应用与任务栏,系统托盘,Dock</span><span class="excerpt">反省:我太懒,懒到没有查阅官方资料寻找最小化到托盘的方法,其实AIR早有这方面的设计.见官方AIR文档DEV_GUIDE_FLASH中&lt;Chapter 13: Taskbar icons&gt; 现学习之,顺便整理一份中文档以赎...</span></a><a class="item" href="&#x2F;2011-3-27天地行北京站.html" title="2011.3.27天地行北京站"><span class="title">2011.3.27天地行北京站</span><span class="excerpt">最新活动2011RIA天地行北京城市精英论坛
+    <div class="related-posts"><a class="item" href="&#x2F;actionscript-3-0-yu-yan-he-zu-jian-can-kao.html" title="ActionScript 3.0 语言和组件参考"><span class="title">ActionScript 3.0 语言和组件参考</span></a><a class="item" href="&#x2F;actionscript-3-jiao-cheng-xi-lie-di-zhi.html" title="ActionScript 3 教程系列地址"><span class="title">ActionScript 3 教程系列地址</span><span class="excerpt">ActionScript 3 教程系列 - 原文：黑羽(kingda.org)
+【黑羽】ActionScript 3.0系列教程(1)：与Flash9先来一次亲密接触！【黑羽】AS 3.0教程(2)：AS3.0的类及绑定AS3.0教程...</span></a><a class="item" href="&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[下载]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[下载]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds图书概述
+The demand for multiplayer games and virtual worlds has exp...</span></a><a class="item" href="&#x2F;addeventlistener-with-arg.html" title="addEventListener事件监听传递参数"><span class="title">addEventListener事件监听传递参数</span><span class="excerpt">as3中的addEventListener事件监听会自动传递一个事件对象参数给处理函数,可是不能传递其他参数. 如果要为事件处理函数送参数的话可以用这种方法: 见代码: var sayHello:String &#x3D; “欢迎光临...</span></a><a class="item" href="&#x2F;2011-3-27天地行北京站.html" title="2011.3.27天地行北京站"><span class="title">2011.3.27天地行北京站</span><span class="excerpt">最新活动2011RIA天地行北京城市精英论坛
 **活动时间：**2011.3.27
 **报名时间：**2011.3.7-2011.3.25
 **活动规模：**300人以上
@@ -748,15 +747,21 @@ In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="bitmap-render-1500mc"
+       data-post-title="写了个位图缓存优化渲染方案"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1310,39 +1315,10 @@ In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also 
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

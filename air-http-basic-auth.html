@@ -30,18 +30,18 @@
 <meta property="article:published_time" content="2008-05-16T02:23:30.000Z">
 <meta property="article:modified_time" content="2008-05-16T02:23:30.000Z">
 <meta property="article:author" content="Mousebomb">
+<meta property="article:tag" content="flash">
+<meta property="article:tag" content="flex">
 <meta property="article:tag" content="as3">
 <meta property="article:tag" content="ria">
-<meta property="article:tag" content="flash">
 <meta property="article:tag" content="air">
-<meta property="article:tag" content="flex">
 <meta property="article:tag" content="httpbasic">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="AIR的Http basic验证">
   
   
-  <meta name="keywords" content="as3,ria,flash,air,flex,httpbasic">
+  <meta name="keywords" content="flash,flex,as3,ria,air,httpbasic">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-16T10:23:30+08:00","dateModified":"2008-05-16T10:23:30+08:00","datePublished":"2008-05-16T10:23:30+08:00","description":"flex3或者FLASHcs3开发AIR中如何与需要Http basic验证的web通信？比如饭否http://fanfou.com/home 用户名中有@符号，如果直接访问http:&#x2F;&#x2F;“+loginName+”:”+loginPass+”@api.fanfou.com&#x2F;statuses&#x2F;update.xml的话会ioErr的.曾经在蓝色理想提问过,等到现在都没回复，网络上也搜索过，大多都是讲如何配置服务器端验证，而不是讲客户端如何登陆……有人提问C#和JAVA的登陆方法， 但是都没有回复，唯一可用的信息是VBs和Js里的方法，ajax实现起来很容易，xml的open方法的参数里就有user和pwd信息。\n去年在flex代码里一条一条扫描，发现urlRequest里有个setLoginCredentials方法，加上urlR.setLoginCredentials(loginName,loginPass);这行就可以发送用户验证信息了\n现在新版的AIR发布后,这个方法又废弃了.由于我一直没时间去修改我去年的饭否AIR客户端,所以也没关心这事.今天去官网查了个究竟.取而代之的方法:","headline":"AIR的Http basic验证","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-http-basic-auth.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-http-basic-auth.html","keywords":"as3, ria, flash, air, flex, httpbasic","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-16T10:23:30+08:00","dateModified":"2008-05-16T10:23:30+08:00","datePublished":"2008-05-16T10:23:30+08:00","description":"flex3或者FLASHcs3开发AIR中如何与需要Http basic验证的web通信？比如饭否http://fanfou.com/home 用户名中有@符号，如果直接访问http:&#x2F;&#x2F;“+loginName+”:”+loginPass+”@api.fanfou.com&#x2F;statuses&#x2F;update.xml的话会ioErr的.曾经在蓝色理想提问过,等到现在都没回复，网络上也搜索过，大多都是讲如何配置服务器端验证，而不是讲客户端如何登陆……有人提问C#和JAVA的登陆方法， 但是都没有回复，唯一可用的信息是VBs和Js里的方法，ajax实现起来很容易，xml的open方法的参数里就有user和pwd信息。\n去年在flex代码里一条一条扫描，发现urlRequest里有个setLoginCredentials方法，加上urlR.setLoginCredentials(loginName,loginPass);这行就可以发送用户验证信息了\n现在新版的AIR发布后,这个方法又废弃了.由于我一直没时间去修改我去年的饭否AIR客户端,所以也没关心这事.今天去官网查了个究竟.取而代之的方法:","headline":"AIR的Http basic验证","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-http-basic-auth.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-http-basic-auth.html","keywords":"flash, flex, as3, ria, air, httpbasic","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -746,15 +746,21 @@ background:var(--block);color:var(--text-p1)}
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="air-http-basic-auth"
+       data-post-title="AIR的Http basic验证"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1308,39 +1314,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

@@ -727,7 +727,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;gtween-tweening-and-animation-library.html" title="GTween Tweening and Animation Library"><span class="title">GTween Tweening and Animation Library</span></a><a class="item" href="&#x2F;en&#x2F;gtween-v2-released.html" title="GTween V2 Released!"><span class="title">GTween V2 Released!</span></a><a class="item" href="&#x2F;en&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[Download]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[Download]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds Book Overview
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;gtween-v2-released.html" title="GTween V2 Released!"><span class="title">GTween V2 Released!</span></a><a class="item" href="&#x2F;en&#x2F;gtween-tweening-and-animation-library.html" title="GTween Tweening and Animation Library"><span class="title">GTween Tweening and Animation Library</span></a><a class="item" href="&#x2F;en&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[Download]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[Download]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds Book Overview
 The demand for multiplayer games and virtual worl...</span></a><a class="item" href="&#x2F;en&#x2F;as3-baiyechuang-qiehuan.html" title="Flash blinds-style transition effect"><span class="title">Flash blinds-style transition effect</span><span class="excerpt">Requires Flash Player 10</span></a><a class="item" href="&#x2F;en&#x2F;2011-3-27天地行北京站.html" title="2011.3.27 Tiandixing Beijing Stop"><span class="title">2011.3.27 Tiandixing Beijing Stop</span><span class="excerpt">Latest Events2011 RIA Tian Di Xing Beijing City Elite Forum
 Event Time: 2011.3.27
 Registration Period: 2011.3.7-2011....</span></a></div></section></div>
@@ -738,12 +738,18 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="eaze-of-a-tween"
+       data-post-title="Eaze, the newest member of the easing family"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1297,39 +1303,10 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

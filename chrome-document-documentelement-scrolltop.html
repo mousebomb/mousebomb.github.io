@@ -30,14 +30,14 @@
 <meta property="article:published_time" content="2010-03-20T02:51:22.000Z">
 <meta property="article:modified_time" content="2010-03-20T02:51:22.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="scrollTop">
 <meta property="article:tag" content="网页">
+<meta property="article:tag" content="scrollTop">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Chrome不认document.documentElement.scrollTop">
   
   
-  <meta name="keywords" content="scrollTop,网页">
+  <meta name="keywords" content="网页,scrollTop">
 
   <!-- feed -->
   
@@ -60,7 +60,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-03-20T10:51:22+08:00","dateModified":"2010-03-20T10:51:22+08:00","datePublished":"2010-03-20T10:51:22+08:00","description":"遇到问题： 某些情况下Chrome不认document.documentElement.scrollTop，在IE和FF中皆有值，但Chrome里为0。\n解决方案： 这时使用：document.documentElement.scrollTop + document.body.scrollTop\n引申参考资料： 浏览器的两种模式quirks mode 和strict mode Activat...","headline":"Chrome不认document.documentElement.scrollTop","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/chrome-document-documentelement-scrolltop.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/chrome-document-documentelement-scrolltop.html","keywords":"scrollTop, 网页","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-03-20T10:51:22+08:00","dateModified":"2010-03-20T10:51:22+08:00","datePublished":"2010-03-20T10:51:22+08:00","description":"遇到问题： 某些情况下Chrome不认document.documentElement.scrollTop，在IE和FF中皆有值，但Chrome里为0。\n解决方案： 这时使用：document.documentElement.scrollTop + document.body.scrollTop\n引申参考资料： 浏览器的两种模式quirks mode 和strict mode Activat...","headline":"Chrome不认document.documentElement.scrollTop","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/chrome-document-documentelement-scrolltop.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/chrome-document-documentelement-scrolltop.html","keywords":"网页, scrollTop","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -715,25 +715,29 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;flash-on-web-mask-div.html" title="网页上的FLASH挡住层？！"><span class="title">网页上的FLASH挡住层？！</span><span class="excerpt">今天做组卷系统时，发现FLASH挡住浮动层，无论如何都显示在最顶，无法与层共存 遂搜索之，终获解决良方： 让Flash不档住浮动对象或层的关键参数：wmode&#x3D;opaque 方法： 针对IE 在内加上参数 针对FF 在内加上...</span></a><a class="item" href="&#x2F;mousebomb-ver2006-flash-site-download.html" title="Mousebomb Ver.2006 Flash Site整站源文件"><span class="title">Mousebomb Ver.2006 Flash Site整站源文件</span><span class="excerpt">2007 未完成新版发布啦 旧版Mousebomb Ver.2006 Flash Site整站源文件现在发布</span></a><a class="item" href="&#x2F;mousebomb-ver2007-flash-site-src-download.html" title="Mousebomb Ver.2007 Flash Site整站源文件"><span class="title">Mousebomb Ver.2007 Flash Site整站源文件</span><span class="excerpt">07版网站源文件发布Mousebomb Ver.2007 Flash Site整站源文件现在发布</span></a><a class="item" href="&#x2F;mousebomb-ver2009-flash-site-download.html" title="Mousebomb Ver.2009 Flash网站源文件"><span class="title">Mousebomb Ver.2009 Flash网站源文件</span></a><a class="item" href="&#x2F;as3-gifplayer-and-encoder.html" title="AS3的GIF播放器及Encoder"><span class="title">AS3的GIF播放器及Encoder</span><span class="excerpt">AS3GIF 让flash可以播放GIF动画文件，以及用ActionScript 3实现GIF编码的功能.
-
-介绍
-as3gif下载地址(Google Code)
-
-收藏与此，查询方便。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
+即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
+2.20： 引导页界面...</span></a><a class="item" href="&#x2F;chang-zhou-shi-di-pu-dian-zi-you-xian-gong-si-wang-zhan-jie.html" title="常州市迪普电子有限公司网站界面"><span class="title">常州市迪普电子有限公司网站界面</span><span class="excerpt">今天刚做好的，常州市迪普电子有限公司网站界面DEMO：
+</span></a><a class="item" href="&#x2F;fang-de-zhong-guo-2-0-jie-mian-chu-gao.html" title="方得中国2.0界面初稿"><span class="title">方得中国2.0界面初稿</span></a><a class="item" href="&#x2F;flash-on-web-mask-div.html" title="网页上的FLASH挡住层？！"><span class="title">网页上的FLASH挡住层？！</span><span class="excerpt">今天做组卷系统时，发现FLASH挡住浮动层，无论如何都显示在最顶，无法与层共存 遂搜索之，终获解决良方： 让Flash不档住浮动对象或层的关键参数：wmode&#x3D;opaque 方法： 针对IE 在内加上参数 针对FF 在内加上...</span></a><a class="item" href="&#x2F;04-nian-gui-ao-lin-pi-ke-zuo-pin-xuan-ji-zhuo-mian-zhu-ti.html" title="04年GUI奥林匹克作品选集（桌面主题）"><span class="title">04年GUI奥林匹克作品选集（桌面主题）</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="chrome-document-documentelement-scrolltop"
+       data-post-title="Chrome不认document.documentElement.scrollTop"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1287,39 +1291,10 @@ as3gif下载地址(Google Code)
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

@@ -30,16 +30,16 @@
 <meta property="article:published_time" content="2008-05-21T03:18:57.000Z">
 <meta property="article:modified_time" content="2008-05-21T03:18:57.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="ria">
 <meta property="article:tag" content="flash">
-<meta property="article:tag" content="air">
 <meta property="article:tag" content="flex">
+<meta property="article:tag" content="ria">
+<meta property="article:tag" content="air">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="AIR应用描述文件详解">
   
   
-  <meta name="keywords" content="ria,flash,air,flex">
+  <meta name="keywords" content="flash,flex,ria,air">
 
   <!-- feed -->
   
@@ -62,7 +62,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-21T11:18:57+08:00","dateModified":"2008-05-21T11:18:57+08:00","datePublished":"2008-05-21T11:18:57+08:00","description":"Air应用描述文件是设置AIR应用各项基本属性的一个XML文件.在使用FLEX开发时,它位于”项目文件夹&#x2F;src&#x2F;主文件名-app.xml”;在使用Flash CS3 开发时也会在创建AIR项目时自动生成,可以通过菜单Commands &gt; AIR - Application and Installer Settings来可视化编辑,也可以手动编辑该XML文档.\n应用描述文件包含AIR应用的各项属性，影响整个AIR应用，如它的名称，版本，版权，等等。理论上,应用描述文件可使用任意文件名。当我们使用Flash cs3创建一个空文件，并使用默认设置，应用描述文件会自动更名为application.xml并放进AIR项目的一个特殊目录中。","headline":"AIR应用描述文件详解","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-app-description-file.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-app-description-file.html","keywords":"ria, flash, air, flex","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-21T11:18:57+08:00","dateModified":"2008-05-21T11:18:57+08:00","datePublished":"2008-05-21T11:18:57+08:00","description":"Air应用描述文件是设置AIR应用各项基本属性的一个XML文件.在使用FLEX开发时,它位于”项目文件夹&#x2F;src&#x2F;主文件名-app.xml”;在使用Flash CS3 开发时也会在创建AIR项目时自动生成,可以通过菜单Commands &gt; AIR - Application and Installer Settings来可视化编辑,也可以手动编辑该XML文档.\n应用描述文件包含AIR应用的各项属性，影响整个AIR应用，如它的名称，版本，版权，等等。理论上,应用描述文件可使用任意文件名。当我们使用Flash cs3创建一个空文件，并使用默认设置，应用描述文件会自动更名为application.xml并放进AIR项目的一个特殊目录中。","headline":"AIR应用描述文件详解","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-app-description-file.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-app-description-file.html","keywords":"flash, flex, ria, air","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -803,15 +803,21 @@ isSetAsDefaultApplication(extension:String):Boolean 返回当前AIR应用程...<
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="air-app-description-file"
+       data-post-title="AIR应用描述文件详解"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1370,39 +1376,10 @@ isSetAsDefaultApplication(extension:String):Boolean 返回当前AIR应用程...<
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

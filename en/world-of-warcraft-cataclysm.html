@@ -796,8 +796,8 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;ashbringer-tpb-epilogue.html" title="Ashbringer Epilogue"><span class="title">Ashbringer Epilogue</span><span class="excerpt"> On August 4, 2009, the Sailian Scanlation Group released the World of Warcraft (WOW) official comic: Ashbringer — co...</span></a><a class="item" href="&#x2F;en&#x2F;im-mt.html" title="World of Warcraft animated series &quot;I Am MT&quot; Season 1, Episodes 1-10"><span class="title">World of Warcraft animated series &quot;I Am MT&quot; Season 1, Episodes 1-10</span><span class="excerpt"> Just saw a friend share this — it’s episode one. A high-def version will be available for download soon, and the aut...</span></a><a class="item" href="&#x2F;en&#x2F;wangyi-bn-china.html" title="NetEase&#39;s China Battle.net has opened"><span class="title">NetEase&#39;s China Battle.net has opened</span><span class="excerpt">
-In the early hours of this morning, Chinese Battle.net went live, and you can now bind World of Warcraft accounts. S...</span></a><a class="item" href="&#x2F;en&#x2F;wangyinzhanzheng.html" title="The War of Internet Addiction"><span class="title">The War of Internet Addiction</span><span class="excerpt">A video that came out not long ago and has been popular ever since — in its own roundabout way it speaks for players ...</span></a><a class="item" href="&#x2F;en&#x2F;09-1-6-pcgame-list.html" title="H1 2009 Games to Watch"><span class="title">H1 2009 Games to Watch</span><span class="excerpt">
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;ashbringer-tpb-epilogue.html" title="Ashbringer Epilogue"><span class="title">Ashbringer Epilogue</span><span class="excerpt"> On August 4, 2009, the Sailian Scanlation Group released the World of Warcraft (WOW) official comic: Ashbringer — co...</span></a><a class="item" href="&#x2F;en&#x2F;im-mt.html" title="World of Warcraft animated series &quot;I Am MT&quot; Season 1, Episodes 1-10"><span class="title">World of Warcraft animated series &quot;I Am MT&quot; Season 1, Episodes 1-10</span><span class="excerpt"> Just saw a friend share this — it’s episode one. A high-def version will be available for download soon, and the aut...</span></a><a class="item" href="&#x2F;en&#x2F;wangyinzhanzheng.html" title="The War of Internet Addiction"><span class="title">The War of Internet Addiction</span><span class="excerpt">A video that came out not long ago and has been popular ever since — in its own roundabout way it speaks for players ...</span></a><a class="item" href="&#x2F;en&#x2F;wangyi-bn-china.html" title="NetEase&#39;s China Battle.net has opened"><span class="title">NetEase&#39;s China Battle.net has opened</span><span class="excerpt">
+In the early hours of this morning, Chinese Battle.net went live, and you can now bind World of Warcraft accounts. S...</span></a><a class="item" href="&#x2F;en&#x2F;09-1-6-pcgame-list.html" title="H1 2009 Games to Watch"><span class="title">H1 2009 Games to Watch</span><span class="excerpt">
 
 EA - The Lord of the Rings: Conquest 09-01-13
 SEGA - Empire: Total War 09-03
@@ -810,12 +810,18 @@ EA - The Go...</span></a></div></section></div>
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="world-of-warcraft-cataclysm"
+       data-post-title="World of Warcraft&#39;s new expansion — Cataclysm"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1369,39 +1375,10 @@ EA - The Go...</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

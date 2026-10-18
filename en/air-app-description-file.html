@@ -787,7 +787,8 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;air-file-operation1.html" title="AIR File Operations (Part 1): AIR File Basics"><span class="title">AIR File Operations (Part 1): AIR File Basics</span><span class="excerpt">AIR lets us build applications that work with the file system. Using the classes provided by the Adobe® AIR™ file sys...</span></a><a class="item" href="&#x2F;en&#x2F;air-file-operation2.html" title="AIR File Operations (Part 2): Using File Objects to Manipulate Files and Directories"><span class="title">AIR File Operations (Part 2): Using File Objects to Manipulate Files and Directories</span><span class="excerpt">What is a File object? A File object is a pointer to a file or directory in the file system. For security reasons, it...</span></a><a class="item" href="&#x2F;en&#x2F;air-file-operation3.html" title="AIR File Operations (Part 3): Reading and Writing Files with the FileStream Object"><span class="title">AIR File Operations (Part 3): Reading and Writing Files with the FileStream Object</span><span class="excerpt">Quick Start Examples:Example 1. Reading XML var testXML:XML; var file:File &#x3D; File.documentsDirectory.resolvePath...</span></a><a class="item" href="&#x2F;en&#x2F;air-http-basic-auth.html" title="AIR&#39;s HTTP Basic authentication"><span class="title">AIR&#39;s HTTP Basic authentication</span><span class="excerpt">How do you communicate with a website that requires HTTP basic authentication when building AIR with Flex 3 or Flash ...</span></a><a class="item" href="&#x2F;en&#x2F;2011-3-27天地行北京站.html" title="2011.3.27 Tiandixing Beijing Stop"><span class="title">2011.3.27 Tiandixing Beijing Stop</span><span class="excerpt">Latest Events2011 RIA Tian Di Xing Beijing City Elite Forum
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;air-file-operation1.html" title="AIR File Operations (Part 1): AIR File Basics"><span class="title">AIR File Operations (Part 1): AIR File Basics</span><span class="excerpt">AIR lets us build applications that work with the file system. Using the classes provided by the Adobe® AIR™ file sys...</span></a><a class="item" href="&#x2F;en&#x2F;air-file-operation2.html" title="AIR File Operations (Part 2): Using File Objects to Manipulate Files and Directories"><span class="title">AIR File Operations (Part 2): Using File Objects to Manipulate Files and Directories</span><span class="excerpt">What is a File object? A File object is a pointer to a file or directory in the file system. For security reasons, it...</span></a><a class="item" href="&#x2F;en&#x2F;air-file-operation3.html" title="AIR File Operations (Part 3): Reading and Writing Files with the FileStream Object"><span class="title">AIR File Operations (Part 3): Reading and Writing Files with the FileStream Object</span><span class="excerpt">Quick Start Examples:Example 1. Reading XML var testXML:XML; var file:File &#x3D; File.documentsDirectory.resolvePath...</span></a><a class="item" href="&#x2F;en&#x2F;air-file-relation.html" title="AIR manages file associations"><span class="title">AIR manages file associations</span><span class="excerpt">For file association management, the flash.desktop.NativeApplication class in AIR provides 4 methods:
+isSetAsDefaultA...</span></a><a class="item" href="&#x2F;en&#x2F;2011-3-27天地行北京站.html" title="2011.3.27 Tiandixing Beijing Stop"><span class="title">2011.3.27 Tiandixing Beijing Stop</span><span class="excerpt">Latest Events2011 RIA Tian Di Xing Beijing City Elite Forum
 Event Time: 2011.3.27
 Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
@@ -797,12 +798,18 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="air-app-description-file"
+       data-post-title="A Detailed Guide to the AIR Application Descriptor File"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1361,39 +1368,10 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

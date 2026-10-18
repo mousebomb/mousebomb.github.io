@@ -698,7 +698,7 @@ background:var(--block);color:var(--text-p1)}
   </div>
   </div></div>
 <article class="md-text content slide-up"><p>This article was reposted here after I saw it on <a target="_blank" rel="noopener" href="http://riaoo.com/?p=1658" title="http:&#x2F;&#x2F;riaoo.com&#x2F;?p&#x3D;1658">http://riaoo.com/?p=1658</a>; the original content comes from <a target="_blank" rel="noopener" href="http://blogs.adobe.com/xwlin/2010/04/flash_player_101_-_adobe_max_2009.html">http://blogs.adobe.com/xwlin/2010/04/flash_player_101_-_adobe_max_2009.html</a> and <a target="_blank" rel="noopener" href="http://blogs.adobe.com/xwlin/2010/04/flash_player_101_-_adobe_max_2009_1.html">http://blogs.adobe.com/xwlin/2010/04/flash_player_101_-_adobe_max_2009_1.html</a></p>
-<p>Speaker: Lee Thomason (<a href="mailto:&#108;&#116;&#104;&#x6f;&#x6d;&#x61;&#115;&#x6f;&#64;&#x61;&#x64;&#111;&#x62;&#x65;&#x2e;&#x63;&#111;&#x6d;">lthomaso@adobe.com</a>)  Translator: Lin Xiaowei (<a href="mailto:&#x78;&#x77;&#108;&#x69;&#x6e;&#64;&#x61;&#100;&#111;&#98;&#x65;&#46;&#x63;&#x6f;&#x6d;">xwlin@adobe.com</a>)</p>
+<p>Speaker: Lee Thomason (<a href="mailto:&#108;&#116;&#x68;&#111;&#109;&#x61;&#115;&#111;&#x40;&#97;&#100;&#x6f;&#98;&#101;&#x2e;&#x63;&#111;&#109;">lthomaso@adobe.com</a>)  Translator: Lin Xiaowei (<a href="mailto:&#120;&#119;&#108;&#105;&#110;&#x40;&#x61;&#x64;&#x6f;&#x62;&#x65;&#x2e;&#x63;&#x6f;&#109;">xwlin@adobe.com</a>)</p>
 <h4 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h4><p>Time: the 21st of this month. Location: Beijing International Convention Center. Adobe is about to hold a two-day Flash Platform technology summit. I’ll have the honor of joining Ely Greenfield as co-speaker for the &lt;<Flash Player Internals>&gt; session, handling both the speaking and the translation. Ely Greenfield is a Senior Principal Scientist in the Apollo Integrated Runtime group, and he gave a superb talk on this topic at Adobe MAX 2007. I googled up a <a target="_blank" rel="noopener" href="http://dougmccune.com/blog/2007/10/19/my-writeup-of-ely-greenfields-max-session/">comment</a> from a guy who attended the 2007 MAX conference about Ely himself and his talk: “I think Ely’s topic (Flash Player Internals) was the best of all the topics at MAX…” “Ely is that legendary guy who wrote most of the Flex Charting Framework in three days with his eyes closed”…</p>
 <p>The 2009 Adobe MAX still has a Flash Player Internals session, but the speaker is Lee Thomason (another hardcore veteran — Flash Player architect, nicknamed Player Guy, said to be the number one Flash Player guy). This is a very in-depth topic, and the talk moves fast: in one hour he covers as many aspects of the player architecture as he possibly can. Here I’ve summarized and translated the gist of his talk for your reference.</p>
 <span id="more"></span>
@@ -765,12 +765,18 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="flash-player-10-1-adobe-max"
+       data-post-title="Internal mechanisms of Flash Player 10.1"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1329,39 +1335,10 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

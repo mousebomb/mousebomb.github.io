@@ -722,20 +722,28 @@ background:var(--block);color:var(--text-p1)}
     <section class='body'>
     <div class="related-posts"><a class="item" href="&#x2F;88qoolu.html" title="告别了酷噜网络"><span class="title">告别了酷噜网络</span><span class="excerpt"> 就在09.5.12，汶川地震一周年的这一天，我离开了工作了整整七个月的酷噜网络。恢复了无限憧憬的自由职业生涯。</span></a><a class="item" href="&#x2F;obama-talk-about-gfw.html" title="奥巴马上海之行答互联网开放问题"><span class="title">奥巴马上海之行答互联网开放问题</span><span class="excerpt"> 美国总统奥巴马16日在上海科技馆发表演讲。在回答互联网开放的问题时，奥巴马表示信息越是能够自由的流通，社会就变得越强，因为这样子，世界各地的公民能让自己的政府负责。
 
-　　[奥巴马]好吧，我现在请我的洪大使，现在有一个网民通过我们使...</span></a><a class="item" href="&#x2F;back-to-shenzhen-2011july.html" title="7月底返回深圳"><span class="title">7月底返回深圳</span><span class="excerpt"> 我将在2011年7月底返回深圳。</span></a><a class="item" href="&#x2F;mang-zhai.html" title="忙啊,宅啊"><span class="title">忙啊,宅啊</span><span class="excerpt"> 最近做几个网站忙的半死不活的，终于我的资源池快要释放了。 回收工作线程0… 回收成功，释放资源 回收工作线程1… 回收成功，释放资源 …</span></a><a class="item" href="&#x2F;AI-zhong-yi-mai-xiang.html" title="AI中医脉象测试"><span class="title">AI中医脉象测试</span></a></div></section></div>
+　　[奥巴马]好吧，我现在请我的洪大使，现在有一个网民通过我们使...</span></a><a class="item" href="&#x2F;back-to-shenzhen-2011july.html" title="7月底返回深圳"><span class="title">7月底返回深圳</span><span class="excerpt"> 我将在2011年7月底返回深圳。</span></a><a class="item" href="&#x2F;mang-zhai.html" title="忙啊,宅啊"><span class="title">忙啊,宅啊</span><span class="excerpt"> 最近做几个网站忙的半死不活的，终于我的资源池快要释放了。 回收工作线程0… 回收成功，释放资源 回收工作线程1… 回收成功，释放资源 …</span></a><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
+即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
+2.20： 引导页界面...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="job-chosen"
+       data-post-title="工作已定"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1289,39 +1297,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

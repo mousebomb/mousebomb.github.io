@@ -716,20 +716,28 @@ background:var(--block);color:var(--text-p1)}
     <section class='body'>
     <div class="related-posts"><a class="item" href="&#x2F;ashbringer-tpb-epilogue.html" title="灰烬使者尾声"><span class="title">灰烬使者尾声</span><span class="excerpt"> 2009年8月4日,塞联汉化组发布了魔兽世界(WOW).官方漫画:灰烬使者(Ashbringer).合订本.尾声 http:&#x2F;&#x2F;www.transfans.com.cn&#x2F;thread-2086-1-1.html</span></a><a class="item" href="&#x2F;echoes-of-war.html" title="Echoes of War：战争的回响"><span class="title">Echoes of War：战争的回响</span><span class="excerpt"> 　　由来自澳大利亚Eminence Symphony Orchestra卓越交响管弦乐团，全一手包办的游戏电玩原声大碟《Echoes of War：战争的回响》，收录了 Blizzard 旗下巨作《魔兽争霸3》、《魔兽世界》及《暗黑...</span></a><a class="item" href="&#x2F;im-mt.html" title="魔兽世界动画片《我叫MT》第一季一至十集"><span class="title">魔兽世界动画片《我叫MT》第一季一至十集</span><span class="excerpt"> 刚刚看到朋友的分享，这是第一集。很快会有清晰版的下载，作者会不断更新。
 这几个可爱的形象很眼熟，嘿嘿，想起来了——官网曾经刊登过一组“我们小时候”的漫画。 这几个形象我都很喜欢，现在搞成3D的效果很不错。这部动画让我们回忆起WOW小...</span></a><a class="item" href="&#x2F;wangyi-bn-china.html" title="网易的中国战网已开放"><span class="title">网易的中国战网已开放</span><span class="excerpt"> 
-今天凌晨，中国战网开放，已经可以绑定魔兽世界帐号了。 详情见WOW过渡官方指引</span></a><a class="item" href="&#x2F;88qoolu.html" title="告别了酷噜网络"><span class="title">告别了酷噜网络</span><span class="excerpt"> 就在09.5.12，汶川地震一周年的这一天，我离开了工作了整整七个月的酷噜网络。恢复了无限憧憬的自由职业生涯。</span></a></div></section></div>
+今天凌晨，中国战网开放，已经可以绑定魔兽世界帐号了。 详情见WOW过渡官方指引</span></a><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
+即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
+2.20： 引导页界面...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="wowculture"
+       data-post-title="魔兽世界文艺博览"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1283,39 +1291,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

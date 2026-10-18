@@ -32,14 +32,14 @@
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="wow">
 <meta property="article:tag" content="魔兽世界">
-<meta property="article:tag" content="immt">
 <meta property="article:tag" content="动漫">
+<meta property="article:tag" content="immt">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/11/immt.jpg">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="魔兽世界动画片《我叫MT》第一季一至十集">
   
   
-  <meta name="keywords" content="wow,魔兽世界,immt,动漫">
+  <meta name="keywords" content="wow,魔兽世界,动漫,immt">
 
   <!-- feed -->
   
@@ -62,7 +62,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-11-16T19:13:45+08:00","dateModified":"2009-11-16T19:13:45+08:00","datePublished":"2009-11-16T19:13:45+08:00","description":" 刚刚看到朋友的分享，这是第一集。很快会有清晰版的下载，作者会不断更新。\n这几个可爱的形象很眼熟，嘿嘿，想起来了——官网曾经刊登过一组“我们小时候”的漫画。 这几个形象我都很喜欢，现在搞成3D的效果很不错。这部动画让我们回忆起WOW小时候吖~","headline":"魔兽世界动画片《我叫MT》第一季一至十集","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/im-mt.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/im-mt.html","keywords":"wow, 魔兽世界, immt, 动漫","thumbnailUrl":"https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/11/immt.jpg","image":["https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/11/immt.jpg"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-11-16T19:13:45+08:00","dateModified":"2009-11-16T19:13:45+08:00","datePublished":"2009-11-16T19:13:45+08:00","description":" 刚刚看到朋友的分享，这是第一集。很快会有清晰版的下载，作者会不断更新。\n这几个可爱的形象很眼熟，嘿嘿，想起来了——官网曾经刊登过一组“我们小时候”的漫画。 这几个形象我都很喜欢，现在搞成3D的效果很不错。这部动画让我们回忆起WOW小时候吖~","headline":"魔兽世界动画片《我叫MT》第一季一至十集","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/im-mt.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/im-mt.html","keywords":"wow, 魔兽世界, 动漫, immt","thumbnailUrl":"https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/11/immt.jpg","image":["https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/11/immt.jpg"]}</script>
   <script>
 (function () {
   try {
@@ -734,15 +734,21 @@ background:var(--block);color:var(--text-p1)}
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="im-mt"
+       data-post-title="魔兽世界动画片《我叫MT》第一季一至十集"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1296,39 +1302,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

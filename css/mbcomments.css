@@ -1,0 +1,369 @@
+/* mbcomments 博客评论样式
+ * 只使用 Stellar 暴露的 CSS 变量，跟随明暗主题
+ * 类名统一 mbc- 前缀，避免和主题/正文样式打架
+ */
+
+.mbc {
+  --mbc-border: var(--block-border, rgba(127, 127, 127, 0.18));
+  --mbc-soft: var(--block, rgba(127, 127, 127, 0.06));
+  --mbc-text: var(--text-p1, #222);
+  --mbc-text-2: var(--text-p2, #444);
+  --mbc-text-3: var(--text-p3, #777);
+  --mbc-text-4: var(--text-p4, #999);
+  --mbc-accent: var(--theme, #1bcdfc);
+  color: var(--mbc-text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.mbc *,
+.mbc *::before,
+.mbc *::after {
+  box-sizing: border-box;
+}
+
+.mbc-noscript {
+  padding: 1rem;
+  border: 1px dashed var(--mbc-border);
+  border-radius: 8px;
+  color: var(--mbc-text-3);
+  text-align: center;
+}
+
+/* ---------- 概览 / 空态 ---------- */
+.mbc-summary {
+  min-height: 20px;
+  margin-bottom: 4px;
+  color: var(--mbc-text-3);
+  font-size: 12px;
+}
+
+.mbc-empty {
+  padding: 1.6rem 0;
+  color: var(--mbc-text-4);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- 列表 ---------- */
+.mbc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mbc-item {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px dashed var(--mbc-border);
+}
+
+.mbc-item:first-child {
+  padding-top: 4px;
+  border-top: 0;
+}
+
+.mbc-avatar {
+  position: relative;
+  display: grid;
+  flex: 0 0 36px;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--mbc-soft);
+  color: var(--mbc-text-3);
+  font-size: 14px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.mbc-avatar::before {
+  content: attr(data-initial);
+}
+
+.mbc-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mbc-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.mbc-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.mbc-name {
+  color: var(--mbc-text);
+  font-weight: 600;
+}
+
+.mbc-badge {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--mbc-soft);
+  color: var(--mbc-accent);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.mbc-site {
+  color: var(--mbc-text-3);
+  font-size: 12px;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--mbc-border);
+}
+
+.mbc-site:hover {
+  color: var(--mbc-accent);
+  border-bottom-color: currentColor;
+}
+
+.mbc-time {
+  color: var(--mbc-text-4);
+  font-size: 12px;
+}
+
+.mbc-reply {
+  margin-left: auto;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--mbc-text-3);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mbc-reply:hover {
+  background: var(--mbc-soft);
+  color: var(--mbc-accent);
+}
+
+.mbc-content {
+  margin-top: 5px;
+  color: var(--mbc-text);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.mbc-content a {
+  color: var(--mbc-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+}
+
+.mbc-content a:hover {
+  opacity: 0.8;
+}
+
+/* 子回复：左侧细线 + 缩进；超过 3 层后压平，避免手机正文被挤没 */
+.mbc-children {
+  margin: 10px 0 0;
+  padding: 0 0 0 18px;
+  border-left: 1px solid var(--mbc-border);
+  list-style: none;
+}
+
+.mbc-children .mbc-item {
+  padding: 12px 0;
+}
+
+.mbc-children--flat {
+  padding-left: 0;
+  border-left: 0;
+}
+
+/* ---------- 表单 ---------- */
+.mbc-form {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--mbc-border);
+}
+
+.mbc-reply-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--mbc-soft);
+  color: var(--mbc-text-3);
+  font-size: 12px;
+}
+
+.mbc-reply-bar[hidden] {
+  display: none;
+}
+
+.mbc-reply-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mbc-reply-cancel {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--mbc-accent);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.mbc-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mbc-input,
+.mbc-textarea {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--mbc-border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--mbc-soft);
+  color: var(--mbc-text);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.mbc-input::placeholder,
+.mbc-textarea::placeholder {
+  color: var(--mbc-text-4);
+}
+
+.mbc-input:focus,
+.mbc-textarea:focus {
+  border-color: var(--mbc-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mbc-accent) 15%, transparent);
+}
+
+.mbc-textarea {
+  min-height: 112px;
+  margin-top: 10px;
+  resize: vertical;
+}
+
+/* 蜜罐：正常用户看不到、也不会聚焦 */
+.mbc-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mbc-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.mbc-hint {
+  color: var(--mbc-text-4);
+  font-size: 12px;
+}
+
+.mbc-submit {
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--mbc-text);
+  color: var(--background, #fff);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.mbc-submit:hover:not(:disabled) {
+  opacity: 0.86;
+}
+
+.mbc-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.mbc-msg {
+  min-height: 18px;
+  margin-top: 6px;
+  color: var(--mbc-text-3);
+  font-size: 12px;
+}
+
+.mbc-msg--ok {
+  color: var(--mbc-accent);
+}
+
+.mbc-msg--err {
+  color: #e5484d;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  .mbc-item {
+    gap: 10px;
+  }
+
+  .mbc-head {
+    gap: 6px;
+  }
+
+  .mbc-time {
+    font-size: 11px;
+  }
+
+  .mbc-avatar {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .mbc-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .mbc-children {
+    padding-left: 6px;
+  }
+
+  .mbc-reply {
+    margin-left: 0;
+  }
+
+  .mbc-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mbc-submit {
+    width: 100%;
+  }
+}

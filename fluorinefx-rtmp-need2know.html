@@ -959,23 +959,28 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;adobe-rtmp.html" title="adobe公开RTMP协议"><span class="title">adobe公开RTMP协议</span></a><a class="item" href="&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[下载]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[下载]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds图书概述
-The demand for multiplayer games and virtual worlds has exp...</span></a><a class="item" href="&#x2F;addeventlistener-with-arg.html" title="addEventListener事件监听传递参数"><span class="title">addEventListener事件监听传递参数</span><span class="excerpt">as3中的addEventListener事件监听会自动传递一个事件对象参数给处理函数,可是不能传递其他参数. 如果要为事件处理函数送参数的话可以用这种方法: 见代码: var sayHello:String &#x3D; “欢迎光临...</span></a><a class="item" href="&#x2F;adobe-air-15-cookbook.html" title="Adobe AIR 1.5 Cookbook!"><span class="title">Adobe AIR 1.5 Cookbook!</span><span class="excerpt">Adobe AIR 1.5 Cookbook已经问世了。
-
-In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also being r...</span></a><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;adobe-rtmp.html" title="adobe公开RTMP协议"><span class="title">adobe公开RTMP协议</span></a><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
+即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
+2.20： 引导页界面...</span></a><a class="item" href="&#x2F;2007-ban-wang-zhan-jie-mian.html" title="2007版网站界面"><span class="title">2007版网站界面</span></a><a class="item" href="&#x2F;actionscript-3-0-yu-yan-he-zu-jian-can-kao.html" title="ActionScript 3.0 语言和组件参考"><span class="title">ActionScript 3.0 语言和组件参考</span></a><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="fluorinefx-rtmp-need2know"
+       data-post-title="使用FluorineFx开发RTMP服务器端需要了解的"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1534,39 +1539,10 @@ In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also 
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

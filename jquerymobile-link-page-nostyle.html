@@ -30,17 +30,17 @@
 <meta property="article:published_time" content="2010-12-01T07:48:35.000Z">
 <meta property="article:modified_time" content="2010-12-01T07:48:35.000Z">
 <meta property="article:author" content="Mousebomb">
+<meta property="article:tag" content="web">
 <meta property="article:tag" content="手机">
 <meta property="article:tag" content="html5">
 <meta property="article:tag" content="jquery">
-<meta property="article:tag" content="web">
 <meta property="article:tag" content="mobile">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="杂记-jQueryMobile链接page不被样式化">
   
   
-  <meta name="keywords" content="手机,html5,jquery,web,mobile">
+  <meta name="keywords" content="web,手机,html5,jquery,mobile">
 
   <!-- feed -->
   
@@ -63,7 +63,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-12-01T15:48:35+08:00","dateModified":"2010-12-01T15:48:35+08:00","datePublished":"2010-12-01T15:48:35+08:00","description":"今天发现，原来jQueryMobile的listview里要带mobile样式地转链接到一个同目录下的页面必须要用**.&#x2F;xxxx.html**而不能xxxx.html的，否则链接过去的页面的data-role&#x3D;”header”等内容被忽略（也就是说，虽然异步加载进来，也有transition，但变成一个没有mobile样式的HTML页面），浪费这么多时间……\n现在alp...","headline":"杂记-jQueryMobile链接page不被样式化","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/jquerymobile-link-page-nostyle.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/jquerymobile-link-page-nostyle.html","keywords":"手机, html5, jquery, web, mobile","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-12-01T15:48:35+08:00","dateModified":"2010-12-01T15:48:35+08:00","datePublished":"2010-12-01T15:48:35+08:00","description":"今天发现，原来jQueryMobile的listview里要带mobile样式地转链接到一个同目录下的页面必须要用**.&#x2F;xxxx.html**而不能xxxx.html的，否则链接过去的页面的data-role&#x3D;”header”等内容被忽略（也就是说，虽然异步加载进来，也有transition，但变成一个没有mobile样式的HTML页面），浪费这么多时间……\n现在alp...","headline":"杂记-jQueryMobile链接page不被样式化","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/jquerymobile-link-page-nostyle.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/jquerymobile-link-page-nostyle.html","keywords":"web, 手机, html5, jquery, mobile","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -717,28 +717,28 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;cocos2dx-google-play-requires-64bit-support.html" title="为解决GooglePlay要求64位支持的问题，cocos老项目的一点笔记"><span class="title">为解决GooglePlay要求64位支持的问题，cocos老项目的一点笔记</span><span class="excerpt">有个老项目，为解决Google要求64位支持的问题，准备把cocos升级一下，然后发现不需要，据说只要编译64位版本就可以。依稀记得当时删了arm64-v8a的。Google的教程： https:&#x2F;&#x2F;developer.android...</span></a><a class="item" href="&#x2F;loli-td-appstore.html" title="萝莉大冒险 项目完成上架"><span class="title">萝莉大冒险 项目完成上架</span><span class="excerpt"> 《萝莉大冒险》是我作为主程参加完成的第一个手机游戏项目，这个项目中获得了许多经验，了解了跟页游的区别。项目是PHP (AMFPHP) + AIR (用Starling+传统UI)开发，前端Starling+传统UI的性能还是受到许多...</span></a><a class="item" href="&#x2F;secret-note-1-1.html" title="私密笔记更新1.1"><span class="title">私密笔记更新1.1</span><span class="excerpt">
-- 修正在编辑具体笔记时若锁屏，用户改动将会丢失的BUG - 修正解锁界面有时候多次询问密码的BUG - 修正在WIFI访问模式下，网页创建新笔记的时间显示不正确的BUG - 修正WIFI模式有时候IP地址获取为(null)的bug</span></a><a class="item" href="&#x2F;secret-note-app-store.html" title="私密笔记上架"><span class="title">私密笔记上架</span><span class="excerpt"> 我个人的第一个App 私密笔记上架了。从第一次提交版本到审核通过，当中还被拒一次，总共用了10天。
-私密笔记，是我在平常工作和生活中所需的带有密码保护的备忘录。
-小时候老师就教育我，毛主席曰过：“好记性不如烂笔头”，这句话一直烙印在...</span></a><a class="item" href="&#x2F;as3-gifplayer-and-encoder.html" title="AS3的GIF播放器及Encoder"><span class="title">AS3的GIF播放器及Encoder</span><span class="excerpt">AS3GIF 让flash可以播放GIF动画文件，以及用ActionScript 3实现GIF编码的功能.
-
-介绍
-as3gif下载地址(Google Code)
-
-收藏与此，查询方便。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;2007-ban-wang-zhan-jie-mian.html" title="2007版网站界面"><span class="title">2007版网站界面</span></a><a class="item" href="&#x2F;actionscript-3-0-yu-yan-he-zu-jian-can-kao.html" title="ActionScript 3.0 语言和组件参考"><span class="title">ActionScript 3.0 语言和组件参考</span></a><a class="item" href="&#x2F;actionscript-3-jiao-cheng-xi-lie-di-zhi.html" title="ActionScript 3 教程系列地址"><span class="title">ActionScript 3 教程系列地址</span><span class="excerpt">ActionScript 3 教程系列 - 原文：黑羽(kingda.org)
+【黑羽】ActionScript 3.0系列教程(1)：与Flash9先来一次亲密接触！【黑羽】AS 3.0教程(2)：AS3.0的类及绑定AS3.0教程...</span></a><a class="item" href="&#x2F;fa-xian-le-ge-chao-xi-mousebomb-de-niao-zhan.html" title="发现了个抄袭Mousebomb的鸟站"><span class="title">发现了个抄袭Mousebomb的鸟站</span><span class="excerpt">无语了，我的站被直接抄袭（破解）并发布了，还口口声声地叫设计工作室！证据在这里，更滑稽的是他的所有作品都是抄袭的国内较好的FLASH网站。不过他的篡改技术也可以的，如果做原创的话应该会不错啊！可惜可惜了。
+后话：我觉得他还是挺真诚地想...</span></a><a class="item" href="&#x2F;04-nian-gui-ao-lin-pi-ke-zuo-pin-xuan-ji-zhuo-mian-zhu-ti.html" title="04年GUI奥林匹克作品选集（桌面主题）"><span class="title">04年GUI奥林匹克作品选集（桌面主题）</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="jquerymobile-link-page-nostyle"
+       data-post-title="杂记-jQueryMobile链接page不被样式化"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1292,39 +1292,10 @@ as3gif下载地址(Google Code)
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

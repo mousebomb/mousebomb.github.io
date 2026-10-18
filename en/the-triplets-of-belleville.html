@@ -721,7 +721,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;aierwen-hualishu.html" title="Enjoyed *Alvin and the Chipmunks*"><span class="title">Enjoyed *Alvin and the Chipmunks*</span><span class="excerpt"> In the afternoon I watched Alvin and the Chipmunks. Mm, an immortal theme — family.</span></a><a class="item" href="&#x2F;en&#x2F;appletv-2th-g-notes.html" title="Some random notes on AppleTV2G"><span class="title">Some random notes on AppleTV2G</span></a><a class="item" href="&#x2F;en&#x2F;avatar.html" title="Avatar will be released on January 2 next year."><span class="title">Avatar will be released on January 2 next year.</span><span class="excerpt"> This year there are two big movies: one is 2012, the other is Avatar. 2012 has already sounded a warning bell for ev...</span></a><a class="item" href="&#x2F;en&#x2F;district-9.html" title="Watched District 9 last night"><span class="title">Watched District 9 last night</span><span class="excerpt"> These past two months, what I’ve been watching wasn’t movies — it was loneliness… Finally, though, I watched somethi...</span></a><a class="item" href="&#x2F;en&#x2F;9sky-9box.html" title="Nine Heavens Song King"><span class="title">Nine Heavens Song King</span><span class="excerpt"> Today I noticed that Jiutian has released a PC music player — Jiutian Guange Wang.</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;aierwen-hualishu.html" title="Enjoyed *Alvin and the Chipmunks*"><span class="title">Enjoyed *Alvin and the Chipmunks*</span><span class="excerpt"> In the afternoon I watched Alvin and the Chipmunks. Mm, an immortal theme — family.</span></a><a class="item" href="&#x2F;en&#x2F;appletv-2th-g-notes.html" title="Some random notes on AppleTV2G"><span class="title">Some random notes on AppleTV2G</span></a><a class="item" href="&#x2F;en&#x2F;avatar.html" title="Avatar will be released on January 2 next year."><span class="title">Avatar will be released on January 2 next year.</span><span class="excerpt"> This year there are two big movies: one is 2012, the other is Avatar. 2012 has already sounded a warning bell for ev...</span></a><a class="item" href="&#x2F;en&#x2F;district-9.html" title="Watched District 9 last night"><span class="title">Watched District 9 last night</span><span class="excerpt"> These past two months, what I’ve been watching wasn’t movies — it was loneliness… Finally, though, I watched somethi...</span></a><a class="item" href="&#x2F;en&#x2F;88-wow.html" title="Goodbye, World of Warcraft"><span class="title">Goodbye, World of Warcraft</span><span class="excerpt"> “It has been 4 years since The9 and Blizzard fought shoulder to shoulder, together resisting the invasion of countle...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
@@ -729,12 +729,18 @@ background:var(--block);color:var(--text-p1)}
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="the-triplets-of-belleville"
+       data-post-title="Moved by *The Triplets of Belleville*"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1288,39 +1294,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

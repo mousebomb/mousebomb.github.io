@@ -30,18 +30,18 @@
 <meta property="article:published_time" content="2008-05-30T12:40:11.000Z">
 <meta property="article:modified_time" content="2008-05-30T12:40:11.000Z">
 <meta property="article:author" content="Mousebomb">
+<meta property="article:tag" content="flash">
+<meta property="article:tag" content="flex">
 <meta property="article:tag" content="as3">
 <meta property="article:tag" content="ria">
-<meta property="article:tag" content="flash">
 <meta property="article:tag" content="air">
-<meta property="article:tag" content="flex">
 <meta property="article:tag" content="URL方案">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="AIR的URL方案">
   
   
-  <meta name="keywords" content="as3,ria,flash,air,flex,URL方案">
+  <meta name="keywords" content="flash,flex,as3,ria,air,URL方案">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-30T20:40:11+08:00","dateModified":"2008-05-30T20:40:11+08:00","datePublished":"2008-05-30T20:40:11+08:00","description":"今天FLEX群里有个兄弟提起AIR缓存清除，我又去官方文档转悠了圈，顺便看到AIR的URL方案，有两个没用过的app:和app-storage: 详细情况：\n下面的标准URL方案是可以在AIR的任何安全沙箱中都支持的： http:和https: 这两个当然就是网页URL file: 这个当然就是本地文件URL\n下面的方案用于运行在应用程序安全沙箱的内容: app: 使用这个可以指定相对于应用程序安装目录(也就是应用程序源目录)的顶级（就是包含应用描述文件的目录）的路径。比如下面这个就是指向应用程序顶级目录下的resources子目录: app:&#x2F;resources","headline":"AIR的URL方案","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-url.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-url.html","keywords":"as3, ria, flash, air, flex, URL方案","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-05-30T20:40:11+08:00","dateModified":"2008-05-30T20:40:11+08:00","datePublished":"2008-05-30T20:40:11+08:00","description":"今天FLEX群里有个兄弟提起AIR缓存清除，我又去官方文档转悠了圈，顺便看到AIR的URL方案，有两个没用过的app:和app-storage: 详细情况：\n下面的标准URL方案是可以在AIR的任何安全沙箱中都支持的： http:和https: 这两个当然就是网页URL file: 这个当然就是本地文件URL\n下面的方案用于运行在应用程序安全沙箱的内容: app: 使用这个可以指定相对于应用程序安装目录(也就是应用程序源目录)的顶级（就是包含应用描述文件的目录）的路径。比如下面这个就是指向应用程序顶级目录下的resources子目录: app:&#x2F;resources","headline":"AIR的URL方案","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/air-url.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/air-url.html","keywords":"flash, flex, as3, ria, air, URL方案","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -740,15 +740,21 @@ background:var(--block);color:var(--text-p1)}
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="air-url"
+       data-post-title="AIR的URL方案"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1302,39 +1308,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

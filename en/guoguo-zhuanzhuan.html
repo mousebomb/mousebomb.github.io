@@ -795,7 +795,7 @@ background:var(--block);color:var(--text-p1)}
     </section>
     <section class='body'>
     <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;r-apple-slaps-developers-in-the-face.html" title="[Repost] Apple Slaps Developers In The Face"><span class="title">[Repost] Apple Slaps Developers In The Face</span><span class="excerpt">This article is reprinted from http:&#x2F;&#x2F;theflashblog.com&#x2F;?p&#x3D;1888
-[Adobe would like me to make it clear that the opinion...</span></a><a class="item" href="&#x2F;en&#x2F;adobe-cs5-download.html" title="Adobe CS5 suite download links are available now"><span class="title">Adobe CS5 suite download links are available now</span><span class="excerpt">“Adobe CS5 Master Collection (Official Win_Mac Release)” (Adobe Creative Suite 5 Master Collection) CS5 [disc image]:...</span></a><a class="item" href="&#x2F;en&#x2F;adobe-flash-platform-summit-2010.html" title="Some favorites from the Adobe Platform Tech Summit"><span class="title">Some favorites from the Adobe Platform Tech Summit</span></a><a class="item" href="&#x2F;en&#x2F;end-of-flash.html" title="Goodbye, FLASH"><span class="title">Goodbye, FLASH</span></a><a class="item" href="&#x2F;en&#x2F;2011-3-27天地行北京站.html" title="2011.3.27 Tiandixing Beijing Stop"><span class="title">2011.3.27 Tiandixing Beijing Stop</span><span class="excerpt">Latest Events2011 RIA Tian Di Xing Beijing City Elite Forum
+[Adobe would like me to make it clear that the opinion...</span></a><a class="item" href="&#x2F;en&#x2F;adobe-flash-platform-summit-2010.html" title="Some favorites from the Adobe Platform Tech Summit"><span class="title">Some favorites from the Adobe Platform Tech Summit</span></a><a class="item" href="&#x2F;en&#x2F;adobe-cs5-download.html" title="Adobe CS5 suite download links are available now"><span class="title">Adobe CS5 suite download links are available now</span><span class="excerpt">“Adobe CS5 Master Collection (Official Win_Mac Release)” (Adobe Creative Suite 5 Master Collection) CS5 [disc image]:...</span></a><a class="item" href="&#x2F;en&#x2F;end-of-flash.html" title="Goodbye, FLASH"><span class="title">Goodbye, FLASH</span></a><a class="item" href="&#x2F;en&#x2F;2011-3-27天地行北京站.html" title="2011.3.27 Tiandixing Beijing Stop"><span class="title">2011.3.27 Tiandixing Beijing Stop</span><span class="excerpt">Latest Events2011 RIA Tian Di Xing Beijing City Elite Forum
 Event Time: 2011.3.27
 Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
@@ -805,12 +805,18 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="guoguo-zhuanzhuan"
+       data-post-title="One Slap, One Story - Guoguo and Zhuanzhuan"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1364,39 +1370,10 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

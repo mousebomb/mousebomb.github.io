@@ -760,20 +760,27 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;greensock-animation-platform-js.html" title="GreenSock Animation Platform有JS的了"><span class="title">GreenSock Animation Platform有JS的了</span></a><a class="item" href="&#x2F;ie-type-readonly.html" title="IE中input元素的.type为只读!"><span class="title">IE中input元素的.type为只读!</span><span class="excerpt">今天遇到一处错误，发现IE中input元素的.type为只读!</span></a><a class="item" href="&#x2F;ie7-js.html" title="ie7-js"><span class="title">ie7-js</span></a><a class="item" href="&#x2F;llm-local-sheishiwodi-1.html" title="本地调用大模型玩“谁是卧底”游戏"><span class="title">本地调用大模型玩“谁是卧底”游戏</span><span class="excerpt">大过年的，大家都在讨论deepseek。睿睿想玩&quot;谁是卧底&quot;总是凑不齐人，我开发了一个AI驱动的《谁是卧底》游戏机器人，通过调用大模型生成角色描述和投票策略，但遇到了模型输出不稳定、格式错误等问题。经过多次调整模型和提示词，最终实现了...</span></a><a class="item" href="&#x2F;as-to-cocos2d-action.html" title="从AS到cocos2d-Action"><span class="title">从AS到cocos2d-Action</span><span class="excerpt">我之前是一个ASer，去年开始搞oc，今年接触cocos2d，学习的过程中有些体会，回顾一下，分享出来，也为更多从flash开发想转到cocos2d的同学做一个汇报和参考。学习cocos2d是一个愉快的过程，因为从starling转换...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;flash-amp-ajax-cao-zuo-xml-shi-li-wu-shua-xin-fen-ye-zhuan.html" title="Flash &amp; Ajax 操作 XML 实例:无刷新分页[转]"><span class="title">Flash &amp; Ajax 操作 XML 实例:无刷新分页[转]</span><span class="excerpt">其实标题只是一个噱头罢了，只是想谈一下，Javascript 与 Actionscript 是如何操作XML的。希望能帮助一些只用 Javascript  或 只懂 Actionscript 的朋友，了解两者的相同与不同之处。Flas...</span></a><a class="item" href="&#x2F;flash-as-he-js-li-dou-ke-yi-shi-yong-de-xiao-fang-fa-zheng.html" title="flash as和js里都可以使用的小方法整理[转]"><span class="title">flash as和js里都可以使用的小方法整理[转]</span><span class="excerpt">随机关键字方法比较适合用于生成随机密码，和数据库关键字(在Ajax和Flash客户端生成)!&#x2F;&#x2F;随机关键字生成方法(AS和JS里都可以使用)function getRandomKeyID(len){if (len ...</span></a><a class="item" href="&#x2F;flash-chen-feng-bian-ge.html" title="Flash尘封？变革？"><span class="title">Flash尘封？变革？</span><span class="excerpt">最近几天忙着帮朋友完成一个flash交互网站，所以也没注意更新blog了。as3和flex的学习笔记也没有继续记录。惭愧啊，抓紧时间争取迅速搞定，然后继续写笔记。
+flash发展到9后，似乎有不少flash网站设计者玩腻味了flash...</span></a><a class="item" href="&#x2F;greensock-animation-platform-js.html" title="GreenSock Animation Platform有JS的了"><span class="title">GreenSock Animation Platform有JS的了</span></a><a class="item" href="&#x2F;as-to-cocos2d-action.html" title="从AS到cocos2d-Action"><span class="title">从AS到cocos2d-Action</span><span class="excerpt">我之前是一个ASer，去年开始搞oc，今年接触cocos2d，学习的过程中有些体会，回顾一下，分享出来，也为更多从flash开发想转到cocos2d的同学做一个汇报和参考。学习cocos2d是一个愉快的过程，因为从starling转换...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="multipart-body-must-have-at-least-one-part"
+       data-post-title="Multipart body must have at least one part"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1327,39 +1334,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

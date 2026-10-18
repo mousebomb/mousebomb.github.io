@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2009-09-28T10:31:39.000Z">
 <meta property="article:modified_time" content="2009-09-28T10:31:39.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="as3">
 <meta property="article:tag" content="flash">
+<meta property="article:tag" content="as3">
 <meta property="article:tag" content="错误">
 <meta property="article:tag" content="loader">
 <meta property="article:tag" content="安全沙箱">
@@ -40,7 +40,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="安全沙箱问题#2123">
   
   
-  <meta name="keywords" content="as3,flash,错误,loader,安全沙箱">
+  <meta name="keywords" content="flash,as3,错误,loader,安全沙箱">
 
   <!-- feed -->
   
@@ -63,7 +63,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-09-28T18:31:39+08:00","dateModified":"2009-09-28T18:31:39+08:00","datePublished":"2009-09-28T18:31:39+08:00","description":"第一份安全沙箱的笔记。 因为安全沙箱困扰了不少人，所以是老生常谈的问题。 今天下午我遇到了2123错误。\n案发现场某个列表flash页面需要支持gravatar的头像 (gravatar的跨域策略文件位于http://www.gravatar.com/avatar/crossdomain.xml) 在加载他们提供的图片头像时我遇到了安全沙箱冲突，错误信息是：\n\nSecurityError: Error #2123: 安全沙箱冲突:\n","headline":"安全沙箱问题#2123","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/securityerror-2123.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/securityerror-2123.html","keywords":"as3, flash, 错误, loader, 安全沙箱","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-09-28T18:31:39+08:00","dateModified":"2009-09-28T18:31:39+08:00","datePublished":"2009-09-28T18:31:39+08:00","description":"第一份安全沙箱的笔记。 因为安全沙箱困扰了不少人，所以是老生常谈的问题。 今天下午我遇到了2123错误。\n案发现场某个列表flash页面需要支持gravatar的头像 (gravatar的跨域策略文件位于http://www.gravatar.com/avatar/crossdomain.xml) 在加载他们提供的图片头像时我遇到了安全沙箱冲突，错误信息是：\n\nSecurityError: Error #2123: 安全沙箱冲突:\n","headline":"安全沙箱问题#2123","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/securityerror-2123.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/securityerror-2123.html","keywords":"flash, as3, 错误, loader, 安全沙箱","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -745,15 +745,21 @@ background:var(--block);color:var(--text-p1)}
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="securityerror-2123"
+       data-post-title="安全沙箱问题#2123"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1312,39 +1318,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

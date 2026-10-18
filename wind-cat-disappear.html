@@ -729,20 +729,28 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;photograph-of-the-cat-wind.html" title="养猫记录-猫的写真集"><span class="title">养猫记录-猫的写真集</span><span class="excerpt"> 特别声明：以下图片均不允许任何形式的转载及修改。</span></a><a class="item" href="&#x2F;the-flower-comes.html" title="小花来也"><span class="title">小花来也</span></a><a class="item" href="&#x2F;thinking-through-the-cat.html" title="由猫咪想到的"><span class="title">由猫咪想到的</span><span class="excerpt"> 由猫咪想到的 半个月前，从阳台上窜进来一只猫，目前和我住一起。 刚开始，它的追求很简单，有一个栖身之地就好了。以至于第一天来赖着不走——即使当时我没吃的招待它。我打开大门把它抱出去，它马上就窜进来；我把它抱出去，快速关上门，它就在外...</span></a><a class="item" href="&#x2F;to-laobais-new-guardian.html" title="给老白的新主人"><span class="title">给老白的新主人</span></a><a class="item" href="&#x2F;88qoolu.html" title="告别了酷噜网络"><span class="title">告别了酷噜网络</span><span class="excerpt"> 就在09.5.12，汶川地震一周年的这一天，我离开了工作了整整七个月的酷噜网络。恢复了无限憧憬的自由职业生涯。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;photograph-of-the-cat-wind.html" title="养猫记录-猫的写真集"><span class="title">养猫记录-猫的写真集</span><span class="excerpt"> 特别声明：以下图片均不允许任何形式的转载及修改。</span></a><a class="item" href="&#x2F;the-flower-comes.html" title="小花来也"><span class="title">小花来也</span></a><a class="item" href="&#x2F;thinking-through-the-cat.html" title="由猫咪想到的"><span class="title">由猫咪想到的</span><span class="excerpt"> 由猫咪想到的 半个月前，从阳台上窜进来一只猫，目前和我住一起。 刚开始，它的追求很简单，有一个栖身之地就好了。以至于第一天来赖着不走——即使当时我没吃的招待它。我打开大门把它抱出去，它马上就窜进来；我把它抱出去，快速关上门，它就在外...</span></a><a class="item" href="&#x2F;to-laobais-new-guardian.html" title="给老白的新主人"><span class="title">给老白的新主人</span></a><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
+即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
+2.20： 引导页界面...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="wind-cat-disappear"
+       data-post-title="猫失踪了"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1296,39 +1304,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

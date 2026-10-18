@@ -31,8 +31,8 @@
 <meta property="article:modified_time" content="2008-07-17T04:37:15.000Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="flash">
-<meta property="article:tag" content="乱码">
 <meta property="article:tag" content="xml">
+<meta property="article:tag" content="乱码">
 <meta property="article:tag" content="PHP">
 <meta property="article:tag" content="DomDocument">
 <meta property="article:tag" content="useCodepage">
@@ -41,7 +41,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="PHP生成的XML以FLASH获取为乱码终极解决">
   
   
-  <meta name="keywords" content="flash,乱码,xml,PHP,DomDocument,useCodepage">
+  <meta name="keywords" content="flash,xml,乱码,PHP,DomDocument,useCodepage">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-07-17T12:37:15+08:00","dateModified":"2008-07-17T12:37:15+08:00","datePublished":"2008-07-17T12:37:15+08:00","description":"最不怕跟匪夷所思的问题作斗争了，看谁牛鼻。都好久没在编码上遇到过障碍了，今天居然又遇到个小茶包——PHP生成的XML，以FLASH获取却为乱码。经过探索最终解决。记录之，顺便也记录了通用解决方案。如果你也遇到XML&lt;-&gt;FLASH乱码情况，可以速查：\n1．确信XML绝对没有问题的情况：首先，flash读取xml出现乱码涉及到System.useCodepage这个静态属性属性 官方描述：“A Boolean value that tells Flash Player which code page to use to interpret external text files.”默认为false。","headline":"PHP生成的XML以FLASH获取为乱码终极解决","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/php-xml-messy-code.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/php-xml-messy-code.html","keywords":"flash, 乱码, xml, PHP, DomDocument, useCodepage","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2008-07-17T12:37:15+08:00","dateModified":"2008-07-17T12:37:15+08:00","datePublished":"2008-07-17T12:37:15+08:00","description":"最不怕跟匪夷所思的问题作斗争了，看谁牛鼻。都好久没在编码上遇到过障碍了，今天居然又遇到个小茶包——PHP生成的XML，以FLASH获取却为乱码。经过探索最终解决。记录之，顺便也记录了通用解决方案。如果你也遇到XML&lt;-&gt;FLASH乱码情况，可以速查：\n1．确信XML绝对没有问题的情况：首先，flash读取xml出现乱码涉及到System.useCodepage这个静态属性属性 官方描述：“A Boolean value that tells Flash Player which code page to use to interpret external text files.”默认为false。","headline":"PHP生成的XML以FLASH获取为乱码终极解决","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/php-xml-messy-code.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/php-xml-messy-code.html","keywords":"flash, xml, 乱码, PHP, DomDocument, useCodepage","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -728,22 +728,29 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;flash-input-textfield-messycode-in-firefox.html" title="Flash输入文本内中文乱码"><span class="title">Flash输入文本内中文乱码</span><span class="excerpt">上次遇到Flash在IE下的NavigateToURL被屏蔽的问题，解决方法可以用wmode的设置。
-昨天夜里又遇到wmode的另外一个问题： flash里的输入文本框（CS4里纯正的TextField，type&#x3D;’inpu...</span></a><a class="item" href="&#x2F;my-ezine-finish.html" title="电子杂志发布平台基本功能完成"><span class="title">电子杂志发布平台基本功能完成</span></a><a class="item" href="&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[下载]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[下载]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds图书概述
-The demand for multiplayer games and virtual worlds has exp...</span></a><a class="item" href="&#x2F;addeventlistener-with-arg.html" title="addEventListener事件监听传递参数"><span class="title">addEventListener事件监听传递参数</span><span class="excerpt">as3中的addEventListener事件监听会自动传递一个事件对象参数给处理函数,可是不能传递其他参数. 如果要为事件处理函数送参数的话可以用这种方法: 见代码: var sayHello:String &#x3D; “欢迎光临...</span></a><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;flash-amp-ajax-cao-zuo-xml-shi-li-wu-shua-xin-fen-ye-zhuan.html" title="Flash &amp; Ajax 操作 XML 实例:无刷新分页[转]"><span class="title">Flash &amp; Ajax 操作 XML 实例:无刷新分页[转]</span><span class="excerpt">其实标题只是一个噱头罢了，只是想谈一下，Javascript 与 Actionscript 是如何操作XML的。希望能帮助一些只用 Javascript  或 只懂 Actionscript 的朋友，了解两者的相同与不同之处。Flas...</span></a><a class="item" href="&#x2F;flash-input-textfield-messycode-in-firefox.html" title="Flash输入文本内中文乱码"><span class="title">Flash输入文本内中文乱码</span><span class="excerpt">上次遇到Flash在IE下的NavigateToURL被屏蔽的问题，解决方法可以用wmode的设置。
+昨天夜里又遇到wmode的另外一个问题： flash里的输入文本框（CS4里纯正的TextField，type&#x3D;’inpu...</span></a><a class="item" href="&#x2F;my-ezine-finish.html" title="电子杂志发布平台基本功能完成"><span class="title">电子杂志发布平台基本功能完成</span></a><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
+即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
+2.20： 引导页界面...</span></a><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
+      <p>评论</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="php-xml-messy-code"
+       data-post-title="PHP生成的XML以FLASH获取为乱码终极解决"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="zh-CN">
+    <noscript><div class="mbc-noscript">评论需要启用 JavaScript。</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1302,39 +1309,10 @@ The demand for multiplayer games and virtual worlds has exp...</span></a><a clas
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 

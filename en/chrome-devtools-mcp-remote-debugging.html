@@ -723,7 +723,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;chrome-remote-debugging-port-9222-macos-solution.html" title="macOS Chrome Remote Debugging Port 9222 Startup Problem and the Final Solution"><span class="title">macOS Chrome Remote Debugging Port 9222 Startup Problem and the Final Solution</span><span class="excerpt">Solving the macOS Chrome Remote Debugging Port 9222 Problem: SingletonLock Deadlock, Chrome Security Restrictions, rs...</span></a><a class="item" href="&#x2F;en&#x2F;Playwright-vs-CDP.html" title="Playwright vs CDP: Comparing Browser Control Approaches"><span class="title">Playwright vs CDP: Comparing Browser Control Approaches</span><span class="excerpt">Playwright is a well-packaged high-level tool, while CDP is the browser&#39;s low-level &quot;machine language&quot;. For scenarios...</span></a><a class="item" href="&#x2F;en&#x2F;hermes-agent.html" title="From Lobster to Hermes"><span class="title">From Lobster to Hermes</span><span class="excerpt">Hermes has these advantages over Lobster: model errors get output to the console. The gateway has logs you can check,...</span></a><a class="item" href="&#x2F;en&#x2F;hermes-agent-vs-openclaw.html" title="Hermes Agent official documentation breakdown vs OpenClaw"><span class="title">Hermes Agent official documentation breakdown vs OpenClaw</span><span class="excerpt">Hermes Agent is a white-box meta AI Agent developed by Nous Research, MIT licensed. Core positioning difference: Open...</span></a><a class="item" href="&#x2F;en&#x2F;Qbserve.html" title="Qbserve: A RescueTime Alternative"><span class="title">Qbserve: A RescueTime Alternative</span><span class="excerpt">RescueTime gradually stopped meeting my needs: cluttered UI, delayed data, frequent false alarms. After trying Qbserv...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;chrome-remote-debugging-port-9222-macos-solution.html" title="macOS Chrome Remote Debugging Port 9222 Startup Problem and the Final Solution"><span class="title">macOS Chrome Remote Debugging Port 9222 Startup Problem and the Final Solution</span><span class="excerpt">Solving the macOS Chrome Remote Debugging Port 9222 Problem: SingletonLock Deadlock, Chrome Security Restrictions, rs...</span></a><a class="item" href="&#x2F;en&#x2F;Playwright-vs-CDP.html" title="Playwright vs CDP: Comparing Browser Control Approaches"><span class="title">Playwright vs CDP: Comparing Browser Control Approaches</span><span class="excerpt">Playwright is a well-packaged high-level tool, while CDP is the browser&#39;s low-level &quot;machine language&quot;. For scenarios...</span></a><a class="item" href="&#x2F;en&#x2F;hermes-agent-vs-openclaw.html" title="Hermes Agent official documentation breakdown vs OpenClaw"><span class="title">Hermes Agent official documentation breakdown vs OpenClaw</span><span class="excerpt">Hermes Agent is a white-box meta AI Agent developed by Nous Research, MIT licensed. Core positioning difference: Open...</span></a><a class="item" href="&#x2F;en&#x2F;hermes-agent.html" title="From Lobster to Hermes"><span class="title">From Lobster to Hermes</span><span class="excerpt">Hermes has these advantages over Lobster: model errors get output to the console. The gateway has logs you can check,...</span></a><a class="item" href="&#x2F;en&#x2F;Qbserve.html" title="Qbserve: A RescueTime Alternative"><span class="title">Qbserve: A RescueTime Alternative</span><span class="excerpt">RescueTime gradually stopped meeting my needs: cluttered UI, delayed data, frequent false alarms. After trying Qbserv...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
@@ -731,12 +731,18 @@ background:var(--block);color:var(--text-p1)}
       <p>Join the discussion</p>
 
     </section>
-    <section class='body cmt-body utterances'>
+    <section class='body cmt-body mbcomments'>
       
 
-<div class="lazy-icon"></div>
+  <div class="mbc" id="mbc"
+       data-post-key="chrome-devtools-mcp-remote-debugging"
+       data-post-title="macOS Chrome Remote Debugging configuration"
+       data-api-base="https://mousebomb.org/api"
+       data-css="/css/mbcomments.css?v=20261018"
+       data-lang="en">
+    <noscript><div class="mbc-noscript">Comments require JavaScript.</div></noscript>
+  </div>
 
-<div id="utterances" repo="mousebomb/mousebomb.github.io" issue-term="pathname" theme="preferred-color-scheme"></div>
 
     </section>
   </div>
@@ -1295,39 +1301,10 @@ background:var(--block);color:var(--text-p1)}
 
 <!-- optional -->
 
-  <script type="module">
-  (function() {
-    
-    function initUtterances() {
-      const el = document.querySelector("#comments #utterances");
-      if (!el) return;
-      
-      function load_utterances() {
-        utils.css('/en/css/comments/utterances.css?v=1.44.0');
-        try {
-          el.innerHTML = '';
-        } catch (error) {
-          console.error(error);
-        }
-        const script = document.createElement('script');
-        script.src = 'https://utteranc.es/client.js';
-        script.async = true;
-        for (const key of Object.keys(el.attributes)) {
-          const attr = el.attributes[key];
-          if (['class', 'id'].includes(attr.name) === false) {
-            script.setAttribute(attr.name, attr.value);
-          }
-        }
-        el.appendChild(script);
-      }
-      
-      util.viewportLazyload(el, load_utterances);
-    }
-    
-    // Initialize on page load
-    initUtterances();
-  })();
-</script>
+  
+  
+  <script type="module" src="/js/mbcomments.js?v=20261018"></script>
+
 
 
 
