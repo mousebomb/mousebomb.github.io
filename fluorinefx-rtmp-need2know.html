@@ -32,14 +32,14 @@
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="flash">
 <meta property="article:tag" content="rtmp">
-<meta property="article:tag" content=".net">
+<meta property="article:tag" content=".NET">
 <meta property="article:tag" content="fluorineFx">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="使用FluorineFx开发RTMP服务器端需要了解的">
   
   
-  <meta name="keywords" content="flash,rtmp,.net,fluorineFx">
+  <meta name="keywords" content="flash,rtmp,.NET,fluorineFx">
 
   <!-- feed -->
   
@@ -62,7 +62,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-01-20T20:09:10+08:00","dateModified":"2010-01-20T20:09:10+08:00","datePublished":"2010-01-20T20:09:10+08:00","description":"本文是专门翻译给搭档看的文档，因为可能对某些同学有帮助，所以也贴出来供有需要的人参考。要是不适合你的情况我可无法负责哦。另外，本文是word（页面大小A3）直接导出的，冗余代码太多，懒得改动了，显示分辨率宽度低于1280的兄台阅读时可能发生样式错位，还请将就一下。\n概览：FluorineFx开源库提供了一套用于.net框架的、实现了FLEX&#x2F;FLASH remoting、Flex Data Services和real-time messaging的功能。\n.NET frameworks supported by FluorineFxMicrosoft .NET Framework 1.1 (1.1.4322)\nMicrosoft .NET Framework 2.0 (2.0.50727)\nMicrosoft .NET Framework 3.5 (3.5.21022.8)\nMono 1.2.4\n(.NET 框架支持向后兼容)","headline":"使用FluorineFx开发RTMP服务器端需要了解的","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/fluorinefx-rtmp-need2know.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/fluorinefx-rtmp-need2know.html","keywords":"flash, rtmp, .net, fluorineFx","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2010-01-20T20:09:10+08:00","dateModified":"2010-01-20T20:09:10+08:00","datePublished":"2010-01-20T20:09:10+08:00","description":"本文是专门翻译给搭档看的文档，因为可能对某些同学有帮助，所以也贴出来供有需要的人参考。要是不适合你的情况我可无法负责哦。另外，本文是word（页面大小A3）直接导出的，冗余代码太多，懒得改动了，显示分辨率宽度低于1280的兄台阅读时可能发生样式错位，还请将就一下。\n概览：FluorineFx开源库提供了一套用于.net框架的、实现了FLEX&#x2F;FLASH remoting、Flex Data Services和real-time messaging的功能。\n.NET frameworks supported by FluorineFxMicrosoft .NET Framework 1.1 (1.1.4322)\nMicrosoft .NET Framework 2.0 (2.0.50727)\nMicrosoft .NET Framework 3.5 (3.5.21022.8)\nMono 1.2.4\n(.NET 框架支持向后兼容)","headline":"使用FluorineFx开发RTMP服务器端需要了解的","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/fluorinefx-rtmp-need2know.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/fluorinefx-rtmp-need2know.html","keywords":"flash, rtmp, .NET, fluorineFx","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-A-tech-azure.webp"]}</script>
   <script>
 (function () {
   try {
@@ -959,9 +959,10 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;adobe-rtmp.html" title="adobe公开RTMP协议"><span class="title">adobe公开RTMP协议</span></a><a class="item" href="&#x2F;07-ban-wang-zhan-ji-jiang-wan-cheng.html" title="07版网站即将完成"><span class="title">07版网站即将完成</span><span class="excerpt">整体架构于2月12完成新闻 2.15完成作品 2.16完成关于、梦想 2.17完成解决hash的问题及页面切换问题 2.19
-即将完成：引导页面 开始页面 BGMP 花纹细节 后台维护 页面安全 FLASH加密
-2.20： 引导页界面...</span></a><a class="item" href="&#x2F;2007-ban-wang-zhan-jie-mian.html" title="2007版网站界面"><span class="title">2007版网站界面</span></a><a class="item" href="&#x2F;actionscript-3-0-yu-yan-he-zu-jian-can-kao.html" title="ActionScript 3.0 语言和组件参考"><span class="title">ActionScript 3.0 语言和组件参考</span></a><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;adobe-rtmp.html" title="adobe公开RTMP协议"><span class="title">adobe公开RTMP协议</span></a><a class="item" href="&#x2F;xin-ban-bo-ke-zhi-zuo.html" title="新版博客制作"><span class="title">新版博客制作</span></a><a class="item" href="&#x2F;zhuan-net-ping-tai-de-ria-kai-fa-can-kao-zhi-nan-er.html" title="[转].Net平台的RIA开发参考指南(二)"><span class="title">[转].Net平台的RIA开发参考指南(二)</span><span class="excerpt">三、各层之间的通信机制讨论了解了N层模型后，我们就有一个新的疑问了：如何统一并联系起各层，以方便设计师和程序员互不干扰的协作呢？
+其实联系设计师和程序员最重要的就是 表现层与业务层的通信因为设计师负责的是表现层的呈现以及功能，而程序员...</span></a><a class="item" href="&#x2F;zhuan-net-ping-tai-de-ria-kai-fa-can-kao-zhi-nan-yi.html" title="【转】.Net平台的RIA开发参考指南(一)"><span class="title">【转】.Net平台的RIA开发参考指南(一)</span><span class="excerpt">【分享】.Net平台的RIA开发参考指南
+
+本教程将详细介绍基于 N 层理论体系（Flash8+Xml+Asp.Net( C#)+MS SQL2000）的 RIA 开发方法，并与大家分享 Molay 的相关经验。</span></a><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">

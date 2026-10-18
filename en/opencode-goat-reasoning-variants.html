@@ -28,13 +28,13 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp">
 <meta property="article:published_time" content="2026-09-02T09:19:00.000Z">
-<meta property="article:modified_time" content="2026-10-15T12:13:29.161Z">
+<meta property="article:modified_time" content="2026-10-18T11:00:54.457Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="LLM">
 <meta property="article:tag" content="agent">
+<meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="Configuration">
-<meta property="article:tag" content="opencode">
 <meta property="article:tag" content="CommandCode">
 <meta property="article:tag" content="goat">
 <meta property="article:tag" content="reasoning">
@@ -43,7 +43,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Configuring thinking-effort switching after hooking the GOAT plan up to opencode">
   
   
-  <meta name="keywords" content="AI,LLM,agent,Configuration,opencode,CommandCode,goat,reasoning">
+  <meta name="keywords" content="AI,LLM,agent,OpenCode,Configuration,CommandCode,goat,reasoning">
 
   <!-- feed -->
   
@@ -66,7 +66,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-09-02T17:19:00+08:00","dateModified":"2026-10-15T20:13:29+08:00","datePublished":"2026-09-02T17:19:00+08:00","description":"The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn't pick a thinking depth in /models. Digging in, it turned out the GOAT plan does support it — the problem was that the hand-written models in the custom provider were missing a reasoning capability declaration, so opencode's variant generation logic stopped them at the door. In the end I added reasoning:true to every model under goat and goat-zdr, and testing showed no side effects.","headline":"Configuring thinking-effort switching after hooking the GOAT plan up to opencode","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/opencode-goat-reasoning-variants.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/opencode-goat-reasoning-variants.html","keywords":"AI, LLM, agent, Configuration, opencode, CommandCode, goat, reasoning","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-09-02T17:19:00+08:00","dateModified":"2026-10-18T19:00:54+08:00","datePublished":"2026-09-02T17:19:00+08:00","description":"The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn't pick a thinking depth in /models. Digging in, it turned out the GOAT plan does support it — the problem was that the hand-written models in the custom provider were missing a reasoning capability declaration, so opencode's variant generation logic stopped them at the door. In the end I added reasoning:true to every model under goat and goat-zdr, and testing showed no side effects.","headline":"Configuring thinking-effort switching after hooking the GOAT plan up to opencode","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/opencode-goat-reasoning-variants.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/opencode-goat-reasoning-variants.html","keywords":"AI, LLM, agent, OpenCode, Configuration, CommandCode, goat, reasoning","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
   <script>
 (function () {
   try {
@@ -687,7 +687,7 @@ background:var(--block);color:var(--text-p1)}
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Tools/">Tools</a>
 </div><div class="right"><span class="cap ai-label"><svg class="icon" data-icon="default:shield-up" aria-hidden="true"></svg>AI-polished</span></div></div><div class="meta-row">
-<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2026-09-02T09:19:00.000Z">2026-09-02</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2026-10-15T12:13:29.161Z">2026-10-15</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2026-09-02T09:19:00.000Z">2026-09-02</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2026-10-18T11:00:54.457Z">2026-10-18</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -1166,7 +1166,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;opencode-goat-commandcode-config.html" title="Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header"><span class="title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span><span class="excerpt">I bought CommandCode&#39;s goat plan and wanted to use it as my main plan in opencode. The whole integration takes just t...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-go-limits.html" title="OpenCode Go plan usage estimates: see every model on one page"><span class="title">OpenCode Go plan usage estimates: see every model on one page</span><span class="excerpt">OpenCode Go&#39;s monthly allowance is spread across several tables, and the official &quot;5-hour quota&quot; chart doesn&#39;t list a...</span></a><a class="item" href="&#x2F;en&#x2F;AI-zhong-yi-mai-xiang.html" title="AI TCM pulse diagnosis test"><span class="title">AI TCM pulse diagnosis test</span></a><a class="item" href="&#x2F;en&#x2F;agency-agent.html" title="Agency-Agent: One-click deployment of 144 AI employees"><span class="title">Agency-Agent: One-click deployment of 144 AI employees</span><span class="excerpt">One-click deployment of 144 AI employees. I took a look at its docs, and only now do I sort of get it. The claim that...</span></a><a class="item" href="&#x2F;en&#x2F;Qbserve.html" title="Qbserve: A RescueTime Alternative"><span class="title">Qbserve: A RescueTime Alternative</span><span class="excerpt">RescueTime gradually stopped meeting my needs: cluttered UI, delayed data, frequent false alarms. After trying Qbserv...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;opencode-goat-commandcode-config.html" title="Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header"><span class="title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span><span class="excerpt">I bought CommandCode&#39;s goat plan and wanted to use it as my main plan in opencode. The whole integration takes just t...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-go-limits.html" title="OpenCode Go plan usage estimates: see every model on one page"><span class="title">OpenCode Go plan usage estimates: see every model on one page</span><span class="excerpt">OpenCode Go&#39;s monthly allowance is spread across several tables, and the official &quot;5-hour quota&quot; chart doesn&#39;t list a...</span></a><a class="item" href="&#x2F;en&#x2F;llamaIndex-summaryindex-mechanism.html" title="How LlamaIndex&#39;s SummaryIndex Works"><span class="title">How LlamaIndex&#39;s SummaryIndex Works</span><span class="excerpt">&#96;SummaryIndex&#96; is a powerful tool in LlamaIndex for handling global questions. Its core mechanism is to **pass the co...</span></a><a class="item" href="&#x2F;en&#x2F;no-more-fomo-dsh-qwen38.html" title="Neither DeepSeek Harness nor Qwen3.8 is a must-have for me"><span class="title">Neither DeepSeek Harness nor Qwen3.8 is a must-have for me</span><span class="excerpt">DeepSeek Harness got a lot of people excited, but I used it once and didn&#39;t keep going; Qwen3.8 27B&#39;s capabilities ha...</span></a><a class="item" href="&#x2F;en&#x2F;Qbserve.html" title="Qbserve: A RescueTime Alternative"><span class="title">Qbserve: A RescueTime Alternative</span><span class="excerpt">RescueTime gradually stopped meeting my needs: cluttered UI, delayed data, frequent false alarms. After trying Qbserv...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">

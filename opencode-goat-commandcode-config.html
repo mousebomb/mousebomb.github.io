@@ -28,14 +28,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp">
 <meta property="article:published_time" content="2026-08-31T14:13:00.000Z">
-<meta property="article:modified_time" content="2026-10-15T12:13:28.442Z">
+<meta property="article:modified_time" content="2026-10-18T11:00:49.859Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="LLM">
 <meta property="article:tag" content="agent">
+<meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="配置">
 <meta property="article:tag" content="token">
-<meta property="article:tag" content="opencode">
 <meta property="article:tag" content="CommandCode">
 <meta property="article:tag" content="goat">
 <meta property="article:tag" content="Paseo">
@@ -44,7 +44,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头">
   
   
-  <meta name="keywords" content="AI,LLM,agent,配置,token,opencode,CommandCode,goat,Paseo">
+  <meta name="keywords" content="AI,LLM,agent,OpenCode,配置,token,CommandCode,goat,Paseo">
 
   <!-- feed -->
   
@@ -67,7 +67,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-31T22:13:00+08:00","dateModified":"2026-10-15T20:13:28+08:00","datePublished":"2026-08-31T22:13:00+08:00","description":"买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 /connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每个请求带 x-cmd-zdr: 1 请求头，实测也能在配置里加。","headline":"把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-goat-commandcode-config.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-goat-commandcode-config.html","keywords":"AI, LLM, agent, 配置, token, opencode, CommandCode, goat, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-31T22:13:00+08:00","dateModified":"2026-10-18T19:00:49+08:00","datePublished":"2026-08-31T22:13:00+08:00","description":"买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 /connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每个请求带 x-cmd-zdr: 1 请求头，实测也能在配置里加。","headline":"把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-goat-commandcode-config.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-goat-commandcode-config.html","keywords":"AI, LLM, agent, OpenCode, 配置, token, CommandCode, goat, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
   <script>
 (function () {
   try {
@@ -688,7 +688,7 @@ background:var(--block);color:var(--text-p1)}
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件</a>
 </div><div class="right"><span class="cap ai-label"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-08-31T14:13:00.000Z">2026-08-31</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-15T12:13:28.442Z">2026-10-15</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-08-31T14:13:00.000Z">2026-08-31</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T11:00:49.859Z">2026-10-18</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -1571,7 +1571,7 @@ ZDR ✗  xai/grok-4.6 (422)
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;opencode-goat-reasoning-variants.html" title="GOAT套餐接opencode后切换思考强度的配置"><span class="title">GOAT套餐接opencode后切换思考强度的配置</span><span class="excerpt">前一篇 goat 接入配置漏了一环：deepseek-v4-flash 等模型在 &#x2F;models 里选不了思考深度。排查发现不是 GOAT 套餐不支持，而是自定义 provider 手写模型缺 reasoning 能力声明，被 ope...</span></a><a class="item" href="&#x2F;opencode-go-limits.html" title="OpenCode Go 套餐用量估算，一个页面看全所有模型"><span class="title">OpenCode Go 套餐用量估算，一个页面看全所有模型</span><span class="excerpt">OpenCode Go 的月额度分散在好几张表格里，官方给的&quot;5小时额度&quot;图表又没列出所有模型。于是做了个图表页面，自动抓官方价格表，按官方同样的口径把每个模型的每月可用请求数算出来画成图，悬停看明细。</span></a><a class="item" href="&#x2F;AI-zhong-yi-mai-xiang.html" title="AI中医脉象测试"><span class="title">AI中医脉象测试</span></a><a class="item" href="&#x2F;agency-agent.html" title="Agency-Agent:144个AI员工一键部署"><span class="title">Agency-Agent:144个AI员工一键部署</span><span class="excerpt">144个AI员工一键部署。看了一下它的文档，我现在才大概懂了。所谓它集成了很多个 Agent，其实是因为它整个开源项目是由一个个独立的 Agent 组成的，总共已经凑了一百多个。每个文件夹下面就是一个 Agent。</span></a><a class="item" href="&#x2F;Qbserve.html" title="Qbserve-RescueTime替代方案"><span class="title">Qbserve-RescueTime替代方案</span><span class="excerpt">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;opencode-goat-reasoning-variants.html" title="GOAT套餐接opencode后切换思考强度的配置"><span class="title">GOAT套餐接opencode后切换思考强度的配置</span><span class="excerpt">前一篇 goat 接入配置漏了一环：deepseek-v4-flash 等模型在 &#x2F;models 里选不了思考深度。排查发现不是 GOAT 套餐不支持，而是自定义 provider 手写模型缺 reasoning 能力声明，被 ope...</span></a><a class="item" href="&#x2F;opencode-go-limits.html" title="OpenCode Go 套餐用量估算，一个页面看全所有模型"><span class="title">OpenCode Go 套餐用量估算，一个页面看全所有模型</span><span class="excerpt">OpenCode Go 的月额度分散在好几张表格里，官方给的&quot;5小时额度&quot;图表又没列出所有模型。于是做了个图表页面，自动抓官方价格表，按官方同样的口径把每个模型的每月可用请求数算出来画成图，悬停看明细。</span></a><a class="item" href="&#x2F;no-more-fomo-dsh-qwen38.html" title="DeepSeek Harness 和 Qwen3.8 都不是我的刚需"><span class="title">DeepSeek Harness 和 Qwen3.8 都不是我的刚需</span><span class="excerpt">DeepSeek Harness 让很多人沸腾了，我用了一次就没继续；Qwen3.8 27B 能力起飞了，我也没有本地部署。求新又求稳的取舍之下，OpenCode + Paseo + OpenViking 已经足够顺，一切没有实质、可...</span></a><a class="item" href="&#x2F;AI-zhong-yi-mai-xiang.html" title="AI中医脉象测试"><span class="title">AI中医脉象测试</span></a><a class="item" href="&#x2F;Qbserve.html" title="Qbserve-RescueTime替代方案"><span class="title">Qbserve-RescueTime替代方案</span><span class="excerpt">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
