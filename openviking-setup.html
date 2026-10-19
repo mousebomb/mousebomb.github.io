@@ -28,13 +28,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/openviking.jpg">
 <meta property="article:published_time" content="2026-08-02T04:25:00.000Z">
-<meta property="article:modified_time" content="2026-10-15T12:26:29.485Z">
+<meta property="article:modified_time" content="2026-10-19T04:16:26.661Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="MCP">
 <meta property="article:tag" content="火山引擎">
 <meta property="article:tag" content="Hermes">
 <meta property="article:tag" content="记忆系统">
 <meta property="article:tag" content="OpenCode">
+<meta property="article:tag" content="Paseo">
 <meta property="article:tag" content="OpenViking">
 <meta property="article:tag" content="uv">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +43,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="接入 OpenViking，统一 OpenCode 和 Hermes 的记忆">
   
   
-  <meta name="keywords" content="MCP,火山引擎,Hermes,记忆系统,OpenCode,OpenViking,uv">
+  <meta name="keywords" content="MCP,火山引擎,Hermes,记忆系统,OpenCode,Paseo,OpenViking,uv">
 
   <!-- feed -->
   
@@ -65,7 +66,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-02T12:25:00+08:00","dateModified":"2026-10-15T20:26:29+08:00","datePublished":"2026-08-02T12:25:00+08:00","description":"每天零散布置给 OpenCode 各种任务，晚上想一句话就让它复盘总结。但之前 OpenCode 的记忆和 Hermes 的记忆各存各的，没法统一。用 uv 装好 OpenViking，踩了两个坑（httpx[socks]、mcp 2.0 破坏性升级），最后把 OpenCode 和 Hermes 的记忆打通，实现全自动归档与复盘。","headline":"接入 OpenViking，统一 OpenCode 和 Hermes 的记忆","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/openviking-setup.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/openviking-setup.html","keywords":"MCP, 火山引擎, Hermes, 记忆系统, OpenCode, OpenViking, uv","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/openviking.jpg","image":["https://cdn.mousebomb.org/blog/auto/openviking.jpg"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-02T12:25:00+08:00","dateModified":"2026-10-19T12:16:26+08:00","datePublished":"2026-08-02T12:25:00+08:00","description":"每天零散布置给 OpenCode 各种任务，晚上想一句话就让它复盘总结。但之前 OpenCode 的记忆和 Hermes 的记忆各存各的，没法统一。用 uv 装好 OpenViking，踩了两个坑（httpx[socks]、mcp 2.0 破坏性升级），最后把 OpenCode 和 Hermes 的记忆打通，实现全自动归档与复盘。","headline":"接入 OpenViking，统一 OpenCode 和 Hermes 的记忆","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/openviking-setup.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/openviking-setup.html","keywords":"MCP, 火山引擎, Hermes, 记忆系统, OpenCode, Paseo, OpenViking, uv","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/openviking.jpg","image":["https://cdn.mousebomb.org/blog/auto/openviking.jpg"]}</script>
   <script>
 (function () {
   try {
@@ -339,6 +340,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Paseo的插件目录</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/trae-signed-commit-as-claude.html" title="TRAE 替我提交代码，怎么署名成了 Claude？">
@@ -646,24 +665,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/trae-solo-shi-yong-ji-lu.html" title="TRAE SOLO 独立版使用记录">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">TRAE SOLO 独立版使用记录</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -686,7 +687,7 @@ background:var(--block);color:var(--text-p1)}
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件</a>
 </div><div class="right"><span class="cap ai-label"><svg class="icon" data-icon="default:shield-up" aria-hidden="true"></svg>已 AI 润色</span></div></div><div class="meta-row">
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-08-02T04:25:00.000Z">2026-08-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-15T12:26:29.485Z">2026-10-15</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-08-02T04:25:00.000Z">2026-08-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-19T04:16:26.661Z">2026-10-19</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -1046,7 +1047,7 @@ hermes memory status
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;hermes-agent-vs-openclaw.html" title="Hermes Agent 官方文档解读 vs OpenClaw"><span class="title">Hermes Agent 官方文档解读 vs OpenClaw</span><span class="excerpt">Hermes Agent 是 Nous Research 开发的白学元 AI Agent，MIT 协议。核心定位差异：OpenClaw &#x3D; 本地优先的 Agent 编排框架，Hermes &#x3D; 自进化个人操作者</span></a><a class="item" href="&#x2F;paseo.html" title="神器Paseo，打通多家编程智能体"><span class="title">神器Paseo，打通多家编程智能体</span><span class="excerpt">Paseo 真的很好用，我最近每天都在用他搭配OpenCode写代码和文章。</span></a><a class="item" href="&#x2F;chrome-devtools-mcp-remote-debugging.html" title="macOS Chrome Remote Debugging 配置"><span class="title">macOS Chrome Remote Debugging 配置</span><span class="excerpt">macOS 上 Chrome remote debugging 需在 chrome:&#x2F;&#x2F;inspect&#x2F;#remote-debugging 手动勾选开启，而非依赖命令行参数</span></a><a class="item" href="&#x2F;hermes-agent.html" title="从龙虾到 Hermes"><span class="title">从龙虾到 Hermes</span><span class="excerpt">hermes比起龙虾的优点有： 模型报错会输出到控制台。网关有日志可查，关键是我知道在哪里查。文档完善，虽然没翻译中文，但是人家文档全啊，任何问题、命令都能找到明确文档。各个智能体独立一套自己的profile配置和网关，组合更灵活，b...</span></a><a class="item" href="&#x2F;Qbserve.html" title="Qbserve-RescueTime替代方案"><span class="title">Qbserve-RescueTime替代方案</span><span class="excerpt">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;hermes-agent-vs-openclaw.html" title="Hermes Agent 官方文档解读 vs OpenClaw"><span class="title">Hermes Agent 官方文档解读 vs OpenClaw</span><span class="excerpt">Hermes Agent 是 Nous Research 开发的白学元 AI Agent，MIT 协议。核心定位差异：OpenClaw &#x3D; 本地优先的 Agent 编排框架，Hermes &#x3D; 自进化个人操作者</span></a><a class="item" href="&#x2F;paseo.html" title="神器Paseo，打通多家编程智能体"><span class="title">神器Paseo，打通多家编程智能体</span><span class="excerpt">Paseo 真的很好用，我最近每天都在用他搭配OpenCode写代码和文章。</span></a><a class="item" href="&#x2F;paseo-plugins.html" title="Paseo的插件目录"><span class="title">Paseo的插件目录</span><span class="excerpt">我平时主力用 Paseo + OpenCode + OpenViking，最近 Paseo 官方也上了插件目录，现在既有社区的 paseo.cafe 又有了官方的 paseo.sh&#x2F;plugins。我之前为了眼睛舒服，移植的solar...</span></a><a class="item" href="&#x2F;opencode-goat-commandcode-config.html" title="把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头"><span class="title">把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头</span><span class="excerpt">买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 &#x2F;connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每...</span></a><a class="item" href="&#x2F;Qbserve.html" title="Qbserve-RescueTime替代方案"><span class="title">Qbserve-RescueTime替代方案</span><span class="excerpt">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</span></a></div></section></div>
 
 
   <div class="ai-anno-post-group">
@@ -1107,6 +1108,8 @@ hermes memory status
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right" data-ui-surface="sidebar"><div class="widgets">
 <widget class="widget-wrapper slide-up user-card ghuser"><div class="widget-body"><div class="avatar"><img no-lazy type="img" src="https://cdn.mousebomb.org/blog/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><p class="username" ff="title">鼠标炸弹</p><p class="bio"><span class="l" style="display:block">独立开发者 · 深圳</span><span class="l" style="display:block;margin-top:.5em">16 年游戏/软件开发老兵</span><span class="l" style="display:block;margin-top:.5em">用全栈+AI 打造产品与工具</span><span class="l" style="display:block;margin-top:.5em">曾独立上线过的游戏下载量累计破亿</span></p><a class="follow" target="_blank" rel="noopener" href="https://github.com/mousebomb"><svg class="icon" data-icon="github:logo" aria-hidden="true"></svg>关注</a></div></widget>
+
+
 
 
 <widget class="widget-wrapper link-list-widget">
