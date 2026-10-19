@@ -230,6 +230,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -336,6 +342,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -643,24 +667,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -682,7 +688,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">2097 字 · 预计阅读 7 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2008-05-21T03:18:57.000Z">2008-05-21</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2008-05-21T03:18:57.000Z">2008-05-21</time></span></div>
 </div></div>
     
@@ -771,6 +777,9 @@ background:var(--block);color:var(--text-p1)}
 <p>[可选] 这个设置可以让AIR应用程序在安装后在系统种关联文件格式.如果已被其他程序关联了某种你要关联的格式,你可以覆盖掉这个关联:运行时使用NativeApplication.setAsDefaultApplication()方法.不过最好先得到用户的同意哦.</p>
 <p>注意: NativeApplication.setAsDefaultApplication()这个方法只能关联在fileTypes中声明的格式. 参见<a target="_blank" rel="noopener" href="http://livedocs.adobe.com/air/1/devappsflash/runtime_os_info_1.html#1036812">http://livedocs.adobe.com/air/1/devappsflash/runtime_os_info_1.html#1036812</a>(管理文件关联)  <a target="_blank" rel="noopener" href="http://livedocs.adobe.com/air/1/devappsflash/app_launch_1.html#1038002">http://livedocs.adobe.com/air/1/devappsflash/app_launch_1.html#1038002</a>(捕捉命令行参数)</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a><a class="tag" href="/tags/air/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>air</a><a class="tag" href="/tags/flex/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flex</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -793,8 +802,8 @@ background:var(--block);color:var(--text-p1)}
 
 获取特定目录，包括用户目录、用户文档目录、该应用程序启动的目录和程序目录
 拷贝文件和目录
-移动文件和目录...</span></a><a class="item" href="&#x2F;air-file-operation3.html" title="AIR文件操作(三):使用FileStream对象读写文件"><span class="title">AIR文件操作(三):使用FileStream对象读写文件</span><span class="excerpt">快速上手例:例1.读xml var testXML:XML; var file:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.xml”); v...</span></a><a class="item" href="&#x2F;air-file-relation.html" title="AIR管理文件关联"><span class="title">AIR管理文件关联</span><span class="excerpt">对于文件关联管理，air中的flash.desktop.NativeApplication类提供了4个方法：
-isSetAsDefaultApplication(extension:String):Boolean 返回当前AIR应用程...</span></a><a class="item" href="&#x2F;2011-3-27天地行北京站.html" title="2011.3.27天地行北京站"><span class="title">2011.3.27天地行北京站</span><span class="excerpt">最新活动2011RIA天地行北京城市精英论坛
+移动文件和目录...</span></a><a class="item" href="&#x2F;air-file-relation.html" title="AIR管理文件关联"><span class="title">AIR管理文件关联</span><span class="excerpt">对于文件关联管理，air中的flash.desktop.NativeApplication类提供了4个方法：
+isSetAsDefaultApplication(extension:String):Boolean 返回当前AIR应用程...</span></a><a class="item" href="&#x2F;air-file-operation3.html" title="AIR文件操作(三):使用FileStream对象读写文件"><span class="title">AIR文件操作(三):使用FileStream对象读写文件</span><span class="excerpt">快速上手例:例1.读xml var testXML:XML; var file:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.xml”); v...</span></a><a class="item" href="&#x2F;2011-3-27天地行北京站.html" title="2011.3.27天地行北京站"><span class="title">2011.3.27天地行北京站</span><span class="excerpt">最新活动2011RIA天地行北京城市精英论坛
 **活动时间：**2011.3.27
 **报名时间：**2011.3.7-2011.3.25
 **活动规模：**300人以上

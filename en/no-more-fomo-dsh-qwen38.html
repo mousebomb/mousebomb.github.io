@@ -231,6 +231,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -337,6 +343,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -644,24 +668,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -683,7 +689,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/AI/">AI</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">320 words · 2 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2026-08-23T14:10:00.000Z">2026-08-23</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2026-10-18T11:00:54.403Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -706,6 +712,9 @@ background:var(--block);color:var(--text-p1)}
 <p>The reason:<br>My local compute could run it, but after using local setups straight through last year and the year before, I’m burned out on it.<br>opencode go is still simple and blunt, generous with quota — the time I’d spend fiddling with a local deployment is better spent just using MaaS.<br>Running Qwen-embedding 0.6B locally in Ollama to do embeddings for OpenViking suits me just fine.</p>
 <p>Reject FOMO. Any shiny new thing that doesn’t give me real, controllable, stable help is just noise.</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/en/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/en/tags/DeepSeek/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>DeepSeek</a><a class="tag" href="/en/tags/qwen/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>qwen</a><a class="tag" href="/en/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>
@@ -723,7 +732,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;llm-local-sheishiwodi-1.html" title="Playing “Who&#39;s the Spy” locally with an LLM"><span class="title">Playing “Who&#39;s the Spy” locally with an LLM</span><span class="excerpt">It&#39;s Chinese New Year, and everyone is talking about DeepSeek. Laurel wants to play &quot;Who&#39;s the Spy&quot; but can never rou...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-go-limits.html" title="OpenCode Go plan usage estimates: see every model on one page"><span class="title">OpenCode Go plan usage estimates: see every model on one page</span><span class="excerpt">OpenCode Go&#39;s monthly allowance is spread across several tables, and the official &quot;5-hour quota&quot; chart doesn&#39;t list a...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-goat-commandcode-config.html" title="Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header"><span class="title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span><span class="excerpt">I bought CommandCode&#39;s goat plan and wanted to use it as my main plan in opencode. The whole integration takes just t...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-goat-reasoning-variants.html" title="Configuring thinking-effort switching after hooking the GOAT plan up to opencode"><span class="title">Configuring thinking-effort switching after hooking the GOAT plan up to opencode</span><span class="excerpt">The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn&#39;t pick a thinking depth in...</span></a><a class="item" href="&#x2F;en&#x2F;MSA-MemorySparseAttention.html" title="MSA (Memory Sparse Attention) — an open-source way to break through the AI memory bottleneck"><span class="title">MSA (Memory Sparse Attention) — an open-source way to break through the AI memory bottleneck</span><span class="excerpt">Instead of bolting on retrieval, MSA embeds memory directly into the attention mechanism itself. That gives you end-t...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;llm-local-sheishiwodi-1.html" title="Playing “Who&#39;s the Spy” locally with an LLM"><span class="title">Playing “Who&#39;s the Spy” locally with an LLM</span><span class="excerpt">It&#39;s Chinese New Year, and everyone is talking about DeepSeek. Laurel wants to play &quot;Who&#39;s the Spy&quot; but can never rou...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-go-limits.html" title="OpenCode Go plan usage estimates: see every model on one page"><span class="title">OpenCode Go plan usage estimates: see every model on one page</span><span class="excerpt">OpenCode Go&#39;s monthly allowance is spread across several tables, and the official &quot;5-hour quota&quot; chart doesn&#39;t list a...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-goat-reasoning-variants.html" title="Configuring thinking-effort switching after hooking the GOAT plan up to opencode"><span class="title">Configuring thinking-effort switching after hooking the GOAT plan up to opencode</span><span class="excerpt">The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn&#39;t pick a thinking depth in...</span></a><a class="item" href="&#x2F;en&#x2F;opencode-goat-commandcode-config.html" title="Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header"><span class="title">Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header</span><span class="excerpt">I bought CommandCode&#39;s goat plan and wanted to use it as my main plan in opencode. The whole integration takes just t...</span></a><a class="item" href="&#x2F;en&#x2F;MSA-MemorySparseAttention.html" title="MSA (Memory Sparse Attention) — an open-source way to break through the AI memory bottleneck"><span class="title">MSA (Memory Sparse Attention) — an open-source way to break through the AI memory bottleneck</span><span class="excerpt">Instead of bolting on retrieval, MSA embeds memory directly into the attention mechanism itself. That gives you end-t...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">

@@ -7,7 +7,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-10-19T06:31:02.933Z</updated>
+  <updated>2026-10-19T10:16:24.303Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -16,6 +16,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  
+  
+  <entry>
+    <title>升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</title>
+    <link href="https://flashj.cn/opencode-notifier-v2-delivery-silent.html"/>
+    <id>https://flashj.cn/opencode-notifier-v2-delivery-silent.html</id>
+    <published>2026-10-19T10:10:00.000Z</published>
+    <updated>2026-10-19T10:16:24.303Z</updated>
+    
+    
+    <content type="html"><![CDATA[<p>我用 <code>@mohak34/opencode-notifier</code> 挺久了。它干的事很朴素：权限询问、任务完成、出错、弹 question 的时候，各放一段提示音。四个事件各配了一个自定义 wav，长时间跑任务的时候不用盯着屏幕，听声就知道该回来处理了。</p><p>10 月 1 号我把 OpenCode 从 v1 迁到 v2，配置仓库里那天的提交就叫 <code>migrate v1 - v2</code>。从那以后<strong>声音没了</strong>，一拖就是两周多，今天才把源码翻了一遍。</p><h2 id="先交代我的用法"><a href="#先交代我的用法" class="headerlink" title="先交代我的用法"></a>先交代我的用法</h2><p>这个问题的前提必须先说清楚：<strong>我不是在终端里跑 opencode 的 TUI</strong>。</p><p>我的日常是 Paseo 当外壳——Paseo 启动本机的 <code>opencode serve</code>，我在 Paseo 的界面里跟 OpenCode 对话，看它跑工具、改文件、开子 agent。OpenCode 对我来说是一个被托管的服务端进程，人机界面是 Paseo 的客户端，不是那个全屏终端界面。</p><p>这个用法本身挺舒服的：会话、任务、子 agent 都在一个窗口里，不用开一堆终端标签。但它恰好踩中了这次的坑——<strong>V2 的提示音只挂在一条我没走的路径上</strong>。所以下面这套排查，对纯 TUI 用户可能完全不成立。</p><h2 id="症状：插件明明加载了"><a href="#症状：插件明明加载了" class="headerlink" title="症状：插件明明加载了"></a>症状：插件明明加载了</h2><p>先做排除法：</p><ul><li>进程正常，<code>opencode serve</code> 在跑</li><li>日志里 <code>loading plugin id=@mohak34/opencode-notifier@latest</code> 明明白白</li><li>系统音量 38，没静音；手工 <code>afplay</code> 播 wav 退出码 0</li></ul><p>所以不是音频的问题，也不是插件没装上的问题。更细的一条线索是 <code>~/.config/opencode/opencode-notifier-state.json</code>：</p><pre><code class="language-json">{"turn":38177}</code></pre><p>这个 <code>turn</code> 是插件的事件计数器，每处理一次事件就 +1。它的 mtime 停在 <strong>10 月 6 号</strong>——也就是说那天之后，插件就再没走到过发声逻辑。</p><h2 id="原因：V2-把发声挪去了另一个进程"><a href="#原因：V2-把发声挪去了另一个进程" class="headerlink" title="原因：V2 把发声挪去了另一个进程"></a>原因：V2 把发声挪去了另一个进程</h2><p>0.6.0 这个版本同时带了 V1 和 V2 两套实现，用 <code>package.json</code> 的 exports 分开：</p><pre><code class="language-json">"exports": {  ".":     { "import": "./dist/index.js" },   // V2 server 端  "./tui": { "import": "./dist/tui.js" }      // 交互式终端组件}</code></pre><p><code>dist/index.js</code> 里的 V2 入口长这样：</p><pre><code class="language-js">function setupV2(ctx) {  const notifier = createV2Notifier(ctx, ctx.location, "command"); // ← 关键  ...}</code></pre><p>第三个参数是 delivery 模式，传的是 <code>"command"</code>。进到 <code>createNotifier</code> 里，这个模式会把配置整个改造一遍：</p><pre><code class="language-js">if (delivery === "command") {  local.suppressWhenFocused = false;  for (const event of Object.values(local.events)) {    event.notification = false;   // 弹窗关    event.sound = false;          // 声音关    event.bell = false;           // 铃关  }}</code></pre><p>而且 <code>notify()</code> 第一道闸就会 return：</p><pre><code class="language-js">if (delivery === "command" &amp;&amp; (!current.command.enabled || !current.command.path || !current.events[event].command)) return;</code></pre><p><code>command.enabled</code> 默认是 <code>false</code>，我的配置里也没配 command 块——于是<strong>每个事件都在第一行被静默丢弃</strong>，turn 计数自然不动。</p><p>那声音去哪了？在 <code>dist/tui.js</code> 里：</p><pre><code class="language-js">let notifier = createV2Notifier(ctx.client, location, "terminal");</code></pre><p>两条通道是互补的：</p><div class="md-table-scroll"><table><thead><tr><th>通道</th><th>本地声音/弹窗</th><th>自定义 command</th></tr></thead><tbody><tr><td>server（<code>opencode serve</code>）</td><td>强制关</td><td><strong>执行</strong></td></tr><tr><td>TUI 终端组件</td><td>执行</td><td>强制关</td></tr></tbody></table></div><p>回到开头说的用法：我只跑 <code>opencode serve</code>，机器上根本没有 TUI 进程。而官方 README 写得很清楚：<code>opencode run</code>、Desktop/Web 客户端都不加载这个终端组件。于是两边都不发声。</p><p>说白了这不是 bug，是 V2 的架构选择：远程 server 的情况下，声音应该在你面前的终端响，而不是在服务器上响。代价就是 headless 用户默认哑掉。</p><h2 id="解法：用-server-端唯一留下的出口"><a href="#解法：用-server-端唯一留下的出口" class="headerlink" title="解法：用 server 端唯一留下的出口"></a>解法：用 server 端唯一留下的出口</h2><p>server 端虽然关掉了声音和弹窗，但<strong>保留并执行自定义 command</strong>。那就让它调 <code>afplay</code> 好了。链路变成：</p><pre><code>opencode 事件 → notifier setup() → notify() → spawn 命令 → notify-sound.sh → afplay</code></pre><p>配置 <code>~/.config/opencode/opencode-notifier.json</code>：</p><pre><code class="language-json">{  "sound": false,  "notification": false,  "bell": false,  "suppressWhenFocused": false,  "command": {    "enabled": true,    "path": "/Users/rhett/.config/opencode/notify-sound.sh",    "args": ["{event}"]  },  "events": {    "permission":        { "command": true },    "complete":          { "command": true },    "subagent_complete": { "command": false },    "error":             { "command": true },    "question":          { "command": true }  }}</code></pre><p>脚本 <code>~/.config/opencode/notify-sound.sh</code>（记得 <code>chmod +x</code>）：</p><pre><code class="language-bash">#!/bin/bash# 用法: notify-sound.sh &lt;event&gt;SOUND_DIR="/Users/rhett/MyWork/2026/VoiceBox-use/generated"case "$1" in  permission)        file="kafka-permission.wav" ;;  complete)          file="kafka-complete.wav" ;;  error|interrupted) file="kafka-error.wav" ;;  question)          file="kafka-question.wav" ;;  *)                 exit 0 ;;   # 其余事件不发声esacexec /usr/bin/afplay -v 1 "$SOUND_DIR/$file"</code></pre><p>为什么把 <code>sound</code> 和 <code>notification</code> 全局设成 <code>false</code>？因为我只有这一条链路在发声。留着 TUI 那边的声音，将来哪天真在终端里跑 TUI，就会<strong>双响</strong>——同一件事响两遍。干脆把插件的原生音频全关，声音只从脚本这一个出口出。</p><h2 id="几个踩到的细节"><a href="#几个踩到的细节" class="headerlink" title="几个踩到的细节"></a>几个踩到的细节</h2><p><strong>事件级的 <code>sound</code> 会覆盖全局。</strong> 我原来配置里每个事件都写了 <code>"sound": true</code>，只改全局是没用的，得把事件级的也删掉或改成 false。</p><p><strong>不用重启 opencode。</strong> <code>notify()</code> 每次事件都会重读 <code>opencode-notifier.json</code>，改完下一个事件就生效。这个设计挺舒服。</p><p><strong><code>turn</code> 计数器是最好的探针。</strong> 数字不涨，就说明根本没走到发声逻辑，别在音频层瞎找。修复后它从 38177 一路涨到 38179。</p><p><strong>顺手修了三个过时键名。</strong> 配置里写的 <code>showprojectname</code>、<code>showsessiontitle</code>、<code>showicon</code> 全是小写，0.6.0 认的是驼峰 <code>showProjectName</code> / <code>showSessionTitle</code> / <code>showIcon</code>，未知键直接被忽略——不影响声音，但通知标题里的项目名一直是空的。</p><p><strong>桌面弹窗在 Paseo 下拿不到。</strong> 通知后端和声音在同一批被强制关掉的字段里。我本来也不需要弹窗，只要声音提醒，就没继续折腾。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这类问题的恶心之处在于：所有表层指标都是绿的——进程在、插件加载了、音量正常、wav 能播。真正的原因藏在第三层：一个我从未显式设置过的默认参数（<code>delivery</code>）决定了整条链路的行为。</p><p>以后再遇到“配置没错但就是不生效”，我的第一反应会改成：<strong>先找一个能证明代码真的执行到了这里的副作用</strong>。这次就是那个 <code>turn</code> 计数器——它比日志诚实多了。</p>]]></content>
+    
+    
+    <summary type="html">我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也正常。翻了 0.6.0 的源码才明白——V2 的 server 端把 delivery 硬编码成 &quot;command&quot;，声音弹窗全被强制关掉，只留一个自定义命令的出口，而声音被挪去了我根本不加载的 TUI 组件。</summary>
+    
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
+    
+    <category term="插件" scheme="https://flashj.cn/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+    <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
+    
+  </entry>
   
   
   
@@ -37,6 +69,8 @@
     <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
     
+    <category term="主题" scheme="https://flashj.cn/tags/%E4%B8%BB%E9%A2%98/"/>
+    
     <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
@@ -46,8 +80,6 @@
     <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
     
     <category term="OpenViking" scheme="https://flashj.cn/tags/OpenViking/"/>
-    
-    <category term="主题" scheme="https://flashj.cn/tags/%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
@@ -357,11 +389,11 @@
     <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
     
+    <category term="主题" scheme="https://flashj.cn/tags/%E4%B8%BB%E9%A2%98/"/>
+    
     <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
-    
-    <category term="主题" scheme="https://flashj.cn/tags/%E4%B8%BB%E9%A2%98/"/>
     
     <category term="Solarized" scheme="https://flashj.cn/tags/Solarized/"/>
     
@@ -666,42 +698,6 @@
     <category term="Trae" scheme="https://flashj.cn/tags/Trae/"/>
     
     <category term="远程控制" scheme="https://flashj.cn/tags/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/"/>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>解决 coreaudiod 内存占用高达 45G 的问题</title>
-    <link href="https://flashj.cn/coreaudiod-memory-leak-from-claude-code-hook.html"/>
-    <id>https://flashj.cn/coreaudiod-memory-leak-from-claude-code-hook.html</id>
-    <published>2026-05-06T04:05:00.000Z</published>
-    <updated>2026-10-18T11:00:48.710Z</updated>
-    
-    
-    <content type="html"><![CDATA[<p>奇怪的coreaudiod内存占用<br>11:50～12:00</p><p>我的 coreaudiod 进程已经占用了 45 个 G 的内存，我怀疑是命令行里面溢出了。</p><p>现在我非常怀疑是 CC 里面的这个声音播报占用的。</p><p><img src="https://cdn.mousebomb.org/blog/auto/202605062110846.webp"></p><p>果然在帖子 <a href="https://www.reddit.com/r/ClaudeCode/comments/1n9wth1/why_does_running_claude_code_often_use_2040gb_of/">https://www.reddit.com/r/ClaudeCode/comments/1n9wth1/why_does_running_claude_code_often_use_2040gb_of/</a> 里也看到，有人加了hook播放音效，导致coreaudiod内存泄露。</p><p>我现在需要把 Claude 的 hook 给去掉，然后就直接用我终端本身的音效来设置一下。</p><p>我的终端用的是 Ghosty，我得查一查。</p><h3 id="先卸载peonping"><a href="#先卸载peonping" class="headerlink" title="先卸载peonping:"></a>先卸载peonping:</h3><pre><code class="language-sh">brew uninstall PeonPing/tap/peon-ping</code></pre><p>保留了之前下载的音效包 <code>/Users/rhett/.openpeon/packs/*</code></p><h3 id="再根据ghostty文档重新配置："><a href="#再根据ghostty文档重新配置：" class="headerlink" title="再根据ghostty文档重新配置："></a>再根据<a href="https://ghostty.org/docs/config/reference#notify-on-command-finish-after">ghostty文档</a>重新配置：</h3><pre><code class="language-ini">theme = Solarized Darculanotify-on-command-finish = alwaysnotify-on-command-finish-action = notify,bellnotify-on-command-finish-after = 1s# 启用自定义音频 bell（必须 1.3.0+）bell-features = audio,system,border,title# 自定义音效路径（推荐先用系统自带，后面再换自己的）# 格式：aiff/wav/mp3 均可bell-audio-path = /Users/rhett/.openpeon/packs/ccg_china_dozer/sounds/Building_is_complete.mp3bell-audio-volume = 1.0</code></pre><p>并且配置了.claude&#x2F;settings.json ，hooks只保留写死的两条afplay：</p><pre><code class="language-json">  &quot;hooks&quot;: &#123;    &quot;PermissionRequest&quot;: [      &#123;        &quot;matcher&quot;: &quot;*&quot;,        &quot;hooks&quot;: [          &#123;            &quot;type&quot;: &quot;command&quot;,            &quot;command&quot;: &quot;afplay /Users/rhett/.openpeon/packs/mambo_pack/sounds/review_this.mp3&quot;          &#125;        ]      &#125;    ],    &quot;Stop&quot;: [      &#123;        &quot;matcher&quot;: &quot;*&quot;,        &quot;hooks&quot;: [          &#123;            &quot;type&quot;: &quot;command&quot;,            &quot;command&quot;: &quot;afplay /Users/rhett/.openpeon/packs/mambo_pack/sounds/done.mp3&quot;          &#125;        ]      &#125;    ]  &#125;,</code></pre>]]></content>
-    
-    
-    <summary type="html">coreaudiod 进程占用45G内存，排查发现是 Claude Code 的 hook 播放音效导致的内存泄露，通过卸载 PeonPing 并改用 Ghostty 终端原生音效解决。</summary>
-    
-    
-    
-    <category term="工具软件" scheme="https://flashj.cn/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="Claude Code" scheme="https://flashj.cn/tags/Claude-Code/"/>
-    
-    <category term="macOS" scheme="https://flashj.cn/tags/macOS/"/>
-    
-    <category term="peon-ping" scheme="https://flashj.cn/tags/peon-ping/"/>
-    
-    <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="终端" scheme="https://flashj.cn/tags/%E7%BB%88%E7%AB%AF/"/>
-    
-    <category term="Ghostty" scheme="https://flashj.cn/tags/Ghostty/"/>
-    
-    <category term="内存泄露" scheme="https://flashj.cn/tags/%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   

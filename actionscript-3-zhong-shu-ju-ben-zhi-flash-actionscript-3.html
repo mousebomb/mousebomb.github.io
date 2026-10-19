@@ -230,6 +230,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -333,6 +339,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -640,24 +664,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -679,7 +685,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1021 字 · 预计阅读 4 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2007-10-12T03:04:22.000Z">2007-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.979Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -700,6 +706,9 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>值类型和引用类型的区别</strong>在C＃中，数据类型分为<strong>值类型</strong>和<strong>引用类型</strong>。值类型直接存储值；而<strong>引用</strong>类型存储<strong>引用</strong>，指向要操作的对象。C＃中的值类型正好对应于ActionScript 3中的基本数据类型，C＃中的<strong>引用</strong>类型正好对应于ActionScript 3中的复杂数据类型。<br>ActionScript 3中基本类型只有Boolean、int、Number、String和uint。只有这几种属于值类型，其余数据类型都是<strong>引用</strong>类型。<br>另外，有一个典型的特征：值类型的数据不用new的关键字来创建：必须使用new的关键字创建的一定不是值类型。<br>黑羽举了个例子：<br><strong>var</strong> a:Array&#x3D;<strong>new</strong> Array(1,2,3);<br><strong>var</strong> b:Array&#x3D;a;<br>b[0]&#x3D;4;<br><strong>trace</strong>(<strong>“a<strong><strong>现在的值是：</strong></strong>“</strong> + a);<br><strong>trace</strong>(<strong>“b<strong><strong>现在的值是：</strong></strong>“</strong> + b);<br>*&#x2F;&#x2F;<strong>输出结果：*<br>*&#x2F;&#x2F;a</strong>现在的值是：<strong>4,2,3*<br>*&#x2F;&#x2F;b</strong>现在的值是：<strong>4,2,3</strong>*可以看出，由于Array是<strong>引用</strong>类型，所以改变b的值会影响到a的值。</p>
 <p><strong>不变对象</strong><br>值类型数据和<strong>引用</strong>类型数据的操作有着很大的不同。但是，这两种数据类型的变量持有的都是<strong>引用</strong>。既然是<strong>引用</strong>，就都是指向对象的。<br>ActionScript 3中的值类型本质上仍然是对象，那么，即使是值类型变量，存储的仍然是<strong>引用</strong>，而不是直接持有值。但是，值类型是一种特殊的对象，叫做<strong>不变对象</strong>** <strong><strong>（immutable object</strong></strong>）<strong>。正是这种对象的特殊行为导致了我们对值类型的使用方式和</strong>引用<strong>类型并不相同。<br><strong>不变对象</strong>，一旦被建立后，就不能再被更改。一旦虚拟机发现指向一个</strong>不变对象<strong>的</strong>引用<strong>要改变该</strong>不变对象<strong>的值，就会另行创建一个新的</strong>不变对象<strong>来接受新的值，将变量持有的</strong>引用<strong>指向新创建的</strong>不变对象**，而之前指向的<strong>不变对象</strong>由于它不再被使用，会被虚拟机自动回收。<br>为什么要设计出<strong>不变对象</strong>，而不采用直接存值的方式呢？一方面，将<strong>基元数据类型</strong>用<strong>不变对象</strong>的方式实现，使得<strong>引用</strong>的效率和传值一样高。另一方面，由于变量持有的是<strong>引用</strong>，而不是直接持有值，导致<strong>不变对象</strong>可以被重复<strong>引用</strong>，对内存的使用率会大大提高。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a><a class="tag" href="/tags/as/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as</a><a class="tag" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>学习笔记</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

@@ -235,6 +235,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -341,6 +347,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -648,24 +672,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -687,7 +693,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1466 words · 5 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2008-06-04T06:02:28.000Z">2008-06-04</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2008-06-04T06:02:28.000Z">2008-06-04</time></span></div>
 </div></div>
     
@@ -731,6 +737,9 @@ background:var(--block);color:var(--text-p1)}
 </ol>
 <p>When a read&#x2F;write operation is performed, the value of position immediately increases by the number of bytes read&#x2F;written, and the next read&#x2F;write operation starts from the new position: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.open(myFile, FileMode.UPDATE); myFileStream.position &#x3D; 4000; trace(myFileStream.position); &#x2F;&#x2F; 4000 myFileStream.writeBytes(myByteArray, 0, 200); trace(myFileStream.position); &#x2F;&#x2F; 4200 There is one <strong>exception</strong> to position: if the file is opened in append mode, the position property does not change with write operations. In append mode, data is always written to the end of the file, regardless of position. When you open a file <strong>asynchronously</strong>, a write operation hasn’t finished by the time the next line of code runs. What to do about that? No worries — you can call several asynchronous operations in sequence, and the AIR runtime executes them one after another: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.openAsync(myFile, FileMode.WRITE); myFileStream.writeUTFBytes(“hello”); myFileStream.writeUTFBytes(“world”); myFileStream.addEventListener(Event.CLOSE, closeHandler); myFileStream.close(); trace(“started.”); closeHandler(event:Event):void { trace(“finished.”); } This example outputs: started. finished. You can set the value of position immediately after calling an asynchronous read&#x2F;write operation, and the next read&#x2F;write will start from that position instead. For example: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.openAsync(myFile, FileMode.UPDATE); myFileStream.position &#x3D; 4000; trace(myFileStream.position); &#x2F;&#x2F; 4000 myFileStream.writeBytes(myByteArray, 0, 200); myFileStream.position &#x3D; 300; trace(myFileStream.position); &#x2F;&#x2F; 300 3. <strong>Choose the right read&#x2F;write operation for your data format</strong> Every file on disk is a collection of bytes. In AS, the data in a file can always be described as a ByteArray. For example, the code below reads the file data into a ByteArray called bytes: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ); var bytes:ByteArray &#x3D; new ByteArray(); function completeHandler(event:Event):void { myFileStream.readBytes(bytes, 0, myFileStream.bytesAvailable); } The code below writes the data from the bytes ByteArray into a file: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.open(myFile, FileMode.WRITE); myFileStream.writeBytes(bytes, 0, bytes.length); Often we don’t want to deal with the data as a ByteArray; sometimes the file we’re handling has a specific format, for example the data in the file is a string. So the FileStream class also includes read&#x2F;write methods for data formats other than ByteArray, such as the readMultiByte() method, which reads the file into a string: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ); var str:String &#x3D; “”; function completeHandler(event:Event):void { str &#x3D; myFileStream.readMultiByte(myFileStream.bytesAvailable, “iso-8859-1”); } The second parameter of readMultiByte() (in this example, “iso-8859-1”) specifies the text format that ActionScript uses to interpret the data. ActionScript supports the common character set encodings, which are listed at <a target="_blank" rel="noopener" href="http://livedocs.macromedia.com/flex/2/langref/charset-codes.html">http://livedocs.macromedia.com/flex/2/langref/charset-codes.html</a> The FileStream class also has a readUTFBytes() method, which reads data from the read buffer using the UTF-8 character set. Because UTF-8 is a variable-length encoding, the data at the end of the read buffer isn’t necessarily a complete character, so don’t use the readUTFBytes() method inside a progress event handler (the same applies when reading variable-length character encodings with readMultiByte()); instead, read the complete data set when the FileStream’s complete event fires. Likewise, there are corresponding write operations, writeMultiByte() and writeUTFBytes(), for working with string objects and text files. The readUTF() and writeUTF() methods also read and write text data, but they assume the text data is preceded by a specified text data length, which isn’t commonly used in standard text files. Some UTF-encoded text files begin with a UTF-BOM (Byte Order Mark) character, which, like the encoding format (such as UTF-16 and UTF-32), also declares the byte order. The readObject() and writeObject() methods make it easy to store and retrieve data for complex AS objects; the data is encoded as AMF (ActionScript Message Format), a format private to ActionScript. Programs other than AIR, Flash Player, Flash Media Server, and Flex Data Services have no built-in API for handling this format. There are also other read&#x2F;write operations, such as readDouble() and writeDouble(); when using them, make sure the file format you’re working with matches. File structures in general tend to be far more complex than text files. An mp3 file, for example, contains a compressed data format that can only be interpreted by an mp3 decompression&#x2F;decoding algorithm. Other files — images, databases, application archives, and so on — all have different structures, and to manipulate their data with AS you need to understand those structures thoroughly. And that brings this study note, “AIR File Operations,” to an end. All the knowledge points come from: the official documentation. (If anything in this article is incorrect, please point it out.) References: <a target="_blank" rel="noopener" href="http://livedocs.adobe.com/air/1/devappsflash/help.html?content=dg_part_6_1.html">http://livedocs.adobe.com/air/1/devappsflash/help.html?content=dg_part_6_1.html</a> <a target="_blank" rel="noopener" href="http://livedocs.macromedia.com/flex/2/langref/charset-codes.html">http://livedocs.macromedia.com/flex/2/langref/charset-codes.html</a> <a target="_blank" rel="noopener" href="http://www.adobe.com/go/learn_air_aslr">http://www.adobe.com/go/learn_air_aslr</a></p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/en/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a><a class="tag" href="/en/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/en/tags/air/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>air</a><a class="tag" href="/en/tags/flex/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flex</a><a class="tag" href="/en/tags/file/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>file</a><a class="tag" href="/en/tags/fileStream/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>fileStream</a><a class="tag" href="/en/tags/File-Operations/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>File Operations</a><a class="tag" href="/en/tags/File-System/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>File System</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>

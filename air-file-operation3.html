@@ -235,6 +235,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -341,6 +347,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -648,24 +672,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -687,7 +693,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1810 字 · 预计阅读 7 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2008-06-04T06:02:28.000Z">2008-06-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2008-06-04T06:02:28.000Z">2008-06-04</time></span></div>
 </div></div>
     
@@ -731,6 +737,9 @@ background:var(--block);color:var(--text-p1)}
 </ol>
 <p>当执行读&#x2F;写操作时，position的值会立即自增读&#x2F;写的字节数，再次执行读&#x2F;写操作时会从新的position位置开始: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.open(myFile, FileMode.UPDATE); myFileStream.position &#x3D; 4000; trace(myFileStream.position); &#x2F;&#x2F; 4000 myFileStream.writeBytes(myByteArray, 0, 200); trace(myFileStream.position); &#x2F;&#x2F; 4200 position有一个<strong>例外</strong>：若文件打开模式设置为append（追加模式），则position属性不会随着写操作变化。在追加模式下，数据总是往文件末尾写，与position无关。 <strong>异步</strong>方式打开文件，写数据操作在下一行代码执行时并没有结束。这怎么办呢？没关系，你可以按顺序的调用多个异步操作，AIR运行环境会逐个执行: var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.openAsync(myFile, FileMode.WRITE); myFileStream.writeUTFBytes(“hello”); myFileStream.writeUTFBytes(“world”); myFileStream.addEventListener(Event.CLOSE, closeHandler); myFileStream.close(); trace(“started.”); closeHandler(event:Event):void { trace(“finished.”); } 该例会输出： started. finished. 你可以在异步读写操作调用后，立即设置position的值，下次读写操作将换作从那个位置开始。比如： var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.openAsync(myFile, FileMode.UPDATE); myFileStream.position &#x3D; 4000; trace(myFileStream.position); &#x2F;&#x2F; 4000 myFileStream.writeBytes(myByteArray, 0, 200); myFileStream.position &#x3D; 300; trace(myFileStream.position); &#x2F;&#x2F; 300 3. <strong>根据数据格式，选择合适的读写操作</strong> 硬盘上的每个文件都是字节集合。在AS中，文件中的数据总是可以描述为ByteArray.比如下面的代码把文件数据读取到bytes这个ByteArray中： var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ); var bytes:ByteArray &#x3D; new ByteArray(); function completeHandler(event:Event):void { myFileStream.readBytes(bytes, 0, myFileStream.bytesAvailable); } 下面的代码把数据从bytes这个ByteArray中写入文件： var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.open(myFile, FileMode.WRITE); myFileStream.writeBytes(bytes, 0, bytes.length); 往往我们并不希望把数据作ByteArray处理，有时候要处理的文件是特定格式，比如文件中的数据是字符串。因此FileStream类也包含ByteArray以外的数据格式读写方法，比如readMultiByte()方法，可将文件读取暂存为字符串，如下代码： var myFile:File &#x3D; File.documentsDirectory.resolvePath(“Mousebomb&#x2F;test.txt”); var myFileStream:FileStream &#x3D; new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ); var str:String &#x3D; “”; function completeHandler(event:Event):void { str &#x3D; myFileStream.readMultiByte(myFileStream.bytesAvailable, “iso-8859-1”); } readMultiByte()的第二个参数（本例中为“iso-8859-1”）指定了ActionScript用来解释的文本格式。ActionScript支持通用字符集编码，具体罗列在<a target="_blank" rel="noopener" href="http://livedocs.macromedia.com/flex/2/langref/charset-codes.html">http://livedocs.macromedia.com/flex/2/langref/charset-codes.html</a> FileStream 类还具有readUTFBytes()方法，从读缓存中以UTF－8字符集读取数据。由于UTF8字符集为可变长，读缓存末尾数据并不一定是完整字符，所以不要在处理progress 事件的方法中使用readUTFBytes()方法（用readMultiByte()读取可变长字符编码也应遵循此项），而应在FileStream的complete事件发生时读取完整数据集。 同样，有类似的写操作writeMultiByte()和writeUTFBytes()，用来处理字符串对象和文本文件。 readUTF()和writeUTF()方法同样是读写文本数据，不过它们假定文本数据在指定文本数据长度之前，该文本数据是不在标准文本文件里普遍应用的。 有些UTF编码文本文件以一个UTF-BOM(Byte Order Mark)字符开头，像编码格式(如UTF16和UTF32)一样，也声明字节序。 readObject() 和writeObject()方法便于为复杂AS对象存取数据，数据作AMF(ActionScript Message Format)编码，此格式为ActionScript私有，AIR、Flash Player、Flash Media Server、Flex Data Services以外的程序都没有操作该格式的内建API。 此外还有一些读写操作，像readDouble()和writeDouble()之类的，使用它们需确保所操作文件格式与之对应。 一般的文件结构往往比文本文件要复杂的多。比如mp3文件包含只能被mp3解压解码算法解释的压缩数据格式。其他文件，像图片、数据库、应用程序档案等等都有不同的结构，要想用AS操作它们的数据，得对其结构十分了解。 至此，学习笔记《AIR文件操作》结束。所有知识点来自：官方文档。 （本文若有不当之处,敬请指出。） 参考文献：<a target="_blank" rel="noopener" href="http://livedocs.adobe.com/air/1/devappsflash/help.html?content=dg_part_6_1.html">http://livedocs.adobe.com/air/1/devappsflash/help.html?content=dg_part_6_1.html</a> <a target="_blank" rel="noopener" href="http://livedocs.macromedia.com/flex/2/langref/charset-codes.html">http://livedocs.macromedia.com/flex/2/langref/charset-codes.html</a> <a target="_blank" rel="noopener" href="http://www.adobe.com/go/learn_air_aslr">http://www.adobe.com/go/learn_air_aslr</a></p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a><a class="tag" href="/tags/air/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>air</a><a class="tag" href="/tags/flex/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flex</a><a class="tag" href="/tags/file/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>file</a><a class="tag" href="/tags/fileStream/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>fileStream</a><a class="tag" href="/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>文件操作</a><a class="tag" href="/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>文件系统</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

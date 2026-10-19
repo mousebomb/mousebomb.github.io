@@ -232,6 +232,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -338,6 +344,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -645,24 +669,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -684,7 +690,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Flash/">Flash</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/en/categories/Flash/Backend-Server/">Backend Server</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">640 words · 3 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2008-07-17T04:37:15.000Z">2008-07-17</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2008-07-17T04:37:15.000Z">2008-07-17</time></span></div>
 </div></div>
     
@@ -711,6 +717,9 @@ background:var(--block);color:var(--text-p1)}
 <p>In other words, make the encoding declaration match the file’s actual encoding—no false advertising.</p>
 <h3 id="4-The-PHP-source-file-isn’t-UTF-8-encoded—how-do-you-generate-XML-that-lets-FLASH-support-Chinese-characters-This-is-the-case-I-ran-into"><a href="#4-The-PHP-source-file-isn’t-UTF-8-encoded—how-do-you-generate-XML-that-lets-FLASH-support-Chinese-characters-This-is-the-case-I-ran-into" class="headerlink" title="4. The PHP source file isn’t UTF-8 encoded—how do you generate XML that lets FLASH support Chinese characters? This is the case I ran into:"></a>4. The PHP source file isn’t UTF-8 encoded—how do you generate XML that lets FLASH support Chinese characters? This is the case I ran into:</h3><p>The PHP is saved as ANSI, so the XML generated with DOM is naturally ANSI too. If an XML file in this encoding contains Chinese characters, it can’t be read correctly even if the declared encoding is UTF-8. Given this, for FLASH to read the XML correctly without garbled text, you must set encoding to GB2312. Yet PHP’s DOM apparently can’t write Chinese characters with GB2312 (no idea why—gurus, please enlighten me). If you do <code>new DomDocument(&#39;1.0&#39;,&#39;GB2312&#39;);</code>, saving the XML throws an error like: “output conversion failed due to conv error, bytes 0xCE 0xD2 0x5D 0x5D”. That is to say, my ANSI PHP can only generate an XML file that declares UTF-8 but is actually ANSI—and of course FLASH reads that as garbled text (see item 3). <strong>My solution</strong>: after PHP generated the XML with the UTF-8 declaration, I added one extra step: open the XML file, rewrite the header declaration, and replace UTF-8 with GB2312. Hehe—now FLASH, IE, and FF all work without errors!</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/en/tags/Garbled-Text/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Garbled Text</a><a class="tag" href="/en/tags/xml/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>xml</a><a class="tag" href="/en/tags/PHP/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>PHP</a><a class="tag" href="/en/tags/DomDocument/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>DomDocument</a><a class="tag" href="/en/tags/useCodepage/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>useCodepage</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>

@@ -228,6 +228,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -334,6 +340,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -641,24 +665,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -680,7 +686,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%99%A8/">后端服务器</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">192 字 · 预计阅读 1 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2009-09-02T11:13:45.000Z">2009-09-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2009-09-02T11:13:45.000Z">2009-09-02</time></span></div>
 </div></div>
     
@@ -697,6 +703,9 @@ background:var(--block);color:var(--text-p1)}
 <article class="md-text content slide-up"><p>刚刚在测试网站，做到flash加载图片的问题，发现加载一个不存在的文件时flash居然还有进度信息，并且到100%后不显示。 丈二和尚摸不着头脑啊，后来用firebug测了一下发现load的那个图居然返回http头是200status，而且还有文件！ 这才想起来是我设置过IIS里的404错误页导致的。</p>
 <p>这里有一个注意点：IIS里设置404错误页有两种方式指定。一种是相对URL，一种是本地文件。 如果设置URL方式，那么IIS会返回404页面，同时发200状态的头，相当于转向。 而使用文件方式，IIS才会返回404状态的头。切记切记……</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/404/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>404</a><a class="tag" href="/tags/iis/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>iis</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

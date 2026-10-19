@@ -228,6 +228,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -334,6 +340,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -641,24 +665,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -680,7 +686,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Other/">Other</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">432 words · 2 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2009-09-17T04:32:50.000Z">2009-09-17</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2009-09-17T04:32:50.000Z">2009-09-17</time></span></div>
 </div></div>
     
@@ -696,10 +702,13 @@ background:var(--block);color:var(--text-p1)}
   </div></div>
 <article class="md-text content slide-up"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.mousebomb.org/blog/personalblog/wp-content/uploads/2009/09/qqdmail.gif" alt="qqdmail" title="qqdmail"> Domain email is a personalized mail service from Tencent. If you own a domain, a few simple settings are all it takes to create mailboxes that use your domain as the email suffix. It comes with the following features: a custom account name and email logo of your choosing, up to 10 mailboxes under the same domain, and group functionality.</p>
 <span id="more"></span>
-<p>With the domain email service you can swap your QQ Mail address for one under your own domain. For example, <a href="mailto:&#52;&#48;&#53;&#x35;&#55;&#50;&#53;&#53;&#53;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;">405572555@qq.com</a> corresponds to <a href="mailto:&#109;&#x6f;&#x75;&#x73;&#101;&#98;&#111;&#x6d;&#x62;&#64;&#x66;&#x6c;&#x61;&#115;&#x68;&#x6a;&#46;&#x63;&#110;">mousebomb@flashj.cn</a>. Today I gave it a try and set up <a href="mailto:&#x6d;&#x6f;&#x75;&#115;&#101;&#x62;&#x6f;&#x6d;&#x62;&#x40;&#102;&#108;&#x61;&#x73;&#x68;&#x6a;&#46;&#99;&#x6e;">mousebomb@flashj.cn</a> along with domain mailboxes for a few friends. Process: 1. Log into your QQ Mail, go to [Settings]-[Experience Lab]-[Domain Email] and choose to activate it now. 2. Once activated, click “Try it now” to enter the domain email management page. You’ll need to verify and configure your domain. 3. Follow the prompts to upload the text file QQ Mail provides to your site, or go to your domain management platform and set up a CNAME record. 4. As prompted, add an MX record in your domain management platform — leave the host name blank and set the target host to mxdomain.qq.com. 5. Then come back to QQ Mail and click “Settings complete, submit for verification”, and you’re activated. After activation you still need to create an admin account: go to member management, where you’ll see prompts, fill in the info and you’re done. Then you can create a few more users, for example I set up a <a href="mailto:&#103;&#102;&#111;&#x78;&#64;&#102;&#108;&#97;&#115;&#x68;&#x6a;&#46;&#x63;&#x6e;">gfox@flashj.cn</a> for <a target="_blank" rel="noopener" href="http://gfox.flashj.cn/">gfox</a>. Under basic info you can upload an image as the Logo. The supported image formats are jpg and gif, and the recommended image size is 190 pixels long by 40 pixels wide.</p>
+<p>With the domain email service you can swap your QQ Mail address for one under your own domain. For example, <a href="mailto:&#x34;&#x30;&#x35;&#x35;&#x37;&#50;&#53;&#53;&#53;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;">405572555@qq.com</a> corresponds to <a href="mailto:&#109;&#111;&#x75;&#115;&#101;&#x62;&#x6f;&#x6d;&#x62;&#64;&#x66;&#x6c;&#x61;&#115;&#104;&#x6a;&#46;&#x63;&#x6e;">mousebomb@flashj.cn</a>. Today I gave it a try and set up <a href="mailto:&#x6d;&#x6f;&#x75;&#115;&#x65;&#98;&#x6f;&#109;&#x62;&#x40;&#102;&#108;&#x61;&#115;&#x68;&#106;&#46;&#99;&#x6e;">mousebomb@flashj.cn</a> along with domain mailboxes for a few friends. Process: 1. Log into your QQ Mail, go to [Settings]-[Experience Lab]-[Domain Email] and choose to activate it now. 2. Once activated, click “Try it now” to enter the domain email management page. You’ll need to verify and configure your domain. 3. Follow the prompts to upload the text file QQ Mail provides to your site, or go to your domain management platform and set up a CNAME record. 4. As prompted, add an MX record in your domain management platform — leave the host name blank and set the target host to mxdomain.qq.com. 5. Then come back to QQ Mail and click “Settings complete, submit for verification”, and you’re activated. After activation you still need to create an admin account: go to member management, where you’ll see prompts, fill in the info and you’re done. Then you can create a few more users, for example I set up a <a href="mailto:&#x67;&#102;&#x6f;&#120;&#64;&#102;&#108;&#97;&#x73;&#x68;&#106;&#x2e;&#99;&#110;">gfox@flashj.cn</a> for <a target="_blank" rel="noopener" href="http://gfox.flashj.cn/">gfox</a>. Under basic info you can upload an image as the Logo. The supported image formats are jpg and gif, and the recommended image size is 190 pixels long by 40 pixels wide.</p>
 <p>QQ Mail itself is tied to QQ, so you get a notification as soon as mail arrives, and the user experience is first-class (I’d say it’s even better than Gmail). Now that it supports your own domain too, how could I not be on board?</p>
 <p>[09.09.19 update] Got an email saying Tencent has updated the domain email: 1. Supports accessing a personalized login page at mail.yourdomain.com. 2. Supports editing some of the admin info (the admin account can’t be changed yet, but support is coming later). 3. Domain email accounts can serve as the primary display account for QQ. 4. Others: fixed the display issue with custom LOGOs; member account phone numbers are no longer a required field; added more prompts during setup, etc.</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/QQ/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>QQ</a><a class="tag" href="/en/tags/Email/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Email</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>

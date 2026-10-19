@@ -231,6 +231,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -337,6 +343,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -644,24 +668,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -683,7 +689,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">616 words · 3 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2010-12-23T11:15:00.000Z">2010-12-23</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2010-12-23T11:15:00.000Z">2010-12-23</time></span></div>
 </div></div>
     
@@ -705,6 +711,9 @@ background:var(--block);color:var(--text-p1)}
 <p>Since I’m playing around anyway, I figured I’d go looking for trouble and run an experiment. Spurred on by Xu Can, I had a momentary burst of foolish enthusiasm today and tried using this high-speed memory access to optimize bitmap rendering. The basic idea: store all the BitmapData used for rendering as binary inside a single ByteArray, with each bitmap having a start memory address and a length; manually manage all the internal addresses of that ByteArray and maintain the image layering; in the end, the only thing output to the view is a single BitmapData — all in hopes that fast reads and writes would bring a performance boost.</p>
 <p>After trying it, the results weren’t impressive — even though memory reads and writes are faster, it moves the burden of implementing copypixel onto per-pixel processing. Copying a mere 300*300 image to another image requires computing 90000 * 2 memory addresses; bigger images mean even more address computation, and doing all that math at a high level is very time-consuming. And copypixel between images isn’t just plain value reads and writes — it also has to blend based on alpha, and the color math eats up more time. Flash’s own bitmapData copypixel takes only 4ms to process a 300*300 image 5 times, whereas running 180000 looped additions in Flash takes 7ms on my machine. So there you have it: throughput isn’t the problem — the amount of computation blows up. High-speed memory access isn’t meant for this kind of thing. I really was having a moment of foolish enthusiasm.</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/en/tags/alchemy/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>alchemy</a><a class="tag" href="/en/tags/ByteArray/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ByteArray</a><a class="tag" href="/en/tags/flashplayer/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flashplayer</a><a class="tag" href="/en/tags/Memory/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Memory</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>

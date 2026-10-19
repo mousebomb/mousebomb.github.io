@@ -231,6 +231,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -337,6 +343,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -644,24 +668,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -683,7 +689,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1001 字 · 预计阅读 4 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2009-09-16T10:00:59.000Z">2009-09-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2009-09-16T10:00:59.000Z">2009-09-16</time></span></div>
 </div></div>
     
@@ -714,6 +720,9 @@ background:var(--block);color:var(--text-p1)}
 <p>不过仔细想想其实问题不大，因为我们国内的网友的局势很有趣。 一般用火狐或者IE7+或者safari、Google Chrome的都是爱赶潮流的，或者是玩过各种web2.0产品的，算是高端一些的网民。这批人都懂得屏蔽是个啥意思，“屏蔽弹窗”这样的善意功能也能更好地起作用。这批人往往都会设置白名单，所以并不需要担心他们由于浏览器屏蔽而访问不了内容。 而剩下的大部分使用XP+原装IE6的用户，很多并不是对网络很有热情，正好这部分用户的浏览器也不会拦截我们flash，他们也不用学会网络过滤设置。 嘿嘿，各司其位，自然和谐。</p>
 <h4 id="几种wmode的不同"><a href="#几种wmode的不同" class="headerlink" title="几种wmode的不同"></a>几种wmode的不同</h4><p>额，顺便罗列一下wmode的几点不同。总结了几种wmode有什么不同，各自符合什么情况使用： <strong>Window</strong>是默认的,窗口模式，吃CPU不严重 <strong>Transparent</strong>透明无窗口模式 <strong>Opaque</strong>不透明无窗口模式 效率最高的是window模式 透明用transparent 而需要动态交互(比如js)或者window模式不稳定的情况下用opaque Window和transparent在ie6的iframe下拖动会出现花屏——个人经验。 还有一点，无窗口模式消耗资源大，但是能保证帧频</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/wmode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wmode</a><a class="tag" href="/tags/IE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>IE</a><a class="tag" href="/tags/navigateToURL/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>navigateToURL</a><a class="tag" href="/tags/%E6%8B%A6%E6%88%AA/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>拦截</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

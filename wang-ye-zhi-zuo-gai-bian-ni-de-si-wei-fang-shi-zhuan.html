@@ -230,6 +230,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -333,6 +339,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -640,24 +664,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -679,7 +685,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">2648 字 · 预计阅读 9 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2007-10-05T05:35:54.000Z">2007-10-05</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.979Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -703,6 +709,9 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>4、工作上也做到“结构与表现分离”</strong><br>关于这一点，网络上很多高手都是这样建议的，也就是先打开编辑器，把结构完整地写出来，再去CSS里写表现，而尽量不去动已经写好的结构。<br>然而以看书为主要学习方式的人却很难体会，因为关于标准的书籍多半是手把手来教的，也就是必然是结构表现结合，循序渐进。虽然有些书籍有这方面的建议，但短短的几句话远不如读书过程中的潜移默化。在制作人员能够对结构良好把握的时候，同时写结构与表现也不会对结果有太大的影响。但以我的经验，结构表现分离的工作方式，要比同时写结构与表现效率高很多，同时也不容易遗漏页面上的元素。<br>当然，所谓的“结构与表现分离”并不是完全不考虑表现，想要兼顾到表现，就要保证——在不破坏结构的前提下，CSS选择器能够选择到尽量多的内容。在哪些地方加class，或者用哪些标签来区分，是一个见仁见智的地方，相信每个人都有自己的体会。而结合不同的设计稿，有时候也需要做出相应的变化，然而这些变化都应该有一个同样的前提——不破坏代码的结构和可读性。<br>再就是，一定要意识到，任何可视化的工具都是魔鬼。它们可视化界面下所呈现的效果，往往与真实浏览器相差千里，而我们真正要兼容的是浏览器，不是编辑器的可视化界面。</p>
 <p><strong>5、CSS不是万能的，没有CSS也不是万万不能的</strong><br>相比于CSS1.0时代，今天CSS可以完成更多的事情，然而需求永远是领先于技术的，CSS无法完成网页所有的表现层工作，有时候我们必须结合JS或者其他语言来实现一些效果。而另一些时候，用JS的方法比只靠CSS简单得多，并且代码结构更加良好——最典型的例子就是下拉菜单。这些时候，我们要说服自己，或者说服老板与客户，去采用更简单更合理的方式。因为DOM同样是网页标准的重要组成，并不是使用了JS我们的网页就降低了效率或是不再标准，恰恰相反，这是对JS最大的误解。说到这里不得不提一点，就是今天的时代，比以往更要求每个职业了解更多的相关知识，做设计的人要懂一点交互和制作，做制作的也必须了解设计和程序，尤其是JS这样的前端技术，只有这样，你和同事才能够更好地合作，个人的发展前景也会更加光明。<br>没有CSS，指的是当我们的网站因为各种未知的原因导致CSS文件载入失败，不要因此而慌乱，这是考验我们代码质量的最佳时机。在没有CSS的时候，如果网页仍旧保持良好的可读性，这成果要远比通过W3C验证更值得我们自豪。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/web/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>web</a><a class="tag" href="/tags/web2-0/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>web2.0</a><a class="tag" href="/tags/div/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>div</a><a class="tag" href="/tags/CSS/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CSS</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

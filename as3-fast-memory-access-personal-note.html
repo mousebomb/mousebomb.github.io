@@ -231,6 +231,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -337,6 +343,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -644,24 +668,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -683,7 +689,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">803 字 · 预计阅读 3 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2010-12-23T11:15:00.000Z">2010-12-23</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2010-12-23T11:15:00.000Z">2010-12-23</time></span></div>
 </div></div>
     
@@ -705,6 +711,9 @@ background:var(--block);color:var(--text-p1)}
 <p>既然要玩弄，那就没事找事做实验。在徐灿的鼓动下，今天一时脑子发热，试了一下把位图渲染用这套高速内存访问来优化。基本思路是把所有用于渲染的BitmapData全部以二进制存放到一个ByteArray里，每个位图有一个起始内存地址和长度，手动管理这个ByteArray的所有内部地址，维护图像的层级内容，最终只有输出到视图的是一个BitmapData，以期高速读写带来性能提升。</p>
 <p>试过之后发现效果不可观——尽管内存读写速度更快，但它让copypixel的实现负担放到了逐个像素处理上，一张仅300*300的图copypixel到另一张图，则需要计算90000 * 2个内存地址，更大的图更多的内存地址计算，这些计算量在高层实现是很耗时的。而且图与图之间的copypixel并不只是单纯的数值存取，还要根据alpha进行合并，颜色计算又要消耗时间。flash本身的bitmapData的copypixel，对300*300的图进行5次处理只要4ms，而flash里面执行180000次循环加法计算，在我机器上就要7ms。所以嘛，吞吐量不是问题，运算量极度加剧，高速内存存取不是用来干这个的，果然是脑子发热了。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/tags/alchemy/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>alchemy</a><a class="tag" href="/tags/ByteArray/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ByteArray</a><a class="tag" href="/tags/flashplayer/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flashplayer</a><a class="tag" href="/tags/%E5%86%85%E5%AD%98/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>内存</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

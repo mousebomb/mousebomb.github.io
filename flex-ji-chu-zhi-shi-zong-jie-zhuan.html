@@ -228,6 +228,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -331,6 +337,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -638,24 +662,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -677,7 +683,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1368 字 · 预计阅读 5 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2007-07-22T12:11:48.000Z">2007-07-22</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.977Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -699,6 +705,9 @@ background:var(--block);color:var(--text-p1)}
 <li>控制组件－－ 处理应用程序中的数据交互<br>举个例子，使用MVC模式，你可以使用三个清楚的模块来实现数据录入表单：<br>模型组件包含了XML数据或者处理表单数据的远程服务中间件<br>视图组件描述了所有展示给用户的界面元素<br>控制组件处理用户的交互逻辑<br>不要以为Flex就是使用MXML标记编程，ActionScript同样重要。如果要和数据库打交道，第三方语言同样不可忽视。因为Flex使用的是J2EE，因此JSP是首选。<br><strong>ActionScript3基础知识</strong><br>Action Script<br>Action Script简称为AS，是Flash产品平台的脚本解释语言。该语言可以实现Flash中内容与内容，内容与用户之间的交互。AS的解释工作由Action Virtual Machine(AVM)来解释，AVM可以称之为AS虚拟机，类似于JVM，AVM是Flash Player播放器中的一部分。AS语句要想起作用是要通过Flash创作工具或Flex服务器将其编译生成2进制代码格式方可，而编译过的2进制代码格式将成为SWF文件中的一部分，被Flash播放器执行。AS1.0起源于ECMAScript标准，由于ECMA的语法的兼容性和Flash Player播放器的大小和渲染引擎的需要，AS可以称之为是语法来源于ECMAScript。<br>　　说到AS不得不说Flash4的AS集合，它曾经让Flash4兼容格式的内容变化多端。但是从一定程度上，Flash4的AS不能称之为成熟的并且为开发者所承认的脚本语言集合。它的语法方式完全不同于ECMAScript。虽然我们可以在Flash5的时代可以向它添加一些ECMA效仿的语句上去，但是AS在Flash4中是完全于ECMAScript标准相左的。现在Flash4的AS仍然可以被应用在Flash Lite1.1的内容之上。<br>　　AS1.0是从Flash5的时代诞生的，这时的版本就已经具备了ECMAScript标准的语法格式和语义解释。尽管后来的Flash Player5&#x2F;6的播放器版本(Build)的一再更新，使得越来越多的ECMA语法和语义被纳入到AS1.0的API当中去，但是核心语言的编译处理及表现方式都是延续了Flash5的AS1.0的标准。甚至于到后来的Flash7，对于AS1.0的核心解释机制，仍然与Flash Player5有着很多相同之处。<br>　　AS2.0是在MX时代被慢慢引入的，而在MX 2004版本被开发者全面采纳。AS2.0的运行则是完全在Flash Player6以上的版本中才具备的机制。AS2.0在Flash6中都可以运行，是因为AS2.0语句在运行时(runtime)环境下仍然采用了AS1.0的模型。这也是骨子里为什么AS2.0的运行性能并不比AS1.0优秀的重要原因。AS2.0的编写方式则是更加成熟，引入了面向对象编程的方式，并且有良好的类型声明，而且分离了运行时和编译时的异常处理。AS2在格式上遵从了ECMA4 Netscape的语言方案，但是并不是完全兼容ECMAScript标准。虽然基于AS2的开发方式从众多开发者眼中褒贬不一，但是不可否认的是，AS2为了AS3.0的诞生铺设了一条康庄大道。<br>　　AS3.0的规范已经出来了，而AS3.0也是未来Flash开发脚本的核心。AS3的播放器只有从Flash Player 8.5以上版本开始支持，也就是我们现在用到的Flex 2.0 Beta才可以对AS3进行编译的工作。AS3有着很多不同之处，它将全面支持ECMA4的语言标准，意味着AS3将具有ECMAScript中的Package&#x2F;命名空间namespace等多项AS2不具备的特点。AS3将全面支持E4X，也就是支持ECMAScrpit for XML的标准。AS3将采用全新的AVM来进行解释，与AS1&#x2F;2的AVM将完全不同。此外AS3的编译器也是完全和AS2的编译器有所不同。此外，AS3的API将更加直观，会去除很多容易让人混淆的部分，添加对ECMA全面的兼容性，目的就是让基于AS3的内容更加快速与强壮。<br>　　说了这么多，AS3到底包含什么细节。去Spec里挖掘一下，然后先用Flex Builder 2体验一下吧。</li>
 </ol>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a><a class="tag" href="/tags/flex/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flex</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -716,7 +725,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;air-app-description-file.html" title="AIR应用描述文件详解"><span class="title">AIR应用描述文件详解</span><span class="excerpt">Air应用描述文件是设置AIR应用各项基本属性的一个XML文件.在使用FLEX开发时,它位于”项目文件夹&#x2F;src&#x2F;主文件名-app.xml”;在使用Flash CS3 开发时也会在创建AIR项目时自动生成,可以通过...</span></a><a class="item" href="&#x2F;air-file-operation1.html" title="AIR文件操作(一):AIR文件基础"><span class="title">AIR文件操作(一):AIR文件基础</span><span class="excerpt">AIR允许我们开发与文件系统协同工作的应用程序 我们可以使用Adobe® AIR™ 文件系统API提供的类访问主机的文件系统。使用这些类，可以访问、管理目录与文件，建立目录与文件，向文件写数据等等。我把与文件系统协同工作的内容总结为A...</span></a><a class="item" href="&#x2F;air-fan-fou-ke-hu-duan-mxml-yuan-ma.html" title="AIR饭否客户端MXML源码"><span class="title">AIR饭否客户端MXML源码</span></a><a class="item" href="&#x2F;air-file-operation2.html" title="AIR文件操作(二):使用文件对象操作文件和目录"><span class="title">AIR文件操作(二):使用文件对象操作文件和目录</span><span class="excerpt">文件对象是啥？ 文件对象(File对象)是在文件系统中指向文件或目录的指针。由于安全原因，只在AIR中可用。
+    <div class="related-posts"><a class="item" href="&#x2F;air-app-description-file.html" title="AIR应用描述文件详解"><span class="title">AIR应用描述文件详解</span><span class="excerpt">Air应用描述文件是设置AIR应用各项基本属性的一个XML文件.在使用FLEX开发时,它位于”项目文件夹&#x2F;src&#x2F;主文件名-app.xml”;在使用Flash CS3 开发时也会在创建AIR项目时自动生成,可以通过...</span></a><a class="item" href="&#x2F;air-fan-fou-ke-hu-duan-mxml-yuan-ma.html" title="AIR饭否客户端MXML源码"><span class="title">AIR饭否客户端MXML源码</span></a><a class="item" href="&#x2F;air-file-operation1.html" title="AIR文件操作(一):AIR文件基础"><span class="title">AIR文件操作(一):AIR文件基础</span><span class="excerpt">AIR允许我们开发与文件系统协同工作的应用程序 我们可以使用Adobe® AIR™ 文件系统API提供的类访问主机的文件系统。使用这些类，可以访问、管理目录与文件，建立目录与文件，向文件写数据等等。我把与文件系统协同工作的内容总结为A...</span></a><a class="item" href="&#x2F;air-file-operation2.html" title="AIR文件操作(二):使用文件对象操作文件和目录"><span class="title">AIR文件操作(二):使用文件对象操作文件和目录</span><span class="excerpt">文件对象是啥？ 文件对象(File对象)是在文件系统中指向文件或目录的指针。由于安全原因，只在AIR中可用。
 文件对象能做啥？
 
 获取特定目录，包括用户目录、用户文档目录、该应用程序启动的目录和程序目录

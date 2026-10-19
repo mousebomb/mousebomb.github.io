@@ -31,7 +31,7 @@
 <meta property="article:modified_time" content="2021-06-23T01:29:12.000Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="Programming">
-<meta property="article:tag" content="pathfinding">
+<meta property="article:tag" content="Pathfinding">
 <meta property="article:tag" content="rts">
 <meta property="article:tag" content="vectorfield">
 <meta property="article:tag" content="Real-time Strategy Games">
@@ -44,7 +44,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Goal-based vector field pathfinding">
   
   
-  <meta name="keywords" content="Programming,pathfinding,rts,vectorfield,Real-time Strategy Games,Vector Field,Flow Field,Game Development,Heatmap">
+  <meta name="keywords" content="Programming,Pathfinding,rts,vectorfield,Real-time Strategy Games,Vector Field,Flow Field,Game Development,Heatmap">
 
   <!-- feed -->
   
@@ -67,7 +67,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2021-06-23T09:29:12+08:00","dateModified":"2021-06-23T09:29:12+08:00","datePublished":"2021-06-23T09:29:12+08:00","description":"A goal-based vector field pathfinding method that helps agents navigate efficiently by generating a heat map and a vector field. It walks through the algorithm's three steps: generating a heat map that describes distance along the path, creating a vector field pointing toward the goal, and using the vector field to steer agents' movement. How to solve the local optimum problem, and how subdividing the grid optimizes path computation to make pathfinding more stable and efficient.","headline":"Goal-based vector field pathfinding","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/understanding-goal-based-vector-field-pathfinding-cn.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/understanding-goal-based-vector-field-pathfinding-cn.html","keywords":"Programming, pathfinding, rts, vectorfield, Real-time Strategy Games, Vector Field, Flow Field, Game Development, Heatmap","thumbnailUrl":"https://cdn.mousebomb.org/blog/wp/wp-content/uploads/2021/06/Efficient_Pathing_Path_vs_Linear_Distance.png","image":["https://cdn.mousebomb.org/blog/wp/wp-content/uploads/2021/06/Efficient_Pathing_Path_vs_Linear_Distance.png"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2021-06-23T09:29:12+08:00","dateModified":"2021-06-23T09:29:12+08:00","datePublished":"2021-06-23T09:29:12+08:00","description":"A goal-based vector field pathfinding method that helps agents navigate efficiently by generating a heat map and a vector field. It walks through the algorithm's three steps: generating a heat map that describes distance along the path, creating a vector field pointing toward the goal, and using the vector field to steer agents' movement. How to solve the local optimum problem, and how subdividing the grid optimizes path computation to make pathfinding more stable and efficient.","headline":"Goal-based vector field pathfinding","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/understanding-goal-based-vector-field-pathfinding-cn.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/understanding-goal-based-vector-field-pathfinding-cn.html","keywords":"Programming, Pathfinding, rts, vectorfield, Real-time Strategy Games, Vector Field, Flow Field, Game Development, Heatmap","thumbnailUrl":"https://cdn.mousebomb.org/blog/wp/wp-content/uploads/2021/06/Efficient_Pathing_Path_vs_Linear_Distance.png","image":["https://cdn.mousebomb.org/blog/wp/wp-content/uploads/2021/06/Efficient_Pathing_Path_vs_Linear_Distance.png"]}</script>
   <script>
 (function () {
   try {
@@ -235,6 +235,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -341,6 +347,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -648,24 +672,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -687,7 +693,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/App-Development/">App Development</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1254 words · 5 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2021-06-23T01:29:12.000Z">2021-06-23</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2021-06-23T01:29:12.000Z">2021-06-23</time></span></div>
 </div></div>
     
@@ -760,6 +766,9 @@ background:var(--block);color:var(--text-p1)}
 <li>Particle movement</li>
 </ul>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/Programming/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Programming</a><a class="tag" href="/en/tags/Pathfinding/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Pathfinding</a><a class="tag" href="/en/tags/rts/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>rts</a><a class="tag" href="/en/tags/vectorfield/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>vectorfield</a><a class="tag" href="/en/tags/Real-time-Strategy-Games/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Real-time Strategy Games</a><a class="tag" href="/en/tags/Vector-Field/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Vector Field</a><a class="tag" href="/en/tags/Flow-Field/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Flow Field</a><a class="tag" href="/en/tags/Game-Development/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Game Development</a><a class="tag" href="/en/tags/Heatmap/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Heatmap</a></div>
+
 <div class="article-footer slide-up">
     <section id="references">
       <div class="header"><span>References</span></div>

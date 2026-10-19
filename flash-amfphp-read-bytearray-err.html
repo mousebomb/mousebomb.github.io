@@ -232,6 +232,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -338,6 +344,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -645,24 +669,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -684,7 +690,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">770 字 · 预计阅读 3 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2008-08-21T09:43:09.000Z">2008-08-21</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2008-08-21T09:43:09.000Z">2008-08-21</time></span></div>
 </div></div>
     
@@ -718,6 +724,9 @@ background:var(--block);color:var(--text-p1)}
 <h3 id="方案2："><a href="#方案2：" class="headerlink" title="方案2："></a>方案2：</h3><p>其实关键就是这个，不能以为在Flash中设置了NetConnection.objectEncoding &#x3D; ObjectEncoding.AMF3就行，实际上，更重要的是AMFPHP这边要设置为AMF3编码。 在<strong>PHP代码</strong>中加入 $GLOBALS[‘amfphp’][‘encoding’] &#x3D; ‘amf3’; <strong>AS代码</strong>比如可以这么写 protected function onCallResult(re:ByteArray):void { &#x2F;&#x2F;….直接用re喽 } 问题迎刃而解…… 记录与此，其实这本不成问题……希望本文对你有用，遇到同样情况，不用像我一样走很多弯路。 这个问题从昨天晚上就使我非常困扰，经过20小时多的奋战，搜救行动终于取得了进展，得到两条解决方案。 尽管实现了需要的效果，但依然有困惑：似乎这个问题<strong>只存在于FLASH中</strong>，FLEX是没问题的。<a target="_blank" rel="noopener" href="http://forum.sephiroth.it/showpost.php?p=33014&postcount=13">有人</a>也这么说。 感慨：中文技术总结太少，总搜索不到。这次真是倒霉大了，险些连英文的我都没找到…… 感谢：<a target="_blank" rel="noopener" href="http://www.kingnare.com/auzn/">AuZn</a>、<a target="_blank" rel="noopener" href="http://www.duzengqiang.com/">杜增强</a>、<a target="_blank" rel="noopener" href="http://www.riahome.cn/">Y-boy</a>、<a target="_blank" rel="noopener" href="http://www.huoshan.org/">寂寞火山</a>提供的线索……</p>
 <p>参考资料：<br><a target="_blank" rel="noopener" href="http://forum.sephiroth.it/showthread.php?t=10194">http://forum.sephiroth.it/showthread.php?t=10194</a> 此论坛某仁兄提问“<strong>Blob field not casted to ByteArray upon sending to AS3</strong> ”<br><a target="_blank" rel="noopener" href="http://www.astorm.ch/blog/index.php?post/2008/04/01/Remoting-et-ByteArray-avec-Flash-et-AS3">http://www.astorm.ch/blog/index.php?post/2008/04/01/Remoting-et-ByteArray-avec-Flash-et-AS3</a> <strong>Remoting et ByteArray avec Flash et AS3</strong></p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/tags/ByteArray/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ByteArray</a><a class="tag" href="/tags/%E9%94%99%E8%AF%AF/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>错误</a><a class="tag" href="/tags/amfphp/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>amfphp</a><a class="tag" href="/tags/remote/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>remote</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

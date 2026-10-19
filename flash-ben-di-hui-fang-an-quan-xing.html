@@ -228,6 +228,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -331,6 +337,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -638,24 +662,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -677,7 +683,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">353 字 · 预计阅读 2 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2007-03-09T10:21:43.000Z">2007-03-09</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.975Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -693,6 +699,9 @@ background:var(--block);color:var(--text-p1)}
   </div></div>
 <article class="md-text content slide-up"><p>一好友从网上下载了Flash格式的mp3播放程序，想放到qq空间做音乐播放器，这个播放程序是通过xml设置播放列表，FLASH读取XML数据，再播放音乐的。可是在修改了XML里的音乐为网络上歌曲时，在本地测试时遇到了FLASH安全禁止的提示：flash player 已终止一项可能不安全的操作……<br>他就将FLASH在本地回放安全性设置里设置为“只允许访问网络”，可是仍然没有效果。在FLASH的帮助里，对这个说的并不浅显易懂，在此偶得发表一些看法，不对请纠正：<br>“本地回放安全性”是设置 [本地] 播放swf的安全性， 设置为 [只允许访问本地]  就是意味着本地打开时只能访问本地的；而设置为[只允许访问网络]，就意味着，本地打开时只能访问网络；而发布到网上后 是网络访问网络，根本不受这个发布设置的限制！在本地测试的时候file:&#x2F;&#x2F;的方式打开，自然就出现flash player 已终止一项可能不安全的操作……<br>因此不要一遇到这个禁止的提示就以为是要修改发布设置的本地回放性，发布到网上测试的才是最终结果。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/%E5%AE%89%E5%85%A8/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>安全</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

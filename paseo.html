@@ -232,6 +232,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -338,6 +344,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -645,24 +669,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -684,7 +690,7 @@ background:var(--block);color:var(--text-p1)}
     <div class="banner-mask banner-mask-top" aria-hidden="true"></div><div class="banner-mask banner-mask-bottom" aria-hidden="true"></div>
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件</a>
-</div><div class="right"><span class="cap ai-label"><svg class="icon" data-icon="default:shield-up" aria-hidden="true"></svg>已 AI 润色</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">1151 字 · 预计阅读 4 分钟</span><span class="cap ai-label"><svg class="icon" data-icon="default:shield-up" aria-hidden="true"></svg>已 AI 润色</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-06-04T09:58:00.000Z">2026-06-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-19T04:16:07.538Z">2026-10-19</time></span></div>
 </div></div>
     
@@ -746,6 +752,9 @@ background:var(--block);color:var(--text-p1)}
 <li><strong>Review → Preview → Ship</strong>：worktree 里改完，inline 看 diff，Commit → Open PR → Merge 全在 Paseo 内完成</li>
 </ul>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/ClaudeCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ClaudeCode</a><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>工具软件</a><a class="tag" href="/tags/Hermes/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Hermes</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -763,7 +772,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;opencode-go-limits.html" title="OpenCode Go 套餐用量估算，一个页面看全所有模型"><span class="title">OpenCode Go 套餐用量估算，一个页面看全所有模型</span><span class="excerpt">OpenCode Go 的月额度分散在好几张表格里，官方给的&quot;5小时额度&quot;图表又没列出所有模型。于是做了个图表页面，自动抓官方价格表，按官方同样的口径把每个模型的每月可用请求数算出来画成图，悬停看明细。</span></a><a class="item" href="&#x2F;opencode-goat-commandcode-config.html" title="把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头"><span class="title">把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头</span><span class="excerpt">买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 &#x2F;connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每...</span></a><a class="item" href="&#x2F;trae-signed-commit-as-claude.html" title="TRAE 替我提交代码，怎么署名成了 Claude？"><span class="title">TRAE 替我提交代码，怎么署名成了 Claude？</span><span class="excerpt">改完一个小 bug，TRAE 提交时自作主张在 commit message 里加上了 Co-Authored-By: Claude Sonnet 4.6。大爷的离谱，我用 Claude Code 提交都不会加Claude署名。再加上...</span></a><a class="item" href="&#x2F;paseo-plugins.html" title="Paseo的插件目录"><span class="title">Paseo的插件目录</span><span class="excerpt">我平时主力用 Paseo + OpenCode + OpenViking，最近 Paseo 官方也上了插件目录，现在既有社区的 paseo.cafe 又有了官方的 paseo.sh&#x2F;plugins。我之前为了眼睛舒服，移植的solar...</span></a><a class="item" href="&#x2F;Qbserve.html" title="Qbserve-RescueTime替代方案"><span class="title">Qbserve-RescueTime替代方案</span><span class="excerpt">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;opencode-go-limits.html" title="OpenCode Go 套餐用量估算，一个页面看全所有模型"><span class="title">OpenCode Go 套餐用量估算，一个页面看全所有模型</span><span class="excerpt">OpenCode Go 的月额度分散在好几张表格里，官方给的&quot;5小时额度&quot;图表又没列出所有模型。于是做了个图表页面，自动抓官方价格表，按官方同样的口径把每个模型的每月可用请求数算出来画成图，悬停看明细。</span></a><a class="item" href="&#x2F;opencode-goat-commandcode-config.html" title="把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头"><span class="title">把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头</span><span class="excerpt">买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 &#x2F;connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每...</span></a><a class="item" href="&#x2F;trae-signed-commit-as-claude.html" title="TRAE 替我提交代码，怎么署名成了 Claude？"><span class="title">TRAE 替我提交代码，怎么署名成了 Claude？</span><span class="excerpt">改完一个小 bug，TRAE 提交时自作主张在 commit message 里加上了 Co-Authored-By: Claude Sonnet 4.6。大爷的离谱，我用 Claude Code 提交都不会加Claude署名。再加上...</span></a><a class="item" href="&#x2F;opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱"><span class="title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span><span class="excerpt">我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统...</span></a><a class="item" href="&#x2F;Qbserve.html" title="Qbserve-RescueTime替代方案"><span class="title">Qbserve-RescueTime替代方案</span><span class="excerpt">RescueTime 逐渐不适应需求，UI混乱、数据延迟、误报频繁。试用 Qbserve 后满意其单机、直观界面，决定购买替代。</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">

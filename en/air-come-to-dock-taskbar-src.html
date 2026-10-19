@@ -231,6 +231,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -337,6 +343,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -644,24 +668,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -683,7 +689,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">272 words · 1 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2008-06-26T02:03:39.000Z">2008-06-26</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2008-06-26T02:03:39.000Z">2008-06-26</time></span></div>
 </div></div>
     
@@ -701,6 +707,9 @@ background:var(--block);color:var(--text-p1)}
 <span id="more"></span>
 <p>&#x2F;**Handler for close &amp; minimize-to-tray button clicks*&#x2F; public function clickWindowHandler(e:Event):void { if (e.target &#x3D;&#x3D; minBtn) { createIcon(); stage.nativeWindow.visible&#x3D;false; } if (e.target &#x3D;&#x3D; closeBtn) { NativeApplication.nativeApplication.exit(); } } &#x2F;**Bring the window back from the background*&#x2F; public function reappear(e:ScreenMouseEvent&#x3D;null):void{ stage.nativeWindow.visible&#x3D;true; removeIcon(); } &#x2F;**Create the tray icon*&#x2F; public function createIcon():void { NativeApplication.nativeApplication.autoExit &#x3D; false; var icon:Loader &#x3D; new Loader(); var iconMenu:NativeMenu &#x3D; new NativeMenu(); var exitCommand:NativeMenuItem &#x3D; iconMenu.addItem(new NativeMenuItem(“退出”)); exitCommand.addEventListener(Event.SELECT, function(event:Event):void { NativeApplication.nativeApplication.icon.bitmaps &#x3D; []; NativeApplication.nativeApplication.exit(); } ); if (NativeApplication.supportsSystemTrayIcon) { NativeApplication.nativeApplication.autoExit &#x3D; false; icon.contentLoaderInfo.addEventListener(Event.COMPLETE, iconLoadComplete); icon.load(new URLRequest(“resource&#x2F;icons&#x2F;i16.png”)); var systray:SystemTrayIcon&#x3D;NativeApplication.nativeApplication.icon as SystemTrayIcon; systray.tooltip &#x3D; “饭否AIR客户端”; systray.menu &#x3D; iconMenu; systray.addEventListener(MouseEvent.CLICK,reappear); } if (NativeApplication.supportsDockIcon) { icon.contentLoaderInfo.addEventListener(Event.COMPLETE,iconLoadComplete); icon.load(new URLRequest(“resource&#x2F;icons&#x2F;i128.png”)); var dock:DockIcon &#x3D; NativeApplication.nativeApplication.icon as DockIcon; dock.menu &#x3D; iconMenu; dock.addEventListener(MouseEvent.CLICK,reappear);&#x2F;&#x2F;I have no way to test this case, and I don’t know whether it will cause problems, so I’m alpha-ing it for now } } &#x2F;**Remove the tray icon*&#x2F; public function removeIcon():void { NativeApplication.nativeApplication.icon.bitmaps &#x3D; []; } private function iconLoadComplete(event:Event):void { NativeApplication.nativeApplication.icon.bitmaps &#x3D; [event.target.content.bitmapData]; }</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/en/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a><a class="tag" href="/en/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/en/tags/air/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>air</a><a class="tag" href="/en/tags/Fanfou/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Fanfou</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>

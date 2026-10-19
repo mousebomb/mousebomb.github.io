@@ -233,6 +233,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -339,6 +345,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -646,24 +670,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -685,7 +691,7 @@ background:var(--block);color:var(--text-p1)}
     <div class="banner-mask banner-mask-top" aria-hidden="true"></div><div class="banner-mask banner-mask-bottom" aria-hidden="true"></div>
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Tools/">Tools</a>
-</div><div class="right"><span class="cap ai-label"><svg class="icon" data-icon="default:shield-up" aria-hidden="true"></svg>AI-polished</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">442 words · 2 min read</span><span class="cap ai-label"><svg class="icon" data-icon="default:shield-up" aria-hidden="true"></svg>AI-polished</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2026-09-20T01:53:00.000Z">2026-09-20</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2026-10-18T11:00:54.146Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -714,6 +720,9 @@ background:var(--block);color:var(--text-p1)}
 <p>I saw someone in Issue #65 say you can use <code>lark cli</code> now and it’s better.<br>But for developers, is <code>lark-cli</code> really enough for looking up Open Platform dev docs?</p>
 <p>I verified it. I wouldn’t call it full coverage — more like a different angle on different use cases, but it can do doc and API lookups just as well. After installing lark-cli, the skill it ships with, <code>~/.agents/skills/lark-openapi-explorer/SKILL.md</code>, explicitly documents the approach that guides the Agent to make API calls.<br>The mechanism is that it scrapes the Open Platform’s <code>llms.txt</code>.<br>Fine, that works as a drop-in substitute — and it’s cleaner.</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/en/tags/Trae/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Trae</a><a class="tag" href="/en/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/en/tags/MCP/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>MCP</a><a class="tag" href="/en/tags/Memory-leak/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Memory leak</a><a class="tag" href="/en/tags/Feishu/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Feishu</a><a class="tag" href="/en/tags/nodejs/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>nodejs</a></div>
+
 <div class="article-footer slide-up">
     <section id="references">
       <div class="header"><span>References</span></div>

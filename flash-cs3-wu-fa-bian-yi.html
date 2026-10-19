@@ -229,6 +229,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -332,6 +338,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -639,24 +663,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -678,7 +684,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">412 字 · 预计阅读 2 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2007-08-25T03:09:49.000Z">2007-08-25</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.979Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -698,6 +704,9 @@ background:var(--block);color:var(--text-p1)}
 <p>难道flash有问题？我建立一个新文件，按ctrl+enter后正常导出。这说明不是flash本身问题了。我就怀疑是我制作的文件里有问题，于是逐层删除并ctrl+enter，依然无影片导出。这时真是丈二和尚——摸不着头呢。于是开始怀疑某些元件。经过一个元件一个元件排除，最终将疑犯确定——一个相对较庞大的影片剪辑，整个登陆功能封装在里面的。这个影片剪辑从库里删除影片就可以正常发布……</p>
 <p>经过最终测试，锁定凶犯：字体问题！原来在按钮上使用了静态文本(幼圆字体、加粗、可读性消除锯齿)……这个会导致flash发布影片无效。原来flashcs3中静态文本需要【使用设备字体】或者不设置【加粗】、【倾斜】属性才不会出问题，否则就会导出影片失败……不知道你遇到过这个情况没？^_^</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/as/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as</a><a class="tag" href="/tags/%E7%BC%96%E8%AF%91/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>编译</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

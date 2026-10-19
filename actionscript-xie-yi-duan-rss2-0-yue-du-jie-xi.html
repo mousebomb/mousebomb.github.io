@@ -230,6 +230,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -333,6 +339,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -640,24 +664,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -679,7 +685,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E4%BD%9C%E5%93%81/">作品</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">306 字 · 预计阅读 2 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2006-08-12T08:23:20.000Z">2006-08-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.969Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -696,6 +702,9 @@ background:var(--block);color:var(--text-p1)}
 <article class="md-text content slide-up"><p>发一下我的RSS阅读器的简单结构解析脚本 :-)</p>
 <p>stop();<br>&#x2F;&#x2F;—-运行—-<br>&#x2F;&#x2F;加载XML<br>myXML &#x3D; new XML();<br>myXML.ignoreWhite &#x3D; true;<br>myXML.load(targetXML);<br>onEnterFrame &#x3D; function () {<br> loadingXML();<br>};<br>&#x2F;&#x2F;—-变量声明—-<br>var ChannelArr &#x3D; new Array();<br>itemNum &#x3D; 0;<br>itemTitle &#x3D; new Array();<br>itemCategory &#x3D; new Array();<br>itemLink &#x3D; new Array();<br>itemDescription &#x3D; new Array();<br>&#x2F;&#x2F;—-函数声明—-<br>&#x2F;&#x2F;分析XML<br>function perseXML() {<br> &#x2F;&#x2F;将数据读入数组ChannelArr<br> channelFolder &#x3D; myXML.firstChild.childNodes[0].childNodes;<br> &#x2F;&#x2F;定位到&lt;channel&gt;的子节点<br> channelNodesFolder &#x3D; channelFolder.length;<br> for (i&#x3D;0; i&lt;channelNodesFolder; i++) {<br>  switch (channelFolder[i].nodeName) {<br>  case “title” :<br>   channelTitle &#x3D; channelFolder[i].childNodes[0].nodeValue;<br>   break;<br>  case “link” :<br>   channelLink &#x3D; channelFolder[i].childNodes[0].nodeValue;<br>   break;<br>  case “description” :<br>   channelDescription &#x3D; channelFolder[i].childNodes[0].nodeValue;<br>   break;<br>  case “pubDate” :<br>   channelPubDate &#x3D; channelFolder[i].childNodes[0].nodeValue;<br>   break;<br>  case “item” :<br>   perseItem();<br>   break;<br>  }<br> }<br>}<br>function perseItem() {<br> itemNodesFolder &#x3D; channelFolder[i].childNodes;<br> &#x2F;&#x2F;定位到Item的子节点<br> itemNodesCount &#x3D; itemNodesFolder.length;<br> for (j&#x3D;0; j&lt;itemNodesCount; j++) {<br>  switch (itemNodesFolder😄.nodeName) {<br>  case “title” :<br>   itemTitle[itemNum] &#x3D; itemNodesFolder😄.childNodes[0].nodeValue;<br>   break;<br>  case “category” :<br>   itemCategory[itemNum] &#x3D; itemNodesFolder😄.childNodes[0].nodeValue;<br>   break;<br>  case “link” :<br>   itemLink[itemNum] &#x3D; itemNodesFolder😄.childNodes[0].nodeValue;<br>   break;<br>  case “description” :<br>   &#x2F;&#x2F;trace(itemNodesFolder😄.childNodes[0].nodeValue);<br>   itemDescription[itemNum] &#x3D; itemNodesFolder😄.childNodes[0].nodeValue;<br>   break;<br>  }<br> }<br> itemNum++;<br>}<br>&#x2F;&#x2F;—-预加载XML—-<br>function loadingXML() {<br> if (myXML.loaded) {<br>  perseXML();<br>  play();<br>  delete this.onEnterFrame;<br> } else {<br>  XMLpercent &#x3D; Math.floor(myXML.getBytesLoaded()&#x2F;myXML.getBytesTotal()*100);<br>  if (isNaN(XMLpercent)) {<br>   XMLLoading &#x3D; “CONNECTING XML…”;<br>   XMLpercent &#x3D; “0%”;<br>  } else {<br>   XMLLoading &#x3D; “LOADING XML…”;<br>   XMLpercent +&#x3D; “%”;<br>  }<br>  &#x2F;&#x2F;XML载入进度<br> }<br>}</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/as/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as</a><a class="tag" href="/tags/xml/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>xml</a><a class="tag" href="/tags/%E8%A7%A3%E6%9E%90/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>解析</a><a class="tag" href="/tags/rss/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>rss</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

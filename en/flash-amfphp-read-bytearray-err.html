@@ -232,6 +232,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -338,6 +344,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo-plugins.html" title="Paseo&#39;s plugin directory">
@@ -645,24 +669,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect: Plugging Claude Code into Feishu">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect: Plugging Claude Code into Feishu</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -684,7 +690,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/en/">Home</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/en/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/en/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">688 words · 3 min read</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>Written entirely by a human</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2008-08-21T09:43:09.000Z">2008-08-21</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2008-08-21T09:43:09.000Z">2008-08-21</time></span></div>
 </div></div>
     
@@ -718,6 +724,9 @@ background:var(--block);color:var(--text-p1)}
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2:"></a>Solution 2:</h3><p>This is the real key, actually. You can’t just assume that setting NetConnection.objectEncoding &#x3D; ObjectEncoding.AMF3 on the Flash side is enough — what matters more is setting AMFPHP itself to AMF3 encoding. Add $GLOBALS[‘amfphp’][‘encoding’] &#x3D; ‘amf3’; to the <strong>PHP code</strong> <strong>AS code</strong>, for example you can write it like this protected function onCallResult(re:ByteArray):void { &#x2F;&#x2F;….直接用re喽 } And the problem solves itself… Writing this down, even though it really shouldn’t have been a problem in the first place… I hope this article is useful to you, so that if you run into the same situation you don’t have to take as many detours as I did. This problem had been bugging me since last night. After more than 20 hours of fighting, the search-and-rescue operation finally made progress, and I ended up with two solutions. Even though I got the effect I needed, I’m still puzzled: it seems this problem <strong>only exists in Flash</strong>, Flex is fine with it. <a target="_blank" rel="noopener" href="http://forum.sephiroth.it/showpost.php?p=33014&postcount=13">Someone</a> says the same. A lament: there’s way too little technical writing in Chinese, so searches keep coming up empty. I had really bad luck this time — I almost couldn’t find it even in English… Thanks to <a target="_blank" rel="noopener" href="http://www.kingnare.com/auzn/">AuZn</a>, <a target="_blank" rel="noopener" href="http://www.duzengqiang.com/">杜增强</a>, <a target="_blank" rel="noopener" href="http://www.riahome.cn/">Y-boy</a>, <a target="_blank" rel="noopener" href="http://www.huoshan.org/">Lonely Volcano</a> for the leads…</p>
 <p>References:<br><a target="_blank" rel="noopener" href="http://forum.sephiroth.it/showthread.php?t=10194">http://forum.sephiroth.it/showthread.php?t=10194</a> A guy on this forum asks “<strong>Blob field not casted to ByteArray upon sending to AS3</strong>“<br><a target="_blank" rel="noopener" href="http://www.astorm.ch/blog/index.php?post/2008/04/01/Remoting-et-ByteArray-avec-Flash-et-AS3">http://www.astorm.ch/blog/index.php?post/2008/04/01/Remoting-et-ByteArray-avec-Flash-et-AS3</a> <strong>Remoting et ByteArray avec Flash et AS3</strong></p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/en/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/en/tags/ByteArray/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ByteArray</a><a class="tag" href="/en/tags/Error/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Error</a><a class="tag" href="/en/tags/amfphp/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>amfphp</a><a class="tag" href="/en/tags/remote/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>remote</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>License</span></div>

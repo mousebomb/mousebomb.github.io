@@ -229,6 +229,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -332,6 +338,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -639,24 +663,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -678,7 +684,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">2771 字 · 预计阅读 10 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2005-12-31T16:00:00.000Z">2006-01-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-18T02:17:59.978Z">2026-10-18</time></span></div>
 </div></div>
     
@@ -711,6 +717,9 @@ background:var(--block);color:var(--text-p1)}
 <p>统一：只有addEventListener，没有addListener、没有on(…)，代码可以统一地放置。<br>清晰：事件处理函数作为类的方法（Methods）列举分明，试想一个跟在onXXX后面的赋值函数放在代码当众多难找。<br>信息翔实、准确：新的事件机制通过传递Event对象让事件的信息完整无漏地传达给接受方；函数（方法）与类绑死，Delegate终于可以光荣退休了。<br>四、总结</p>
 <p>接受新的OOP开发体系：类&#x2F;对象（class&#x2F;object）+构造函数（constructor）+成员属性（properties）+成员方法（methods），除了这些东西以外，ActionScript没有别的存在形式！把时间轴和实例上的代码都忘记吧！<br>我们要”拥抱”类的概念！AS3中所有的一切围绕着类的概念进行。swf就是一个类，用Flex开发，叫做Application，用CS3，叫做Document Class（往往继承自Sprite）。任何变量（属性）都属于一个类，MovieClip有成员属性currentScene，它是Scene类的一个实例；Sprite有成员属性contextMenu和stage，它们继承自DispatchObject类，分别是ContextMenu类和Stage类的实例。<br>没有_root，所有的_root有关的操作，封装到文档类中的成员函数（方法）进行。_root不再是swf的代表，取而代之的是Document Class（或者Flex中的Application Class）<br>功能模块化、分离：<br>不要把所有的事情都塞到文档类中去做，哪怕你可以定义很多辅助类，毕竟独立出来的文件更加便于管理、集成、再使用。而且界面（图形、动画）和代码要分离（事实上AS3的Document Class和addChild的内容管理体系帮我们完成了这个操作） 。无论你是一个人搞定代码+设计还是有一个团队协作分工编程与动画。分离的好处是让你的功能更加强大和易维护。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/tags/ria/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ria</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>

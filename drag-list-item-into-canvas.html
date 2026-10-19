@@ -230,6 +230,12 @@ min-height:auto;padding:2px 0;font-size:12px;color:var(--text-p3)}
 .widget-wrapper.link-list-widget .ui-collection__item:hover{
 background:var(--block);color:var(--text-p1)}
 </style>
+<style>
+@media screen and (max-width:600px){
+  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
+  .article.banner .content .top-row .right{margin-left:auto}
+}
+</style>
 
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
@@ -336,6 +342,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo-plugins.html" title="Paseo的插件目录">
@@ -643,24 +667,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/cc-connect-zhi-neng-ti-qiao-jie-qi.html" title="cc-connect：把 Claude Code 接入飞书">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">cc-connect：把 Claude Code 接入飞书</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -682,7 +688,7 @@ background:var(--block);color:var(--text-p1)}
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Flash/">Flash</a>
-</div><div class="right"><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
+</div><div class="right"><span class="cap reading">541 字 · 预计阅读 2 分钟</span><span class="cap ai-label" style="color:#03a9f4"><svg class="icon" data-icon="default:shield-user" aria-hidden="true"></svg>本文完全由人类完成</span></div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2010-04-27T03:57:53.000Z">2010-04-27</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2010-04-27T03:57:53.000Z">2010-04-27</time></span></div>
 </div></div>
     
@@ -703,7 +709,7 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>Document Class :</strong></p>
 <p>package org.mousebomb.dragLiToCanvas<br>{<br>import fl.events.ListEvent;<br>import fl.controls.List;<br>import fl.data.DataProvider;</p>
 <p>import flash.display.Sprite;<br>import flash.events.MouseEvent;<br>import flash.geom.Point;<br>import flash.utils.getDefinitionByName;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#x6f;&#x75;&#x73;&#101;&#x62;&#x6f;&#109;&#98;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#111;&#x75;&#115;&#101;&#x62;&#111;&#x6d;&#x62;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
 <p>public function DragListItemToCanvas()<br>{<br>&#x2F;&#x2F;如果不写下面这一行，flash不会将此类编译进去，运行时会报错<br>Class1;<br>Class2;<br>&#x2F;&#x2F;创建list的内容<br>list.dataProvider &#x3D; new DataProvider();<br>list.addItem({label:”有胆你就拖拽我”, data:”org.mousebomb.dragLiToCanvas.Class1”});<br>list.addItem({label:”我和楼上一样”, data:”org.mousebomb.dragLiToCanvas.Class2”});<br>list.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDownH);<br>list.addEventListener(ListEvent.ITEM_ROLL_OVER, onHoverLi);<br>list.addEventListener(ListEvent.ITEM_ROLL_OUT, onOutLi);<br>stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUpH);<br>}</p>
 <p>private function onOutLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; false;<br>curHoverLi &#x3D; null;<br>}</p>
 <p>private function onHoverLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; true;<br>curHoverLi &#x3D; event.item;<br>}</p>
@@ -712,6 +718,9 @@ background:var(--block);color:var(--text-p1)}
 <p>private function onMouseDownH(event : MouseEvent) : void<br>{<br>if(curHoverLi)<br>{<br>var className : String &#x3D; curHoverLi[“data”];<br>curDraging &#x3D; getItemByClassName(className);<br>curDraging.x &#x3D; event.stageX;<br>curDraging.y &#x3D; event.stageY;<br>curDraging.alpha &#x3D; .6;<br>addChild(curDraging);<br>curDraging.startDrag();<br>}<br>}</p>
 <p>&#x2F;&#x2F;获取对应的实例<br>private function getItemByClassName(className : String) : Sprite<br>{<br>var cla : Class &#x3D; getDefinitionByName(className) as Class;<br>return new cla();<br>}<br>}<br>}</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/tags/flash/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>flash</a><a class="tag" href="/tags/as3/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>as3</a><a class="tag" href="/tags/List/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>List</a><a class="tag" href="/tags/%E6%8B%96%E6%8B%BD/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>拖拽</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -731,7 +740,9 @@ background:var(--block);color:var(--text-p1)}
     <section class='body'>
     <div class="related-posts"><a class="item" href="&#x2F;actionscript-3-0-yu-yan-he-zu-jian-can-kao.html" title="ActionScript 3.0 语言和组件参考"><span class="title">ActionScript 3.0 语言和组件参考</span></a><a class="item" href="&#x2F;actionscript-3-jiao-cheng-xi-lie-di-zhi.html" title="ActionScript 3 教程系列地址"><span class="title">ActionScript 3 教程系列地址</span><span class="excerpt">ActionScript 3 教程系列 - 原文：黑羽(kingda.org)
 【黑羽】ActionScript 3.0系列教程(1)：与Flash9先来一次亲密接触！【黑羽】AS 3.0教程(2)：AS3.0的类及绑定AS3.0教程...</span></a><a class="item" href="&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[下载]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[下载]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds图书概述
-The demand for multiplayer games and virtual worlds has exp...</span></a><a class="item" href="&#x2F;addeventlistener-with-arg.html" title="addEventListener事件监听传递参数"><span class="title">addEventListener事件监听传递参数</span><span class="excerpt">as3中的addEventListener事件监听会自动传递一个事件对象参数给处理函数,可是不能传递其他参数. 如果要为事件处理函数送参数的话可以用这种方法: 见代码: var sayHello:String &#x3D; “欢迎光临...</span></a><a class="item" href="&#x2F;2011-3-27天地行北京站.html" title="2011.3.27天地行北京站"><span class="title">2011.3.27天地行北京站</span><span class="excerpt">最新活动2011RIA天地行北京城市精英论坛
+The demand for multiplayer games and virtual worlds has exp...</span></a><a class="item" href="&#x2F;adobe-air-15-cookbook.html" title="Adobe AIR 1.5 Cookbook!"><span class="title">Adobe AIR 1.5 Cookbook!</span><span class="excerpt">Adobe AIR 1.5 Cookbook已经问世了。
+
+In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also being r...</span></a><a class="item" href="&#x2F;2011-3-27天地行北京站.html" title="2011.3.27天地行北京站"><span class="title">2011.3.27天地行北京站</span><span class="excerpt">最新活动2011RIA天地行北京城市精英论坛
 **活动时间：**2011.3.27
 **报名时间：**2011.3.7-2011.3.25
 **活动规模：**300人以上
