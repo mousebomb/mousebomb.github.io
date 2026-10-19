@@ -290,15 +290,16 @@
 }
 
 .mbc-submit {
-  padding: 8px 20px;
-  border: 0;
+  padding: 7px 19px;
+  /* 透明描边占位：成功态改成"空心"时尺寸不跳（1px 边框吃掉 1px padding） */
+  border: 1px solid transparent;
   border-radius: 8px;
   background: var(--mbc-text);
   color: var(--background, #fff);
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .mbc-submit:hover:not(:disabled) {
@@ -308,6 +309,14 @@
 .mbc-submit:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+/* 提交成功后的 3 秒驻留态：空心 + 灰字，明确表示"已完成、暂时不能再点" */
+.mbc-submit.mbc-submit--ok:disabled {
+  border-color: var(--mbc-border);
+  background: transparent;
+  color: var(--mbc-text-3);
+  opacity: 1;
 }
 
 .mbc-msg {

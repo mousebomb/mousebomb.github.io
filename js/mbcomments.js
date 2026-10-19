@@ -39,6 +39,7 @@
         hint: 'Your email will not be published.',
         submit: 'Post comment',
         submitting: 'Posting…',
+        submitted: 'Posted ✓',
         nameRequired: 'Please enter your name.',
         emailRequired: 'Please enter a valid email address.',
         contentRequired: 'Please write something.',
@@ -63,6 +64,7 @@
         hint: '邮箱不会公开。',
         submit: '发表评论',
         submitting: '提交中…',
+        submitted: '已提交 ✓',
         nameRequired: '请填写昵称。',
         emailRequired: '请填写有效的邮箱。',
         contentRequired: '请写点内容。',
@@ -168,6 +170,35 @@
   emailInput.value = lsGet(LS_EMAIL);
   urlInput.value = lsGet(LS_URL);
 
+  // ---------- 身份信息本地留存 ----------
+  // 边填边存（不等提交成功）：下次进来直接带出，不用重填昵称/邮箱/网址。
+  // input 走防抖，change（失焦/回车）与 pagehide（关页）立即落盘，避免半截输入把已存的值冲掉太久。
+  const PERSIST_DELAY = 400;
+  const identityFields = [
+    [nameInput, LS_NAME],
+    [emailInput, LS_EMAIL],
+    [urlInput, LS_URL],
+  ];
+  const persistTimers = new WeakMap();
+
+  function persistField(input, key) {
+    clearTimeout(persistTimers.get(input));
+    persistTimers.delete(input);
+    lsSet(key, String(input.value || '').trim());
+  }
+
+  for (const [input, key] of identityFields) {
+    input.addEventListener('input', () => {
+      clearTimeout(persistTimers.get(input));
+      persistTimers.set(input, setTimeout(() => persistField(input, key), PERSIST_DELAY));
+    });
+    input.addEventListener('change', () => persistField(input, key));
+  }
+
+  window.addEventListener('pagehide', () => {
+    for (const [input, key] of identityFields) persistField(input, key);
+  });
+
   root.appendChild(summary);
   root.appendChild(list);
   root.appendChild(empty);
@@ -194,6 +225,24 @@
     msgBox.textContent = text;
     msgBox.classList.toggle('mbc-msg--err', !!isError);
     msgBox.classList.toggle('mbc-msg--ok', !isError);
+  }
+
+  // 提交成功后的「已提交」驻留：按钮 3 秒内保持明显的不可点击态，之后恢复以便继续发言。
+  // 用独立的 holdTimer 表示状态，避免提交请求的 finally 立刻把按钮还原回去。
+  const SUBMIT_HOLD_MS = 3000;
+  let holdTimer = null;
+
+  function holdSubmitted() {
+    clearTimeout(holdTimer);
+    submitBtn.disabled = true;
+    submitBtn.textContent = T.submitted;
+    submitBtn.classList.add('mbc-submit--ok');
+    holdTimer = setTimeout(() => {
+      holdTimer = null;
+      submitBtn.classList.remove('mbc-submit--ok');
+      submitBtn.disabled = false;
+      submitBtn.textContent = T.submit;
+    }, SUBMIT_HOLD_MS);
   }
 
   // ---------- 渲染 ----------
@@ -367,7 +416,8 @@
 
   async function submit(event) {
     event.preventDefault();
-    if (state.submitting) return;
+    // holdTimer 期间按钮处于「已提交」驻留态，回车提交也要挡住
+    if (state.submitting || holdTimer) return;
 
     const authorName = String(nameInput.value || '').trim();
     const authorEmail = String(emailInput.value || '').trim();
@@ -392,6 +442,7 @@
     submitBtn.textContent = T.submitting;
     showMsg('', false);
 
+    let succeeded = false;
     try {
       const res = await fetch(`${apiBase}/comments`, {
         method: 'POST',
@@ -420,13 +471,19 @@
       contentInput.value = '';
       clearReply();
       showMsg(T.pending, false);
+      succeeded = true;
     } catch (err) {
       console.error('[mbcomments]', err);
       showMsg(T.network, true);
     } finally {
       state.submitting = false;
-      submitBtn.disabled = false;
-      submitBtn.textContent = T.submit;
+      if (succeeded) {
+        // 交给驻留态接管按钮，3 秒后自行恢复
+        holdSubmitted();
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = T.submit;
+      }
     }
   }
 
