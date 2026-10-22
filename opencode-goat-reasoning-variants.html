@@ -28,13 +28,13 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp">
 <meta property="article:published_time" content="2026-09-02T09:19:00.000Z">
-<meta property="article:modified_time" content="2026-10-18T11:00:49.869Z">
+<meta property="article:modified_time" content="2026-09-02T09:19:00.000Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="LLM">
 <meta property="article:tag" content="agent">
-<meta property="article:tag" content="配置">
 <meta property="article:tag" content="OpenCode">
+<meta property="article:tag" content="配置">
 <meta property="article:tag" content="CommandCode">
 <meta property="article:tag" content="goat">
 <meta property="article:tag" content="reasoning">
@@ -43,7 +43,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="GOAT套餐接opencode后切换思考强度的配置">
   
   
-  <meta name="keywords" content="AI,LLM,agent,配置,OpenCode,CommandCode,goat,reasoning">
+  <meta name="keywords" content="AI,LLM,agent,OpenCode,配置,CommandCode,goat,reasoning">
 
   <!-- feed -->
   
@@ -66,7 +66,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-09-02T17:19:00+08:00","dateModified":"2026-10-18T19:00:49+08:00","datePublished":"2026-09-02T17:19:00+08:00","description":"前一篇 goat 接入配置漏了一环：deepseek-v4-flash 等模型在 /models 里选不了思考深度。排查发现不是 GOAT 套餐不支持，而是自定义 provider 手写模型缺 reasoning 能力声明，被 opencode 的变体生成逻辑拦在了门口。最终给 goat、goat-zdr 全部模型补上 reasoning:true，实测无副作用。","headline":"GOAT套餐接opencode后切换思考强度的配置","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-goat-reasoning-variants.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-goat-reasoning-variants.html","keywords":"AI, LLM, agent, 配置, OpenCode, CommandCode, goat, reasoning","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-09-02T17:19:00+08:00","dateModified":"2026-09-02T17:19:00+08:00","datePublished":"2026-09-02T17:19:00+08:00","description":"前一篇 goat 接入配置漏了一环：deepseek-v4-flash 等模型在 /models 里选不了思考深度。排查发现不是 GOAT 套餐不支持，而是自定义 provider 手写模型缺 reasoning 能力声明，被 opencode 的变体生成逻辑拦在了门口。最终给 goat、goat-zdr 全部模型补上 reasoning:true，实测无副作用。","headline":"GOAT套餐接opencode后切换思考强度的配置","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-goat-reasoning-variants.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-goat-reasoning-variants.html","keywords":"AI, LLM, agent, OpenCode, 配置, CommandCode, goat, reasoning","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
   <script>
 (function () {
   try {
@@ -1157,7 +1157,7 @@ background:var(--block);color:var(--text-p1)}
 </ol>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/tags/%E9%85%8D%E7%BD%AE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>配置</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/CommandCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CommandCode</a><a class="tag" href="/tags/goat/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>goat</a><a class="tag" href="/tags/reasoning/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>reasoning</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/%E9%85%8D%E7%BD%AE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>配置</a><a class="tag" href="/tags/CommandCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CommandCode</a><a class="tag" href="/tags/goat/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>goat</a><a class="tag" href="/tags/reasoning/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>reasoning</a></div>
 
 <div class="article-footer slide-up">
     <section id="license">
