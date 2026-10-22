@@ -234,8 +234,8 @@ background:var(--block);color:var(--text-p1)}
 </style>
 <style>
 @media screen and (max-width:600px){
-  .article.banner .content .top-row{flex-wrap:wrap;row-gap:2px}
-  .article.banner .content .top-row .right{margin-left:auto}
+  .article.banner .content .top-row .right{display:none}
+  .article.banner .bg+.content{aspect-ratio:auto;min-height:200px}
 }
 </style>
 
@@ -739,7 +739,7 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>Document Class :</strong></p>
 <p>package<br>{<br>import org.mousebomb.Math.MousebombMath;<br>import org.mousebomb.bmpdisplay.Animation;<br>import org.mousebomb.bmpdisplay.BmdObject;<br>import org.mousebomb.bmpdisplay.BmdResourcePool;<br>import org.mousebomb.bmpdisplay.BmpDisplayObject;<br>import org.mousebomb.bmpdisplay.Image;<br>import org.mousebomb.utils.SystemStatus;</p>
 <p>import flash.display.Sprite;<br>import flash.display.StageAlign;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#111;&#x75;&#x73;&#x65;&#x62;&#111;&#x6d;&#98;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-6-21<br> *&#x2F;<br>public class BmdEngineMC extends Sprite<br>{<br>&#x2F;**<br> * BMD conversion test<br> *&#x2F;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#x6f;&#x75;&#115;&#x65;&#x62;&#x6f;&#x6d;&#98;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-6-21<br> *&#x2F;<br>public class BmdEngineMC extends Sprite<br>{<br>&#x2F;**<br> * BMD conversion test<br> *&#x2F;</p>
 <p>private var bmdStage : BmpDisplayObject;<br>private var bmdRoot : Image; </p>
 <p>public function BmdEngineMC()<br>{<br>bmdRoot &#x3D; new Image(800, 600);<br>bmdStage &#x3D; new BmpDisplayObject(bmdRoot);<br>&#x2F;&#x2F;Create the bitmap sequence<br>var src : MovieClip &#x3D; new RoleD();<br>BmdResourcePool.getInstance().regResource(“roleD”, src);<br>addChild(bmdStage);</p>
 <p>for (var i : int &#x3D; 0;i &lt; 1500;i++)<br>{<br>var bmdChild : BmdObject &#x3D; BmdResourcePool.getInstance().getNewResource(“roleD”);<br>(bmdChild as Animation).play();<br>bmdChild.x &#x3D; MousebombMath.randomFromRange(20, 600);<br>bmdChild.y &#x3D; MousebombMath.randomFromRange(20, 550);<br>bmdRoot.addChild(bmdChild);<br>}<br>&#x2F;&#x2F;Start rendering<br>bmdStage.renderEnterFrame &#x3D; true;<br>this.stage.align &#x3D; StageAlign.TOP_LEFT;<br>addChild(SystemStatus.getInstance());<br>}<br>}<br>}</p>
