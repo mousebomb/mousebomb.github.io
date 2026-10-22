@@ -33,18 +33,18 @@
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="LLM">
 <meta property="article:tag" content="agent">
-<meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="配置">
-<meta property="article:tag" content="token">
+<meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="CommandCode">
 <meta property="article:tag" content="goat">
 <meta property="article:tag" content="Paseo">
+<meta property="article:tag" content="token">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头">
   
   
-  <meta name="keywords" content="AI,LLM,agent,OpenCode,配置,token,CommandCode,goat,Paseo">
+  <meta name="keywords" content="AI,LLM,agent,配置,OpenCode,CommandCode,goat,Paseo,token">
 
   <!-- feed -->
   
@@ -67,7 +67,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-31T22:13:00+08:00","dateModified":"2026-10-22T17:21:44+08:00","datePublished":"2026-08-31T22:13:00+08:00","description":"买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 /connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每个请求带 x-cmd-zdr: 1 请求头，实测也能在配置里加。","headline":"把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-goat-commandcode-config.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-goat-commandcode-config.html","keywords":"AI, LLM, agent, OpenCode, 配置, token, CommandCode, goat, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-31T22:13:00+08:00","dateModified":"2026-10-22T17:21:44+08:00","datePublished":"2026-08-31T22:13:00+08:00","description":"买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 /connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每个请求带 x-cmd-zdr: 1 请求头，实测也能在配置里加。","headline":"把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-goat-commandcode-config.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-goat-commandcode-config.html","keywords":"AI, LLM, agent, 配置, OpenCode, CommandCode, goat, Paseo, token","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
   <script>
 (function () {
   try {
@@ -254,6 +254,7 @@ background:var(--block);color:var(--text-p1)}
   --icon-loading: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.67%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.33%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E");
 }</style>
   
+  <link rel="canonical" href="https://flashj.cn/opencode-goat-commandcode-config.html">
   <link rel="alternate" hreflang="zh-CN" href="https://flashj.cn/opencode-goat-commandcode-config.html">
   <link rel="alternate" hreflang="en" href="https://flashj.cn/en/opencode-goat-commandcode-config.html">
   <link rel="alternate" hreflang="x-default" href="https://flashj.cn/opencode-goat-commandcode-config.html">
@@ -1561,7 +1562,7 @@ ZDR ✗  xai/grok-4.6 (422)
 </code></pre>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/%E9%85%8D%E7%BD%AE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>配置</a><a class="tag" href="/tags/token/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>token</a><a class="tag" href="/tags/CommandCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CommandCode</a><a class="tag" href="/tags/goat/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>goat</a><a class="tag" href="/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/tags/%E9%85%8D%E7%BD%AE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>配置</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/CommandCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CommandCode</a><a class="tag" href="/tags/goat/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>goat</a><a class="tag" href="/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a><a class="tag" href="/tags/token/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>token</a></div>
 
 <div class="article-footer slide-up">
     <section id="license">

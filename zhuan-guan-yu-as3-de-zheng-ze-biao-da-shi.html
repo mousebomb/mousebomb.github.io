@@ -249,6 +249,7 @@ background:var(--block);color:var(--text-p1)}
   --icon-loading: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.67%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.33%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E");
 }</style>
   
+  <link rel="canonical" href="https://flashj.cn/zhuan-guan-yu-as3-de-zheng-ze-biao-da-shi.html">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left leftbar-card" data-ui-surface="card"><div class="sidebg"></div><div class="leftbar-container">
 
@@ -702,7 +703,7 @@ background:var(--block);color:var(--text-p1)}
 <article class="md-text content slide-up"><p>正则式是一项非常好的文本处理方式, 它可以很方便的检查文本格式, 搜索文本中的内容, 以及替换文本的内容, 比如通常去除文本的前端空格和后端空格的功能, 使用下面的正则式即可完成:<br>&#x2F;*</p>
 <ul>
 <li>去除字符串前面的空格和跳格符<br><em>&#x2F;<br>var src:String&#x3D;” Hello! “;<br>trace(“&quot;“+src+”&quot;“);    &#x2F;&#x2F;原文本<br>trace(“&quot;“+src.replace(&#x2F;^\s</em>&#x2F;g,””)+”&quot;“);    &#x2F;&#x2F;去掉前面的空格<br>trace(“&quot;“+src.replace(&#x2F;\s*$&#x2F;g,””)+”&quot;“);    &#x2F;&#x2F;去掉后面的空格  由于个人习惯的原因, 我对AS3的正则式进行了一些封装, 封装之后, 由Regex, RegexOptions, Match和MatchCollection四个类组成, 以下的代码中都用到了这几个类比如检查用户输入的一个文本是否是一个合法的邮箱地址, 可以使用下面的正则式进行检查:<br>&#x2F;*</li>
-<li>检查文本是否是一个邮箱地址<br><em>&#x2F;<br>var regexp:Regexp&#x3D;new Regexp(“^[\w-]+(\.[\w-]+)</em>@[\w-]+(\.[\w-]+)+$”);<br>var email1:String&#x3D;”<a href="mailto:&#116;&#104;&#x6f;&#114;&#x2e;&#110;&#x65;&#x74;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">thor.net@gmail.com</a>“;<br>var email2:String&#x3D;”thor.net@gmail_com”;</li>
+<li>检查文本是否是一个邮箱地址<br><em>&#x2F;<br>var regexp:Regexp&#x3D;new Regexp(“^[\w-]+(\.[\w-]+)</em>@[\w-]+(\.[\w-]+)+$”);<br>var email1:String&#x3D;”<a href="mailto:&#x74;&#x68;&#111;&#114;&#46;&#110;&#x65;&#116;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">thor.net@gmail.com</a>“;<br>var email2:String&#x3D;”thor.net@gmail_com”;</li>
 </ul>
 <span id="more"></span>
 

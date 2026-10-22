@@ -73,11 +73,11 @@
     
     <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
-    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
-    
     <category term="插件" scheme="https://flashj.cn/tags/%E6%8F%92%E4%BB%B6/"/>
     
     <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
     
     <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
     
@@ -107,9 +107,9 @@
     
     <category term="工具软件" scheme="https://flashj.cn/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     
-    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
-    
     <category term="插件" scheme="https://flashj.cn/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
     
     <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
     
@@ -391,9 +391,9 @@
     
     <category term="agent" scheme="https://flashj.cn/tags/agent/"/>
     
-    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
-    
     <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
     
     <category term="CommandCode" scheme="https://flashj.cn/tags/CommandCode/"/>
     
@@ -459,17 +459,17 @@
     
     <category term="agent" scheme="https://flashj.cn/tags/agent/"/>
     
-    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
-    
     <category term="配置" scheme="https://flashj.cn/tags/%E9%85%8D%E7%BD%AE/"/>
     
-    <category term="token" scheme="https://flashj.cn/tags/token/"/>
+    <category term="OpenCode" scheme="https://flashj.cn/tags/OpenCode/"/>
     
     <category term="CommandCode" scheme="https://flashj.cn/tags/CommandCode/"/>
     
     <category term="goat" scheme="https://flashj.cn/tags/goat/"/>
     
     <category term="Paseo" scheme="https://flashj.cn/tags/Paseo/"/>
+    
+    <category term="token" scheme="https://flashj.cn/tags/token/"/>
     
   </entry>
   
@@ -529,9 +529,9 @@
     
     <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
     
-    <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
-    
     <category term="agent" scheme="https://flashj.cn/tags/agent/"/>
+    
+    <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
     
     <category term="qwen" scheme="https://flashj.cn/tags/qwen/"/>
     

@@ -31,16 +31,16 @@
 <meta property="article:modified_time" content="2026-10-22T09:18:52.049Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="工具软件">
-<meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="插件">
 <meta property="article:tag" content="配置">
+<meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="Paseo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/opencode.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
   
   
-  <meta name="keywords" content="工具软件,OpenCode,插件,配置,Paseo">
+  <meta name="keywords" content="工具软件,插件,配置,OpenCode,Paseo">
 
   <!-- feed -->
   
@@ -63,7 +63,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-10-19T18:10:00+08:00","dateModified":"2026-10-22T17:18:52+08:00","datePublished":"2026-10-19T18:10:00+08:00","description":"我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也正常。翻了 0.6.0 的源码才明白——V2 的 server 端把 delivery 硬编码成 \"command\"，声音弹窗全被强制关掉，只留一个自定义命令的出口，而声音被挪去了我根本不加载的 TUI 组件。","headline":"升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html","keywords":"工具软件, OpenCode, 插件, 配置, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/opencode.webp","image":["https://cdn.mousebomb.org/blog/auto/opencode.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-10-19T18:10:00+08:00","dateModified":"2026-10-22T17:18:52+08:00","datePublished":"2026-10-19T18:10:00+08:00","description":"我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也正常。翻了 0.6.0 的源码才明白——V2 的 server 端把 delivery 硬编码成 \"command\"，声音弹窗全被强制关掉，只留一个自定义命令的出口，而声音被挪去了我根本不加载的 TUI 组件。","headline":"升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html","keywords":"工具软件, 插件, 配置, OpenCode, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/opencode.webp","image":["https://cdn.mousebomb.org/blog/auto/opencode.webp"]}</script>
   <script>
 (function () {
   try {
@@ -250,6 +250,7 @@ background:var(--block);color:var(--text-p1)}
   --icon-loading: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.67%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22.33%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%220%22%20fill%3D%22currentColor%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220%22%20calcMode%3D%22spline%22%20dur%3D%221.5s%22%20keySplines%3D%220.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%3B0.2%200.2%200.4%200.8%22%20repeatCount%3D%22indefinite%22%20values%3D%220%3B2%3B0%3B0%22%2F%3E%3C%2Fcircle%3E%3C%2Fsvg%3E");
 }</style>
   
+  <link rel="canonical" href="https://flashj.cn/opencode-notifier-v2-delivery-silent.html">
   <link rel="alternate" hreflang="zh-CN" href="https://flashj.cn/opencode-notifier-v2-delivery-silent.html">
   <link rel="alternate" hreflang="en" href="https://flashj.cn/en/opencode-notifier-v2-delivery-silent.html">
   <link rel="alternate" hreflang="x-default" href="https://flashj.cn/opencode-notifier-v2-delivery-silent.html">
@@ -817,7 +818,7 @@ exec /usr/bin/afplay -v 1 "$SOUND_DIR/$file"
 <p>以后再遇到“配置没错但就是不生效”，我的第一反应会改成：<strong>先找一个能证明代码真的执行到了这里的副作用</strong>。这次就是那个 <code>turn</code> 计数器——它比日志诚实多了。</p>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>工具软件</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/%E6%8F%92%E4%BB%B6/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>插件</a><a class="tag" href="/tags/%E9%85%8D%E7%BD%AE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>配置</a><a class="tag" href="/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>工具软件</a><a class="tag" href="/tags/%E6%8F%92%E4%BB%B6/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>插件</a><a class="tag" href="/tags/%E9%85%8D%E7%BD%AE/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>配置</a><a class="tag" href="/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a></div>
 
 <div class="article-footer slide-up">
     <section id="references">

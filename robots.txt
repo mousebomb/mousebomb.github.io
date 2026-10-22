@@ -1,0 +1,8 @@
+# 全站放行。注意：百度不支持 * 通配符，所以不要写 Disallow: *.rar 这类规则，
+# 它只会被当成字面路径前缀，等于没写。大文件靠 sitemap 之外的方式管理。
+User-agent: *
+Allow: /
+Disallow: /search.html
+Disallow: /*/search.html
+
+Sitemap: https://flashj.cn/sitemap.xml
