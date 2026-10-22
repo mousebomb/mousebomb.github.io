@@ -344,6 +344,24 @@ background:var(--block);color:var(--text-p1)}
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/php5-no-patch-legacy-cleanup.html" title="清理堆积十余年的站点遗产，送走 PHP5.6">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">清理堆积十余年的站点遗产，送走 PHP5.6</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
   
   
@@ -649,24 +667,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo.html" title="神器Paseo，打通多家编程智能体">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">神器Paseo，打通多家编程智能体</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -709,7 +709,7 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>Document Class :</strong></p>
 <p>package org.mousebomb.dragLiToCanvas<br>{<br>import fl.events.ListEvent;<br>import fl.controls.List;<br>import fl.data.DataProvider;</p>
 <p>import flash.display.Sprite;<br>import flash.events.MouseEvent;<br>import flash.geom.Point;<br>import flash.utils.getDefinitionByName;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#111;&#117;&#x73;&#x65;&#x62;&#111;&#x6d;&#x62;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#x6f;&#x75;&#x73;&#101;&#x62;&#x6f;&#109;&#98;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
 <p>public function DragListItemToCanvas()<br>{<br>&#x2F;&#x2F;如果不写下面这一行，flash不会将此类编译进去，运行时会报错<br>Class1;<br>Class2;<br>&#x2F;&#x2F;创建list的内容<br>list.dataProvider &#x3D; new DataProvider();<br>list.addItem({label:”有胆你就拖拽我”, data:”org.mousebomb.dragLiToCanvas.Class1”});<br>list.addItem({label:”我和楼上一样”, data:”org.mousebomb.dragLiToCanvas.Class2”});<br>list.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDownH);<br>list.addEventListener(ListEvent.ITEM_ROLL_OVER, onHoverLi);<br>list.addEventListener(ListEvent.ITEM_ROLL_OUT, onOutLi);<br>stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUpH);<br>}</p>
 <p>private function onOutLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; false;<br>curHoverLi &#x3D; null;<br>}</p>
 <p>private function onHoverLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; true;<br>curHoverLi &#x3D; event.item;<br>}</p>

@@ -26,17 +26,17 @@
 <meta property="og:site_name" content="『 闪 界 』">
 <meta property="og:description" content="我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也正常。翻了 0.6.0 的源码才明白——V2 的 server 端把 delivery 硬编码成 &quot;command&quot;，声音弹窗全被强制关掉，只留一个自定义命令的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.mousebomb.org/blog/avatar.png">
+<meta property="og:image" content="https://cdn.mousebomb.org/blog/auto/opencode.webp">
 <meta property="article:published_time" content="2026-10-19T10:10:00.000Z">
-<meta property="article:modified_time" content="2026-10-19T10:16:24.303Z">
+<meta property="article:modified_time" content="2026-10-22T09:18:52.049Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="工具软件">
 <meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="插件">
 <meta property="article:tag" content="配置">
 <meta property="article:tag" content="Paseo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.mousebomb.org/blog/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/opencode.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
   
   
@@ -63,7 +63,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-10-19T18:10:00+08:00","dateModified":"2026-10-19T18:16:24+08:00","datePublished":"2026-10-19T18:10:00+08:00","description":"我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也正常。翻了 0.6.0 的源码才明白——V2 的 server 端把 delivery 硬编码成 \"command\"，声音弹窗全被强制关掉，只留一个自定义命令的出口，而声音被挪去了我根本不加载的 TUI 组件。","headline":"升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html","keywords":"工具软件, OpenCode, 插件, 配置, Paseo","thumbnailUrl":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg","image":["https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-10-19T18:10:00+08:00","dateModified":"2026-10-22T17:18:52+08:00","datePublished":"2026-10-19T18:10:00+08:00","description":"我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也正常。翻了 0.6.0 的源码才明白——V2 的 server 端把 delivery 硬编码成 \"command\"，声音弹窗全被强制关掉，只留一个自定义命令的出口，而声音被挪去了我根本不加载的 TUI 组件。","headline":"升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/opencode-notifier-v2-delivery-silent.html","keywords":"工具软件, OpenCode, 插件, 配置, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/opencode.webp","image":["https://cdn.mousebomb.org/blog/auto/opencode.webp"]}</script>
   <script>
 (function () {
   try {
@@ -343,6 +343,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/php5-no-patch-legacy-cleanup.html" title="清理堆积十余年的站点遗产，送走 PHP5.6">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">清理堆积十余年的站点遗产，送走 PHP5.6</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
@@ -650,24 +668,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo.html" title="神器Paseo，打通多家编程智能体">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">神器Paseo，打通多家编程智能体</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -684,13 +684,13 @@ background:var(--block);color:var(--text-p1)}
 
 
 
-<div class="article-banner-wrap slide-up"><div class="article banner top">
-  <div class="content">
-    
+<div class="article-banner-wrap slide-up"><div class="article banner top" style="--bg-url:url('https://cdn.mousebomb.org/blog/auto/opencode.webp')"><img class="lazy bg" data-src="https://cdn.mousebomb.org/blog/auto/opencode.webp">
+  <div class="content" data-text-adaptive="split">
+    <div class="banner-mask banner-mask-top" aria-hidden="true"></div><div class="banner-mask banner-mask-bottom" aria-hidden="true"></div>
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件</a>
-</div><div class="right"><span class="cap reading">1450 字 · 预计阅读 5 分钟</span><span class="cap ai-label" style="color:#ff9800"><svg class="icon" data-icon="default:shield-warning" aria-hidden="true"></svg>由 AI 生成</span></div></div><div class="meta-row">
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-10-19T10:10:00.000Z">2026-10-19</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-19T10:16:24.303Z">2026-10-19</time></span></div>
+</div><div class="right"><span class="cap reading">1450 字 · 预计阅读 5 分钟</span><span class="cap ai-label"><svg class="icon" data-icon="default:shield-warning" aria-hidden="true"></svg>由 AI 生成</span></div></div><div class="meta-row">
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-10-19T10:10:00.000Z">2026-10-19</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-10-22T09:18:52.049Z">2026-10-22</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -846,7 +846,7 @@ exec /usr/bin/afplay -v 1 "$SOUND_DIR/$file"
 
 </div>
 
-<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/paseo-plugins.html">Paseo的插件目录</a></div></section></div>
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/php5-no-patch-legacy-cleanup.html">清理堆积十余年的站点遗产，送走 PHP5.6</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/paseo-plugins.html">Paseo的插件目录</a></div></section></div>
 
 <div class="related-wrap slide-up" id="related-posts">
     <section class='header'>

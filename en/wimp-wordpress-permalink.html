@@ -32,9 +32,9 @@
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="404">
 <meta property="article:tag" content="iis">
+<meta property="article:tag" content="wordpress">
 <meta property="article:tag" content="wimp">
 <meta property="article:tag" content="windows">
-<meta property="article:tag" content="wordpress">
 <meta property="article:tag" content="Chinese TAG">
 <meta property="article:tag" content="permalink">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +42,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="WordPress permalinks under wimp">
   
   
-  <meta name="keywords" content="404,iis,wimp,windows,wordpress,Chinese TAG,permalink">
+  <meta name="keywords" content="404,iis,wordpress,wimp,windows,Chinese TAG,permalink">
 
   <!-- feed -->
   
@@ -65,7 +65,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-07-16T12:54:44+08:00","dateModified":"2009-07-16T12:54:44+08:00","datePublished":"2009-07-16T12:54:44+08:00","description":"Not long ago I switched from LAMP to WIMP (windows2k3+iis6+mysql5.2+php5.2), and WordPress lost two important features: one is permalinks (static URLs), and the other is email sending.\nI’ve just perfectly solved the permalink problem, so I’ll share the method. (A so-called permalink is something like http://www.flashj.cn/wp/wimp-wordpress-permalink.html这样的格式)\nBecause Windows doesn’t support .htaccess, to do rewrite you need to download an ISAPI_Rewrite component to implement rewriting. I tried it, and personally I didn’t find the result very ideal.","headline":"WordPress permalinks under wimp","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/wimp-wordpress-permalink.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/wimp-wordpress-permalink.html","keywords":"404, iis, wimp, windows, wordpress, Chinese TAG, permalink","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-07-16T12:54:44+08:00","dateModified":"2009-07-16T12:54:44+08:00","datePublished":"2009-07-16T12:54:44+08:00","description":"Not long ago I switched from LAMP to WIMP (windows2k3+iis6+mysql5.2+php5.2), and WordPress lost two important features: one is permalinks (static URLs), and the other is email sending.\nI’ve just perfectly solved the permalink problem, so I’ll share the method. (A so-called permalink is something like http://www.flashj.cn/wp/wimp-wordpress-permalink.html这样的格式)\nBecause Windows doesn’t support .htaccess, to do rewrite you need to download an ISAPI_Rewrite component to implement rewriting. I tried it, and personally I didn’t find the result very ideal.","headline":"WordPress permalinks under wimp","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/wimp-wordpress-permalink.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/wimp-wordpress-permalink.html","keywords":"404, iis, wordpress, wimp, windows, Chinese TAG, permalink","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"]}</script>
   <script>
 (function () {
   try {
@@ -345,6 +345,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/php5-no-patch-legacy-cleanup.html" title="Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/opencode-notifier-v2-delivery-silent.html" title="No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap">
@@ -652,24 +670,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/paseo.html" title="Paseo, the killer tool that connects multiple coding agents">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">Paseo, the killer tool that connects multiple coding agents</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -740,7 +740,7 @@ background:var(--block);color:var(--text-p1)}
 <p>I’ll go continue looking into how to get the email feature working…</p>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/en/tags/404/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>404</a><a class="tag" href="/en/tags/iis/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>iis</a><a class="tag" href="/en/tags/wimp/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wimp</a><a class="tag" href="/en/tags/windows/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>windows</a><a class="tag" href="/en/tags/wordpress/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wordpress</a><a class="tag" href="/en/tags/Chinese-TAG/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Chinese TAG</a><a class="tag" href="/en/tags/permalink/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>permalink</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/404/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>404</a><a class="tag" href="/en/tags/iis/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>iis</a><a class="tag" href="/en/tags/wordpress/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wordpress</a><a class="tag" href="/en/tags/wimp/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wimp</a><a class="tag" href="/en/tags/windows/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>windows</a><a class="tag" href="/en/tags/Chinese-TAG/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Chinese TAG</a><a class="tag" href="/en/tags/permalink/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>permalink</a></div>
 
 <div class="article-footer slide-up">
     <section id="license">
@@ -759,7 +759,7 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;asp-404-iis-asp-err.html" title="The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?"><span class="title">The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?</span></a><a class="item" href="&#x2F;en&#x2F;iis-404.html" title="A gotcha with 404 error pages under IIS"><span class="title">A gotcha with 404 error pages under IIS</span></a><a class="item" href="&#x2F;en&#x2F;phpmyadmin-warning-require-oncelibrariescommonlibphp-fatal-error-solution.html" title="The file is clearly there, yet require_once(.&#x2F;*.php) throws an error"><span class="title">The file is clearly there, yet require_once(.&#x2F;*.php) throws an error</span><span class="excerpt">Problem description:Right after installing PMA, accessing it in Firefox shows a blank page with no output at all. In ...</span></a><a class="item" href="&#x2F;en&#x2F;fluorinefx-rtmp-need2know.html" title="What you need to know about developing an RTMP server using FluorineFx"><span class="title">What you need to know about developing an RTMP server using FluorineFx</span><span class="excerpt">This article is a document translated specifically for my partner to read; since it might help some folks, I’m also p...</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;asp-404-iis-asp-err.html" title="The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?"><span class="title">The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?</span></a><a class="item" href="&#x2F;en&#x2F;iis-404.html" title="A gotcha with 404 error pages under IIS"><span class="title">A gotcha with 404 error pages under IIS</span></a><a class="item" href="&#x2F;en&#x2F;phpmyadmin-warning-require-oncelibrariescommonlibphp-fatal-error-solution.html" title="The file is clearly there, yet require_once(.&#x2F;*.php) throws an error"><span class="title">The file is clearly there, yet require_once(.&#x2F;*.php) throws an error</span><span class="excerpt">Problem description:Right after installing PMA, accessing it in Firefox shows a blank page with no output at all. In ...</span></a><a class="item" href="&#x2F;en&#x2F;php5-no-patch-legacy-cleanup.html" title="Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6"><span class="title">Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6</span><span class="excerpt">A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the...</span></a><a class="item" href="&#x2F;en&#x2F;fluorinefx-rtmp-need2know.html" title="What you need to know about developing an RTMP server using FluorineFx"><span class="title">What you need to know about developing an RTMP server using FluorineFx</span><span class="excerpt">This article is a document translated specifically for my partner to read; since it might help some folks, I’m also p...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">

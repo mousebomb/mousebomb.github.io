@@ -32,9 +32,9 @@
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="404">
 <meta property="article:tag" content="iis">
+<meta property="article:tag" content="wordpress">
 <meta property="article:tag" content="wimp">
 <meta property="article:tag" content="windows">
-<meta property="article:tag" content="wordpress">
 <meta property="article:tag" content="中文TAG">
 <meta property="article:tag" content="永久链接">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +42,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="wimp下wordpress永久链接">
   
   
-  <meta name="keywords" content="404,iis,wimp,windows,wordpress,中文TAG,永久链接">
+  <meta name="keywords" content="404,iis,wordpress,wimp,windows,中文TAG,永久链接">
 
   <!-- feed -->
   
@@ -65,7 +65,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-07-16T12:54:44+08:00","dateModified":"2009-07-16T12:54:44+08:00","datePublished":"2009-07-16T12:54:44+08:00","description":"前不久又从lamp换成wimp(windows2k3+iis6+mysql5.2+php5.2)，wordpress丧失了两个重要功能： 一个是永久链接（静态化），一个是邮件发送。\n现在刚刚完美解决了永久链接的问题，分享方法。 （所谓永久链接（permalink），就是像http://www.flashj.cn/wp/wimp-wordpress-permalink.html这样的格式）\n因为windows下不支持.htaccess，所以要想rewrite，需要下载一个ISAPI_Rewrite组件来实现rewrite。我试过，个人感觉效果并不理想。","headline":"wimp下wordpress永久链接","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/wimp-wordpress-permalink.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/wimp-wordpress-permalink.html","keywords":"404, iis, wimp, windows, wordpress, 中文TAG, 永久链接","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2009-07-16T12:54:44+08:00","dateModified":"2009-07-16T12:54:44+08:00","datePublished":"2009-07-16T12:54:44+08:00","description":"前不久又从lamp换成wimp(windows2k3+iis6+mysql5.2+php5.2)，wordpress丧失了两个重要功能： 一个是永久链接（静态化），一个是邮件发送。\n现在刚刚完美解决了永久链接的问题，分享方法。 （所谓永久链接（permalink），就是像http://www.flashj.cn/wp/wimp-wordpress-permalink.html这样的格式）\n因为windows下不支持.htaccess，所以要想rewrite，需要下载一个ISAPI_Rewrite组件来实现rewrite。我试过，个人感觉效果并不理想。","headline":"wimp下wordpress永久链接","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/wimp-wordpress-permalink.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/wimp-wordpress-permalink.html","keywords":"404, iis, wordpress, wimp, windows, 中文TAG, 永久链接","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"]}</script>
   <script>
 (function () {
   try {
@@ -345,6 +345,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/php5-no-patch-legacy-cleanup.html" title="清理堆积十余年的站点遗产，送走 PHP5.6">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">清理堆积十余年的站点遗产，送走 PHP5.6</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/opencode-notifier-v2-delivery-silent.html" title="升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱">
@@ -652,24 +670,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/paseo.html" title="神器Paseo，打通多家编程智能体">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">神器Paseo，打通多家编程智能体</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -727,7 +727,7 @@ background:var(--block);color:var(--text-p1)}
 <p>我继续去看看邮件功能要怎么搞……</p>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/tags/404/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>404</a><a class="tag" href="/tags/iis/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>iis</a><a class="tag" href="/tags/wimp/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wimp</a><a class="tag" href="/tags/windows/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>windows</a><a class="tag" href="/tags/wordpress/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wordpress</a><a class="tag" href="/tags/%E4%B8%AD%E6%96%87TAG/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>中文TAG</a><a class="tag" href="/tags/%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>永久链接</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/tags/404/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>404</a><a class="tag" href="/tags/iis/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>iis</a><a class="tag" href="/tags/wordpress/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wordpress</a><a class="tag" href="/tags/wimp/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wimp</a><a class="tag" href="/tags/windows/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>windows</a><a class="tag" href="/tags/%E4%B8%AD%E6%96%87TAG/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>中文TAG</a><a class="tag" href="/tags/%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>永久链接</a></div>
 
 <div class="article-footer slide-up">
     <section id="license">
@@ -749,7 +749,7 @@ background:var(--block);color:var(--text-p1)}
     <div class="related-posts"><a class="item" href="&#x2F;asp-404-iis-asp-err.html" title="明明存在的asp却显示404错误-IIS不能显示asp?"><span class="title">明明存在的asp却显示404错误-IIS不能显示asp?</span></a><a class="item" href="&#x2F;iis-404.html" title="IIS下404错误页一个注意点"><span class="title">IIS下404错误页一个注意点</span></a><a class="item" href="&#x2F;phpmyadmin-warning-require-oncelibrariescommonlibphp-fatal-error-solution.html" title="文件明明存在，却require_once(.&#x2F;*.php)出错"><span class="title">文件明明存在，却require_once(.&#x2F;*.php)出错</span><span class="excerpt">问题描述：刚装好PMA，在火狐中访问，会看到白板，什么都没输出。使用IE可以看到500错误(服务器内部错误)
 打开报错后发现
 
-Warning: require_once(.&#x2F;libraries&#x2F;common.in...</span></a><a class="item" href="&#x2F;fluorinefx-rtmp-need2know.html" title="使用FluorineFx开发RTMP服务器端需要了解的"><span class="title">使用FluorineFx开发RTMP服务器端需要了解的</span><span class="excerpt">本文是专门翻译给搭档看的文档，因为可能对某些同学有帮助，所以也贴出来供有需要的人参考。要是不适合你的情况我可无法负责哦。另外，本文是word（页面大小A3）直接导出的，冗余代码太多，懒得改动了，显示分辨率宽度低于1280的兄台阅读时可...</span></a></div></section></div>
+Warning: require_once(.&#x2F;libraries&#x2F;common.in...</span></a><a class="item" href="&#x2F;php5-no-patch-legacy-cleanup.html" title="清理堆积十余年的站点遗产，送走 PHP5.6"><span class="title">清理堆积十余年的站点遗产，送走 PHP5.6</span><span class="excerpt">一个 CVSS 9.2、无需登录就能远程执行代码的 PHP 漏洞，官方修复只覆盖 8.2 到 8.5。我服务器上跑的是 5.6，没有补丁，也没有回移。上午我本来只想确认一下自己受多大影响，结果一路查下去，给持续十几年堆叠、不断熵增的站...</span></a><a class="item" href="&#x2F;fluorinefx-rtmp-need2know.html" title="使用FluorineFx开发RTMP服务器端需要了解的"><span class="title">使用FluorineFx开发RTMP服务器端需要了解的</span><span class="excerpt">本文是专门翻译给搭档看的文档，因为可能对某些同学有帮助，所以也贴出来供有需要的人参考。要是不适合你的情况我可无法负责哦。另外，本文是word（页面大小A3）直接导出的，冗余代码太多，懒得改动了，显示分辨率宽度低于1280的兄台阅读时可...</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
