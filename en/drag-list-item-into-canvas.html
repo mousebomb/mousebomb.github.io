@@ -710,7 +710,7 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>Document Class :</strong></p>
 <p>package org.mousebomb.dragLiToCanvas<br>{<br>import fl.events.ListEvent;<br>import fl.controls.List;<br>import fl.data.DataProvider;</p>
 <p>import flash.display.Sprite;<br>import flash.events.MouseEvent;<br>import flash.geom.Point;<br>import flash.utils.getDefinitionByName;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#111;&#117;&#x73;&#x65;&#98;&#111;&#109;&#98;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#109;&#111;&#x75;&#115;&#101;&#x62;&#111;&#109;&#x62;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-4-27<br> *&#x2F;<br>public class DragListItemToCanvas extends Sprite<br>{<br>public var list : List;<br>public var canvas : Sprite;<br>private var isHoverLi : Boolean &#x3D; false;<br>private var curHoverLi : Object ;</p>
 <p>public function DragListItemToCanvas()<br>{<br>&#x2F;&#x2F;If you don’t write the following line, flash won’t compile this class in, and you’ll get an error at runtime<br>Class1;<br>Class2;<br>&#x2F;&#x2F;Create the list contents<br>list.dataProvider &#x3D; new DataProvider();<br>list.addItem({label:”Drag me if you dare”, data:”org.mousebomb.dragLiToCanvas.Class1”});<br>list.addItem({label:”I’m the same as the guy above”, data:”org.mousebomb.dragLiToCanvas.Class2”});<br>list.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDownH);<br>list.addEventListener(ListEvent.ITEM_ROLL_OVER, onHoverLi);<br>list.addEventListener(ListEvent.ITEM_ROLL_OUT, onOutLi);<br>stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUpH);<br>}</p>
 <p>private function onOutLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; false;<br>curHoverLi &#x3D; null;<br>}</p>
 <p>private function onHoverLi(event : ListEvent) : void<br>{<br>isHoverLi &#x3D; true;<br>curHoverLi &#x3D; event.item;<br>}</p>
@@ -739,8 +739,8 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;addeventlistener-with-arg.html" title="Passing parameters to addEventListener event listeners"><span class="title">Passing parameters to addEventListener event listeners</span><span class="excerpt">In AS3, an addEventListener listener automatically passes an event object argument to the handler function, but it ca...</span></a><a class="item" href="&#x2F;en&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[Download]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[Download]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds Book Overview
-The demand for multiplayer games and virtual worl...</span></a><a class="item" href="&#x2F;en&#x2F;adobe-air-15-cookbook.html" title="Adobe AIR 1.5 Cookbook!"><span class="title">Adobe AIR 1.5 Cookbook!</span><span class="excerpt">The Adobe AIR 1.5 Cookbook is out.
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;actionscript-for-multiplayer-games-and-virtual-worlds.html" title="ActionScript for Multiplayer Games and Virtual Worlds[Download]"><span class="title">ActionScript for Multiplayer Games and Virtual Worlds[Download]</span><span class="excerpt">ActionScript for Multiplayer Games and Virtual Worlds Book Overview
+The demand for multiplayer games and virtual worl...</span></a><a class="item" href="&#x2F;en&#x2F;addeventlistener-with-arg.html" title="Passing parameters to addEventListener event listeners"><span class="title">Passing parameters to addEventListener event listeners</span><span class="excerpt">In AS3, an addEventListener listener automatically passes an event object argument to the handler function, but it ca...</span></a><a class="item" href="&#x2F;en&#x2F;adobe-air-15-cookbook.html" title="Adobe AIR 1.5 Cookbook!"><span class="title">Adobe AIR 1.5 Cookbook!</span><span class="excerpt">The Adobe AIR 1.5 Cookbook is out.
 
 In addition to AIR 1.5 being released today, the Adobe AIR 1.5 Cookbook is also b...</span></a><a class="item" href="&#x2F;en&#x2F;air-come-to-dock-taskbar-src.html" title="Sharing Practical Code for Minimizing an AIR App to the System Tray (Windows)"><span class="title">Sharing Practical Code for Minimizing an AIR App to the System Tray (Windows)</span><span class="excerpt">Fanfou 1.7 released, sharing part of the code for the newly added minimize-to-system-tray feature:</span></a><a class="item" href="&#x2F;en&#x2F;2011-3-27天地行北京站.html" title="2011.3.27 Tiandixing Beijing Stop"><span class="title">2011.3.27 Tiandixing Beijing Stop</span><span class="excerpt">Latest Events2011 RIA Tian Di Xing Beijing City Elite Forum
 Event Time: 2011.3.27
@@ -844,13 +844,31 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
 
   
     
-<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.molayc.com/blog/" title="molayc" style="--item-grad:url(#leftbar-active-icon-grad);">
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.sunshineg.com/" title="SUNNY GAO" style="--item-grad:url(#leftbar-active-icon-grad);">
   
   
   
     <span class="ui-collection__content">
       
-      <span class="ui-collection__title">molayc</span>
+      <span class="ui-collection__title">SUNNY GAO</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="https://www.nshen.net" title="Nshen" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Nshen</span>
       
       
     </span>
@@ -869,24 +887,6 @@ Registration Period: 2011.3.7-2011....</span></a></div></section></div>
     <span class="ui-collection__content">
       
       <span class="ui-collection__title">Seven</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.sunshineg.com/" title="SUNNY GAO" style="--item-grad:url(#leftbar-active-icon-grad);">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">SUNNY GAO</span>
       
       
     </span>

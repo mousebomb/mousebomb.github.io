@@ -720,7 +720,7 @@ background:var(--block);color:var(--text-p1)}
 <p><strong>Document Class :</strong></p>
 <p>package<br>{<br>import org.mousebomb.Math.MousebombMath;<br>import org.mousebomb.bmpdisplay.Animation;<br>import org.mousebomb.bmpdisplay.BmdObject;<br>import org.mousebomb.bmpdisplay.BmdResourcePool;<br>import org.mousebomb.bmpdisplay.BmpDisplayObject;<br>import org.mousebomb.bmpdisplay.Image;<br>import org.mousebomb.utils.SystemStatus;</p>
 <p>import flash.display.Sprite;<br>import flash.display.StageAlign;</p>
-<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#x6f;&#x75;&#115;&#101;&#x62;&#111;&#109;&#x62;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">mousebomb@gmail.com</a>)<br> * @date 2010-6-21<br> *&#x2F;<br>public class BmdEngineMC extends Sprite<br>{<br>&#x2F;**<br> * BMD化的测试<br> *&#x2F;</p>
+<p>&#x2F;**<br> * @author Mousebomb (<a href="mailto:&#x6d;&#111;&#117;&#115;&#x65;&#x62;&#x6f;&#x6d;&#x62;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">mousebomb@gmail.com</a>)<br> * @date 2010-6-21<br> *&#x2F;<br>public class BmdEngineMC extends Sprite<br>{<br>&#x2F;**<br> * BMD化的测试<br> *&#x2F;</p>
 <p>private var bmdStage : BmpDisplayObject;<br>private var bmdRoot : Image; </p>
 <p>public function BmdEngineMC()<br>{<br>bmdRoot &#x3D; new Image(800, 600);<br>bmdStage &#x3D; new BmpDisplayObject(bmdRoot);<br>&#x2F;&#x2F;创建位图序列<br>var src : MovieClip &#x3D; new RoleD();<br>BmdResourcePool.getInstance().regResource(“roleD”, src);<br>addChild(bmdStage);</p>
 <p>for (var i : int &#x3D; 0;i &lt; 1500;i++)<br>{<br>var bmdChild : BmdObject &#x3D; BmdResourcePool.getInstance().getNewResource(“roleD”);<br>(bmdChild as Animation).play();<br>bmdChild.x &#x3D; MousebombMath.randomFromRange(20, 600);<br>bmdChild.y &#x3D; MousebombMath.randomFromRange(20, 550);<br>bmdRoot.addChild(bmdChild);<br>}<br>&#x2F;&#x2F;开始渲染<br>bmdStage.renderEnterFrame &#x3D; true;<br>this.stage.align &#x3D; StageAlign.TOP_LEFT;<br>addChild(SystemStatus.getInstance());<br>}<br>}<br>}</p>
@@ -852,13 +852,31 @@ The demand for multiplayer games and virtual worlds has exp...</span></a><a clas
 
   
     
-<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.molayc.com/blog/" title="molayc" style="--item-grad:url(#leftbar-active-icon-grad);">
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.sunshineg.com/" title="高阳" style="--item-grad:url(#leftbar-active-icon-grad);">
   
   
   
     <span class="ui-collection__content">
       
-      <span class="ui-collection__title">molayc</span>
+      <span class="ui-collection__title">高阳</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="https://www.nshen.net" title="N神" style="--item-grad:url(#leftbar-active-icon-grad);">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">N神</span>
       
       
     </span>
@@ -877,24 +895,6 @@ The demand for multiplayer games and virtual worlds has exp...</span></a><a clas
     <span class="ui-collection__content">
       
       <span class="ui-collection__title">Seven</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" target="_blank" rel="noopener" href="http://www.sunshineg.com/" title="高阳" style="--item-grad:url(#leftbar-active-icon-grad);">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">高阳</span>
       
       
     </span>
