@@ -35,16 +35,16 @@
 <meta property="article:tag" content="agent">
 <meta property="article:tag" content="OpenCode">
 <meta property="article:tag" content="Configuration">
+<meta property="article:tag" content="token">
 <meta property="article:tag" content="CommandCode">
 <meta property="article:tag" content="goat">
 <meta property="article:tag" content="Paseo">
-<meta property="article:tag" content="token">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header">
   
   
-  <meta name="keywords" content="AI,LLM,agent,OpenCode,Configuration,CommandCode,goat,Paseo,token">
+  <meta name="keywords" content="AI,LLM,agent,OpenCode,Configuration,token,CommandCode,goat,Paseo">
 
   <!-- feed -->
   
@@ -67,7 +67,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-31T22:13:00+08:00","dateModified":"2026-08-31T22:13:00+08:00","datePublished":"2026-08-31T22:13:00+08:00","description":"I bought CommandCode's goat plan and wanted to use it as my main plan in opencode. The whole integration takes just two steps: first /connect to save the API key, then declare the provider in opencode.json. The goat plan requires an x-cmd-zdr: 1 header on every request, and testing confirmed you can add that in the config too.","headline":"Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/opencode-goat-commandcode-config.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/opencode-goat-commandcode-config.html","keywords":"AI, LLM, agent, OpenCode, Configuration, CommandCode, goat, Paseo, token","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-31T22:13:00+08:00","dateModified":"2026-08-31T22:13:00+08:00","datePublished":"2026-08-31T22:13:00+08:00","description":"I bought CommandCode's goat plan and wanted to use it as my main plan in opencode. The whole integration takes just two steps: first /connect to save the API key, then declare the provider in opencode.json. The goat plan requires an x-cmd-zdr: 1 header on every request, and testing confirmed you can add that in the config too.","headline":"Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/opencode-goat-commandcode-config.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/opencode-goat-commandcode-config.html","keywords":"AI, LLM, agent, OpenCode, Configuration, token, CommandCode, goat, Paseo","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp","image":["https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp"]}</script>
   <script>
 (function () {
   try {
@@ -1562,7 +1562,7 @@ ZDR ✗  xai/grok-4.6 (422)
 </code></pre>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/en/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/en/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/en/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/en/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/en/tags/Configuration/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Configuration</a><a class="tag" href="/en/tags/CommandCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CommandCode</a><a class="tag" href="/en/tags/goat/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>goat</a><a class="tag" href="/en/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a><a class="tag" href="/en/tags/token/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>token</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/en/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/en/tags/agent/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>agent</a><a class="tag" href="/en/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/en/tags/Configuration/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Configuration</a><a class="tag" href="/en/tags/token/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>token</a><a class="tag" href="/en/tags/CommandCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>CommandCode</a><a class="tag" href="/en/tags/goat/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>goat</a><a class="tag" href="/en/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a></div>
 
 <div class="article-footer slide-up">
     <section id="license">
