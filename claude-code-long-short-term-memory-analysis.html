@@ -31,14 +31,14 @@
 <meta property="article:modified_time" content="2026-04-01T14:03:00.000Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="AI">
-<meta property="article:tag" content="LLM">
 <meta property="article:tag" content="ClaudeCode">
+<meta property="article:tag" content="LLM">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp">
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Claude Code 长短记忆机制分析">
   
   
-  <meta name="keywords" content="AI,LLM,ClaudeCode">
+  <meta name="keywords" content="AI,ClaudeCode,LLM">
 
   <!-- feed -->
   
@@ -61,7 +61,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-04-01T22:03:00+08:00","dateModified":"2026-04-01T22:03:00+08:00","datePublished":"2026-04-01T22:03:00+08:00","description":"Claude Code 的记忆系统不是单一的\"记忆\"功能，而是一个**多层、多作用域、多生命周期**的记忆体系。整体分为：","headline":"Claude Code 长短记忆机制分析","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/claude-code-long-short-term-memory-analysis.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/claude-code-long-short-term-memory-analysis.html","keywords":"AI, LLM, ClaudeCode","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-04-01T22:03:00+08:00","dateModified":"2026-04-01T22:03:00+08:00","datePublished":"2026-04-01T22:03:00+08:00","description":"Claude Code 的记忆系统不是单一的\"记忆\"功能，而是一个**多层、多作用域、多生命周期**的记忆体系。整体分为：","headline":"Claude Code 长短记忆机制分析","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/claude-code-long-short-term-memory-analysis.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/claude-code-long-short-term-memory-analysis.html","keywords":"AI, ClaudeCode, LLM","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp","image":["https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp"]}</script>
   <script>
 (function () {
   try {
@@ -1240,7 +1240,7 @@ if (fileSize &gt; MAX_FILE_SIZE_BYTES) {
 </ul>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a><a class="tag" href="/tags/ClaudeCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ClaudeCode</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/tags/AI/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>AI</a><a class="tag" href="/tags/ClaudeCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>ClaudeCode</a><a class="tag" href="/tags/LLM/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>LLM</a></div>
 
 <div class="article-footer slide-up">
     <section id="license">
@@ -1259,7 +1259,7 @@ if (fileSize &gt; MAX_FILE_SIZE_BYTES) {
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;claude-code-long-context-management-strategy-analysis.html" title="Claude Code 长上下文管理策略分析"><span class="title">Claude Code 长上下文管理策略分析</span><span class="excerpt">Claude Code 不是简单依赖 LLM 的 256K&#x2F;512K&#x2F;1M 上下文窗口硬抗，而是设计了一套**多层、递进式**的上下文管理系统。共 6 层防线，由轻到重依次触发，确保在任何交互长度下都能保持 AI 响应的质量和速度。</span></a><a class="item" href="&#x2F;AI-zhong-yi-mai-xiang.html" title="AI中医脉象测试"><span class="title">AI中医脉象测试</span></a><a class="item" href="&#x2F;AI-1min-5yrs-prowess-vs-Sweeping-Monk-Formless-Skill.html" title="AI一分钟给你5年功力，却练不出扫地僧的“无招胜有招”"><span class="title">AI一分钟给你5年功力，却练不出扫地僧的“无招胜有招”</span><span class="excerpt">AI能给你速成的招式，能让你快速从门外汉变成能比划两下的入门者，却给不了真正的高手在江湖里滚了几十年，挨过刀、踩过坑、看透了规矩背后的门道，磨出来的那一身“功夫之外的功夫”。那些真正的扫地僧，心中装的从来不是一招一式的标准动作，而是整...</span></a><a class="item" href="&#x2F;agi-future-like-manus.html" title="Manus和最近折腾的AI工具"><span class="title">Manus和最近折腾的AI工具</span><span class="excerpt">Trae国内版接入DeepSeek，部分场景优于Claude3.5-Sonnet。QwQ-32B性能接近R1，适合本地部署。Manus若普及将颠覆现有技术，未来AI需云资源支持多模态操作与智能体协作。</span></a><a class="item" href="&#x2F;MSA-MemorySparseAttention.html" title="MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案"><span class="title">MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</span><span class="excerpt">MSA 把记忆直接嵌入注意力机制本身，而非外挂检索，实现了端到端的长期记忆能力，突破了传统 RAG 的精度上限和 context window 的计算成本瓶颈</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;claude-code-long-context-management-strategy-analysis.html" title="Claude Code 长上下文管理策略分析"><span class="title">Claude Code 长上下文管理策略分析</span><span class="excerpt">Claude Code 不是简单依赖 LLM 的 256K&#x2F;512K&#x2F;1M 上下文窗口硬抗，而是设计了一套**多层、递进式**的上下文管理系统。共 6 层防线，由轻到重依次触发，确保在任何交互长度下都能保持 AI 响应的质量和速度。</span></a><a class="item" href="&#x2F;AI-1min-5yrs-prowess-vs-Sweeping-Monk-Formless-Skill.html" title="AI一分钟给你5年功力，却练不出扫地僧的“无招胜有招”"><span class="title">AI一分钟给你5年功力，却练不出扫地僧的“无招胜有招”</span><span class="excerpt">AI能给你速成的招式，能让你快速从门外汉变成能比划两下的入门者，却给不了真正的高手在江湖里滚了几十年，挨过刀、踩过坑、看透了规矩背后的门道，磨出来的那一身“功夫之外的功夫”。那些真正的扫地僧，心中装的从来不是一招一式的标准动作，而是整...</span></a><a class="item" href="&#x2F;AI-zhong-yi-mai-xiang.html" title="AI中医脉象测试"><span class="title">AI中医脉象测试</span></a><a class="item" href="&#x2F;agi-future-like-manus.html" title="Manus和最近折腾的AI工具"><span class="title">Manus和最近折腾的AI工具</span><span class="excerpt">Trae国内版接入DeepSeek，部分场景优于Claude3.5-Sonnet。QwQ-32B性能接近R1，适合本地部署。Manus若普及将颠覆现有技术，未来AI需云资源支持多模态操作与智能体协作。</span></a><a class="item" href="&#x2F;MSA-MemorySparseAttention.html" title="MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案"><span class="title">MSA（Memory Sparse Attention）— 突破 AI 记忆瓶颈的开源方案</span><span class="excerpt">MSA 把记忆直接嵌入注意力机制本身，而非外挂检索，实现了端到端的长期记忆能力，突破了传统 RAG 的精度上限和 context window 的计算成本瓶颈</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">
