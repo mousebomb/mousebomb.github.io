@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2026-08-02T04:25:00.000Z">
 <meta property="article:modified_time" content="2026-08-02T04:25:00.000Z">
 <meta property="article:author" content="Mousebomb">
-<meta property="article:tag" content="MCP">
 <meta property="article:tag" content="Volcengine">
+<meta property="article:tag" content="MCP">
 <meta property="article:tag" content="Hermes">
 <meta property="article:tag" content="Memory System">
 <meta property="article:tag" content="OpenCode">
@@ -43,7 +43,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Integrating OpenViking to unify OpenCode and Hermes memory">
   
   
-  <meta name="keywords" content="MCP,Volcengine,Hermes,Memory System,OpenCode,Paseo,OpenViking,uv">
+  <meta name="keywords" content="Volcengine,MCP,Hermes,Memory System,OpenCode,Paseo,OpenViking,uv">
 
   <!-- feed -->
   
@@ -66,7 +66,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-02T12:25:00+08:00","dateModified":"2026-08-02T12:25:00+08:00","datePublished":"2026-08-02T12:25:00+08:00","description":"I hand OpenCode all kinds of tasks piecemeal throughout the day, and at night I want to say one sentence and have it wrap up with a review and summary. But before, OpenCode's memory and Hermes's memory were each stored separately, with no way to unify them. I installed OpenViking with uv, hit two pitfalls (httpx[socks], the mcp 2.0 breaking upgrade), and finally linked up OpenCode's and Hermes's memory to get fully automatic archiving and review.","headline":"Integrating OpenViking to unify OpenCode and Hermes memory","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/openviking-setup.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/openviking-setup.html","keywords":"MCP, Volcengine, Hermes, Memory System, OpenCode, Paseo, OpenViking, uv","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/openviking.jpg","image":["https://cdn.mousebomb.org/blog/auto/openviking.jpg"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-08-02T12:25:00+08:00","dateModified":"2026-08-02T12:25:00+08:00","datePublished":"2026-08-02T12:25:00+08:00","description":"I hand OpenCode all kinds of tasks piecemeal throughout the day, and at night I want to say one sentence and have it wrap up with a review and summary. But before, OpenCode's memory and Hermes's memory were each stored separately, with no way to unify them. I installed OpenViking with uv, hit two pitfalls (httpx[socks], the mcp 2.0 breaking upgrade), and finally linked up OpenCode's and Hermes's memory to get fully automatic archiving and review.","headline":"Integrating OpenViking to unify OpenCode and Hermes memory","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/openviking-setup.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/openviking-setup.html","keywords":"Volcengine, MCP, Hermes, Memory System, OpenCode, Paseo, OpenViking, uv","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/openviking.jpg","image":["https://cdn.mousebomb.org/blog/auto/openviking.jpg"]}</script>
   <script>
 (function () {
   try {
@@ -347,6 +347,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/ai-80-fen-zhi-hou.html" title="After AI&#39;s 80 Points">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">After AI&#39;s 80 Points</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/php5-no-patch-legacy-cleanup.html" title="Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6">
@@ -654,24 +672,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/feishu-doubao-merger-thoughts.html" title="Thoughts on the Feishu and Doubao merger">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">Thoughts on the Feishu and Doubao merger</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -919,7 +919,7 @@ hermes memory status
 <p>The biggest benefit I feel so far is that the various tasks I scatter across Open Code during the day can be reviewed and summarized in one sentence at night.</p>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/en/tags/MCP/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>MCP</a><a class="tag" href="/en/tags/Volcengine/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Volcengine</a><a class="tag" href="/en/tags/Hermes/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Hermes</a><a class="tag" href="/en/tags/Memory-System/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Memory System</a><a class="tag" href="/en/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/en/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a><a class="tag" href="/en/tags/OpenViking/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenViking</a><a class="tag" href="/en/tags/uv/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>uv</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/Volcengine/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Volcengine</a><a class="tag" href="/en/tags/MCP/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>MCP</a><a class="tag" href="/en/tags/Hermes/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Hermes</a><a class="tag" href="/en/tags/Memory-System/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Memory System</a><a class="tag" href="/en/tags/OpenCode/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenCode</a><a class="tag" href="/en/tags/Paseo/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Paseo</a><a class="tag" href="/en/tags/OpenViking/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>OpenViking</a><a class="tag" href="/en/tags/uv/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>uv</a></div>
 
 <div class="article-footer slide-up">
     <section id="references">
