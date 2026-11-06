@@ -5989,6 +5989,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashj.cn/study-raspberrypi-pd7-leapmotion.html"/>
   </url>
   <url>
+    <loc>https://flashj.cn/studytown.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://flashj.cn/studytown.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashj.cn/en/studytown.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashj.cn/studytown.html"/>
+  </url>
+  <url>
+    <loc>https://flashj.cn/en/studytown.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://flashj.cn/studytown.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashj.cn/en/studytown.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashj.cn/studytown.html"/>
+  </url>
+  <url>
     <loc>https://flashj.cn/t-qq.html</loc>
     <lastmod>2010-04-14</lastmod>
     <priority>0.9</priority>
