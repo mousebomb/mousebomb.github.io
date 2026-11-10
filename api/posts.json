@@ -1,0 +1,417 @@
+{
+  "generated": "2026-11-10T10:33:46.445Z",
+  "lang": "zh-CN",
+  "count": 20,
+  "total": 598,
+  "posts": [
+    {
+      "slug": "studytown",
+      "title": "知识小镇：给女儿做的数学大富翁",
+      "url": "https://flashj.cn/studytown.html",
+      "date": "2026-11-06T02:20:00.000Z",
+      "updated": "2026-11-06T02:33:58.385Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/20261106-studytown-cover-v2.webp",
+      "excerpt": "4 号早上她想要一个能掷骰子的小镇地图，下午第一版就挂网上了：20 格棋盘、现场生成的数学题、三十套换装、一只猫、一间房。代码是 DeepSeek 写的，图是本地生图服务出的，第一版总花费 12.87 元。",
+      "tags": [
+        "游戏",
+        "AI",
+        "教育",
+        "DeepSeek",
+        "育儿"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "ai-80-fen-zhi-hou",
+      "title": "AI的80分之后",
+      "url": "https://flashj.cn/ai-80-fen-zhi-hou.html",
+      "date": "2026-11-05T02:00:00.000Z",
+      "updated": "2026-11-06T00:00:39.985Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/ai-80-fen-zhi-hou.webp",
+      "excerpt": "AI 只是把从 0 分到 80 分这段路帮人快速走完了，剩下的还得靠人的专业度和个性化。AI 味的作文课、烧钱抽卡的短剧、token 资本家的新牌桌、影之刃零里那句\"没有什么可以代替血肉之躯\"。",
+      "tags": [
+        "游戏",
+        "AI",
+        "大模型",
+        "教育",
+        "艺术",
+        "视频",
+        "商业模式",
+        "字节跳动",
+        "火山引擎"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    },
+    {
+      "slug": "php5-no-patch-legacy-cleanup",
+      "title": "清理堆积十余年的站点遗产，送走 PHP5.6",
+      "url": "https://flashj.cn/php5-no-patch-legacy-cleanup.html",
+      "date": "2026-10-22T06:00:00.000Z",
+      "updated": "2026-10-22T14:30:44.058Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp",
+      "excerpt": "一个 CVSS 9.2、无需登录就能远程执行代码的 PHP 漏洞，官方修复只覆盖 8.2 到 8.5。我服务器上跑的是 5.6，没有补丁，也没有回移。上午我本来只想确认一下自己受多大影响，结果一路查下去，给持续十几年堆叠、不断熵增的站点遗产…",
+      "tags": [
+        "网站",
+        "安全",
+        "后端服务器",
+        "PHP",
+        "nginx",
+        "wordpress"
+      ],
+      "categories": [
+        "后端服务器"
+      ]
+    },
+    {
+      "slug": "opencode-notifier-v2-delivery-silent",
+      "title": "升级到 OpenCode V2 后提示音没了：opencode-notifier 的 delivery 陷阱",
+      "url": "https://flashj.cn/opencode-notifier-v2-delivery-silent.html",
+      "date": "2026-10-19T10:10:00.000Z",
+      "updated": "2026-10-22T09:18:52.049Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/opencode.webp",
+      "excerpt": "我的用法是 Paseo 当外壳、连本机的 opencode serve，不在终端里跑 TUI。10 月 1 号把 OpenCode 从 v1 迁到 v2 之后，opencode-notifier 就再也不响了：插件日志里加载成功，系统音量也…",
+      "tags": [
+        "工具软件",
+        "OpenCode",
+        "插件",
+        "配置",
+        "Paseo"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "paseo-plugins",
+      "title": "Paseo的插件目录",
+      "url": "https://flashj.cn/paseo-plugins.html",
+      "date": "2026-10-19T05:50:00.000Z",
+      "updated": "2026-10-19T06:31:02.933Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/paseo-blueprint.webp",
+      "excerpt": "我平时主力用 Paseo + OpenCode + OpenViking，最近 Paseo 官方也上了插件目录，现在既有社区的 paseo.cafe 又有了官方的 paseo.sh/plugins。我之前为了眼睛舒服，移植的solarize…",
+      "tags": [
+        "主题",
+        "工具软件",
+        "OpenCode",
+        "插件",
+        "Paseo",
+        "OpenViking"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "trae-signed-commit-as-claude",
+      "title": "TRAE 替我提交代码，怎么署名成了 Claude？",
+      "url": "https://flashj.cn/trae-signed-commit-as-claude.html",
+      "date": "2026-10-16T03:11:00.000Z",
+      "updated": "2026-10-16T05:53:35.633Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/trae-sign-as-claude-cover.webp",
+      "excerpt": "改完一个小 bug，TRAE 提交时自作主张在 commit message 里加上了 Co-Authored-By: Claude Sonnet 4.6。大爷的离谱，我用 Claude Code 提交都不会加Claude署名。再加上积分制…",
+      "tags": [
+        "AI",
+        "Trae",
+        "vibecoding",
+        "ClaudeCode",
+        "工具",
+        "字节跳动",
+        "OpenCode",
+        "Claude"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "photocraft-rea-software-industry-change",
+      "title": "PhotoCraft 与 REA：软件行业正在起变化",
+      "url": "https://flashj.cn/photocraft-rea-software-industry-change.html",
+      "date": "2026-10-13T12:15:00.000Z",
+      "updated": "2026-10-15T12:24:29.816Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/artcraft-cover-1720x968.webp",
+      "excerpt": "国庆后被两个开源项目刷屏：一个用纯 Rust 从零重写了 Photoshop，一个让 AI Agent 读懂任意软件的二进制。冷静看，它们都没自媒体说得那么神通广大——但它确实逼人重新想一遍：软件行业接下来往哪走。我的判断是往合规的 Saa…",
+      "tags": [
+        "AI",
+        "开源",
+        "adobe",
+        "商业模式",
+        "软件行业",
+        "SaaS",
+        "PhotoCraft",
+        "REA"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "laurel-water-cup",
+      "title": "睿睿的小水杯",
+      "url": "https://flashj.cn/laurel-water-cup.html",
+      "date": "2026-10-13T05:54:00.000Z",
+      "updated": "2026-10-15T11:23:21.460Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/laurel-water-cup.webp",
+      "excerpt": "睿睿的旧水杯有点漏水，我说那是它在哭；我说这杯子买了一年，对你只是一个学年，对它却是一生。她抱着杯子顿住，后来真把这件事写成了作文——词不达意，落点却是真实的愧疚。我反感的那种 AI 腔正好相反：每个词都对，加起来没重量。",
+      "tags": [
+        "AI",
+        "教育",
+        "生命感悟",
+        "育儿",
+        "写作"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    },
+    {
+      "slug": "jev-zero-shot-classifier",
+      "title": "Jev 不是新物种：它是个分类器，别跟着自媒体嗨",
+      "url": "https://flashj.cn/jev-zero-shot-classifier.html",
+      "date": "2026-09-22T05:43:00.000Z",
+      "updated": "2026-10-15T12:13:28.163Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/jev.webp",
+      "excerpt": "TypeSafe 的 Jev 这几天在国内被吹成\"AGI 新物种\"。但它就是个分类器：你给它【选项 + 自然语言描述】，它给你【决策】，不产出选项、不产出解释。快是真的快，短板也是真的短。技术不新，能不能做成产品，还是看人。",
+      "tags": [
+        "AI",
+        "LLM",
+        "工具软件",
+        "Jev",
+        "TypeSafe",
+        "分类器",
+        "SystemOne"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "lark-mcp-memory-leak-from-orphan-processes",
+      "title": "飞书官方 MCP 导致内存泄露：lark-mcp 孤儿进程排查",
+      "url": "https://flashj.cn/lark-mcp-memory-leak-from-orphan-processes.html",
+      "date": "2026-09-20T01:53:00.000Z",
+      "updated": "2026-10-18T11:00:49.546Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/feishu-hightech.webp",
+      "excerpt": "Mac 内存莫名被吃光，一查是飞书官方 lark-mcp 留下的几十个孤儿 node 进程。根因是它的 stdio 生命周期只处理了数据流入、没处理管道关闭，宿主退出后进程不自杀；上游 Issue 和 PR 都提了却一直挂着没合并，仓库已停…",
+      "tags": [
+        "AI",
+        "Trae",
+        "agent",
+        "MCP",
+        "内存泄露",
+        "飞书",
+        "nodejs"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "llm-boundary-human-reserve",
+      "title": "AI 大模型能力对人类的策略影响",
+      "url": "https://flashj.cn/llm-boundary-human-reserve.html",
+      "date": "2026-09-17T08:10:00.000Z",
+      "updated": "2026-10-15T12:13:28.247Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202609171647191.jpg",
+      "excerpt": "9 月发生了几件挺让人震撼的事情：GPT6 Computer Use 更加完善、果蝇的神经连接驱动出的具身智能、以及一个困扰了人类 90 年的数学问题被大模型解决。它们指向同一个问题——AI 大模型有没有边界？如果有边界，最优策略是转向 A…",
+      "tags": [
+        "AI",
+        "大模型",
+        "教育",
+        "生命感悟",
+        "创造力",
+        "数学"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    },
+    {
+      "slug": "macos-trash-instead-of-rm",
+      "title": "该让 AI 删文件前先进废纸篓了",
+      "url": "https://flashj.cn/macos-trash-instead-of-rm.html",
+      "date": "2026-09-15T04:00:00.000Z",
+      "updated": "2026-10-15T12:13:28.291Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202609151221965.jpg",
+      "excerpt": "用 WorkBuddy 干活时发现它删临时文件会进废纸篓，而我的 opencode 动不动就是 rm。顺着这个细节查下去，发现 macOS 15 已经内置了 trash 命令，可以替代 rm。",
+      "tags": [
+        "AI",
+        "agent",
+        "macOS",
+        "终端",
+        "命令行",
+        "trash"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "opencode-goat-reasoning-variants",
+      "title": "GOAT套餐接opencode后切换思考强度的配置",
+      "url": "https://flashj.cn/opencode-goat-reasoning-variants.html",
+      "date": "2026-09-02T09:19:00.000Z",
+      "updated": "2026-10-18T11:00:49.869Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp",
+      "excerpt": "前一篇 goat 接入配置漏了一环：deepseek-v4-flash 等模型在 /models 里选不了思考深度。排查发现不是 GOAT 套餐不支持，而是自定义 provider 手写模型缺 reasoning 能力声明，被 openco…",
+      "tags": [
+        "AI",
+        "LLM",
+        "agent",
+        "OpenCode",
+        "配置",
+        "CommandCode",
+        "goat",
+        "reasoning"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "paseo-solarized-light",
+      "title": "Paseo Solarized Light 主题插件：低对比度护眼，GitHub 一行命令安装",
+      "url": "https://flashj.cn/paseo-solarized-light.html",
+      "date": "2026-09-01T16:00:00.000Z",
+      "updated": "2026-10-19T06:35:09.244Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/paseo-solarized.webp",
+      "excerpt": "给 Paseo 做了一个 Solarized Light 护眼主题插件，用官方 addTheme 插件接口实现，不用改任何 Paseo 文件、升级不丢失。Paseo 0.7.0 起支持直接从 GitHub 安装插件，一行命令搞定。",
+      "tags": [
+        "主题",
+        "工具软件",
+        "Paseo",
+        "Solarized"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "opencode-goat-commandcode-config",
+      "title": "把 CommandCode goat 套餐接进 opencode：两步配置 + zdr 自定义请求头",
+      "url": "https://flashj.cn/opencode-goat-commandcode-config.html",
+      "date": "2026-08-31T14:13:00.000Z",
+      "updated": "2026-10-22T09:21:44.008Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp",
+      "excerpt": "买了 CommandCode 的 goat 套餐，想把它当 opencode 的主套餐用。整个接入就两步：先 /connect 存 API Key，再在 opencode.json 里声明 provider。其中 goat 套餐要求每个请求…",
+      "tags": [
+        "AI",
+        "LLM",
+        "agent",
+        "OpenCode",
+        "配置",
+        "token",
+        "CommandCode",
+        "goat",
+        "Paseo"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "opencode-go-limits",
+      "title": "OpenCode Go 套餐用量估算，一个页面看全所有模型",
+      "url": "https://flashj.cn/opencode-go-limits.html",
+      "date": "2026-08-29T14:10:00.000Z",
+      "updated": "2026-10-19T04:05:51.042Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202609021732881.png",
+      "excerpt": "OpenCode Go 的月额度分散在好几张表格里，官方给的\"5小时额度\"图表又没列出所有模型。于是做了个图表页面，自动抓官方价格表，按官方同样的口径把每个模型的每月可用请求数算出来画成图，悬停看明细。",
+      "tags": [
+        "AI",
+        "LLM",
+        "agent",
+        "工具软件",
+        "OpenCode",
+        "token"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "no-more-fomo-dsh-qwen38",
+      "title": "DeepSeek Harness 和 Qwen3.8 都不是我的刚需",
+      "url": "https://flashj.cn/no-more-fomo-dsh-qwen38.html",
+      "date": "2026-08-23T14:10:00.000Z",
+      "updated": "2026-10-18T11:00:49.792Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp",
+      "excerpt": "DeepSeek Harness 让很多人沸腾了，我用了一次就没继续；Qwen3.8 27B 能力起飞了，我也没有本地部署。求新又求稳的取舍之下，OpenCode + Paseo + OpenViking 已经足够顺，一切没有实质、可控、稳…",
+      "tags": [
+        "AI",
+        "agent",
+        "DeepSeek",
+        "qwen",
+        "OpenCode"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "openviking-setup",
+      "title": "接入 OpenViking，统一 OpenCode 和 Hermes 的记忆",
+      "url": "https://flashj.cn/openviking-setup.html",
+      "date": "2026-08-02T04:25:00.000Z",
+      "updated": "2026-10-19T04:16:26.661Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/openviking.jpg",
+      "excerpt": "每天零散布置给 OpenCode 各种任务，晚上想一句话就让它复盘总结。但之前 OpenCode 的记忆和 Hermes 的记忆各存各的，没法统一。用 uv 装好 OpenViking，踩了两个坑（httpx[socks]、mcp 2.0 …",
+      "tags": [
+        "火山引擎",
+        "MCP",
+        "Hermes",
+        "记忆系统",
+        "OpenCode",
+        "Paseo",
+        "OpenViking",
+        "uv"
+      ],
+      "categories": [
+        "工具软件"
+      ]
+    },
+    {
+      "slug": "next-gen-media-generative-narrative",
+      "title": "娱乐至死的人类和下一个世代的媒体",
+      "url": "https://flashj.cn/next-gen-media-generative-narrative.html",
+      "date": "2026-07-31T04:30:00.000Z",
+      "updated": "2026-10-15T12:13:28.381Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/next-gen-media-generative-narrative.jpg",
+      "excerpt": "生产端产能爆炸、消费端阈值被无限拉高，网文的降智化是人类在娱乐至死的路上越走越远的缩影。历史上每一次新媒介都是一次洗牌，但文字、图片、声音、视频、交互、VR/AR，感官通道基本被覆盖完了。下一个能释放消费端新需求的媒介形态是什么？也许答案是…",
+      "tags": [
+        "AI",
+        "媒体",
+        "网文",
+        "生成式叙事",
+        "媒介"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    },
+    {
+      "slug": "feishu-doubao-merger-thoughts",
+      "title": "从飞书和豆包合并想到的",
+      "url": "https://flashj.cn/feishu-doubao-merger-thoughts.html",
+      "date": "2026-07-31T00:25:00.000Z",
+      "updated": "2026-10-15T12:13:27.941Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/feishu-doubao-merger-thoughts3.jpg",
+      "excerpt": "字节宣布飞书产品团队与豆包产品团队整合，成立新的豆包产品团队。初听这个消息有些惆怅，互联网像一台巨大的压路机。被垄断巨头剥削的数字佃农，乘坐在时代的快车上，随时快被甩下车。一切闭源的软件、服务，在我眼里只能有一种归宿：历史的垃圾堆。人类真正…",
+      "tags": [
+        "AI",
+        "怀旧",
+        "字节跳动",
+        "飞书",
+        "豆包",
+        "生命感悟"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    }
+  ]
+}

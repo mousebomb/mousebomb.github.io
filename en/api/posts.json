@@ -1,0 +1,417 @@
+{
+  "generated": "2026-11-10T10:34:21.982Z",
+  "lang": "en",
+  "count": 20,
+  "total": 409,
+  "posts": [
+    {
+      "slug": "studytown",
+      "title": "Knowledge Town: A Math Monopoly I Made for My Daughter",
+      "url": "https://flashj.cn/en/studytown.html",
+      "date": "2026-11-06T02:20:00.000Z",
+      "updated": "2026-11-06T02:34:35.382Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/20261106-studytown-cover-v2.webp",
+      "excerpt": "On the morning of the 4th, she wanted a little town map where she could roll dice. By the afternoon, the first version w…",
+      "tags": [
+        "Game",
+        "AI",
+        "DeepSeek",
+        "Education",
+        "Parenting"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "ai-80-fen-zhi-hou",
+      "title": "After AI's 80 Points",
+      "url": "https://flashj.cn/en/ai-80-fen-zhi-hou.html",
+      "date": "2026-11-05T02:00:00.000Z",
+      "updated": "2026-11-06T00:02:20.696Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/ai-80-fen-zhi-hou.webp",
+      "excerpt": "AI only helps people race through the stretch from 0 to 80 points; the rest still comes down to human expertise and pers…",
+      "tags": [
+        "Game",
+        "AI",
+        "LLM",
+        "Education",
+        "Art",
+        "Video",
+        "Business Model",
+        "ByteDance",
+        "Volcengine"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    },
+    {
+      "slug": "php5-no-patch-legacy-cleanup",
+      "title": "Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6",
+      "url": "https://flashj.cn/en/php5-no-patch-legacy-cleanup.html",
+      "date": "2026-10-22T06:00:00.000Z",
+      "updated": "2026-10-22T09:29:28.142Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp",
+      "excerpt": "A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the of…",
+      "tags": [
+        "Security",
+        "Backend Server",
+        "PHP",
+        "Website",
+        "nginx",
+        "wordpress"
+      ],
+      "categories": [
+        "Backend Server"
+      ]
+    },
+    {
+      "slug": "opencode-notifier-v2-delivery-silent",
+      "title": "No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap",
+      "url": "https://flashj.cn/en/opencode-notifier-v2-delivery-silent.html",
+      "date": "2026-10-19T10:10:00.000Z",
+      "updated": "2026-10-19T10:18:11.332Z",
+      "cover": "",
+      "excerpt": "I use Paseo as a shell, connecting to a local opencode serve, and don't run the TUI in a terminal. After migrating OpenC…",
+      "tags": [
+        "Tools",
+        "OpenCode",
+        "Plugin",
+        "Configuration",
+        "Paseo"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "paseo-plugins",
+      "title": "Paseo's plugin directory",
+      "url": "https://flashj.cn/en/paseo-plugins.html",
+      "date": "2026-10-19T05:50:00.000Z",
+      "updated": "2026-10-19T10:32:58.513Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202608011143116.jpeg",
+      "excerpt": "My daily driver stack is Paseo + OpenCode + OpenViking. Paseo recently shipped an official plugin directory too, so now …",
+      "tags": [
+        "Tools",
+        "OpenCode",
+        "Plugin",
+        "Paseo",
+        "OpenViking",
+        "Theme"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "trae-signed-commit-as-claude",
+      "title": "TRAE committed code for me — why is it signed as Claude?",
+      "url": "https://flashj.cn/en/trae-signed-commit-as-claude.html",
+      "date": "2026-10-16T03:11:00.000Z",
+      "updated": "2026-10-16T03:51:39.063Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/trae-sign-as-claude-cover.webp",
+      "excerpt": "After I fixed a small bug, TRAE went ahead and added Co-Authored-By: Claude Sonnet 4.6 to the commit message on its own.…",
+      "tags": [
+        "AI",
+        "Trae",
+        "vibecoding",
+        "ClaudeCode",
+        "Tool",
+        "ByteDance",
+        "OpenCode",
+        "Claude"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "photocraft-rea-software-industry-change",
+      "title": "PhotoCraft and REA: The software industry is starting to change",
+      "url": "https://flashj.cn/en/photocraft-rea-software-industry-change.html",
+      "date": "2026-10-13T12:15:00.000Z",
+      "updated": "2026-10-15T12:13:29.189Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/artcraft-cover-1720x968.webp",
+      "excerpt": "Right after National Day my feed was flooded with two open source projects: one rewrote Photoshop from scratch in pure R…",
+      "tags": [
+        "AI",
+        "Open Source",
+        "adobe",
+        "Business Model",
+        "Software Industry",
+        "SaaS",
+        "PhotoCraft",
+        "REA"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "laurel-water-cup",
+      "title": "Laurel's Little Water Cup",
+      "url": "https://flashj.cn/en/laurel-water-cup.html",
+      "date": "2026-10-13T05:54:00.000Z",
+      "updated": "2026-10-15T12:01:17.576Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/laurel-water-cup.webp",
+      "excerpt": "Laurel's old water cup had a bit of a leak. I told her it was crying. I said we'd had this cup for a year — for you that…",
+      "tags": [
+        "AI",
+        "Education",
+        "Life Insights",
+        "Parenting",
+        "Writing"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    },
+    {
+      "slug": "jev-zero-shot-classifier",
+      "title": "Jev isn't a new species: it's a classifier, so don't ride the self-media hype",
+      "url": "https://flashj.cn/en/jev-zero-shot-classifier.html",
+      "date": "2026-09-22T05:43:00.000Z",
+      "updated": "2026-10-15T12:13:29.065Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/jev.webp",
+      "excerpt": "TypeSafe's Jev has been hyped across China these past few days as a \"new AGI species.\" But it's just a classifier: you g…",
+      "tags": [
+        "AI",
+        "LLM",
+        "Tools",
+        "Jev",
+        "TypeSafe",
+        "Classifier",
+        "SystemOne"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "lark-mcp-memory-leak-from-orphan-processes",
+      "title": "Feishu's official MCP causes a memory leak: tracking down orphan processes from lark-mcp",
+      "url": "https://flashj.cn/en/lark-mcp-memory-leak-from-orphan-processes.html",
+      "date": "2026-09-20T01:53:00.000Z",
+      "updated": "2026-10-18T11:00:54.146Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/feishu-hightech.webp",
+      "excerpt": "Mac memory mysteriously eaten up, and it turns out dozens of orphan node processes were left behind by Feishu's official…",
+      "tags": [
+        "AI",
+        "Trae",
+        "agent",
+        "MCP",
+        "Memory leak",
+        "Feishu",
+        "nodejs"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "llm-boundary-human-reserve",
+      "title": "The strategic impact of large AI model capabilities on humanity",
+      "url": "https://flashj.cn/en/llm-boundary-human-reserve.html",
+      "date": "2026-09-17T08:10:00.000Z",
+      "updated": "2026-10-15T12:13:29.083Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202609171647191.jpg",
+      "excerpt": "Several pretty stunning things happened in September: GPT6 Computer Use became more polished, embodied intelligence driv…",
+      "tags": [
+        "AI",
+        "LLM",
+        "Education",
+        "Life Insights",
+        "Creativity",
+        "Mathematics"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    },
+    {
+      "slug": "macos-trash-instead-of-rm",
+      "title": "It's Time to Make AI Put Files in the Trash Before Deleting Them",
+      "url": "https://flashj.cn/en/macos-trash-instead-of-rm.html",
+      "date": "2026-09-15T04:00:00.000Z",
+      "updated": "2026-10-15T12:13:29.105Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202609151221965.jpg",
+      "excerpt": "While working with WorkBuddy, I noticed that deleted temp files end up in the Trash, whereas my opencode reaches for rm …",
+      "tags": [
+        "AI",
+        "agent",
+        "macOS",
+        "Terminal",
+        "Command line",
+        "trash"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "opencode-goat-reasoning-variants",
+      "title": "Configuring thinking-effort switching after hooking the GOAT plan up to opencode",
+      "url": "https://flashj.cn/en/opencode-goat-reasoning-variants.html",
+      "date": "2026-09-02T09:19:00.000Z",
+      "updated": "2026-10-18T11:00:54.457Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp",
+      "excerpt": "The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn't pick a thinking depth in /m…",
+      "tags": [
+        "AI",
+        "LLM",
+        "agent",
+        "OpenCode",
+        "Configuration",
+        "CommandCode",
+        "goat",
+        "reasoning"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "paseo-solarized-light",
+      "title": "Paseo Solarized Light theme plugin: low contrast and easy on the eyes, install from GitHub with one command",
+      "url": "https://flashj.cn/en/paseo-solarized-light.html",
+      "date": "2026-09-01T16:00:00.000Z",
+      "updated": "2026-10-19T10:32:58.513Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/paseo-solarized.webp",
+      "excerpt": "I built a Solarized Light eye-friendly theme plugin for Paseo using the official addTheme plugin API. No need to touch a…",
+      "tags": [
+        "Tools",
+        "Paseo",
+        "Theme",
+        "Solarized"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "opencode-goat-commandcode-config",
+      "title": "Wiring the CommandCode goat plan into opencode: two-step setup + a zdr custom request header",
+      "url": "https://flashj.cn/en/opencode-goat-commandcode-config.html",
+      "date": "2026-08-31T14:13:00.000Z",
+      "updated": "2026-10-22T09:22:07.044Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp",
+      "excerpt": "I bought CommandCode's goat plan and wanted to use it as my main plan in opencode. The whole integration takes just two …",
+      "tags": [
+        "AI",
+        "LLM",
+        "agent",
+        "OpenCode",
+        "Configuration",
+        "token",
+        "CommandCode",
+        "goat",
+        "Paseo"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "opencode-go-limits",
+      "title": "OpenCode Go plan usage estimates: see every model on one page",
+      "url": "https://flashj.cn/en/opencode-go-limits.html",
+      "date": "2026-08-29T14:10:00.000Z",
+      "updated": "2026-10-19T04:05:56.082Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/202609021732881.png",
+      "excerpt": "OpenCode Go's monthly allowance is spread across several tables, and the official \"5-hour quota\" chart doesn't list all …",
+      "tags": [
+        "AI",
+        "LLM",
+        "agent",
+        "Tools",
+        "OpenCode",
+        "token"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "no-more-fomo-dsh-qwen38",
+      "title": "Neither DeepSeek Harness nor Qwen3.8 is a must-have for me",
+      "url": "https://flashj.cn/en/no-more-fomo-dsh-qwen38.html",
+      "date": "2026-08-23T14:10:00.000Z",
+      "updated": "2026-10-18T11:00:54.403Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp",
+      "excerpt": "DeepSeek Harness got a lot of people excited, but I used it once and didn't keep going; Qwen3.8 27B's capabilities have …",
+      "tags": [
+        "AI",
+        "agent",
+        "DeepSeek",
+        "qwen",
+        "OpenCode"
+      ],
+      "categories": [
+        "AI"
+      ]
+    },
+    {
+      "slug": "openviking-setup",
+      "title": "Integrating OpenViking to unify OpenCode and Hermes memory",
+      "url": "https://flashj.cn/en/openviking-setup.html",
+      "date": "2026-08-02T04:25:00.000Z",
+      "updated": "2026-10-19T04:16:38.209Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/openviking.jpg",
+      "excerpt": "I hand OpenCode all kinds of tasks piecemeal throughout the day, and at night I want to say one sentence and have it wra…",
+      "tags": [
+        "Volcengine",
+        "MCP",
+        "Hermes",
+        "Memory System",
+        "OpenCode",
+        "Paseo",
+        "OpenViking",
+        "uv"
+      ],
+      "categories": [
+        "Tools"
+      ]
+    },
+    {
+      "slug": "next-gen-media-generative-narrative",
+      "title": "A Humanity Amusing Itself to Death, and the Media of the Next Generation",
+      "url": "https://flashj.cn/en/next-gen-media-generative-narrative.html",
+      "date": "2026-07-31T04:30:00.000Z",
+      "updated": "2026-10-15T12:13:29.121Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/next-gen-media-generative-narrative.jpg",
+      "excerpt": "Explosive capacity growth on the production side, endlessly rising thresholds on the consumption side — the dumbing-down…",
+      "tags": [
+        "AI",
+        "Media",
+        "Web Novels",
+        "Generative Narrative",
+        "Medium"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    },
+    {
+      "slug": "feishu-doubao-merger-thoughts",
+      "title": "Thoughts on the Feishu and Doubao merger",
+      "url": "https://flashj.cn/en/feishu-doubao-merger-thoughts.html",
+      "date": "2026-07-31T00:25:00.000Z",
+      "updated": "2026-10-15T12:13:29.025Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/feishu-doubao-merger-thoughts3.jpg",
+      "excerpt": "ByteDance announced that the Feishu product team and the Doubao product team are being merged into a new Doubao product …",
+      "tags": [
+        "AI",
+        "Nostalgia",
+        "ByteDance",
+        "Feishu",
+        "Doubao",
+        "Life Insights"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    }
+  ]
+}
