@@ -7,7 +7,7 @@
   <link href="https://flashj.cn/atom.xml" rel="self"/>
   
   <link href="https://flashj.cn/"/>
-  <updated>2026-11-06T02:33:58.385Z</updated>
+  <updated>2026-11-15T03:37:37.769Z</updated>
   <id>https://flashj.cn/</id>
   
   <author>
@@ -24,7 +24,7 @@
     <link href="https://flashj.cn/studytown.html"/>
     <id>https://flashj.cn/studytown.html</id>
     <published>2026-11-06T02:20:00.000Z</published>
-    <updated>2026-11-06T02:33:58.385Z</updated>
+    <updated>2026-11-15T03:37:37.769Z</updated>
     
     
     <content type="html"><![CDATA[<p>我给女儿做了一个答题赚钱的类大富翁游戏——知识小镇。她可以在里面玩装扮、宠物，在游戏中刷题复习，我可以看她的知识点掌握、错题集。</p><p>前两年我都是给她用AI做一些专项练习，这次期中考试也是为她的常错薄弱点“近似数”问题做了专项闯关游戏。</p><p>近期还做了一个四年级上的闯关游戏，30 关的闯关。4号早上跟睿睿交流，她说她想要一个像飞行棋一样、有小镇地图的东西。比如掷了个骰子，到了哪一格，再开始闯关……</p><p>我想了一下，应该把她的答题跟「大富翁」玩法融合一下。</p><p>需求是睿睿提的，Harness是我搭的，代码是DeepSeek开发的，图片、配音等素材是<a href="https://github.com/mousebomb/mbai-platform">mbai-platform</a>生成的。整个项目除了DeepSeek的token费用之外，其他所有东西都是使用开源加本地部署。</p><p>做出第一版的总费用是<code>¥12.87</code>。</p><hr><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-cover.webp"></p><h2 id="走一圈"><a href="#走一圈" class="headerlink" title="走一圈"></a>走一圈</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-town.webp"></p><p>20 个格子围成一圈，中间是小地图和骰子。点中间的骰子掷点，走完落到哪一格就进哪个场景。</p><p>七个答题格：五个单元各一格，加一个「混合挑战」（随机抽单元、4 题、金币 ×1.5）和一个「勇者挑战」（3 题、每题给得多）。四家店：衣衣小铺、星光衣橱、宠物店、家具店。剩下是三个机会格、两个宝箱、两个休息格。第 0 格是家，每次经过领零花钱，走满一圈再给一份。</p><p>答对一题 5 金币，整关满分额外奖 15，正常走一圈四百多。衣服最便宜 100，最贵 960。</p><p>定价时守一条：第一圈走完得买得起一件。</p><h2 id="答题"><a href="#答题" class="headerlink" title="答题"></a>答题</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-quiz.webp"></p><p>五个单元、28 个出题生成器，每道题都是当场算出来的。读数和写数、角的度量、三位数乘法、运算律、方向和位置，也就是四年级上册那五个单元。</p><p>她玩了两天说“题目老是一样的”。我去跑了一遍统计：运算律那个生成器五千次只有一千四百多种不同题干，重复率 72%，<code>×102</code> 这类题全游戏只有四道。</p><p>后来把模板从 10 个拆到 25 个（凑一百、凑一千、125×8、连减、连除、分配律反向），数值放开，题干种类涨到 7000 量级，选择题的选项顺序也打乱了。</p><h2 id="结算"><a href="#结算" class="headerlink" title="结算"></a>结算</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-settle.webp"></p><p>一次闯关 4 到 5 题，按答对比例给星。答错不扣金币，题会进错题本，同时给我发一条飞书。</p><h2 id="商店"><a href="#商店" class="headerlink" title="商店"></a>商店</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-shop.webp"></p><p>30 套衣服，100 到 960，全是 mbai-platform 生图做的。买了直接穿上，不用再去换。</p><h2 id="试衣间"><a href="#试衣间" class="headerlink" title="试衣间"></a>试衣间</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-wardrobe.webp"></p><p>现在每套衣服是一张整身立绘。</p><p>本来想做纸娃娃：一套素体，衣服分层叠上去，发型鞋子单独换。整条链路都做出来了：生成立绘、按颜色和高度切部件、同坐标叠图、缺的槽位用校服兜底、老存档的套装 id 展开成部件 id。</p><p>三个问题卡死了。接缝：两张图脖子上的阴影是 AI 各自重画的，明暗对不上，下巴那儿永远有一条白线，用渐变糊掉之后放大还是能看出亮度台阶。偏移：各张立绘身体比例和重心不一样，按眼睛对齐了人物在框里还是轻微偏。层叠：长发压裙子时谁遮谁是逐像素抠出来的，跟画师手画的层次不是一回事，交叉处必然别扭。</p><p>两条分支推远程归档，主线退回「一套一张整身立绘」。</p><h2 id="宠物"><a href="#宠物" class="headerlink" title="宠物"></a>宠物</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-pet.webp"></p><p>布偶猫和柯基，只能领养一只。三条状态：饱食度、心情、亲密度。食物和玩具是消耗品，用掉一个少一个，不然买一次就能无限喂。</p><p>状态随时间掉，每小时饿 4、心情掉 3、亲密度掉 1，离线最多补 72 小时。隔两天不理它，回去就是一只“肚子咕咕叫”的猫。</p><h2 id="房间"><a href="#房间" class="headerlink" title="房间"></a>房间</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-room.webp"></p><p>5×4 的格子，家具按尺寸占格，买了自动找空位摆上，不用她自己拖。</p><h2 id="我能看到的"><a href="#我能看到的" class="headerlink" title="我能看到的"></a>我能看到的</h2><p><img src="https://cdn.mousebomb.org/blog/auto/20261106-studytown-mistakes.webp"></p><p>每次答题结算推一条飞书：哪个格子、几题对几题、拿了多少金币、错的是哪几道，带题干和正确答案。买衣服不推。</p><p>错题本按错得最多排序，一次最多重练 12 道，答对就自动消失。重练每题只给 3 金币。</p><p>“知识点掌握”这个说法现在有点虚。我手上只有错题的流水，和按格子记的答对率（后者还没做界面）。真要做掌握度曲线，得先给每道题打知识点标签。</p><h2 id="语音"><a href="#语音" class="headerlink" title="语音"></a>语音</h2><p>16 条鼓励语音，四档：普通答对、连对 3 题、连对 5 题、满星，四个音色男女轮换，用 cosyvoice2-instruct 带情绪指令生成。</p><p>第一版她听完说“太平了”。指令写太长，模型把整句当台词念了出来，四个字念了两秒半。改成“开心地说，稍快”这种八字以内的短指令，再加一层每字秒数的校验（正常落在 0.11~0.23 秒&#x2F;字，超了重抽）。另有五条听着“丧”，换成 hero &#x2F; heroine 角色音色才好。</p><h2 id="成本和时间"><a href="#成本和时间" class="headerlink" title="成本和时间"></a>成本和时间</h2><p>除了 DeepSeek 的 token，其余全部开源或本地部署：React、Vite、局域网里的 mbai-platform、TTS。</p><p>4 号早上她提需求，下午三点半第一版挂到网上，中间七个多小时。后面两天都在补内容，题库扩到七千多种题干，服装从 9 套加到 30 套。</p><h2 id="她现在的情况"><a href="#她现在的情况" class="headerlink" title="她现在的情况"></a>她现在的情况</h2><p>这两天她一放学就回来说要刷题。</p><p>我这边就是天天收飞书，经常看到她又是哪儿错了、错了几道。错得多也没什么，多跟题目玩玩，玩熟了基本题，自然就熟能生巧。</p><h2 id="明年"><a href="#明年" class="headerlink" title="明年"></a>明年</h2><p>四年级上册这版做完打个 tag 归档，明年新开一个仓库做五年级：题库那一层整个换掉，引擎一行不改，线上还是同一个地址。</p><p>下册要不要接着做，得看她到时候还愿不愿意玩。</p>]]></content>
@@ -41,9 +41,9 @@
     
     <category term="AI" scheme="https://flashj.cn/tags/AI/"/>
     
-    <category term="教育" scheme="https://flashj.cn/tags/%E6%95%99%E8%82%B2/"/>
-    
     <category term="DeepSeek" scheme="https://flashj.cn/tags/DeepSeek/"/>
+    
+    <category term="教育" scheme="https://flashj.cn/tags/%E6%95%99%E8%82%B2/"/>
     
     <category term="育儿" scheme="https://flashj.cn/tags/%E8%82%B2%E5%84%BF/"/>
     

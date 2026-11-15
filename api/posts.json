@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T10:33:46.445Z",
+  "generated": "2026-11-15T03:48:54.079Z",
   "lang": "zh-CN",
   "count": 20,
   "total": 598,
@@ -9,14 +9,14 @@
       "title": "知识小镇：给女儿做的数学大富翁",
       "url": "https://flashj.cn/studytown.html",
       "date": "2026-11-06T02:20:00.000Z",
-      "updated": "2026-11-06T02:33:58.385Z",
+      "updated": "2026-11-15T03:37:37.769Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/20261106-studytown-cover-v2.webp",
       "excerpt": "4 号早上她想要一个能掷骰子的小镇地图，下午第一版就挂网上了：20 格棋盘、现场生成的数学题、三十套换装、一只猫、一间房。代码是 DeepSeek 写的，图是本地生图服务出的，第一版总花费 12.87 元。",
       "tags": [
         "游戏",
         "AI",
-        "教育",
         "DeepSeek",
+        "教育",
         "育儿"
       ],
       "categories": [
