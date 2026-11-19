@@ -46,6 +46,8 @@
         postFailed: 'Failed to post. Please try again.',
         network: 'Network error. Please try again.',
         pending: 'Comment submitted. It will appear after review.',
+        posted: 'Posted.',
+        ownerHint: 'Posting as the site owner — no review needed.',
         admin: 'Author',
         websiteLabel: 'website',
       }
@@ -71,6 +73,8 @@
         postFailed: '发表失败，请重试。',
         network: '网络异常，请重试。',
         pending: '评论已提交，审核通过后显示。',
+        posted: '已发表。',
+        ownerHint: '以站长身份发表，评论直接通过审核。',
         admin: '站长',
         websiteLabel: '网站',
       };
@@ -78,6 +82,9 @@
   const LS_NAME = 'mbc:name';
   const LS_EMAIL = 'mbc:email';
   const LS_URL = 'mbc:url';
+  // 站长凭证：由书签在 flashj.cn 上手动写入 localStorage（与统计的 mb-no-pv 同为书签法）。
+  // 后端只认请求头 X-Comment-Token，不认昵称/邮箱；未写入时一切按普通访客处理。
+  const LS_OWNER_TOKEN = 'mb-owner-token';
 
   const state = {
     loaded: false,
@@ -161,7 +168,8 @@
   urlInput.placeholder = T.website;
   contentInput.placeholder = T.content;
   submitBtn.textContent = T.submit;
-  hint.textContent = T.hint;
+  // 带站长凭证时把提示换成「免审核」，避免自己以为没生效
+  hint.textContent = lsGet(LS_OWNER_TOKEN) ? T.ownerHint : T.hint;
   replyCancel.textContent = T.cancel;
   replyBar.hidden = true;
 
@@ -391,10 +399,11 @@
   }
 
   // ---------- 请求 ----------
-  async function load() {
+  // quiet=true：站长评论提交后的静默重拉，保留当前列表、不闪「加载中」
+  async function load(quiet) {
     if (state.loaded || state.loading) return;
     state.loading = true;
-    summary.textContent = T.loading;
+    if (!quiet) summary.textContent = T.loading;
 
     try {
       const url = `${apiBase}/comments?postKey=${encodeURIComponent(postKey)}`;
@@ -444,9 +453,14 @@
 
     let succeeded = false;
     try {
+      // 站长凭证在提交时现读：刚用书签写入 token 的话，不用先刷新页面
+      const ownerToken = lsGet(LS_OWNER_TOKEN);
+      const headers = { 'Content-Type': 'application/json', Accept: 'application/json' };
+      if (ownerToken) headers['X-Comment-Token'] = ownerToken;
+
       const res = await fetch(`${apiBase}/comments`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers,
         body: JSON.stringify({
           postKey,
           postTitle,
@@ -470,7 +484,15 @@
       lsSet(LS_URL, authorUrl);
       contentInput.value = '';
       clearReply();
-      showMsg(T.pending, false);
+
+      // 站长凭证命中时后端直接落 approved（isAdmin 也已写入）；
+      // 本地不拼假数据（头像/时间是服务端算的），静默重拉一次列表读回真实字段。
+      const approved = !!data && data.status === 'approved';
+      showMsg(approved ? T.posted : T.pending, false);
+      if (approved) {
+        state.loaded = false;
+        load(true);
+      }
       succeeded = true;
     } catch (err) {
       console.error('[mbcomments]', err);
