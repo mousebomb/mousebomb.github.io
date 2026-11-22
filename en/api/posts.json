@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22T04:25:41.591Z",
+  "generated": "2026-11-22T04:34:54.133Z",
   "lang": "en",
   "count": 20,
   "total": 410,
@@ -9,7 +9,7 @@
       "title": "Laurel's Vibe Creations",
       "url": "https://flashj.cn/en/laurel-vibe-creation.html",
       "date": "2026-11-22T02:23:00.000Z",
-      "updated": "2026-11-22T04:17:33.700Z",
+      "updated": "2026-11-22T04:32:47.879Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/20261122-laurel-vibe-games-cover.webp",
       "excerpt": "This year I eased up on Laurel's screen time a bit, and she started messing around with pixel art and vibe coding — firs…",
       "tags": [
@@ -286,9 +286,9 @@
         "LLM",
         "agent",
         "OpenCode",
-        "Configuration",
         "CommandCode",
         "goat",
+        "Configuration",
         "reasoning"
       ],
       "categories": [
@@ -327,9 +327,9 @@
         "agent",
         "OpenCode",
         "token",
-        "Configuration",
         "CommandCode",
         "goat",
+        "Configuration",
         "Paseo"
       ],
       "categories": [
