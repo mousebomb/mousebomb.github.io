@@ -1,9 +1,32 @@
 {
-  "generated": "2026-11-20T09:30:27.534Z",
+  "generated": "2026-11-22T04:25:41.591Z",
   "lang": "en",
   "count": 20,
-  "total": 409,
+  "total": 410,
   "posts": [
+    {
+      "slug": "laurel-vibe-creation",
+      "title": "Laurel's Vibe Creations",
+      "url": "https://flashj.cn/en/laurel-vibe-creation.html",
+      "date": "2026-11-22T02:23:00.000Z",
+      "updated": "2026-11-22T04:17:33.700Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/20261122-laurel-vibe-games-cover.webp",
+      "excerpt": "This year I eased up on Laurel's screen time a bit, and she started messing around with pixel art and vibe coding — firs…",
+      "tags": [
+        "Game",
+        "AI",
+        "vibecoding",
+        "DeepSeek",
+        "Education",
+        "ByteDance",
+        "Life Insights",
+        "GTA",
+        "Parenting"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    },
     {
       "slug": "studytown",
       "title": "Study Town: A Math Monopoly I Made for My Daughter",
@@ -71,8 +94,8 @@
       "title": "No more notification sounds after upgrading to OpenCode V2: the opencode-notifier delivery trap",
       "url": "https://flashj.cn/en/opencode-notifier-v2-delivery-silent.html",
       "date": "2026-10-19T10:10:00.000Z",
-      "updated": "2026-10-19T10:18:11.332Z",
-      "cover": "",
+      "updated": "2026-11-22T04:21:04.511Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/opencode.webp",
       "excerpt": "I use Paseo as a shell, connecting to a local opencode serve, and don't run the TUI in a terminal. After migrating OpenC…",
       "tags": [
         "Tools",
@@ -90,8 +113,8 @@
       "title": "Paseo's plugin directory",
       "url": "https://flashj.cn/en/paseo-plugins.html",
       "date": "2026-10-19T05:50:00.000Z",
-      "updated": "2026-10-19T10:32:58.513Z",
-      "cover": "https://cdn.mousebomb.org/blog/auto/202608011143116.jpeg",
+      "updated": "2026-11-22T04:20:11.485Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/paseo-blueprint.webp",
       "excerpt": "My daily driver stack is Paseo + OpenCode + OpenViking. Paseo recently shipped an official plugin directory too, so now …",
       "tags": [
         "Tools",
@@ -303,8 +326,8 @@
         "LLM",
         "agent",
         "OpenCode",
-        "Configuration",
         "token",
+        "Configuration",
         "CommandCode",
         "goat",
         "Paseo"
@@ -388,26 +411,6 @@
         "Web Novels",
         "Generative Narrative",
         "Medium"
-      ],
-      "categories": [
-        "Life Insights"
-      ]
-    },
-    {
-      "slug": "feishu-doubao-merger-thoughts",
-      "title": "Thoughts on the Feishu and Doubao merger",
-      "url": "https://flashj.cn/en/feishu-doubao-merger-thoughts.html",
-      "date": "2026-07-31T00:25:00.000Z",
-      "updated": "2026-10-15T12:13:29.025Z",
-      "cover": "https://cdn.mousebomb.org/blog/auto/feishu-doubao-merger-thoughts3.jpg",
-      "excerpt": "ByteDance announced that the Feishu product team and the Doubao product team are being merged into a new Doubao product …",
-      "tags": [
-        "AI",
-        "Nostalgia",
-        "ByteDance",
-        "Feishu",
-        "Doubao",
-        "Life Insights"
       ],
       "categories": [
         "Life Insights"

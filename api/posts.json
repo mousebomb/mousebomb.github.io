@@ -1,9 +1,32 @@
 {
-  "generated": "2026-11-20T09:29:53.423Z",
+  "generated": "2026-11-22T04:25:07.357Z",
   "lang": "zh-CN",
   "count": 20,
-  "total": 598,
+  "total": 599,
   "posts": [
+    {
+      "slug": "laurel-vibe-creation",
+      "title": "睿睿与氛围创作",
+      "url": "https://flashj.cn/laurel-vibe-creation.html",
+      "date": "2026-11-22T02:23:00.000Z",
+      "updated": "2026-11-22T04:17:33.692Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/20261122-laurel-vibe-games-cover.webp",
+      "excerpt": "今年给睿睿放开一点屏幕时间，她开始捣鼓像素画和氛围编程，先做了个狼人杀，现在在搭《猫爪森林》。她早说过编程学不动了，我也不打算逼。她哼了一段旋律，阶跃星辰的 Music v1 直接出整首歌，她直呼「科技进步啊」。GTA6、红果短剧、黎曼猜想…",
+      "tags": [
+        "游戏",
+        "AI",
+        "vibecoding",
+        "DeepSeek",
+        "教育",
+        "字节跳动",
+        "生命感悟",
+        "GTA",
+        "育儿"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    },
     {
       "slug": "studytown",
       "title": "知识小镇：给女儿做的数学大富翁",
@@ -388,26 +411,6 @@
         "网文",
         "生成式叙事",
         "媒介"
-      ],
-      "categories": [
-        "生命感悟"
-      ]
-    },
-    {
-      "slug": "feishu-doubao-merger-thoughts",
-      "title": "从飞书和豆包合并想到的",
-      "url": "https://flashj.cn/feishu-doubao-merger-thoughts.html",
-      "date": "2026-07-31T00:25:00.000Z",
-      "updated": "2026-10-15T12:13:27.941Z",
-      "cover": "https://cdn.mousebomb.org/blog/auto/feishu-doubao-merger-thoughts3.jpg",
-      "excerpt": "字节宣布飞书产品团队与豆包产品团队整合，成立新的豆包产品团队。初听这个消息有些惆怅，互联网像一台巨大的压路机。被垄断巨头剥削的数字佃农，乘坐在时代的快车上，随时快被甩下车。一切闭源的软件、服务，在我眼里只能有一种归宿：历史的垃圾堆。人类真正…",
-      "tags": [
-        "AI",
-        "怀旧",
-        "字节跳动",
-        "飞书",
-        "豆包",
-        "生命感悟"
       ],
       "categories": [
         "生命感悟"
