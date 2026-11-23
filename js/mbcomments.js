@@ -470,6 +470,8 @@
           authorUrl,
           content,
           subject,
+          // 评论来源语言：后端据此选择通知邮件文案与链接前缀（中英站共用 postKey，无法反推）
+          lang: isEn ? 'en' : 'zh',
         }),
       });
       const data = await res.json().catch(() => null);

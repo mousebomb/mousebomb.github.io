@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22T04:34:54.133Z",
+  "generated": "2026-11-23T03:49:36.064Z",
   "lang": "en",
   "count": 20,
   "total": 410,
@@ -286,9 +286,9 @@
         "LLM",
         "agent",
         "OpenCode",
+        "Configuration",
         "CommandCode",
         "goat",
-        "Configuration",
         "reasoning"
       ],
       "categories": [
@@ -326,10 +326,10 @@
         "LLM",
         "agent",
         "OpenCode",
+        "Configuration",
         "token",
         "CommandCode",
         "goat",
-        "Configuration",
         "Paseo"
       ],
       "categories": [
