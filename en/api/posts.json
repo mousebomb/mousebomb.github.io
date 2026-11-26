@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26T08:42:03.836Z",
+  "generated": "2026-11-26T09:27:33.735Z",
   "lang": "en",
   "count": 20,
   "total": 411,
@@ -11,7 +11,7 @@
       "date": "2026-11-26T05:25:00.000Z",
       "updated": "2026-11-26T08:39:50.509Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/20261126-shuangjian-cover.webp",
-      "excerpt": "At the parent-teacher meeting, the science teacher said that if homework takes more than half an hour, just stop doing i…",
+      "excerpt": "At the parent-teacher meeting, the science teacher said that if homework takes more than half an hour, just stop doing it. No midterm exams in elementary school, and nine straight days off for the autumn holiday — the double reduction polic…",
       "tags": [
         "AI",
         "LLM",
@@ -37,7 +37,7 @@
       "date": "2026-11-22T02:23:00.000Z",
       "updated": "2026-11-22T04:32:47.879Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/20261122-laurel-vibe-games-cover.webp",
-      "excerpt": "This year I eased up on Laurel's screen time a bit, and she started messing around with pixel art and vibe coding — firs…",
+      "excerpt": "This year I eased up on Laurel's screen time a bit, and she started messing around with pixel art and vibe coding — first she built a Werewolf game, and now she's putting together *Cat Paw Forest*. She said a while back that she just can't …",
       "tags": [
         "Game",
         "AI",
@@ -60,7 +60,7 @@
       "date": "2026-11-06T02:20:00.000Z",
       "updated": "2026-11-15T03:43:12.969Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/20261106-studytown-cover-v2.webp",
-      "excerpt": "On the morning of the 4th, she wanted a little town map where she could roll dice. By the afternoon, the first version w…",
+      "excerpt": "On the morning of the 4th, she wanted a little town map where she could roll dice. By the afternoon, the first version was already live: a 20-tile board, math problems generated on the fly, thirty outfits, a cat, and a room. The code was wr…",
       "tags": [
         "Game",
         "AI",
@@ -79,7 +79,7 @@
       "date": "2026-11-05T02:00:00.000Z",
       "updated": "2026-11-06T00:02:20.696Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/ai-80-fen-zhi-hou.webp",
-      "excerpt": "AI only helps people race through the stretch from 0 to 80 points; the rest still comes down to human expertise and pers…",
+      "excerpt": "AI only helps people race through the stretch from 0 to 80 points; the rest still comes down to human expertise and personalization. AI-flavored essay-writing classes, cash-burning gacha short dramas, the token capitalists' new card table, …",
       "tags": [
         "Game",
         "AI",
@@ -102,11 +102,11 @@
       "date": "2026-10-22T06:00:00.000Z",
       "updated": "2026-10-22T09:29:28.142Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp",
-      "excerpt": "A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the of…",
+      "excerpt": "A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the official fix only covers 8.2 through 8.5. My server runs 5.6, which has no patch and no backport. This morning I only want…",
       "tags": [
         "Security",
-        "PHP",
         "Backend Server",
+        "PHP",
         "Website",
         "nginx",
         "wordpress"
@@ -122,7 +122,7 @@
       "date": "2026-10-19T10:10:00.000Z",
       "updated": "2026-11-22T04:21:04.511Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/opencode.webp",
-      "excerpt": "I use Paseo as a shell, connecting to a local opencode serve, and don't run the TUI in a terminal. After migrating OpenC…",
+      "excerpt": "I use Paseo as a shell, connecting to a local opencode serve, and don't run the TUI in a terminal. After migrating OpenCode from v1 to v2 on October 1, opencode-notifier stopped making any sound: the plugin logs showed it loaded successfull…",
       "tags": [
         "Tools",
         "OpenCode",
@@ -141,7 +141,7 @@
       "date": "2026-10-19T05:50:00.000Z",
       "updated": "2026-11-22T04:20:11.485Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/paseo-blueprint.webp",
-      "excerpt": "My daily driver stack is Paseo + OpenCode + OpenViking. Paseo recently shipped an official plugin directory too, so now …",
+      "excerpt": "My daily driver stack is Paseo + OpenCode + OpenViking. Paseo recently shipped an official plugin directory too, so now there's both the community one at paseo.cafe and the official one at paseo.sh/plugins. I'd ported the solarized theme ea…",
       "tags": [
         "Tools",
         "OpenCode",
@@ -161,7 +161,7 @@
       "date": "2026-10-16T03:11:00.000Z",
       "updated": "2026-10-16T03:51:39.063Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/trae-sign-as-claude-cover.webp",
-      "excerpt": "After I fixed a small bug, TRAE went ahead and added Co-Authored-By: Claude Sonnet 4.6 to the commit message on its own.…",
+      "excerpt": "After I fixed a small bug, TRAE went ahead and added Co-Authored-By: Claude Sonnet 4.6 to the commit message on its own. That's ridiculous as hell — even when I commit with Claude Code, it doesn't add a Claude signature. Add the credit syst…",
       "tags": [
         "AI",
         "Trae",
@@ -183,7 +183,7 @@
       "date": "2026-10-13T12:15:00.000Z",
       "updated": "2026-10-15T12:13:29.189Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/artcraft-cover-1720x968.webp",
-      "excerpt": "Right after National Day my feed was flooded with two open source projects: one rewrote Photoshop from scratch in pure R…",
+      "excerpt": "Right after National Day my feed was flooded with two open source projects: one rewrote Photoshop from scratch in pure Rust, the other lets an AI Agent read the binaries of any piece of software. Looked at calmly, neither is as all-powerful…",
       "tags": [
         "AI",
         "Open Source",
@@ -205,7 +205,7 @@
       "date": "2026-10-13T05:54:00.000Z",
       "updated": "2026-10-15T12:01:17.576Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/laurel-water-cup.webp",
-      "excerpt": "Laurel's old water cup had a bit of a leak. I told her it was crying. I said we'd had this cup for a year — for you that…",
+      "excerpt": "Laurel's old water cup had a bit of a leak. I told her it was crying. I said we'd had this cup for a year — for you that's just one school year, but for it, that's a whole lifetime. She froze, clutching the cup, and later she actually wrote…",
       "tags": [
         "AI",
         "Education",
@@ -224,7 +224,7 @@
       "date": "2026-09-22T05:43:00.000Z",
       "updated": "2026-10-15T12:13:29.065Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/jev.webp",
-      "excerpt": "TypeSafe's Jev has been hyped across China these past few days as a \"new AGI species.\" But it's just a classifier: you g…",
+      "excerpt": "TypeSafe's Jev has been hyped across China these past few days as a \"new AGI species.\" But it's just a classifier: you give it 【options + a natural-language description】, it gives you 【a decision】. It doesn't generate options, and it doesn'…",
       "tags": [
         "AI",
         "LLM",
@@ -245,7 +245,7 @@
       "date": "2026-09-20T01:53:00.000Z",
       "updated": "2026-10-18T11:00:54.146Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/feishu-hightech.webp",
-      "excerpt": "Mac memory mysteriously eaten up, and it turns out dozens of orphan node processes were left behind by Feishu's official…",
+      "excerpt": "Mac memory mysteriously eaten up, and it turns out dozens of orphan node processes were left behind by Feishu's official lark-mcp. The root cause is that its stdio lifecycle only handles data inflow, not pipe closure, so the process doesn't…",
       "tags": [
         "AI",
         "Trae",
@@ -266,7 +266,7 @@
       "date": "2026-09-17T08:10:00.000Z",
       "updated": "2026-10-15T12:13:29.083Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/202609171647191.jpg",
-      "excerpt": "Several pretty stunning things happened in September: GPT6 Computer Use became more polished, embodied intelligence driv…",
+      "excerpt": "Several pretty stunning things happened in September: GPT6 Computer Use became more polished, embodied intelligence driven by fruit fly neural connections, and a math problem that had stumped humanity for 90 years was solved by a large mode…",
       "tags": [
         "AI",
         "LLM",
@@ -286,7 +286,7 @@
       "date": "2026-09-15T04:00:00.000Z",
       "updated": "2026-10-15T12:13:29.105Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/202609151221965.jpg",
-      "excerpt": "While working with WorkBuddy, I noticed that deleted temp files end up in the Trash, whereas my opencode reaches for rm …",
+      "excerpt": "While working with WorkBuddy, I noticed that deleted temp files end up in the Trash, whereas my opencode reaches for rm at the drop of a hat. Digging into that detail led me to discover that macOS 15 already ships with a built-in trash comm…",
       "tags": [
         "AI",
         "agent",
@@ -306,7 +306,7 @@
       "date": "2026-09-02T09:19:00.000Z",
       "updated": "2026-10-18T11:00:54.457Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp",
-      "excerpt": "The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn't pick a thinking depth in /m…",
+      "excerpt": "The previous post on the goat setup missed one piece: models like deepseek-v4-flash couldn't pick a thinking depth in /models. Digging in, it turned out the GOAT plan does support it — the problem was that the hand-written models in the cus…",
       "tags": [
         "AI",
         "LLM",
@@ -328,7 +328,7 @@
       "date": "2026-09-01T16:00:00.000Z",
       "updated": "2026-10-19T10:32:58.513Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/paseo-solarized.webp",
-      "excerpt": "I built a Solarized Light eye-friendly theme plugin for Paseo using the official addTheme plugin API. No need to touch a…",
+      "excerpt": "I built a Solarized Light eye-friendly theme plugin for Paseo using the official addTheme plugin API. No need to touch any Paseo files, and nothing is lost on upgrade. Since Paseo 0.7.0 you can install plugins straight from GitHub, one comm…",
       "tags": [
         "Tools",
         "Paseo",
@@ -346,7 +346,7 @@
       "date": "2026-08-31T14:13:00.000Z",
       "updated": "2026-10-22T09:22:07.044Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/CommandCodeGOAT.webp",
-      "excerpt": "I bought CommandCode's goat plan and wanted to use it as my main plan in opencode. The whole integration takes just two …",
+      "excerpt": "I bought CommandCode's goat plan and wanted to use it as my main plan in opencode. The whole integration takes just two steps: first /connect to save the API key, then declare the provider in opencode.json. The goat plan requires an x-cmd-z…",
       "tags": [
         "AI",
         "LLM",
@@ -369,7 +369,7 @@
       "date": "2026-08-29T14:10:00.000Z",
       "updated": "2026-10-19T04:05:56.082Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/202609021732881.png",
-      "excerpt": "OpenCode Go's monthly allowance is spread across several tables, and the official \"5-hour quota\" chart doesn't list all …",
+      "excerpt": "OpenCode Go's monthly allowance is spread across several tables, and the official \"5-hour quota\" chart doesn't list all the models. So I built a chart page that automatically scrapes the official price table and, using the same methodology …",
       "tags": [
         "AI",
         "LLM",
@@ -389,7 +389,7 @@
       "date": "2026-08-23T14:10:00.000Z",
       "updated": "2026-10-18T11:00:54.403Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/cover-B-deep-ink.webp",
-      "excerpt": "DeepSeek Harness got a lot of people excited, but I used it once and didn't keep going; Qwen3.8 27B's capabilities have …",
+      "excerpt": "DeepSeek Harness got a lot of people excited, but I used it once and didn't keep going; Qwen3.8 27B's capabilities have taken off, but I haven't deployed it locally either. Weighing the urge for new things against the need for stability, Op…",
       "tags": [
         "AI",
         "agent",
@@ -408,7 +408,7 @@
       "date": "2026-08-02T04:25:00.000Z",
       "updated": "2026-10-19T04:16:38.209Z",
       "cover": "https://cdn.mousebomb.org/blog/auto/openviking.jpg",
-      "excerpt": "I hand OpenCode all kinds of tasks piecemeal throughout the day, and at night I want to say one sentence and have it wra…",
+      "excerpt": "I hand OpenCode all kinds of tasks piecemeal throughout the day, and at night I want to say one sentence and have it wrap up with a review and summary. But before, OpenCode's memory and Hermes's memory were each stored separately, with no w…",
       "tags": [
         "Volcengine",
         "MCP",
