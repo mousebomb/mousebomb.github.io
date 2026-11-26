@@ -1,9 +1,35 @@
 {
-  "generated": "2026-11-23T03:49:36.064Z",
+  "generated": "2026-11-26T08:42:03.836Z",
   "lang": "en",
   "count": 20,
-  "total": 410,
+  "total": 411,
   "posts": [
+    {
+      "slug": "shuangjian-education-rlhf-to-rlvr",
+      "title": "Easing the Academic Burden: A View from AI's Evolution",
+      "url": "https://flashj.cn/en/shuangjian-education-rlhf-to-rlvr.html",
+      "date": "2026-11-26T05:25:00.000Z",
+      "updated": "2026-11-26T08:39:50.509Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/20261126-shuangjian-cover.webp",
+      "excerpt": "At the parent-teacher meeting, the science teacher said that if homework takes more than half an hour, just stop doing i…",
+      "tags": [
+        "AI",
+        "LLM",
+        "Education",
+        "Learning",
+        "Children's",
+        "Shenzhen",
+        "Life Insights",
+        "Parenting",
+        "Machine Learning",
+        "Reinforcement Learning",
+        "Exam-oriented Education",
+        "Gaokao"
+      ],
+      "categories": [
+        "Life Insights"
+      ]
+    },
     {
       "slug": "laurel-vibe-creation",
       "title": "Laurel's Vibe Creations",
@@ -79,8 +105,8 @@
       "excerpt": "A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the of…",
       "tags": [
         "Security",
-        "Backend Server",
         "PHP",
+        "Backend Server",
         "Website",
         "nginx",
         "wordpress"
@@ -395,25 +421,6 @@
       ],
       "categories": [
         "Tools"
-      ]
-    },
-    {
-      "slug": "next-gen-media-generative-narrative",
-      "title": "A Humanity Amusing Itself to Death, and the Media of the Next Generation",
-      "url": "https://flashj.cn/en/next-gen-media-generative-narrative.html",
-      "date": "2026-07-31T04:30:00.000Z",
-      "updated": "2026-10-15T12:13:29.121Z",
-      "cover": "https://cdn.mousebomb.org/blog/auto/next-gen-media-generative-narrative.jpg",
-      "excerpt": "Explosive capacity growth on the production side, endlessly rising thresholds on the consumption side — the dumbing-down…",
-      "tags": [
-        "AI",
-        "Media",
-        "Web Novels",
-        "Generative Narrative",
-        "Medium"
-      ],
-      "categories": [
-        "Life Insights"
       ]
     }
   ]

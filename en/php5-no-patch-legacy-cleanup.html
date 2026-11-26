@@ -31,8 +31,8 @@
 <meta property="article:modified_time" content="2026-10-22T06:00:00.000Z">
 <meta property="article:author" content="Mousebomb">
 <meta property="article:tag" content="Security">
-<meta property="article:tag" content="Backend Server">
 <meta property="article:tag" content="PHP">
+<meta property="article:tag" content="Backend Server">
 <meta property="article:tag" content="Website">
 <meta property="article:tag" content="nginx">
 <meta property="article:tag" content="wordpress">
@@ -41,7 +41,7 @@
 <meta name="twitter:creator" content="@mousebomb"><meta name="twitter:title" content="Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6">
   
   
-  <meta name="keywords" content="Security,Backend Server,PHP,Website,nginx,wordpress">
+  <meta name="keywords" content="Security,PHP,Backend Server,Website,nginx,wordpress">
 
   <!-- feed -->
   
@@ -64,7 +64,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-10-22T14:00:00+08:00","dateModified":"2026-10-22T14:00:00+08:00","datePublished":"2026-10-22T14:00:00+08:00","description":"A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the official fix only covers 8.2 through 8.5. My server runs 5.6, which has no patch and no backport. This morning I only wanted to confirm how badly I was affected. But one thing led to another, and I ended up giving the site legacy — stacked up and steadily gaining entropy for over a decade — a thorough slimming down.","headline":"Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/php5-no-patch-legacy-cleanup.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/php5-no-patch-legacy-cleanup.html","keywords":"Security, Backend Server, PHP, Website, nginx, wordpress","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp","image":["https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png"},"dateCreated":"2026-10-22T14:00:00+08:00","dateModified":"2026-10-22T14:00:00+08:00","datePublished":"2026-10-22T14:00:00+08:00","description":"A PHP vulnerability with a CVSS score of 9.2 that lets anyone execute code remotely without even logging in — and the official fix only covers 8.2 through 8.5. My server runs 5.6, which has no patch and no backport. This morning I only wanted to confirm how badly I was affected. But one thing led to another, and I ended up giving the site legacy — stacked up and steadily gaining entropy for over a decade — a thorough slimming down.","headline":"Clearing out a decade of accumulated site legacy, and saying goodbye to PHP5.6","mainEntityOfPage":{"@type":"WebPage","@id":"https://flashj.cn/en/php5-no-patch-legacy-cleanup.html"},"publisher":{"@type":"Organization","name":"Mousebomb","sameAs":[],"image":"https://cdn.mousebomb.org/blog/avatar.png","logo":{"@type":"ImageObject","url":"https://cdn.mousebomb.org/blog/avatar.png"}},"url":"https://flashj.cn/en/php5-no-patch-legacy-cleanup.html","keywords":"Security, PHP, Backend Server, Website, nginx, wordpress","thumbnailUrl":"https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp","image":["https://cdn.mousebomb.org/blog/auto/php5-no-patch-legacy-cleanup.webp"]}</script>
   <script>
 (function () {
   try {
@@ -345,6 +345,24 @@ background:var(--block);color:var(--text-p1)}
     </div>
   
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
+  
+    
+<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/shuangjian-education-rlhf-to-rlvr.html" title="Easing the Academic Burden: A View from AI&#39;s Evolution">
+  
+  
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Easing the Academic Burden: A View from AI&#39;s Evolution</span>
+      
+      
+    </span>
+  
+  
+  
+  
+</a>
+
   
     
 <a class="ui-collection__item card-hover card-hover--spotlight" href="/en/laurel-vibe-creation.html" title="Laurel&#39;s Vibe Creations">
@@ -652,24 +670,6 @@ background:var(--block);color:var(--text-p1)}
 </a>
 
   
-    
-<a class="ui-collection__item card-hover card-hover--spotlight" href="/en/no-more-fomo-dsh-qwen38.html" title="Neither DeepSeek Harness nor Qwen3.8 is a must-have for me">
-  
-  
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">Neither DeepSeek Harness nor Qwen3.8 is a must-have for me</span>
-      
-      
-    </span>
-  
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -749,7 +749,7 @@ background:var(--block);color:var(--text-p1)}
 <p>An unpatched vulnerability turned into a thorough house-cleaning. Not a bad outcome.</p>
 </article>
 
-<div class="article-tags slide-up"><a class="tag" href="/en/tags/Security/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Security</a><a class="tag" href="/en/tags/Backend-Server/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Backend Server</a><a class="tag" href="/en/tags/PHP/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>PHP</a><a class="tag" href="/en/tags/Website/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Website</a><a class="tag" href="/en/tags/nginx/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>nginx</a><a class="tag" href="/en/tags/wordpress/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wordpress</a></div>
+<div class="article-tags slide-up"><a class="tag" href="/en/tags/Security/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Security</a><a class="tag" href="/en/tags/PHP/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>PHP</a><a class="tag" href="/en/tags/Backend-Server/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Backend Server</a><a class="tag" href="/en/tags/Website/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>Website</a><a class="tag" href="/en/tags/nginx/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>nginx</a><a class="tag" href="/en/tags/wordpress/"><svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>wordpress</a></div>
 
 <div class="article-footer slide-up">
     <section id="references">
@@ -790,7 +790,8 @@ background:var(--block);color:var(--text-p1)}
       <div class='title cap theme'>Related Posts</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;httpservice-xml-security-error-accessing-url.html" title="Security error accessing url when httpService reads XML"><span class="title">Security error accessing url when httpService reads XML</span><span class="excerpt">When you use httpService in Flex to read XML from a different domain (such as http:&#x2F;&#x2F;xml.weather.yahoo.com&#x2F;forecastrs...</span></a><a class="item" href="&#x2F;en&#x2F;llm-local-sheishiwodi-1.html" title="Playing “Who&#39;s the Spy” locally with an LLM"><span class="title">Playing “Who&#39;s the Spy” locally with an LLM</span><span class="excerpt">It&#39;s Chinese New Year, and everyone is talking about DeepSeek. Laurel wants to play &quot;Who&#39;s the Spy&quot; but can never rou...</span></a><a class="item" href="&#x2F;en&#x2F;loading-orgeclipsephpcore-whole-life.html" title="Spending your whole life loading org.eclipse.php.core?"><span class="title">Spending your whole life loading org.eclipse.php.core?</span><span class="excerpt">Problem description:At the company I use Zend Studio for Eclipse Professional Edition to write PHP projects. It’s a g...</span></a><a class="item" href="&#x2F;en&#x2F;my-ezine-finish.html" title="Core features of the e-magazine publishing platform completed"><span class="title">Core features of the e-magazine publishing platform completed</span></a><a class="item" href="&#x2F;en&#x2F;asp-404-iis-asp-err.html" title="The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?"><span class="title">The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="&#x2F;en&#x2F;httpservice-xml-security-error-accessing-url.html" title="Security error accessing url when httpService reads XML"><span class="title">Security error accessing url when httpService reads XML</span><span class="excerpt">When you use httpService in Flex to read XML from a different domain (such as http:&#x2F;&#x2F;xml.weather.yahoo.com&#x2F;forecastrs...</span></a><a class="item" href="&#x2F;en&#x2F;loading-orgeclipsephpcore-whole-life.html" title="Spending your whole life loading org.eclipse.php.core?"><span class="title">Spending your whole life loading org.eclipse.php.core?</span><span class="excerpt">Problem description:At the company I use Zend Studio for Eclipse Professional Edition to write PHP projects. It’s a g...</span></a><a class="item" href="&#x2F;en&#x2F;my-ezine-finish.html" title="Core features of the e-magazine publishing platform completed"><span class="title">Core features of the e-magazine publishing platform completed</span></a><a class="item" href="&#x2F;en&#x2F;pdo-transaction-err-in-php.html" title="PDO transaction error?"><span class="title">PDO transaction error?</span><span class="excerpt">Today I hit an error in the PDO transaction-handling part:
+Fatal error: Uncaught exception ‘PDOException’ with messag...</span></a><a class="item" href="&#x2F;en&#x2F;asp-404-iis-asp-err.html" title="The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?"><span class="title">The ASP file clearly exists, yet it shows a 404 error—can IIS not display ASP?</span></a></div></section></div>
 
 
   <div class="related-wrap md-text slide-up" id="comments">

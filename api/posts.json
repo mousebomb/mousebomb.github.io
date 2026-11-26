@@ -1,9 +1,35 @@
 {
-  "generated": "2026-11-23T03:49:01.796Z",
+  "generated": "2026-11-26T08:41:26.348Z",
   "lang": "zh-CN",
   "count": 20,
-  "total": 599,
+  "total": 600,
   "posts": [
+    {
+      "slug": "shuangjian-education-rlhf-to-rlvr",
+      "title": "从AI发展视角对教育减负的一点思考",
+      "url": "https://flashj.cn/shuangjian-education-rlhf-to-rlvr.html",
+      "date": "2026-11-26T05:25:00.000Z",
+      "updated": "2026-11-26T08:39:29.670Z",
+      "cover": "https://cdn.mousebomb.org/blog/auto/20261126-shuangjian-cover.webp",
+      "excerpt": "家长会上科学老师说，作业超过半小时就别做了。小学不设期中考试、秋假连放九天，双减的执行越来越硬。可只要高考那道门槛还在，家长的动机就无法对齐。我突然意识到，双减就是教育体系从RLHF走向RLVR的开始。从 RLHF 到 RLVR，也许能为下…",
+      "tags": [
+        "AI",
+        "大模型",
+        "教育",
+        "学习",
+        "儿童",
+        "深圳",
+        "生命感悟",
+        "育儿",
+        "机器学习",
+        "强化学习",
+        "应试教育",
+        "高考"
+      ],
+      "categories": [
+        "生命感悟"
+      ]
+    },
     {
       "slug": "laurel-vibe-creation",
       "title": "睿睿与氛围创作",
@@ -395,25 +421,6 @@
       ],
       "categories": [
         "工具软件"
-      ]
-    },
-    {
-      "slug": "next-gen-media-generative-narrative",
-      "title": "娱乐至死的人类和下一个世代的媒体",
-      "url": "https://flashj.cn/next-gen-media-generative-narrative.html",
-      "date": "2026-07-31T04:30:00.000Z",
-      "updated": "2026-10-15T12:13:28.381Z",
-      "cover": "https://cdn.mousebomb.org/blog/auto/next-gen-media-generative-narrative.jpg",
-      "excerpt": "生产端产能爆炸、消费端阈值被无限拉高，网文的降智化是人类在娱乐至死的路上越走越远的缩影。历史上每一次新媒介都是一次洗牌，但文字、图片、声音、视频、交互、VR/AR，感官通道基本被覆盖完了。下一个能释放消费端新需求的媒介形态是什么？也许答案是…",
-      "tags": [
-        "AI",
-        "媒体",
-        "网文",
-        "生成式叙事",
-        "媒介"
-      ],
-      "categories": [
-        "生命感悟"
       ]
     }
   ]
