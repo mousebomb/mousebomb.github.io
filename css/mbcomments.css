@@ -179,8 +179,42 @@
   list-style: none;
 }
 
+/* 二级及以下的回复：头像与昵称并成一行，正文从这一行的左边缘起排。
+ * 深层不再为头像单独留一列——那一列 36px 在窄屏上是纯浪费，
+ * 三层之后就只剩一条缝了。 */
 .mbc-children .mbc-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 8px;
   padding: 12px 0;
+}
+
+/* 拆掉中间的 .mbc-main，让 head / content / 子列表直接参与上面的 flex */
+.mbc-children .mbc-main {
+  display: contents;
+}
+
+.mbc-children .mbc-avatar {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+}
+
+.mbc-children .mbc-head {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.mbc-children .mbc-content {
+  flex: 0 0 100%;
+  margin-top: 0;
+}
+
+/* 子列表整行换行，才能继续排下一层 */
+.mbc-children .mbc-children {
+  flex: 0 0 100%;
 }
 
 .mbc-children--flat {
