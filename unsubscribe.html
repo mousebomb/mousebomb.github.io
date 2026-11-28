@@ -93,23 +93,26 @@
       letter-spacing: .01em;
     }
 
+    /* 作者样式里的 display 会盖掉 UA 的 [hidden]，必须显式兜底 */
+    [hidden] { display: none !important; }
+
     p { margin: 0; }
 
     .desc { color: var(--muted); }
 
-    /* 邮箱（后端已脱敏） */
+    /* 「你的邮箱 xxx」一行（后端返回的是脱敏地址） */
     .mail {
-      display: inline-block;
-      margin: 14px 0 0;
-      padding: 5px 12px;
-      max-width: 100%;
-      overflow-wrap: anywhere;
-      border: 1px solid var(--border);
-      border-radius: 999px;
+      margin: 0 0 4px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .mail em {
+      font-style: normal;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 13px;
       color: var(--text);
-      background: color-mix(in srgb, var(--text) 4%, transparent);
+      overflow-wrap: anywhere;
     }
 
     button {
@@ -177,8 +180,8 @@
     </div>
 
     <h1 id="title">评论通知退订</h1>
+    <p class="mail" id="mail" hidden><span id="mailLabel"></span> <em id="mailAddr"></em></p>
     <p class="desc" id="desc">正在校验退订链接…</p>
-    <p><span class="mail" id="mail" hidden></span></p>
     <button id="action" type="button" hidden>确认退订</button>
     <p class="hint" id="hint"></p>
 
@@ -199,14 +202,14 @@
         title: '评论通知退订',
         loading: '正在校验退订链接…',
         confirmTitle: '确认退订',
-        confirmDesc: '确认不再接收 {email} 的评论通知？',
-        confirmDescNoMail: '确认不再接收评论通知？',
+        confirmDesc: '确认不再接收评论通知？',
+        mailLabel: '你的邮箱',
         confirmBtn: '确认退订',
         working: '处理中…',
         doneTitle: '已退订',
         doneDesc: '退订成功，这个邮箱不会再收到评论通知了。',
         alreadyTitle: '已经退订过了',
-        alreadyDesc: '这个邮箱已经退订过了，不会再收到评论通知。',
+        alreadyDesc: '已经退订过了，不会再收到评论通知。',
         invalidTitle: '链接无效或已过期',
         invalidDesc: '请回到邮件里点开最新的退订链接，或回复任意一封评论通知邮件联系站长人工处理。',
         retryTitle: '网络异常',
@@ -219,8 +222,8 @@
         title: 'Unsubscribe from comment notifications',
         loading: 'Validating your unsubscribe link…',
         confirmTitle: 'Confirm unsubscribe',
-        confirmDesc: 'Stop receiving comment notifications at {email}?',
-        confirmDescNoMail: 'Stop receiving comment notification emails?',
+        confirmDesc: 'Stop receiving comment notifications?',
+        mailLabel: 'Your address',
         confirmBtn: 'Confirm',
         working: 'Working…',
         doneTitle: 'Unsubscribed',
@@ -245,6 +248,8 @@
     var elTitle = document.getElementById('title');
     var elDesc = document.getElementById('desc');
     var elMail = document.getElementById('mail');
+    var elMailLabel = document.getElementById('mailLabel');
+    var elMailAddr = document.getElementById('mailAddr');
     var elAction = document.getElementById('action');
     var elHint = document.getElementById('hint');
 
@@ -265,10 +270,11 @@
       elDesc.textContent = view.desc;
 
       if (view.mail) {
-        elMail.textContent = view.mail;
+        elMailLabel.textContent = T.mailLabel;
+        elMailAddr.textContent = view.mail;
         elMail.hidden = false;
       } else {
-        elMail.textContent = '';
+        elMailAddr.textContent = '';
         elMail.hidden = true;
       }
 
@@ -305,8 +311,9 @@
     function showConfirm(mail) {
       render('confirm', {
         title: T.confirmTitle,
-        desc: mail ? T.confirmDesc.replace('{email}', mail) : T.confirmDescNoMail,
+        desc: T.confirmDesc,
         tone: 'idle',
+        mail: mail,
         action: { label: T.confirmBtn, onClick: confirmUnsubscribe }
       });
     }
@@ -336,8 +343,10 @@
         })
         .then(function (data) {
           if (!data || data.valid !== true) return showInvalid();
-          if (data.unsubscribed === true) return showAlready(data.email || '');
-          showConfirm(data.email || '');
+          // displayMail 是本地按 e 解出来的掩码，后端那份只留首字符、星号太多
+          var shown = displayMail || data.email || '';
+          if (data.unsubscribed === true) return showAlready(shown);
+          showConfirm(shown);
         })
         .catch(function () {
           showRetry();
@@ -384,10 +393,50 @@
         });
     }
 
+    /**
+     * base64url 解码（e 参数是 UTF-8 邮箱的 base64url）
+     * @param {string} v
+     * @returns {string} 解码失败返回空串
+     */
+    function decodeBase64Url(v) {
+      try {
+        var b64 = v.replace(/-/g, '+').replace(/_/g, '/');
+        while (b64.length % 4) b64 += '=';
+        var bin = atob(b64);
+        var bytes = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        return new TextDecoder().decode(bytes);
+      } catch (err) {
+        return '';
+      }
+    }
+
+    /**
+     * 打码显示邮箱：本地部分保留首尾各两位，如 16****47@qq.com。
+     * 后端只返回首字符（1***@qq.com），星号太多认不出是哪个邮箱，所以这边自己打。
+     * 注意：e 参数里本来就带着完整邮箱，解码不算新增泄露。
+     * @param {string} addr
+     * @returns {string} 非邮箱时返回空串
+     */
+    function maskEmail(addr) {
+      var at = addr.lastIndexOf('@');
+      if (at < 1 || at === addr.length - 1) return '';
+
+      var name = addr.slice(0, at);
+      var domain = addr.slice(at);
+
+      if (name.length <= 2) return name.charAt(0) + '***' + domain;
+      if (name.length <= 4) return name.charAt(0) + '***' + name.slice(-1) + domain;
+      return name.slice(0, 2) + '****' + name.slice(-2) + domain;
+    }
+
     // 令牌来自邮件里的退订链接；缺任一参数直接判为无效链接
     var params = new URLSearchParams(location.search);
     var email = params.get('e');
     var token = params.get('t');
+
+    // 页面自己算出的掩码优先，算不出来再退回后端给的值
+    var displayMail = maskEmail(decodeBase64Url(email || '')) || '';
 
     if (!email || !token) {
       showInvalid();

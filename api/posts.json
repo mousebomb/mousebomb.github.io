@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28T01:23:27.817Z",
+  "generated": "2026-11-28T02:07:27.619Z",
   "lang": "zh-CN",
   "count": 20,
   "total": 600,
@@ -126,9 +126,9 @@
       "tags": [
         "工具软件",
         "OpenCode",
-        "插件",
         "配置",
-        "Paseo"
+        "Paseo",
+        "插件"
       ],
       "categories": [
         "工具软件"
@@ -146,8 +146,8 @@
         "主题",
         "工具软件",
         "OpenCode",
-        "插件",
         "Paseo",
+        "插件",
         "OpenViking"
       ],
       "categories": [
